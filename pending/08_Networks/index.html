@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Visual Analytics, Visualizing Graphs and Trees</title>
+    <meta charset="utf-8">
+    <meta name="author" content="John Alexis Guerra Gomez">
+    <meta name="description" content="Visual Analytics">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+    <link href="style.css" rel="stylesheet">
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? '../lib/css/print/pdf.css' : '../lib/css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+    <script src="../lib/js/d3.min.js"></script>
+    <script src="../lib/js/bumpChartPhotos.js"></script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h2>Visualizing Graphs</h2><br>
+          <p class="small"><a href="http://johnguerra.co/" target="_blank"><strong>John Alexis Guerra Gómez</strong></a><span>| ja.guerrag[at]uniandes.edu.co</span><a href="http://twitter.com/duto_guerra">| @duto_guerra</a><br><span><strong>Jose Tiberio Hernández</strong> | jhernand[at]uniandes.edu.co</span><br><span>Universidad de los Andes</span>
+          </p><br>
+          <p class="tiny"><a href="http://johnguerra.co/lectures/visualAnalytics_fall2019/08_Networks/" target="_blank">http://johnguerra.co/lectures/visualAnalytics_fall2019/08_Networks/</a></p>
+          <p class="tiny">Based on<a href="http://www.cs.ubc.ca/~tmm/talks.html#minicourse14">slides from Tamara Munzner</a></p>
+        </section>
+        
+        
+        <section>
+          <section>
+            <h2>Visualizing Networks</h2>
+          </section>
+          <section data-background-size="contain" data-background="images/09_networks-star-steno-topo.002.png"></section>
+          <section data-background-size="contain" data-background="images/09_networks-star-steno-topo.003.png"></section>
+          <section>
+            <h3 class="demo">Force Directed Layout</h3>
+            <iframe src="http://blockbuilder.org/mbostock/4062045" class="blocks"></iframe><a target="_blank" href="http://blockbuilder.org/mbostock/4062045" class="tiny">http://blockbuilder.org/mbostock/4062045</a><a target="_blank" href="http://bl.ocks.org/mbostock/" class="tiny">by mbostock</a>
+          </section>
+          <section>
+            <h2>Use the force!</h2>
+          </section>
+          <section>
+            <h3 class="demo">Beeswarm plot</h3>
+            <iframe src="http://blockbuilder.org/mbostock/6526445e2b44303eebf21da3b6627320" class="blocks"></iframe><a target="_blank" href="http://blockbuilder.org/mbostock/6526445e2b44303eebf21da3b6627320" class="tiny">http://blockbuilder.org/mbostock/6526445e2b44303eebf21da3b6627320</a><a target="_blank" href="http://bl.ocks.org/mbostock/" class="tiny">by mbostock</a>
+          </section>
+          <section>
+            <h3 class="demo">Collision Detection</h3>
+            <iframe src="http://blockbuilder.org/mbostock/31ce330646fa8bcb7289ff3b97aab3f5" class="blocks"></iframe><a target="_blank" href="http://blockbuilder.org/mbostock/31ce330646fa8bcb7289ff3b97aab3f5" class="tiny">http://blockbuilder.org/mbostock/31ce330646fa8bcb7289ff3b97aab3f5</a><a target="_blank" href="http://bl.ocks.org/mbostock/" class="tiny">by mbostock</a>
+          </section>
+          <section>
+            <h3 class="demo">Force in a Box</h3>
+            <iframe src="http://blockbuilder.org/john-guerra/14c943d8f198d9f3fef2" class="blocks"></iframe><a target="_blank" href="http://blockbuilder.org/john-guerra/14c943d8f198d9f3fef2" class="tiny">http://blockbuilder.org/john-guerra/14c943d8f198d9f3fef2</a><a target="_blank" href="http://bl.ocks.org/john-guerra/" class="tiny">by john-guerra</a>
+          </section>
+          <section data-background-size="contain" data-background="images/09_networks-star-steno-topo.004.png"></section>
+          <section data-background-size="contain" data-background="images/09_networks-star-steno-topo.005.png"></section>
+          <section>
+            <h3 class="demo">Adjacency Matrix</h3>
+            <iframe src="https://bost.ocks.org/mike/miserables/" class="blocks"></iframe><a target="_blank" href="https://bost.ocks.org/mike/miserables/" class="tiny">https://bost.ocks.org/mike/miserables/</a>
+          </section>
+          <section data-background-size="contain" data-background="images/09_networks-star-steno-topo.006.png"></section>
+          <section>
+            <h2 class="demo">Chord Diagram</h2>
+            <div class="left small">
+              <ul>
+                <li>Data: Networks (small # of nodes)</li>
+                <li>Tasks: Summarize connections. Identify highest degree</li>
+                <li>Considerations: Usually good for origin -> destination</li>
+              </ul>
+            </div>
+            <div class="right"><img src="images/chord.svg" alt="Chord Diagram"><a href="https://observablehq.com/@john-guerra/mouseover-chord-diagram" class="tiny">https://observablehq.com/@john-guerra/mouseover-chord-diagram</a></div>
+          </section>
+          <section>
+            <h2 class="demo">Edge Bundling</h2>
+            <div class="left small">
+              <ul>
+                <li>Data: Networks</li>
+                <li>Tasks: Summarize common connections.</li>
+                <li>Considerations:
+                  <ul>
+                    <li>Reduces cluttering</li>
+                    <li>Requires computing time</li>
+                    <li>Works with any link based idiom</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div class="right"><img src="images/edgeBundling.png" alt="Edge Bundling"><a href="https://observablehq.com/@d3/hierarchical-edge-bundling" class="tiny">https://observablehq.com/@d3/hierarchical-edge-bundling</a></div>
+          </section>
+          <section>
+            <h2 class="demo">Arc Diagram</h2>
+            <div class="left small">
+              <ul>
+                <li>Data: Networks (few nodes)</li>
+                <li>Tasks: Summarize common connections.</li>
+                <li>Considerations:
+                  <ul>
+                    <li>Nodes order matter</li>
+                    <li>Better with highly clustered data</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div class="right"><img src="images/arcDiagram.svg" alt="Arc Diagram"><a href="https://observablehq.com/@d3/arc-diagram" class="tiny">https://observablehq.com/@d3/arc-diagram</a></div>
+          </section>
+          <section>
+            <h2 class="demo">Arc Diagram</h2>
+            <iframe src="https://blockbuilder.org/rpgove/53bb49d6ed762139f33bdaea1f3a9e1c" class="blocks"></iframe><a target="_blank" href="https://blockbuilder.org/rpgove/53bb49d6ed762139f33bdaea1f3a9e1c" class="tiny">https://blockbuilder.org/rpgove/53bb49d6ed762139f33bdaea1f3a9e1c</a><a target="_blank" href="http://bl.ocks.org/rpgove/" class="tiny">by Robert Gove</a>
+          </section>
+          <section>
+            <h2 class="demo">Arc Diagram</h2>
+            <iframe src="https://bost.ocks.org/mike/hive/" class="blocks"></iframe><a target="_blank" href="https://bost.ocks.org/mike/hive/" class="tiny">https://bost.ocks.org/mike/hive/</a>
+          </section>
+          <section>
+            <h2 class="demo">Semantic Substrates</h2>
+            <div class="left small">
+              <ul>
+                <li>Data: Networks with many edges</li>
+                <li>Task: Summarize distribution of non network attribs</li>
+                <li>Considerations:
+                  <ul>
+                    <li>Easier to understand</li>
+                    <li>Scale well</li>
+                    <li>Edges on demand work best</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div class="right"><img src="images/semanticSubstrates.gif" alt="Semantic Substrates"><a href="https://johnguerra.co/viz/influentials/story/?hashtag=DeepIndaba2019" class="tiny">https://johnguerra.co/viz/influentials/story/?hashtag=DeepIndaba2019</a></div>
+          </section>
+          <section><a href="https://www.twosixlabs.com/6-ways-visualize-graphs/"><img src="images/6waystovisualizegraphs.png" alt="Six ways of visualizing networks by Robert Gove"><span>Robert Gove's Six ways of visualizing Networks</span></a></section>
+        </section>
+        <section>
+          <section>
+            <h1>Appendix</h1>
+          </section>
+          <section>
+            <h2>Network Analysis Metrics</h2>
+            <ul>
+              <li>Connections</li>
+              <li>Distribution</li>
+              <li>Segmentation</li>
+            </ul><a href="https://en.wikipedia.org/wiki/Social_network_analysis" class="tiny">https://en.wikipedia.org/wiki/Social_network_analysis</a>
+            <p>Use them as derived attributes</p>
+          </section>
+          <section>
+            <h2>Tools</h2>
+            <ul>
+              <li><a href="https://www.smrfoundation.org/nodexl/">NodeXL</a></li>
+              <li><a href="https://gephi.org/">Gephi</a></li>
+            </ul>
+          </section>
+        </section>
+      </div>
+    </div>
+    <script src="../lib/js/head.min.js"></script>
+    <script src="../lib/js/reveal.js"></script>
+    <script>
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        rollingLinks: true,
+        transition: "convex",
+        //- width: "90%",
+        //- height: 1.0,
+        dependencies: [
+          // Cross-browser shim that fully implements classList - https://github.com/eligrey/classList.js/
+          { src: '../lib/js/classList.js', condition: function() { return !document.body.classList; } },
+      
+          // Interpret Markdown in <section> elements
+          { src: '../plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: '../plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      
+          // Syntax highlight for <code> elements
+          { src: '../plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+      
+          // Zoom in and out with Alt+click
+          { src: '../plugin/zoom-js/zoom.js', async: true },
+      
+          // Speaker notes
+          { src: '../plugin/notes/notes.js', async: true },
+      
+          //- // Remote control your reveal.js presentation using a touch device
+          //- { src: '../plugin/remotes/remotes.js', async: true },
+      
+          //- // MathJax
+          //- { src: '../plugin/math/math.js', async: true }
+        ]
+      });
+    </script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      
+      ga('create', 'UA-72531610-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+  </body>
+</html>

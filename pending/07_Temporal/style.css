@@ -1,0 +1,181 @@
+@import '../lib/css/reveal.css';
+@import '../lib/css/theme/simple.css';
+@import '../lib/css/zenburn.css';
+.reveal p,
+.reveal ol,
+.reveal ul,
+.reveal li,
+.reveal blockquote {
+  line-height: 1.25em;
+}
+.reveal p,
+.reveal ol,
+.reveal ul,
+.reveal li,
+.reveal blockquote,
+.reveal pre {
+  margin-top: 0.75em;
+  margin-bottom: 0.75em;
+}
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6 {
+  margin-top: 0.25em;
+  margin-bottom: 0.75em;
+}
+.reveal h1.demo,
+.reveal h2.demo,
+.reveal h3.demo,
+.reveal h4.demo,
+.reveal h5.demo,
+.reveal h6.demo {
+  margin-top: -0.5em;
+}
+.reveal ul {
+  list-style-type: circle;
+}
+.reveal pre code {
+  padding: 2em;
+  word-wrap: normal;
+}
+.reveal pre code::selection,
+.reveal pre code ::selection {
+  background-color: #000;
+  color: #4682b4;
+}
+.reveal pre code:focus {
+  outline: none;
+}
+.reveal blockquote {
+  border-left: 0.25em solid #4682b4;
+  box-shadow: none;
+  padding: 0 1em;
+  text-align: left;
+}
+.reveal blockquote:before,
+.reveal blockquote:after {
+  content: '';
+}
+.reveal iframe.blocks {
+  width: 100%;
+  height: 650px;
+  margin-left: -30px;
+}
+.reveal section img {
+  border: none;
+  box-shadow: none;
+}
+.reveal #title h1,
+.reveal #title h2,
+.reveal #title h3,
+.reveal #title h4,
+.reveal #title h5,
+.reveal #title h6 {
+  font-family: 'Helvetica Neue', sans-serif;
+  letter-spacing: -0.05em;
+  margin: 0;
+}
+.reveal #title h1 {
+  font-size: 3.2em;
+}
+.reveal img.demo {
+  max-height: 500px;
+}
+.reveal #comparisonTable {
+  font-size: 0.5em;
+}
+.reveal #comparisonTable td {
+  width: 33%;
+}
+.reveal .small {
+  font-size: 80%;
+}
+.reveal .tiny {
+  font-size: 60%;
+}
+.reveal .authors {
+  font-size: 70%;
+}
+.reveal .left {
+  left: -8.33%;
+  text-align: left;
+  float: left;
+  width: 50%;
+  z-index: -10;
+}
+.reveal .right {
+  left: 31.25%;
+  top: 75px;
+  float: right;
+  z-index: -10;
+  width: 50%;
+}
+.reveal #handsOn pre {
+  width: 70%;
+  font-size: 0.5em;
+  float: left;
+}
+.reveal #handsOn div.target {
+  margin: 20px;
+  width: 25%;
+  float: left;
+  font: 10px sans-serif;
+}
+.reveal #handsOn div.target rect {
+  fill: #4682b4;
+}
+.reveal #handsOn div.target circle {
+  opacity: 0.3;
+}
+.reveal #handsOn div.target path.line {
+  fill: none;
+  stroke: #666;
+  stroke-width: 1.5px;
+}
+.reveal #handsOn div.target path.area {
+  fill: #e7e7e7;
+}
+.reveal #handsOn div.target .axis {
+  shape-rendering: crispEdges;
+}
+.reveal #handsOn div.target .x.axis line {
+  stroke: #bbb;
+}
+.reveal #handsOn div.target .x.axis .minor {
+  stroke-opacity: 0.5;
+}
+.reveal #handsOn div.target .x.axis path {
+  fill: none;
+}
+.reveal #handsOn div.target .y.axis line,
+.reveal #handsOn div.target .y.axis path {
+  fill: none;
+  stroke: #333;
+}
+.reveal #handsOn button.execute {
+  clear: both;
+  font-size: 0.8em;
+}
+.reveal #handsOn div.followLink {
+  font-size: 0.6em;
+}
+.reveal .contactInfo {
+  text-align: right;
+}
+.reveal .contactInfo a {
+  font-size: 0.6em;
+}
+.reveal .red {
+  color: #e80000;
+}
+.reveal img.side {
+  float: left;
+  width: 45%;
+  padding: 0 5px 0 5px;
+}
+.reveal .clear {
+  clear: both;
+}

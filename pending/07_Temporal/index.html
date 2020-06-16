@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Visual Analytics, Visualizing Time</title>
+    <meta charset="utf-8">
+    <meta name="author" content="John Alexis Guerra Gomez">
+    <meta name="description" content="Visual Analytics">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+    <link href="style.css" rel="stylesheet">
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? '../lib/css/print/pdf.css' : '../lib/css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+    <script src="../lib/js/d3.min.js"></script>
+    <script src="../lib/js/bumpChartPhotos.js"></script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h2>Visualizing Time</h2><br>
+          <p class="small"><a href="http://johnguerra.co/" target="_blank"><strong>John Alexis Guerra Gómez</strong></a><span>| ja.guerrag[at]uniandes.edu.co</span><a href="http://twitter.com/duto_guerra">| @duto_guerra</a><br><span><strong>Jose Tiberio Hernández</strong> | jhernand[at]uniandes.edu.co</span><br><span>Universidad de los Andes</span>
+          </p><br>
+          <p class="tiny"><a href="http://johnguerra.co/lectures/visualAnalytics_fall2019/07_Temporal/" target="_blank">http://johnguerra.co/lectures/visualAnalytics_fall2019/07_Temporal/</a></p>
+          <p class="tiny">Based on<a href="http://www.cs.ubc.ca/~tmm/talks.html#minicourse14">slides from Tamara Munzner</a></p>
+        </section>
+        <section>
+          <section>
+            <h1>Visualizing Time</h1>
+          </section>
+          <section>
+            <h2>Temporal Datasets</h2>
+            <ul class="small">
+              <li class="fragment">One attrib+ has a timestamp (at any level)</li>
+              <li class="fragment">Granularity ("Year/Month/Day" vs "Year/Month/Day Hour")
+                <ul>
+                  <li class="fragment">Truncate</li>
+                  <li class="fragment">Datepart</li>
+                </ul>
+              </li>
+              <li class="fragment">Sometimes is Cyclic</li>
+              <li class="fragment">Seasonality</li>
+            </ul>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h1>Idioms</h1>
+          </section>
+          <section>
+            <h2 class="demo">Idiom: Line chart</h2>
+            <div class="left small">
+              <ul>
+                <li class="fragment">Data: Table, many timelines</li>
+                <li class="fragment">Tasks: Compare trends and similarities (with many), locate outliers</li>
+                <li class="fragment">Visual Representation: Line, vertical position, color hue</li>
+                <li class="fragment">Considerations:
+                  <ul>
+                    <li>Time usually goes from left to right</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div class="right"><img src="images/linechart.png" alt="Line chart"></div>
+          </section>
+          <section>
+            <h3 class="demo">Multi-series Line chart</h3>
+            <iframe src="http://blockbuilder.org/mbostock/3884955" class="blocks"></iframe><a target="_blank" href="http://blockbuilder.org/mbostock/3884955" class="tiny">http://blockbuilder.org/mbostock/3884955</a><a target="_blank" href="http://bl.ocks.org/mbostock/" class="tiny">by mbostock</a>
+          </section>
+          <section>
+            <h2 class="demo">idiom: Horizon charts</h2>
+            <div class="left small">
+              <ul>
+                <li class="fragment">Data: Table, many timelines</li>
+                <li class="fragment">Tasks: Compare trends and similarities (with many), locate outliers</li>
+                <li class="fragment">Visual Representation: Line, vertical position, color luminosity (quant divergent)</li>
+                <li class="fragment">Considerations: Uses much less space</li>
+              </ul>
+            </div>
+            <div class="right"><img src="images/horizon.png" alt="Horizon charts"></div>
+          </section>
+          <section>
+            <h3 class="demo">Horizon charts</h3>
+            <iframe src="http://blockbuilder.org/john-guerra/7770baa3383ab777f8ac211deeb66fbc" class="blocks"></iframe><a target="_blank" href="http://blockbuilder.org/john-guerra/7770baa3383ab777f8ac211deeb66fbc" class="tiny">http://blockbuilder.org/john-guerra/7770baa3383ab777f8ac211deeb66fbc</a><a target="_blank" href="http://bl.ocks.org/mbostock/" class="tiny">by mbostock</a>
+          </section>
+          <section>
+            <h2 class="demo">Cubism</h2><a target="_blank" href="http://square.github.io/cubism/">http://square.github.io/cubism/</a>
+            <iframe src="http://square.github.io/cubism/" class="blocks"></iframe>
+          </section>
+          <section>
+            <h3 class="demo">Joyplots</h3>
+            <iframe src="https://blockbuilder.org/john-guerra/2bb5a08bd6f17a5cb4efd6ad6d98973c" class="blocks"></iframe><a target="_blank" href="https://blockbuilder.org/john-guerra/2bb5a08bd6f17a5cb4efd6ad6d98973c" class="tiny">https://blockbuilder.org/john-guerra/2bb5a08bd6f17a5cb4efd6ad6d98973c</a>
+          </section>
+          <section>
+            <h3 class="demo">Joyplot vega-lite</h3><a href="https://observablehq.com/@vega/psr-b1919-21-with-vega-lite" class="tiny">https://observablehq.com/@vega/psr-b1919-21-with-vega-lite</a>
+          </section>
+          <section>
+            <h2 class="demo">idiom: Calendar view</h2>
+            <div class="left small">
+              <ul>
+                <li class="fragment">Data: Table (years), one timeline</li>
+                <li class="fragment">Tasks: Compare trends (by days of the week, month, year), locate outliers</li>
+                <li class="fragment">Visual Representation: Shape, vertical/horizontal position, color hue</li>
+                <li class="fragment">Considerations: Natural view for humans, focus on common time aggregations</li>
+              </ul>
+            </div>
+            <div class="right"><img src="images/calendar_view.png" alt="Calendar view"></div>
+          </section>
+          <section>
+            <h3 class="demo">Calendar View</h3>
+            <iframe src="http://blockbuilder.org/mbostock/4063318" class="blocks"></iframe><a target="_blank" href="http://blockbuilder.org/mbostock/4063318" class="tiny">http://blockbuilder.org/mbostock/4063318</a><a target="_blank" href="http://bl.ocks.org/mbostock/" class="tiny">by mbostock</a>
+          </section>
+          <section>
+            <h2 class="demo">idiom: Radial timelines</h2>
+            <div class="left small">
+              <ul>
+                <li class="fragment">Data: Table (years), one timeline</li>
+                <li class="fragment">Tasks: Compare trends (by days of the week, month, year), locate outliers</li>
+                <li class="fragment">Visual Representation: Line, Radial position, color hue (rainbow :( )</li>
+                <li class="fragment">Considerations: Appeals to cyclic nature of time</li>
+              </ul>
+            </div>
+            <div class="right"><a target="_blank" href="http://www.climate-lab-book.ac.uk/spirals/"><img src="images/spiral_may2016.gif" alt="radial_heatmapl"></a><a target="_blank" href="http://www.climate-lab-book.ac.uk/spirals/" class="tiny"> http://www.climate-lab-book.ac.uk/spirals/</a></div>
+          </section>
+          <section>
+            <h2 class="demo">Gant charts</h2>
+            <div class="left">
+              <ul class="small">
+                <li class="fragment">Data: Two time attribs (start end)</li>
+                <li class="fragment">Tasks: Summarize duration (features), compare events, identify intersections/dependencies</li>
+                <li class="fragment">Visual Representation: Line, express for time, separate/order/aligned for tasks, color hues</li>
+              </ul>
+            </div>
+            <div class="right"><img src="images/gantChart.png" alt="Gant Chart"><a href="https://observablehq.com/@john-guerra/mids-assignments-timeline" class="tiny">https://observablehq.com/@john-guerra/mids-assignments-timeline</a></div>
+          </section>
+          <section>
+            <h2>D3 Radial</h2>
+            <ul>
+              <li><a href="https://observablehq.com/@d3/radial-stacked-bar-chart-ii">https://observablehq.com/@d3/radial-stacked-bar-chart-ii</a></li>
+              <li><a href="https://observablehq.com/@vasturiano/spiral-axis" target="_blank">https://observablehq.com/@vasturiano/spiral-axis</a></li>
+            </ul>
+          </section>
+          
+          <section>
+            <h3 class="demo">Stacked Area chart</h3>
+            <iframe src="http://blockbuilder.org/mbostock/3020685" class="blocks"></iframe><a target="_blank" href="http://blockbuilder.org/mbostock/3020685" class="tiny">http://blockbuilder.org/mbostock/3020685</a><a target="_blank" href="http://bl.ocks.org/mbostock/" class="tiny">by mbostock</a>
+          </section>
+          <section>
+            <h3 class="demo">Stacked Radial Area</h3>
+            <iframe src="http://blockbuilder.org/mbostock/3048740" class="blocks"></iframe><a target="_blank" href="http://blockbuilder.org/mbostock/3048740" class="tiny">http://blockbuilder.org/mbostock/3048740</a><a target="_blank" href="http://bl.ocks.org/mbostock/" class="tiny">by mbostock</a>
+          </section>
+          <section>
+            <h3 class="demo">Stacked Radial Area</h3><a href="https://observablehq.com/@d3/radial-area-chart">https://observablehq.com/@d3/radial-area-chart</a>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h2>HCIL work on Temporal events</h2><a target="_blank" href="http://www.cs.umd.edu/hcil/temporalviz/"><img src="images/hcil_logo.jpg"></a><a target="_blank" href="http://www.cs.umd.edu/hcil/temporalviz/">http://www.cs.umd.edu/hcil/temporalviz/</a>
+          </section>
+          <section>
+            <h2>Time searcher</h2><span><iframe width="853" height="480" src="https://www.youtube.com/embed/VWx1TMcrb74" frameborder="0" allowfullscreen></iframe></span><a href="http://www.cs.umd.edu/hcil/timesearcher/" class="small">http://www.cs.umd.edu/hcil/timesearcher/</a>
+          </section>
+          <section data-markdown>
+            <script type="text/template">
+              ###Categorical Time events
+              
+              event id | category | timestamp | attribs
+              ---|----------|-----------|---------
+              1 | arrive | 2016/08/13 18:01:30 | on time
+              1 | clear | 2016/08/13 18:10:00 |
+              1 | finish | 2016/08/13 18:15:00 | revised
+                | |  |
+              2 | arrive | 2016/08/13 19:01:30 | late
+              2 | review | 2016/08/13 19:11:00 | network issues
+              2 | clear | 2016/08/13 19:15:00 |
+              2 | finish | 2016/08/13 19:15:00 | non revised
+              
+              <!-- .element: class="small" -->
+              
+              
+            </script>
+          </section>
+          <section>
+            <h2>Lifelines</h2><span><iframe width="853" height="480" src="https://www.youtube.com/embed/aeRklur2Zc4?start=54" frameborder="0" allowfullscreen></iframe></span><a target="_blank" href="http://www.cs.umd.edu/hcil/lifelines/" class="small">http://www.cs.umd.edu/hcil/lifelines/</a>
+          </section>
+          <section>
+            <h2 class="demo">Lifelines</h2><a target="_blank" href="http://www.cs.umd.edu/hcil/lifelines/" class="small"><img src="http://www.cs.umd.edu/hcil/lifelines/screenjan98.jpg" class="demo"></a><a target="_blank" href="http://www.cs.umd.edu/hcil/lifelines/" class="small">http://www.cs.umd.edu/hcil/lifelines/</a>
+          </section>
+          <section>
+            <h2 class="demo">Lifelines 2</h2><a target="_blank" href="http://www.cs.umd.edu/hcil/lifelines2/"><img src="http://www.cs.umd.edu/hcil/lifelines2/images/title.png" class="demo"></a><a target="_blank" href="http://www.cs.umd.edu/hcil/lifelines2/" class="small">http://www.cs.umd.edu/hcil/lifelines2/</a>
+          </section>
+          <section>
+            <h2 class="demo">Lifelines 2 demo</h2>
+            <iframe src="http://www.cs.umd.edu/hcil/lifelines2/videos/Lifelines2-(Contrast-Creatinine)-11-10-08_flash/full(1024x768)/index.htm" class="blocks"></iframe><a target="_blank" href="http://www.cs.umd.edu/hcil/lifelines2/videos/Lifelines2-(Contrast-Creatinine)-11-10-08_flash/full(1024x768)/index.htm" class="tiny">Lifelines 2 video link</a>
+          </section>
+          <section>
+            <h2>Similian</h2><a target="_blank" href="http://www.cs.umd.edu/hcil/similan"><img src="http://www.cs.umd.edu/hcil/similan/img/simi20091011/overview.png" class="demo"></a><a target="_blank" href="http://www.cs.umd.edu/hcil/similan" class="tiny">http://www.cs.umd.edu/hcil/similan</a>
+          </section>
+          <section>
+            <h2 class="demo">Similian demo</h2>
+            <iframe src="http://www.cs.umd.edu/hcil/similan/video/demo/index.html" class="blocks"></iframe><a target="_blank" href="http://www.cs.umd.edu/hcil/similan/video/demo/index.html" class="tiny">Similian video link</a>
+          </section>
+          <section>
+            <h2>LifeFlow</h2><a target="_blank" href="http://www.cs.umd.edu/hcil/lifeflow/"><img src="http://www.cs.umd.edu/hcil/lifeflow/img/LifeFlow3.png" class="demo"></a><a target="_blank" href="http://www.cs.umd.edu/hcil/lifeflow/" class="tiny">http://www.cs.umd.edu/hcil/lifeflow/</a>
+          </section>
+          <section>
+            <h2 class="demo">LifeFlow howto</h2><span>
+              <iframe width="853" height="480" src="https://www.youtube.com/embed/QxceG6_RM8w" frameborder="0" allowfullscreen></iframe>
+              </span>
+          </section>
+          <section>
+            <h2 class="demo">LifeFlow demo</h2><span>
+              <iframe width="853" height="480" src="https://www.youtube.com/embed/nXrmJS6Vk9A" frameborder="0" allowfullscreen></iframe>
+              </span>
+          </section>
+          <section>
+            <h2>EventFlow</h2><a target="_blank" href="http://hcil.umd.edu/eventflow/"><img src="http://www.cs.umd.edu/hcil/eventflow/img/EventFlow.png" class="demo"></a><a target="_blank" href="http://hcil.umd.edu/eventflow/" class="tiny">http://hcil.umd.edu/eventflow/</a>
+          </section>
+          <section>
+            <h2 class="demo">EventFlow demo</h2><span>
+              <iframe width="853" height="480" src="https://www.youtube.com/embed/FHgcJDnW8q8" frameborder="0" allowfullscreen></iframe>
+              
+              </span>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h2>Common Derives/Tricks for Temporal data</h2>
+          </section>
+          <section>
+            <h2 class="demo">Align by event</h2>
+            <iframe src="http://old.tweetometro.co/robots_May25.html" frameborder="0" class="blocks"></iframe>
+          </section>
+          <section>
+            <h2>Add / Remove Granularity</h2>
+          </section>
+          <section>
+            <h2>Extract dateparts</h2>
+          </section>
+          <section>
+            <h2>Window average/median</h2>
+          </section>
+          <section>
+            <h2>Seasonality</h2>
+            <iframe src="http://old.tweetometro.co/" frameborder="0" class="blocks"></iframe>
+          </section>
+          <section>
+            <h2>Loose scales</h2><a href="http://johnguerra.co/viz/influentials/chi2019/tweets.html">http://johnguerra.co/viz/influentials/chi2019/tweets.html</a>
+          </section>
+        </section>
+      </div>
+    </div>
+    <script src="../lib/js/head.min.js"></script>
+    <script src="../lib/js/reveal.js"></script>
+    <script>
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        rollingLinks: true,
+        transition: "convex",
+        //- width: "90%",
+        //- height: 1.0,
+        dependencies: [
+          // Cross-browser shim that fully implements classList - https://github.com/eligrey/classList.js/
+          { src: '../lib/js/classList.js', condition: function() { return !document.body.classList; } },
+      
+          // Interpret Markdown in <section> elements
+          { src: '../plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: '../plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      
+          // Syntax highlight for <code> elements
+          { src: '../plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+      
+          // Zoom in and out with Alt+click
+          { src: '../plugin/zoom-js/zoom.js', async: true },
+      
+          // Speaker notes
+          { src: '../plugin/notes/notes.js', async: true },
+      
+          //- // Remote control your reveal.js presentation using a touch device
+          //- { src: '../plugin/remotes/remotes.js', async: true },
+      
+          //- // MathJax
+          //- { src: '../plugin/math/math.js', async: true }
+        ]
+      });
+    </script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      
+      ga('create', 'UA-72531610-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+  </body>
+</html>

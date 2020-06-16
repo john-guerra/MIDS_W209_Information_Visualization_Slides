@@ -1,0 +1,255 @@
+doctype html
+html
+  head
+    title Visual Analytics, Advanced visualization techniques
+    meta(charset='utf-8')
+    meta(name='author', content='John Alexis Guerra Gomez')
+    meta(name='description', content='Visual Analytics')
+    meta(name="viewport",content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui")
+    //- link(href='../lib/css/reveal.css', rel='stylesheet')
+    //- link(href='../lib/css/theme/simple.css', rel='stylesheet')
+    //- link(href='../lib/css/zenburn.css', rel='stylesheet')
+    link(href='style.css', rel='stylesheet')
+    //- Printing and PDF exports -->
+    script.
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? '../lib/css/print/pdf.css' : '../lib/css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    script(src='../lib/js/d3.min.js')
+    script(src='../lib/js/bumpChartPhotos.js')
+  body
+
+
+    .reveal
+      .slides
+
+        section
+          h2 Analytics
+          h3 Not a course in Machine Learning
+          br
+          p.small
+            a(href='http://johnguerra.co/', target='_blank') #[strong John Alexis Guerra Gómez]
+            span | ja.guerrag[at]uniandes.edu.co
+            a(href='http://twitter.com/duto_guerra') | @duto_guerra
+            br
+            span #[strong Jose Tiberio Hernández] | jhernand[at]uniandes.edu.co
+            br
+            span Universidad de los Andes
+
+            //- br
+            //- span ja.guerrag en uniandes.edu.co
+            //- br
+            //- a(href='http://twitter.com/duto_guerra') @duto_guerra
+          //- p.small Use
+          //-   strong  spacebar
+          //-   |  and the arrows to advance slides
+          br
+          p.tiny
+            a(href='http://johnguerra.co/lectures/visualAnalytics_fall2019/14_Analytics/', target='_blank') http://johnguerra.co/lectures/visualAnalytics_fall2019/14_Analytics/
+
+
+        //- convert -density 150 -depth 8 -quality 85 ~/Dropbox/documentos/2016/andes/visual_analytics/lectures_tamara/05_rules-artery.pdf ./05_rules-artery.png
+
+
+        section
+          section
+            h2 Outline
+            ul
+              li Clustering
+              li Regression
+              li Classification
+              li Dimensionality Reduction
+              li Recommendation systems
+        section
+          section
+            h2 Clustering
+            a(href="http://scikit-learn.org/stable/modules/clustering.html#clustering")
+              img(src="http://scikit-learn.org/stable/_images/sphx_glr_plot_cluster_comparison_0011.png")
+              p.tiny http://scikit-learn.org/stable/modules/clustering.html#clustering
+
+
+          section
+            h2 When to use it?
+            ul
+              li.fragment When you want to find #[strong similar] items
+              li.fragment Depends on your distance metric
+              li.fragment When you have to many items, and you want to #[strong aggregate]
+
+
+          //- section.demo
+          //-   iframe.blocks(src="http://tech.nitoyon.com/en/blog/2013/11/07/k-means/")
+          //-   a.tiny(target="_blank"  href="http://tech.nitoyon.com/en/blog/2013/11/07/k-means/") http://tech.nitoyon.com/en/blog/2013/11/07/k-means/
+
+          section
+            h2 Examples
+            ul
+              li.fragment Customer segmentation
+              li.fragment Grouping experiment outcomes
+
+
+        section
+          section
+            h2.demo Regression
+            a(target="_blank" href="http://scikit-learn.org/stable/modules/linear_model.html#passive-aggressive-algorithms")
+              img.blocks(src="http://scikit-learn.org/stable/_images/sphx_glr_plot_ols_0011.png")
+              p.tiny http://scikit-learn.org/stable/modules/linear_model.html#passive-aggressive-algorithms
+
+          section
+            h2 When to use it?
+            ul
+              li.fragment Present (Identify/Compare) Tendency
+              li.fragment Predict values
+
+
+          section
+            h3.demo Linear Regression
+            iframe.blocks(src="http://blockbuilder.org/tmcw/3931800")
+            a.tiny(target="_blank" href="http://blockbuilder.org/tmcw/3931800") http://blockbuilder.org/tmcw/3931800
+            a.tiny(target="_blank" href="http://bl.ocks.org/tmcw/") by tmcw
+
+          section
+            h2 Examples
+            ul
+              li.fragment Stock prices
+              li.fragment Drug response
+
+
+        section
+          section
+            h2.demo Classification
+            img(src="images/sphx_glr_plot_classifier_comparison_001.png" alt="Classification algorithms")
+
+            a.tiny(href="https://scikit-learn.org/stable/modules/ensemble.html#random-forests") https://scikit-learn.org/stable/modules/ensemble.html#random-forests
+
+          section
+            h2 When to use it?
+            ul
+              li.fragment Present (Identify/Compare) Tendency
+              li.fragment Present (Identify/Compare) Groups
+              li.fragment Aggregate
+              li.fragment Predict values
+
+          section
+            h2 Examples
+            ul
+              li.fragment Photo categorization
+              li.fragment Sentiment analysis
+              li.fragment Spam filtering
+
+        section
+          section
+            h2.demo Dimensionality Reduction
+            img(src="http://scikit-learn.org/stable/_images/sphx_glr_plot_kernel_pca_0011.png")
+
+          section
+            h2 When to use it?
+            ul
+              li.fragment Attribute Filtering
+              li.fragment Categorize Documents (Topic modeling)
+
+
+        section
+          section
+            h2 Recommendation systems
+
+
+          section
+            h2 When to use it?
+            ul
+              li.fragment Large catalog, with user preference history
+              li.fragment If you like a, and b, maybe you will like c
+
+          section
+            h2 Types
+            ul
+              li.fragment Collaborative filtering
+              li.fragment Content based systems
+              li.fragment Hybrids
+
+          section
+            h2 Examples
+            ul
+              li.fragment Amazon
+              li.fragment Facebook
+              li.fragment Google
+              li.fragment Yahoo
+              li.fragment Netflix Prize
+
+        section
+          section
+            h2 How to use the algorithms?
+            ul
+              li.fragment
+                a(href="https://www.r-project.org/") R
+              li.fragment
+                a(href="http://scikit-learn.org/") scikit-learn
+              li.fragment
+                a(href="https://www.tensorflow.org/") Tensorflow (Google)
+              li.fragment
+                a(href="http://caffe.berkeleyvision.org/") Caffe
+              li.fragment
+                a(href="https://aws.amazon.com/machine-learning/") Amazon ML
+              li.fragment
+                a(href="https://spark.apache.org/docs/1.1.0/mllib-guide.html") Spark MLlib
+              li.fragment
+                a(href="https://turi.com/") Graphlab
+
+          //- section
+          //-   h2 Applied example node + R
+          //-   a(href="https://github.com/juanibarral/node_plus_r_tutorial/wiki") https://github.com/juanibarral/node_plus_r_tutorial/wiki
+
+
+
+
+
+
+    script(src='../lib/js/head.min.js')
+    script(src='../lib/js/reveal.js')
+
+    script.
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        rollingLinks: true,
+        transition: "convex",
+        //- width: "90%",
+        //- height: 1.0,
+        dependencies: [
+          // Cross-browser shim that fully implements classList - https://github.com/eligrey/classList.js/
+          { src: '../lib/js/classList.js', condition: function() { return !document.body.classList; } },
+
+          // Interpret Markdown in <section> elements
+          { src: '../plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: '../plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+
+          // Syntax highlight for <code> elements
+          { src: '../plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+
+          // Zoom in and out with Alt+click
+          { src: '../plugin/zoom-js/zoom.js', async: true },
+
+          // Speaker notes
+          { src: '../plugin/notes/notes.js', async: true },
+
+          //- // Remote control your reveal.js presentation using a touch device
+          //- { src: '../plugin/remotes/remotes.js', async: true },
+
+          //- // MathJax
+          //- { src: '../plugin/math/math.js', async: true }
+        ]
+      });
+    script.
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-72531610-1', 'auto');
+      ga('send', 'pageview');
+
+
+

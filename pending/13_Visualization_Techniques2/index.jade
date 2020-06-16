@@ -1,0 +1,272 @@
+doctype html
+html
+  head
+    title Visual Analytics, Advanced visualization techniques
+    meta(charset='utf-8')
+    meta(name='author', content='John Alexis Guerra Gomez')
+    meta(name='description', content='Visual Analytics')
+    meta(name="viewport",content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui")
+    //- link(href='../lib/css/reveal.css', rel='stylesheet')
+    //- link(href='../lib/css/theme/simple.css', rel='stylesheet')
+    //- link(href='../lib/css/zenburn.css', rel='stylesheet')
+    link(href='style.css', rel='stylesheet')
+    //- Printing and PDF exports -->
+    script.
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? '../lib/css/print/pdf.css' : '../lib/css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    script(src='../lib/js/d3.min.js')
+    script(src='../lib/js/bumpChartPhotos.js')
+  body
+
+
+    .reveal
+      .slides
+
+        section
+          h2 Reduce items and attributes
+          br
+          p.small
+            a(href='http://johnguerra.co/', target='_blank') #[strong John Alexis Guerra Gómez]
+            span | ja.guerrag[at]uniandes.edu.co
+            a(href='http://twitter.com/duto_guerra') | @duto_guerra
+            br
+            span #[strong Jose Tiberio Hernández] | jhernand[at]uniandes.edu.co
+            br
+            span Universidad de los Andes
+
+            //- br
+            //- span ja.guerrag en uniandes.edu.co
+            //- br
+            //- a(href='http://twitter.com/duto_guerra') @duto_guerra
+          //- p.small Use
+          //-   strong  spacebar
+          //-   |  and the arrows to advance slides
+          br
+          p.tiny
+            a(href='http://johnguerra.co/lectures/visualAnalytics_fall2019/13_Visualization_Techniques2/', target='_blank') http://johnguerra.co/lectures/visualAnalytics_fall2019/13_Visualization_Techniques2/
+          p.tiny Based on
+            a(href="http://www.cs.ubc.ca/~tmm/talks.html#minicourse14") slides from Tamara Munzner
+
+
+        //- convert -density 150 -depth 8 -quality 85 ~/Dropbox/documentos/2016/andes/visual_analytics/lectures_tamara/05_rules-artery.pdf ./05_rules-artery.png
+
+
+        section
+          section
+            h2 Reduce Items and Attributes
+          section(data-background-size="contain" data-background="images/14_reduce-glimmer.003.png")
+          section(data-background-size="contain" data-background="images/14_reduce-glimmer.004.png")
+          section(data-background-size="contain" data-background="images/14_reduce-glimmer.005.png")
+          section(data-background-size="contain" data-background="images/14_reduce-glimmer.006.png")
+
+          section.demo
+            h2 Scented widgets paper
+            iframe.blocks(src="http://vis.berkeley.edu/papers/scented_widgets/")
+            a.tiny(target="_blank" href="http://vis.berkeley.edu/papers/scented_widgets/") http://vis.berkeley.edu/papers/scented_widgets/
+          section(data-background-size="contain" data-background="images/14_reduce-glimmer.007.png")
+
+          section
+            h2 DOSFA Paper
+            a.small(target="_blank" href="http://www.cs.ubc.ca/~tmm/courses/cpsc533c-04-spr/readings/dimorder.pdf") http://www.cs.ubc.ca/~tmm/courses/cpsc533c-04-spr/readings/dimorder.pdf
+
+
+          section(data-background-size="contain" data-background="images/14_reduce-glimmer.008.png")
+          section(data-background-size="contain" data-background="images/14_reduce-glimmer.009.png")
+
+          section
+            h3.demo Box Plot
+            iframe.blocks(src="http://blockbuilder.org/mbostock/4061502")
+            a.tiny(target="_blank" href="http://blockbuilder.org/mbostock/4061502") http://blockbuilder.org/mbostock/4061502
+            a.tiny(target="_blank" href="http://bl.ocks.org/mbostock/") by mbostock
+
+          section
+            h3.demo Violin plot
+            iframe.blocks(src="http://blockbuilder.org/asielen/92929960988a8935d907e39e60ea8417")
+            a.tiny(target="_blank" href="http://blockbuilder.org/asielen/92929960988a8935d907e39e60ea8417") http://blockbuilder.org/asielen/92929960988a8935d907e39e60ea8417
+            a.tiny(target="_blank" href="http://bl.ocks.org/asielen/") by asielen
+
+          section(data-background-size="contain" data-background="images/14_reduce-glimmer.010.png")
+          section(data-background-size="contain" data-background="images/14_reduce-glimmer.011.png")
+          section(data-background-size="contain" data-background="images/14_reduce-glimmer.012.png")
+          section(data-background-size="contain" data-background="images/14_reduce-glimmer.013.png")
+          section(data-background-size="contain" data-background="images/14_reduce-glimmer.014.png")
+          section(data-background-size="contain" data-background="images/14_reduce-glimmer.015.png")
+          section(data-background-size="contain" data-background="images/14_reduce-glimmer.016.png")
+          section(data-background-size="contain" data-background="images/14_reduce-glimmer.017.png")
+          section(data-background-size="contain" data-background="images/14_reduce-glimmer.018.png")
+
+
+          section
+            h3.demo t-SNE Explorations
+            iframe.blocks(src="http://distill.pub/2016/misread-tsne/")
+            a.tiny(target="_blank" href="http://distill.pub/2016/misread-tsne/") http://distill.pub/2016/misread-tsne/
+
+
+          section
+            h3 More extras
+            p Tamara's slides on her work on dimensionality reduction
+
+          section(data-background-size="contain" data-background="images/14_reduce-glimmer.019.png")
+          section(data-background-size="contain" data-background="images/14_reduce-glimmer.020.png")
+          section(data-background-size="contain" data-background="images/14_reduce-glimmer.021.png")
+          section(data-background-size="contain" data-background="images/14_reduce-glimmer.022.png")
+          section(data-background-size="contain" data-background="images/14_reduce-glimmer.023.png")
+          section(data-background-size="contain" data-background="images/14_reduce-glimmer.024.png")
+          section(data-background-size="contain" data-background="images/14_reduce-glimmer.025.png")
+          section(data-background-size="contain" data-background="images/14_reduce-glimmer.026.png")
+          section(data-background-size="contain" data-background="images/14_reduce-glimmer.027.png")
+          section(data-background-size="contain" data-background="images/14_reduce-glimmer.028.png")
+          section(data-background-size="contain" data-background="images/14_reduce-glimmer.029.png")
+          section(data-background-size="contain" data-background="images/14_reduce-glimmer.030.png")
+          section(data-background-size="contain" data-background="images/14_reduce-glimmer.031.png")
+
+
+
+        section
+          section
+            h3 Embed, Focus+Context
+          section(data-background-size="contain" data-background="images/15_embed-tj.003.png")
+          section(data-background-size="contain" data-background="images/15_embed-tj.004.png")
+
+          //- Fish eye
+          section(data-background-size="contain" data-background="images/15_embed-tj.005.png")
+
+          section
+            h3.demo Fish eye
+            iframe.blocks(src="https://bost.ocks.org/mike/fisheye/")
+            a.tiny(target="_blank" href="https://bost.ocks.org/mike/fisheye/") https://bost.ocks.org/mike/fisheye/
+            a.tiny(target="_blank" href="http://bl.ocks.org/mbostock/") by mbostock
+
+          section(data-background-size="contain" data-background="images/15_embed-tj.006.png")
+          section(data-background-size="contain" data-background="images/15_embed-tj.007.png")
+          section(data-background-size="contain" data-background="images/15_embed-tj.008.png")
+
+
+        section
+          section
+            h2 Comparisson
+            ul
+              li.fragment Side by Side
+              li.fragment Juxtaposition
+              li.fragment Explicit differences
+              li.fragment Animation
+
+          section
+            h2 Comparison distance?
+            ul
+              li.fragment Consider what are you comparing
+              li.fragment What is the distance between two points?
+
+
+          section
+            h3.demo Clustering...
+            iframe.blocks(src="http://harthur.github.io/clusterfck/demos/colors/")
+            a.tiny(target="_blank" href="http://harthur.github.io/clusterfck/demos/colors/") http://harthur.github.io/clusterfck/demos/colors/
+
+        section
+          section
+            h2 Some tips for presentation
+
+          section
+            h2 Github project
+            ul
+              li.fragment Good README.md
+              li.fragment Organize your folders
+              li.fragment Meaningful comments (when committing)
+              li.fragment Tweet about it with #dataviz
+          section
+            h2 README.md
+            ul.small
+              li.fragment Include a meaningful Readme.md
+              li.fragment Short and concise description of your project
+              li.fragment Who, what, why, how? (human readable)
+              li.fragment What insights can you get out of it
+              li.fragment Link the class website
+              li.fragment Link the project's demo
+              li.fragment Link to the paper
+              li.fragment A couple lines on how to run it
+
+
+          section
+            h2 Presentation
+            ul.small
+              li.fragment 7 Minutes
+              li.fragment Tell a story
+              li.fragment Problem -> Alternatives -> Your solution -> Insights
+              li.fragment Practice, practice, practice
+              li.fragment Try to show a 30s demo video
+              li.fragment Talk about your users
+              li.fragment Avoid text on slides
+              li.fragment Avoid repeating logos
+
+          section
+            h1 Paper
+            ul
+              li.fragment Abstract: explain what you did to your granny
+              li.fragment Parts
+              ul
+                li.fragment Intro: state problem
+                li.fragment Related Work
+                li.fragment Your solution
+                li.fragment Evaluation
+                li.fragment Conclusions
+
+          section
+            h2 More about the paper
+            ul
+              li.fragment English
+              li.fragment Follow #[a(href="http://ieeevis.org/year/2016/info/call-participation/paper-submission-guidelines#SupplementalMaterial" target="_blank") ieeevis paper guidelines]
+              li.fragment Recommended editor #[a(href="https://www.overleaf.com" target="_blank") overleaf]
+
+
+    script(src='../lib/js/head.min.js')
+    script(src='../lib/js/reveal.js')
+
+    script.
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        rollingLinks: true,
+        transition: "convex",
+        //- width: "90%",
+        //- height: 1.0,
+        dependencies: [
+          // Cross-browser shim that fully implements classList - https://github.com/eligrey/classList.js/
+          { src: '../lib/js/classList.js', condition: function() { return !document.body.classList; } },
+
+          // Interpret Markdown in <section> elements
+          { src: '../plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: '../plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+
+          // Syntax highlight for <code> elements
+          { src: '../plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+
+          // Zoom in and out with Alt+click
+          { src: '../plugin/zoom-js/zoom.js', async: true },
+
+          // Speaker notes
+          { src: '../plugin/notes/notes.js', async: true },
+
+          //- // Remote control your reveal.js presentation using a touch device
+          //- { src: '../plugin/remotes/remotes.js', async: true },
+
+          //- // MathJax
+          //- { src: '../plugin/math/math.js', async: true }
+        ]
+      });
+    script.
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-72531610-1', 'auto');
+      ga('send', 'pageview');
+
+
+

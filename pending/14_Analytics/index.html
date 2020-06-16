@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Visual Analytics, Advanced visualization techniques</title>
+    <meta charset="utf-8">
+    <meta name="author" content="John Alexis Guerra Gomez">
+    <meta name="description" content="Visual Analytics">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+    <link href="style.css" rel="stylesheet">
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? '../lib/css/print/pdf.css' : '../lib/css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+    <script src="../lib/js/d3.min.js"></script>
+    <script src="../lib/js/bumpChartPhotos.js"></script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h2>Analytics</h2>
+          <h3>Not a course in Machine Learning</h3><br>
+          <p class="small"><a href="http://johnguerra.co/" target="_blank"><strong>John Alexis Guerra Gómez</strong></a><span>| ja.guerrag[at]uniandes.edu.co</span><a href="http://twitter.com/duto_guerra">| @duto_guerra</a><br><span><strong>Jose Tiberio Hernández</strong> | jhernand[at]uniandes.edu.co</span><br><span>Universidad de los Andes</span>
+          </p><br>
+          <p class="tiny"><a href="http://johnguerra.co/lectures/visualAnalytics_fall2019/14_Analytics/" target="_blank">http://johnguerra.co/lectures/visualAnalytics_fall2019/14_Analytics/</a></p>
+        </section>
+        
+        <section>
+          <section>
+            <h2>Outline</h2>
+            <ul>
+              <li>Clustering</li>
+              <li>Regression</li>
+              <li>Classification</li>
+              <li>Dimensionality Reduction</li>
+              <li>Recommendation systems</li>
+            </ul>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h2>Clustering</h2><a href="http://scikit-learn.org/stable/modules/clustering.html#clustering"><img src="http://scikit-learn.org/stable/_images/sphx_glr_plot_cluster_comparison_0011.png">
+              <p class="tiny">http://scikit-learn.org/stable/modules/clustering.html#clustering</p></a>
+          </section>
+          <section>
+            <h2>When to use it?</h2>
+            <ul>
+              <li class="fragment">When you want to find <strong>similar</strong> items</li>
+              <li class="fragment">Depends on your distance metric</li>
+              <li class="fragment">When you have to many items, and you want to <strong>aggregate</strong></li>
+            </ul>
+          </section>
+          <section>
+            <h2>Examples</h2>
+            <ul>
+              <li class="fragment">Customer segmentation</li>
+              <li class="fragment">Grouping experiment outcomes</li>
+            </ul>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h2 class="demo">Regression</h2><a target="_blank" href="http://scikit-learn.org/stable/modules/linear_model.html#passive-aggressive-algorithms"><img src="http://scikit-learn.org/stable/_images/sphx_glr_plot_ols_0011.png" class="blocks">
+              <p class="tiny">http://scikit-learn.org/stable/modules/linear_model.html#passive-aggressive-algorithms</p></a>
+          </section>
+          <section>
+            <h2>When to use it?</h2>
+            <ul>
+              <li class="fragment">Present (Identify/Compare) Tendency</li>
+              <li class="fragment">Predict values</li>
+            </ul>
+          </section>
+          <section>
+            <h3 class="demo">Linear Regression</h3>
+            <iframe src="http://blockbuilder.org/tmcw/3931800" class="blocks"></iframe><a target="_blank" href="http://blockbuilder.org/tmcw/3931800" class="tiny">http://blockbuilder.org/tmcw/3931800</a><a target="_blank" href="http://bl.ocks.org/tmcw/" class="tiny">by tmcw</a>
+          </section>
+          <section>
+            <h2>Examples</h2>
+            <ul>
+              <li class="fragment">Stock prices</li>
+              <li class="fragment">Drug response</li>
+            </ul>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h2 class="demo">Classification</h2><img src="images/sphx_glr_plot_classifier_comparison_001.png" alt="Classification algorithms"><a href="https://scikit-learn.org/stable/modules/ensemble.html#random-forests" class="tiny">https://scikit-learn.org/stable/modules/ensemble.html#random-forests</a>
+          </section>
+          <section>
+            <h2>When to use it?</h2>
+            <ul>
+              <li class="fragment">Present (Identify/Compare) Tendency</li>
+              <li class="fragment">Present (Identify/Compare) Groups</li>
+              <li class="fragment">Aggregate</li>
+              <li class="fragment">Predict values</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Examples</h2>
+            <ul>
+              <li class="fragment">Photo categorization</li>
+              <li class="fragment">Sentiment analysis</li>
+              <li class="fragment">Spam filtering</li>
+            </ul>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h2 class="demo">Dimensionality Reduction</h2><img src="http://scikit-learn.org/stable/_images/sphx_glr_plot_kernel_pca_0011.png">
+          </section>
+          <section>
+            <h2>When to use it?</h2>
+            <ul>
+              <li class="fragment">Attribute Filtering</li>
+              <li class="fragment">Categorize Documents (Topic modeling)</li>
+            </ul>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h2>Recommendation systems</h2>
+          </section>
+          <section>
+            <h2>When to use it?</h2>
+            <ul>
+              <li class="fragment">Large catalog, with user preference history</li>
+              <li class="fragment">If you like a, and b, maybe you will like c</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Types</h2>
+            <ul>
+              <li class="fragment">Collaborative filtering</li>
+              <li class="fragment">Content based systems</li>
+              <li class="fragment">Hybrids</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Examples</h2>
+            <ul>
+              <li class="fragment">Amazon</li>
+              <li class="fragment">Facebook</li>
+              <li class="fragment">Google</li>
+              <li class="fragment">Yahoo</li>
+              <li class="fragment">Netflix Prize</li>
+            </ul>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h2>How to use the algorithms?</h2>
+            <ul>
+              <li class="fragment"><a href="https://www.r-project.org/">R</a></li>
+              <li class="fragment"><a href="http://scikit-learn.org/">scikit-learn</a></li>
+              <li class="fragment"><a href="https://www.tensorflow.org/">Tensorflow (Google)</a></li>
+              <li class="fragment"><a href="http://caffe.berkeleyvision.org/">Caffe</a></li>
+              <li class="fragment"><a href="https://aws.amazon.com/machine-learning/">Amazon ML</a></li>
+              <li class="fragment"><a href="https://spark.apache.org/docs/1.1.0/mllib-guide.html">Spark MLlib</a></li>
+              <li class="fragment"><a href="https://turi.com/">Graphlab</a></li>
+            </ul>
+          </section>
+          <section>
+            <h2>Applied example node + R</h2><a href="https://github.com/juanibarral/node_plus_r_tutorial/wiki">https://github.com/juanibarral/node_plus_r_tutorial/wiki</a>
+          </section>
+        </section>
+      </div>
+    </div>
+    <script src="../lib/js/head.min.js"></script>
+    <script src="../lib/js/reveal.js"></script>
+    <script>
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        rollingLinks: true,
+        transition: "convex",
+        //- width: "90%",
+        //- height: 1.0,
+        dependencies: [
+          // Cross-browser shim that fully implements classList - https://github.com/eligrey/classList.js/
+          { src: '../lib/js/classList.js', condition: function() { return !document.body.classList; } },
+      
+          // Interpret Markdown in <section> elements
+          { src: '../plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: '../plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      
+          // Syntax highlight for <code> elements
+          { src: '../plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+      
+          // Zoom in and out with Alt+click
+          { src: '../plugin/zoom-js/zoom.js', async: true },
+      
+          // Speaker notes
+          { src: '../plugin/notes/notes.js', async: true },
+      
+          //- // Remote control your reveal.js presentation using a touch device
+          //- { src: '../plugin/remotes/remotes.js', async: true },
+      
+          //- // MathJax
+          //- { src: '../plugin/math/math.js', async: true }
+        ]
+      });
+    </script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      
+      ga('create', 'UA-72531610-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+  </body>
+</html>

@@ -1,0 +1,267 @@
+doctype html
+html
+  head
+    title Visual Analytics, Visualizing Spatial Data
+    meta(charset='utf-8')
+    meta(name='author', content='John Alexis Guerra Gomez')
+    meta(name='description', content='Visual Analytics')
+    meta(name="viewport",content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui")
+    //- link(href='../lib/css/reveal.css', rel='stylesheet')
+    //- link(href='../lib/css/theme/simple.css', rel='stylesheet')
+    //- link(href='../lib/css/zenburn.css', rel='stylesheet')
+    link(href='style.css', rel='stylesheet')
+    //- Printing and PDF exports -->
+    script.
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? '../lib/css/print/pdf.css' : '../lib/css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    script(src='../lib/js/d3.min.js')
+    script(src='../lib/js/bumpChartPhotos.js')
+  body
+
+
+    .reveal
+      .slides
+
+        section
+
+
+          h2 Visualizing Spatial Data
+          h3 Arranging Spatial Data
+          br
+          p.small
+            a(href='http://johnguerra.co/', target='_blank') #[strong John Alexis Guerra Gómez]
+            span | ja.guerrag[at]uniandes.edu.co
+            a(href='http://twitter.com/duto_guerra') | @duto_guerra
+            br
+            span #[strong Jose Tiberio Hernández] | jhernand[at]uniandes.edu.co
+            br
+            span Universidad de los Andes
+
+            //- br
+            //- span ja.guerrag en uniandes.edu.co
+            //- br
+            //- a(href='http://twitter.com/duto_guerra') @duto_guerra
+          //- p.small Use
+          //-   strong  spacebar
+          //-   |  and the arrows to advance slides
+          br
+          p.small
+            a(href='http://johnguerra.co/lectures/visualAnalytics_fall2019/06_Spatial/', target='_blank') http://johnguerra.co/lectures/visualAnalytics_fall2019/06_Spatial/
+          p.tiny Based on
+            a(href="http://www.cs.ubc.ca/~tmm/talks.html#minicourse14") slides from Tamara Munzner
+
+
+        //- convert -density 150 -depth 8 -quality 85 ~/Dropbox/documentos/2016/andes/visual_analytics/lectures_tamara/05_rules-artery.pdf ./05_rules-artery.png
+
+        section
+          section
+            h2 Visualizing Spatial Data
+
+
+          section(data-background-size="contain" data-background="images/08_tables-spatial.025.png")
+          section(data-background-size="contain" data-background="images/08_tables-spatial.026.png")
+
+          //- Choropleth map block
+          section
+            h3.demo Choropleth map
+            iframe.blocks(src="http://blockbuilder.org/mbostock/4060606")
+            a.tiny(target="_blank" href="http://blockbuilder.org/mbostock/4060606") http://blockbuilder.org/mbostock/4060606
+
+
+          //- US Grid map
+          section
+            h3.demo US Grid map
+            iframe.blocks(src="http://blockbuilder.org/kristw/2f628465e36f9821325d")
+            a.tiny(target="_blank" href="http://blockbuilder.org/kristw/2f628465e36f9821325d") http://blockbuilder.org/kristw/2f628465e36f9821325d
+            a.tiny(target="_blank" href="http://bl.ocks.org/kristw/") by Kristw
+
+
+
+          //- US Grid map
+          section
+            h3.demo Colombia Grid Map?
+            iframe.blocks(src="http://blockbuilder.org/john-guerra/4db5024e00a82f10a2dc")
+            a.tiny(target="_blank" href="http://blockbuilder.org/john-guerra/4db5024e00a82f10a2dc") http://blockbuilder.org/john-guerra/4db5024e00a82f10a2dc
+
+
+
+          section
+            h2.demo Map Projections
+            iframe.blocks(src="http://blockbuilder.org/mbostock/3711652")
+            a.tiny(target="_blank" href="http://blockbuilder.org/mbostock/3711652") http://blockbuilder.org/mbostock/3711652
+          //- section(data-background-size="contain" data-background="images/08_tables-spatial.027.png")
+
+          section
+            h2.demo Map Projections
+            iframe.blocks(width="560", height="315", src="https://www.youtube.com/embed/kIID5FDi2JQ",frameborder="0" allowfullscreen)
+
+
+          section
+            h2 Map libraries
+            ul
+              li
+                a(target="_blank" href="http://mapbox.com/") http://mapbox.com/
+              li
+                a(target="_blank" href="http://leafletjs.com/") http://leafletjs.com/
+              li
+                a(target="_blank" href="http://datamaps.github.io/") http://datamaps.github.io/
+              li
+                a(target="_blank" href="https://github.com/emeeks/d3-carto-map") https://github.com/emeeks/d3-carto-map
+
+
+
+          section(data-background-size="contain" data-background="images/08_tables-spatial.027.png")
+
+          section(data-background-size="contain" data-background="images/08_tables-spatial.028.png")
+          section(data-background-size="contain" data-background="images/08_tables-spatial.029.png")
+          section(data-background-size="contain" data-background="images/08_tables-spatial.030.png")
+          section(data-background-size="contain" data-background="images/08_tables-spatial.031.png")
+          section(data-background-size="contain" data-background="images/08_tables-spatial.032.png")
+          section(data-background-size="contain" data-background="images/08_tables-spatial.033.png")
+          //- section(data-background-size="contain" data-background="images/08_tables-spatial.034.png")
+
+
+
+        section
+
+          section
+            h3 Mapbox + Tableau
+            a(href="https://www.mapbox.com/tableau/") https://www.mapbox.com/tableau/
+
+
+          section
+            h3.demo Votos Fajardo
+            a.tiny(href="https://public.tableau.com/profile/john.alexis.guerra.g.mez#!/vizhome/votosFajardo2/Fajardo") https://public.tableau.com/profile/john.alexis.guerra.g.mez#!/vizhome/votosFajardo2/Fajardo
+            div.blocks.
+              <div class='tableauPlaceholder' id='viz1568758234721' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;NG&#47;NGCWHPJM6&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='path' value='shared&#47;NGCWHPJM6' /> <param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;NG&#47;NGCWHPJM6&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>
+              <script type='text/javascript'>                    var divElement = document.getElementById('viz1568758234721');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height='600px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+
+
+          section
+            h3.demo Votos Concejo
+            a.tiny(href="https://public.tableau.com/profile/john.alexis.guerra.g.mez#!/vizhome/votosConcejo/Dashboard1") https://public.tableau.com/profile/john.alexis.guerra.g.mez#!/vizhome/votosConcejo/Dashboard1
+            div.blocks.
+              <div class='tableauPlaceholder' id='viz1568758685092' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;vo&#47;votosConcejo&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='votosConcejo&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;vo&#47;votosConcejo&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1568758685092');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height='600px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+
+
+
+          section
+            h3.demo Mapbox + D3
+            a(href="https://observablehq.com/@john-guerra/mapbox-d3") https://observablehq.com/@john-guerra/mapbox-d3
+
+
+          section
+            h3 Mike's maps tutorial
+            a(href="https://medium.com/@mbostock/command-line-cartography-part-1-897aa8f8ca2c") https://medium.com/@mbostock/command-line-cartography-part-1-897aa8f8ca2c
+
+          section
+            h3 Vega-lite Maps
+            a(href="https://observablehq.com/@vega/vega-lite-api") https://observablehq.com/@vega/vega-lite-api
+
+        //- section
+        //-   section
+        //-     h3.demo D3 v4 update pattern
+        //-     iframe.blocks(src="http://blockbuilder.org/cmgiven/32d4c53f19aea6e528faf10bfe4f3da9")
+        //-     a.tiny(target="_blank" href="http://blockbuilder.org/cmgiven/32d4c53f19aea6e528faf10bfe4f3da9") http://blockbuilder.org/cmgiven/32d4c53f19aea6e528faf10bfe4f3da9
+        //-     span by cmgiven
+
+
+
+        //- section
+        //-   section
+        //-    h1 D3 v4 Tutorial
+
+        //-   section
+        //-     h2
+        //-       a(href="https://jsfiddle.net/duto_guerra/n0tqp22x/2/") Step 0
+
+        //-     ul
+        //-       li Add https://d3js.org/d3.v4.min.js to external resources
+
+
+
+        //-   section
+        //-     h2
+        //-       a(href="https://jsfiddle.net/duto_guerra/n0tqp22x/3/") Step 1: selections
+        //-     iframe.blocks(src="https://jsfiddle.net/duto_guerra/n0tqp22x/3/")
+
+        //-   section
+        //-     h2
+        //-       a(href="https://jsfiddle.net/duto_guerra/n0tqp22x/4/") Step 2: data binding
+        //-     iframe.blocks(src="https://jsfiddle.net/duto_guerra/n0tqp22x/4/")
+
+
+        //-   section
+        //-     h2
+        //-       a(href="https://jsfiddle.net/duto_guerra/n0tqp22x/5/") Step 3: update and remove
+        //-     iframe.blocks(src="https://jsfiddle.net/duto_guerra/n0tqp22x/5/")
+
+        //-   section
+        //-     h2
+        //-       a(href="https://jsfiddle.net/duto_guerra/n0tqp22x/6/") Step 4: svg
+        //-     iframe.blocks(src="https://jsfiddle.net/duto_guerra/n0tqp22x/6/")
+
+
+        //-   section
+        //-     h2
+        //-       a(href="https://jsfiddle.net/duto_guerra/n0tqp22x/7/") Step 5: transitions
+        //-     iframe.blocks(src="https://jsfiddle.net/duto_guerra/n0tqp22x/7/")
+
+
+
+
+
+
+
+
+    script(src='../lib/js/head.min.js')
+    script(src='../lib/js/reveal.js')
+
+    script.
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        rollingLinks: true,
+        transition: "convex",
+        //- width: "90%",
+        //- height: 1.0,
+        dependencies: [
+          // Cross-browser shim that fully implements classList - https://github.com/eligrey/classList.js/
+          { src: '../lib/js/classList.js', condition: function() { return !document.body.classList; } },
+
+          // Interpret Markdown in <section> elements
+          { src: '../plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: '../plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+
+          // Syntax highlight for <code> elements
+          { src: '../plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+
+          // Zoom in and out with Alt+click
+          { src: '../plugin/zoom-js/zoom.js', async: true },
+
+          // Speaker notes
+          { src: '../plugin/notes/notes.js', async: true },
+
+          //- // Remote control your reveal.js presentation using a touch device
+          //- { src: '../plugin/remotes/remotes.js', async: true },
+
+          //- // MathJax
+          //- { src: '../plugin/math/math.js', async: true }
+        ]
+      });
+    script.
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-72531610-1', 'auto');
+      ga('send', 'pageview');
+
+
+

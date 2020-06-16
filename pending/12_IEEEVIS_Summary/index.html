@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Visual Analytics, Advanced visualization techniques</title>
+    <meta charset="utf-8">
+    <meta name="author" content="John Alexis Guerra Gomez">
+    <meta name="description" content="Visual Analytics">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+    <link href="style.css" rel="stylesheet">
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? '../lib/css/print/pdf.css' : '../lib/css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+    <script src="../lib/js/d3.min.js"></script>
+    <script src="../lib/js/bumpChartPhotos.js"></script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h2>IEEEVIS 2017 Summary</h2><br>
+          <p class="small"><a href="http://johnguerra.co/" target="_blank"><strong>John Alexis Guerra Gómez</strong></a><span>| ja.guerrag[at]uniandes.edu.co</span><a href="http://twitter.com/duto_guerra">| @duto_guerra</a><br><span><strong>Jose Tiberio Hernández</strong> | jhernand[at]uniandes.edu.co</span><br><span>Universidad de los Andes</span>
+          </p><br>
+          <p class="tiny"><a href="http://johnguerra.co/lectures/visualAnalytics_fall2019/12_IEEEVIS_Summary/" target="_blank">http://johnguerra.co/lectures/visualAnalytics_fall2019/12_IEEEVIS_Summary/</a></p>
+        </section>
+
+        <section>
+          <section>
+            <h2><a href="http://ieeevis.org/">IEEEVis</a> Summary</h2>
+            <ul>
+              <li class="fragment">Main Visualization conference, along with <a href="https://chi2016.acm.org/wp/">CHI</a>, and <a href="http://www.cs.rug.nl/jbi/eurovis2016/">Eurovis</a></li>
+              <li class="fragment">Organized by IEEE</li>
+              <li class="fragment">About 1000+ attendees</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Subconferences</h2>
+            <ul class="small">
+              <li class="fragment">Infovis -> Techniques</li>
+              <li class="fragment">VAST ->  The process</li>
+              <li class="fragment">Scivis -> Rainbows</li>
+              <li class="fragment">VizSec -> Security</li>
+              <li class="fragment">VDS -> Big data</li>
+              <li class="fragment">Workshops/Tutorials -> Special interests</li>
+              <li class="fragment">Panels -> Debate
+                <ul>
+                  <li class="fragment">There was a special panel on how Scivis is dying</li>
+                </ul>
+              </li>
+            </ul>
+          </section>
+          <section>
+            <h2>Observed themes</h2>
+            <ul>
+              <li class="fragment">VegaLite</li>
+              <li class="fragment">Network Visualization (Edge Bundling)</li>
+              <li class="fragment">Text Visualization</li>
+              <li class="fragment">Time Series</li>
+              <li class="fragment">Machine Learning</li>
+              <li class="fragment">Education, Design, Evaluation</li>
+            </ul>
+          </section>
+        </section>
+        <section>
+          <section class="demo">
+            <h2>VegaLite</h2>
+            <p class="small"><a href="https://idl.cs.washington.edu/files/2017-VegaLite-InfoVis.pdf">*** Vega-Lite: A Grammar of Interactive Graphics (J) (Best Paper Award)</a></p>
+            <p class="tiny">Authors: Arvind Satyanarayan, Dominik Moritz, Kanit Wongsuphasawat, and Jeffrey Heer</p>
+            <p class="small">Next step after D3, define visualization from what you want rather than how to do it</p><span>
+              <iframe src="https://player.vimeo.com/video/177767802" width="640" height="401" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+              <p><a href="https://vimeo.com/177767802">Vega-Lite: A Grammar of Interactive Graphics</a> from <a href="https://vimeo.com/uwdata">UW Interactive Data Lab</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+              </span>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h2>Network Visualization</h2>
+          </section>
+          <section class="demo">
+            <p class="small"><a href="https://bib.dbvis.de/uploadedFiles/1_Magnostics.pdf">** Magnostics: Image-based Search of Interesting Matrix Views for Guided Network Exploration (J)</a></p>
+            <p class="tiny">Authors: Michael Behrisch, Benjamin Bach, Michael Hund, Michael Delz, Laura von Rüden, Jean-Daniel Fekete, and Tobias Schreck</p><span>
+              <iframe src="https://player.vimeo.com/video/182984756" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+              <p><a href="https://vimeo.com/182984756">[VIS16 Preview] Magnostics: Image-based Search of Interesting Matrix Views for Guided Network Exploration</a> from <a href="https://vimeo.com/vgtcommunity">VGTCommunity</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+
+              </span>
+          </section>
+          <section>
+            <p class="small"><a href="http://www.cse.ust.hk/~huamin/tvcg_yanhong_2017.pdf">** Evaluation of Graph Sampling: A Visualization Perspective (J)</a></p>
+            <p class="tiny">Authors: Yanhong Wu, Nan Cao, Daniel Archambault, Qiaomu Shen, Huamin Qu, and Weiwei Cui</p>
+            <p class="small">Graph sampling, how good are them for showing visual properties</p>
+          </section>
+          <section class="demo">
+            <p class="small"><a href="http://www.aviz.fr/~bbach/confluentgraphs/">** Towards Unambiguous Edge Bundling: Investigating Confluent Drawings for Network Visualization (J)</a></p>
+            <p class="tiny">Authors: Benjamin Bach, Nathalie Henry Riche, Christophe Hurter, Kim Marriott, and Tim Dwyer</p>
+            <p class="small">Nice demo</p>
+            <iframe src="http://www.aviz.fr/~bbach/confluentgraphs/" class="demo"></iframe>
+          </section>
+          <section>
+            <p class="small"><a href="http://www.cs.rug.nl/~alext/PAPERS/TVCG15/paper.pdf">* CUBu: Universal real-time bundling for large graphs (T)</a></p>
+            <p class="tiny">Authors: Matthew van der Zwan, Valeriu Codreanu, Alexandru Telea</p>
+            <p class="small">Very fast GPU based edge bundling, that works with millions of nodes</p>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h1>Geo</h1>
+          </section>
+          <section>
+            <p class="small"><a href="https://idl.cs.washington.edu/files/2017-SurpriseMaps-InfoVis.pdf">Surprise! Bayesian Weighting for De-Biasing Thematic Maps (J)</a></p>
+            <p class="tiny">Authors: Michael Correll and Jeffrey Heer</p><a href="https://github.com/uwdata/bayesian-surprise">Github repo</a>
+          </section>
+          <section>
+            <p class="small"><a href="http://vis.yalongyang.com/">*** Many-to-Many Geographically-Embedded Flow Visualisation: An Evaluation (J) (Best Paper Honorable Mention)</a></p>
+            <p class="tiny">Authors: Yalong Yang, Tim Dwyer, Sarah Goodwin, and Kim Marriott</p>
+            <p class="small">Very novel. Good evaluation</p>
+            <iframe src="http://vis.yalongyang.com/maptrix/index.html" class="demo"></iframe>
+          </section>
+          <section class="demo">
+            <p class="small"><a href="https://www.cs.utah.edu/~miriah/publications/binning-study.pdf">* Evaluating the Impact of Binning 2D Scalar Fields (J)</a></p>
+            <p class="tiny">Authors: Lace Padilla, P. Samuel Quinan, Miriah Meyer, and Sarah H. Creem-Regehr</p>
+            <p class="small">Good study on why to use binning on maps</p>
+          </section>
+          <section class="demo">
+            <p class="small"><a href="https://www.computer.org/csdl/trans/tg/preprint/07536141.pdf">Quantifying the Visual Impact of Classification Boundaries in Choropleth Maps (J)</a></p>
+            <p class="tiny">Authors: Yifan Zhang and Ross Maciejewski</p>
+            <p class="small">PCA, ML to find regions on maps</p><span>
+              <iframe width="853" height="480" src="https://www.youtube.com/embed/J_lY7oPjaSk" frameborder="0" allowfullscreen></iframe>
+              </span>
+          </section>
+          <section>
+            <p class="small"><a href="http://openaccess.city.ac.uk/15167/1/smwg.pdf">*** Small Multiples with Gaps (J)</a></p>
+            <p class="tiny">Authors: Wouter Meulemans, Jason Dykes, Aidan Slingsby, Cagatay Turkay, and Jo Wood</p>
+            <p class="small">Small Multiples</p>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h2>Text Visualization</h2>
+          </section>
+          <section class="demo">
+            <p class="small"><a href="http://ieeexplore.ieee.org/document/7539597/">** TopicLens: Efficient Multi-Level Visual Topic Exploration of Large-Scale Document Collections (J)</a></p>
+            <p class="tiny">Authors: Minjeong Kim, Kyeongpil Kang, Deokgun Park, Jaegul Choo, and Niklas Elmqvist</p>
+            <p class="small">Cool algorithm (fast) nice tool</p><span class="demo"><iframe width="853" height="480" src="https://www.youtube.com/embed/RKC5w9dZmXQ" frameborder="0" allowfullscreen></iframe></span>
+          </section>
+          <section>
+            <p class="small"><a href="http://static1.squarespace.com/static/5502f56fe4b0aa4bfbdae0a8/t/57a0acc1e58c625a6618951c/1470147779559/texttile-tvcg-vast16.pdf">TextTile: An Interactive Visualization Tool for Seamless Exploratory Analysis of Structured Data and Unstructured Text (J)</a></p>
+            <p class="tiny">Authors: Cristian Felix, Anshul Vikram Pandey, and Enrico Bertini</p>
+            <p class="small">Good replacement for wordclouds, ML</p>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h2>Time series</h2>
+          </section>
+          <section>
+            <p class="small"><a href="https://research.tableau.com/sites/default/files/Haroz-TVCG-2016.pdf">*** The Connected Scatterplot for Presenting Paired Time Series (T)</a></p>
+            <p class="tiny">Authors: Steve Haroz, Robert Kosara, Steven L. Franconeri</p>
+          </section>
+          <section class="demo">
+            <p class="small"><a href="http://hcil.umd.edu/eventaction/">** EventAction: Visual Analytics for Temporal Event Sequence Recommendation (C)</a></p>
+            <p class="tiny">Authors: Fan Du, Catherine Plaisant, Neil Spring, Ben Shneiderman</p><span class="demo"><iframe width="853" height="480" src="https://www.youtube.com/embed/wxRHSf3g_sY" frameborder="0" allowfullscreen></iframe></span>
+          </section>
+          <section>
+            <p class="small"><a href="http://frankdu.org/papers/du2016tvcg.pdf">** Coping with Volume and Variety in Temporal Event Sequences: Strategies for Sharpening Analytic Focus (T)</a></p>
+            <p class="tiny">Authors: Fan Du, Ben Shneiderman, Catherine Plaisant, Sana Malik, Adam Perer</p>
+            <p class="small">List of strategies on how to declutter time series</p>
+          </section>
+          <section>
+            <h2>Others Time Series</h2>
+          </section>
+          <section>
+            <p class="small">Visplause: Visual Data Quality Assessment of Many Time Series Using Plausibility Checks (J)</p>
+            <p class="tiny">Authors: Clemens Arbesser, Florian Spechtenhauser, Thomas Mühlbacher, and Harald Piringer</p>
+          </section>
+          <section>
+            <p class="small">Multi-Granular Trend Detection for Time-Series Analysis (J)</p>
+            <p class="tinyAuthors">
+              <Arthur>van Goethem, Frank Staals, Maarten Löffler, Jason Dykes, and Bettina Speckmann</Arthur>
+            </p>
+          </section>
+          <section>
+            <p class="small">Shape Grammar Extraction for Efficient Query-by-Sketch Pattern Matching in Long Time Series (C)</p>
+            <p class="tinyAuthors">
+              <Prithiviraj>Muthumanickam, Katerina Vrotsou, Matthew Cooper, Jimmy Johansson</Prithiviraj>
+            </p>
+          </section>
+          <section>
+            <p class="small">The Semantics of Sketch: A Visual Query System for Time Series Data (C)</p>
+            <p class="tinyAuthors">
+              <Michael>Correll, Michael Gleicher</Michael>
+            </p>
+          </section>
+          <section>
+            <p class="small">- SocialBrands: Visual Analysis of Public Perceptions of Brands on Social Media (C)</p>
+            <p class="tinyAuthors">
+              <Xiaotong>Liu, Anbang Xu, Liang Gou, Haibin Liu, Rama Akkiraju, Han-Wei Shen</Xiaotong>
+            </p>
+            <p class="small">Not the best visual encoding</p>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h2>Education, Design, Evaluation</h2>
+          </section>
+          <section>
+            <h2>Design</h2>
+          </section>
+          <section>
+            <p class="small"><a href="https://www.cs.utah.edu/~miriah/publications/hanpuku.pdf">*** Iterating Between Tools to Create and Edit Visualizations (J)</a></p>
+            <p class="tiny">Authors: Alex Bigelow, Steven Drucker, Danyel Fisher, and Miriah Meyer</p>
+          </section>
+          <section>
+            <p class="small"><a href="http://www.zcliu.org/ddg/DDG-InfoVis16.pdf">** Data-Driven Guides: Supporting Expressive Design for Information Graphics (J)</a></p>
+            <p class="tiny">Authors: Nam Wook Kim, Eston Schweickart, Zhicheng Liu, Mira Dontcheva, Wilmot Li, Jovan Popovic, and Hanspeter Pfister</p><span>
+              <iframe width="853" height="480" src="https://www.youtube.com/embed/tX_XeTYCaos" frameborder="0" allowfullscreen></iframe>
+              </span>
+          </section>
+          <section>
+            <h2>Education</h2>
+          </section>
+          <section>
+            <p class="small"><a href="http://www.cond.org/vizitcards.pdf">VIZITCARDS: A Card-Based Toolkit for Infovis Design Education (J)</a></p>
+            <p class="tiny">Authors: Shiqing He and Eytan Adar</p>
+            <p class="small">A framework for applying viz</p>
+          </section>
+          <section>
+            <p class="small">VLAT: Development of a Visualization Literacy Assessment Test (J)</p>
+            <p class="tiny">Authors: Sukwon Lee, Sung-Hee Kim, and Bum Chul Kwon</p>
+            <p class="small">A test for visualization literacy, first approach, incomplete</p>
+          </section>
+          <section>
+            <p class="small">Exploring the Possibilities of Embedding Heterogeneous Data Attributes in Familiar Visualizations (J)</p>
+            <p class="tiny">Authors: Mona Hosseinkhani Loorak, Charles Perin, Christopher Collins, and Sheelagh Carpendale</p>
+          </section>
+          <section>
+            <h2>Interaction</h2>
+          </section>
+          <section>
+            <p class="small">** Visualization by Demonstration: An Interaction Paradigm for Visual Data Exploration (J)</p>
+            <p class="tiny">Authors: Bahador Saket, Hannah Kim, Eli T. Brown, and Alex Endert</p>
+          </section>
+          <section>
+            <p class="small">** HindSight: Encouraging Exploration through Direct Encoding of Personal Interaction History (J)</p>
+            <p class="tiny">Authors: Mi Feng, Cheng Deng, Evan M. Peck, and Lane Harrison</p>
+          </section>
+          <section class="demo">
+            <p class="small"><a href="http://hci.cs.umanitoba.ca/publications/details/visual-exploration-large-display">* Supporting Visual Exploration for Multiple Users in Large Display Environments (C)</a></p>
+            <p class="tiny">Authors: Sriram Karthik Badam, Fereshteh Amini, Niklas Elmqvist, Pourang Iranihttp://hci.cs.umanitoba.ca/publications/details/visual-exploration-large-display</p><span class="demo"><iframe width="853" height="480" src="https://www.youtube.com/embed/xd7G_q8nocc?list=PLjdOjPncIWm3esJSaYNLnKQKe19dlgi4J" frameborder="0" allowfullscreen></iframe></span>
+          </section>
+          <section>
+            <h2>Evaluation</h2>
+          </section>
+          <section>
+            <p class="small">The Elicitation Interview Technique: Capturing People’s Experiences of Data Representations (T)</p>
+            <p class="tiny">Authors: Trevor Hogan, Uta Hinrichs, Eva Hornecker</p>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h2>Machine Learning</h2>
+            <ul class="fragment">
+              <li>Topic Modeling</li>
+              <li>Dimmensionality Reduction</li>
+            </ul>
+          </section>
+        </section>
+      </div>
+    </div>
+    <script src="../lib/js/head.min.js"></script>
+    <script src="../lib/js/reveal.js"></script>
+    <script>
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        rollingLinks: true,
+        transition: "convex",
+        //- width: "90%",
+        //- height: 1.0,
+        dependencies: [
+          // Cross-browser shim that fully implements classList - https://github.com/eligrey/classList.js/
+          { src: '../lib/js/classList.js', condition: function() { return !document.body.classList; } },
+
+          // Interpret Markdown in <section> elements
+          { src: '../plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: '../plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+
+          // Syntax highlight for <code> elements
+          { src: '../plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+
+          // Zoom in and out with Alt+click
+          { src: '../plugin/zoom-js/zoom.js', async: true },
+
+          // Speaker notes
+          { src: '../plugin/notes/notes.js', async: true },
+
+          //- // Remote control your reveal.js presentation using a touch device
+          //- { src: '../plugin/remotes/remotes.js', async: true },
+
+          //- // MathJax
+          //- { src: '../plugin/math/math.js', async: true }
+        ]
+      });
+    </script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-72531610-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+  </body>
+</html>

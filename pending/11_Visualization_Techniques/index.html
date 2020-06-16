@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Visual Analytics, Advanced visualization techniques</title>
+    <meta charset="utf-8">
+    <meta name="author" content="John Alexis Guerra Gomez">
+    <meta name="description" content="Visual Analytics">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+    <link href="style.css" rel="stylesheet">
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? '../lib/css/print/pdf.css' : '../lib/css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+    <script src="../lib/js/d3.min.js"></script>
+    <script src="../lib/js/bumpChartPhotos.js"></script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h2>Advanced Visualization Techniques</h2><br>
+          <p class="small"><a href="http://johnguerra.co/" target="_blank"><strong>John Alexis Guerra Gómez</strong></a><span>| ja.guerrag[at]uniandes.edu.co</span><a href="http://twitter.com/duto_guerra">| @duto_guerra</a><br><span><strong>Jose Tiberio Hernández</strong> | jhernand[at]uniandes.edu.co</span><br><span>Universidad de los Andes</span>
+          </p><br>
+          <p class="tiny"><a href="http://johnguerra.co/lectures/visualAnalytics_fall2019/11_Visualization_Techniques/" target="_blank">http://johnguerra.co/lectures/visualAnalytics_fall2019/11_Visualization_Techniques/</a></p>
+          <p class="tiny">Based on<a href="http://www.cs.ubc.ca/~tmm/talks.html#minicourse14">slides from Tamara Munzner</a></p>
+        </section>
+        
+        <section>
+          <section>
+            <h2>Manipulate views</h2>
+          </section>
+          <section data-background-size="contain" data-background="images/11_manipulate-genea.003.png"></section>
+          <section data-background-size="contain" data-background="images/11_manipulate-genea.004.png"></section>
+          <section data-background-size="contain" data-background="images/11_manipulate-genea.005.png"></section>
+          <section data-background-size="contain" data-background="images/11_manipulate-genea.006.png"></section>
+          <section data-background-size="contain" data-background="images/11_manipulate-genea.007.png"></section>
+          <section data-background-size="contain" data-background="images/11_manipulate-genea.008.png"></section>
+          <section data-background-size="contain" data-background="images/11_manipulate-genea.009.png"></section>
+          <section data-background-size="contain" data-background="images/11_manipulate-genea.010.png"></section>
+          <section data-background-size="contain" data-background="images/11_manipulate-genea.011.png"></section>
+          <section data-background-size="contain" data-background="images/11_manipulate-genea.012.png"></section>
+          <section data-background-size="contain" data-background="images/11_manipulate-genea.013.png"></section>
+          <section data-background-size="contain" data-background="images/11_manipulate-genea.014.png"></section>
+          <section data-background-size="contain" data-background="images/11_manipulate-genea.015.png"></section>
+          <section data-background-size="contain" data-background="images/11_manipulate-genea.016.png"></section>
+          <section data-background-size="contain" data-background="images/11_manipulate-genea.017.png"></section>
+          <section>
+            <h3 class="demo">LineUP</h3><span>
+              <video width="100%" height="100%" controls>
+                  <source src="http://vcg.seas.harvard.edu/files/pfister/files/2013_infovis_lineup.mp4" type="video/mp4">
+              </video></span><a target="_blank" href="http://vcg.seas.harvard.edu/files/pfister/files/2013_infovis_lineup.mp4" class="tiny">http://vcg.seas.harvard.edu/files/pfister/files/2013_infovis_lineup.mp4</a>
+          </section>
+          <section>
+            <h2>LineUP D3</h2><a href="https://observablehq.com/@john-guerra/lineup">https://observablehq.com/@john-guerra/lineup</a>
+          </section>
+          <section data-background-size="contain" data-background="images/11_manipulate-genea.018.png"><a target="_blank" href="http://www.win.tue.nl/vis1/home/fvham/DL/callmatrix.pdf" class="bottom tiny">http://www.win.tue.nl/vis1/home/fvham/DL/callmatrix.pdf</a></section>
+          <section>
+            <iframe src="https://bost.ocks.org/mike/miserables/" class="blocks"></iframe><a href="https://bost.ocks.org/mike/miserables/">https://bost.ocks.org/mike/miserables/</a>
+          </section>
+          <section data-background-size="contain" data-background="images/11_manipulate-genea.019.png"></section>
+          <section>
+            <iframe src="https://blockbuilder.org/mbostock/7608400" class="blocks"></iframe><a href="https://blockbuilder.org/mbostock/7608400" class="tiny">https://blockbuilder.org/mbostock/7608400</a>
+          </section>
+          <section>
+            <h2>Selection with brush</h2><a href="https://observablehq.com/@john-guerra/scatterplot-brush">https://observablehq.com/@john-guerra/scatterplot-brush</a>
+          </section>
+          <section data-background-size="contain" data-background="images/11_manipulate-genea.020.png"></section>
+          <section data-background-size="contain" data-background="images/11_manipulate-genea.021.png"></section>
+          <section>
+            <h3 class="demo">LiveRAC</h3><span class="blocks"><iframe width="853" height="480" src="https://www.youtube.com/embed/ld0c3H0VSkw" frameborder="0" allowfullscreen></iframe></span>
+          </section>
+          <section>
+            <h3 class="demo">Geometric Zoom</h3>
+            <iframe src="http://blockbuilder.org/mbostock/3680958" class="blocks"></iframe><a target="_blank" href="http://blockbuilder.org/mbostock/3680958" class="tiny">http://blockbuilder.org/mbostock/3680958</a><a target="_blank" href="http://bl.ocks.org/mbostock/" class="tiny">by mbostock</a>
+          </section>
+          <section>
+            <h3 class="demo">Semantic Zoom</h3>
+            <iframe src="http://blockbuilder.org/mbostock/3681006" class="blocks"></iframe><a target="_blank" href="http://blockbuilder.org/mbostock/3681006" class="tiny">http://blockbuilder.org/mbostock/3681006</a><a target="_blank" href="http://bl.ocks.org/mbostock/" class="tiny">by mbostock</a>
+          </section>
+          <section data-background-size="contain" data-background="images/11_manipulate-genea.023.png"></section>
+          <section data-background-size="contain" data-background="images/11_manipulate-genea.024.png"></section>
+        </section>
+        <section>
+          <section>
+            <h2>Facet Across Multiple Views</h2>
+          </section>
+          <section data-background-size="contain" data-background="images/12_facet-biomech.003.png"></section>
+          <section data-background-size="contain" data-background="images/12_facet-biomech.004.png"></section>
+          <section data-background-size="contain" data-background="images/12_facet-biomech.008.png"></section>
+          <section data-background-size="contain" data-background="images/12_facet-biomech.005.png"></section>
+          <section>
+            <h3 class="demo">Linked Filtering (Crossfilter)</h3>
+            <iframe src="http://square.github.io/crossfilter/" class="blocks"></iframe><a target="_blank" href="http://square.github.io/crossfilter/" class="tiny">http://square.github.io/crossfilter/</a>
+          </section>
+          <section data-background-size="contain" data-background="images/12_facet-biomech.006.png"></section>
+          <section data-background-size="contain" data-background="images/12_facet-biomech.007.png"></section>
+          <section>
+            <h3 class="demo">Overview/Details</h3>
+            <p class="small">Same encoding / Subset of data / Linked Navigation</p>
+            <iframe src="http://blockbuilder.org/mbostock/34f08d5e11952a80609169b7917d4172" class="blocks"></iframe><a target="_blank" href="http://blockbuilder.org/mbostock/34f08d5e11952a80609169b7917d4172" class="tiny">http://blockbuilder.org/mbostock/34f08d5e11952a80609169b7917d4172</a><a target="_blank" href="http://bl.ocks.org/mbostock/" class="tiny">by mbostock</a>
+          </section>
+          <section>
+            <h3 class="demo">Small Multiples (cubism)</h3>
+            <p class="small">Same encoding / Different data / Linked Navigation</p>
+            <iframe src="http://square.github.io/cubism/demo/" class="blocks"></iframe><a target="_blank" href="http://square.github.io/cubism/demo/" class="tiny">http://square.github.io/cubism/demo/</a>
+          </section>
+          <section>
+            <h3 class="demo">Multiform Overview/Details (Tweetometro)</h3>
+            <p class="small">Different encoding / Subset of data / Linked Navigation</p>
+            <iframe src="http://old.tweetometro.co/" class="blocks"></iframe><a target="_blank" href="http://old.tweetometro.co/" class="tiny">http://old.tweetometro.co/</a>
+          </section>
+          <section>
+            <h3 class="demo">Multiform Overview (Treeversity)</h3>
+            <p class="small">Different encoding / All data / Linked Navigation</p>
+            <iframe src="https://treeversity.cattlab.umd.edu/" class="blocks"></iframe><a target="_blank" href="https://treeversity.cattlab.umd.edu/" class="tiny">https://treeversity.cattlab.umd.edu/</a>
+          </section>
+          <section data-background-size="contain" data-background="images/12_facet-biomech.008.png"></section>
+          <section data-background-size="contain" data-background="images/12_facet-biomech.009.png"></section>
+          <section data-background-size="contain" data-background="images/12_facet-biomech.010.png"></section>
+          <section>
+            <h3 class="demo">Improvise</h3>
+            <iframe src="http://www.cs.ou.edu/~weaver/improvise/" class="blocks"></iframe><a target="_blank" href="http://www.cs.ou.edu/~weaver/improvise/" class="tiny">http://www.cs.ou.edu/~weaver/improvise/</a>
+          </section>
+          <section data-background-size="contain" data-background="images/12_facet-biomech.011.png"></section>
+          <section data-background-size="contain" data-background="images/12_facet-biomech.012.png"></section>
+          <section data-background-size="contain" data-background="images/12_facet-biomech.013.png"></section>
+          <section data-background-size="contain" data-background="images/12_facet-biomech.014.png"></section>
+          <section data-background-size="contain" data-background="images/12_facet-biomech.015.png"></section>
+          <section data-background-size="contain" data-background="images/12_facet-biomech.016.png"></section>
+          <section data-background-size="contain" data-background="images/12_facet-biomech.017.png"></section>
+          <section data-background-size="contain" data-background="images/12_facet-biomech.018.png"></section>
+          <section data-background-size="contain" data-background="images/12_facet-biomech.019.png"></section>
+          <section data-background-size="contain" data-background="images/12_facet-biomech.020.png"></section>
+          <section data-background-size="contain" data-background="images/12_facet-biomech.021.png"></section>
+          <section>
+            <h2>Dynamic layering</h2><a href="https://johnguerra.co/viz/influentials/story/?hashtag=ieeevis2019">https://johnguerra.co/viz/influentials/story/?hashtag=ieeevis2019</a>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h2>Reduce Items and Attributes</h2>
+          </section>
+          <section data-background-size="contain" data-background="images/14_reduce-glimmer.003.png"></section>
+          <section data-background-size="contain" data-background="images/14_reduce-glimmer.004.png"></section>
+          <section data-background-size="contain" data-background="images/14_reduce-glimmer.005.png"></section>
+          <section data-background-size="contain" data-background="images/14_reduce-glimmer.006.png"></section>
+          <section class="demo">
+            <h2>Scented widgets paper</h2>
+            <iframe src="http://vis.berkeley.edu/papers/scented_widgets/" class="blocks"></iframe><a target="_blank" href="http://vis.berkeley.edu/papers/scented_widgets/" class="tiny">http://vis.berkeley.edu/papers/scented_widgets/</a>
+          </section>
+          <section class="demo">
+            <h2>Navio</h2><a target="_blank" href="https://observablehq.com/@john-guerra/navio-load" class="tiny">https://observablehq.com/@john-guerra/navio-load</a>
+          </section>
+          <section data-background-size="contain" data-background="images/14_reduce-glimmer.007.png"></section>
+          <section>
+            <h2>DOSFA Paper</h2><a target="_blank" href="http://www.cs.ubc.ca/~tmm/courses/cpsc533c-04-spr/readings/dimorder.pdf" class="small">http://www.cs.ubc.ca/~tmm/courses/cpsc533c-04-spr/readings/dimorder.pdf</a>
+          </section>
+          <section data-background-size="contain" data-background="images/14_reduce-glimmer.008.png"></section>
+          <section data-background-size="contain" data-background="images/14_reduce-glimmer.009.png"></section>
+          <section>
+            <h3 class="demo">Box Plot</h3>
+            <iframe src="http://blockbuilder.org/mbostock/4061502" class="blocks"></iframe><a target="_blank" href="http://blockbuilder.org/mbostock/4061502" class="tiny">http://blockbuilder.org/mbostock/4061502</a><a target="_blank" href="http://bl.ocks.org/mbostock/" class="tiny">by mbostock</a>
+          </section>
+          <section>
+            <h3 class="demo">Violin plot</h3>
+            <iframe src="http://blockbuilder.org/asielen/92929960988a8935d907e39e60ea8417" class="blocks"></iframe><a target="_blank" href="http://blockbuilder.org/asielen/92929960988a8935d907e39e60ea8417" class="tiny">http://blockbuilder.org/asielen/92929960988a8935d907e39e60ea8417</a><a target="_blank" href="http://bl.ocks.org/asielen/" class="tiny">by asielen</a>
+          </section>
+          <section data-background-size="contain" data-background="images/14_reduce-glimmer.010.png"></section>
+          <section data-background-size="contain" data-background="images/14_reduce-glimmer.011.png"></section>
+          <section data-background-size="contain" data-background="images/14_reduce-glimmer.012.png"></section>
+          <section data-background-size="contain" data-background="images/14_reduce-glimmer.013.png"></section>
+          <section data-background-size="contain" data-background="images/14_reduce-glimmer.014.png"></section>
+          <section data-background-size="contain" data-background="images/14_reduce-glimmer.015.png"></section>
+          <section data-background-size="contain" data-background="images/14_reduce-glimmer.016.png"></section>
+          <section data-background-size="contain" data-background="images/14_reduce-glimmer.017.png"></section>
+          <section data-background-size="contain" data-background="images/14_reduce-glimmer.018.png"></section>
+          <section>
+            <h3 class="demo">t-SNE Explorations</h3>
+            <iframe src="http://distill.pub/2016/misread-tsne/" class="blocks"></iframe><a target="_blank" href="http://distill.pub/2016/misread-tsne/" class="tiny">http://distill.pub/2016/misread-tsne/</a>
+          </section>
+          <section>
+            <h3 class="demo">Interactive T-SNE</h3>
+            <div>Project by Fabián Peña</div><a href="https://fabiancpl.github.io/MLExplore.js/" class="tiny">https://fabiancpl.github.io/MLExplore.js/</a>
+          </section>
+          
+          
+        </section>
+        <section>
+          <section>
+            <h3>Embed, Focus+Context</h3>
+          </section>
+          <section data-background-size="contain" data-background="images/15_embed-tj.003.png"></section>
+          <section data-background-size="contain" data-background="images/15_embed-tj.004.png"></section>
+          <section data-background-size="contain" data-background="images/15_embed-tj.005.png"></section>
+          <section>
+            <h3 class="demo">Fish eye</h3>
+            <iframe src="https://bost.ocks.org/mike/fisheye/" class="blocks"></iframe><a target="_blank" href="https://bost.ocks.org/mike/fisheye/" class="tiny">https://bost.ocks.org/mike/fisheye/</a><a target="_blank" href="http://bl.ocks.org/mbostock/" class="tiny">by mbostock</a>
+          </section>
+          <section data-background-size="contain" data-background="images/15_embed-tj.006.png"></section>
+          <section data-background-size="contain" data-background="images/15_embed-tj.007.png"></section>
+          <section data-background-size="contain" data-background="images/15_embed-tj.008.png"></section>
+        </section>
+        
+        
+        
+        
+        
+      </div>
+    </div>
+    <script src="../lib/js/head.min.js"></script>
+    <script src="../lib/js/reveal.js"></script>
+    <script>
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        rollingLinks: true,
+        transition: "convex",
+        //- width: "90%",
+        //- height: 1.0,
+        dependencies: [
+          // Cross-browser shim that fully implements classList - https://github.com/eligrey/classList.js/
+          { src: '../lib/js/classList.js', condition: function() { return !document.body.classList; } },
+      
+          // Interpret Markdown in <section> elements
+          { src: '../plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: '../plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      
+          // Syntax highlight for <code> elements
+          { src: '../plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+      
+          // Zoom in and out with Alt+click
+          { src: '../plugin/zoom-js/zoom.js', async: true },
+      
+          // Speaker notes
+          { src: '../plugin/notes/notes.js', async: true },
+      
+          //- // Remote control your reveal.js presentation using a touch device
+          //- { src: '../plugin/remotes/remotes.js', async: true },
+      
+          //- // MathJax
+          //- { src: '../plugin/math/math.js', async: true }
+        ]
+      });
+    </script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      
+      ga('create', 'UA-72531610-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+  </body>
+</html>

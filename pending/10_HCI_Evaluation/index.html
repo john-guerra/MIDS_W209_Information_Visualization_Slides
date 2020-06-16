@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Visual Analytics, HCI, Usability and Evaluation</title>
+    <meta charset="utf-8">
+    <meta name="author" content="John Alexis Guerra Gomez">
+    <meta name="description" content="Visual Analytics">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+    <link href="style.css" rel="stylesheet">
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? '../lib/css/print/pdf.css' : '../lib/css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+    <script src="../lib/js/d3.min.js"></script>
+    <script src="../lib/js/bumpChartPhotos.js"></script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h2>Evaluation</h2><br>
+          <p class="small"><a href="http://johnguerra.co/" target="_blank"><strong>John Alexis Guerra Gómez</strong></a><span>| ja.guerrag[at]uniandes.edu.co</span><a href="http://twitter.com/duto_guerra">| @duto_guerra</a><br><span><strong>Jose Tiberio Hernández</strong> | jhernand[at]uniandes.edu.co</span><br><span>Universidad de los Andes</span>
+          </p><br>
+          <p class="tiny"><a href="http://johnguerra.co/lectures/visualAnalytics_fall2019/10_HCI_Evaluation/" target="_blank">http://johnguerra.co/lectures/visualAnalytics_fall2019/10_HCI_Evaluation/</a></p>
+          <p class="tiny">Based on<a href="http://www.cs.ubc.ca/~tmm/talks.html#minicourse14">slides from Tamara Munzner</a></p>
+        </section>
+        
+        <section>
+          <section>
+            <h2>Evaluation</h2>
+            <ul>
+              <li>Controlled Experiments</li>
+              <li>Natural settings</li>
+              <li>Any setting not involving users</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Expert reviews</h2>
+            <ul>
+              <li>Design Experts</li>
+              <li>Visualization Experts</li>
+              <li>Usability Experts</li>
+              <li>Domain Experts</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Types of expert reviews</h2>
+            <ul class="small">
+              <li>Heuristic evaluation (golden rules)</li>
+              <li>Guidelines review</li>
+              <li>Consistency inspection</li>
+              <li>Cognitive walkthrough</li>
+              <li>Metaphors of human thinking</li>
+              <li>Formal usability inspection (courtroom style)</li>
+              <li>Accesibility inspection</li>
+            </ul>
+          </section>
+          <section>
+            <h2>8 golden rules of design</h2>
+            <ul class="small">
+              <li>Strive for consistency</li>
+              <li>Cater for universal usability</li>
+              <li>Offer informative feedback</li>
+              <li>Design dialogs to yield closure</li>
+              <li>Prevent errors</li>
+              <li>Permit easy reversal of actions</li>
+              <li>Support internal locus of control</li>
+              <li>Reduce short-term memory load</li>
+            </ul>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h2>Controlled Experiments</h2>
+            <ul>
+              <li>Experiments in the lab</li>
+              <li>Controlled confounding variables</li>
+              <li>Measure one or more quantitative variables</li>
+              <li>
+                <ul>
+                  <li>Usability testing</li>
+                  <li>Living labs</li>
+                </ul>
+              </li>
+            </ul>
+          </section>
+          <section>
+            <h3>What to measure?</h3>
+            <ul>
+              <li>Time to learn</li>
+              <li>Speed of performance</li>
+              <li>Rate of errors</li>
+              <li>Retention over time</li>
+              <li>Subject satisfaction</li>
+            </ul>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h2 class="demo">Usability Testing</h2><span>
+              <a data-flickr-embed="true"  href="https://www.flickr.com/photos/yandle/3231980616/in/photolist-5VAKeJ-e6vGNu-5VAMNf-5VAJkd-5VASE7-8uu5ej-3j3Cw-7WKyy5-7WKqhG-7WGg1p-bWf1T-cN17Zf-mLmuep-5iDL3Q-7WGaTx-bWf6R-pTf438-7WKzxd-7WGgwR-5VACYA-5VAHzY-5VwiYB-5VAGNL-5VADX3-5VwrGk-7yX8Zc-2vyF2V-7yX96K-dGkneA-7z2MTA-jrkhAN-fQ1cWh-69mwdv-dSJH5t-5iKD8N-2b6Jr-7WGk2x-7WGbSp-5VAQ8f-7WGb6a-7WKXYh-5iFg8H-7WGeMg-7WKssG-7WKtKd-bWffr-7WKt9m-7WKrxA-8ZAttz-7WKzLN" title="Brighton Uni Usability Lab"><img src="https://c1.staticflickr.com/4/3094/3231980616_5ccd164737_b.jpg" width="1024" height="685" alt="Brighton Uni Usability Lab"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+              </span>
+          </section>
+          <section>
+            <h3>Natural settings involving users</h3>
+            <ul>
+              <li>Observation</li>
+              <li>Interviews</li>
+              <li>Logging</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Triangulation</h2>
+            <p>Different researchers observe the same effect</p>
+          </section>
+          <section>
+            <h2>Interviews</h2>
+            <ul>
+              <li>Unstructured</li>
+              <li>Structured</li>
+              <li>Semi-structured</li>
+              <li>Focus group</li>
+              <li>Telephone/Online interviews</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Questionnaire</h2>
+            <p>Like interviews but without the researcher present</p>
+          </section>
+          <section>
+            <h2>Likert Scale</h2>
+            <p>What do you think?</p>
+            <ul>
+              <li>Strongly disagree</li>
+              <li>disagree</li>
+              <li>ok</li>
+              <li>agree</li>
+              <li>Strongly agree</li>
+            </ul>
+          </section>
+          <section>
+            <h2>More about likert scales</h2>
+            <ul>
+              <li>Can be 3, 5, 7 or more responses</li>
+              <li>Continuos or Discrete</li>
+              <li>Middle response is the balance</li>
+            </ul>
+          </section>
+          <section>
+            <h3 class="demo">Likert Scales D3</h3>
+            <iframe src="https://blockbuilder.org/john-guerra/57d31bae7685139cecd731bba9f48090" class="blocks"></iframe><a target="_blank" href="https://blockbuilder.org/john-guerra/57d31bae7685139cecd731bba9f48090" class="tiny">https://blockbuilder.org/john-guerra/57d31bae7685139cecd731bba9f48090</a>
+          </section>
+          <section>
+            <h3 class="demo">Likert Scales Vega-lite</h3>
+            <iframe src="https://vega.github.io/vega-lite/examples/layer_likert.html" class="blocks"></iframe><a target="_blank" href="https://vega.github.io/vega-lite/examples/layer_likert.html" class="tiny">https://vega.github.io/vega-lite/examples/layer_likert.html</a>
+          </section>
+          <section>
+            <h3 class="demo">Likert Scales Vega-lite</h3>
+            <iframe src="https://vega.github.io/vega-lite/examples/concat_layer_voyager_result.html" class="blocks"></iframe><a target="_blank" href="https://vega.github.io/vega-lite/examples/concat_layer_voyager_result.html" class="tiny">https://vega.github.io/vega-lite/examples/concat_layer_voyager_result.html</a>
+          </section>
+          <section>
+            <h2>Observation</h2>
+            <ul>
+              <li>User's setting</li>
+              <li>Can be direct or indirect</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Direct Observation in the field</h2>
+            <p>Ethnography</p>
+          </section>
+          <section>
+            <h3>Direct Observation in controlled environments</h3>
+            <ul>
+              <li>Think aloud techniques</li>
+            </ul>
+          </section>
+          <section>
+            <h3>Direct Observation: tracking users</h3>
+            <ul>
+              <li>Diaries</li>
+              <li>Interaction Logs and web analytics</li>
+            </ul>
+          </section>
+          <section>
+            <h2>MILCS</h2>
+            <ul>
+              <li>Multi-dimensional</li>
+              <li>In-depth</li>
+              <li>Long-term</li>
+              <li>Case studies</li>
+            </ul>
+          </section>
+          <section>
+            <h2>TreeVersity MILCS</h2>
+            <ul>
+              <li>13 Different case studies, with 9 agencies</li>
+              <li><a href="http://treeversity.cattlab.umd.edu/">http://treeversity.cattlab.umd.edu/</a></li>
+            </ul>
+          </section>
+          <section>
+            <h2>Focus groups</h2>
+            <p>One researcher, many attendees</p>
+          </section>
+          <section>
+            <h2>Prototyping</h2>
+            <ul>
+              <li>Low vs high fidelity?</li>
+              <li>Read data</li>
+              <li>Build scenarios, tell a story</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Quatitative evaluation</h2><a href="http://yatani.jp/teaching/doku.php?id=hcistats:anova">http://yatani.jp/teaching/doku.php?id=hcistats:anova</a>
+          </section>
+        </section>
+        <!-- Design principles-->
+        <section>
+          <h2>References</h2>
+          <ul>
+            <li><a href="http://cs.umd.edu/hcil/DTUI6/">Shneiderman, B. and Plaisant, C., 1987. Designing the user interface: Strategies for effective human-computer interaction</a></li>
+            <li><a href="http://www.id-book.com/">Rogers, Y., Sharp, H., Preece, J. and Tepper, M., 2007. Interaction design: beyond human-computer interaction.</a></li>
+            <li><a href="https://www.amazon.com/Doing-Psychology-Experiments-David-Martin/dp/0495115770"> Martin, D.W., 2007. Doing psychology experiments. Cengage Learning.</a></li>
+          </ul>
+        </section>
+      </div>
+    </div>
+    <script src="../lib/js/head.min.js"></script>
+    <script src="../lib/js/reveal.js"></script>
+    <script>
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        rollingLinks: true,
+        transition: "convex",
+        //- width: "90%",
+        //- height: 1.0,
+        dependencies: [
+          // Cross-browser shim that fully implements classList - https://github.com/eligrey/classList.js/
+          { src: '../lib/js/classList.js', condition: function() { return !document.body.classList; } },
+      
+          // Interpret Markdown in <section> elements
+          { src: '../plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: '../plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      
+          // Syntax highlight for <code> elements
+          { src: '../plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+      
+          // Zoom in and out with Alt+click
+          { src: '../plugin/zoom-js/zoom.js', async: true },
+      
+          // Speaker notes
+          { src: '../plugin/notes/notes.js', async: true },
+      
+          //- // Remote control your reveal.js presentation using a touch device
+          //- { src: '../plugin/remotes/remotes.js', async: true },
+      
+          //- // MathJax
+          //- { src: '../plugin/math/math.js', async: true }
+        ]
+      });
+    </script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      
+      ga('create', 'UA-72531610-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+  </body>
+</html>

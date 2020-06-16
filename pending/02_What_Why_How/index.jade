@@ -1,0 +1,337 @@
+doctype html
+html
+  head
+    title Visual Analytics, What Why How
+    meta(charset='utf-8')
+    meta(name='author', content='John Alexis Guerra Gomez')
+    meta(name='description', content='Visual Analytics')
+    meta(name="viewport",content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui")
+    //- link(href='../lib/css/reveal.css', rel='stylesheet')
+    //- link(href='../lib/css/theme/simple.css', rel='stylesheet')
+    //- link(href='../lib/css/zenburn.css', rel='stylesheet')
+    link(href='style.css', rel='stylesheet')
+    //- Printing and PDF exports -->
+    script.
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? '../lib/css/print/pdf.css' : '../lib/css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    script(src='../lib/js/d3.min.js')
+    script(src='../lib/js/bumpChartPhotos.js')
+  body
+
+
+    .reveal
+      .slides
+
+        section
+
+          h2 What, Why and How
+          h3 Visual Analytics Framework
+          br
+          p.small
+            a(href='http://johnguerra.co/', target='_blank') #[strong John Alexis Guerra Gómez]
+            span | ja.guerrag[at]uniandes.edu.co
+            a(href='http://twitter.com/duto_guerra') | @duto_guerra
+            br
+            span #[strong Jose Tiberio Hernández] | jhernand[at]uniandes.edu.co
+            br
+            span Universidad de los Andes
+
+            //- br
+            //- span ja.guerrag en uniandes.edu.co
+            //- br
+            //- a(href='http://twitter.com/duto_guerra') @duto_guerra
+          //- p.small Use
+          //-   strong  spacebar
+          //-   |  and the arrows to advance slides
+          br
+          p.small
+            a(href='http://johnguerra.co/lectures/visualAnalytics_fall2019/02_What_Why_How/', target='_blank') http://johnguerra.co/lectures/visualAnalytics_fall2019/02_What_Why_How/
+          p.tiny Based on
+            a(href="http://www.cs.ubc.ca/~tmm/talks.html#minicourse14") slides from Tamara Munzner
+
+
+
+        section
+          section
+            h2 Visual Analytics Framework
+            img(src="images/what_why_how.png")
+          section(data-background-size="contain" data-background="images/tamara_course14_session1-14.png")
+          //- what
+          section(data-background-size="contain" data-background="images/tamara_course14_session1-15.png")
+          section(data-background-size="contain" data-background="images/tamara_course14_session1-16.png")
+
+          section
+            h2 Tables
+            ul
+              li.fragment Attributes
+              li.fragment Items (rows)
+          section
+            h2 Temporal!!!!
+            ul
+              li.fragment Items (rows)
+              li.fragment Attributes
+              li.fragment At least one attrib is time-related
+
+          section
+            h2 Networks and Trees
+            ul
+              li.fragment Items (nodes)
+              li.fragment Links
+              li.fragment Attributes
+          section
+            h2 Fields
+            ul
+              li.fragment Continuous
+              li.fragment Sampled
+              li.fragment e.g. Brain scan
+
+          section
+            h2 Geometry
+            ul
+              li.fragment Spatial
+              li.fragment 2D or 3D
+              li.fragment Inherent shape
+
+
+          section(data-background-size="contain" data-background="images/tamara_course14_session1-17.png")
+          section(data-background-size="contain" data-background="images/tamara_course14_session1-18.png")
+
+          section(data-background-size="contain" data-background="images/tamara_course14_session1-15.png")
+          //- why
+          section(data-background-size="contain" data-background="images/tamara_course14_session1-19.png")
+          section(data-background-size="contain" data-background="images/tamara_course14_session1-20.png")
+          section(data-background-size="contain" data-background="images/tamara_course14_session1-21.png")
+          section(data-background-size="contain" data-background="images/tamara_course14_session1-22.png")
+          section(data-background-size="contain" data-background="images/tamara_course14_session1-19.png")
+          //- how
+          section(data-background-size="contain" data-background="images/tamara_course14_session1-23.png")
+          //- spacetree vs tree juxtaposer
+
+          section
+            h2 Example
+
+          section
+            h2 SpaceTree
+            iframe.blocks(src="http://www.cs.umd.edu/hcil/spacetree/")
+            a.tiny(href="http://www.cs.umd.edu/hcil/spacetree/") http://www.cs.umd.edu/hcil/spacetree/
+
+          section
+            h2 SpaceTree
+            span.
+              <iframe width="640" height="480" src="https://www.youtube.com/embed/-vXRJ_Ry_yE?rel=0" frameborder="0" allowfullscreen></iframe>
+
+          section
+            h2 TreeJuxtaposer
+            iframe.blocks(src="https://www.cs.ubc.ca/~tmm/papers/tj/")
+            a.tiny(href="https://www.cs.ubc.ca/~tmm/papers/tj/") https://www.cs.ubc.ca/~tmm/papers/tj/
+
+          section
+            h2 TreeJuxtaposer
+            span.
+              <iframe width="640" height="480" src="https://www.youtube.com/embed/GdaPj8a9QEo?rel=0" frameborder="0" allowfullscreen></iframe>
+
+          //- what?
+          section(data-background-size="contain" data-background="images/tamara_course14_session1-15.png")
+          //- why
+          section(data-background-size="contain" data-background="images/tamara_course14_session1-19.png")
+          //- how?
+          section(data-background-size="contain" data-background="images/tamara_course14_session1-23.png")
+
+          //- Answer
+          section(data-background-size="contain" data-background="images/tamara_course14_session1-24.png")
+          section(data-background-size="contain" data-background="images/tamara_course14_session1-25.png")
+          section(data-background-size="contain" data-background="images/tamara_course14_session1-26.png")
+          section(data-background-size="contain" data-background="images/tamara_course14_session1-27.png")
+
+        section
+          section
+            h2 Marks and channels
+
+          //- Marks and channels
+          section(data-background-size="contain" data-background="images/tamara_course14_session1-29.png")
+          section(data-background-size="contain" data-background="images/tamara_course14_session1-30.png")
+          section
+            h3 What marks and channels?
+            img.demo(src="images/visualEncoding1.png")
+          section
+            img.demo(src="images/visualEncoding1_answer.png")
+          section
+            h3 What marks and channels?
+            img.demo(src="images/visualEncoding2.png")
+          section
+            img.demo(src="images/visualEncoding2_answer.png")
+          section
+            h3 What marks and channels?
+            img.demo(src="images/visualEncoding3.png")
+          section
+            img.demo(src="images/visualEncoding3_answer.png")
+          section
+            h3 What marks and channels?
+            img.demo(src="images/visualEncoding4.png")
+          section
+            img.demo(src="images/visualEncoding4_answer.png")
+
+
+          section(data-background-size="contain" data-background="images/tamara_course14_session1-31.png")
+          section(data-background-size="contain" data-background="images/tamara_course14_session1-32.png")
+
+          section
+            h2 Effectiveness and Expressiveness
+
+          section
+            h2 Expressiveness
+            ul
+              li.fragment Visual encoding should express all of, and only, the information in the dataset
+              li.fragment Ordered data should be shown in a way we perceive as ordered
+              li.fragment Match channel and data characteristics
+          section
+            h2 Effectiveness
+            p Encode most important attributes with highest ranked channels
+            p.tiny [Automating the Design of Graphical Presentations of Relational Information. Mackinlay.  ACM Trans. on Graphics (TOG) 5:2 (1986), 110–141]
+
+          section
+            h2 Where does the ranking come from?
+
+            ul
+              li.fragment Accuracy
+              li.fragment Discriminability
+              li.fragment Separability
+              li.fragment Popout
+
+          //- section(data-background-size="contain" data-background="images/tamara_course14_session1-33.png")
+          section(data-background-size="contain" data-background="images/tamara_course14_session1-34.png")
+          section(data-background-size="contain" data-background="images/tamara_course14_session1-35.png")
+          section(data-background-size="contain" data-background="images/tamara_course14_session1-36.png")
+          section(data-background-size="contain" data-background="images/tamara_course14_session1-37.png")
+          section(data-background-size="contain" data-background="images/tamara_course14_session1-38.png")
+          section(data-background-size="contain" data-background="images/tamara_course14_session1-39.png")
+          section(data-background-size="contain" data-background="images/tamara_course14_session1-40.png")
+          section(data-background-size="contain" data-background="images/tamara_course14_session1-41.png")
+
+
+
+        //- ######### D3 tutorial
+        section
+          section
+           h1 D3 v4 Tutorial
+
+          section
+            h2
+              a(href="https://jsfiddle.net/duto_guerra/cds7nkow/5/") Step 0: Setup
+
+            ul
+              li Add https://d3js.org/d3.v4.min.js to external resources
+
+
+
+          section
+            h3
+              a(href="https://jsfiddle.net/duto_guerra/cds7nkow/7/") Step 1: Selections
+            iframe.blocks(src="https://jsfiddle.net/duto_guerra/cds7nkow/7/")
+
+          section
+            h3
+              a(href="https://jsfiddle.net/duto_guerra/cds7nkow/9/") Step 2: Data binding (create)
+            iframe.blocks(src="https://jsfiddle.net/duto_guerra/cds7nkow/9/")
+
+
+          section
+            h3
+              a(href="https://jsfiddle.net/duto_guerra/cds7nkow/12/") Step 3: Update and remove
+            iframe.blocks(src="https://jsfiddle.net/duto_guerra/cds7nkow/12/")
+
+          section
+            h3
+              a(href="https://jsfiddle.net/duto_guerra/cds7nkow/13/") Step 4: svg
+            iframe.blocks(src="https://jsfiddle.net/duto_guerra/cds7nkow/13/")
+
+
+          section
+            h3
+              a(href="https://jsfiddle.net/duto_guerra/cds7nkow/16/") Step 5: Scales
+            iframe.blocks(src="https://jsfiddle.net/duto_guerra/cds7nkow/16/")
+
+          section
+            h3
+              a(href="https://jsfiddle.net/duto_guerra/cds7nkow/17/") Step 6: Axis
+            iframe.blocks(src="https://jsfiddle.net/duto_guerra/cds7nkow/17/")
+
+          section
+            h3
+              a(href="https://jsfiddle.net/duto_guerra/cds7nkow/18/") Step 7: Transitions
+            iframe.blocks(src="https://jsfiddle.net/duto_guerra/cds7nkow/18/")
+
+          section
+            h3
+              a(href="https://jsfiddle.net/duto_guerra/cds7nkow/20/") Step 8: More complex data
+            iframe.blocks(src="https://jsfiddle.net/duto_guerra/cds7nkow/20/")
+
+          section
+            h3
+              a(href="https://jsfiddle.net/duto_guerra/cds7nkow/22/") Step 9: Merge
+            iframe.blocks(src="https://jsfiddle.net/duto_guerra/cds7nkow/22/")
+
+          section
+            h3
+              a(href="https://jsfiddle.net/duto_guerra/cds7nkow/23/") Step 10: Change mark
+            iframe.blocks(src="https://jsfiddle.net/duto_guerra/cds7nkow/23/")
+
+          section
+            h3
+              a(href="https://jsfiddle.net/duto_guerra/cds7nkow/25/") Step 11: Add dimension
+            iframe.blocks(src="https://jsfiddle.net/duto_guerra/cds7nkow/25/")
+
+
+
+
+    script(src='../lib/js/head.min.js')
+    script(src='../lib/js/reveal.js')
+
+    script.
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        rollingLinks: true,
+        transition: "convex",
+        //- width: "90%",
+        //- height: 1.0,
+        dependencies: [
+          // Cross-browser shim that fully implements classList - https://github.com/eligrey/classList.js/
+          { src: '../lib/js/classList.js', condition: function() { return !document.body.classList; } },
+
+          // Interpret Markdown in <section> elements
+          { src: '../plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: '../plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+
+          // Syntax highlight for <code> elements
+          { src: '../plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+
+          // Zoom in and out with Alt+click
+          { src: '../plugin/zoom-js/zoom.js', async: true },
+
+          // Speaker notes
+          { src: '../plugin/notes/notes.js', async: true },
+
+          //- // Remote control your reveal.js presentation using a touch device
+          //- { src: '../plugin/remotes/remotes.js', async: true },
+
+          //- // MathJax
+          //- { src: '../plugin/math/math.js', async: true }
+        ]
+      });
+    script.
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-72531610-1', 'auto');
+      ga('send', 'pageview');
+
+
+

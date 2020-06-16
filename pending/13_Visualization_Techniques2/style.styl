@@ -1,0 +1,151 @@
+@import '../lib/css/reveal.css'
+@import '../lib/css/theme/simple.css'
+@import '../lib/css/zenburn.css'
+
+blue = #4682b4
+
+.reveal
+  p, ol, ul, li, blockquote
+    line-height 1.25em
+  p, ol, ul, li, blockquote, pre
+    margin-top .75em
+    margin-bottom .75em
+  h1, h2, h3, h4, h5, h6
+    margin-top .25em
+    margin-bottom .75em
+
+  h1.demo, h2.demo, h3.demo, h4.demo, h5.demo, h6.demo
+    margin-top -0.50em
+  ul
+    list-style-type circle
+  pre
+    code
+      padding 2em
+      word-wrap normal
+      &::selection,
+      ::selection
+        background-color #000
+        color blue
+      &:focus
+        outline none
+  blockquote
+    border-left .25em solid blue
+    box-shadow none
+    padding 0 1em
+    text-align left
+    &:before,
+    &:after
+      content ''
+  iframe.blocks
+    width 100%
+    height 650px
+    margin-left -30px
+  section
+    img
+      border none
+      box-shadow none
+
+  #title
+    h1, h2, h3, h4, h5, h6
+      // text-transform none
+      font-family 'Helvetica Neue', sans-serif
+      // font-weight lighter
+      letter-spacing -.05em
+      margin 0
+      // margin-top -0.5em
+    // h3
+      // margin 1.5em 0 1em
+    h1
+      font-size 3.2em
+  img.demo
+    max-height 500px
+
+  #comparisonTable
+    font-size 0.5em
+    td
+      width: 33%
+  .small
+    font-size 80%
+  .tiny
+    font-size 60%
+  .bottom
+    margin-top 65%
+
+  .authors
+    font-size 70%
+    
+  .left
+    left:-8.33%
+    text-align: left
+    float: left
+    width:50%
+    z-index:-10
+
+
+  .right 
+    left:31.25%
+    top: 75px
+    float: right
+    // text-align: right
+    z-index:-10
+    width:50%
+
+
+  #handsOn
+    pre
+      width: 70%
+      font-size: 0.5em
+      float: left
+    div.target
+      margin: 20px
+      width: 25%
+      float: left
+      font: 10px sans-serif
+      rect
+        fill: steelblue
+      circle
+        opacity: 0.3
+      path.line
+        fill: none
+        stroke: #666
+        stroke-width: 1.5px
+      path.area
+        fill: #e7e7e7
+      .axis
+        shape-rendering: crispEdges
+      .x.axis line
+        stroke: #bbb
+      .x.axis .minor
+        stroke-opacity: .5
+      .x.axis path
+        fill: none
+      .y.axis line, .y.axis path
+        fill: none
+        stroke: #333
+    button.execute
+      clear: both
+      font-size: 0.8em
+
+    div.followLink
+      font-size: 0.6em
+
+
+  .contactInfo
+    text-align: right
+    a
+      font-size: 0.6em
+
+  .red
+    color: #e80000;
+
+  img.side
+    float:left;
+    width:45%;
+    padding: 0 5px 0 5px;
+
+  .clear
+    clear:both;
+
+
+
+

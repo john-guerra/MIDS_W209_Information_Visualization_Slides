@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Visual Analytics, Visualizing Trees</title>
+    <meta charset="utf-8">
+    <meta name="author" content="John Alexis Guerra Gomez">
+    <meta name="description" content="Visual Analytics">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+    <link href="style.css" rel="stylesheet">
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? '../lib/css/print/pdf.css' : '../lib/css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+    <script src="../lib/js/d3.min.js"></script>
+    <script src="../lib/js/bumpChartPhotos.js"></script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h2>Visualizing Trees</h2><br>
+          <p class="small"><a href="http://johnguerra.co/" target="_blank"><strong>John Alexis Guerra Gómez</strong></a><span>| ja.guerrag[at]uniandes.edu.co</span><a href="http://twitter.com/duto_guerra">| @duto_guerra</a><br><span><strong>Jose Tiberio Hernández</strong> | jhernand[at]uniandes.edu.co</span><br><span>Universidad de los Andes</span>
+          </p><br>
+          <p class="tiny"><a href="http://johnguerra.co/lectures/visualAnalytics_fall2019/09_Trees/" target="_blank">http://johnguerra.co/lectures/visualAnalytics_fall2019/09_Trees/</a></p>
+          <p class="tiny">Based on<a href="http://www.cs.ubc.ca/~tmm/talks.html#minicourse14">slides from Tamara Munzner</a></p>
+        </section>
+        
+        <section>
+          <section>
+            <h2>Tree</h2>
+            <ul>
+              <li>Set of nodes and links that express the parent-to-child relationship. Where each node:</li>
+              <ul>
+                <li>Is uniquely labeled in the tree.</li>
+                <li>Contains one or more numeric variables with values over time.</li>
+                <li>Contains one or more categorical attributes that may have more than one value.</li>
+              </ul>
+            </ul>
+          </section>
+          <section>
+            <h2>Types of trees</h2><img src="images/typesOfTrees.png" alt="Types of Trees" class="demo">
+          </section>
+        </section>
+        <section>
+          <section>
+            <h2>Trees</h2>
+          </section>
+          <section data-background-size="contain" data-background="images/09_networks-star-steno-topo.007.png"></section>
+          <section>
+            <h3 class="demo">Radial Tree</h3>
+            <iframe src="http://blockbuilder.org/mbostock/4063550" class="blocks"></iframe><a target="_blank" href="http://blockbuilder.org/mbostock/4063550" class="tiny">http://blockbuilder.org/mbostock/4063550</a><a target="_blank" href="http://bl.ocks.org/mbostock/" class="tiny">by mbostock</a>
+          </section>
+          <section>
+            <h3 class="demo">Dendogram</h3>
+            <iframe src="http://blockbuilder.org/mbostock/e9ba78a2c1070980d1b530800ce7fa2b" class="blocks"></iframe><a target="_blank" href="http://blockbuilder.org/mbostock/e9ba78a2c1070980d1b530800ce7fa2b" class="tiny">http://blockbuilder.org/mbostock/e9ba78a2c1070980d1b530800ce7fa2b</a><a target="_blank" href="http://bl.ocks.org/mbostock/" class="tiny">by mbostock</a>
+          </section>
+          <section>
+            <h2 class="demo">Cluster Dendograms Radial</h2>
+            <div class="left small">
+              <ul>
+                <li>Data: Trees</li>
+                <li>Tasks: Summarize common connections.</li>
+                <li>Considerations:
+                  <ul>
+                    <li>Harder to read</li>
+                    <li>Better space usage</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div class="right"><a href="https://observablehq.com/@d3/radial-dendrogram"><img src="images/radialDendogram.svg" alt="Radial Dendogram"><span class="tiny">https://observablehq.com/@d3/radial-dendrogram</span></a></div>
+          </section>
+          <section>
+            <h2 class="demo">Phylogenetic Trees</h2>
+            <div class="left small">
+              <ul>
+                <li>Data: Tree of Life</li>
+                <li>Tasks: Summarize common connections. Identify Clusters.</li>
+                <li>Considerations:
+                  <ul>
+                    <li>Harder to read</li>
+                    <li>Also works with other clusters data</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div class="right"><a href="https://observablehq.com/@mbostock/tree-of-life"><img src="images/phylogenetic.svg" alt="Phylogenetic"><span class="tiny">https://observablehq.com/@mbostock/tree-of-life</span></a></div>
+          </section>
+          <section>
+            <h3 class="demo">Cluster Dendograms Cartesian</h3>
+            <iframe src="http://blockbuilder.org/mbostock/4063570" class="blocks"></iframe><a target="_blank" href="http://blockbuilder.org/mbostock/4063570" class="tiny">http://blockbuilder.org/mbostock/4063570</a><a target="_blank" href="http://bl.ocks.org/mbostock/" class="tiny">by mbostock</a>
+          </section>
+          <section>
+            <h2 class="demo">Collapsible Tree</h2>
+            <div class="left small">
+              <ul>
+                <li>Data: Tree/Network</li>
+                <li>Tasks: Navigate connections. Locate nodes</li>
+                <li>Considerations:
+                  <ul>
+                    <li>Great for larger datasets</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div class="right"><a href="https://observablehq.com/@d3/collapsible-tree"><img src="images/collapsibleTree.svg" alt="CollapsibleTree"><span class="tiny">https://observablehq.com/@d3/collapsible-tree</span></a></div>
+          </section>
+          <section>
+            <h3 class="demo">SpaceTree</h3>
+            <iframe src="https://philogb.github.io/jit/static/v20/Jit/Examples/Spacetree/example1.html" class="blocks"></iframe><a target="_blank" href="https://philogb.github.io/jit/static/v20/Jit/Examples/Spacetree/example1.html" class="tiny">https://philogb.github.io/jit/static/v20/Jit/Examples/Spacetree/example1.html</a>
+          </section>
+          <section>
+            <h3 class="demo">SpaceTree</h3><span><iframe width="853" height="480" src="https://www.youtube.com/embed/F7-vJBsFBWw" frameborder="0" allowfullscreen></iframe></span><a target="_blank" href="http://www.cs.umd.edu/hcil/spacetree/" class="tiny">http://www.cs.umd.edu/hcil/spacetree/</a>
+          </section>
+          <section>
+            <h3 class="demo">Degree of Interest Tree</h3><span><iframe width="853" height="480" src="https://www.youtube.com/embed/RTQ0N4QY0yc" frameborder="0" allowfullscreen></iframe></span><a target="_blank" href="http://vis.stanford.edu/papers/doitrees-revisited" class="tiny">http://vis.stanford.edu/papers/doitrees-revisited</a>
+          </section>
+          <section>
+            <h3 class="demo">Force Directed Tree</h3>
+            <iframe src="http://blockbuilder.org/mbostock/95aa92e2f4e8345aaa55a4a94d41ce37" class="blocks"></iframe><a target="_blank" href="http://blockbuilder.org/mbostock/95aa92e2f4e8345aaa55a4a94d41ce37" class="tiny">http://blockbuilder.org/mbostock/95aa92e2f4e8345aaa55a4a94d41ce37</a><a target="_blank" href="http://bl.ocks.org/mbostock/" class="tiny">by mbostock</a>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h2>Space Filling Techniques</h2>
+          </section>
+          <section data-background-size="contain" data-background="images/09_networks-star-steno-topo.008.png"></section>
+          <section data-background-size="contain" data-background="images/09_networks-star-steno-topo.009.png"></section>
+          <section>
+            <h3 class="demo">TreeMap</h3>
+            <iframe src="http://blockbuilder.org/mbostock/6bbb0a7ff7686b124d80" class="blocks"></iframe><a target="_blank" href="http://blockbuilder.org/mbostock/6bbb0a7ff7686b124d80" class="tiny">http://blockbuilder.org/mbostock/6bbb0a7ff7686b124d80</a><a target="_blank" href="http://bl.ocks.org/mbostock/" class="tiny">by mbostock</a>
+          </section>
+          <section>
+            <h3 class="demo">TreeMap with parent labels</h3>
+            <iframe src="http://blockbuilder.org/mbostock/911ad09bdead40ec0061" class="blocks"></iframe><a target="_blank" href="http://blockbuilder.org/mbostock/911ad09bdead40ec0061" class="tiny">http://blockbuilder.org/mbostock/911ad09bdead40ec0061</a><a target="_blank" href="http://bl.ocks.org/mbostock/" class="tiny">by mbostock</a>
+          </section>
+          <section>
+            <h3 class="demo">How to preprocess data for a treemap</h3><a href="https://observablehq.com/@john-guerra/treemap-from-table" target="_blank" class="tiny">https://observablehq.com/@john-guerra/treemap-from-table</a>
+          </section>
+          <section>
+            <iframe src="https://finviz.com/map.ashx?t=sec" class="blocks"></iframe><a href="https://finviz.com/map.ashx?t=sec" class="tiny">https://finviz.com/map.ashx?t=sec</a>
+          </section>
+          <section>
+            <h2 class="demo">Icicle Tree</h2>
+            <div class="left small">
+              <ul>
+                <li>Data: Tree</li>
+                <li>Tasks: Summarize values/hierarchy. Navigate links</li>
+                <li>Considerations:
+                  <ul>
+                    <li>Uses more space than the treemap</li>
+                    <li>Better for labels</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div class="right"><a href="https://observablehq.com/@d3/zoomable-icicle"><img src="images/icicle.svg" alt="Icicle Tree"><span class="tiny">https://observablehq.com/@d3/zoomable-icicle</span></a></div>
+          </section>
+          <section>
+            <h2 class="demo">Icicle Tree</h2>
+            <div class="left small">
+              <ul>
+                <li>Data: Tree</li>
+                <li>Tasks: Summarize values/hierarchy. Navigate links. Compare values in leaves</li>
+                <li>Considerations:
+                  <ul>
+                    <li>Careful with small edges</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div class="right"><a href="https://observablehq.com/@john-guerra/zoomable-variable-size-icicle"><img src="images/variableSizeIcicle.svg" alt="Variable Size Icicle Tree"><span class="tiny">https://observablehq.com/@john-guerra/zoomable-variable-size-icicle</span></a></div>
+          </section>
+          <section>
+            <h2 class="demo">Sunburst Tree</h2>
+            <div class="left small">
+              <ul>
+                <li>Data: Tree</li>
+                <li>Tasks: Summarize values/hierarchy. Navigate links</li>
+                <li>Considerations:
+                  <ul>
+                    <li>Radial values are confusing</li>
+                    <li>Fancy yet difficult animation</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div class="right"><a href="https://observablehq.com/@d3/zoomable-sunburst"><img src="images/sunburst.svg" alt="Sunburst Tree"><span class="tiny">https://observablehq.com/@d3/zoomable-sunburst</span></a></div>
+          </section>
+          <section>
+            <h3 class="demo">Radial Treemap</h3>
+            <iframe src="http://blockbuilder.org/mbostock/ca5b03a33affa4160321" class="blocks"></iframe><a target="_blank" href="http://blockbuilder.org/mbostock/ca5b03a33affa4160321" class="tiny">http://blockbuilder.org/mbostock/ca5b03a33affa4160321</a><a target="_blank" href="http://bl.ocks.org/mbostock/" class="tiny">by mbostock</a>
+          </section>
+          <section>
+            <h3 class="demo">Kickstarter Projects</h3>
+            <iframe src="http://blockbuilder.org/john-guerra/38b1c32154905828f019f35a026b7526" class="blocks"></iframe><a target="_blank" href="http://blockbuilder.org/john-guerra/38b1c32154905828f019f35a026b7526" class="tiny">http://blockbuilder.org/john-guerra/38b1c32154905828f019f35a026b7526</a><a target="_blank" href="http://bl.ocks.org/john-guerra/" class="tiny">by john-guerra</a>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h2>Tree Comparison</h2>
+          </section>
+          <section data-background-size="contain" data-background="images/typesofTreeComparison.png"></section>
+          <section>
+            <h3 class="demo">TreeVersity</h3>
+            <iframe src="https://treeversity.cattlab.umd.edu" class="blocks"></iframe><a target="_blank" href="https://treeversity.cattlab.umd.edu" class="tiny">https://treeversity.cattlab.umd.edu</a>
+          </section>
+        </section>
+        <section>
+          <section data-background-size="contain" data-background="images/09_networks-star-steno-topo.010.png"></section>
+          <section data-background-size="contain" data-background="images/09_networks-star-steno-topo.012.png"></section>
+          <section data-background-size="contain" data-background="images/09_networks-star-steno-topo.023.png"></section>
+          <section data-background-size="contain" data-background="images/09_networks-star-steno-topo.024.png"></section>
+          
+          
+          
+          
+          
+        </section>
+      </div>
+    </div>
+    <script src="../lib/js/head.min.js"></script>
+    <script src="../lib/js/reveal.js"></script>
+    <script>
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        rollingLinks: true,
+        transition: "convex",
+        //- width: "90%",
+        //- height: 1.0,
+        dependencies: [
+          // Cross-browser shim that fully implements classList - https://github.com/eligrey/classList.js/
+          { src: '../lib/js/classList.js', condition: function() { return !document.body.classList; } },
+      
+          // Interpret Markdown in <section> elements
+          { src: '../plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: '../plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      
+          // Syntax highlight for <code> elements
+          { src: '../plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+      
+          // Zoom in and out with Alt+click
+          { src: '../plugin/zoom-js/zoom.js', async: true },
+      
+          // Speaker notes
+          { src: '../plugin/notes/notes.js', async: true },
+      
+          //- // Remote control your reveal.js presentation using a touch device
+          //- { src: '../plugin/remotes/remotes.js', async: true },
+      
+          //- // MathJax
+          //- { src: '../plugin/math/math.js', async: true }
+        ]
+      });
+    </script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      
+      ga('create', 'UA-72531610-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+  </body>
+</html>
