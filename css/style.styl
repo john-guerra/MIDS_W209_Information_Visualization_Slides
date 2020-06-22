@@ -1,10 +1,16 @@
-@import '../lib/css/reveal.css'
-@import '../lib/css/theme/simple.css'
-@import '../lib/css/zenburn.css'
+blue = rgb(0, 58, 112)
 
-blue = rgb(0, 58, 112);
+body
+  background-color: #f9f9f9;
 
 .reveal
+  font-family: calluna, serif
+  // font-family: 'PT Sans Narrow', sans-serif
+  color: #474747
+
+  .controls
+    color: blue
+
   p, ol, ul, li, blockquote
     line-height 1.25em
   p, ol, ul, li, blockquote, pre
@@ -14,6 +20,11 @@ blue = rgb(0, 58, 112);
     margin-top .25em
     margin-bottom .75em
     color: blue;
+    font-family: 'Fjalla One', sans-serif
+    text-shadow: 0px 2px 2px rgba(0,0,0,0.25)
+
+  // h1.title
+    // font-size : 120%
 
   h1.demo, h2.demo, h3.demo, h4.demo, h5.demo, h6.demo
     margin-top -0.50em
@@ -73,6 +84,8 @@ blue = rgb(0, 58, 112);
     font-size 80%
   .tiny
     font-size 60%
+  .supertiny
+    font-size 40%
 
   .authors
     font-size 70%
@@ -202,3 +215,26 @@ blue = rgb(0, 58, 112);
     // tr:nth-child({2})
     //   td
     //     text-align: center
+
+
+  .logo
+    display: flex
+    height: 50px
+    margin-right: 10px
+
+  .flex
+    display:flex
+    width: 100%
+
+    .third
+      width: 33%
+    .half
+      width: 50%
+
+  .portrait
+    text-align: middle
+    img
+      border-radius: 100%
+      max-height: 200px
+      box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)
+      transition: all 0.3s cubic-bezier(.25,.8,.25,1)

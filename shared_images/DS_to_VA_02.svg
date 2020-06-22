@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="357px" height="283px" viewBox="0 0 357 283" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 59.1 (86144) - https://sketch.com -->
+    <title>DS_to_VA_02</title>
+    <desc>Created with Sketch.</desc>
+    <g id="DS_to_VA_02" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Stick-Figure-2" transform="translate(47.069232, 113.614783)" stroke="#979797" stroke-width="2">
+            <ellipse id="Oval-9" cx="14.4653842" cy="11.8396239" rx="11.9496652" ry="11.8396239"></ellipse>
+            <line x1="15.0997654" y1="23.7520587" x2="15.0997654" y2="56.126169" id="Path-1"></line>
+            <polyline id="Path-2" points="2.57963947 70.2298044 15.1641031 55.684194 28.2010756 69.6178497"></polyline>
+            <polyline id="Path-3" points="0.280637242 42.3210586 15.0793918 34.0086742 28.8069228 41.5996745"></polyline>
+            <path d="M7.29130727,17.0194637 C7.29130727,17.0194637 15.0751028,21.3366009 21.0574409,16.9046072" id="Path-6" transform="translate(14.174374, 17.904607) scale(-1, -1) rotate(180.000000) translate(-14.174374, -17.904607) "></path>
+            <line x1="18.9947958" y1="6.54295814" x2="18.9947958" y2="9.96607964" id="Path-5"></line>
+            <line x1="8.93191987" y1="6.54295814" x2="8.93191987" y2="9.96607964" id="Path"></line>
+        </g>
+        <g id="Group-2" transform="translate(102.830601, 34.000000)" fill="#D8D8D8" fill-rule="nonzero" stroke="#979797">
+            <rect id="Oval-14" x="0" y="8.500625" width="47.1693989" height="44.931875"></rect>
+            <path d="M47.1868067,52.218125 C47.1868067,56.9128906 36.6101693,60.71875 23.5846995,60.71875 C10.5592296,60.71875 0,56.9128906 0,52.218125" id="Path"></path>
+            <path d="M23.5846995,17.00125 C36.6101693,17.00125 47.1693989,13.1953906 47.1693989,8.500625 C47.1693989,3.80585945 36.6101693,0 23.5846995,0 C10.5592296,0 0,3.80585945 0,8.500625 C0,13.1953906 10.5592296,17.00125 23.5846995,17.00125 Z" id="Oval-10"></path>
+        </g>
+        <g id="Path-8-+-Triangle-20" transform="translate(189.523549, 79.790589) rotate(55.000000) translate(-189.523549, -79.790589) translate(166.023549, 60.290589)">
+            <path d="M0.205792584,38.8221292 C5.06051729,27.8547929 18.3824631,13.8504856 36.5591341,11.2603013" id="Path-8" stroke="#86C6D7" stroke-width="10"></path>
+            <polygon id="Triangle-2" fill="#86C6D7" fill-rule="nonzero" transform="translate(36.992927, 10.394440) rotate(72.000000) translate(-36.992927, -10.394440) " points="36.992927 3.02216771 44.7421853 17.7667114 29.2436686 17.7667114"></polygon>
+        </g>
+        <g id="Machine-" transform="translate(286.000000, 102.000000)" fill="#333333" font-family="HelveticaNeue, Helvetica Neue" font-size="13" font-weight="normal">
+            <text id="Machine">
+                <tspan x="0.5" y="12">Machine</tspan>
+            </text>
+            <text id="Learning/">
+                <tspan x="0.5" y="28.363998">Learning/</tspan>
+            </text>
+            <text id="Statistics">
+                <tspan x="0.5" y="44.727997">Statistics</tspan>
+            </text>
+        </g>
+        <g id="Data" transform="translate(110.000000, 11.000000)" fill="#333333" font-family="HelveticaNeue, Helvetica Neue" font-size="13" font-weight="normal">
+            <text>
+                <tspan x="0" y="12.6152779">Data</tspan>
+            </text>
+        </g>
+        <g id="User" transform="translate(15.000000, 124.000000)" fill="#333333" font-family="HelveticaNeue, Helvetica Neue" font-size="13" font-weight="normal">
+            <text>
+                <tspan x="0.97071309" y="12.285496">User</tspan>
+            </text>
+        </g>
+        <g id="Rectangle-11-+-Rectangle-11-+-Rectangle-12" transform="translate(207.000000, 98.000000)" fill="#171717" fill-rule="nonzero" stroke="#A2A2A2">
+            <polygon id="Rectangle-11" points="47.25 62.0156919 62.9896482 48.9993965 62.9896482 0.476669237 47.25 13.4929647"></polygon>
+            <polygon id="Rectangle-12" points="63.2348723 0.462264071 15.9848723 0.462264071 0 13.4897325 47.25 13.4897325"></polygon>
+            <polygon id="Rectangle-10" points="0 62 47.25 62 47.25 13.4772727 0 13.4772727"></polygon>
+        </g>
+    </g>
+</svg>

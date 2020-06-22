@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="357px" height="283px" viewBox="0 0 357 283" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 59.1 (86144) - https://sketch.com -->
+    <title>DS_to_VA_05</title>
+    <desc>Created with Sketch.</desc>
+    <g id="DS_to_VA_05" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Stick-Figure-2" transform="translate(47.069232, 113.614783)" stroke="#979797" stroke-width="2">
+            <ellipse id="Oval-9" cx="14.4653842" cy="11.8396239" rx="11.9496652" ry="11.8396239"></ellipse>
+            <line x1="15.0997654" y1="23.7520587" x2="15.0997654" y2="56.126169" id="Path-1"></line>
+            <polyline id="Path-2" points="2.57963947 70.2298044 15.1641031 55.684194 28.2010756 69.6178497"></polyline>
+            <polyline id="Path-3" points="0.280637242 42.3210586 15.0793918 34.0086742 28.8069228 41.5996745"></polyline>
+            <path d="M7.930768,16.4426452 C7.930768,16.4426452 15.7145635,18.6012139 21.6969016,16.385217" id="Path-6" transform="translate(14.813835, 16.885217) scale(-1, -1) rotate(180.000000) translate(-14.813835, -16.885217) "></path>
+            <line x1="18.9947958" y1="6.54295814" x2="18.9947958" y2="9.96607964" id="Path-5"></line>
+            <line x1="8.93191987" y1="6.54295814" x2="8.93191987" y2="9.96607964" id="Path"></line>
+        </g>
+        <g id="Group-2" transform="translate(102.830601, 34.000000)" fill="#D8D8D8" fill-rule="nonzero" stroke="#979797">
+            <rect id="Oval-14" x="0" y="8.500625" width="47.1693989" height="44.931875"></rect>
+            <path d="M47.1868067,52.218125 C47.1868067,56.9128906 36.6101693,60.71875 23.5846995,60.71875 C10.5592296,60.71875 0,56.9128906 0,52.218125" id="Path"></path>
+            <path d="M23.5846995,17.00125 C36.6101693,17.00125 47.1693989,13.1953906 47.1693989,8.500625 C47.1693989,3.80585945 36.6101693,0 23.5846995,0 C10.5592296,0 0,3.80585945 0,8.500625 C0,13.1953906 10.5592296,17.00125 23.5846995,17.00125 Z" id="Oval-10"></path>
+        </g>
+        <g id="Machine-" transform="translate(286.000000, 102.000000)" fill="#333333" font-family="HelveticaNeue, Helvetica Neue" font-size="13" font-weight="normal">
+            <text id="Machine">
+                <tspan x="0.5" y="12">Machine</tspan>
+            </text>
+            <text id="Learning/">
+                <tspan x="0.5" y="28.363998">Learning/</tspan>
+            </text>
+            <text id="Statistics">
+                <tspan x="0.5" y="44.727997">Statistics</tspan>
+            </text>
+        </g>
+        <g id="Data" transform="translate(110.000000, 11.000000)" fill="#333333" font-family="HelveticaNeue, Helvetica Neue" font-size="13" font-weight="normal">
+            <text>
+                <tspan x="0" y="12.6152779">Data</tspan>
+            </text>
+        </g>
+        <g id="User" transform="translate(15.000000, 124.000000)" fill="#333333" font-family="HelveticaNeue, Helvetica Neue" font-size="13" font-weight="normal">
+            <text>
+                <tspan x="0.97071309" y="12.285496">User</tspan>
+            </text>
+        </g>
+        <g id="Rectangle-11-+-Rectangle-11-+-Rectangle-12" transform="translate(207.000000, 98.000000)" fill="#171717" fill-rule="nonzero" stroke="#A2A2A2">
+            <polygon id="Rectangle-11" points="47.25 62.0156919 62.9896482 48.9993965 62.9896482 0.476669237 47.25 13.4929647"></polygon>
+            <polygon id="Rectangle-12" points="63.2348723 0.462264071 15.9848723 0.462264071 0 13.4897325 47.25 13.4897325"></polygon>
+            <polygon id="Rectangle-10" points="0 62 47.25 62 47.25 13.4772727 0 13.4772727"></polygon>
+        </g>
+        <g id="Group-2" transform="translate(126.000000, 196.000000)">
+            <g id="Information-" transform="translate(0.000000, 49.656250)" fill="#333333" font-family="HelveticaNeue, Helvetica Neue" font-size="13" font-weight="normal">
+                <text id="Information">
+                    <tspan x="4.024718" y="12.018285">Information</tspan>
+                </text>
+                <text id="Visualization">
+                    <tspan x="0.911218" y="28.382283">Visualization</tspan>
+                </text>
+            </g>
+            <g id="Group" transform="translate(7.521220, 0.000000)" fill-rule="nonzero" stroke="#979797">
+                <rect id="Rectangle-12" fill="#7ED321" x="23.9145554" y="0" width="28.6974665" height="28.81875"></rect>
+                <polygon id="Triangle-1" fill="#F8E81C" points="16.1423249 0 32.2846498 31.2203125 0 31.2203125"></polygon>
+                <ellipse id="Oval-10" fill="#4990E2" cx="29.2953304" cy="34.2222656" rx="13.7508693" ry="13.8089844"></ellipse>
+            </g>
+        </g>
+        <g id="Group-3" transform="translate(79.000000, 39.000000)">
+            <g id="Path-8-+-Triangle-14" transform="translate(110.684644, 45.460224) rotate(55.000000) translate(-110.684644, -45.460224) translate(87.184644, 25.960224)">
+                <path d="M0.205792584,38.8221292 C5.06051729,27.8547929 18.3824631,13.8504856 36.5591341,11.2603013" id="Path-8" stroke="#86C6D7" stroke-width="10"></path>
+                <polygon id="Triangle-2" fill="#86C6D7" fill-rule="nonzero" transform="translate(36.992927, 10.394440) rotate(72.000000) translate(-36.992927, -10.394440) " points="36.992927 3.02216771 44.7421853 17.7667114 29.2436686 17.7667114"></polygon>
+            </g>
+            <g id="Path-8-+-Triangle-9" transform="translate(125.738359, 159.081820) rotate(160.000000) translate(-125.738359, -159.081820) translate(102.238359, 139.581820)">
+                <path d="M0.205792584,38.8221292 C5.06051729,27.8547929 18.3824631,13.8504856 36.5591341,11.2603013" id="Path-8" stroke="#86C6D7" stroke-width="10"></path>
+                <polygon id="Triangle-2" fill="#86C6D7" fill-rule="nonzero" transform="translate(36.992927, 10.394440) rotate(72.000000) translate(-36.992927, -10.394440) " points="36.992927 3.02216771 44.7421853 17.7667114 29.2436686 17.7667114"></polygon>
+            </g>
+            <g id="Group-4" transform="translate(0.658624, 0.000000)">
+                <g id="Path-8-+-Triangle-12" transform="translate(143.250339, 154.310301) scale(-1, 1) rotate(-81.000000) translate(-143.250339, -154.310301) translate(119.750339, 134.810301)">
+                    <path d="M0.205792584,38.8221292 C5.06051729,27.8547929 18.3824631,13.8504856 36.5591341,11.2603013" id="Path-8" stroke="#669EAD" stroke-width="10"></path>
+                    <polygon id="Triangle-2" fill="#669EAD" fill-rule="nonzero" transform="translate(36.992927, 10.394440) rotate(72.000000) translate(-36.992927, -10.394440) " points="36.992927 3.02216771 44.7421853 17.7667114 29.2436686 17.7667114"></polygon>
+                </g>
+                <g id="Path-8-+-Triangle-13" transform="translate(102.023151, 26.500000) scale(-1, 1) rotate(17.000000) translate(-102.023151, -26.500000) translate(78.523151, 7.000000)">
+                    <path d="M0.205792584,38.8221292 C5.06051729,27.8547929 18.3824631,13.8504856 36.5591341,11.2603013" id="Path-8" stroke="#669EAD" stroke-width="10"></path>
+                    <polygon id="Triangle-2" fill="#669EAD" fill-rule="nonzero" transform="translate(36.992927, 10.394440) rotate(72.000000) translate(-36.992927, -10.394440) " points="36.992927 3.02216771 44.7421853 17.7667114 29.2436686 17.7667114"></polygon>
+                </g>
+                <g id="Path-8-+-Triangle-11" transform="translate(24.500000, 184.324710) scale(-1, 1) rotate(177.000000) translate(-24.500000, -184.324710) translate(1.000000, 164.824710)">
+                    <path d="M0.205792584,38.8221292 C5.06051729,27.8547929 18.3824631,13.8504856 36.5591341,11.2603013" id="Path-8" stroke="#669EAD" stroke-width="10"></path>
+                    <polygon id="Triangle-2" fill="#669EAD" fill-rule="nonzero" transform="translate(36.992927, 10.394440) rotate(72.000000) translate(-36.992927, -10.394440) " points="36.992927 3.02216771 44.7421853 17.7667114 29.2436686 17.7667114"></polygon>
+                </g>
+            </g>
+            <g id="Path-8-+-Triangle-10" transform="translate(24.500000, 164.186298) rotate(-102.000000) translate(-24.500000, -164.186298) translate(1.000000, 144.686298)">
+                <path d="M0.205792584,38.8221292 C5.06051729,27.8547929 18.3824631,13.8504856 36.5591341,11.2603013" id="Path-8" stroke="#86C6D7" stroke-width="10"></path>
+                <polygon id="Triangle-2" fill="#86C6D7" fill-rule="nonzero" transform="translate(36.992927, 10.394440) rotate(72.000000) translate(-36.992927, -10.394440) " points="36.992927 3.02216771 44.7421853 17.7667114 29.2436686 17.7667114"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

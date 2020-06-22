@@ -1,22 +1,27 @@
 doctype html
 html
   head
-    title Visual Analytics
-    meta(charset='utf-8')
-    meta(name='author', content='John Alexis Guerra Gomez')
-    meta(name='description', content='Week 1 Introduction. MIDS W209 Information Visualization Slides. ')
+    title Week 1 Introduction. MIDS W209 Information Visualization Slides
+    meta(charset="utf-8")
+    meta(name="author", content="John Alexis Guerra Gomez")
+    meta(name="description", content="Week 1 Introduction. MIDS W209 Information Visualization Slides. ")
 
     meta(name="apple-mobile-web-app-capable" content="yes")
     meta(name="apple-mobile-web-app-status-bar-style" content="black-translucent")
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
 
+    link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Fjalla+One|Raleway|PT+Sans+Narrow")
+
+    //- Adobe fonts
+    link(rel="stylesheet" href="https://use.typekit.net/yjc0afr.css")
+
     //- <!-- Theme used for syntax highlighting of code -->
     link(rel="stylesheet" href="../plugin/highlight/monokai.css" id="highlight-theme")
 
 
-    link(href='../css/reveal.css', rel='stylesheet')
-    link(href='../css/theme/white.css', rel='stylesheet', id="theme")
-    link(href='../css/style.css', rel='stylesheet')
+    link(href="../css/reveal.css", rel="stylesheet")
+    link(href="../css/theme/white.css", rel="stylesheet", id="theme")
+    link(href="../css/style.css", rel="stylesheet")
 
 
   body
@@ -25,50 +30,70 @@ html
     .reveal
       .slides
         section
-          h1 MIDS W209:
-            small Information Visualization
-          h2 Introduction
-          br
+          h1.title Introduction
+            br
+            small MIDS W209: Information Visualization
+
+          div.r-stretch
+
+
           div.tiny
-            a(href='http://johnguerra.co/', target='_blank') #[strong  John Alexis Guerra Gómez]
+            a(href="https://johnguerra.co/", target="_blank") #[strong  John Alexis Guerra Gómez]
             span  |  john.guerra[at]gmail.com
-            a(href='http://twitter.com/duto_guerra')  |  @duto_guerra
-
+            a(href="https://twitter.com/duto_guerra")  |  @duto_guerra
             br
-            br
-            span Master in Data Science, School of Information, UC Berkeley
 
-          br
-          p.small
-            a(href='http://johnguerra.co/lectures/MIDS_W209/01_Introduction/', target='_blank') http://johnguerra.co/lectures/MIDS_W209/01_Introduction/
+            a(href="https://johnguerra.co/lectures/MIDS_W209_Information_Visualization/01_Introduction/", target="_blank") https://johnguerra.co/lectures/MIDS_W209_Information_Visualization/01_Introduction/
 
-          br
-          p.tiny Based on
-            a(href="http://www.cs.ubc.ca/~tmm/talks.html#minicourse14")  slides from Tamara Munzner
+          div.logo
+            a(href="https://datascience.berkeley.edu/")
+              img.logo(src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo")
+          div.tiny Partially based on
+            a(href="https://www.cs.ubc.ca/~tmm/talks.html#minicourse14")  slides from Tamara Munzner
 
         //- Outline
         section
           section
-            h1 What we are going to learn
+            h2 What we are going to learn
+            ul
+              li Dataviz definition
+              li.fragment Why should we visualize
+              li.fragment What are insights
+              li.fragment Problem abstraction
+              li.fragment Visualization tools landscape
 
 
         section#definitions
           section
-            h1 Dataviz definition
+            h1 Definitions
 
           section
             h2 Defining Visualization (vis)
             p Computer-based visualization systems provide visual representations of datasets
               span.fragment  designed to help people carry out #[strong tasks] more effectively.
-            p.fragment.red Why?
+            p.fragment Why?
 
 
           section
             h2 Have the human in the loop
             p Visualization is suitable when there is a need to #[strong augment human capabilities] rather than replace people with computational decision-making methods.
 
+
           section
-            h2 When don't use vis?
+            h2 Three requirements
+            br
+            div.flex
+              div.third.fragment #[strong Users]
+              div.third.fragment #[strong Data]
+              div.third.fragment #[strong Tasks]
+
+            br
+            div.fragment A good visualization enables #[strong users] to complete #[strong tasks] effectively on the #[strong data]
+
+
+
+          section
+            h2 When don"t use vis?
             p Don’t need vis when fully automatic solution exists and is trusted
 
           section
@@ -80,7 +105,7 @@ html
 
           section
             h2 Vis allows for
-            ul
+            ul.small
               li.fragment Long-term use for end users (e.g. exploratory analysis of scientific data)
               li.fragment Presentation of known results
               li.fragment Stepping stone to better understanding of requirements before developing models
@@ -94,8 +119,8 @@ html
           section
             h2 Why use an external representation?
             p.fragment External representation: #[span.fragment replace cognition #[span.fragment with perception]]
-            img.fragment.side(src="images/cognition.png")
-            img.fragment.side(src="images/perception.png")
+            img.fragment.side(src="../shared_images/cognition.png")
+            img.fragment.side(src="../shared_images/perception.png")
             span.clear
             p.tiny.fragment [Cerebral: Visualizing Multiple Experimental Conditions on a Graph with Biological Context. Barsky, Munzner, Gardy, and Kincaid. IEEE TVCG (Proc. InfoVis) 14(6):1253-1260, 2008.]
 
@@ -154,7 +179,7 @@ html
 
           section
             h2 Exercise
-            p Let's find in how many ways we can visualize two numbers 13 and 23
+            p Let"s find in how many ways we can visualize two numbers 13 and 23
 
           section
             h2 Idiom design space
@@ -162,7 +187,7 @@ html
 
           section
             h2 Idioms
-            ul
+            ul.small
               li.fragment How to draw it: #[strong visual encoding] idiom
               ul
                 li.fragment Many possibilities for how to create
@@ -222,13 +247,26 @@ html
         //- Why should we visualize
         section#whyVisualize
           section
-            h1 The purpose of information visualization
+            div The purpose of visualization is #[strong insight], not pictures
+
+            div.portrait
+              a.right(href="https://medium.com/multiple-views-visualization-research-explained/the-purpose-of-visualization-is-insight-not-pictures-an-interview-with-visualization-pioneer-ben-beb15b2d8e9b" target="_blank" rel="noopener noreferrer")
+
+                div
+                  img(src="../shared_images/ben_pic_fp_cropped.jpg" alt="Ben Shneiderman photo")
+                div.small Ben Shneiderman
 
           section
-            h1 Ben Shneiderman
+            h2 The purpose of data science is #[strong insight], not (just) models
+            div.portrait
+              a.right
+                img(src="../shared_images/foto_JohnGuerra_2019.jpg" alt="My photo")
+                br
+                span.small John Alexis Guerra Gómez
+
 
           section
-            h3 Anscombe's quartet
+            h3 Anscombe"s quartet
             span.anscombeTable.
               <table>
               <tbody><tr>
@@ -359,7 +397,7 @@ html
               </tr>
               </tbody></table>
 
-            //- img(src="images/anscombes.jpg")
+            //- img(src="../shared_images/anscombes.jpg")
 
             span.fragment.anscombeResult.
               <table>
@@ -398,23 +436,35 @@ html
               </tbody></table>
 
           //- section
-          //-   h2 Anscombe's quartet
-          //-   img(src="images/anscombes2.jpg")
+          //-   h2 Anscombe"s quartet
+          //-   img(src="../shared_images/anscombes2.jpg")
+
 
           section
-            h2 Anscombe's visualized
-            img(src="images/anscombes_graph.jpg")
+            h2 Anscombe"s visualized
+            div.
+              <div id="observablehq-c877aaaf"></div>
+              <script type="module">
+              import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+              import define from "https://api.observablehq.com/@john-guerra/anscombes-quartet.js?v=3";
+              const inspect = Inspector.into("#observablehq-c877aaaf");
+              (new Runtime).module(define, name => name === "anscombe" ? inspect() : undefined);
+              </script>
+
+            //- img(src="../shared_images/anscombes_graph.jpg")
 
 
           section
             h3 More examples same stats
-            img.demo(src="images/datasaurus-dozen.png")
-            a.tiny(href="https://dabblingwithdata.wordpress.com/2017/05/03/the-datasaurus-a-monstrous-anscombe-for-the-21st-century/") https://dabblingwithdata.wordpress.com/2017/05/03/the-datasaurus-a-monstrous-anscombe-for-the-21st-century/
+            img.demo(src="../shared_images/datasaurus-dozen.png")
+            div
+              a.tiny(href="https://dabblingwithdata.wordpress.com/2017/05/03/the-datasaurus-a-monstrous-anscombe-for-the-21st-century/") https://dabblingwithdata.wordpress.com/2017/05/03/the-datasaurus-a-monstrous-anscombe-for-the-21st-century/
 
           section
             h3 Datasaurus!
-            img.demo(src="images/datasaurus-main.png")
-            a.tiny(href="https://dabblingwithdata.wordpress.com/2017/05/03/the-datasaurus-a-monstrous-anscombe-for-the-21st-century/") https://dabblingwithdata.wordpress.com/2017/05/03/the-datasaurus-a-monstrous-anscombe-for-the-21st-century/
+            img.demo(src="../shared_images/datasaurus-main.png")
+            div
+              a.tiny(href="https://dabblingwithdata.wordpress.com/2017/05/03/the-datasaurus-a-monstrous-anscombe-for-the-21st-century/") https://dabblingwithdata.wordpress.com/2017/05/03/the-datasaurus-a-monstrous-anscombe-for-the-21st-century/
 
         section#visualAnalytics
           section
@@ -429,13 +479,13 @@ html
 
           section
             h3 Data Mining/Machine Learning
-            p: img(src='images/machine_learning_diagram.png')
+            p: img(src="../shared_images/machine_learning_diagram.png")
           section
             h3 Information Visualization
-            p: img(src='images/infovis_diagram.png')
+            p: img(src="../shared_images/infovis_diagram.png")
           section
             h3 Visual Analytics
-            p: img(src='images/infovis_algorithms_diagram.png')
+            p: img(src="../shared_images/infovis_algorithms_diagram.png")
 
 
           section
@@ -507,151 +557,186 @@ html
             h2 An insight is:
             ul
               li something that the #[strong user] can learn from the #[strong data] using the #[strong dataviz]
-              li which she didn't know/expect,
+              li which she didn"t know/expect,
               li also, is useful/needed for her,
-              li moreover, she didn't know of it,
+              li moreover, she didn"t know of it,
               li and that she can leverage
 
           section
             h1 Insights
 
-          section#InsightFDA
-            h2 FDA
-            p Task: Change in drug's adverse effects reports
-            p User: FDA Analysts
+          //- section#InsightFDA
+          //-   h2 FDA
+          //-   p Task: Change in drug"s adverse effects reports
+          //-   p User: FDA Analysts
 
-          section
-            h2 State of the art
-            img.demo(src="images/sectorMaps.png")
+          //- section
+          //-   h2 State of the art
+          //-   img.demo(src="../shared_images/sectorMaps.png")
 
-          section
-            img.demo(src="images/side_by_side_Vasc_sectorMaps.png")
+          //- section
+          //-   img.demo(src="../shared_images/side_by_side_Vasc_sectorMaps.png")
 
-          section
-            img(src="images/skylines_explanation.png")
-
-
-          section
-            a(href="https://treeversity.cattlab.umd.edu/?hierarchy=soc/hlgt/hlt/pt&db=tv2_sectorMaps6&seqFrom=01/01/08&seqTo=01/01/12&viz=Skylines&fixedHierarchy=soc/hlgt/hlt/pt&valueAttrib=ebgm&title=FDA%20Adverse%20Drug%20Effects" target="_blank")
-              img(src="images/2013_03_29_FDA_all.png")
-            a(href="https://treeversity.cattlab.umd.edu/" target="_blank") https://treeversity.cattlab.umd.edu/
+          //- section
+          //-   img(src="../shared_images/skylines_explanation.png")
 
 
-
-          section#InsightPARC
-            h2 Health insurance claims
-            p Task: Detect fraud networks
-            p User: Undisclosed Analysts
-
-          section
-            img.demo(src="images/network_explorer_before.png")
+          //- section
+          //-   a(href="https://treeversity.cattlab.umd.edu/?hierarchy=soc/hlgt/hlt/pt&db=tv2_sectorMaps6&seqFrom=01/01/08&seqTo=01/01/12&viz=Skylines&fixedHierarchy=soc/hlgt/hlt/pt&valueAttrib=ebgm&title=FDA%20Adverse%20Drug%20Effects" target="_blank")
+          //-     img(src="../shared_images/2013_03_29_FDA_all.png")
+          //-   a(href="https://treeversity.cattlab.umd.edu/" target="_blank") https://treeversity.cattlab.umd.edu/
 
 
-          section
-            h2 Clustering
-            //- img(src="images/.jpg")
-            iframe.blocks(src="https://cdn.rawgit.com/john-guerra/ecdde32ab4ad91a1a240/raw/2c1a843df8631604a99140ddc9db8ee048624a79/index.html")
 
-          section
-            h2 Force in a box
-            iframe.blocks(src="https://rawgit.com/john-guerra/14c943d8f198d9f3fef2/raw/669304a9a47d0fb6dfff4060ceba13d35037fffb/index.html")
+          //- section#InsightPARC
+          //-   h2 Health insurance claims
+          //-   p Task: Detect fraud networks
+          //-   p User: Undisclosed Analysts
 
-          section
-            h2 Overview
-            img.demo(src="images/overview_10k_nointer_cropped.png")
-
-          section
-            h2 Ego distance
-            img.demo(src="images/network_explorer_ego_distance.png")
+          //- section
+          //-   img.demo(src="../shared_images/network_explorer_before.png")
 
 
-          section#InsightTweetometro
-            h2 Tweetometro
-            p Task: Twitter behavior during Presidential Elections
-            p User: Me
+          //- section
+          //-   h2 Clustering
+          //-   //- img(src="../shared_images/.jpg")
+          //-   iframe.blocks(src="https://cdn.rawgit.com/john-guerra/ecdde32ab4ad91a1a240/raw/2c1a843df8631604a99140ddc9db8ee048624a79/index.html")
 
-          section
-            iframe.blocks(src="http://old.tweetometro.co" alt="images/tweetometro.png")
-            a(href="http://old.tweetometro.co") http://tweetometro.co
+          //- section
+          //-   h2 Force in a box
+          //-   iframe.blocks(src="https://rawgit.com/john-guerra/14c943d8f198d9f3fef2/raw/669304a9a47d0fb6dfff4060ceba13d35037fffb/index.html")
 
-          section
-            h2 Normal tweets
-            img.demo(src="http://old.tweetometro.co/img/all_tweets_May_25_2014.png")
+          //- section
+          //-   h2 Overview
+          //-   img.demo(src="../shared_images/overview_10k_nointer_cropped.png")
 
-          section
-            h2 Weird tweets?
-            img.demo(src="http://old.tweetometro.co/img/suspicious_tweets_May_25_2014.png")
+          //- section
+          //-   h2 Ego distance
+          //-   img.demo(src="../shared_images/network_explorer_ego_distance.png")
 
-          section
-            h2 Creation dates
-            img.demo(src="http://old.tweetometro.co/img/user_creation_date_May_25_2014.png")
 
-          section
-            h2 Number of followers
-            img.demo(src="http://old.tweetometro.co/img/num_followers_May_25_2014.png")
+          //- section#InsightTweetometro
+          //-   h2 Tweetometro
+          //-   p Task: Twitter behavior during Presidential Elections
+          //-   p User: Me
 
-          section
-            span.
-              <script type='text/javascript' src='http://public.tableau.com/javascripts/api/viz_v1.js'></script><div class='tableauPlaceholder' style='width: 1032px; height: 677px;'><noscript><a href='http:&#47;&#47;tweetometro.co&#47;robots_May25.html'><img alt='Análisis Elecciones Presidenciales Colombia ' src='http:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;An&#47;AnlisisPosiblesRobotsEleccionesColombiaMay25&#47;AnlisisEleccionesPresidencialesColombia&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz' width='1032' height='677' style='display:none;'><param name='host_url' value='http%3A%2F%2Fpublic.tableau.com%2F' /> <param name='site_root' value='' /><param name='name' value='AnlisisPosiblesRobotsEleccionesColombiaMay25&#47;AnlisisEleccionesPresidencialesColombia' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='http:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;An&#47;AnlisisPosiblesRobotsEleccionesColombiaMay25&#47;AnlisisEleccionesPresidencialesColombia&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>
+          //- section
+          //-   iframe.blocks(src="https://old.tweetometro.co" alt="../shared_images/tweetometro.png")
+          //-   a(href="https://old.tweetometro.co") https://tweetometro.co
+
+          //- section
+          //-   h2 Normal tweets
+          //-   img.demo(src="https://old.tweetometro.co/img/all_tweets_May_25_2014.png")
+
+          //- section
+          //-   h2 Weird tweets?
+          //-   img.demo(src="https://old.tweetometro.co/img/suspicious_tweets_May_25_2014.png")
+
+          //- section
+          //-   h2 Creation dates
+          //-   img.demo(src="https://old.tweetometro.co/img/user_creation_date_May_25_2014.png")
+
+          //- section
+          //-   h2 Number of followers
+          //-   img.demo(src="https://old.tweetometro.co/img/num_followers_May_25_2014.png")
+
+          //- section
+          //-   span.
+          //-     <script type="text/javascript" src="https://public.tableau.com/javascripts/api/viz_v1.js"></script><div class="tableauPlaceholder" style="width: 1032px; height: 677px;"><noscript><a href="https:&#47;&#47;tweetometro.co&#47;robots_May25.html"><img alt="Análisis Elecciones Presidenciales Colombia " src="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;An&#47;AnlisisPosiblesRobotsEleccionesColombiaMay25&#47;AnlisisEleccionesPresidencialesColombia&#47;1_rss.png" style="border: none" /></a></noscript><object class="tableauViz" width="1032" height="677" style="display:none;"><param name="host_url" value="http%3A%2F%2Fpublic.tableau.com%2F" /> <param name="site_root" value=" /><param name="name" value="AnlisisPosiblesRobotsEleccionesColombiaMay25&#47;AnlisisEleccionesPresidencialesColombia" /><param name="tabs" value="no" /><param name="toolbar" value="yes" /><param name="static_image" value="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;An&#47;AnlisisPosiblesRobotsEleccionesColombiaMay25&#47;AnlisisEleccionesPresidencialesColombia&#47;1.png" /> <param name="animate_transition" value="yes" /><param name="display_static_image" value="yes" /><param name="display_spinner" value="yes" /><param name="display_overlay" value="yes" /><param name="display_count" value="yes" /></object></div>
 
           section#InsightCars
             h2 What car to buy?
-            p Task: What's the best car to buy?
+            p Task: What"s the best car to buy?
             p User: Me
 
           section
             h2 Normal procedure
             p Ask friends and family
 
-          section#Renault4(data-background="images/renault4.jpg")
+          section#Renault4(data-background="../shared_images/renault4.jpg")
             //- span.
               <a data-flickr-embed="true"  href="https://www.flickr.com/photos/synx508/8083533370/in/photolist-djjdR1-afaxQE-88rrWV-85GG7C-dhdprm-cB1GP1-6T5Y57-bwHLJo-kCowWc-q7ohL2-pZdWRQ-aqbuDd-CwU436-8Eruxo-nzoa7c-BzobPh-ptWmt6-BYoC9H-81RCdE-dPuGGx-q4JtAk-7XXciZ-r1UjFV-iKrUr5-iEmCiG-pcraD8-fNGpSf-fNGpFd-cN7xp-7SC3f9-D3mfHj-dhdpZ8-nzh5GD-85GGwL-5wBWcW-7tCm5D-8RDcp9-7kBmch-afaxQJ-8RA446-9z4AuX-6B9YeE-9ZVygr-7SC3f5-e3sALe-6B5Zon-apFGuQ-a6gMVY-5wVRyj-7pJkMr" title="Renault 4"><img src="https://c3.staticflickr.com/9/8055/8083533370_a0597b2b89_b.jpg" width="1024" height="683" alt="Renault 4"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
 
-          section#Renault4Pimped(data-background="images/renault4_pimped.jpg")
+          section#Renault4Pimped(data-background="../shared_images/renault4_pimped.jpg")
             //- span.
               <a data-flickr-embed="true"  href="https://www.flickr.com/photos/zenzak35/14225528098/" title="Renault 4 JP4"><img src="https://c3.staticflickr.com/4/3909/14225528098_f77d8393ac_b.jpg" width="1024" height="576" alt="Renault 4 JP4"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
 
 
-          section#Renault4Crashed(data-background="images/renault4_crashed.jpg")
+          section#Renault4Crashed(data-background="../shared_images/renault4_crashed.jpg")
             //- span.
               <a data-flickr-embed="true"  href="https://www.flickr.com/photos/95012335@N02/16327150369/in/photolist-qSLUYz-p8zsEJ-fHL1jE-4grA8b-8YBfrt-8mRG7n-49vZ6h-dXiuZG-kseXjY-CpB1rB-kCp4NF-75n5c9-8PiBKZ-5999UC-C5Lz5Y-eBWbNx-eBEvp-fBpDP7-nF4xTQ-8spzYg-a7ovQd-4r1u5g-aPE45k-7R62M3-dZQnYp-djjdR1-afaxQE-88rrWV-85GG7C-dhdprm-cB1GP1-6T5Y57-bwHLJo-kCowWc-q7ohL2-pZdWRQ-aqbuDd-CwU436-8Eruxo-nzoa7c-BzobPh-ptWmt6-BYoC9H-81RCdE-dPuGGx-q4JtAk-7XXciZ-r1UjFV-iKrUr5-iEmCiG" title="Teilgefalteter Renault 4 am Strassenrand"><img src="https://c2.staticflickr.com/8/7437/16327150369_c5a839efab_b.jpg" width="1024" height="681" alt="Teilgefalteter Renault 4 am Strassenrand"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
 
           section
             h2 Problem
-            p That's inferring statistics from a sample n=1
+            p That"s inferring statistics from a sample n=1
 
           section
             h2 Better approach
             p Data based decisions
 
           section
-            img(src="images/tucarro.png")
-            a(href="http://tucarro.com") http://tucarro.com
+            img(src="../shared_images/tucarro.png")
+            a(href="https://tucarro.com") https://tucarro.com
+
+
+          section(data-background-iframe="https://johnguerra.co/viz/carrosUsados/todosPuntos.html")
+          section(data-background-iframe="https://johnguerra.co/viz/carrosUsados/depreciacionMarcas.html")
+          section(data-background-iframe="https://johnguerra.co/viz/carrosUsados/depreciacionesCarros.html")
+
 
           section
-            iframe.blocks(src="http://infovis.co/carrosUsados/todosPuntos.html")
+            h2 Jeep Willys
+            div.flex
+              ul.half.small
+                li Colombia bought many Jeeps after the war
+                li They are the a sort of mountain cab
+                li There is a trend to pimp them up
 
-          section
-            iframe.blocks(src="http://infovis.co/carrosUsados/depreciacionMarcas.html")
+              div.half
+                img(src="../shared_images/Willys_small.jpg" alt="Colombian Jeep Willys. Foto by John Alexis Guerra Gómez")
 
-          section
-            iframe.blocks(src="http://infovis.co/carrosUsados/depreciacionesCarros.html")
+
         //- Problem Abstraction
         section#problemAbstraction
           section
             h2 Problem Abstraction
 
           section
-            h1 What
+            img(src="../shared_images/what_why_how.png")
+          section(data-background-size="contain" data-background="../shared_images/tamara_course14_session1-14.png")
 
-          section
-            h1 Why
+          //- what
+          section(data-background-size="contain" data-background="../shared_images/tamara_course14_session1-15.png")#what
 
-          section
-            h1 How
+
+          //- why
+          section(data-background-size="contain" data-background="../shared_images/tamara_course14_session1-19.png")#why
+          //- how
+          section(data-background-size="contain" data-background="../shared_images/tamara_course14_session1-23.png")#how
+
 
           section
             h2 Abstraction Example
+
+          section
+            h2 SpaceTree
+            iframe.blocks(src="https://www.cs.umd.edu/hcil/spacetree/")
+            a.tiny(href="https://www.cs.umd.edu/hcil/spacetree/") http://www.cs.umd.edu/hcil/spacetree/
+
+          section
+            h2 SpaceTree
+            span.
+              <iframe width="640" height="480" src="https://www.youtube.com/embed/-vXRJ_Ry_yE?rel=0" frameborder="0" allowfullscreen></iframe>
+
+          section
+            h2 TreeJuxtaposer
+            iframe.blocks(src="https://www.cs.ubc.ca/~tmm/papers/tj/")
+            a.tiny(href="https://www.cs.ubc.ca/~tmm/papers/tj/") https://www.cs.ubc.ca/~tmm/papers/tj/
+
+          section
+            h2 TreeJuxtaposer
+            span.
+              <iframe width="640" height="480" src="https://www.youtube.com/embed/GdaPj8a9QEo?rel=0" frameborder="0" allowfullscreen></iframe>
 
         section#practice
           h1 Practice
@@ -695,8 +780,8 @@ html
         //- section
         //-   section
         //-     h3
-        //-       a(href="http://johnguerra.co/classes/visual_analytics_fall_2019/" target="_blank") Syllabus
-        //-     iframe.blocks(src="http://johnguerra.co/classes/visual_analytics_fall_2019/" target="_blank")
+        //-       a(href="https://johnguerra.co/classes/visual_analytics_fall_2019/" target="_blank") Syllabus
+        //-     iframe.blocks(src="https://johnguerra.co/classes/visual_analytics_fall_2019/" target="_blank")
 
         //-   section
         //-     h2 Book
@@ -715,14 +800,14 @@ html
         //-     h2 Readings and participation
         //-     ul
         //-       li Each class has assigned readings
-        //-       li We will play the #[a(href="http://johnguerra.co/viz/lottery/va/") lottery] at the beginning of class
+        //-       li We will play the #[a(href="https://johnguerra.co/viz/lottery/va/") lottery] at the beginning of class
         //-       li I will ask about the readings and what we have learned
 
         //-   section
         //-     h2 Lottery (Grading)
         //-     span
         //-       :markdown-it
-        //-         * -2  Wasn't there when called upon on class
+        //-         * -2  Wasn"t there when called upon on class
         //-         * -1  Answered wrong
         //-         * 0 Regular answer
         //-         * 1 Kind of good answer
@@ -767,11 +852,11 @@ html
         plugins: [ RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight ]
       });
     script.
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      })(window,document,"script","https://www.google-analytics.com/analytics.js","ga");
 
-      ga('create', 'UA-72531610-1', 'auto');
-      ga('send', 'pageview');
+      ga("create", "UA-72531610-1", "auto");
+      ga("send", "pageview");
 
