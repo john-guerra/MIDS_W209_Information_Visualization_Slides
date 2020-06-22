@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200px" height="900px" viewBox="0 0 1200 900" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>React</title>
+    <desc>Created with Sketch.</desc>
+    <g id="React" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-6" transform="translate(89.000000, 375.000000)">
+            <ellipse id="Oval" stroke="#979797" fill="#D8D8D8" cx="76.5" cy="29.5" rx="76.5" ry="29.5"></ellipse>
+            <text id="Node/Java/-Python/Ru" font-family="HelveticaNeue, Helvetica Neue" font-size="16" font-weight="normal" fill="#151515">
+                <tspan x="35.02" y="27">Node/Java/</tspan>
+                <tspan x="24.492" y="45">Python/Ruby/*</tspan>
+            </text>
+        </g>
+        <path id="Path" d="M960.836228,513.027582 L961.163772,513.972418 C796.107727,571.191911 713.5,617.492209 713.5,652.5 C713.5,686.868284 793.440147,714.500375 953.19483,735.007746 L952.63,734.934 L953.132587,730.967929 L961.49604,736.562807 L952.002066,739.896642 L952.502064,735.926951 C792.458965,715.341656 712.5,687.661724 712.5,652.5 C712.5,616.805697 795.225607,570.439328 960.836228,513.027582 L960.836228,513.027582 Z" fill="#979797" fill-rule="nonzero"></path>
+        <g id="Group-6" transform="translate(713.000000, 336.000000)">
+            <ellipse id="Oval" stroke="#979797" fill="#D8D8D8" cx="76.5" cy="29.5" rx="76.5" ry="29.5"></ellipse>
+            <text id="JavaScript-React" font-family="HelveticaNeue, Helvetica Neue" font-size="16" font-weight="normal" fill="#151515">
+                <tspan x="38.572" y="24">JavaScript</tspan>
+                <tspan x="55.612" y="42">React</tspan>
+            </text>
+        </g>
+        <g id="Group-6" transform="translate(670.000000, 616.000000)">
+            <ellipse id="Oval" stroke="#979797" fill="#D8D8D8" cx="76.5" cy="29.5" rx="76.5" ry="29.5"></ellipse>
+            <text id="React-Diff-Engine" font-family="HelveticaNeue, Helvetica Neue" font-size="16" font-weight="normal" fill="#151515">
+                <tspan x="55.612" y="27">React</tspan>
+                <tspan x="37.804" y="45">Diff Engine</tspan>
+            </text>
+        </g>
+        <text font-family="HelveticaNeue, Helvetica Neue" font-size="48" font-weight="normal" fill="#151515">
+            <tspan x="63" y="85">React</tspan>
+        </text>
+        <rect id="Rectangle" stroke="#494949" stroke-width="5" x="665" y="189" width="433" height="648"></rect>
+        <rect id="Rectangle" stroke="#494949" stroke-width="5" x="63" y="189" width="342" height="436"></rect>
+        <g id="Group-8" transform="translate(99.000000, 577.000000)" stroke="#979797">
+            <path d="M61,0.5 L61,142.5" id="Line-5" stroke-linecap="square"></path>
+            <g id="Group-4" transform="translate(0.000000, 142.500000)" fill="#D8D8D8">
+                <path d="M0,17 C0,7.61115925 27.3106303,0 61,0 C94.352476,0 121.45315,7.45969718 121.991828,16.7188739 L122,17 L122,103 L122,103 C122,112.388841 94.6893697,120 61,120 C27.3106303,120 0,112.388841 0,103 L0,17 Z" id="Combined-Shape"></path>
+            </g>
+        </g>
+        <text id="Server-(Apache/Other" font-family="HelveticaNeue-Italic, Helvetica Neue" font-size="16" font-style="italic" font-weight="normal" fill="#151515">
+            <tspan x="63" y="162">Server (Apache/Others) </tspan>
+        </text>
+        <text id="Client-(browser)" font-family="HelveticaNeue-Italic, Helvetica Neue" font-size="16" font-style="italic" font-weight="normal" fill="#151515">
+            <tspan x="986" y="159">Client (browser)</tspan>
+        </text>
+        <g id="Group-2" transform="translate(412.000000, 230.000000)">
+            <path id="Line" d="M24.5,17.5 L24.5,27.5 L246.5,27.5 L246.5,31.5 L24.5,31.5 L24.5,41.5 L0.5,29.5 L24.5,17.5 Z" fill="#373737" fill-rule="nonzero"></path>
+            <path id="Line" d="M228,45 L252,57 L228,69 L228,59 L-1,59 L-1,55 L228,55 L228,45 Z" fill="#373737" fill-rule="nonzero"></path>
+            <text id="GET-/" font-family="HelveticaNeue-Italic, Helvetica Neue" font-size="16" font-style="italic" font-weight="normal" fill="#151515">
+                <tspan x="62" y="15">GET /</tspan>
+            </text>
+        </g>
+        <g id="Group-2" transform="translate(411.000000, 570.000000)">
+            <path id="Line" d="M24.5,17.5 L24.5,27.5 L246.5,27.5 L246.5,31.5 L24.5,31.5 L24.5,41.5 L0.5,29.5 L24.5,17.5 Z" fill="#373737" fill-rule="nonzero"></path>
+            <path id="Line" d="M228,45 L252,57 L228,69 L228,59 L-1,59 L-1,55 L228,55 L228,45 Z" fill="#373737" fill-rule="nonzero"></path>
+            <text id="GET-/data" font-family="HelveticaNeue-Italic, Helvetica Neue" font-size="16" font-style="italic" font-weight="normal" fill="#151515">
+                <tspan x="62" y="15">GET /data</tspan>
+            </text>
+        </g>
+        <g id="Group-2" transform="translate(412.000000, 400.000000)">
+            <path id="Line" d="M24.5,17.5 L24.5,27.5 L246.5,27.5 L246.5,31.5 L24.5,31.5 L24.5,41.5 L0.5,29.5 L24.5,17.5 Z" fill="#373737" fill-rule="nonzero"></path>
+            <path id="Line" d="M228,45 L252,57 L228,69 L228,59 L-1,59 L-1,55 L228,55 L228,45 Z" fill="#373737" fill-rule="nonzero"></path>
+            <text id="GET-/main.js" font-family="HelveticaNeue-Italic, Helvetica Neue" font-size="16" font-style="italic" font-weight="normal" fill="#151515">
+                <tspan x="62" y="15">GET /main.js</tspan>
+            </text>
+        </g>
+        <g id="Group" transform="translate(497.000000, 294.000000)">
+            <g id="File" transform="translate(13.000000, 0.000000)" stroke="#979797">
+                <rect id="Rectangle" fill="#50E3C2" x="0" y="0" width="48" height="63"></rect>
+                <path d="M8.5,9.5 L40.5,9.5" id="Line-2" stroke-linecap="square"></path>
+                <path d="M8.5,24.5 L40.5,24.5" id="Line-2" stroke-linecap="square"></path>
+                <path d="M8.5,39.5 L40.5,39.5" id="Line-2" stroke-linecap="square"></path>
+                <path d="M8.5,54.5 L40.5,54.5" id="Line-2" stroke-linecap="square"></path>
+            </g>
+            <text id="index.html" font-family="HelveticaNeue-Italic, Helvetica Neue" font-size="16" font-style="italic" font-weight="normal" fill="#151515">
+                <tspan x="0.104" y="78">index.html</tspan>
+            </text>
+        </g>
+        <g id="Group-5" transform="translate(99.000000, 197.000000)">
+            <rect id="Rectangle" stroke="#979797" x="0" y="20" width="268" height="119"></rect>
+            <text id="Static" font-family="HelveticaNeue, Helvetica Neue" font-size="14" font-weight="normal" fill="#151515">
+                <tspan x="6" y="13">Static</tspan>
+            </text>
+        </g>
+        <g id="Group" transform="translate(504.000000, 459.000000)">
+            <g id="File" transform="translate(9.000000, 0.000000)" stroke="#979797">
+                <g transform="translate(9.000000, 0.000000)">
+                    <rect id="Rectangle" fill="#F8E71C" x="0" y="0" width="48" height="63"></rect>
+                    <path d="M8.5,9.5 L40.5,9.5" id="Line-2" stroke-linecap="square"></path>
+                    <path d="M8.5,24.5 L40.5,24.5" id="Line-2" stroke-linecap="square"></path>
+                    <path d="M8.5,39.5 L40.5,39.5" id="Line-2" stroke-linecap="square"></path>
+                    <path d="M8.5,54.5 L40.5,54.5" id="Line-2" stroke-linecap="square"></path>
+                </g>
+                <g transform="translate(5.000000, 3.000000)">
+                    <rect id="Rectangle" fill="#F8E71C" x="0" y="0" width="48" height="63"></rect>
+                    <path d="M8.5,9.5 L40.5,9.5" id="Line-2" stroke-linecap="square"></path>
+                    <path d="M8.5,24.5 L40.5,24.5" id="Line-2" stroke-linecap="square"></path>
+                    <path d="M8.5,39.5 L40.5,39.5" id="Line-2" stroke-linecap="square"></path>
+                    <path d="M8.5,54.5 L40.5,54.5" id="Line-2" stroke-linecap="square"></path>
+                </g>
+                <rect id="Rectangle" fill="#F8E71C" x="0" y="8" width="48" height="63"></rect>
+                <path d="M8.5,17.5 L40.5,17.5" id="Line-2" stroke-linecap="square"></path>
+                <path d="M8.5,32.5 L40.5,32.5" id="Line-2" stroke-linecap="square"></path>
+                <path d="M8.5,47.5 L40.5,47.5" id="Line-2" stroke-linecap="square"></path>
+                <path d="M8.5,62.5 L40.5,62.5" id="Line-2" stroke-linecap="square"></path>
+            </g>
+            <text id="bundle.js" font-family="HelveticaNeue-Italic, Helvetica Neue" font-size="16" font-style="italic" font-weight="normal" fill="#151515">
+                <tspan x="0.696" y="86">bundle.js</tspan>
+            </text>
+        </g>
+        <g id="Group" transform="translate(272.000000, 226.000000)">
+            <g id="File" transform="translate(9.000000, 0.000000)" stroke="#979797">
+                <g transform="translate(9.000000, 0.000000)">
+                    <rect id="Rectangle" fill="#F8E71C" x="0" y="0" width="48" height="63"></rect>
+                    <path d="M8.5,9.5 L40.5,9.5" id="Line-2" stroke-linecap="square"></path>
+                    <path d="M8.5,24.5 L40.5,24.5" id="Line-2" stroke-linecap="square"></path>
+                    <path d="M8.5,39.5 L40.5,39.5" id="Line-2" stroke-linecap="square"></path>
+                    <path d="M8.5,54.5 L40.5,54.5" id="Line-2" stroke-linecap="square"></path>
+                </g>
+                <g transform="translate(5.000000, 3.000000)">
+                    <rect id="Rectangle" fill="#F8E71C" x="0" y="0" width="48" height="63"></rect>
+                    <path d="M8.5,9.5 L40.5,9.5" id="Line-2" stroke-linecap="square"></path>
+                    <path d="M8.5,24.5 L40.5,24.5" id="Line-2" stroke-linecap="square"></path>
+                    <path d="M8.5,39.5 L40.5,39.5" id="Line-2" stroke-linecap="square"></path>
+                    <path d="M8.5,54.5 L40.5,54.5" id="Line-2" stroke-linecap="square"></path>
+                </g>
+                <rect id="Rectangle" fill="#F8E71C" x="0" y="8" width="48" height="63"></rect>
+                <path d="M8.5,17.5 L40.5,17.5" id="Line-2" stroke-linecap="square"></path>
+                <path d="M8.5,32.5 L40.5,32.5" id="Line-2" stroke-linecap="square"></path>
+                <path d="M8.5,47.5 L40.5,47.5" id="Line-2" stroke-linecap="square"></path>
+                <path d="M8.5,62.5 L40.5,62.5" id="Line-2" stroke-linecap="square"></path>
+            </g>
+            <text id="bundle.js" font-family="HelveticaNeue-Italic, Helvetica Neue" font-size="16" font-style="italic" font-weight="normal" fill="#151515">
+                <tspan x="0.696" y="86">bundle.js</tspan>
+            </text>
+        </g>
+        <g id="Group" transform="translate(502.000000, 634.000000)">
+            <g id="File" transform="translate(13.000000, 0.000000)" stroke="#979797">
+                <rect id="Rectangle" fill="#E8C6EF" x="0" y="0" width="48" height="63"></rect>
+                <path d="M8.5,9.5 L40.5,9.5" id="Line-2" stroke-linecap="square"></path>
+                <path d="M8.5,24.5 L40.5,24.5" id="Line-2" stroke-linecap="square"></path>
+                <path d="M8.5,39.5 L40.5,39.5" id="Line-2" stroke-linecap="square"></path>
+                <path d="M8.5,54.5 L40.5,54.5" id="Line-2" stroke-linecap="square"></path>
+            </g>
+            <text id="items.json" font-family="HelveticaNeue-Italic, Helvetica Neue" font-size="16" font-style="italic" font-weight="normal" fill="#151515">
+                <tspan x="0.856" y="78">items.json</tspan>
+            </text>
+        </g>
+        <g id="Group" transform="translate(115.000000, 230.000000)">
+            <g id="File" transform="translate(13.000000, 0.000000)" stroke="#979797">
+                <rect id="Rectangle" fill="#E8C6EF" x="0" y="0" width="48" height="63"></rect>
+                <path d="M8.5,9.5 L40.5,9.5" id="Line-2" stroke-linecap="square"></path>
+                <path d="M8.5,24.5 L40.5,24.5" id="Line-2" stroke-linecap="square"></path>
+                <path d="M8.5,39.5 L40.5,39.5" id="Line-2" stroke-linecap="square"></path>
+                <path d="M8.5,54.5 L40.5,54.5" id="Line-2" stroke-linecap="square"></path>
+            </g>
+            <text id="items.json" font-family="HelveticaNeue-Italic, Helvetica Neue" font-size="16" font-style="italic" font-weight="normal" fill="#151515">
+                <tspan x="0.856" y="78">items.json</tspan>
+            </text>
+        </g>
+        <g id="Group-3" transform="translate(961.000000, 213.000000)">
+            <rect id="Rectangle" stroke="#979797" x="0" y="0" width="106" height="115"></rect>
+            <text id="script-src=“bundle.j" font-family="HelveticaNeue-Bold, Helvetica Neue" font-size="6" font-weight="bold" fill="#151515">
+                <tspan x="22" y="57">script src=“bundle.js”</tspan>
+            </text>
+        </g>
+        <g id="Group-3" transform="translate(961.000000, 380.000000)">
+            <rect id="Rectangle" stroke="#979797" x="0" y="0" width="106" height="157"></rect>
+            <text id="Title" font-family="HelveticaNeue-Bold, Helvetica Neue" font-size="16" font-weight="bold" fill="#151515">
+                <tspan x="9" y="25">Title</tspan>
+            </text>
+            <text id="Lorem-ipsum-dolor-si" font-family="HelveticaNeue, Helvetica Neue" font-size="6" font-weight="normal" fill="#151515">
+                <tspan x="9" y="44">Lorem ipsum dolor </tspan>
+                <tspan x="9" y="51">sit amet, </tspan>
+                <tspan x="9" y="58">consectetur </tspan>
+                <tspan x="9" y="65">adipisicing elit. </tspan>
+            </text>
+            <text id="Items" font-family="HelveticaNeue-Bold, Helvetica Neue" font-size="6" font-weight="bold" fill="#151515">
+                <tspan x="9" y="81">Items</tspan>
+            </text>
+            <rect id="Rectangle" fill="#D8D8D8" x="9" y="91" width="88" height="48"></rect>
+        </g>
+        <g id="Group-3" transform="translate(961.000000, 634.000000)">
+            <rect id="Rectangle" stroke="#979797" x="0" y="0" width="106" height="157"></rect>
+            <text id="Title" font-family="HelveticaNeue-Bold, Helvetica Neue" font-size="16" font-weight="bold" fill="#151515">
+                <tspan x="9" y="25">Title</tspan>
+            </text>
+            <text id="Lorem-ipsum-dolor-si" font-family="HelveticaNeue, Helvetica Neue" font-size="6" font-weight="normal" fill="#151515">
+                <tspan x="9" y="44">Lorem ipsum dolor </tspan>
+                <tspan x="9" y="51">sit amet, </tspan>
+                <tspan x="9" y="58">consectetur </tspan>
+                <tspan x="9" y="65">adipisicing elit. </tspan>
+            </text>
+            <text id="Items" font-family="HelveticaNeue-Bold, Helvetica Neue" font-size="6" font-weight="bold" fill="#151515">
+                <tspan x="9" y="81">Items</tspan>
+            </text>
+            <rect id="Rectangle" fill="#D8D8D8" x="9" y="91" width="88" height="48"></rect>
+        </g>
+        <text id="*-Item-1-*-Item-2-*" font-family="HelveticaNeue, Helvetica Neue" font-size="8" font-weight="normal" fill="#151515">
+            <tspan x="970" y="732">* Item 1</tspan>
+            <tspan x="970" y="742">* Item 2</tspan>
+            <tspan x="970" y="752">* Item 3</tspan>
+            <tspan x="970" y="762">* Item 4</tspan>
+            <tspan x="970" y="772"></tspan>
+        </text>
+        <g id="Group-6" transform="translate(686.000000, 387.000000)">
+            <g id="Group-7">
+                <g id="File" fill="#F8E71C" opacity="0.477934338" stroke="#979797">
+                    <rect id="Rectangle" x="0" y="0" width="133" height="126"></rect>
+                </g>
+                <text id="Controllers" font-family="HelveticaNeue-Italic, Helvetica Neue" font-size="16" font-style="italic" font-weight="normal" fill="#151515">
+                    <tspan x="27.692" y="141">Controllers</tspan>
+                </text>
+            </g>
+            <g id="Group-7" transform="translate(94.000000, 0.000000)">
+                <g id="File" fill="#50E3C2" opacity="0.477934338" stroke="#979797">
+                    <rect id="Rectangle" x="0" y="0" width="133" height="126"></rect>
+                </g>
+                <text id="View" font-family="HelveticaNeue-Italic, Helvetica Neue" font-size="16" font-style="italic" font-weight="normal" fill="#151515">
+                    <tspan x="49.612" y="141">View</tspan>
+                </text>
+            </g>
+        </g>
+        <g id="Group-7" transform="translate(99.000000, 423.000000)">
+            <g id="File" fill="#F8E71C" stroke="#979797">
+                <rect id="Rectangle" x="0" y="0" width="133" height="126"></rect>
+            </g>
+            <text id="Models-(optional)" font-family="HelveticaNeue-Italic, Helvetica Neue" font-size="16" font-style="italic" font-weight="normal" fill="#151515">
+                <tspan x="40.284" y="141">Models </tspan>
+                <tspan x="33.756" y="159">(optional)</tspan>
+            </text>
+        </g>
+        <text id="Redraws-Everything!" font-family="HelveticaNeue, Helvetica Neue" font-size="16" font-weight="normal" fill="#151515">
+            <tspan x="920.028" y="581">Redraws Everything!</tspan>
+            <tspan x="955.58" y="599">(Not really)</tspan>
+        </text>
+    </g>
+</svg>

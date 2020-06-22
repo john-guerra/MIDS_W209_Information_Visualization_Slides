@@ -5,8 +5,8 @@ import shutil
 import glob
 
 if len(sys.argv) < 2:
-  print """Usage
-    python filter_unused_images.py folder"""
+  print("""Usage
+    python filter_unused_images.py folder""")
 
   sys.exit(-1)
 
@@ -31,7 +31,7 @@ def moveImages(path, imagesUsed):
   for imagePath in glob.glob(os.path.join("images", "*.*")):
     # print imagePath
     if not imagePath in imagesUsed:
-      print "%s unused, moving it" % imagePath
+      print("%s unused, moving it" % imagePath)
       shutil.move(imagePath, unused_folder)
 
   os.chdir(prev_path)
@@ -40,8 +40,8 @@ def moveImages(path, imagesUsed):
 folder = sys.argv[1]
 
 imagesUsed = getImageList(os.path.join(folder, "index.jade"))
-print "Images found:"
-print imagesUsed
+print("Images found:")
+print(imagesUsed)
 
-print "moving images"
+print("moving images")
 moveImages(folder, imagesUsed)
