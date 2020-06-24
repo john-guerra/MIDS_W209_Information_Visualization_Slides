@@ -56,7 +56,7 @@ html
           section
             h2 What we are going to learn
             ul
-              li Dataviz definition
+              li Infovis definition
               li.fragment Why should we visualize
               li.fragment What are insights
               li.fragment Problem abstraction
@@ -68,7 +68,7 @@ html
             h1 Definitions
 
           section
-            h2 Defining Visualization (vis)
+            h2 Defining Information Visualization (vis)
             p Computer-based visualization systems provide visual representations of datasets
               span.fragment  designed to help people carry out #[strong tasks] more effectively.
             p.fragment Why?
@@ -172,14 +172,13 @@ html
           section
             h1 Visualization Design Space
 
-
           section
             h1 Idioms
             p Distinct approach to creating or manipulating visual representations
 
           section
             h2 Exercise
-            p Let"s find in how many ways we can visualize two numbers 13 and 23
+            p Let's find in how many ways we can visualize two numbers 13 and 23
 
           section
             h2 Idiom design space
@@ -247,7 +246,7 @@ html
         //- Why should we visualize
         section#whyVisualize
           section
-            div The purpose of visualization is #[strong insight], not pictures
+            h3 The purpose of visualization is #[strong insight], not pictures
 
             div.portrait
               a.right(href="https://medium.com/multiple-views-visualization-research-explained/the-purpose-of-visualization-is-insight-not-pictures-an-interview-with-visualization-pioneer-ben-beb15b2d8e9b" target="_blank" rel="noopener noreferrer")
@@ -257,7 +256,7 @@ html
                 div.small Ben Shneiderman
 
           section
-            h2 The purpose of data science is #[strong insight], not (just) models
+            h3 The purpose of data science is #[strong insight], not (just) models
             div.portrait
               a.right
                 img(src="../shared_images/foto_JohnGuerra_2019.jpg" alt="My photo")
@@ -266,7 +265,7 @@ html
 
 
           section
-            h3 Anscombe"s quartet
+            h3 Anscombe's quartet
             span.anscombeTable.
               <table>
               <tbody><tr>
@@ -436,12 +435,12 @@ html
               </tbody></table>
 
           //- section
-          //-   h2 Anscombe"s quartet
+          //-   h2 Anscombe's quartet
           //-   img(src="../shared_images/anscombes2.jpg")
 
 
           section
-            h2 Anscombe"s visualized
+            h2 Anscombe's visualized
             div.
               <div id="observablehq-c877aaaf"></div>
               <script type="module">
@@ -469,23 +468,46 @@ html
         section#visualAnalytics
           section
             h1 Visual Analytics
+            div How do people do data science?
 
-          section
-            h2 How to do data analytics?
-            ul
-              li.fragment Statistical Analysis
-              li.fragment Machine Learning and Artificial Intelligence
-              li.fragment Visual Analytics (and data analytics)
+          section(data-background-image="../shared_images/DS_to_VA_01.svg" alt="Data Science to Visual Analytics" data-background-size="contain")
+            //- h3 Data Mining/Machine Learning
+            //- img(src="../shared_images/machine_learning_diagram.png")
 
-          section
-            h3 Data Mining/Machine Learning
-            p: img(src="../shared_images/machine_learning_diagram.png")
-          section
-            h3 Information Visualization
-            p: img(src="../shared_images/infovis_diagram.png")
-          section
-            h3 Visual Analytics
-            p: img(src="../shared_images/infovis_algorithms_diagram.png")
+          section(data-background-image="../shared_images/DS_to_VA_02.svg" alt="Data Science to Visual Analytics" data-background-size="contain")
+            //- h3 Data Mining/Machine Learning
+            //- img(src="../shared_images/machine_learning_diagram.png")
+
+          section(data-background-image="../shared_images/DS_to_VA_03.svg" alt="Data Science to Visual Analytics" data-background-size="contain")
+            //- h3 Data Mining/Machine Learning
+            //- img(src="../shared_images/machine_learning_diagram.png")
+
+          section(data-background-image="../shared_images/DS_to_VA_04.svg" alt="Data Science to Visual Analytics" data-background-size="contain")
+            //- h3 Data Mining/Machine Learning
+            //- img(src="../shared_images/machine_learning_diagram.png")
+
+          section(data-background-image="../shared_images/DS_to_VA_05.svg" alt="Data Science to Visual Analytics" data-background-size="contain")
+            //- h3 Data Mining/Machine Learning
+            //- img(src="../shared_images/machine_learning_diagram.png")
+
+          section(data-background-image="../shared_images/DS_to_VA_06.svg" alt="Data Science to Visual Analytics" data-background-size="contain")
+
+          //- section
+          //-   h2 How to do data analytics?
+          //-   ul
+          //-     li.fragment Statistical Analysis
+          //-     li.fragment Machine Learning and Artificial Intelligence
+          //-     li.fragment Visual Analytics (and data analytics)
+
+          //- section
+          //-   h3 Data Mining/Machine Learning
+          //-   p: img(src="../shared_images/machine_learning_diagram.png")
+          //- section
+          //-   h3 Information Visualization
+          //-   p: img(src="../shared_images/infovis_diagram.png")
+          //- section
+          //-   h3 Visual Analytics
+          //-   p: img(src="../shared_images/infovis_algorithms_diagram.png")
 
 
           section
@@ -547,27 +569,27 @@ html
           section#insight
             h2 In Infovis we look for insights
             ul
-              li Deep understanding
-              li Meaningful
-              li Non obvious
-              li Actionable
-              li Based on data
+              li.fragment Deep understanding
+              li.fragment Meaningful
+              li.fragment Non obvious
+              li.fragment Actionable
+              li.fragment Based on data
 
           section
             h2 An insight is:
             ul
-              li something that the #[strong user] can learn from the #[strong data] using the #[strong dataviz]
-              li which she didn"t know/expect,
-              li also, is useful/needed for her,
-              li moreover, she didn"t know of it,
-              li and that she can leverage
+              li.fragment Something that the #[strong user] can learn from the #[strong data] using the #[strong infovis]
+              li.fragment Which she didn't know/expect,
+              li.fragment Also, is useful/needed for her,
+              li.fragment Moreover, she didn't know of it,
+              li.fragment And that she can leverage
 
           section
             h1 Insights
 
           //- section#InsightFDA
           //-   h2 FDA
-          //-   p Task: Change in drug"s adverse effects reports
+          //-   p Task: Change in drug's adverse effects reports
           //-   p User: FDA Analysts
 
           //- section
@@ -600,11 +622,11 @@ html
           //- section
           //-   h2 Clustering
           //-   //- img(src="../shared_images/.jpg")
-          //-   iframe.blocks(src="https://cdn.rawgit.com/john-guerra/ecdde32ab4ad91a1a240/raw/2c1a843df8631604a99140ddc9db8ee048624a79/index.html")
+          //-   iframe.r-stretch(src="https://cdn.rawgit.com/john-guerra/ecdde32ab4ad91a1a240/raw/2c1a843df8631604a99140ddc9db8ee048624a79/index.html")
 
           //- section
           //-   h2 Force in a box
-          //-   iframe.blocks(src="https://rawgit.com/john-guerra/14c943d8f198d9f3fef2/raw/669304a9a47d0fb6dfff4060ceba13d35037fffb/index.html")
+          //-   iframe.r-stretch(src="https://rawgit.com/john-guerra/14c943d8f198d9f3fef2/raw/669304a9a47d0fb6dfff4060ceba13d35037fffb/index.html")
 
           //- section
           //-   h2 Overview
@@ -621,7 +643,7 @@ html
           //-   p User: Me
 
           //- section
-          //-   iframe.blocks(src="https://old.tweetometro.co" alt="../shared_images/tweetometro.png")
+          //-   iframe.r-stretch(src="https://old.tweetometro.co" alt="../shared_images/tweetometro.png")
           //-   a(href="https://old.tweetometro.co") https://tweetometro.co
 
           //- section
@@ -646,7 +668,7 @@ html
 
           section#InsightCars
             h2 What car to buy?
-            p Task: What"s the best car to buy?
+            p Task: What's the best car to buy?
             p User: Me
 
           section
@@ -668,7 +690,7 @@ html
 
           section
             h2 Problem
-            p That"s inferring statistics from a sample n=1
+            p That's inferring statistics from a sample n=1
 
           section
             h2 Better approach
@@ -689,7 +711,7 @@ html
             div.flex
               ul.half.small
                 li Colombia bought many Jeeps after the war
-                li They are the a sort of mountain cab
+                li They are the a sort of mountain taxi
                 li There is a trend to pimp them up
 
               div.half
@@ -701,42 +723,69 @@ html
           section
             h2 Problem Abstraction
 
+
           section
-            img(src="../shared_images/what_why_how.png")
-          section(data-background-size="contain" data-background="../shared_images/tamara_course14_session1-14.png")
+
+            h2.demo What/Why/How
+            div.flex
+              div.twothirds.small.line-compressed
+
+                ul
+                  li.fragment #[strong(style="color:#ce4113") What] is visualized?
+                    ul
+                      li #[strong data ] abstraction
+                  li.fragment #[strong(style="color:#e8b32d") Why] is the user looking at it?
+                    ul
+                      li #[strong task ] abstraction
+                  li.fragment #[strong(style="color:#6ada6f") How] is visualized?
+                    ul
+                      li #[strong idiom ] visual encoding and interaction
+                br
+                span.small
+                  div.left-align.fragment Abstract language avoids domain specific pitfals
+                  div.left-align.fragment What/Why/How to navigate systematically the design space
+
+
+              div.third
+                img(style="max-height:300px" src="../shared_images/what_why_how.png")
+
+
 
           //- what
-          section(data-background-size="contain" data-background="../shared_images/tamara_course14_session1-15.png")#what
-
-
+          section(data-background-size="contain" data-background="../shared_images/what_sheet.png")#what
           //- why
-          section(data-background-size="contain" data-background="../shared_images/tamara_course14_session1-19.png")#why
+          section(data-background-size="contain" data-background="../shared_images/why_sheet.png")#why
           //- how
-          section(data-background-size="contain" data-background="../shared_images/tamara_course14_session1-23.png")#how
+          section(data-background-size="contain" data-background="../shared_images/how_sheet.png")#how
 
 
           section
             h2 Abstraction Example
 
           section
-            h2 SpaceTree
-            iframe.blocks(src="https://www.cs.umd.edu/hcil/spacetree/")
+            h2.demo SpaceTree
+            iframe.r-stretch(src="https://www.cs.umd.edu/hcil/spacetree/")
             a.tiny(href="https://www.cs.umd.edu/hcil/spacetree/") http://www.cs.umd.edu/hcil/spacetree/
 
           section
-            h2 SpaceTree
+            h2.demo SpaceTree
             span.
               <iframe width="640" height="480" src="https://www.youtube.com/embed/-vXRJ_Ry_yE?rel=0" frameborder="0" allowfullscreen></iframe>
 
           section
-            h2 TreeJuxtaposer
-            iframe.blocks(src="https://www.cs.ubc.ca/~tmm/papers/tj/")
+            h2.demo TreeJuxtaposer
+            iframe.r-stretch(src="https://www.cs.ubc.ca/~tmm/papers/tj/")
             a.tiny(href="https://www.cs.ubc.ca/~tmm/papers/tj/") https://www.cs.ubc.ca/~tmm/papers/tj/
 
           section
-            h2 TreeJuxtaposer
+            h2.demo TreeJuxtaposer
             span.
               <iframe width="640" height="480" src="https://www.youtube.com/embed/GdaPj8a9QEo?rel=0" frameborder="0" allowfullscreen></iframe>
+
+          //- Answer
+          section(data-background-size="contain" data-background="../shared_images/tamara_course14_session1-24.png")
+          section(data-background-size="contain" data-background="../shared_images/tamara_course14_session1-25.png")
+          section(data-background-size="contain" data-background="../shared_images/tamara_course14_session1-26.png")
 
         section#practice
           h1 Practice
@@ -744,44 +793,106 @@ html
         section
           section
             h2 The visualization tool space
+            div.tiny Partially based on
+              a(href="https://courses.cs.washington.edu/courses/cse442/17au/lectures/CSE442-Tools.pdf")  slides from Jeff Heer
+
+
+          section(data-transition="none" data-background-size="contain" data-background="../shared_images/Jeff/CSE442-Tools-8.png").full
+            a.page-watermark(href="https://courses.cs.washington.edu/courses/cse442/17au/lectures/CSE442-Tools.pdf") slides from Jeff Heer
+
+          section(data-transition="none" data-background-size="contain" data-background="../shared_images/Jeff/CSE442-Tools-9.png").full
+            a.page-watermark(href="https://courses.cs.washington.edu/courses/cse442/17au/lectures/CSE442-Tools.pdf") slides from Jeff Heer
+
+          section(data-transition="none" data-background-size="contain" data-background="../shared_images/Jeff/CSE442-Tools-19.png").full
+            a.page-watermark(href="https://courses.cs.washington.edu/courses/cse442/17au/lectures/CSE442-Tools.pdf") slides from Jeff Heer
+
+          section(data-transition="none" data-background-size="contain" data-background="../shared_images/Jeff/CSE442-Tools-27.png").full
+            a.page-watermark(href="https://courses.cs.washington.edu/courses/cse442/17au/lectures/CSE442-Tools.pdf") slides from Jeff Heer
+
+          section(data-transition="none" data-background-size="contain" data-background="../shared_images/Jeff/CSE442-Tools-34.png").full
+            a.page-watermark(href="https://courses.cs.washington.edu/courses/cse442/17au/lectures/CSE442-Tools.pdf") slides from Jeff Heer
+
+          section(data-transition="none" data-background-size="contain" data-background="../shared_images/Jeff/CSE442-Tools-36.png").full
+            a.page-watermark(href="https://courses.cs.washington.edu/courses/cse442/17au/lectures/CSE442-Tools.pdf") slides from Jeff Heer
+
+          section(data-transition="none" data-background-size="contain" data-background="../shared_images/Jeff/CSE442-Tools-37.png").full
+            a.page-watermark(href="https://courses.cs.washington.edu/courses/cse442/17au/lectures/CSE442-Tools.pdf") slides from Jeff Heer
+
           section
-            h2 Interview Jeff/Mike
+            h2 Interview Jeffrey Heer
 
         section#webDevBasics
           section
             h1 Web Development Basics
+            a.tiny(href="https://observablehq.com/@observablehq/introduction-to-html") https://observablehq.com/@observablehq/introduction-to-html
 
           section#observable
             h1 Intro to Observable
+            ul
+              li
+                a.tiny(href="https://observablehq.com/@observablehq/five-minute-introduction") https://observablehq.com/@observablehq/five-minute-introduction
+              li
+                a.tiny(href="https://observablehq.com/@observablehq/observables-not-javascript") https://observablehq.com/@observablehq/observables-not-javascript
+              li
+                a.tiny(href="https://observablehq.com/@observablehq/user-manual") https://observablehq.com/@observablehq/user-manual
+
+
+        section
+          h2 Choose your tool
+
+          div.flex.bigger
+            strong.quarter.r-frame.fragment D3
+            strong.quarter.r-frame.fragment Vega-lite
+            strong.quarter.r-frame.fragment Altair
+            strong.quarter.r-frame.fragment Tableau
+
 
         section#d3Intro
           section
-            h1 Intro to D3
+            h1.demo Intro to D3
+
+            a.tiny(href="https://observablehq.com/@d3/learn-d3") https://observablehq.com/@d3/learn-d3
+
 
         section#vegaLiteIntro
           section
             h1 Intro to Vega-lite
+            a.tiny(href="https://observablehq.com/@uwdata/introduction-to-vega-lite") https://observablehq.com/@uwdata/introduction-to-vega-lite
+
 
         section#altairIntro
           section
             h1 Intro to Python + Altair
 
+            a.tiny(href="https://altair-viz.github.io/getting_started/overview.html") https://altair-viz.github.io/getting_started/overview.html
+
           section
             h1 Interview Jake VanderPlas Part 1
+
 
         section#tableauIntro
           section
             h1 Intro to Tableau
 
+            a.tiny(href="https://www.tableau.com/learn/get-started/creator") https://www.tableau.com/learn/get-started/creator
+
+
         section
           section
             h1 What we learned
+            ul
+              li Infovis definition
+              li.fragment Why should we visualize
+              li.fragment What are insights
+              li.fragment Problem abstraction
+              li.fragment Visualization tools landscape
+
 
         //- section
         //-   section
         //-     h3
         //-       a(href="https://johnguerra.co/classes/visual_analytics_fall_2019/" target="_blank") Syllabus
-        //-     iframe.blocks(src="https://johnguerra.co/classes/visual_analytics_fall_2019/" target="_blank")
+        //-     iframe.r-stretch(src="https://johnguerra.co/classes/visual_analytics_fall_2019/" target="_blank")
 
         //-   section
         //-     h2 Book
@@ -847,7 +958,7 @@ html
         //- transition: "convex",
 
         //- width: "90%",
-        //- height: 1.0,
+        //- height: "100%",
 
         plugins: [ RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight ]
       });
