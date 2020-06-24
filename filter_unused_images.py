@@ -4,44 +4,70 @@ import re
 import shutil
 import glob
 
-if len(sys.argv) < 2:
+from pathlib import Path
+
+if len(sys.argv) > 2:
   print("""Usage
-    python filter_unused_images.py folder""")
+    python filter_unused_images.py""")
 
   sys.exit(-1)
 
+IMAGES_FOLDER = Path("shared_images").resolve()
+BASE_FOLDER = Path(".").resolve()
 
-
-def getImageList(path):
+def get_image_list():
   images = []
-  for line in open(path).readlines():
-    imagesFound = re.findall("images/.*\.\w*", line)
-    if len(imagesFound) > 0:
-      images.append(imagesFound[0])
+
+  original_path = os.getcwd()
+
+  for path in BASE_FOLDER.rglob("index.jade"):
+    print("scanning ", path,)
+    os.chdir(path.parent)
+
+    for line in open("index.jade").readlines():
+      images_found = re.findall(r'"\.\./shared_images/.*\.\w*"', line)
+      if len(images_found) > 0:
+        images.append(Path(images_found[0].replace('"','')).resolve())
+    print(len(images), " currently")
+
+
+  print("moving to the original path", original_path)
+  os.chdir(original_path)
   return images
 
 
-def moveImages(path, imagesUsed):
-  prev_path = os.getcwd()
-  os.chdir(path)
-  unused_folder = os.path.join("images", "unused_images")
-  if not os.path.exists(unused_folder):
-    os.mkdir(unused_folder)
 
-  for imagePath in glob.glob(os.path.join("images", "*.*")):
-    # print imagePath
-    if not imagePath in imagesUsed:
-      print("%s unused, moving it" % imagePath)
-      shutil.move(imagePath, unused_folder)
+def move_images(images_used):
+  prev_path = os.getcwd()
+  os.chdir(BASE_FOLDER)
+
+
+
+  for image_path in IMAGES_FOLDER.rglob("*"):
+    unused_folder = os.path.join(image_path.parent, "unused_images")
+
+    if not os.path.exists(unused_folder):
+      os.mkdir(unused_folder)
+
+
+    # print(image_path, image_path.is_dir())
+    if image_path.is_dir() or str(image_path) == ".DS_Store" or str(image_path).find("unused_images")!=-1:
+      continue
+
+    if not image_path.resolve() in images_used:
+      print("%s unused, moving it" % image_path)
+      try:
+        shutil.move(str(image_path), unused_folder)
+      except Exception as e:
+        print ("error moving", e)
 
   os.chdir(prev_path)
 
 
-folder = sys.argv[1]
 
-imagesUsed = getImageList(os.path.join(folder, "index.jade"))
+images_used = get_image_list()
 print("Images found:")
-print(imagesUsed)
+print(images_used)
 
 print("moving images")
-moveImages(folder, imagesUsed)
+move_images(images_used)
