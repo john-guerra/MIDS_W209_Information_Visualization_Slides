@@ -455,13 +455,13 @@ html
 
           section
             h3 More examples same stats
-            img.demo(src="../shared_images/datasaurus-dozen.png")
+            img.r-stretch(src="../shared_images/datasaurus-dozen.png")
             div
               a.tiny(href="https://dabblingwithdata.wordpress.com/2017/05/03/the-datasaurus-a-monstrous-anscombe-for-the-21st-century/") https://dabblingwithdata.wordpress.com/2017/05/03/the-datasaurus-a-monstrous-anscombe-for-the-21st-century/
 
           section
             h3 Datasaurus!
-            img.demo(src="../shared_images/datasaurus-main.png")
+            img.r-stretch(src="../shared_images/datasaurus-main.png")
             div
               a.tiny(href="https://dabblingwithdata.wordpress.com/2017/05/03/the-datasaurus-a-monstrous-anscombe-for-the-21st-century/") https://dabblingwithdata.wordpress.com/2017/05/03/the-datasaurus-a-monstrous-anscombe-for-the-21st-century/
 
@@ -584,7 +584,8 @@ html
               li.fragment Moreover, she didn't know of it,
               li.fragment And that she can leverage
 
-          section
+        section#insights
+          section#insightsExample
             h1 Insights
 
           //- section#InsightFDA
@@ -594,10 +595,10 @@ html
 
           //- section
           //-   h2 State of the art
-          //-   img.demo(src="../shared_images/sectorMaps.png")
+          //-   img.r-stretch(src="../shared_images/sectorMaps.png")
 
           //- section
-          //-   img.demo(src="../shared_images/side_by_side_Vasc_sectorMaps.png")
+          //-   img.r-stretch(src="../shared_images/side_by_side_Vasc_sectorMaps.png")
 
           //- section
           //-   img(src="../shared_images/skylines_explanation.png")
@@ -616,7 +617,7 @@ html
           //-   p User: Undisclosed Analysts
 
           //- section
-          //-   img.demo(src="../shared_images/network_explorer_before.png")
+          //-   img.r-stretch(src="../shared_images/network_explorer_before.png")
 
 
           //- section
@@ -630,46 +631,62 @@ html
 
           //- section
           //-   h2 Overview
-          //-   img.demo(src="../shared_images/overview_10k_nointer_cropped.png")
+          //-   img.r-stretch(src="../shared_images/overview_10k_nointer_cropped.png")
 
           //- section
           //-   h2 Ego distance
-          //-   img.demo(src="../shared_images/network_explorer_ego_distance.png")
+          //-   img.r-stretch(src="../shared_images/network_explorer_ego_distance.png")
 
 
-          //- section#InsightTweetometro
-          //-   h2 Tweetometro
-          //-   p Task: Twitter behavior during Presidential Elections
-          //-   p User: Me
+          section#InsightTweetometro
+            h2 Tweetometro
+            p Task: Twitter behavior during Presidential Elections
+            p User: Me
 
-          //- section
-          //-   iframe.r-stretch(src="https://old.tweetometro.co" alt="../shared_images/tweetometro.png")
-          //-   a(href="https://old.tweetometro.co") https://tweetometro.co
+          section
+            iframe.r-stretch(src="https://old.tweetometro.co" alt="../shared_images/tweetometro.png")
+            a(href="https://old.tweetometro.co") https://tweetometro.co
 
-          //- section
-          //-   h2 Normal tweets
-          //-   img.demo(src="https://old.tweetometro.co/img/all_tweets_May_25_2014.png")
+          section
+            h2 Normal tweets
+            img.r-stretch(src="../shared_images/all_tweets_May_25_2014.png" alt="All tweets collected, line chart of number of retweets by time for the first two hours")
 
-          //- section
-          //-   h2 Weird tweets?
-          //-   img.demo(src="https://old.tweetometro.co/img/suspicious_tweets_May_25_2014.png")
+          section
+            h2 Weird tweets?
+            img.r-stretch(src="../shared_images/suspicious_tweets_May_25_2014.png" alt="Suspicious tweets, that increased to many retweets in one second")
 
-          //- section
-          //-   h2 Creation dates
-          //-   img.demo(src="https://old.tweetometro.co/img/user_creation_date_May_25_2014.png")
+          section
+            h2 Creation dates
+            img.r-stretch(src="../shared_images/user_creation_date_May_25_2014.png" al="User creation dates, most of them belong to the same week")
 
-          //- section
-          //-   h2 Number of followers
-          //-   img.demo(src="https://old.tweetometro.co/img/num_followers_May_25_2014.png")
+          section
+            h2 Number of followers
+            img.r-stretch(src="../shared_images/num_followers_May_25_2014.png" alt="Number of followers")
 
-          //- section
-          //-   span.
-          //-     <script type="text/javascript" src="https://public.tableau.com/javascripts/api/viz_v1.js"></script><div class="tableauPlaceholder" style="width: 1032px; height: 677px;"><noscript><a href="https:&#47;&#47;tweetometro.co&#47;robots_May25.html"><img alt="Análisis Elecciones Presidenciales Colombia " src="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;An&#47;AnlisisPosiblesRobotsEleccionesColombiaMay25&#47;AnlisisEleccionesPresidencialesColombia&#47;1_rss.png" style="border: none" /></a></noscript><object class="tableauViz" width="1032" height="677" style="display:none;"><param name="host_url" value="http%3A%2F%2Fpublic.tableau.com%2F" /> <param name="site_root" value=" /><param name="name" value="AnlisisPosiblesRobotsEleccionesColombiaMay25&#47;AnlisisEleccionesPresidencialesColombia" /><param name="tabs" value="no" /><param name="toolbar" value="yes" /><param name="static_image" value="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;An&#47;AnlisisPosiblesRobotsEleccionesColombiaMay25&#47;AnlisisEleccionesPresidencialesColombia&#47;1.png" /> <param name="animate_transition" value="yes" /><param name="display_static_image" value="yes" /><param name="display_spinner" value="yes" /><param name="display_overlay" value="yes" /><param name="display_count" value="yes" /></object></div>
+          section.full
+            span.r-stretch.
+              <div class='tableauPlaceholder' id='viz1593024408194' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;An&#47;AnlisisPosiblesRobotsEleccionesColombiaMay25&#47;AnlisisEleccionesPresidencialesColombia&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='AnlisisPosiblesRobotsEleccionesColombiaMay25&#47;AnlisisEleccionesPresidencialesColombia' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;An&#47;AnlisisPosiblesRobotsEleccionesColombiaMay25&#47;AnlisisEleccionesPresidencialesColombia&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en' /></object></div>
+              <script type='text/javascript'>
+                var divElement = document.getElementById("viz1593024408194");
+                var vizElement = divElement.getElementsByTagName("object")[0];
+                vizElement.style.minWidth = "960px";
+                vizElement.style.maxWidth = "100%";
+                vizElement.style.minHeight = "587px";
+                vizElement.style.maxHeight = divElement.offsetWidth * 0.75 + "px";
+                var scriptElement = document.createElement("script");
+                scriptElement.src = "https://public.tableau.com/javascripts/api/viz_v1.js";
+                vizElement.parentNode.insertBefore(scriptElement, vizElement);
+
+              </script>
+
+
+            a.tiny(href="https://public.tableau.com/profile/john.alexis.guerra.g.mez#!/vizhome/AnlisisPosiblesRobotsEleccionesColombiaMay25/AnlisisEleccionesPresidencialesColombia") Dashboard link
 
           section#InsightCars
             h2 What car to buy?
+            p User: Person buying a car
             p Task: What's the best car to buy?
-            p User: Me
+            p Data: All cars on sale
 
           section
             h2 Normal procedure
@@ -721,7 +738,7 @@ html
         //- Problem Abstraction
         section#problemAbstraction
           section
-            h2 Problem Abstraction
+            h1 Problem Abstraction
 
 
           section
@@ -782,6 +799,7 @@ html
             span.
               <iframe width="640" height="480" src="https://www.youtube.com/embed/GdaPj8a9QEo?rel=0" frameborder="0" allowfullscreen></iframe>
 
+          //- convert -density 150 -depth 8 -quality 85 ~/Dropbox/documentos/2016/andes/visual_analytics/lectures_tamara/05_rules-artery.pdf ./05_rules-artery.png
           //- Answer
           section(data-background-size="contain" data-background="../shared_images/tamara_course14_session1-24.png")
           section(data-background-size="contain" data-background="../shared_images/tamara_course14_session1-25.png")
@@ -790,7 +808,7 @@ html
         section#practice
           h1 Practice
 
-        section
+        section#vizToolSpace
           section
             h2 The visualization tool space
             div.tiny Partially based on
@@ -837,7 +855,7 @@ html
                 a.tiny(href="https://observablehq.com/@observablehq/user-manual") https://observablehq.com/@observablehq/user-manual
 
 
-        section
+        section#chooseTool
           h2 Choose your tool
 
           div.flex.bigger
@@ -877,7 +895,7 @@ html
             a.tiny(href="https://www.tableau.com/learn/get-started/creator") https://www.tableau.com/learn/get-started/creator
 
 
-        section
+        section#review
           section
             h1 What we learned
             ul
@@ -887,58 +905,6 @@ html
               li.fragment Problem abstraction
               li.fragment Visualization tools landscape
 
-
-        //- section
-        //-   section
-        //-     h3
-        //-       a(href="https://johnguerra.co/classes/visual_analytics_fall_2019/" target="_blank") Syllabus
-        //-     iframe.r-stretch(src="https://johnguerra.co/classes/visual_analytics_fall_2019/" target="_blank")
-
-        //-   section
-        //-     h2 Book
-        //-     p
-        //-       a(href="https://www.crcpress.com/Visualization-Analysis-and-Design/Munzner/p/book/9781466508910") Visualization Analysis and Design, Tamara Munzner
-        //-     img(src="https://images.tandf.co.uk/common/jackets/amazon/978146650/9781466508910.jpg")
-
-        //-   section
-        //-     h2 Projects & Homeworks
-        //-     ul
-        //-       li Homeworks (5)
-        //-       li Individual mid class project
-        //-       li Group final project (3 people), 30% of the grade
-
-        //-   section
-        //-     h2 Readings and participation
-        //-     ul
-        //-       li Each class has assigned readings
-        //-       li We will play the #[a(href="https://johnguerra.co/viz/lottery/va/") lottery] at the beginning of class
-        //-       li I will ask about the readings and what we have learned
-
-        //-   section
-        //-     h2 Lottery (Grading)
-        //-     span
-        //-       :markdown-it
-        //-         * -2  Wasn"t there when called upon on class
-        //-         * -1  Answered wrong
-        //-         * 0 Regular answer
-        //-         * 1 Kind of good answer
-        //-         * 2 Great answer
-
-
-
-
-
-
-
-
-
-
-
-        section
-          section
-            h2 Take home message
-            ul
-              li Visualization: Computer + Visuals + Data + Human + Tasks
 
     script(src="../js/reveal.js")
     script(src="../plugin/zoom/zoom.js")
