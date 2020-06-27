@@ -1,0 +1,110 @@
+[
+  {
+    "price": 21500,
+    "brand": "ford",
+    "model": "f-150",
+    "title_status": "clean vehicle",
+    "mileage": 76876,
+    "color": "gray",
+    "lot": 167783132
+  },
+  {
+    "price": 7500,
+    "brand": "nissan",
+    "model": "door",
+    "title_status": "clean vehicle",
+    "mileage": 58126,
+    "color": "black",
+    "lot": 167598085
+  },
+  {
+    "price": 10700,
+    "brand": "chevrolet",
+    "model": "trax",
+    "title_status": "clean vehicle",
+    "mileage": 44280,
+    "color": "red",
+    "lot": 167792666
+  },
+  {
+    "price": 23100,
+    "brand": "dodge",
+    "model": "charger",
+    "title_status": "clean vehicle",
+    "mileage": 12265,
+    "color": "silver",
+    "lot": 167735423
+  },
+  {
+    "price": 33800,
+    "brand": "dodge",
+    "model": "durango",
+    "title_status": "clean vehicle",
+    "mileage": 15003,
+    "color": "black",
+    "lot": 167734879
+  },
+  {
+    "price": 4140,
+    "brand": "ford",
+    "model": "door",
+    "title_status": "clean vehicle",
+    "mileage": 40747,
+    "color": "white",
+    "lot": 167656519
+  },
+  {
+    "price": 13900,
+    "brand": "nissan",
+    "model": "rogue",
+    "title_status": "clean vehicle",
+    "mileage": 38760,
+    "color": "white",
+    "lot": 167762102
+  },
+  {
+    "price": 15700,
+    "brand": "ford",
+    "model": "cutaway",
+    "title_status": "clean vehicle",
+    "mileage": 75862,
+    "color": "white",
+    "lot": 167780452
+  },
+  {
+    "price": 1150,
+    "brand": "ford",
+    "model": "door",
+    "title_status": "salvage insurance",
+    "mileage": 123349,
+    "color": "red",
+    "lot": 167652717
+  },
+  {
+    "price": 26100,
+    "brand": "ford",
+    "model": "f-150",
+    "title_status": "clean vehicle",
+    "mileage": 32149,
+    "color": "white",
+    "lot": 167741409
+  },
+  {
+    "price": 14000,
+    "brand": "ford",
+    "model": "fusion",
+    "title_status": "clean vehicle",
+    "mileage": 50513,
+    "color": "white",
+    "lot": 167749355
+  },
+  {
+    "price": 22500,
+    "brand": "ford",
+    "model": "door",
+    "title_status": "clean vehicle",
+    "mileage": 43646,
+    "color": "black",
+    "lot": 167780692
+  }
+]
