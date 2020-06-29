@@ -1,19 +1,331 @@
-<!DOCTYPE html><html><head><title>Week 3 Why, abstracting the tasks. MIDS W209 Information Visualization Slides</title><meta charset="utf-8"><meta name="author" content="John Alexis Guerra Gómez"><meta name="description" content="Week 3 Why, abstracting the tasks. MIDS W209 Information Visualization Slides"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fjalla+One|Raleway|PT+Sans+Narrow"><link rel="stylesheet" href="https://use.typekit.net/yjc0afr.css"><link rel="stylesheet" href="../plugin/highlight/monokai.css" id="highlight-theme"><link href="../css/reveal.css" rel="stylesheet"><link href="../css/theme/white.css" rel="stylesheet" id="theme"><link href="../css/style.css" rel="stylesheet"></head><body><div class="reveal"><div class="slides"><section><h1 class="title">Why: abstracting the tasks<br><small>MIDS W209: Information Visualization</small></h1><div class="r-stretch"></div><div class="tiny"><a href="https://johnguerra.co/" target="_blank"><strong> John Alexis Guerra Gómez</strong></a><span> |  john.guerra[at]gmail.com</span><a href="https://twitter.com/duto_guerra"> |  @duto_guerra</a><br><a href="https://johnguerra.co/lectures/MIDS_W209_Information_Visualization/03_Why/" target="_blank">https://johnguerra.co/lectures/MIDS_W209_Information_Visualization/03_Why/</a></div><div class="logo"><a href="https://datascience.berkeley.edu/"><img src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo" class="logo"></a></div><div class="tiny">Partially based on<a href="https://www.cs.ubc.ca/~tmm/talks.html#minicourse14"> slides from Tamara Munzner</a></div></section><section id="outline"><section><h2>What we are going to learn</h2><ul><li></li></ul></section></section><section id="why"><section data-background-size="contain" data-background="../shared_images/why_sheet.png" id="why"></section><section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/tamara_course14_session1-20.png"></section><section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/tamara_course14_session1-21.png"></section><section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/tamara_course14_session1-22.png"></section><section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/tamara_course14_session1-19.png"></section></section><section id="review"><section data-background-size="contain" data-background="../shared_images/why_sheet.png" id="why"></section><section><h1>What we learned</h1><ul><li></li></ul></section></section></div></div><script src="../js/reveal.js"></script><script src="../plugin/zoom/zoom.js"></script><script src="../plugin/notes/notes.js"></script><script src="../plugin/search/search.js"></script><script src="../plugin/markdown/markdown.js"></script><script src="../plugin/highlight/highlight.js"></script><script>Reveal.initialize({
-  controls: true,
-  progress: true,
-  history: true,
-  center: true,
-  hash: true,
-  //- transition: "convex",
-
-  //- width: "90%",
-  //- height: "100%",
-
-  plugins: [ RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight ]
-});</script><script>(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,"script","https://www.google-analytics.com/analytics.js","ga");
-
-ga("create", "UA-72531610-1", "auto");
-ga("send", "pageview");</script></body></html>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Week 3 Why, abstracting the tasks. MIDS W209 Information Visualization Slides</title>
+    <meta charset="utf-8">
+    <meta name="author" content="John Alexis Guerra Gómez">
+    <meta name="description" content="Week 3 Why, abstracting the tasks. MIDS W209 Information Visualization Slides">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fjalla+One|Raleway|PT+Sans+Narrow">
+    <link rel="stylesheet" href="https://use.typekit.net/yjc0afr.css">
+    <link rel="stylesheet" href="../plugin/highlight/monokai.css" id="highlight-theme">
+    <link href="../css/reveal.css" rel="stylesheet">
+    <link href="../css/theme/white.css" rel="stylesheet" id="theme">
+    <link href="../css/style.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h1 class="title">Why: abstracting the tasks<br><small>MIDS W209: Information Visualization</small></h1>
+          <div class="r-stretch"></div>
+          <div class="tiny"><a href="https://johnguerra.co/" target="_blank"><strong> John Alexis Guerra Gómez</strong></a><span> |  john.guerra[at]gmail.com</span><a href="https://twitter.com/duto_guerra"> |  @duto_guerra</a><br><a href="https://johnguerra.co/lectures/MIDS_W209_Information_Visualization/03_Why/" target="_blank">https://johnguerra.co/lectures/MIDS_W209_Information_Visualization/03_Why/</a></div>
+          <div class="logo"><a href="https://datascience.berkeley.edu/"><img class="logo" src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo"></a></div>
+          <div class="tiny">Partially based on<a href="https://www.cs.ubc.ca/~tmm/talks.html#minicourse14"> slides from Tamara Munzner</a></div>
+        </section>
+        <section id="outline">
+          <section>
+            <h2>What we are going to learn</h2>
+            <ul>
+              <li>Abstracting the tasks (Why)</li>
+              <li class="fragment">Actions</li>
+              <li class="fragment">Targets</li>
+              <li class="fragment">Deriving new data</li>
+              <li class="fragment">Intro to the How</li>
+            </ul>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h1>Abstracting the tasks (Why)</h1>
+          </section>
+          <section data-background-size="contain" data-background="../shared_images/why_sheet.png" id="why"></section>
+          <section>
+            <h2>Why analyze tasks</h2>
+            <ul>
+              <li>Abstract tasks are domain independent</li>
+              <li class="fragment">2 different domain problems<span class="fragment"> 👉  same task abstraction<span class="fragment"> 👉  same solution</span></span></li>
+              <li class="fragment">Visualization idioms are good for some tasks and bad for others</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Task construction</h2>
+          </section>
+          <section>
+            <div class="flex">
+              <div class="half">
+                <div class="fragment" data-fragment-index="1">Action (verb)</div><img class="fragment" data-fragment-index="3" src="../shared_images/vad_book_alldiagrams/why_actions.png" alt="Why Actions">
+              </div>
+              <div style="flex=2%">+</div>
+              <div class="half">
+                <div class="fragment" data-fragment-index="2">Target (noun)</div><img class="fragment" data-fragment-index="4" src="../shared_images/vad_book_alldiagrams/why_targets.png" alt="Why Targets">
+              </div>
+            </div>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h1>Actions<br><small>verbs</small></h1>
+          </section>
+          <section>
+            <h2>Actions levels</h2>
+            <div>Three levels:</div>
+            <ul class="line-compressed">
+              <li>Analyze</li>
+              <li class="fragment">Search</li>
+              <li class="fragment">Query</li>
+            </ul>
+            <div class="fragment">Try being specific</div>
+          </section>
+          <section>
+            <h3>Actons: Analize, High-level</h3>
+            <div class="flex">
+              <div class="half">
+                <ul class="small">
+                  <li class="fragment">Consume
+                    <ul>
+                      <li class="fragment">Discover <span class="fragment">vs Present</span></li>
+                      <li class="fragment">Enjoy</li>
+                    </ul>
+                  </li>
+                  <li class="fragment">Produce
+                    <ul>
+                      <li class="fragment">Annotate<span class="fragment">, Record</span></li>
+                      <li class="fragment"><strong>Derive</strong></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              <div class="half vcentered r-stretch"><img src="../shared_images/vad_book_alldiagrams/why_actions_analyze.png" alt="Why Actions: Analyze"></div>
+            </div>
+          </section>
+          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/tamara_course14_session1-21.png"></section>
+          <section class="full">
+            <h3>Actions: Search, Mid-level</h3>
+            <div class="flex">
+              <div class="half vcentered"><img src="../shared_images/vad_book_alldiagrams/why_actions_search.png" alt="Why Actions: search"></div>
+              <div class="half">
+                <ul class="small">
+                  <li class="fragment"><strong>Target</strong>
+                    <ul>
+                      <li class="fragment">I know what I'm looking for</li>
+                      <li class="fragment">e.g. What's the salary of the <strong>CEO</strong>. <span class="fragment">👆 Target known</span></li>
+                      <li class="fragment">e.g. Who has the highest the salary. <span class="fragment">👆 Target unknown</span></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
+          <section class="full">
+            <h3>Actions: Search, Mid-level</h3>
+            <div class="flex">
+              <div class="half vcentered"><img src="../shared_images/vad_book_alldiagrams/why_actions_search.png" alt="Why Actions: search"></div>
+              <div class="half">
+                <ul class="small">
+                  <li class="fragment"><strong>Location</strong>
+                    <ul>
+                      <li class="fragment">I know where the mark is going to be located in the chart</li>
+                      <li class="fragment">Scales alphabetically ordered</li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
+          <section>
+            <h3>Actions: Query, Low-level</h3>
+            <div class="flex">
+              <div class="half">
+                <ul class="small">
+                  <li></li>
+                </ul>
+              </div>
+              <div class="half vcentered"><img class="fragment" data-fragment-index="3" src="../shared_images/vad_book_alldiagrams/why_actions_query.png" alt="Why Actions: query"></div>
+            </div>
+          </section>
+          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/tamara_course14_session1-19.png"></section>
+        </section>
+        <section>
+          <section class="full"><img style="max-height:'600px'" src="../shared_images/vad_book_alldiagrams/why_targets.png" alt="Why Targets"></section>
+          <section>
+            <h3>Targets: Trends, outliers, features</h3>
+            <div class="flex">
+              <div class="half">
+                <ul class="small">
+                  <li>Trends</li>
+                  <li>Outliers</li>
+                  <li>Features</li>
+                </ul>
+              </div>
+              <div class="half vcentered r-stretch"><img src="../shared_images/vad_book_alldiagrams/why_targets_all_data.png" alt="Why Targets: All data"></div>
+            </div>
+          </section>
+          <section>
+            <h3>Targets: Distributions, Extremes</h3>
+            <div class="flex">
+              <div class="half vcentered r-stretch"><img src="../shared_images/vad_book_alldiagrams/why_targets_attributes.png" alt="Why Targets: Attributes"></div>
+              <div class="half">
+                <ul class="small">
+                  <li>Distribution</li>
+                  <li>Extremes</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+          <section>
+            <h3>Targets: Dependency, Correlation, Similarity</h3>
+            <div class="flex">
+              <div class="half vcentered r-stretch"><img src="../shared_images/vad_book_alldiagrams/why_targets_attributes.png" alt="Why Targets: Attributes"></div>
+              <div class="half">
+                <ul class="small">
+                  <li>Dependency</li>
+                  <li>Correlation</li>
+                  <li>Similarity</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+          <section>
+            <h3>Targets: Topology + Shape</h3>
+            <div class="flex">
+              <div class="half">
+                <ul class="small">
+                  <li>Topology</li>
+                  <li>Paths</li>
+                </ul>
+              </div>
+              <div class="half vcentered r-stretch"><img src="../shared_images/vad_book_alldiagrams/why_targets_networks.png" alt="Why Targets: Networks"></div>
+            </div>
+          </section>
+          <section>
+            <h3>Targets: Spatial data</h3>
+            <div class="flex">
+              <div class="half vcentered r-stretch"><img src="../shared_images/vad_book_alldiagrams/why_targets_spatial_data.png" alt="Why Targets: Networks"></div>
+              <div class="half">
+                <ul class="small">
+                  <li>Topology</li>
+                  <li>Paths</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h2>Good practices</h2>
+            <div class="flex small">
+              <div class="half">
+                <ul>
+                  <li>Be specific</li>
+                  <li class="fragment">Is your task measurable?</li>
+                  <li class="fragment">Number your tasks</li>
+                  <li class="fragment">Use Tamara's grammar</li>
+                  <li class="fragment">Describe specific attributes used</li>
+                  <li class="fragment">Don't think about the visuals</li>
+                </ul>
+              </div>
+              <div class="half small">
+                <ul>
+                  <li class="fragment">T1 <strong>Summarize</strong> the stock market prices for the SP/500 companies (Summarize, Distribution)</li>
+                  <li class="fragment">T2 <strong>Identify</strong> the most profitable books for the last year (Identify, Features)</li>
+                  <li class="fragment">T3 <strong>Compare</strong> the <strong>trends</strong> of COVID19 deaths in the world (Compare, Trend)</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h1>Deriving new data</h1>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h1>Intro to the How</h1>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h1>Practice</h1>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h1>Rendering</h1>
+          </section>
+          <section>
+            <h2>SVG</h2>
+          </section>
+          <section>
+            <h2>Canvas</h2>
+          </section>
+          <section>
+            <h2>WebGL?</h2>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h1>Setting up D3</h1>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h1>Setting up Altair</h1>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h1>Setting up Vega-lite</h1>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h1>Setting up Tableau</h1>
+          </section>
+        </section>
+        <section id="review">
+          <section data-background-size="contain" data-background="../shared_images/why_sheet.png" id="why"></section>
+          <section>
+            <h1>What we learned</h1>
+            <ul>
+              <li></li>
+            </ul>
+          </section>
+        </section>
+      </div>
+    </div>
+    <script src="../js/reveal.js"></script>
+    <script src="../plugin/zoom/zoom.js"></script>
+    <script src="../plugin/notes/notes.js"></script>
+    <script src="../plugin/search/search.js"></script>
+    <script src="../plugin/markdown/markdown.js"></script>
+    <script src="../plugin/highlight/highlight.js"></script>
+    <script>
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        hash: true,
+        //- transition: "convex",
+      
+        //- width: "90%",
+        //- height: "100%",
+      
+        plugins: [ RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight ]
+      });
+    </script>
+    <script>
+      (function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,"script","https://www.google-analytics.com/analytics.js","ga");
+      
+      ga("create", "UA-72531610-1", "auto");
+      ga("send", "pageview");
+    </script>
+  </body>
+</html>
