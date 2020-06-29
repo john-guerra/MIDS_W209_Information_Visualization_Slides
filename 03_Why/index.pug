@@ -53,15 +53,252 @@ html
           section
             h2 What we are going to learn
             ul
-              li
+              li Abstracting the tasks (Why)
+              li.fragment Actions
+              li.fragment Targets
+              li.fragment Deriving new data
+              li.fragment Intro to the How
 
-        section#why
+
+
+
+        section
+          section
+            h1 Abstracting the tasks (Why)
+
           section(data-background-size="contain" data-background="../shared_images/why_sheet.png")#why
 
-          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/tamara_course14_session1-20.png")
+
+          section
+            h2 Why analyze tasks
+            ul
+              li Abstract tasks are domain independent
+              li.fragment 2 different domain problems
+                span.fragment  👉  same task abstraction
+                  span.fragment  👉  same solution
+              li.fragment Visualization idioms are good for some tasks and bad for others
+
+          section
+            h2 Task construction
+
+          section
+            div.flex
+              div.half
+                div.fragment(data-fragment-index=1) Action (verb)
+                img.fragment(data-fragment-index=3, src="../shared_images/vad_book_alldiagrams/why_actions.png", alt="Why Actions")
+
+              div(style="flex=2%") +
+              div.half
+                div.fragment(data-fragment-index=2) Target (noun)
+                img.fragment(data-fragment-index=4, src="../shared_images/vad_book_alldiagrams/why_targets.png", alt="Why Targets")
+
+
+        section
+          section
+            h1 Actions
+              br
+              small verbs
+
+          section
+            h2 Actions levels
+            div Three levels:
+            ul.line-compressed
+              li Analyze
+              li.fragment Search
+              li.fragment Query
+            div.fragment Try being specific
+
+          section
+            h3 Actons: Analize, High-level
+
+            div.flex
+              div.half
+                ul.small
+                  li.fragment Consume
+                    ul
+                      li.fragment Discover #[span.fragment vs Present]
+                      li.fragment Enjoy
+                  li.fragment Produce
+
+                    ul
+                      li.fragment Annotate#[span.fragment , Record]
+                      li.fragment #[strong Derive]
+
+
+              div.half.vcentered.r-stretch
+                img(src="../shared_images/vad_book_alldiagrams/why_actions_analyze.png", alt="Why Actions: Analyze")
+
+
+
+          //- section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/tamara_course14_session1-20.png")
+
           section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/tamara_course14_session1-21.png")
-          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/tamara_course14_session1-22.png")
+
+          section.full
+            h3 Actions: Search, Mid-level
+            div.flex
+              div.half.vcentered
+                img(src="../shared_images/vad_book_alldiagrams/why_actions_search.png", alt="Why Actions: search")
+
+              div.half
+                ul.small
+                  li.fragment #[strong Target]
+                    ul
+                      li.fragment I know what I'm looking for
+                      li.fragment e.g. What's the salary of the #[strong CEO]. #[span.fragment 👆 Target known]
+                      li.fragment e.g. Who has the highest the salary. #[span.fragment 👆 Target unknown]
+
+          section.full
+            h3 Actions: Search, Mid-level
+            div.flex
+              div.half.vcentered
+                img(src="../shared_images/vad_book_alldiagrams/why_actions_search.png", alt="Why Actions: search")
+
+              div.half
+                ul.small
+                  li.fragment #[strong Location]
+                    ul
+                      li.fragment I know where the mark is going to be located in the chart
+                      li.fragment Scales alphabetically ordered
+
+
+
+          //- section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/tamara_course14_session1-22.png")
+          section
+            h3 Actions: Query, Low-level
+
+            div.flex
+              div.half
+                ul.small
+                  li
+
+              div.half.vcentered
+                img.fragment(data-fragment-index=3, src="../shared_images/vad_book_alldiagrams/why_actions_query.png", alt="Why Actions: query")
+
+
           section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/tamara_course14_session1-19.png")
+
+
+        section
+          section.full
+            //- h2.small Targets
+            img(style="max-height:'600px'", src="../shared_images/vad_book_alldiagrams/why_targets.png", alt="Why Targets")
+
+          section
+            h3 Targets: Trends, outliers, features
+
+            div.flex
+              div.half
+                ul.small
+                  li Trends
+                  li Outliers
+                  li Features
+
+              div.half.vcentered.r-stretch
+                img( src="../shared_images/vad_book_alldiagrams/why_targets_all_data.png", alt="Why Targets: All data")
+
+
+          section
+            h3 Targets: Distributions, Extremes
+            div.flex
+              div.half.vcentered.r-stretch
+                img( src="../shared_images/vad_book_alldiagrams/why_targets_attributes.png", alt="Why Targets: Attributes")
+
+              div.half
+                ul.small
+                  li Distribution
+                  li Extremes
+
+          section
+            h3 Targets: Dependency, Correlation, Similarity
+            div.flex
+              div.half.vcentered.r-stretch
+                img( src="../shared_images/vad_book_alldiagrams/why_targets_attributes.png", alt="Why Targets: Attributes")
+
+              div.half
+                ul.small
+                  li Dependency
+                  li Correlation
+                  li Similarity
+
+          section
+            h3 Targets: Topology + Shape
+            div.flex
+              div.half
+                ul.small
+                  li Topology
+                  li Paths
+
+              div.half.vcentered.r-stretch
+                img( src="../shared_images/vad_book_alldiagrams/why_targets_networks.png", alt="Why Targets: Networks")
+
+          section
+            h3 Targets: Spatial data
+            div.flex
+              div.half.vcentered.r-stretch
+                img( src="../shared_images/vad_book_alldiagrams/why_targets_spatial_data.png", alt="Why Targets: Networks")
+
+              div.half
+                ul.small
+                  li Topology
+                  li Paths
+
+        section
+          section
+            h2 Good practices
+            div.flex.small
+              div.half
+                ul
+                  li Be specific
+                  li.fragment Is your task measurable?
+                  li.fragment Number your tasks
+                  li.fragment Use Tamara's grammar
+                  li.fragment Describe specific attributes used
+                  li.fragment Don't think about the visuals
+
+              div.half.small
+                ul
+                  li.fragment T1 #[strong Summarize] the stock market prices for the SP/500 companies (Summarize, Distribution)
+                  li.fragment T2 #[strong Identify] the most profitable books for the last year (Identify, Features)
+                  li.fragment T3 #[strong Compare] the #[strong trends] of COVID19 deaths in the world (Compare, Trend)
+        section
+          section
+            h1 Deriving new data
+        section
+          section
+            h1 Intro to the How
+
+        section
+          section
+            h1 Practice
+
+        section
+          section
+            h1 Rendering
+          section
+            h2 SVG
+          section
+            h2 Canvas
+          section
+            h2 WebGL?
+
+
+        section
+          section
+            h1 Setting up D3
+        section
+          section
+            h1 Setting up Altair
+        section
+          section
+            h1 Setting up Vega-lite
+        section
+          section
+            h1 Setting up Tableau
+
+
+
+
 
 
 
