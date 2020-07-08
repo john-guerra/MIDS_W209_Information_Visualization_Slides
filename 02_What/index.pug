@@ -1,0 +1,401 @@
+doctype html
+html
+  head
+    title Week 2 What, abstracting the data. MIDS W209 Information Visualization Slides
+    meta(charset="utf-8")
+    meta(name="author", content="John Alexis Guerra Gómez")
+    meta(name="description", content="Week 2 What, abstracting the data. MIDS W209 Information Visualization Slides")
+
+    meta(name="apple-mobile-web-app-capable" content="yes")
+    meta(name="apple-mobile-web-app-status-bar-style" content="black-translucent")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+
+    link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Fjalla+One|Raleway|PT+Sans+Narrow")
+
+    //- Adobe fonts
+    link(rel="stylesheet" href="https://use.typekit.net/yjc0afr.css")
+
+    //- <!-- Theme used for syntax highlighting of code -->
+    link(rel="stylesheet" href="../plugin/highlight/monokai.css" id="highlight-theme")
+
+
+    link(href="../css/reveal.css", rel="stylesheet")
+    link(href="../css/theme/white.css", rel="stylesheet", id="theme")
+    link(href="../css/style.css", rel="stylesheet")
+
+
+  body
+    .reveal
+      .slides
+        section
+          h1.title What: abstracting the data
+            br
+            small MIDS W209: Information Visualization
+
+          div.r-stretch
+
+          div.tiny
+            a(href="https://johnguerra.co/", target="_blank") #[strong  John Alexis Guerra Gómez]
+            span  |  john.guerra[at]gmail.com
+            a(href="https://twitter.com/duto_guerra")  |  @duto_guerra
+            br
+
+            a(href="https://johnguerra.co/lectures/MIDS_W209_Information_Visualization/02_What/", target="_blank") https://johnguerra.co/lectures/MIDS_W209_Information_Visualization/02_What/
+
+          div.logo
+            a(href="https://datascience.berkeley.edu/")
+              img.logo(src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo")
+          div.tiny Partially based on
+            a(href="https://www.cs.ubc.ca/~tmm/talks.html#minicourse14")  slides from Tamara Munzner
+
+        //- Outline
+        section#outline
+          section
+            h2 What we are going to learn
+            ul
+              li Abstracting the data
+              li.fragment Types of Datasets
+              li.fragment Types of Attributes
+              li.fragment Sequential, Diverging Cyclical
+              li.fragment Data Aggregation (temporal and geo)
+              li.fragment Deriving new data
+
+        section
+          section
+            h1 Abstracting the data
+
+          section(data-background-size="contain" data-background="../shared_images/what_sheet.png" alt="What: data abstraction summary sheet")#what
+
+          section
+            h2 Why abstract the data
+            ul
+              li Different attributes types 👉 different representations
+              li.fragment Different dataset types 👉 different idioms available
+
+          section
+            h2 What you need to abstract?
+            div.flex
+              div.half
+                //- img(src="../shared_images/what_sheet.png" alt="What: data abstraction summary sheet")
+
+                span.
+                  <svg width="100%" height="100%" viewBox="0 0 2146 1498" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+                      <!-- Generator: Sketch 62 (91390) - https://sketch.com -->
+                      <title>What_highlighted</title>
+                      <desc>Created with Sketch.</desc>
+                      <image href="../shared_images/what_sheet.png" width="100%" height="100%"/>
+                      <g class="What_highlighted" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+
+                          <path d="M622,644 L1663,644 L1663,1204 L1106.86647,1204 L1106.86647,1481 L619.745819,1481 L622,644 Z" class="fragment" stroke="#F5A623" stroke-width="10" stroke-dasharray="8,10" data-fragment-index="1"></path>
+                          <path d="M1682,137 L2086,137 L2086,644 L1682,644 L1682,137 Z" class="fragment" stroke="#F5A623" stroke-width="10" stroke-dasharray="8,10" data-fragment-index="2"></path>
+                          <path d="M1682,662 L2086,662 L2086,1169 L1682,1169 L1682,662 Z" class="fragment" stroke="#F5A623" stroke-width="10" stroke-dasharray="8,10" data-fragment-index="3"></path>
+                          <path d="M1197,1233 L1957,1233 L1957,1481 L1197,1481 L1197,1233 Z" class="fragment" stroke="#F5A623" stroke-width="10" stroke-dasharray="8,10" data-fragment-index="4"></path>
+                      </g>
+                  </svg>
+
+              div.half
+                ul.tiny
+                  li.fragment(data-fragment-index="1") #[strong Dataset type]: (e.g. Table, Network, Temporal, ...)
+                  li.fragment(data-fragment-index="2") #[strong Attribute types]: (e.g. Categorical, Ordinal, Quantitative)
+                  li.fragment(data-fragment-index="3") #[strong Ordering Direction]: (e.g. Sequential, Diverging, Cyclical)
+                  li.fragment(data-fragment-index="4") #[strong Data availability]: (e.g. Dynamic, static)
+
+        section#datasets
+          section
+            h1 Types of Datasets
+
+          section
+            img(src="../shared_images/vad_book_alldiagrams/dataset_types.png" alt="Dataset Types: tables, network/trees fields geometry")
+            div
+              strong.fragment + Temporal!
+
+          section
+            h2 Tables
+            div.flex.small
+              div.half
+                ul
+                  li The vast majority of datasets
+                  li.fragment Attributes (columns) + Items (rows)
+                  li.fragment Other dataset types are usually stored as a combination of tables
+
+              div.half.tiny.vcentered
+                span.tiny
+                  include ../shared_markup/table_example.html
+                div.reference
+                  a(href="https://www.kaggle.com/doaaalsenani/usa-cers-dataset") Sample data from Kaggle's US Cars dataset
+
+          section.full
+            h2 File formats
+            div.flex.tiny
+              div.half.tiny
+                h3 Comma Separated File (CSV)
+                pre.small
+                  code
+                    include ../shared_markup/USA_cars_datasets_sample.csv
+
+              div.half.tiny
+                h3 JSON
+                pre.small
+                  code
+                    include ../shared_markup/USA_cars_datasets_sample.json
+
+          section
+            h2 Temporal
+            ul
+              li Tabular + time-related attribute
+              li.fragment Aggregations
+              li.fragment Cyclical
+              li.fragment Events or Intervals
+              li.fragment Seasonality Patterns
+
+          //- TODO Temporal data examples
+
+          section
+            h2 Networks
+            ul
+              li Nodes + Links
+              li.fragment Attributes on both
+              li.fragment Network Idioms
+              li.fragment Network Analytics
+
+
+          //- TODO Network data examples
+
+          section
+            h2 How are network stored?
+            ul
+              li Two files
+              li.fragment JSON file
+              li.fragment Adjacency matrix
+              li.fragment Generated from any data
+
+          section
+            h2 Trees
+            ul
+              li Hierarchical data
+              li.fragment A subset of networks
+              li.fragment Deserves it's own class!
+              li.fragment Tree Idioms
+              li.fragment
+                a(href="https://observablehq.com/@john-guerra/treemap-from-table?collection=@john-guerra/d3-tutorials") Can be created out of tables
+
+
+          //- TODO Tree data examples
+
+          section
+            h2 How are trees stored?
+            ul
+              li Table with path attribute
+              li.fragment JSON file
+              li.fragment Generated from any data
+
+          section
+            h2 Geometry
+            ul
+              li Location data (usually lat/long)
+              li.fragment 2D or 3D
+              li.fragment Inherent shape
+              li.fragment Points, routes, shapes
+
+          section
+            h2 Fields
+            ul
+              li Continuous
+              li.fragment Sampled
+              li.fragment e.g. Brain scan
+
+          section
+            h2 Data availability
+            ul
+              li Static 👉 Data doesn't change
+              li.fragment Dynamic 👉 Data is constantly updating e.g. Stock prices
+              li.fragment For dynamic data you will need a data endpoint
+
+
+
+        section#attributes
+          section
+            h1 Types of Attributes
+
+          section
+            img(src="../shared_images/vad_book_alldiagrams/data_attribute_types.png" alt="Data attribute types: categorical, ordinal and quantitative")
+
+          section
+            h2 Categorical
+            ul
+              li No order
+              li.fragment e.g. Names, Countries, Types
+              li.fragment must be represented with visual channels that don't convey order
+
+          section
+            h2 Ordinal
+            ul
+              li Has implicit order
+              li.fragment but, you can't do arithmetic
+              li.fragment Can even be numerical
+              li.fragment e.g. T-shirt sizes, school years, rankings
+
+          section
+            h2 Quantitative
+            ul
+              li Also ordered
+              li.fragment You can perform arithmetic
+              li.fragment Can be divergent or sequential
+              li.fragment e.g. Age, Temperature, Earnings
+
+
+        section#quantitative
+          section
+            h1 Ordering direction
+
+          section
+            img(src="../shared_images/vad_book_alldiagrams/data_ordering_types.png" alt="Data ordering types: sequential, diverging and Cyclical")
+
+
+          section
+            h2 Sequential
+            ul
+              li The is a full range with a clear minimum
+              li.fragment You can perform arithmetic
+              li.fragment Can be divergent or sequential
+              li.fragment e.g. Age, Goals ⚽️, Price 💰
+
+          section
+            h2 Divergent
+            ul
+              li There is a middle point
+              li.fragment and two opposite directions
+              li.fragment Sometimes the middle point is not zero
+              li.fragment e.g. Temperature, Earnings, Political affiliation index
+
+        section#dataAggregation
+          section
+            h1 Data Aggregation
+
+          section
+            h2 Aggregating Spatial data
+            div e.g. Count votes by:
+            ul
+              li County
+              li.fragment City
+              li.fragment State
+              li.fragment County
+              li.fragment Zipcode? #[span can span multiple counties 🤷]
+              li.fragment Custom areas
+
+          section
+            h2 Aggregating Temporal data
+            div By truncating the date
+            ul
+              li 2020 June 27 5:25PM
+              li.fragment 2020 June 27 5:00PM
+              li.fragment 2020 June 27
+              li.fragment 2020 June
+              li.fragment 2020 Q1
+              li.fragment 2020
+            div.fragment Take a look at the #[a(href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date") Date object]
+
+          section
+            h2 Aggregating Temporal data
+            div By extracting parts of the date
+            ul
+              li 2020 June 27 5:25PM
+              li.fragment Week 26 of the year
+              li.fragment 5 - 6PM
+              li.fragment Saturday
+              li.fragment June
+          //- TODO: Make chart grouping by date
+
+
+        section#practice
+          section
+            h1 Practice
+
+        section#introToJS
+          section
+            h2 Intro to JS
+
+        section#JSONvsCSV
+          section
+            h2 JSON vs CSV
+          div.flex.tiny
+            div.half.tiny
+              h3 Comma Separated File (CSV)
+              pre.small
+                code
+                  include ../shared_markup/USA_cars_datasets_sample.csv
+
+            div.half.tiny
+              h3 JSON
+              pre.small
+                code
+                  include ../shared_markup/USA_cars_datasets_sample.json
+
+            a(href="http://learnjsdata.com/read_data.html") http://learnjsdata.com/read_data.html
+
+        section#ArrayFunctions
+          section
+            h2 Array functions (map, filter, sort)
+            a(href="http://learnjsdata.com/group_data.html") http://learnjsdata.com/group_data.html
+
+        section#nestingJS
+          section
+            h2 Nesting, Folding, Pivoting, etc in JS
+            a(href="http://learnjsdata.com/group_data.html") http://learnjsdata.com/group_data.html
+
+        section#nestingPython
+          section
+            h2 Nesting, Folding, Pivoting, etc in Python
+
+        section#nestingTableau
+          section
+            h2 Nesting, Folding, Pivoting, etc in Tableau?
+
+        section#flask
+          section
+            h2 Serving data from the backend (Intro to Flask)
+
+        section#review
+          section(data-background-size="contain" data-background="../shared_images/what_sheet.png")#what
+
+          section
+            h1 What we learned
+            ul
+              li Abstracting the data
+              li.fragment Types of Datasets
+              li.fragment Types of Attributes
+              li.fragment Sequential, Diverging Cyclical
+              li.fragment Data Aggregation (temporal and geo)
+
+
+    script(src="../js/reveal.js")
+    script(src="../plugin/zoom/zoom.js")
+    script(src="../plugin/notes/notes.js")
+    script(src="../plugin/search/search.js")
+    script(src="../plugin/markdown/markdown.js")
+    script(src="../plugin/highlight/highlight.js")
+
+
+    script.
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        hash: true,
+        //- transition: "convex",
+
+        //- width: "90%",
+        //- height: "100%",
+
+        plugins: [ RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight ]
+      });
+    script.
+      (function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,"script","https://www.google-analytics.com/analytics.js","ga");
+
+      ga("create", "UA-72531610-1", "auto");
+      ga("send", "pageview");

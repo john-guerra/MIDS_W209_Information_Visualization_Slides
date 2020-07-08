@@ -20,11 +20,11 @@ def get_image_list():
 
   original_path = os.getcwd()
 
-  for path in BASE_FOLDER.rglob("index.jade"):
+  for path in BASE_FOLDER.rglob("index.pug"):
     print("scanning ", path,)
     os.chdir(path.parent)
 
-    for line in open("index.jade").readlines():
+    for line in open("index.pug").readlines():
       images_found = re.findall(r'"\.\./shared_images/.*\.\w*"', line)
       if len(images_found) > 0:
         images.append(Path(images_found[0].replace('"','')).resolve())
