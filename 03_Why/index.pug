@@ -54,15 +54,12 @@ html
             h2 What we are going to learn
             ul
               li Abstracting the tasks (Why)
-              li.fragment Actions
-              li.fragment Targets
+              li.fragment Define the verb of the task (Action)
+              li.fragment Define the noun of the task (Targets)
+              li.fragment Tasks good practices
               li.fragment Deriving new data
-              li.fragment Intro to the How
 
-
-
-
-        section
+        section#why
           section
             h1 Abstracting the tasks (Why)
 
@@ -93,7 +90,7 @@ html
                 img.fragment(data-fragment-index=4, src="../shared_images/vad_book_alldiagrams/why_targets.png", alt="Why Targets")
 
 
-        section
+        section#actions
           section
             h1 Actions
               br
@@ -132,7 +129,7 @@ html
 
           //- section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/tamara_course14_session1-20.png")
 
-          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/tamara_course14_session1-21.png")
+          //- section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/tamara_course14_session1-21.png")
 
           section.full
             h3 Actions: Search, Mid-level
@@ -162,24 +159,28 @@ html
                       li.fragment Scales alphabetically ordered
 
 
-
+          //- section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/tamara_course14_session1-20.png")
+          //- section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/tamara_course14_session1-21.png")
           //- section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/tamara_course14_session1-22.png")
-          section
+          section.full
             h3 Actions: Query, Low-level
 
             div.flex
               div.half
+                div.small How much of the data matters?
                 ul.small
-                  li
+                  li.fragment One #[span.fragment 👉 identify]
+                  li.fragment Some #[span.fragment 👉 compare]
+                  li.fragment All #[span.fragment 👉 summarize]
 
               div.half.vcentered
-                img.fragment(data-fragment-index=3, src="../shared_images/vad_book_alldiagrams/why_actions_query.png", alt="Why Actions: query")
+                img(data-fragment-index=3, src="../shared_images/vad_book_alldiagrams/why_actions_query.png", alt="Why Actions: query")
 
 
-          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/tamara_course14_session1-19.png")
+          //- section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/tamara_course14_session1-19.png")
 
 
-        section
+        section#targets
           section.full
             //- h2.small Targets
             img(style="max-height:'600px'", src="../shared_images/vad_book_alldiagrams/why_targets.png", alt="Why Targets")
@@ -190,44 +191,46 @@ html
             div.flex
               div.half
                 ul.small
-                  li Trends
-                  li Outliers
-                  li Features
+                  li Trends (or patterns) #[span.fragment e.g. Are sales increasing?]
+                  li.fragment Outliers #[span.fragment one or some that aren't like the others.]
+                  li.fragment Features #[span.fragment 👉 task dependent e.g. a v-shaped recession.]
 
               div.half.vcentered.r-stretch
                 img( src="../shared_images/vad_book_alldiagrams/why_targets_all_data.png", alt="Why Targets: All data")
 
 
           section
-            h3 Targets: Distributions, Extremes
+            h3 One Attribute: Distributions, Extremes
             div.flex
               div.half.vcentered.r-stretch
-                img( src="../shared_images/vad_book_alldiagrams/why_targets_attributes.png", alt="Why Targets: Attributes")
+                img( src="../shared_images/vad_book_alldiagrams/why_targets_attributes_one.png", alt="Why Targets: Attributes")
 
               div.half
                 ul.small
-                  li Distribution
-                  li Extremes
+                  li Distribution #[span.fragment e.g. GDP distribution across multiple countries]
+                  li Extremes #[span.fragment e.g. Country with highest GDP]
 
           section
-            h3 Targets: Dependency, Correlation, Similarity
+            h3 Many Attributes: Dependency, Correlation, Similarity
             div.flex
+              div.half
+                ul.small
+                  li Dependency #[span.fragment e.g. Do all NBA players attended college?]
+                  li Correlation #[span.fragment e.g. Do higher paying players score more?]
+                  li Similarity #[span.fragment e.g. Do Curry and Hardem shoot the same?]
+
               div.half.vcentered.r-stretch
-                img( src="../shared_images/vad_book_alldiagrams/why_targets_attributes.png", alt="Why Targets: Attributes")
+                img( src="../shared_images/vad_book_alldiagrams/why_targets_attributes_many.png", alt="Why Targets: Attributes")
 
-              div.half
-                ul.small
-                  li Dependency
-                  li Correlation
-                  li Similarity
 
           section
-            h3 Targets: Topology + Shape
+            h3 Networks: Topology + Shape
             div.flex
+
               div.half
                 ul.small
-                  li Topology
-                  li Paths
+                  li Topology #[span.fragment e.g. Do all my classmates follow each other?]
+                  li Paths #[span.fragment e.g. Who do I know on LinkedIN that knows Bill Gates?]
 
               div.half.vcentered.r-stretch
                 img( src="../shared_images/vad_book_alldiagrams/why_targets_networks.png", alt="Why Targets: Networks")
@@ -240,10 +243,9 @@ html
 
               div.half
                 ul.small
-                  li Topology
-                  li Paths
+                  li Shape #[span.fragment e.g. Is there a park within 100ft of every school?]
 
-        section
+        section#goodPractices
           section
             h2 Good practices
             div.flex.small
@@ -261,14 +263,58 @@ html
                   li.fragment T1 #[strong Summarize] the stock market prices for the SP/500 companies (Summarize, Distribution)
                   li.fragment T2 #[strong Identify] the most profitable books for the last year (Identify, Features)
                   li.fragment T3 #[strong Compare] the #[strong trends] of COVID19 deaths in the world (Compare, Trend)
-        section
+
+
+        section#deriving
           section
             h1 Deriving new data
-        section
-          section
-            h1 Intro to the How
 
-        section
+            img(src="../shared_images/vad_book_alldiagrams/why_derive.png", alt="Why: Derive data")
+
+          section
+            strong Task: Summarize the trend of the trade balance (exports - imports)
+            img(src="../shared_images/vad_book_alldiagrams/why_derive_before.png", alt="Derive data before")
+            div.fragment.small Don't make the user compute it in their head
+
+          section
+            strong Task: Summarize the trend of the trade balance (exports - imports)
+            img(src="../shared_images/vad_book_alldiagrams/why_derive_after.png", alt="Derive data after")
+            div Instead display the difference
+
+
+          section
+            h2 When to derive data?
+
+            div.flex
+              ul.half.small
+                li Large data? #[span.fragment 👉 aggregate]
+                li.fragment Complex data? #[span.fragment 👉 simplify]
+                li.fragment Dimensionality Reduction
+                li.fragment Network/Tree Analytics (clusters, centralities)
+                li.fragment Don't make the user think!
+
+              div.half
+                img(src="../shared_images/vad_book_alldiagrams/why_derive.png", alt="Why: Derive data")
+
+
+
+        section#howIntro
+          section
+            img(src="../shared_images/vad_book_alldiagrams/tamara_course14_session1-23.png", alt="How: Abstracting the idiom")
+
+
+        section#whatWeLearned
+          section
+            h1 What we learned
+            ul
+              li Abstracting the tasks (Why)
+              li.fragment Define the verb of the task (Action)
+              li.fragment Define the noun of the task (Targets)
+              li.fragment Tasks good practices
+              li.fragment Deriving new data
+
+
+        section#practice
           section
             h1 Practice
 
@@ -283,32 +329,20 @@ html
             h2 WebGL?
 
 
-        section
+        section#d3
           section
             h1 Setting up D3
-        section
+        section#altair
           section
             h1 Setting up Altair
-        section
+        section#vega-lite
           section
             h1 Setting up Vega-lite
-        section
+        section#tableau
           section
             h1 Setting up Tableau
 
 
-
-
-
-
-
-        section#review
-          section(data-background-size="contain" data-background="../shared_images/why_sheet.png")#why
-
-          section
-            h1 What we learned
-            ul
-              li
 
 
     script(src="../js/reveal.js")

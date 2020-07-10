@@ -30,14 +30,14 @@
             <h2>What we are going to learn</h2>
             <ul>
               <li>Abstracting the tasks (Why)</li>
-              <li class="fragment">Actions</li>
-              <li class="fragment">Targets</li>
+              <li class="fragment">Define the verb of the task (Action)</li>
+              <li class="fragment">Define the noun of the task (Targets)</li>
+              <li class="fragment">Tasks good practices</li>
               <li class="fragment">Deriving new data</li>
-              <li class="fragment">Intro to the How</li>
             </ul>
           </section>
         </section>
-        <section>
+        <section id="why">
           <section>
             <h1>Abstracting the tasks (Why)</h1>
           </section>
@@ -65,7 +65,7 @@
             </div>
           </section>
         </section>
-        <section>
+        <section id="actions">
           <section>
             <h1>Actions<br><small>verbs</small></h1>
           </section>
@@ -101,7 +101,6 @@
               <div class="half vcentered r-stretch"><img src="../shared_images/vad_book_alldiagrams/why_actions_analyze.png" alt="Why Actions: Analyze"></div>
             </div>
           </section>
-          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/tamara_course14_session1-21.png"></section>
           <section class="full">
             <h3>Actions: Search, Mid-level</h3>
             <div class="flex">
@@ -135,66 +134,68 @@
               </div>
             </div>
           </section>
-          <section>
+          <section class="full">
             <h3>Actions: Query, Low-level</h3>
             <div class="flex">
               <div class="half">
+                <div class="small">How much of the data matters?</div>
                 <ul class="small">
-                  <li></li>
+                  <li class="fragment">One <span class="fragment">👉 identify</span></li>
+                  <li class="fragment">Some <span class="fragment">👉 compare</span></li>
+                  <li class="fragment">All <span class="fragment">👉 summarize</span></li>
                 </ul>
               </div>
-              <div class="half vcentered"><img class="fragment" data-fragment-index="3" src="../shared_images/vad_book_alldiagrams/why_actions_query.png" alt="Why Actions: query"></div>
+              <div class="half vcentered"><img data-fragment-index="3" src="../shared_images/vad_book_alldiagrams/why_actions_query.png" alt="Why Actions: query"></div>
             </div>
           </section>
-          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/tamara_course14_session1-19.png"></section>
         </section>
-        <section>
+        <section id="targets">
           <section class="full"><img style="max-height:'600px'" src="../shared_images/vad_book_alldiagrams/why_targets.png" alt="Why Targets"></section>
           <section>
             <h3>Targets: Trends, outliers, features</h3>
             <div class="flex">
               <div class="half">
                 <ul class="small">
-                  <li>Trends</li>
-                  <li>Outliers</li>
-                  <li>Features</li>
+                  <li>Trends (or patterns) <span class="fragment">e.g. Are sales increasing?</span></li>
+                  <li class="fragment">Outliers <span class="fragment">one or some that aren't like the others.</span></li>
+                  <li class="fragment">Features <span class="fragment">👉 task dependent e.g. a v-shaped recession.</span></li>
                 </ul>
               </div>
               <div class="half vcentered r-stretch"><img src="../shared_images/vad_book_alldiagrams/why_targets_all_data.png" alt="Why Targets: All data"></div>
             </div>
           </section>
           <section>
-            <h3>Targets: Distributions, Extremes</h3>
+            <h3>One Attribute: Distributions, Extremes</h3>
             <div class="flex">
-              <div class="half vcentered r-stretch"><img src="../shared_images/vad_book_alldiagrams/why_targets_attributes.png" alt="Why Targets: Attributes"></div>
+              <div class="half vcentered r-stretch"><img src="../shared_images/vad_book_alldiagrams/why_targets_attributes_one.png" alt="Why Targets: Attributes"></div>
               <div class="half">
                 <ul class="small">
-                  <li>Distribution</li>
-                  <li>Extremes</li>
+                  <li>Distribution <span class="fragment">e.g. GDP distribution across multiple countries</span></li>
+                  <li>Extremes <span class="fragment">e.g. Country with highest GDP</span></li>
                 </ul>
               </div>
             </div>
           </section>
           <section>
-            <h3>Targets: Dependency, Correlation, Similarity</h3>
+            <h3>Many Attributes: Dependency, Correlation, Similarity</h3>
             <div class="flex">
-              <div class="half vcentered r-stretch"><img src="../shared_images/vad_book_alldiagrams/why_targets_attributes.png" alt="Why Targets: Attributes"></div>
               <div class="half">
                 <ul class="small">
-                  <li>Dependency</li>
-                  <li>Correlation</li>
-                  <li>Similarity</li>
+                  <li>Dependency <span class="fragment">e.g. Do all NBA players attended college?</span></li>
+                  <li>Correlation <span class="fragment">e.g. Do higher paying players score more?</span></li>
+                  <li>Similarity <span class="fragment">e.g. Do Curry and Hardem shoot the same?</span></li>
                 </ul>
               </div>
+              <div class="half vcentered r-stretch"><img src="../shared_images/vad_book_alldiagrams/why_targets_attributes_many.png" alt="Why Targets: Attributes"></div>
             </div>
           </section>
           <section>
-            <h3>Targets: Topology + Shape</h3>
+            <h3>Networks: Topology + Shape</h3>
             <div class="flex">
               <div class="half">
                 <ul class="small">
-                  <li>Topology</li>
-                  <li>Paths</li>
+                  <li>Topology <span class="fragment">e.g. Do all my classmates follow each other?</span></li>
+                  <li>Paths <span class="fragment">e.g. Who do I know on LinkedIN that knows Bill Gates?</span></li>
                 </ul>
               </div>
               <div class="half vcentered r-stretch"><img src="../shared_images/vad_book_alldiagrams/why_targets_networks.png" alt="Why Targets: Networks"></div>
@@ -206,14 +207,13 @@
               <div class="half vcentered r-stretch"><img src="../shared_images/vad_book_alldiagrams/why_targets_spatial_data.png" alt="Why Targets: Networks"></div>
               <div class="half">
                 <ul class="small">
-                  <li>Topology</li>
-                  <li>Paths</li>
+                  <li>Shape <span class="fragment">e.g. Is there a park within 100ft of every school?</span></li>
                 </ul>
               </div>
             </div>
           </section>
         </section>
-        <section>
+        <section id="goodPractices">
           <section>
             <h2>Good practices</h2>
             <div class="flex small">
@@ -237,17 +237,46 @@
             </div>
           </section>
         </section>
-        <section>
+        <section id="deriving">
           <section>
-            <h1>Deriving new data</h1>
+            <h1>Deriving new data</h1><img src="../shared_images/vad_book_alldiagrams/why_derive.png" alt="Why: Derive data">
+          </section>
+          <section><strong>Task: Summarize the trend of the trade balance (exports - imports)</strong><img src="../shared_images/vad_book_alldiagrams/why_derive_before.png" alt="Derive data before">
+            <div class="fragment small">Don't make the user compute it in their head</div>
+          </section>
+          <section><strong>Task: Summarize the trend of the trade balance (exports - imports)</strong><img src="../shared_images/vad_book_alldiagrams/why_derive_after.png" alt="Derive data after">
+            <div>Instead display the difference</div>
+          </section>
+          <section>
+            <h2>When to derive data?</h2>
+            <div class="flex">
+              <ul class="half small">
+                <li>Large data? <span class="fragment">👉 aggregate</span></li>
+                <li class="fragment">Complex data? <span class="fragment">👉 simplify</span></li>
+                <li class="fragment">Dimensionality Reduction</li>
+                <li class="fragment">Network/Tree Analytics (clusters, centralities)</li>
+                <li class="fragment">Don't make the user think!</li>
+              </ul>
+              <div class="half"><img src="../shared_images/vad_book_alldiagrams/why_derive.png" alt="Why: Derive data"></div>
+            </div>
           </section>
         </section>
-        <section>
+        <section id="howIntro">
+          <section><img src="../shared_images/vad_book_alldiagrams/tamara_course14_session1-23.png" alt="How: Abstracting the idiom"></section>
+        </section>
+        <section id="whatWeLearned">
           <section>
-            <h1>Intro to the How</h1>
+            <h1>What we learned</h1>
+            <ul>
+              <li>Abstracting the tasks (Why)</li>
+              <li class="fragment">Define the verb of the task (Action)</li>
+              <li class="fragment">Define the noun of the task (Targets)</li>
+              <li class="fragment">Tasks good practices</li>
+              <li class="fragment">Deriving new data</li>
+            </ul>
           </section>
         </section>
-        <section>
+        <section id="practice">
           <section>
             <h1>Practice</h1>
           </section>
@@ -266,33 +295,24 @@
             <h2>WebGL?</h2>
           </section>
         </section>
-        <section>
+        <section id="d3">
           <section>
             <h1>Setting up D3</h1>
           </section>
         </section>
-        <section>
+        <section id="altair">
           <section>
             <h1>Setting up Altair</h1>
           </section>
         </section>
-        <section>
+        <section id="vega-lite">
           <section>
             <h1>Setting up Vega-lite</h1>
           </section>
         </section>
-        <section>
+        <section id="tableau">
           <section>
             <h1>Setting up Tableau</h1>
-          </section>
-        </section>
-        <section id="review">
-          <section data-background-size="contain" data-background="../shared_images/why_sheet.png" id="why"></section>
-          <section>
-            <h1>What we learned</h1>
-            <ul>
-              <li></li>
-            </ul>
           </section>
         </section>
       </div>
