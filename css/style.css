@@ -276,6 +276,7 @@ body {
 .reveal .flex {
   display: flex;
   width: 100%;
+  flex-wrap: wrap;
 }
 .reveal .flex .quarter {
   width: 22%;
@@ -325,11 +326,16 @@ body {
   height: 100%;
 }
 .reveal .reference {
+  color: #8aa4c6;
   font-style: italic;
-  font-size: 80%;
+  font-size: 60%;
   text-align: end;
 }
 .reveal .vcentered {
   margin-top: auto;
   margin-bottom: auto;
+}
+.reveal .markExample {
+  width: 25%;
+  padding: 0 10%;
 }
