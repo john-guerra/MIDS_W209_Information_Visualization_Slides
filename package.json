@@ -1,7 +1,7 @@
 {
   "name": "MIDS_W209_Information_Visualization",
   "version": "1.0.0",
-  "author": "John Alexis Guera Gómez"
+  "author": "John Alexis Guera Gómez",
   "description": "Slides for the W209 Information Visualization course of the Masters in Data Science at UC Berkeley",
   "main": "index.js",
   "directories": {

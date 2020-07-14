@@ -52,44 +52,239 @@ html
         section#outline
           section
             h2 What we are going to learn
-            ul
-              li
+            ul.small
+              li Marks
+              li.fragment Channels
+                ul
+                  li.fragment Ordered
+                  li.fragment Categorical
+              li.fragment Expressivity
+              li.fragment Effectivity
 
         section
           //- how
           section(data-background-size="contain" data-background="../shared_images/how_sheet.png")
 
-        section
+        section#marksAndChannels
           section
-            h2 Marks and channels
+            h1 Marks and Channels
+
+            div#marksAndChannelsTarget
+
+
+            div.tiny
+              a(href="https://observablehq.com/@mitvis/data-types-graphical-marks-and-visual-encoding-channels").tiny.reference Based on chart by Aravind Satyanarayan
+
+
 
           //- Marks and channels
           section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/tamara_course14_session1-29.png")
+
+          section
+            h2 Marks
+            div.flex
+              div.third.fragment
+                strong Point
+                div#pointExample
+              div.third.fragment
+                strong Line
+                div#lineExample
+              div.third.fragment
+                strong Area
+                div#areaExample
+
+
+
+          section.full
+            h2 Channels
+            img.demo(src="../shared_images/vad_book_alldiagrams/channels.png" alt="Channels")
+
+
+          section
+            h2 Points
+            div.flex
+              div.half
+                ul
+                  li Zero-dimensional
+                  li Conveys position only
+                  li Can be #[strong size] and #[strong shape] coded
+              div.half.fragment.flex
+                div#pointExample1.markExample
+                div.fragment#pointExample2.markExample
+                div.fragment#pointExample3.markExample
+                div.fragment#pointExample4.markExample
+                div.fragment#pointExample5.markExample
+                div.fragment#pointExample6.markExample
+
+
+          section
+            h2 Lines
+            div.flex
+              div.half.fragment.flex
+                div#lineExample1.markExample
+                div.fragment#lineExample2.markExample
+                div.fragment#lineExample3.markExample
+                div.fragment#lineExample4.markExample
+                div.fragment#lineExample5.markExample
+                div.fragment#lineExample6.markExample
+              div.half
+                ul
+                  li One-dimensional
+                  li Convey position and length
+                  li Can be only #[strong width] coded
+
+          section
+            h2 Areas
+            div.flex
+              div.half
+                ul
+                  li Two-dimensional
+                  li Are fully constrained
+              div.half.fragment.flex
+                div#areaExample1.markExample
+                div.fragment#areaExample2.markExample
+                div.fragment#areaExample3.markExample
+                div.fragment#areaExample4.markExample
+                div.fragment#areaExample5.markExample
+                div.fragment#areaExample6.markExample
+
+
+
+          section.full
+            h2 Channel Types
+            img.demo(src="../shared_images/vad_book_alldiagrams/channels_types.png" alt="Channels")
+
+          //- section
+          //-   h2 Points
+          //-   div.flex
+          //-     div.third
+          //-       ul
+          //-         li
+          //-       div#pointExample
+          //-     div.third.fragment
+          //-       strong Line
+          //-       div#lineExample
+          //-     div.third.fragment
+          //-       strong Area
+          //-       div#areaExample
+
+          //-   script.
+          //-     const base2 = vl.mark({tooltip: true}).data(data).encode(
+          //-       vl.x().fieldO('u'),
+          //-       vl.y().fieldQ('v'),
+          //-       vl.color().value("#003a70")
+          //-     ).width(120).height(80);
+
+          //-     const render = (id, chart) =>
+          //-       chart
+          //-       .spacing(15)
+          //-       .config({
+          //-         view: { stroke: null },
+          //-         axis: { labels:false, ticks: false, title: null, grid: false}
+          //-       })
+          //-       .render()
+          //-       .then(chart => {
+          //-         document
+          //-           .getElementById(id)
+          //-           .appendChild(chart);
+          //-       });
+
+          //-     render("pointExample",
+          //-       vl.vconcat(
+          //-         base2.mark({type:'point', size: 100}),
+          //-       );
+          //-     render("lineExample", base2.mark({type:'bar'}));
+          //-     render("areaExample", base2.mark({type:'area'}));
+
+
+
+          //-     const base2 = vl.mark({tooltip: true}).data(data).encode(
+          //-       vl.x().fieldO('u'),
+          //-       vl.y().fieldQ('v'),
+          //-       vl.color().value("#003a70")
+          //-     ).width(120).height(80);
+
+          //-     const render = (id, chart) =>
+          //-       chart
+          //-       .spacing(15)
+          //-       .config({
+          //-         //- view: { stroke: null },
+          //-         //- axis: { labels:false, ticks: false, title: null, grid: false}
+          //-       })
+          //-       .render()
+          //-       .then(chart => {
+          //-         document
+          //-           .getElementById(id)
+          //-           .appendChild(chart);
+          //-       });
+
+          //-     render("pointExample",
+          //-       vl.vconcat(
+          //-         base2.mark({type:'point', size: 100}).encode(vl.size().fieldN('v').legend(false)),
+          //-         base2.mark({type:'point', size: 100}).encode(vl.shape().fieldN('u').legend(false)),
+          //-       )
+          //-     );
+          //-     render("lineExample", vl.vconcat(
+          //-       base2.mark({type:'bar'}),
+          //-     );
+          //-     render("areaExample", base2.mark({type:'area'}));
+
+          //- Marks and channels
+          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/tamara_course14_session1-29.png")
+
+          section
+            h2 Channels
+            div.flex
+              div.third.fragment
+                strong Point
+                div#pointExample
+              div.third.fragment
+                strong Line
+                div#lineExample
+              div.third.fragment
+                strong Area
+                div#areaExample
+
+
+
+
+
           section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/tamara_course14_session1-30.png")
           section
             h3 What marks and channels?
             img.demo(src="../shared_images/visualEncoding1.png")
-          section
+          section(data-transition="none")
+            h3 What marks and channels?
             img.demo(src="../shared_images/visualEncoding1_answer.png")
           section
             h3 What marks and channels?
             img.demo(src="../shared_images/visualEncoding2.png")
-          section
+          section(data-transition="none")
+            h3 What marks and channels?
             img.demo(src="../shared_images/visualEncoding2_answer.png")
           section
             h3 What marks and channels?
             img.demo(src="../shared_images/visualEncoding3.png")
-          section
+          section(data-transition="none")
+            h3 What marks and channels?
             img.demo(src="../shared_images/visualEncoding3_answer.png")
           section
             h3 What marks and channels?
             img.demo(src="../shared_images/visualEncoding4.png")
-          section
+          section(data-transition="none")
+            h3 What marks and channels?
             img.demo(src="../shared_images/visualEncoding4_answer.png")
 
 
           section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/tamara_course14_session1-31.png")
           section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/tamara_course14_session1-32.png")
+
+          section
+            figure
+              img(src="../shared_images/bertin-variables.png", alt="")
+              figcaption.reference
+                a(href="https://observablehq.com/@d3/learn-d3-scales?collection=@d3/learn-d3") From Semiology of Graphics, colorized by mbostock.
+
 
           section
             h2 Effectiveness and Expressiveness
@@ -142,6 +337,12 @@ html
     script(src="../plugin/search/search.js")
     script(src="../plugin/markdown/markdown.js")
     script(src="../plugin/highlight/highlight.js")
+
+    script(src="https://cdn.jsdelivr.net/npm/vega@5.13.0")
+    script(src="https://cdn.jsdelivr.net/npm/vega-lite@4.13.1")
+    script(src="https://cdn.jsdelivr.net/npm/vega-lite-api@0.11.0")
+    script(src="./week4.js")
+
 
 
     script.
