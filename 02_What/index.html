@@ -30,10 +30,10 @@
             <h2>What we are going to learn</h2>
             <ul>
               <li>Abstracting the data</li>
-              <li class="fragment">Types of Datasets</li>
-              <li class="fragment">Types of Attributes</li>
-              <li class="fragment">Sequential, Diverging Cyclical</li>
-              <li class="fragment">Data Aggregation (temporal and geo)</li>
+              <li class="fragment">Types of datasets</li>
+              <li class="fragment">Types of attributes</li>
+              <li class="fragment">Sequential, diverging, cyclical</li>
+              <li class="fragment">Data aggregation (temporal and geo)</li>
               <li class="fragment">Deriving new data</li>
             </ul>
           </section>
@@ -44,14 +44,14 @@
           </section>
           <section data-background-size="contain" data-background="../shared_images/what_sheet.png" alt="What: data abstraction summary sheet" id="what"></section>
           <section>
-            <h2>Why abstract the data</h2>
+            <h2>Why abstract the data?</h2>
             <ul>
-              <li>Different attributes types 👉 different representations</li>
+              <li>Different attribute types 👉 different representations</li>
               <li class="fragment">Different dataset types 👉 different idioms available</li>
             </ul>
           </section>
           <section>
-            <h2>What you need to abstract?</h2>
+            <h2>What do you need to abstract?</h2>
             <div class="flex">
               <div class="half"><span>
                   <svg width="100%" height="100%" viewBox="0 0 2146 1498" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -71,10 +71,10 @@
                   </span></div>
               <div class="half">
                 <ul class="tiny">
-                  <li class="fragment" data-fragment-index="1"><strong>Dataset type</strong>: (e.g. Table, Network, Temporal, ...)</li>
-                  <li class="fragment" data-fragment-index="2"><strong>Attribute types</strong>: (e.g. Categorical, Ordinal, Quantitative)</li>
-                  <li class="fragment" data-fragment-index="3"><strong>Ordering Direction</strong>: (e.g. Sequential, Diverging, Cyclical)</li>
-                  <li class="fragment" data-fragment-index="4"><strong>Data availability</strong>: (e.g. Dynamic, static)</li>
+                  <li class="fragment" data-fragment-index="1"><strong>Dataset type</strong>: (e.g., table, network, temporal ...)</li>
+                  <li class="fragment" data-fragment-index="2"><strong>Attribute types</strong>: (e.g. categorical, ordinal, quantitative)</li>
+                  <li class="fragment" data-fragment-index="3"><strong>Ordering direction</strong>: (e.g. sequential, diverging, cyclical)</li>
+                  <li class="fragment" data-fragment-index="4"><strong>Data availability</strong>: (e.g. dynamic, static)</li>
                 </ul>
               </div>
             </div>
@@ -93,7 +93,7 @@
               <div class="half">
                 <ul>
                   <li>The vast majority of datasets</li>
-                  <li class="fragment">Attributes (columns) + Items (rows)</li>
+                  <li class="fragment">Attributes (columns) + items (rows)</li>
                   <li class="fragment">Other dataset types are usually stored as a combination of tables</li>
                 </ul>
               </div>
@@ -365,21 +365,21 @@
               <li>Tabular + time-related attribute</li>
               <li class="fragment">Aggregations</li>
               <li class="fragment">Cyclical</li>
-              <li class="fragment">Events or Intervals</li>
-              <li class="fragment">Seasonality Patterns</li>
+              <li class="fragment">Events or intervals</li>
+              <li class="fragment">Seasonality patterns</li>
             </ul>
           </section>
           <section>
             <h2>Networks</h2>
             <ul>
-              <li>Nodes + Links</li>
+              <li>Nodes + links</li>
               <li class="fragment">Attributes on both</li>
-              <li class="fragment">Network Idioms</li>
-              <li class="fragment">Network Analytics</li>
+              <li class="fragment">Network idioms</li>
+              <li class="fragment">Network analytics</li>
             </ul>
           </section>
           <section>
-            <h2>How are network stored?</h2>
+            <h2>How are networks stored?</h2>
             <ul>
               <li>Two files</li>
               <li class="fragment">JSON file</li>
@@ -392,8 +392,8 @@
             <ul>
               <li>Hierarchical data</li>
               <li class="fragment">A subset of networks</li>
-              <li class="fragment">Deserves it's own class!</li>
-              <li class="fragment">Tree Idioms</li>
+              <li class="fragment">Deserves its own class!</li>
+              <li class="fragment">Tree idioms</li>
               <li class="fragment"><a href="https://observablehq.com/@john-guerra/treemap-from-table?collection=@john-guerra/d3-tutorials">Can be created out of tables</a></li>
             </ul>
           </section>
@@ -408,7 +408,7 @@
           <section>
             <h2>Geometry</h2>
             <ul>
-              <li>Location data (usually lat/long)</li>
+              <li>Location data (usually latitutde/longitude)</li>
               <li class="fragment">2D or 3D</li>
               <li class="fragment">Inherent shape</li>
               <li class="fragment">Points, routes, shapes</li>
@@ -419,15 +419,15 @@
             <ul>
               <li>Continuous</li>
               <li class="fragment">Sampled</li>
-              <li class="fragment">e.g. Brain scan</li>
+              <li class="fragment">Example: brain scan</li>
             </ul>
           </section>
           <section>
             <h2>Data availability</h2>
             <ul>
-              <li>Static 👉 Data doesn't change</li>
-              <li class="fragment">Dynamic 👉 Data is constantly updating e.g. Stock prices</li>
-              <li class="fragment">For dynamic data you will need a data endpoint</li>
+              <li>Static 👉 data don't change</li>
+              <li class="fragment">Dynamic 👉 data are constantly updating (e.g., stock prices)</li>
+              <li class="fragment">For dynamic data, you will need a data endpoint</li>
             </ul>
           </section>
         </section>
@@ -440,17 +440,17 @@
             <h2>Categorical</h2>
             <ul>
               <li>No order</li>
-              <li class="fragment">e.g. Names, Countries, Types</li>
-              <li class="fragment">must be represented with visual channels that don't convey order</li>
+              <li class="fragment">E.g., names, countries, types</li>
+              <li class="fragment">Must be represented with visual channels that don't convey order</li>
             </ul>
           </section>
           <section>
             <h2>Ordinal</h2>
             <ul>
               <li>Has implicit order</li>
-              <li class="fragment">but, you can't do arithmetic</li>
+              <li class="fragment">But, you can't do arithmetic</li>
               <li class="fragment">Can even be numerical</li>
-              <li class="fragment">e.g. T-shirt sizes, school years, rankings</li>
+              <li class="fragment">E.g., t-shirt sizes, school years, rankings</li>
             </ul>
           </section>
           <section>
@@ -459,7 +459,7 @@
               <li>Also ordered</li>
               <li class="fragment">You can perform arithmetic</li>
               <li class="fragment">Can be divergent or sequential</li>
-              <li class="fragment">e.g. Age, Temperature, Earnings</li>
+              <li class="fragment">E.g., age, temperature, earnings</li>
             </ul>
           </section>
         </section>
@@ -474,16 +474,16 @@
               <li>The is a full range with a clear minimum</li>
               <li class="fragment">You can perform arithmetic</li>
               <li class="fragment">Can be divergent or sequential</li>
-              <li class="fragment">e.g. Age, Goals ⚽️, Price 💰</li>
+              <li class="fragment">E.g., age, goals ⚽️, price 💰</li>
             </ul>
           </section>
           <section>
             <h2>Divergent</h2>
             <ul>
               <li>There is a middle point</li>
-              <li class="fragment">and two opposite directions</li>
+              <li class="fragment">And two opposite directions</li>
               <li class="fragment">Sometimes the middle point is not zero</li>
-              <li class="fragment">e.g. Temperature, Earnings, Political affiliation index</li>
+              <li class="fragment">E.g., temperature, earnings, political affiliation index</li>
             </ul>
           </section>
         </section>
@@ -493,13 +493,13 @@
           </section>
           <section>
             <h2>Aggregating Spatial data</h2>
-            <div>e.g. Count votes by:</div>
+            <div>E.g., count votes by:</div>
             <ul>
               <li>County</li>
               <li class="fragment">City</li>
               <li class="fragment">State</li>
               <li class="fragment">County</li>
-              <li class="fragment">Zipcode? <span>can span multiple counties 🤷</span></li>
+              <li class="fragment">Zipcode? <span>Can span multiple counties 🤷</span></li>
               <li class="fragment">Custom areas</li>
             </ul>
           </section>
@@ -514,7 +514,7 @@
               <li class="fragment">2020 Q1</li>
               <li class="fragment">2020</li>
             </ul>
-            <div class="fragment">Take a look at the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date">Date object</a></div>
+            <div class="fragment">Take a look at the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date">date object</a></div>
           </section>
           <section>
             <h2>Aggregating Temporal data</h2>
@@ -522,7 +522,7 @@
             <ul>
               <li>2020 June 27 5:25PM</li>
               <li class="fragment">Week 26 of the year</li>
-              <li class="fragment">5 - 6PM</li>
+              <li class="fragment">5:00 - 6:00 PM</li>
               <li class="fragment">Saturday</li>
               <li class="fragment">June</li>
             </ul>
@@ -535,12 +535,12 @@
         </section>
         <section id="introToJS">
           <section>
-            <h2>Intro to JS</h2>
+            <h2>Introduction to JS</h2>
           </section>
         </section>
         <section id="JSONvsCSV">
           <section>
-            <h2>JSON vs CSV</h2>
+            <h2>JSON vs. CSV</h2>
           </section>
           <div class="flex tiny">
             <div class="half tiny">
@@ -682,22 +682,22 @@
         </section>
         <section id="nestingJS">
           <section>
-            <h2>Nesting, Folding, Pivoting, etc in JS</h2><a href="http://learnjsdata.com/group_data.html">http://learnjsdata.com/group_data.html</a>
+            <h2>Nesting, Folding, Pivoting, etc. in JS</h2><a href="http://learnjsdata.com/group_data.html">http://learnjsdata.com/group_data.html</a>
           </section>
         </section>
         <section id="nestingPython">
           <section>
-            <h2>Nesting, Folding, Pivoting, etc in Python</h2>
+            <h2>Nesting, Folding, Pivoting, etc. in Python</h2>
           </section>
         </section>
         <section id="nestingTableau">
           <section>
-            <h2>Nesting, Folding, Pivoting, etc in Tableau?</h2>
+            <h2>Nesting, Folding, Pivoting, etc. in Tableau?</h2>
           </section>
         </section>
         <section id="flask">
           <section>
-            <h2>Serving data from the backend (Intro to Flask)</h2>
+            <h2>Serving data from the back-end (Introduction to Flask)</h2>
           </section>
         </section>
         <section id="review">
@@ -706,10 +706,10 @@
             <h1>What we learned</h1>
             <ul>
               <li>Abstracting the data</li>
-              <li class="fragment">Types of Datasets</li>
-              <li class="fragment">Types of Attributes</li>
-              <li class="fragment">Sequential, Diverging Cyclical</li>
-              <li class="fragment">Data Aggregation (temporal and geo)</li>
+              <li class="fragment">Types of datasets</li>
+              <li class="fragment">Types of attributes</li>
+              <li class="fragment">Sequential, diverging, cyclical</li>
+              <li class="fragment">Data aggregation (temporal and geo)</li>
             </ul>
           </section>
         </section>
