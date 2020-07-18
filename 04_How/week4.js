@@ -1,6 +1,29 @@
-/* global vl, vega, vegaLite */
+/* global vl, vega, vegaLite, vegaTooltip */
 
-vl.register(vega, vegaLite, {});
+const options = {
+  config: {
+    // vega-lite default configurations
+    config: {
+      mark: { tooltip: true },
+      range: { category: ["#003a70", "#fdb71a"] },
+    },
+  },
+  init: (view) => {
+    // initialize tooltip handler
+    view.tooltip(new vegaTooltip.Handler().call);
+    // enable horizontal scrolling for large plots
+    if (view.container()) view.container().style["overflow-x"] = "auto";
+  },
+  view: {
+    // view constructor options
+    loader: vega.loader({
+      baseURL: "https://cdn.jsdelivr.net/npm/vega-datasets@1/",
+    }),
+    renderer: "canvas",
+  },
+};
+
+vl.register(vega, vegaLite, options);
 
 const data = [
   { u: "A", v: 2, w: "one" },
@@ -13,10 +36,23 @@ const data = [
   { u: "H", v: 4, w: "two" },
 ];
 
+const brush = vl
+  .selectSingle()
+  .on("mouseover")
+  .nearest(true)
+  .empty("none")
+  .clear("mouseout");
+
+const colorGoldIfBrush = vl
+  .color()
+  .if(brush, vl.value("#fdb71a"))
+  .value("#003a70");
+
 const base = vl
   .mark({ tooltip: true })
+  .select(brush)
   .data(data)
-  .encode(vl.x().fieldO("u"), vl.y().fieldQ("v"), vl.color().value("#003a70"))
+  .encode(vl.x().fieldO("u"), vl.y().fieldQ("v"), colorGoldIfBrush)
   .width(120)
   .height(90);
 
@@ -28,9 +64,7 @@ vl.hconcat(
     .encode(vl.shape().fieldN("u").legend(false)),
   base.mark({ type: "line", point: true, interpolate: "monotone" }),
   base.mark({ type: "circle", size: 100 }),
-  base
-    .mark({ type: "text", fill: "steelblue", baseline: "middle" })
-    .encode(vl.text().fieldN("u")),
+  base.mark({ type: "text", baseline: "middle" }).encode(vl.text().fieldN("u")),
   base.mark({ type: "area" })
 )
   .spacing(15)
@@ -63,8 +97,9 @@ render("areaExample", base.mark({ type: "area" }));
 // Points
 const base2 = vl
   .mark({ tooltip: true })
+  .select(brush)
   .data(data)
-  .encode(vl.y().fieldO("u"), vl.x().fieldQ("v"), vl.color().value("#003a70"))
+  .encode(vl.y().fieldO("u"), vl.x().fieldQ("v"), colorGoldIfBrush)
   .width(120)
   .height(90);
 
@@ -75,6 +110,7 @@ const render2 = (id, chart) =>
       view: { stroke: null },
       //- axis: { labels:false, ticks: false, title: null, grid: false}
       axis: { title: false },
+      range: { category: ["#003a70", "#fdb71a"] },
     })
     .render()
     .then((chart) => {
@@ -188,8 +224,13 @@ render2(
 render2(
   "areaExample5",
   baseLines
-    .mark({ type: "rect" })
-    .encode(vl.y().fieldO("w"), vl.x().fieldO("u"), vl.color().average("v"))
+    .mark({ type: "square" })
+    .encode(
+      vl.y().fieldO("w"),
+      vl.x().fieldO("u"),
+      vl.color().average("v"),
+      vl.size().average("v")
+    )
 );
 render2(
   "areaExample6",
@@ -197,3 +238,17 @@ render2(
     .mark({ type: "arc", innerRadius: 20 })
     .encode(vl.theta().average("v"), vl.color().fieldN("w"), vl.x(), vl.y())
 );
+
+// Find the dot
+const findDotData = Array.from(Array(32)).map(() => ({
+  x: Math.random(),
+  y: Math.random(),
+}));
+
+vl.markCircle()
+  .data(findDotData)
+  .encode(
+    vl.x().fieldQ("x").axis({ labels: null }),
+    vl.y().fieldQ("x").axis({ labels: null }),
+    vl.color().fieldN("dot").scale({})
+  );

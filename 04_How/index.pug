@@ -1,5 +1,5 @@
 doctype html
-html
+html(lang="en")
   head
     title Week 4 How is visualized. MIDS W209 Information Visualization Slides
     meta(charset="utf-8")
@@ -66,19 +66,18 @@ html
           section(data-background-size="contain" data-background="../shared_images/how_sheet.png")
 
         section#marksAndChannels
+
           section
             h1 Marks and Channels
 
+          section
+            h2 Analyze idiom structure
             div#marksAndChannelsTarget
-
-
             div.tiny
               a(href="https://observablehq.com/@mitvis/data-types-graphical-marks-and-visual-encoding-channels").tiny.reference Based on chart by Aravind Satyanarayan
 
-
-
-          //- Marks and channels
-          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/tamara_course14_session1-29.png")
+          //- Analyze idiom structure
+          //- section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/tamara_course14_session1-29.png")
 
           section
             h2 Marks
@@ -154,130 +153,40 @@ html
             h2 Channel Types
             img.demo(src="../shared_images/vad_book_alldiagrams/channels_types.png" alt="Channels")
 
-          //- section
-          //-   h2 Points
-          //-   div.flex
-          //-     div.third
-          //-       ul
-          //-         li
-          //-       div#pointExample
-          //-     div.third.fragment
-          //-       strong Line
-          //-       div#lineExample
-          //-     div.third.fragment
-          //-       strong Area
-          //-       div#areaExample
-
-          //-   script.
-          //-     const base2 = vl.mark({tooltip: true}).data(data).encode(
-          //-       vl.x().fieldO('u'),
-          //-       vl.y().fieldQ('v'),
-          //-       vl.color().value("#003a70")
-          //-     ).width(120).height(80);
-
-          //-     const render = (id, chart) =>
-          //-       chart
-          //-       .spacing(15)
-          //-       .config({
-          //-         view: { stroke: null },
-          //-         axis: { labels:false, ticks: false, title: null, grid: false}
-          //-       })
-          //-       .render()
-          //-       .then(chart => {
-          //-         document
-          //-           .getElementById(id)
-          //-           .appendChild(chart);
-          //-       });
-
-          //-     render("pointExample",
-          //-       vl.vconcat(
-          //-         base2.mark({type:'point', size: 100}),
-          //-       );
-          //-     render("lineExample", base2.mark({type:'bar'}));
-          //-     render("areaExample", base2.mark({type:'area'}));
 
 
+          //- //- Marks and channels
+          //- section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/tamara_course14_session1-29.png")
 
-          //-     const base2 = vl.mark({tooltip: true}).data(data).encode(
-          //-       vl.x().fieldO('u'),
-          //-       vl.y().fieldQ('v'),
-          //-       vl.color().value("#003a70")
-          //-     ).width(120).height(80);
-
-          //-     const render = (id, chart) =>
-          //-       chart
-          //-       .spacing(15)
-          //-       .config({
-          //-         //- view: { stroke: null },
-          //-         //- axis: { labels:false, ticks: false, title: null, grid: false}
-          //-       })
-          //-       .render()
-          //-       .then(chart => {
-          //-         document
-          //-           .getElementById(id)
-          //-           .appendChild(chart);
-          //-       });
-
-          //-     render("pointExample",
-          //-       vl.vconcat(
-          //-         base2.mark({type:'point', size: 100}).encode(vl.size().fieldN('v').legend(false)),
-          //-         base2.mark({type:'point', size: 100}).encode(vl.shape().fieldN('u').legend(false)),
-          //-       )
-          //-     );
-          //-     render("lineExample", vl.vconcat(
-          //-       base2.mark({type:'bar'}),
-          //-     );
-          //-     render("areaExample", base2.mark({type:'area'}));
-
-          //- Marks and channels
-          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/tamara_course14_session1-29.png")
-
-          section
-            h2 Channels
-            div.flex
-              div.third.fragment
-                strong Point
-                div#pointExample
-              div.third.fragment
-                strong Line
-                div#lineExample
-              div.third.fragment
-                strong Area
-                div#areaExample
-
-
-
-
-
-          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/tamara_course14_session1-30.png")
+          //- section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/tamara_course14_session1-30.png")
           section
             h3 What marks and channels?
             img.demo(src="../shared_images/visualEncoding1.png")
-          section(data-transition="none")
+          section(data-transition="fade")
             h3 What marks and channels?
             img.demo(src="../shared_images/visualEncoding1_answer.png")
           section
             h3 What marks and channels?
             img.demo(src="../shared_images/visualEncoding2.png")
-          section(data-transition="none")
+          section(data-transition="fade")
             h3 What marks and channels?
             img.demo(src="../shared_images/visualEncoding2_answer.png")
           section
             h3 What marks and channels?
             img.demo(src="../shared_images/visualEncoding3.png")
-          section(data-transition="none")
+          section(data-transition="fade")
             h3 What marks and channels?
             img.demo(src="../shared_images/visualEncoding3_answer.png")
           section
             h3 What marks and channels?
             img.demo(src="../shared_images/visualEncoding4.png")
-          section(data-transition="none")
+          section(data-transition="fade")
             h3 What marks and channels?
             img.demo(src="../shared_images/visualEncoding4_answer.png")
 
 
-          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/tamara_course14_session1-31.png")
-          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/tamara_course14_session1-32.png")
+          //- section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/tamara_course14_session1-31.png")
+          //- section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/tamara_course14_session1-32.png")
 
           section
             figure
@@ -286,19 +195,21 @@ html
                 a(href="https://observablehq.com/@d3/learn-d3-scales?collection=@d3/learn-d3") From Semiology of Graphics, colorized by mbostock.
 
 
+        section#effectivenessAndExpressiveness
           section
-            h2 Effectiveness and Expressiveness
+            h1 Effectiveness and Expressiveness
 
           section
             h2 Expressiveness
             ul
-              li.fragment Visual encoding should express all of, and only, the information in the dataset
+              li Visual encoding should express all of, and only of, the information in the dataset
               li.fragment Ordered data should be shown in a way we perceive as ordered
               li.fragment Match channel and data characteristics
+
           section
             h2 Effectiveness
             p Encode most important attributes with highest ranked channels
-            p.tiny [Automating the Design of Graphical Presentations of Relational Information. Mackinlay.  ACM Trans. on Graphics (TOG) 5:2 (1986), 110–141]
+            p.tiny.reference [Automating the Design of Graphical Presentations of Relational Information. Mackinlay.  ACM Trans. on Graphics (TOG) 5:2 (1986), 110–141]
 
           section
             h2 Where does the ranking come from?
@@ -309,11 +220,80 @@ html
               li.fragment Separability
               li.fragment Popout
 
+
+          section#stevensLaw
+            h2 Accuracy: Fundamental Theory
+
+            div#StevensLawChart
+
+
+            script(type="module").
+
+              debugger;
+              import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+              import define from "https://api.observablehq.com/@john-guerra/stevenss-power-law.js?v=3";
+              const inspect = Inspector.into("#StevensLawChart");
+              (new Runtime).module(define, name => name === "chart" ? inspect() : undefined);
+
+
           //- section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/tamara_course14_session1-33.png")
-          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/tamara_course14_session1-34.png")
-          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/tamara_course14_session1-35.png")
-          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/tamara_course14_session1-36.png")
-          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/tamara_course14_session1-37.png")
+          //- section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/tamara_course14_session1-34.png")
+
+          section.full
+            h3 Accuracy: Vis Experiments
+            figure
+              img(style="max-height:400px", src="/shared_images/vad_book_alldiagrams/vis_experiments.png" alt="Vis experiments results showing best accuracy")
+              figcaption.tiny.reference
+                a.tiny(href="http://vis.stanford.edu/files/2010-MTurk-CHI.pdf") Crowdsourcing Graphical Perception: Using MechanicalTurk to Assess Visualization Design
+
+
+          section.full
+            h3 Discriminability
+
+            div.flex
+              div.half How many steps are usable?
+                br
+                span.fragment line width: Not many 🤷🏼‍♂️
+
+              div.half
+                figure
+                  img(style="max-height:400px", src="/shared_images/vad_book_alldiagrams/linewidth_map.png" alt="Line Width Map")
+                  figcaption.tiny.reference
+                    a.tiny(href="https://mappa.mundi.net/maps/maps_014/") Mappa.mundi.net TeleGeography's Traffic Flow Maps
+
+          section.full
+            h3 Separability
+            img(style="max-height:400px", src="/shared_images/vad_book_alldiagrams/separability.png" alt="Separability")
+
+
+          section
+            h2 Popup
+
+            div.flex
+              div.half
+                ul
+                  li Find the odd ones
+                  li Which ones pop up?
+
+              div.half
+                div.fragment#saliencyColor
+                div.fragment#saliencyShape
+                div.fragment#saliencySize
+                div.fragment#saliencyAngle
+                div.fragment#saliencyOpacity
+
+              script(type="module").
+                import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+                import define from "https://api.observablehq.com/@john-guerra/visual-saliency.js?v=3";
+                (new Runtime).module(define, name => name === "color" ? Inspector.into("#saliencyColor")() : undefined);
+
+
+
+
+
+          //- section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/tamara_course14_session1-35.png")
+          //- section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/tamara_course14_session1-36.png")
+          //- section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/tamara_course14_session1-37.png")
           section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/tamara_course14_session1-38.png")
           section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/tamara_course14_session1-39.png")
           section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/tamara_course14_session1-40.png")
@@ -341,6 +321,7 @@ html
     script(src="https://cdn.jsdelivr.net/npm/vega@5.13.0")
     script(src="https://cdn.jsdelivr.net/npm/vega-lite@4.13.1")
     script(src="https://cdn.jsdelivr.net/npm/vega-lite-api@0.11.0")
+    script(src="https://cdn.jsdelivr.net/npm/vega-tooltip@0.23.2")
     script(src="./week4.js")
 
 

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <title>Week 4 How is visualized. MIDS W209 Information Visualization Slides</title>
     <meta charset="utf-8">
@@ -47,10 +47,12 @@
         <section id="marksAndChannels">
           <section>
             <h1>Marks and Channels</h1>
+          </section>
+          <section>
+            <h2>Analyze idiom structure</h2>
             <div id="marksAndChannelsTarget"></div>
             <div class="tiny"><a class="tiny reference" href="https://observablehq.com/@mitvis/data-types-graphical-marks-and-visual-encoding-channels">Based on chart by Aravind Satyanarayan</a></div>
           </section>
-          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/tamara_course14_session1-29.png"></section>
           <section>
             <h2>Marks</h2>
             <div class="flex">
@@ -130,60 +132,44 @@
           <section class="full">
             <h2>Channel Types</h2><img class="demo" src="../shared_images/vad_book_alldiagrams/channels_types.png" alt="Channels">
           </section>
-          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/tamara_course14_session1-29.png"></section>
-          <section>
-            <h2>Channels</h2>
-            <div class="flex">
-              <div class="third fragment"><strong>Point</strong>
-                <div id="pointExample"></div>
-              </div>
-              <div class="third fragment"><strong>Line</strong>
-                <div id="lineExample"></div>
-              </div>
-              <div class="third fragment"><strong>Area</strong>
-                <div id="areaExample"></div>
-              </div>
-            </div>
-          </section>
-          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/tamara_course14_session1-30.png"></section>
           <section>
             <h3>What marks and channels?</h3><img class="demo" src="../shared_images/visualEncoding1.png">
           </section>
-          <section data-transition="none">
+          <section data-transition="fade">
             <h3>What marks and channels?</h3><img class="demo" src="../shared_images/visualEncoding1_answer.png">
           </section>
           <section>
             <h3>What marks and channels?</h3><img class="demo" src="../shared_images/visualEncoding2.png">
           </section>
-          <section data-transition="none">
+          <section data-transition="fade">
             <h3>What marks and channels?</h3><img class="demo" src="../shared_images/visualEncoding2_answer.png">
           </section>
           <section>
             <h3>What marks and channels?</h3><img class="demo" src="../shared_images/visualEncoding3.png">
           </section>
-          <section data-transition="none">
+          <section data-transition="fade">
             <h3>What marks and channels?</h3><img class="demo" src="../shared_images/visualEncoding3_answer.png">
           </section>
           <section>
             <h3>What marks and channels?</h3><img class="demo" src="../shared_images/visualEncoding4.png">
           </section>
-          <section data-transition="none">
+          <section data-transition="fade">
             <h3>What marks and channels?</h3><img class="demo" src="../shared_images/visualEncoding4_answer.png">
           </section>
-          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/tamara_course14_session1-31.png"></section>
-          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/tamara_course14_session1-32.png"></section>
           <section>
             <figure><img src="../shared_images/bertin-variables.png" alt="">
               <figcaption class="reference"><a href="https://observablehq.com/@d3/learn-d3-scales?collection=@d3/learn-d3">From Semiology of Graphics, colorized by mbostock.</a></figcaption>
             </figure>
           </section>
+        </section>
+        <section id="effectivenessAndExpressiveness">
           <section>
-            <h2>Effectiveness and Expressiveness</h2>
+            <h1>Effectiveness and Expressiveness</h1>
           </section>
           <section>
             <h2>Expressiveness</h2>
             <ul>
-              <li class="fragment">Visual encoding should express all of, and only, the information in the dataset</li>
+              <li>Visual encoding should express all of, and only of, the information in the dataset</li>
               <li class="fragment">Ordered data should be shown in a way we perceive as ordered</li>
               <li class="fragment">Match channel and data characteristics</li>
             </ul>
@@ -191,7 +177,7 @@
           <section>
             <h2>Effectiveness</h2>
             <p>Encode most important attributes with highest ranked channels</p>
-            <p class="tiny">[Automating the Design of Graphical Presentations of Relational Information. Mackinlay.  ACM Trans. on Graphics (TOG) 5:2 (1986), 110–141]</p>
+            <p class="tiny reference">[Automating the Design of Graphical Presentations of Relational Information. Mackinlay.  ACM Trans. on Graphics (TOG) 5:2 (1986), 110–141]</p>
           </section>
           <section>
             <h2>Where does the ranking come from?</h2>
@@ -202,10 +188,67 @@
               <li class="fragment">Popout</li>
             </ul>
           </section>
-          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/tamara_course14_session1-34.png"></section>
-          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/tamara_course14_session1-35.png"></section>
-          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/tamara_course14_session1-36.png"></section>
-          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/tamara_course14_session1-37.png"></section>
+          <section id="stevensLaw">
+            <h2>Accuracy: Fundamental Theory</h2>
+            <div id="StevensLawChart"></div>
+            <script type="module">
+              debugger;
+              import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+              import define from "https://api.observablehq.com/@john-guerra/stevenss-power-law.js?v=3";
+              const inspect = Inspector.into("#StevensLawChart");
+              (new Runtime).module(define, name => name === "chart" ? inspect() : undefined);
+              
+              
+            </script>
+          </section>
+          <section class="full">
+            <h3>Accuracy: Vis Experiments</h3>
+            <figure><img style="max-height:400px" src="/shared_images/vad_book_alldiagrams/vis_experiments.png" alt="Vis experiments results showing best accuracy">
+              <figcaption class="tiny reference"><a class="tiny" href="http://vis.stanford.edu/files/2010-MTurk-CHI.pdf">Crowdsourcing Graphical Perception: Using MechanicalTurk to Assess Visualization Design</a></figcaption>
+            </figure>
+          </section>
+          <section class="full">
+            <h3>Discriminability</h3>
+            <div class="flex">
+              <div class="half">How many steps are usable?<br><span class="fragment">line width: Not many 🤷🏼‍♂️</span></div>
+              <div class="half">
+                <figure><img style="max-height:400px" src="/shared_images/vad_book_alldiagrams/linewidth_map.png" alt="Line Width Map">
+                  <figcaption class="tiny reference"><a class="tiny" href="https://mappa.mundi.net/maps/maps_014/">Mappa.mundi.net TeleGeography's Traffic Flow Maps</a></figcaption>
+                </figure>
+              </div>
+            </div>
+          </section>
+          <section class="full">
+            <h3>Separability</h3><img style="max-height:400px" src="/shared_images/vad_book_alldiagrams/separability.png" alt="Separability">
+          </section>
+          <section>
+            <h2>Popup</h2>
+            <div class="flex">
+              <div class="half">
+                <ul>
+                  <li>Find the odd ones</li>
+                  <li>Which ones pop up?</li>
+                </ul>
+              </div>
+              <div class="half">
+                <div class="fragment" id="saliencyColor"></div>
+                <div class="fragment" id="saliencyShape"></div>
+                <div class="fragment" id="saliencySize"></div>
+                <div class="fragment" id="saliencyAngle"></div>
+                <div class="fragment" id="saliencyOpacity"></div>
+              </div>
+              <script type="module">
+                import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+                import define from "https://api.observablehq.com/@john-guerra/visual-saliency.js?v=3";
+                (new Runtime).module(define, name => name === "color" ? Inspector.into("#saliencyColor")() : undefined);
+                
+                
+                
+                
+                
+              </script>
+            </div>
+          </section>
           <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/tamara_course14_session1-38.png"></section>
           <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/tamara_course14_session1-39.png"></section>
           <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/tamara_course14_session1-40.png"></section>
@@ -231,6 +274,7 @@
     <script src="https://cdn.jsdelivr.net/npm/vega@5.13.0"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.13.1"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-lite-api@0.11.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-tooltip@0.23.2"></script>
     <script src="./week4.js"></script>
     <script>
       Reveal.initialize({
