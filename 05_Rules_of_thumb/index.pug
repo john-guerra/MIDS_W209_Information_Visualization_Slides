@@ -1,10 +1,10 @@
 doctype html
 html(lang="en")
   head
-    title Week 2 What, abstracting the data. MIDS W209 Information Visualization Slides
+    title Week 5 Rules of thumb
     meta(charset="utf-8")
     meta(name="author", content="John Alexis Guerra Gómez")
-    meta(name="description", content="Week 2 What, abstracting the data. MIDS W209 Information Visualization Slides")
+    meta(name="description", content="Week 2: Visualization Rules of thumb")
 
     meta(name="apple-mobile-web-app-capable" content="yes")
     meta(name="apple-mobile-web-app-status-bar-style" content="black-translucent")
@@ -28,7 +28,7 @@ html(lang="en")
     .reveal
       .slides
         section
-          h1.title What: abstracting the data
+          h1.title Rules of Thumb
             br
             small MIDS W209: Information Visualization
 
@@ -53,198 +53,13 @@ html(lang="en")
           section
             h2 What we are going to learn
             ul
-              li Abstracting the data
-              li.fragment Types of Datasets
-              li.fragment Types of Attributes
-              li.fragment Sequential, Diverging Cyclical
-              li.fragment Data Aggregation (temporal & geo)
-              li.fragment Deriving new data
-
-        section
-          section
-            h1 Abstracting the data
-
-          section(data-background-size="contain" data-background="../shared_images/what_sheet.png")#what
-
-          section
-            h2 Why abstract the data
-            ul
-              li Different attributes types 👉 different representations
-              li Different dataset types 👉 different idioms available
-
-        section#datasets
-          section
-            h1 Types of Datasets
-
-          section
-            img(src="../shared_images/vad_book_alldiagrams/dataset_types.png" alt="Dataset Types: tables, network/trees fields geometry")
-            div
-              strong + Temporal!
-
-          section
-            h2 Tables
-            ul
-              li Attributes
-              li.fragment Items (rows)
-
-          section
-            h2 Temporal
-            ul
-              li Items (rows)
-              li.fragment Attributes
-              li.fragment At least one attrib is time-related
-
-          section
-            h2 Networks and Trees
-            ul
-              li Items (nodes)
-              li.fragment Links
-              li.fragment Attributes
-
-          section
-            h2 Geometry
-            ul
-              li Spatial
-              li.fragment 2D or 3D
-              li.fragment Inherent shape
-
-          section
-            h2 Fields
-            ul
-              li Continuous
-              li.fragment Sampled
-              li.fragment e.g. Brain scan
-
-
-
-        section#attributes
-          section
-            h1 Types of Attributes
-
-          section
-            img(src="../shared_images/vad_book_alldiagrams/data_attribute_types.png" alt="Data attribute types: categorical, ordinal and quantitative")
-
-        section#quantitative
-          section
-            h1 Ordering direction
-
-          section
-            img(src="../shared_images/vad_book_alldiagrams/data_ordering_types.png" alt="Data ordering types: sequential, diverging and Cyclical")
-
-
-        section#dataAggregation
-          section
-            h1 Data Aggregation (temporal & geo)
-
-
-        section
-          section
-            h2 Visual Analytics Framework
-            img(src="../shared_images/what_why_how.png")
-          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/tamara_course14_session1-14.png")
-          //- what
-          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/tamara_course14_session1-15.png")
-          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/tamara_course14_session1-16.png")
-
-
-
-
-          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/tamara_course14_session1-17.png")
-          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/tamara_course14_session1-18.png")
-
-          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/tamara_course14_session1-15.png")
-          //- why
-          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/tamara_course14_session1-19.png")
-          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/tamara_course14_session1-20.png")
-          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/tamara_course14_session1-21.png")
-          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/tamara_course14_session1-22.png")
-          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/tamara_course14_session1-19.png")
-          //- how
-          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/tamara_course14_session1-23.png")
-          //- spacetree vs tree juxtaposer
-
-
-
-        section
-          section
-            h2 Marks and channels
-
-          //- Marks and channels
-          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/tamara_course14_session1-29.png")
-          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/tamara_course14_session1-30.png")
-          section
-            h3 What marks and channels?
-            img.demo(src="../shared_images/visualEncoding1.png")
-          section
-            img.demo(src="../shared_images/visualEncoding1_answer.png")
-          section
-            h3 What marks and channels?
-            img.demo(src="../shared_images/visualEncoding2.png")
-          section
-            img.demo(src="../shared_images/visualEncoding2_answer.png")
-          section
-            h3 What marks and channels?
-            img.demo(src="../shared_images/visualEncoding3.png")
-          section
-            img.demo(src="../shared_images/visualEncoding3_answer.png")
-          section
-            h3 What marks and channels?
-            img.demo(src="../shared_images/visualEncoding4.png")
-          section
-            img.demo(src="../shared_images/visualEncoding4_answer.png")
-
-
-          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/tamara_course14_session1-31.png")
-          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/tamara_course14_session1-32.png")
-
-          section
-            h2 Effectiveness and Expressiveness
-
-          section
-            h2 Expressiveness
-            ul
-              li.fragment Visual encoding should express all of, and only, the information in the dataset
-              li.fragment Ordered data should be shown in a way we perceive as ordered
-              li.fragment Match channel and data characteristics
-          section
-            h2 Effectiveness
-            p Encode most important attributes with highest ranked channels
-            p.tiny [Automating the Design of Graphical Presentations of Relational Information. Mackinlay.  ACM Trans. on Graphics (TOG) 5:2 (1986), 110–141]
-
-          section
-            h2 Where does the ranking come from?
-
-            ul
-              li.fragment Accuracy
-              li.fragment Discriminability
-              li.fragment Separability
-              li.fragment Popout
-
-          //- section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/tamara_course14_session1-33.png")
-          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/tamara_course14_session1-34.png")
-          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/tamara_course14_session1-35.png")
-          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/tamara_course14_session1-36.png")
-          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/tamara_course14_session1-37.png")
-          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/tamara_course14_session1-38.png")
-          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/tamara_course14_session1-39.png")
-          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/tamara_course14_session1-40.png")
-          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/tamara_course14_session1-41.png")
-
-
-
+              li
 
         section#review
-          section(data-background-size="contain" data-background="../shared_images/what_sheet.png")#what
-
           section
             h1 What we learned
             ul
-              li Abstracting the data
-              li.fragment Types of Datasets
-              li.fragment Types of Attributes
-              li.fragment Sequential, Diverging Cyclical
-              li.fragment Data Aggregation (temporal & geo)
-              li.fragment Deriving new data
+              li
 
 
     script(src="../js/reveal.js")
