@@ -54,10 +54,10 @@ html(lang="en")
             h2 What we are going to learn
             ul
               li Abstracting the data
-              li.fragment Types of Datasets
-              li.fragment Types of Attributes
-              li.fragment Sequential, Diverging Cyclical
-              li.fragment Data Aggregation (temporal and geo)
+              li.fragment Types of datasets
+              li.fragment Types of attributes
+              li.fragment Sequential, diverging, cyclical
+              li.fragment Data aggregation (temporal and geo)
               li.fragment Deriving new data
 
         section
@@ -67,13 +67,13 @@ html(lang="en")
           section(data-background-size="contain" data-background="../shared_images/what_sheet.png" alt="What: data abstraction summary sheet")#what
 
           section
-            h2 Why abstract the data
+            h2 Why abstract the data?
             ul
-              li Different attributes types 👉 different representations
+              li Different attribute types 👉 different representations
               li.fragment Different dataset types 👉 different idioms available
 
           section
-            h2 What you need to abstract?
+            h2 What do you need to abstract?
             div.flex
               div.half
                 //- img(src="../shared_images/what_sheet.png" alt="What: data abstraction summary sheet")
@@ -96,10 +96,10 @@ html(lang="en")
 
               div.half
                 ul.tiny
-                  li.fragment(data-fragment-index="1") #[strong Dataset type]: (e.g. Table, Network, Temporal, ...)
-                  li.fragment(data-fragment-index="2") #[strong Attribute types]: (e.g. Categorical, Ordinal, Quantitative)
-                  li.fragment(data-fragment-index="3") #[strong Ordering Direction]: (e.g. Sequential, Diverging, Cyclical)
-                  li.fragment(data-fragment-index="4") #[strong Data availability]: (e.g. Dynamic, static)
+                  li.fragment(data-fragment-index="1") #[strong Dataset type]: (e.g., table, network, temporal ...)
+                  li.fragment(data-fragment-index="2") #[strong Attribute types]: (e.g. categorical, ordinal, quantitative)
+                  li.fragment(data-fragment-index="3") #[strong Ordering direction]: (e.g. sequential, diverging, cyclical)
+                  li.fragment(data-fragment-index="4") #[strong Data availability]: (e.g. dynamic, static)
 
         section#datasets
           section
@@ -116,7 +116,7 @@ html(lang="en")
               div.half
                 ul
                   li The vast majority of datasets
-                  li.fragment Attributes (columns) + Items (rows)
+                  li.fragment Attributes (columns) + items (rows)
                   li.fragment Other dataset types are usually stored as a combination of tables
 
               div.half.tiny.vcentered
@@ -146,24 +146,24 @@ html(lang="en")
               li Tabular + time-related attribute
               li.fragment Aggregations
               li.fragment Cyclical
-              li.fragment Events or Intervals
-              li.fragment Seasonality Patterns
+              li.fragment Events or intervals
+              li.fragment Seasonality patterns
 
           //- TODO Temporal data examples
 
           section
             h2 Networks
             ul
-              li Nodes + Links
+              li Nodes + links
               li.fragment Attributes on both
-              li.fragment Network Idioms
-              li.fragment Network Analytics
+              li.fragment Network idioms
+              li.fragment Network analytics
 
 
           //- TODO Network data examples
 
           section
-            h2 How are network stored?
+            h2 How are networks stored?
             ul
               li Two files
               li.fragment JSON file
@@ -175,8 +175,8 @@ html(lang="en")
             ul
               li Hierarchical data
               li.fragment A subset of networks
-              li.fragment Deserves it's own class!
-              li.fragment Tree Idioms
+              li.fragment Deserves its own class!
+              li.fragment Tree idioms
               li.fragment
                 a(href="https://observablehq.com/@john-guerra/treemap-from-table?collection=@john-guerra/d3-tutorials") Can be created out of tables
 
@@ -193,7 +193,7 @@ html(lang="en")
           section
             h2 Geometry
             ul
-              li Location data (usually lat/long)
+              li Location data (usually latitutde/longitude)
               li.fragment 2D or 3D
               li.fragment Inherent shape
               li.fragment Points, routes, shapes
@@ -203,14 +203,14 @@ html(lang="en")
             ul
               li Continuous
               li.fragment Sampled
-              li.fragment e.g. Brain scan
+              li.fragment Example: brain scan
 
           section
             h2 Data availability
             ul
-              li Static 👉 Data doesn't change
-              li.fragment Dynamic 👉 Data is constantly updating e.g. Stock prices
-              li.fragment For dynamic data you will need a data endpoint
+              li Static 👉 data don't change
+              li.fragment Dynamic 👉 data are constantly updating (e.g., stock prices)
+              li.fragment For dynamic data, you will need a data endpoint
 
 
 
@@ -225,16 +225,16 @@ html(lang="en")
             h2 Categorical
             ul
               li No order
-              li.fragment e.g. Names, Countries, Types
-              li.fragment must be represented with visual channels that don't convey order
+              li.fragment E.g., names, countries, types
+              li.fragment Must be represented with visual channels that don't convey order
 
           section
             h2 Ordinal
             ul
               li Has implicit order
-              li.fragment but, you can't do arithmetic
+              li.fragment But, you can't do arithmetic
               li.fragment Can even be numerical
-              li.fragment e.g. T-shirt sizes, school years, rankings
+              li.fragment E.g., t-shirt sizes, school years, rankings
 
           section
             h2 Quantitative
@@ -242,7 +242,7 @@ html(lang="en")
               li Also ordered
               li.fragment You can perform arithmetic
               li.fragment Can be divergent or sequential
-              li.fragment e.g. Age, Temperature, Earnings
+              li.fragment E.g., age, temperature, earnings
 
 
         section#quantitative
@@ -259,15 +259,15 @@ html(lang="en")
               li The is a full range with a clear minimum
               li.fragment You can perform arithmetic
               li.fragment Can be divergent or sequential
-              li.fragment e.g. Age, Goals ⚽️, Price 💰
+              li.fragment E.g., age, goals ⚽️, price 💰
 
           section
             h2 Divergent
             ul
               li There is a middle point
-              li.fragment and two opposite directions
+              li.fragment And two opposite directions
               li.fragment Sometimes the middle point is not zero
-              li.fragment e.g. Temperature, Earnings, Political affiliation index
+              li.fragment E.g., temperature, earnings, political affiliation index
 
         section#dataAggregation
           section
@@ -275,13 +275,13 @@ html(lang="en")
 
           section
             h2 Aggregating Spatial data
-            div e.g. Count votes by:
+            div E.g., count votes by:
             ul
               li County
               li.fragment City
               li.fragment State
               li.fragment County
-              li.fragment Zipcode? #[span can span multiple counties 🤷]
+              li.fragment Zipcode? #[span Can span multiple counties 🤷]
               li.fragment Custom areas
 
           section
@@ -294,7 +294,7 @@ html(lang="en")
               li.fragment 2020 June
               li.fragment 2020 Q1
               li.fragment 2020
-            div.fragment Take a look at the #[a(href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date") Date object]
+            div.fragment Take a look at the #[a(href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date") date object]
 
           section
             h2 Aggregating Temporal data
@@ -302,7 +302,7 @@ html(lang="en")
             ul
               li 2020 June 27 5:25PM
               li.fragment Week 26 of the year
-              li.fragment 5 - 6PM
+              li.fragment 5:00 - 6:00 PM
               li.fragment Saturday
               li.fragment June
           //- TODO: Make chart grouping by date
@@ -314,11 +314,11 @@ html(lang="en")
 
         section#introToJS
           section
-            h2 Intro to JS
+            h2 Introduction to JS
 
         section#JSONvsCSV
           section
-            h2 JSON vs CSV
+            h2 JSON vs. CSV
           div.flex.tiny
             div.half.tiny
               h3 Comma Separated File (CSV)
@@ -341,20 +341,20 @@ html(lang="en")
 
         section#nestingJS
           section
-            h2 Nesting, Folding, Pivoting, etc in JS
+            h2 Nesting, Folding, Pivoting, etc. in JS
             a(href="http://learnjsdata.com/group_data.html") http://learnjsdata.com/group_data.html
 
         section#nestingPython
           section
-            h2 Nesting, Folding, Pivoting, etc in Python
+            h2 Nesting, Folding, Pivoting, etc. in Python
 
         section#nestingTableau
           section
-            h2 Nesting, Folding, Pivoting, etc in Tableau?
+            h2 Nesting, Folding, Pivoting, etc. in Tableau?
 
         section#flask
           section
-            h2 Serving data from the backend (Intro to Flask)
+            h2 Serving data from the back-end (Introduction to Flask)
 
         section#review
           section(data-background-size="contain" data-background="../shared_images/what_sheet.png")#what
@@ -363,10 +363,10 @@ html(lang="en")
             h1 What we learned
             ul
               li Abstracting the data
-              li.fragment Types of Datasets
-              li.fragment Types of Attributes
-              li.fragment Sequential, Diverging Cyclical
-              li.fragment Data Aggregation (temporal and geo)
+              li.fragment Types of datasets
+              li.fragment Types of attributes
+              li.fragment Sequential, diverging, cyclical
+              li.fragment Data aggregation (temporal and geo)
 
 
     script(src="../js/reveal.js")
