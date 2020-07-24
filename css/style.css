@@ -2,7 +2,9 @@ body {
   background-color: #f9f9f9;
 }
 .reveal {
-  font-family: calluna, serif;
+  font-family: atten-new, sans-serif;
+  font-weight: 400;
+  font-style: normal;
   color: #474747;
 }
 .reveal .controls {
@@ -35,6 +37,9 @@ body {
   color: #003a70;
   font-family: 'Fjalla One', sans-serif;
   text-shadow: 0px 2px 2px rgba(0,0,0,0.25);
+}
+.reveal h1.title small {
+  margin-top: 10px;
 }
 .reveal h1.demo,
 .reveal h2.demo,
@@ -77,6 +82,7 @@ body {
 .reveal section img {
   border: none;
   box-shadow: none;
+  max-height: 90%;
 }
 .reveal #title h1,
 .reveal #title h2,
@@ -278,21 +284,39 @@ body {
   width: 100%;
   flex-wrap: wrap;
 }
+.reveal .flex * {
+  margin: auto;
+}
 .reveal .flex .quarter {
   width: 22%;
-  margin-right: 3%;
+  margin-right: 1%;
+  margin-left: 1%;
 }
 .reveal .flex .third {
   width: 30%;
-  margin-right: 3%;
+  margin-right: 1.5%;
+  margin-left: 1.5%;
 }
 .reveal .flex .half {
   width: 40%;
-  margin-right: 5%;
+  margin: auto;
 }
 .reveal .flex .twothirds {
   width: 60%;
-  margin-right: 6%;
+  margin-right: 3%;
+  margin-left: 3%;
+}
+.reveal .flex .flex1 {
+  flex: 1;
+}
+.reveal .flex .flex2 {
+  flex: 2;
+}
+.reveal .flex .flex3 {
+  flex: 3;
+}
+.reveal .flex .flex4 {
+  flex: 4;
 }
 .reveal .portrait {
   text-align: middle;
@@ -328,8 +352,8 @@ body {
 .reveal .reference {
   color: #8aa4c6;
   font-style: italic;
-  font-size: 60%;
   text-align: end;
+  line-height: 1.2;
 }
 .reveal .vcentered {
   margin-top: auto;
@@ -338,4 +362,14 @@ body {
 .reveal .markExample {
   width: 30%;
   padding: 2% 10%;
+}
+.reveal img {
+  max-width: 600px;
+}
+.reveal img.fill {
+  width: 100%;
+  max-width: 900px;
+}
+.reveal figcaption {
+  font-size: 20%;
 }

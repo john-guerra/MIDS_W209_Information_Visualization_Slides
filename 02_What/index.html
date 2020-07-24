@@ -26,10 +26,10 @@
           <div class="tiny">Partially based on<a href="https://www.cs.ubc.ca/~tmm/talks.html#minicourse14"> slides from Tamara Munzner</a></div>
         </section>
         <section id="outline">
-          <section>
+          <section class="full">
             <h2>What we are going to learn</h2>
-            <ul>
-              <li>Abstracting the data</li>
+            <ul class="small">
+              <li class="fragment">Abstracting the data</li>
               <li class="fragment">Types of datasets</li>
               <li class="fragment">Types of attributes</li>
               <li class="fragment">Sequential, diverging, cyclical</li>
@@ -37,8 +37,11 @@
               <li class="fragment">Deriving new data</li>
             </ul>
           </section>
+          <section>
+            <div><img src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo"></div>
+          </section>
         </section>
-        <section>
+        <section id="abstractingData">
           <section>
             <h1>Abstracting the data</h1>
           </section>
@@ -78,6 +81,9 @@
                 </ul>
               </div>
             </div>
+          </section>
+          <section>
+            <div><img src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo"></div>
           </section>
         </section>
         <section id="datasets">
@@ -430,6 +436,9 @@
               <li class="fragment">For dynamic data, you will need a data endpoint</li>
             </ul>
           </section>
+          <section>
+            <div><img src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo"></div>
+          </section>
         </section>
         <section id="attributes">
           <section>
@@ -462,6 +471,9 @@
               <li class="fragment">E.g., age, temperature, earnings</li>
             </ul>
           </section>
+          <section>
+            <div><img src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo"></div>
+          </section>
         </section>
         <section id="quantitative">
           <section>
@@ -473,7 +485,6 @@
             <ul>
               <li>The is a full range with a clear minimum</li>
               <li class="fragment">You can perform arithmetic</li>
-              <li class="fragment">Can be divergent or sequential</li>
               <li class="fragment">E.g., age, goals ⚽️, price 💰</li>
             </ul>
           </section>
@@ -486,6 +497,18 @@
               <li class="fragment">E.g., temperature, earnings, political affiliation index</li>
             </ul>
           </section>
+          <section>
+            <h2>Cyclical</h2>
+            <ul>
+              <li>There is a cycle in the data</li>
+              <li class="fragment">No starting point (?)</li>
+              <li class="fragment">Can be represented with cyclical channels</li>
+              <li class="fragment">E.g., Days of the week, hours in the day</li>
+            </ul>
+          </section>
+          <section>
+            <div><img src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo"></div>
+          </section>
         </section>
         <section id="dataAggregation">
           <section>
@@ -493,12 +516,12 @@
           </section>
           <section>
             <h2>Aggregating Spatial data</h2>
-            <div>E.g., count votes by:</div>
-            <ul>
+            <div class="small">E.g., count votes by:</div>
+            <ul class="tiny">
               <li>County</li>
               <li class="fragment">City</li>
               <li class="fragment">State</li>
-              <li class="fragment">County</li>
+              <li class="fragment">Country</li>
               <li class="fragment">Zipcode? <span>Can span multiple counties 🤷</span></li>
               <li class="fragment">Custom areas</li>
             </ul>
@@ -526,6 +549,9 @@
               <li class="fragment">Saturday</li>
               <li class="fragment">June</li>
             </ul>
+          </section>
+          <section>
+            <div><img src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo"></div>
           </section>
         </section>
         <section id="practice">
@@ -701,9 +727,12 @@
           </section>
         </section>
         <section id="review">
-          <section data-background-size="contain" data-background="../shared_images/what_sheet.png" id="what"></section>
           <section>
             <h1>What we learned</h1>
+          </section>
+          <section data-background-size="contain" data-background="../shared_images/what_sheet.png" id="what"></section>
+          <section>
+            <h2>What we learned</h2>
             <ul>
               <li>Abstracting the data</li>
               <li class="fragment">Types of datasets</li>
@@ -711,6 +740,9 @@
               <li class="fragment">Sequential, diverging, cyclical</li>
               <li class="fragment">Data aggregation (temporal and geo)</li>
             </ul>
+          </section>
+          <section>
+            <div><img src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo"></div>
           </section>
         </section>
       </div>
