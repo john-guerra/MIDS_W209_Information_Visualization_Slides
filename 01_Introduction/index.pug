@@ -737,8 +737,18 @@ html(lang="en")
           section(data-transition="none" data-background-size="contain" data-background="../shared_images/Jeff/CSE442-Tools-37.png").full
             a.page-watermark(href="https://courses.cs.washington.edu/courses/cse442/17au/lectures/CSE442-Tools.pdf") slides from Jeff Heer
 
-          section
-            h2 Interview Jeffrey Heer
+          //- section
+          //-   h2 Interview Jeffrey Heer
+
+          section#chooseTool
+            h2 Choose your tool
+
+            div.flex.bigger
+              strong.quarter.r-frame.fragment D3
+              strong.quarter.r-frame.fragment Vega-lite
+              strong.quarter.r-frame.fragment Altair
+              strong.quarter.r-frame.fragment Tableau
+
 
           section
             div
@@ -760,14 +770,6 @@ html(lang="en")
                 a.tiny(href="https://observablehq.com/@observablehq/user-manual") https://observablehq.com/@observablehq/user-manual
 
 
-        section#chooseTool
-          h2 Choose your tool
-
-          div.flex.bigger
-            strong.quarter.r-frame.fragment D3
-            strong.quarter.r-frame.fragment Vega-lite
-            strong.quarter.r-frame.fragment Altair
-            strong.quarter.r-frame.fragment Tableau
 
 
         section#d3Intro
@@ -804,7 +806,7 @@ html(lang="en")
           section
             h1 What we learned
             ul
-              li Infovis definition
+              li.fragment Infovis definition
               li.fragment Why should we visualize?
               li.fragment What are insights?
               li.fragment Problem abstraction

@@ -1,10 +1,10 @@
 doctype html
 html(lang="en")
   head
-    title Week 5 Rules of thumb
+    title Week 5 Rules of thumb. MIDS W209 Information Visualization Slides
     meta(charset="utf-8")
     meta(name="author", content="John Alexis Guerra Gómez")
-    meta(name="description", content="Week 2: Visualization Rules of thumb")
+    meta(name="description", content="Week 5 Rules of thumb. MIDS W209 Information Visualization Slides")
 
     meta(name="apple-mobile-web-app-capable" content="yes")
     meta(name="apple-mobile-web-app-status-bar-style" content="black-translucent")
@@ -40,7 +40,7 @@ html(lang="en")
             a(href="https://twitter.com/duto_guerra")  |  @duto_guerra
             br
 
-            a(href="https://johnguerra.co/lectures/MIDS_W209_Information_Visualization/02_What/", target="_blank") https://johnguerra.co/lectures/MIDS_W209_Information_Visualization/02_What/
+            a(href="https://johnguerra.co/lectures/MIDS_W209_Information_Visualization/05_Rules_of_thumb/", target="_blank") https://johnguerra.co/lectures/MIDS_W209_Information_Visualization/05_Rules_of_thumb/
 
           div.logo
             a(href="https://datascience.berkeley.edu/")
@@ -52,15 +52,490 @@ html(lang="en")
         section#outline
           section
             h2 What we are going to learn
-            ul
-              li
+            ul.small
+              li.fragment No unjustified 3D #[span.fragment or 2D]
+              li.fragment Readable text
+              li.fragment Eyes beat memory
+              li.fragment Visualization Mantra
+              li.fragment Responsiveness is required
+              li.fragment Function first, form next
 
-        section#review
+
+        section
+          section
+            h1 No unjustified 3D
+
 
           section
-            h1 What we learned
-            ul
-              li
+            h2 Unjustified 3D everywhere
+
+            .flex
+              .half
+                figure
+                  img.fill( src="../shared_images/vad_book_alldiagrams/unjustified3d_1.png", alt="Unjustified 3D example")
+                  figcaption.reference.supertiny
+                    a(href="http://viz.wtf/post/137826497077/eye-popping-3d-triangles") http://viz.wtf/post/137826497077/eye-popping-3d-triangles
+              .half
+                figure
+                  img.fill(src="../shared_images/vad_book_alldiagrams/unjustified3d_2.png", alt="Unjustified 3D example")
+                  figcaption.reference.supertiny
+                    a(href="http://viz.wtf/post/139002022202/designer-drugs-ht-ducqn") http://viz.wtf/post/139002022202/designer-drugs-ht-ducqn
+
+          section#stevensLaw
+            h2 Power of the plane
+
+            div#StevensLawChart
+
+
+            script(type="module").
+              import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+              import define from "https://api.observablehq.com/@john-guerra/stevenss-power-law.js?v=3";
+              const inspect = Inspector.into("#StevensLawChart");
+              (new Runtime).module(define, name => name === "chart" ? inspect() : undefined);
+
+
+          section
+            h2 Power of the plane 2
+
+            img(src="../shared_images/vad_book_alldiagrams/magnitude_channels_simplified.png", alt="Magnitude channels")
+
+
+
+          //- section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/05_rules-artery-2.png")
+          //- section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/05_rules-artery-3.png")
+
+          section
+            h2 Danger of depth
+
+            div We don’t really live in 3D #[span.fragment 👉 we #[strong see] in 2.05D]
+            ul.tiny
+              li.fragment acquire more info on image plane quickly from eye movements
+              li.fragment acquire more info for depth slower, from head/body motion
+            img(src="../shared_images/vad_book_alldiagrams/danger_of_depth.png", alt="Danger of Depth")
+
+
+          //- section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/05_rules-artery-4.png")
+
+          //- TODO Projection embedder
+
+          section
+            h2 Occlusion hides information
+            .flex
+              .half
+                ul
+                  li.fragment Interaction can resolve occlusion,
+                  li.fragment But at cost of time and cognitive load
+
+              .half
+                figure
+                  img(src="../shared_images/vad_book_alldiagrams/3d_occlusion.png", alt="Danger of Depth")
+                  figcaption.reference.supertiny Distortion Viewing Techniques for 3D Data. Carpendale et al. InfoVis1996.
+
+
+
+          //- section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/05_rules-artery-5.png")
+
+          section
+            h2 Perspective?
+            div Perspective distortion loses information
+            ul.small
+              li.fragment Interferes with all size channel encodings
+              li.fragment Power of the plane is lost!
+              figure
+                img(src="../shared_images/vad_book_alldiagrams/perspective_distortion.png", alt="Danger of Depth")
+                figcaption.reference.supertiny [Visualizing the Results of Multimedia Web Search Engines. #[br] Mukherjea, Hirata, and Hara. InfoVis 96]
+
+
+
+          //- section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/05_rules-artery-6.png")
+
+          section
+            h2 3D vs 2D bar charts
+            div.flex
+              .half
+                ul
+                  li 🚫#[del 3D bars]🚫
+                  ul.small
+                    li.fragment perspective distortion
+                    li.fragment occlusion
+                  li.fragment 2D faceting 👌🏻
+
+              .half
+                figure
+                  img.fill(src="../shared_images/vad_book_alldiagrams/3d_barcharts.png", alt="3D Barcharts")
+                  figcaption.reference.supertiny
+                    a(href="http://perceptualedge.com/files/GraphDesignIQ.html") [http://perceptualedge.com/files/GraphDesignIQ.html]
+
+
+          section
+            h2 Tilted text isn’t legible
+            div.flex
+              .half
+                figure
+                  img.fill(src="../shared_images/vad_book_alldiagrams/tilted_text.png", alt="Tilted Text")
+                  figcaption.reference.supertiny [Visualizing the World-Wide Web with the Navigational View Builder. Mukherjea and Foley. Computer Networks and ISDN Systems, 1995.]
+              div.half
+                ul.small
+                  li.fragment Tilted text #[span.fragment 👉 poor legibility]
+                  br
+                  li.fragment Further reading  :
+                    div.reference.supertiny [Exploring and Reducing the Effects of Orientation on Text Readability in Volumetric Displays. Grossman et al. CHI 2007]
+
+
+
+          //- section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/05_rules-artery-7.png")
+
+          section.full
+            h3 Power demand of a research facility
+            .flex
+              div.third.small #[strong Task: ] Identify/compare similar periods of time
+              figure.twothirds
+                img(max-width="400px" src="../shared_images/vad_book_alldiagrams/3d_time_series.png", alt="Bad example 3d time series")
+                figcaption.reference.supertiny
+                  a(href="https://www.win.tue.nl/~vanwijk/clv.pdf") [Cluster and Calendar based Visualization of Time Series Data. van Wijk and van Selow, Proc. InfoVis 99.]
+
+          section
+            h3 Transform to new data abstraction
+            .flex
+
+              .twothirds
+                figure
+                  img.fill( src="../shared_images/vad_book_alldiagrams/3d_time_series_fixed.png", alt="Bad example 3d time series fixed")
+                  figcaption.reference.supertiny
+                    a(href="https://www.win.tue.nl/~vanwijk/clv.pdf") [Cluster and Calendar based Visualization of Time Series Data. van Wijk and van Selow, Proc. InfoVis 99.]
+
+              .third
+                ul.small
+                  li.fragment Derived data: cluster hierarchy
+                  li.fragment Juxtapose multiple views (calendar)
+                  li.fragment Superimposed 2D curves (clusters)
+
+
+          //- section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/05_rules-artery-8.png")
+          //- section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/05_rules-artery-9.png")
+
+          section
+            h2 When to use 3D
+            .flex
+              .half
+                div
+                  strong Shape Perception
+
+                br
+                div.fragment
+                  ul.small
+                    li Benefits outweigh costs when #[strong target] is shape
+                    //- li.fragment Interactive navigation supports synthesis across many viewpoints
+                  br
+                  img(height="200px" src="../shared_images/vad_book_alldiagrams/why_targets_spatial_data.png", alt="Why Shape Target")
+
+              .half
+                figure
+                  img.fill( src="../shared_images/vad_book_alldiagrams/3d_justified.png", alt="3D justified shape detection")
+                  figcaption.reference.supertiny [Image-Based Streamline Generation and Rendering. Li and Shen. IEEE Trans. Visualization and Computer Graphics (TVCG) 13:3 (2007), 630–640.]
+
+
+          section.full
+            h2 Good usage of 3D
+
+            .flex
+              .third
+                //- div Economic growth curve
+                div.small(style="text-align:left") Constrained navigation steps #[br] through carefully designed viewpoints.
+
+              .twothirds
+                figure
+                  img(style="max-height:600px" src="../shared_images/economic_growth_3d.gif", alt="3D Economic Growth")
+                  figcaption.reference.supertiny
+                    a(href="http://www.nytimes.com/interactive/2015/03/19/upshot/3d-yield-curve-economic-growth.html") NY Times Article
+
+          //- TODO Virtual reality roller-coaster
+
+
+
+
+
+          //- section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/05_rules-artery-10.png")
+
+
+          section
+            h2 When to use 3D
+            .flex
+              .half
+                ul.small
+                  li.fragment Use 3D for true 3D spatial data 👍
+                  li.fragment 3D needs very careful justification for abstract data
+                   ul
+                    li.fragment enthusiasm in 1990s, but now skepticism
+                    li.fragment be especially careful with 3D for point clouds or networks
+              .half
+                figure
+                  img.fill( src="../shared_images/vad_book_alldiagrams/3d_node_link.jpg", alt="3D Node Link")
+                  figcaption.reference.supertiny [WEBPATH-a three dimensional Web history. Frecon and Smith. Proc. InfoVis 1999]
+
+
+          //- section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/05_rules-artery-11.png")
+
+        section
+          section
+            h1 No unjustified 2D
+
+          section.full
+            h3 No unjustified 2D
+            .flex
+              .twothirds
+                ul.small
+                  li.fragment Consider whether network data requires 2D spatial layout
+                  ul.small
+                    li.fragment especially if reading text is central to task!
+                    li.fragment arranging as network means lower information density and harder label lookup compared to text lists
+                  li.fragment benefits outweigh costs when topological structure/context important for task
+                  ul.small
+                    li.fragment be especially careful for search results, document collections, ontologies
+              .third
+
+                img.fill.vcentered( src="../shared_images/vad_book_alldiagrams/why_targets_networks.png", alt="Target Networks")
+
+          //- TODO crowded network example
+
+          section
+            h2 Do you really need a map?
+
+            .flex
+              .half
+                figure
+                  img.fill( src="../shared_images/covid_map_debate.png", alt="Covid Map debate")
+                  figcaption.reference.supertiny
+                    a(href="https://twitter.com/andishehnouraee/status/1284237474831761408?s=20") @andishehnouraee tweet
+
+              .half
+                ul.small
+                  li.fragment They use the position location
+                  li.fragment Use them for geographical tasks
+                  li.fragment Bad for comparison tasks
+                  li.fragment Don't do a map just because you have geo data
+
+          //- TODO Covid map
+
+          //- section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/05_rules-artery-12.png")
+
+
+        section
+          section
+            h1 Eyes beat memory
+
+
+          section
+            h3 Eyes beat memory
+            ul.small
+              li.fragment Principle: external cognition vs. internal memory
+              ul
+                li.fragment easy to compare by moving eyes between side-by-side views
+                li.fragment harder to compare visible item to memory of what you saw
+
+          section
+            h3 Eyes beat memory 2
+            ul.small
+              li.fragment Implications for animation
+              ul.small
+                li.fragment great for choreographed storytelling
+                li.fragment great for transitions between two states
+                li.fragment poor for many states with changes everywhere
+                ul.small
+                  li.fragment consider small multiples instead
+
+            figure
+              img.fill( src="../shared_images/vad_book_alldiagrams/eyes_beat_memory.png", alt="Eyes beat memory")
+
+
+
+          section
+            h3 Example: Cerebral
+
+            ul.small
+              li.fragment Small multiples: one graph instance per experimental condition
+              ul.small
+                li.fragment same spatial layout
+                li.fragment color differently, by condition
+
+            figure
+              img(style="max-height:300px; margin-top:-1.5em" src="../shared_images/vad_book_alldiagrams/cerebral.png", alt="Cerebral")
+              figcaption.reference.supertiny [Cerebral: Visualizing Multiple Experimental Conditions on a Graph with Biological Context. Barsky, Munzner, Gardy, and Kincaid. IEEE Trans. Visualization and Computer Graphics (Proc. InfoVis 2008) 14:6 (2008), 1253–1260.]
+
+
+          //- section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/05_rules-artery-13.png")
+          //- section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/05_rules-artery-14.png")
+
+          section
+            h2 Why not animation?
+            .flex
+              .half
+                ul.small
+                  li.fragment disparate frames and regions: comparison difficult
+                  ul.small
+                    li.fragment vs contiguous frames
+                    li.fragment vs small region
+                    li.fragment vs coherent motion of group
+                  li.fragment safe special case
+                  ul.small
+                    li.fragment animated transitions
+              .half
+                figure
+                  img.fill( src="../shared_images/vad_book_alldiagrams/cerebral_animation.gif", alt="Cerebral animation")
+                  figcaption.reference.supertiny [Cerebral: Visualizing Multiple Experimental Conditions on a Graph with Biological Context. Barsky, Munzner, Gardy, and Kincaid. IEEE Trans. Visualization and Computer Graphics (Proc. InfoVis 2008) 14:6 (2008), 1253–1260.]
+
+
+
+
+          //- section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/05_rules-artery-15.png")
+
+          section
+            h2 Change blindness
+            .flex
+              .half
+                div If attention is directed elsewhere, even drastic changes not noticeable
+              .half
+                figure
+                  video(width="100%" src="../shared_images/vad_book_alldiagrams/Airplane.mp4" , alt="Change blindness example" controls)
+                  figcaption.reference.supertiny
+                    a(href="http://www2.psych.ubc.ca/~rensink/flicker/download/") http://www2.psych.ubc.ca/~rensink/flicker/download/
+
+
+          section
+            h2 Resolution beats immersion
+
+            .flex
+              .third
+                figure
+                  img.fill( src="../shared_images/vad_book_alldiagrams/avoid_immersion.png", alt="Immersive Visualization example")
+                  figcaption.reference.supertiny [Development of an information visualization tool using virtual reality. Kirner and Martins. Proc. Symp. Applied Computing 2000]
+
+              .twothirds
+                ul.small
+                  li.fragment Immersion typically not helpful for abstract data
+                  ul.small
+                    li.fragment do not need sense of presence or stereoscopic 3D
+                    li.fragment desktop also better for workflow integration
+                  li.fragment Resolution much more important: pixels are the scarcest resource
+                  li.fragment Virtual reality for abstract data difficult to justify thus far
+                  ul.small
+                    li.fragment but stay tuned with second wave
+
+
+          //- section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/05_rules-artery-16.png")
+
+        section
+          section
+            h1 Visualization Mantra
+
+          section
+            h2 Visualization Mantra
+            ul.tiny
+              li Overview first, zoom and filter, then details on demand.
+              li.fragment Overview first, zoom and filter, then details on demand.
+              li.fragment Overview first, zoom and filter, then details on demand.
+              li.fragment Overview first, zoom and filter, then details on demand.
+              li.fragment Overview first, zoom and filter, then details on demand.
+              li.fragment Overview first, zoom and filter, then details on demand.
+              li.fragment Overview first, zoom and filter, then details on demand.
+              li.fragment Overview first, zoom and filter, then details on demand.
+              li.fragment Overview first, zoom and filter, then details on demand.
+              li.fragment Overview first, zoom and filter, then details on demand.
+            div.reference.tiny [The Eyes Have It: A Task by Data Type Taxonomy for Information Visualizations. Shneiderman. Proc. IEEE Visual Languages, pp. 336–343, 1996.]
+
+
+          section
+            h2 Overview
+
+            .flex
+              .half
+                ul
+                  li.fragment Overview #[span 👉 summary]
+                  ul
+                    li.fragment microcosm of full vis design problems
+                  li.fragment Useful for exploration
+              .half
+                img(src="../shared_images/vad_book_alldiagrams/why_actions_query.png", alt="Why query summarize")
+
+
+          section.demo
+            h3 Overview 👉 Zoom
+            figure
+              video(width="1200px" max-width="1200px" src="../shared_images/TreeVersity_Navigation.mp4" autoplay loop)
+
+              figcaption.small
+                a(href="http://treeversity.cattlab.umd.edu/?hierarchy=agency/bureau&db=tv2_budget&seqFrom=01/01/70&seqTo=01/01/15&currentFrom=40&title=US%20Federal%20Budget") TreeVersity2
+
+          section.demo
+            h3 Overview 👉 Filtering
+            figure
+              video(width="1200px" max-width="1200px" src="../shared_images/TreeVersity_Filtering.mp4" autoplay loop)
+              //- img(src="../shared_images/TreeVersity_Filtering.gif", alt="TreeVersity Filtering")
+
+              figcaption.small
+                a(href="http://treeversity.cattlab.umd.edu/?hierarchy=agency/bureau&db=tv2_budget&seqFrom=01/01/70&seqTo=01/01/15&currentFrom=40&title=US%20Federal%20Budget") TreeVersity2
+
+
+
+          //- section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/05_rules-artery-17.png")
+
+          section
+            h3 Bottoms up?
+
+            .flex
+              .half
+                ul.small
+                  li.fragment Sometimes makes sense to start small
+                  li.fragment Useful for presentation
+                  li.fragment Common in story telling
+                  li.fragment Helps explaining complex concepts
+              .half
+                figure
+                  video(style="max-height:480px;" src="../shared_images/segundaVueltaStory.mp4" autoplay loop)
+
+                  figcaption.small
+                    a.tiny(href="https://johnguerra.co/viz/resultadosSegundaVuelta2018/") Colombian Election Analysis
+
+
+
+        section
+          section
+            h1 Function first #[br] form next
+          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/05_rules-artery-18.png")
+
+          section
+            h2 Avoid aesthetics example
+            //- TODO aesthetics example
+
+
+          //- section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/05_rules-artery-19.png")
+          //- section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/05_rules-artery-20.png")
+
+        section
+          section
+            h1 Artery Viz
+
+          //- Artery viz
+          section
+            h3 Evaluations of Artery Visualizations for Heart Disease Diagnosis
+            a(href="http://vcg.seas.harvard.edu/files/pfister/files/borkin-infovis2011_camera-ready.pdf") Paper
+            br
+            a(href="http://vcg.seas.harvard.edu/files/pfister/files/infovis2011_slides_0.pdf") Slides
+          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/05_rules-artery-21.png")
+          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/05_rules-artery-22.png")
+          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/05_rules-artery-23.png")
+
+
+        section#review
+          section
+            h2 What we learned
+            ul.small
+              li.fragment No unjustified 3D #[span.fragment or 2D]
+              li.fragment Readable text
+              li.fragment Eyes beat memory
+              li.fragment Visualization Mantra
+              li.fragment Responsiveness is required
+              li.fragment Function first, form next
 
 
     script(src="../js/reveal.js")
@@ -69,6 +544,13 @@ html(lang="en")
     script(src="../plugin/search/search.js")
     script(src="../plugin/markdown/markdown.js")
     script(src="../plugin/highlight/highlight.js")
+
+    script(src="https://cdn.jsdelivr.net/npm/vega@5.13.0")
+    script(src="https://cdn.jsdelivr.net/npm/vega-lite@4.13.1")
+    script(src="https://cdn.jsdelivr.net/npm/vega-lite-api@0.11.0")
+    script(src="https://cdn.jsdelivr.net/npm/vega-tooltip@0.23.2")
+    script(src="./week4.js")
+
 
 
     script.
@@ -80,8 +562,8 @@ html(lang="en")
         hash: true,
         //- transition: "convex",
 
-        //- width: "90%",
-        //- height: "100%",
+        //- width: "100%",
+        //- height: "720px",
 
         plugins: [ RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight ]
       });
@@ -93,3 +575,4 @@ html(lang="en")
 
       ga("create", "UA-72531610-1", "auto");
       ga("send", "pageview");
+

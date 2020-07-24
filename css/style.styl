@@ -4,7 +4,15 @@ body
   background-color: #f9f9f9
 
 .reveal
-  font-family: calluna, serif
+  // font-family: calluna, serif
+  // font-family: azo-sans-web, sans-serif;
+
+
+  font-family: atten-new, sans-serif;
+
+  font-weight: 400;
+  font-style: normal;
+
   // font-family: 'PT Sans Narrow', sans-serif
   color: #474747
 
@@ -23,7 +31,8 @@ body
     font-family: 'Fjalla One', sans-serif
     text-shadow: 0px 2px 2px rgba(0,0,0,0.25)
 
-  // h1.title
+  h1.title small
+    margin-top:10px
     // font-size : 120%
 
   h1.demo, h2.demo, h3.demo, h4.demo, h5.demo, h6.demo
@@ -56,6 +65,7 @@ body
     img
       border none
       box-shadow none
+      max-height: 90%
 
   #title
     h1, h2, h3, h4, h5, h6
@@ -231,20 +241,36 @@ body
     width: 100%
     flex-wrap: wrap
 
+    *
+      margin: auto
+
     .quarter
       width: 22%
-      margin-right: 3%
+      margin-right: 1%
+      margin-left: 1%
 
     .third
       width: 30%
-      margin-right: 3%
+      margin-right: 1.5%
+      margin-left: 1.5%
     .half
       width: 40%
-      margin-right: 5%
+      // margin-right: 5%
+      margin: auto
 
     .twothirds
       width: 60%
-      margin-right: 6%
+      margin-right: 3%
+      margin-left: 3%
+
+    .flex1
+      flex:1
+    .flex2
+      flex:2
+    .flex3
+      flex:3
+    .flex4
+      flex:4
 
 
   .portrait
@@ -275,13 +301,15 @@ body
 
   section .full
     width: 100%
+    // min-width: 90vw
     height: 100%
 
   .reference
     color: #8aa4c6
     font-style: italic;
-    font-size: 60%;
+    // font-size: 20%;
     text-align: end;
+    line-height: 1.2;
     // font-family: 'Fjalla One', sans-serif
 
   .vcentered
@@ -291,3 +319,13 @@ body
   .markExample
     width: 30%
     padding: 2% 10%
+
+  img
+    max-width: 600px;
+  img.fill
+    width: 100%
+    max-width: 900px;
+
+
+  figcaption
+    font-size: 20%;

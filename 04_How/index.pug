@@ -53,7 +53,7 @@ html(lang="en")
           section
             h2 What we are going to learn
             ul.small
-              li Marks
+              li.fragment Marks
               li.fragment Channels
                 ul
                   li.fragment Ordered
@@ -61,10 +61,14 @@ html(lang="en")
               li.fragment Expressivity
               li.fragment Effectivity
 
+
         section
           //- how
           section(data-background-size="contain" data-background="../shared_images/how_sheet.png")
 
+          section
+            div
+              img(src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo")
         section#marksAndChannels
 
           section
@@ -195,6 +199,9 @@ html(lang="en")
                 a(href="https://observablehq.com/@d3/learn-d3-scales?collection=@d3/learn-d3") From Semiology of Graphics, colorized by mbostock.
 
 
+          section
+            div
+              img(src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo")
         section#effectivenessAndExpressiveness
           section
             h1 Effectiveness and Expressiveness
@@ -228,8 +235,6 @@ html(lang="en")
 
 
             script(type="module").
-
-              debugger;
               import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
               import define from "https://api.observablehq.com/@john-guerra/stevenss-power-law.js?v=3";
               const inspect = Inspector.into("#StevensLawChart");
@@ -242,12 +247,12 @@ html(lang="en")
           section.full
             h3 Accuracy: Vis Experiments
             figure
-              img(style="max-height:400px", src="/shared_images/vad_book_alldiagrams/vis_experiments.png" alt="Vis experiments results showing best accuracy")
+              img(style="max-height:400px", src="../shared_images/vad_book_alldiagrams/vis_experiments.png" alt="Vis experiments results showing best accuracy")
               figcaption.tiny.reference
                 a.tiny(href="http://vis.stanford.edu/files/2010-MTurk-CHI.pdf") Crowdsourcing Graphical Perception: Using MechanicalTurk to Assess Visualization Design
 
 
-          section.full
+          section
             h3 Discriminability
 
             div.flex
@@ -257,58 +262,130 @@ html(lang="en")
 
               div.half
                 figure
-                  img(style="max-height:400px", src="/shared_images/vad_book_alldiagrams/linewidth_map.png" alt="Line Width Map")
+                  img(style="max-height:400px", src="../shared_images/vad_book_alldiagrams/linewidth_map.png" alt="Line Width Map")
                   figcaption.tiny.reference
                     a.tiny(href="https://mappa.mundi.net/maps/maps_014/") Mappa.mundi.net TeleGeography's Traffic Flow Maps
 
           section.full
             h3 Separability
-            img(style="max-height:400px", src="/shared_images/vad_book_alldiagrams/separability.png" alt="Separability")
+            img(style="max-height:400px", src="../shared_images/vad_book_alldiagrams/separability.png" alt="Separability")
 
 
-          section
+          section.full
             h2 Popup
 
             div.flex
-              div.half
+              div(style="margin-left:-100px").small.quarter
                 ul
                   li Find the odd ones
                   li Which ones pop up?
+                div#saliencyN
+                div#saliencyShuffle
 
-              div.half
-                div.fragment#saliencyColor
-                div.fragment#saliencyShape
-                div.fragment#saliencySize
-                div.fragment#saliencyAngle
-                div.fragment#saliencyOpacity
+
+              div(style="width:60%; flex:1;").r-stretch
+                .flex
+                  div.fragment#saliencyColor.half
+                  div.fragment#saliencyShape.half
+                  div.fragment#saliencySize.half
+                  div.fragment#saliencyAngle.half
+                  div.fragment#saliencyOpacity.half
+
 
               script(type="module").
                 import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
                 import define from "https://api.observablehq.com/@john-guerra/visual-saliency.js?v=3";
-                (new Runtime).module(define, name => name === "color" ? Inspector.into("#saliencyColor")() : undefined);
+                (new Runtime).module(define, name => {
+                  if (name === "viewof n") return Inspector.into("#saliencyN")();
+                  if (name === "viewof shuffle") return Inspector.into("#saliencyShuffle")();
+                  if (name === "color") return Inspector.into("#saliencyColor")();
+                  if (name === "size") return Inspector.into("#saliencySize")();
+                  if (name === "shape") return Inspector.into("#saliencyShape")();
+                  if (name === "opacity") return Inspector.into("#saliencyOpacity")();
+                  if (name === "angle") return Inspector.into("#saliencyAngle")();
+                });
 
 
 
 
+          section
+            h2 Grouping
 
-          //- section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/tamara_course14_session1-35.png")
-          //- section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/tamara_course14_session1-36.png")
-          //- section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/tamara_course14_session1-37.png")
-          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/tamara_course14_session1-38.png")
-          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/tamara_course14_session1-39.png")
-          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/tamara_course14_session1-40.png")
-          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/tamara_course14_session1-41.png")
+            .flex
+              .half
+                ul
+                  li.fragment Containment
+                  li.fragment Connection
+              .half
+                img(src="../shared_images/vad_book_alldiagrams/containment_connection.png", alt="Containment and Connection")
+
+          //- TODO containment example
+
+          section
+            h2 Grouping 2
+            .flex
+              .half
+                ul
+                  li.fragment Proximity: #[span.fragment 👉 use spatial separation]
+                  li.fragment Similarity: #[span.fragment 👉 Use categorical channels]
+              .half
+                img(src="../shared_images/vad_book_alldiagrams/identity_channels.png", alt="Identity Channels")
+
+          //- TODO Add examples for proximity and similarity
+
+          section
+            h2 Relative vs Absolute Judgements
+            .flex
+              div.half.small
+                ul
+                  li Perceptual #[span.fragment 👉 mostly relative judgements, not absolute]
+                  li.fragment That’s why accuracy increases with:
+                    ul
+                      li common frame
+                      li scale and alignment
+              .half
+                figure
+                  img.fragment(height="160px" src="../shared_images/vad_book_alldiagrams/absolute_relative1.png" alt="Not Aligned comparison")
+                  img.fragment(height="160px" src="../shared_images/vad_book_alldiagrams/absolute_relative2.png" alt="Position along Unaligned common scale")
+                  img.fragment(height="160px" src="../shared_images/vad_book_alldiagrams/absolute_relative3.png" alt="Aligned scale")
+
+              .reference(style="font-size:12pt") after [Graphical Perception: Theory, Experimentation, and Application to the Development of Graphical Methods. Cleveland and McGill. Journ.  American Statistical Association 79:387 (1984), 531–554.]
+
+          section
+            h2 Weber's Law
+            div Ratio of increment to background is constant.
+              ul.line-compressed
+                li Lift 2Kg
+                li.fragment then add 2Kg
+                li.fragment then add 20K
+                li.fragment then add 2K #[span.fragment would you feel them?]
+            div.fragment Popup is hard in a noisy visualization
 
 
 
+
+          //- section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/tamara_course14_session1-40.png")
+          //- section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/tamara_course14_session1-41.png")
+
+
+
+          section
+            div
+              img(src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo")
 
         section#review
           section(data-background-size="contain" data-background="../shared_images/how_sheet.png")#what
 
           section
-            h1 What we learned
-            ul
-              li
+            h2 What we learned
+            ul.small
+              li.fragment Marks
+              li.fragment Channels
+                ul
+                  li.fragment Ordered
+                  li.fragment Categorical
+              li.fragment Expressivity
+              li.fragment Effectivity
 
 
     script(src="../js/reveal.js")
@@ -335,8 +412,8 @@ html(lang="en")
         hash: true,
         //- transition: "convex",
 
-        //- width: "90%",
-        //- height: "100%",
+        //- width: "100%",
+        //- height: "720px",
 
         plugins: [ RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight ]
       });

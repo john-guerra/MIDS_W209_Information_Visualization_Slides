@@ -29,7 +29,7 @@
           <section>
             <h2>What we are going to learn</h2>
             <ul class="small">
-              <li>Marks</li>
+              <li class="fragment">Marks</li>
               <li class="fragment">Channels
                 <ul>
                   <li class="fragment">Ordered</li>
@@ -43,6 +43,9 @@
         </section>
         <section>
           <section data-background-size="contain" data-background="../shared_images/how_sheet.png"></section>
+          <section>
+            <div><img src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo"></div>
+          </section>
         </section>
         <section id="marksAndChannels">
           <section>
@@ -161,6 +164,9 @@
               <figcaption class="reference"><a href="https://observablehq.com/@d3/learn-d3-scales?collection=@d3/learn-d3">From Semiology of Graphics, colorized by mbostock.</a></figcaption>
             </figure>
           </section>
+          <section>
+            <div><img src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo"></div>
+          </section>
         </section>
         <section id="effectivenessAndExpressiveness">
           <section>
@@ -192,7 +198,6 @@
             <h2>Accuracy: Fundamental Theory</h2>
             <div id="StevensLawChart"></div>
             <script type="module">
-              debugger;
               import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
               import define from "https://api.observablehq.com/@john-guerra/stevenss-power-law.js?v=3";
               const inspect = Inspector.into("#StevensLawChart");
@@ -203,45 +208,56 @@
           </section>
           <section class="full">
             <h3>Accuracy: Vis Experiments</h3>
-            <figure><img style="max-height:400px" src="/shared_images/vad_book_alldiagrams/vis_experiments.png" alt="Vis experiments results showing best accuracy">
+            <figure><img style="max-height:400px" src="../shared_images/vad_book_alldiagrams/vis_experiments.png" alt="Vis experiments results showing best accuracy">
               <figcaption class="tiny reference"><a class="tiny" href="http://vis.stanford.edu/files/2010-MTurk-CHI.pdf">Crowdsourcing Graphical Perception: Using MechanicalTurk to Assess Visualization Design</a></figcaption>
             </figure>
           </section>
-          <section class="full">
+          <section>
             <h3>Discriminability</h3>
             <div class="flex">
               <div class="half">How many steps are usable?<br><span class="fragment">line width: Not many 🤷🏼‍♂️</span></div>
               <div class="half">
-                <figure><img style="max-height:400px" src="/shared_images/vad_book_alldiagrams/linewidth_map.png" alt="Line Width Map">
+                <figure><img style="max-height:400px" src="../shared_images/vad_book_alldiagrams/linewidth_map.png" alt="Line Width Map">
                   <figcaption class="tiny reference"><a class="tiny" href="https://mappa.mundi.net/maps/maps_014/">Mappa.mundi.net TeleGeography's Traffic Flow Maps</a></figcaption>
                 </figure>
               </div>
             </div>
           </section>
           <section class="full">
-            <h3>Separability</h3><img style="max-height:400px" src="/shared_images/vad_book_alldiagrams/separability.png" alt="Separability">
+            <h3>Separability</h3><img style="max-height:400px" src="../shared_images/vad_book_alldiagrams/separability.png" alt="Separability">
           </section>
-          <section>
+          <section class="full">
             <h2>Popup</h2>
             <div class="flex">
-              <div class="half">
+              <div class="small quarter" style="margin-left:-100px">
                 <ul>
                   <li>Find the odd ones</li>
                   <li>Which ones pop up?</li>
                 </ul>
+                <div id="saliencyN"></div>
+                <div id="saliencyShuffle"></div>
               </div>
-              <div class="half">
-                <div class="fragment" id="saliencyColor"></div>
-                <div class="fragment" id="saliencyShape"></div>
-                <div class="fragment" id="saliencySize"></div>
-                <div class="fragment" id="saliencyAngle"></div>
-                <div class="fragment" id="saliencyOpacity"></div>
+              <div class="r-stretch" style="width:60%; flex:1;">
+                <div class="flex">
+                  <div class="fragment half" id="saliencyColor"></div>
+                  <div class="fragment half" id="saliencyShape"></div>
+                  <div class="fragment half" id="saliencySize"></div>
+                  <div class="fragment half" id="saliencyAngle"></div>
+                  <div class="fragment half" id="saliencyOpacity"></div>
+                </div>
               </div>
               <script type="module">
                 import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
                 import define from "https://api.observablehq.com/@john-guerra/visual-saliency.js?v=3";
-                (new Runtime).module(define, name => name === "color" ? Inspector.into("#saliencyColor")() : undefined);
-                
+                (new Runtime).module(define, name => {
+                  if (name === "viewof n") return Inspector.into("#saliencyN")();
+                  if (name === "viewof shuffle") return Inspector.into("#saliencyShuffle")();
+                  if (name === "color") return Inspector.into("#saliencyColor")();
+                  if (name === "size") return Inspector.into("#saliencySize")();
+                  if (name === "shape") return Inspector.into("#saliencyShape")();
+                  if (name === "opacity") return Inspector.into("#saliencyOpacity")();
+                  if (name === "angle") return Inspector.into("#saliencyAngle")();
+                });
                 
                 
                 
@@ -249,17 +265,80 @@
               </script>
             </div>
           </section>
-          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/tamara_course14_session1-38.png"></section>
-          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/tamara_course14_session1-39.png"></section>
-          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/tamara_course14_session1-40.png"></section>
-          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/tamara_course14_session1-41.png"></section>
+          <section>
+            <h2>Grouping</h2>
+            <div class="flex">
+              <div class="half">
+                <ul>
+                  <li class="fragment">Containment</li>
+                  <li class="fragment">Connection</li>
+                </ul>
+              </div>
+              <div class="half"><img src="../shared_images/vad_book_alldiagrams/containment_connection.png" alt="Containment and Connection"></div>
+            </div>
+          </section>
+          <section>
+            <h2>Grouping 2</h2>
+            <div class="flex">
+              <div class="half">
+                <ul>
+                  <li class="fragment">Proximity: <span class="fragment">👉 use spatial separation</span></li>
+                  <li class="fragment">Similarity: <span class="fragment">👉 Use categorical channels</span></li>
+                </ul>
+              </div>
+              <div class="half"><img src="../shared_images/vad_book_alldiagrams/identity_channels.png" alt="Identity Channels"></div>
+            </div>
+          </section>
+          <section>
+            <h2>Relative vs Absolute Judgements</h2>
+            <div class="flex">
+              <div class="half small">
+                <ul>
+                  <li>Perceptual <span class="fragment">👉 mostly relative judgements, not absolute</span></li>
+                  <li class="fragment">That’s why accuracy increases with:
+                    <ul>
+                      <li>common frame</li>
+                      <li>scale and alignment</li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              <div class="half">
+                <figure><img class="fragment" height="160px" src="../shared_images/vad_book_alldiagrams/absolute_relative1.png" alt="Not Aligned comparison"><img class="fragment" height="160px" src="../shared_images/vad_book_alldiagrams/absolute_relative2.png" alt="Position along Unaligned common scale"><img class="fragment" height="160px" src="../shared_images/vad_book_alldiagrams/absolute_relative3.png" alt="Aligned scale"></figure>
+              </div>
+              <div class="reference" style="font-size:12pt">after [Graphical Perception: Theory, Experimentation, and Application to the Development of Graphical Methods. Cleveland and McGill. Journ.  American Statistical Association 79:387 (1984), 531–554.]</div>
+            </div>
+          </section>
+          <section>
+            <h2>Weber's Law</h2>
+            <div>Ratio of increment to background is constant.
+              <ul class="line-compressed">
+                <li>Lift 2Kg</li>
+                <li class="fragment">then add 2Kg</li>
+                <li class="fragment">then add 20K</li>
+                <li class="fragment">then add 2K <span class="fragment">would you feel them?</span></li>
+              </ul>
+            </div>
+            <div class="fragment">Popup is hard in a noisy visualization</div>
+          </section>
+          <section>
+            <div><img src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo"></div>
+          </section>
         </section>
         <section id="review">
           <section data-background-size="contain" data-background="../shared_images/how_sheet.png" id="what"></section>
           <section>
-            <h1>What we learned</h1>
-            <ul>
-              <li></li>
+            <h2>What we learned</h2>
+            <ul class="small">
+              <li class="fragment">Marks</li>
+              <li class="fragment">Channels
+                <ul>
+                  <li class="fragment">Ordered</li>
+                  <li class="fragment">Categorical</li>
+                </ul>
+              </li>
+              <li class="fragment">Expressivity</li>
+              <li class="fragment">Effectivity</li>
             </ul>
           </section>
         </section>
@@ -285,8 +364,8 @@
         hash: true,
         //- transition: "convex",
       
-        //- width: "90%",
-        //- height: "100%",
+        //- width: "100%",
+        //- height: "720px",
       
         plugins: [ RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight ]
       });

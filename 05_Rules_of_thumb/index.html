@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Week 5 Rules of thumb</title>
+    <title>Week 5 Rules of thumb. MIDS W209 Information Visualization Slides</title>
     <meta charset="utf-8">
     <meta name="author" content="John Alexis Guerra Gómez">
-    <meta name="description" content="Week 2: Visualization Rules of thumb">
+    <meta name="description" content="Week 5 Rules of thumb. MIDS W209 Information Visualization Slides">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,23 +21,457 @@
         <section>
           <h1 class="title">Rules of Thumb<br><small>MIDS W209: Information Visualization</small></h1>
           <div class="r-stretch"></div>
-          <div class="tiny"><a href="https://johnguerra.co/" target="_blank"><strong> John Alexis Guerra Gómez</strong></a><span> |  john.guerra[at]gmail.com</span><a href="https://twitter.com/duto_guerra"> |  @duto_guerra</a><br><a href="https://johnguerra.co/lectures/MIDS_W209_Information_Visualization/02_What/" target="_blank">https://johnguerra.co/lectures/MIDS_W209_Information_Visualization/02_What/</a></div>
+          <div class="tiny"><a href="https://johnguerra.co/" target="_blank"><strong> John Alexis Guerra Gómez</strong></a><span> |  john.guerra[at]gmail.com</span><a href="https://twitter.com/duto_guerra"> |  @duto_guerra</a><br><a href="https://johnguerra.co/lectures/MIDS_W209_Information_Visualization/05_Rules_of_thumb/" target="_blank">https://johnguerra.co/lectures/MIDS_W209_Information_Visualization/05_Rules_of_thumb/</a></div>
           <div class="logo"><a href="https://datascience.berkeley.edu/"><img class="logo" src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo"></a></div>
           <div class="tiny">Partially based on<a href="https://www.cs.ubc.ca/~tmm/talks.html#minicourse14"> slides from Tamara Munzner</a></div>
         </section>
         <section id="outline">
           <section>
             <h2>What we are going to learn</h2>
-            <ul>
-              <li></li>
+            <ul class="small">
+              <li class="fragment">No unjustified 3D <span class="fragment">or 2D</span></li>
+              <li class="fragment">Readable text</li>
+              <li class="fragment">Eyes beat memory</li>
+              <li class="fragment">Visualization Mantra</li>
+              <li class="fragment">Responsiveness is required</li>
+              <li class="fragment">Function first, form next</li>
             </ul>
           </section>
         </section>
+        <section>
+          <section>
+            <h1>No unjustified 3D</h1>
+          </section>
+          <section>
+            <h2>Unjustified 3D everywhere</h2>
+            <div class="flex">
+              <div class="half">
+                <figure><img class="fill" src="../shared_images/vad_book_alldiagrams/unjustified3d_1.png" alt="Unjustified 3D example">
+                  <figcaption class="reference supertiny"><a href="http://viz.wtf/post/137826497077/eye-popping-3d-triangles">http://viz.wtf/post/137826497077/eye-popping-3d-triangles</a></figcaption>
+                </figure>
+              </div>
+              <div class="half">
+                <figure><img class="fill" src="../shared_images/vad_book_alldiagrams/unjustified3d_2.png" alt="Unjustified 3D example">
+                  <figcaption class="reference supertiny"><a href="http://viz.wtf/post/139002022202/designer-drugs-ht-ducqn">http://viz.wtf/post/139002022202/designer-drugs-ht-ducqn</a></figcaption>
+                </figure>
+              </div>
+            </div>
+          </section>
+          <section id="stevensLaw">
+            <h2>Power of the plane</h2>
+            <div id="StevensLawChart"></div>
+            <script type="module">
+              import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+              import define from "https://api.observablehq.com/@john-guerra/stevenss-power-law.js?v=3";
+              const inspect = Inspector.into("#StevensLawChart");
+              (new Runtime).module(define, name => name === "chart" ? inspect() : undefined);
+              
+              
+            </script>
+          </section>
+          <section>
+            <h2>Power of the plane 2</h2><img src="../shared_images/vad_book_alldiagrams/magnitude_channels_simplified.png" alt="Magnitude channels">
+          </section>
+          <section>
+            <h2>Danger of depth</h2>
+            <div>We don’t really live in 3D <span class="fragment">👉 we <strong>see</strong> in 2.05D</span></div>
+            <ul class="tiny">
+              <li class="fragment">acquire more info on image plane quickly from eye movements</li>
+              <li class="fragment">acquire more info for depth slower, from head/body motion</li>
+            </ul><img src="../shared_images/vad_book_alldiagrams/danger_of_depth.png" alt="Danger of Depth">
+          </section>
+          <section>
+            <h2>Occlusion hides information</h2>
+            <div class="flex">
+              <div class="half">
+                <ul>
+                  <li class="fragment">Interaction can resolve occlusion,</li>
+                  <li class="fragment">But at cost of time and cognitive load</li>
+                </ul>
+              </div>
+              <div class="half">
+                <figure><img src="../shared_images/vad_book_alldiagrams/3d_occlusion.png" alt="Danger of Depth">
+                  <figcaption class="reference supertiny">Distortion Viewing Techniques for 3D Data. Carpendale et al. InfoVis1996.</figcaption>
+                </figure>
+              </div>
+            </div>
+          </section>
+          <section>
+            <h2>Perspective?</h2>
+            <div>Perspective distortion loses information</div>
+            <ul class="small">
+              <li class="fragment">Interferes with all size channel encodings</li>
+              <li class="fragment">Power of the plane is lost!</li>
+              <figure><img src="../shared_images/vad_book_alldiagrams/perspective_distortion.png" alt="Danger of Depth">
+                <figcaption class="reference supertiny">[Visualizing the Results of Multimedia Web Search Engines. <br> Mukherjea, Hirata, and Hara. InfoVis 96]</figcaption>
+              </figure>
+            </ul>
+          </section>
+          <section>
+            <h2>3D vs 2D bar charts</h2>
+            <div class="flex">
+              <div class="half">
+                <ul>
+                  <li>🚫
+                    <del>3D bars</del>🚫
+                  </li>
+                  <ul class="small">
+                    <li class="fragment">perspective distortion</li>
+                    <li class="fragment">occlusion</li>
+                  </ul>
+                  <li class="fragment">2D faceting 👌🏻</li>
+                </ul>
+              </div>
+              <div class="half">
+                <figure><img class="fill" src="../shared_images/vad_book_alldiagrams/3d_barcharts.png" alt="3D Barcharts">
+                  <figcaption class="reference supertiny"><a href="http://perceptualedge.com/files/GraphDesignIQ.html">[http://perceptualedge.com/files/GraphDesignIQ.html]</a></figcaption>
+                </figure>
+              </div>
+            </div>
+          </section>
+          <section>
+            <h2>Tilted text isn’t legible</h2>
+            <div class="flex">
+              <div class="half">
+                <figure><img class="fill" src="../shared_images/vad_book_alldiagrams/tilted_text.png" alt="Tilted Text">
+                  <figcaption class="reference supertiny">[Visualizing the World-Wide Web with the Navigational View Builder. Mukherjea and Foley. Computer Networks and ISDN Systems, 1995.]</figcaption>
+                </figure>
+              </div>
+              <div class="half">
+                <ul class="small">
+                  <li class="fragment">Tilted text <span class="fragment">👉 poor legibility</span></li><br>
+                  <li class="fragment">Further reading  :
+                    <div class="reference supertiny">[Exploring and Reducing the Effects of Orientation on Text Readability in Volumetric Displays. Grossman et al. CHI 2007]</div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
+          <section class="full">
+            <h3>Power demand of a research facility</h3>
+            <div class="flex">
+              <div class="third small"><strong>Task: </strong> Identify/compare similar periods of time</div>
+              <figure class="twothirds"><img max-width="400px" src="../shared_images/vad_book_alldiagrams/3d_time_series.png" alt="Bad example 3d time series">
+                <figcaption class="reference supertiny"><a href="https://www.win.tue.nl/~vanwijk/clv.pdf">[Cluster and Calendar based Visualization of Time Series Data. van Wijk and van Selow, Proc. InfoVis 99.]</a></figcaption>
+              </figure>
+            </div>
+          </section>
+          <section>
+            <h3>Transform to new data abstraction</h3>
+            <div class="flex">
+              <div class="twothirds">
+                <figure><img class="fill" src="../shared_images/vad_book_alldiagrams/3d_time_series_fixed.png" alt="Bad example 3d time series fixed">
+                  <figcaption class="reference supertiny"><a href="https://www.win.tue.nl/~vanwijk/clv.pdf">[Cluster and Calendar based Visualization of Time Series Data. van Wijk and van Selow, Proc. InfoVis 99.]</a></figcaption>
+                </figure>
+              </div>
+              <div class="third">
+                <ul class="small">
+                  <li class="fragment">Derived data: cluster hierarchy</li>
+                  <li class="fragment">Juxtapose multiple views (calendar)</li>
+                  <li class="fragment">Superimposed 2D curves (clusters)</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+          <section>
+            <h2>When to use 3D</h2>
+            <div class="flex">
+              <div class="half">
+                <div><strong>Shape Perception</strong></div><br>
+                <div class="fragment">
+                  <ul class="small">
+                    <li>Benefits outweigh costs when <strong>target</strong> is shape</li>
+                  </ul><br><img height="200px" src="../shared_images/vad_book_alldiagrams/why_targets_spatial_data.png" alt="Why Shape Target">
+                </div>
+              </div>
+              <div class="half">
+                <figure><img class="fill" src="../shared_images/vad_book_alldiagrams/3d_justified.png" alt="3D justified shape detection">
+                  <figcaption class="reference supertiny">[Image-Based Streamline Generation and Rendering. Li and Shen. IEEE Trans. Visualization and Computer Graphics (TVCG) 13:3 (2007), 630–640.]</figcaption>
+                </figure>
+              </div>
+            </div>
+          </section>
+          <section class="full">
+            <h2>Good usage of 3D</h2>
+            <div class="flex">
+              <div class="third">
+                <div class="small" style="text-align:left">Constrained navigation steps <br> through carefully designed viewpoints.</div>
+              </div>
+              <div class="twothirds">
+                <figure><img style="max-height:600px" src="../shared_images/economic_growth_3d.gif" alt="3D Economic Growth">
+                  <figcaption class="reference supertiny"><a href="http://www.nytimes.com/interactive/2015/03/19/upshot/3d-yield-curve-economic-growth.html">NY Times Article</a></figcaption>
+                </figure>
+              </div>
+            </div>
+          </section>
+          <section>
+            <h2>When to use 3D</h2>
+            <div class="flex">
+              <div class="half">
+                <ul class="small">
+                  <li class="fragment">Use 3D for true 3D spatial data 👍</li>
+                  <li class="fragment">3D needs very careful justification for abstract data
+                    <ul>
+                      <li class="fragment">enthusiasm in 1990s, but now skepticism</li>
+                      <li class="fragment">be especially careful with 3D for point clouds or networks</li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              <div class="half">
+                <figure><img class="fill" src="../shared_images/vad_book_alldiagrams/3d_node_link.jpg" alt="3D Node Link">
+                  <figcaption class="reference supertiny">[WEBPATH-a three dimensional Web history. Frecon and Smith. Proc. InfoVis 1999]</figcaption>
+                </figure>
+              </div>
+            </div>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h1>No unjustified 2D</h1>
+          </section>
+          <section class="full">
+            <h3>No unjustified 2D</h3>
+            <div class="flex">
+              <div class="twothirds">
+                <ul class="small">
+                  <li class="fragment">Consider whether network data requires 2D spatial layout</li>
+                  <ul class="small">
+                    <li class="fragment">especially if reading text is central to task!</li>
+                    <li class="fragment">arranging as network means lower information density and harder label lookup compared to text lists</li>
+                  </ul>
+                  <li class="fragment">benefits outweigh costs when topological structure/context important for task</li>
+                  <ul class="small">
+                    <li class="fragment">be especially careful for search results, document collections, ontologies</li>
+                  </ul>
+                </ul>
+              </div>
+              <div class="third"><img class="fill vcentered" src="../shared_images/vad_book_alldiagrams/why_targets_networks.png" alt="Target Networks"></div>
+            </div>
+          </section>
+          <section>
+            <h2>Do you really need a map?</h2>
+            <div class="flex">
+              <div class="half">
+                <figure><img class="fill" src="../shared_images/covid_map_debate.png" alt="Covid Map debate">
+                  <figcaption class="reference supertiny"><a href="https://twitter.com/andishehnouraee/status/1284237474831761408?s=20">@andishehnouraee tweet</a></figcaption>
+                </figure>
+              </div>
+              <div class="half">
+                <ul class="small">
+                  <li class="fragment">They use the position location</li>
+                  <li class="fragment">Use them for geographical tasks</li>
+                  <li class="fragment">Bad for comparison tasks</li>
+                  <li class="fragment">Don't do a map just because you have geo data</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h1>Eyes beat memory</h1>
+          </section>
+          <section>
+            <h3>Eyes beat memory</h3>
+            <ul class="small">
+              <li class="fragment">Principle: external cognition vs. internal memory</li>
+              <ul>
+                <li class="fragment">easy to compare by moving eyes between side-by-side views</li>
+                <li class="fragment">harder to compare visible item to memory of what you saw</li>
+              </ul>
+            </ul>
+          </section>
+          <section>
+            <h3>Eyes beat memory 2</h3>
+            <ul class="small">
+              <li class="fragment">Implications for animation</li>
+              <ul class="small">
+                <li class="fragment">great for choreographed storytelling</li>
+                <li class="fragment">great for transitions between two states</li>
+                <li class="fragment">poor for many states with changes everywhere</li>
+                <ul class="small">
+                  <li class="fragment">consider small multiples instead</li>
+                </ul>
+              </ul>
+            </ul>
+            <figure><img class="fill" src="../shared_images/vad_book_alldiagrams/eyes_beat_memory.png" alt="Eyes beat memory"></figure>
+          </section>
+          <section>
+            <h3>Example: Cerebral</h3>
+            <ul class="small">
+              <li class="fragment">Small multiples: one graph instance per experimental condition</li>
+              <ul class="small">
+                <li class="fragment">same spatial layout</li>
+                <li class="fragment">color differently, by condition</li>
+              </ul>
+            </ul>
+            <figure><img style="max-height:300px; margin-top:-1.5em" src="../shared_images/vad_book_alldiagrams/cerebral.png" alt="Cerebral">
+              <figcaption class="reference supertiny">[Cerebral: Visualizing Multiple Experimental Conditions on a Graph with Biological Context. Barsky, Munzner, Gardy, and Kincaid. IEEE Trans. Visualization and Computer Graphics (Proc. InfoVis 2008) 14:6 (2008), 1253–1260.]</figcaption>
+            </figure>
+          </section>
+          <section>
+            <h2>Why not animation?</h2>
+            <div class="flex">
+              <div class="half">
+                <ul class="small">
+                  <li class="fragment">disparate frames and regions: comparison difficult</li>
+                  <ul class="small">
+                    <li class="fragment">vs contiguous frames</li>
+                    <li class="fragment">vs small region</li>
+                    <li class="fragment">vs coherent motion of group</li>
+                  </ul>
+                  <li class="fragment">safe special case</li>
+                  <ul class="small">
+                    <li class="fragment">animated transitions</li>
+                  </ul>
+                </ul>
+              </div>
+              <div class="half">
+                <figure><img class="fill" src="../shared_images/vad_book_alldiagrams/cerebral_animation.gif" alt="Cerebral animation">
+                  <figcaption class="reference supertiny">[Cerebral: Visualizing Multiple Experimental Conditions on a Graph with Biological Context. Barsky, Munzner, Gardy, and Kincaid. IEEE Trans. Visualization and Computer Graphics (Proc. InfoVis 2008) 14:6 (2008), 1253–1260.]</figcaption>
+                </figure>
+              </div>
+            </div>
+          </section>
+          <section>
+            <h2>Change blindness</h2>
+            <div class="flex">
+              <div class="half">
+                <div>If attention is directed elsewhere, even drastic changes not noticeable</div>
+              </div>
+              <div class="half">
+                <figure>
+                  <video width="100%" src="../shared_images/vad_book_alldiagrams/Airplane.mp4" alt="Change blindness example" controls></video>
+                  <figcaption class="reference supertiny"><a href="http://www2.psych.ubc.ca/~rensink/flicker/download/">http://www2.psych.ubc.ca/~rensink/flicker/download/</a></figcaption>
+                </figure>
+              </div>
+            </div>
+          </section>
+          <section>
+            <h2>Resolution beats immersion</h2>
+            <div class="flex">
+              <div class="third">
+                <figure><img class="fill" src="../shared_images/vad_book_alldiagrams/avoid_immersion.png" alt="Immersive Visualization example">
+                  <figcaption class="reference supertiny">[Development of an information visualization tool using virtual reality. Kirner and Martins. Proc. Symp. Applied Computing 2000]</figcaption>
+                </figure>
+              </div>
+              <div class="twothirds">
+                <ul class="small">
+                  <li class="fragment">Immersion typically not helpful for abstract data</li>
+                  <ul class="small">
+                    <li class="fragment">do not need sense of presence or stereoscopic 3D</li>
+                    <li class="fragment">desktop also better for workflow integration</li>
+                  </ul>
+                  <li class="fragment">Resolution much more important: pixels are the scarcest resource</li>
+                  <li class="fragment">Virtual reality for abstract data difficult to justify thus far</li>
+                  <ul class="small">
+                    <li class="fragment">but stay tuned with second wave</li>
+                  </ul>
+                </ul>
+              </div>
+            </div>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h1>Visualization Mantra</h1>
+          </section>
+          <section>
+            <h2>Visualization Mantra</h2>
+            <ul class="tiny">
+              <li>Overview first, zoom and filter, then details on demand.</li>
+              <li class="fragment">Overview first, zoom and filter, then details on demand.</li>
+              <li class="fragment">Overview first, zoom and filter, then details on demand.</li>
+              <li class="fragment">Overview first, zoom and filter, then details on demand.</li>
+              <li class="fragment">Overview first, zoom and filter, then details on demand.</li>
+              <li class="fragment">Overview first, zoom and filter, then details on demand.</li>
+              <li class="fragment">Overview first, zoom and filter, then details on demand.</li>
+              <li class="fragment">Overview first, zoom and filter, then details on demand.</li>
+              <li class="fragment">Overview first, zoom and filter, then details on demand.</li>
+              <li class="fragment">Overview first, zoom and filter, then details on demand.</li>
+            </ul>
+            <div class="reference tiny">[The Eyes Have It: A Task by Data Type Taxonomy for Information Visualizations. Shneiderman. Proc. IEEE Visual Languages, pp. 336–343, 1996.]</div>
+          </section>
+          <section>
+            <h2>Overview</h2>
+            <div class="flex">
+              <div class="half">
+                <ul>
+                  <li class="fragment">Overview <span>👉 summary</span></li>
+                  <ul>
+                    <li class="fragment">microcosm of full vis design problems</li>
+                  </ul>
+                  <li class="fragment">Useful for exploration</li>
+                </ul>
+              </div>
+              <div class="half"><img src="../shared_images/vad_book_alldiagrams/why_actions_query.png" alt="Why query summarize"></div>
+            </div>
+          </section>
+          <section class="demo">
+            <h3>Overview 👉 Zoom</h3>
+            <figure>
+              <video width="1200px" max-width="1200px" src="../shared_images/TreeVersity_Navigation.mp4" autoplay loop></video>
+              <figcaption class="small"><a href="http://treeversity.cattlab.umd.edu/?hierarchy=agency/bureau&amp;db=tv2_budget&amp;seqFrom=01/01/70&amp;seqTo=01/01/15&amp;currentFrom=40&amp;title=US%20Federal%20Budget">TreeVersity2</a></figcaption>
+            </figure>
+          </section>
+          <section class="demo">
+            <h3>Overview 👉 Filtering</h3>
+            <figure>
+              <video width="1200px" max-width="1200px" src="../shared_images/TreeVersity_Filtering.mp4" autoplay loop></video>
+              <figcaption class="small"><a href="http://treeversity.cattlab.umd.edu/?hierarchy=agency/bureau&amp;db=tv2_budget&amp;seqFrom=01/01/70&amp;seqTo=01/01/15&amp;currentFrom=40&amp;title=US%20Federal%20Budget">TreeVersity2</a></figcaption>
+            </figure>
+          </section>
+          <section>
+            <h3>Bottoms up?</h3>
+            <div class="flex">
+              <div class="half">
+                <ul class="small">
+                  <li class="fragment">Sometimes makes sense to start small</li>
+                  <li class="fragment">Useful for presentation</li>
+                  <li class="fragment">Common in story telling</li>
+                  <li class="fragment">Helps explaining complex concepts</li>
+                </ul>
+              </div>
+              <div class="half">
+                <figure>
+                  <video style="max-height:480px;" src="../shared_images/segundaVueltaStory.mp4" autoplay loop></video>
+                  <figcaption class="small"><a class="tiny" href="https://johnguerra.co/viz/resultadosSegundaVuelta2018/">Colombian Election Analysis</a></figcaption>
+                </figure>
+              </div>
+            </div>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h1>Function first <br> form next</h1>
+          </section>
+          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/05_rules-artery-18.png"></section>
+          <section>
+            <h2>Avoid aesthetics example</h2>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h1>Artery Viz</h1>
+          </section>
+          <section>
+            <h3>Evaluations of Artery Visualizations for Heart Disease Diagnosis</h3><a href="http://vcg.seas.harvard.edu/files/pfister/files/borkin-infovis2011_camera-ready.pdf">Paper</a><br><a href="http://vcg.seas.harvard.edu/files/pfister/files/infovis2011_slides_0.pdf">Slides</a>
+          </section>
+          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/05_rules-artery-21.png"></section>
+          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/05_rules-artery-22.png"></section>
+          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/05_rules-artery-23.png"></section>
+        </section>
         <section id="review">
           <section>
-            <h1>What we learned</h1>
-            <ul>
-              <li></li>
+            <h2>What we learned</h2>
+            <ul class="small">
+              <li class="fragment">No unjustified 3D <span class="fragment">or 2D</span></li>
+              <li class="fragment">Readable text</li>
+              <li class="fragment">Eyes beat memory</li>
+              <li class="fragment">Visualization Mantra</li>
+              <li class="fragment">Responsiveness is required</li>
+              <li class="fragment">Function first, form next</li>
             </ul>
           </section>
         </section>
@@ -49,6 +483,11 @@
     <script src="../plugin/search/search.js"></script>
     <script src="../plugin/markdown/markdown.js"></script>
     <script src="../plugin/highlight/highlight.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.13.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.13.1"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite-api@0.11.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-tooltip@0.23.2"></script>
+    <script src="./week4.js"></script>
     <script>
       Reveal.initialize({
         controls: true,
@@ -58,8 +497,8 @@
         hash: true,
         //- transition: "convex",
       
-        //- width: "90%",
-        //- height: "100%",
+        //- width: "100%",
+        //- height: "720px",
       
         plugins: [ RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight ]
       });

@@ -50,17 +50,21 @@ html(lang="en")
 
         //- Outline
         section#outline
-          section
+          section.full
             h2 What we are going to learn
-            ul
-              li Abstracting the data
+            ul.small
+              li.fragment Abstracting the data
               li.fragment Types of datasets
               li.fragment Types of attributes
               li.fragment Sequential, diverging, cyclical
               li.fragment Data aggregation (temporal and geo)
               li.fragment Deriving new data
 
-        section
+          section
+            div
+              img(src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo")
+
+        section#abstractingData
           section
             h1 Abstracting the data
 
@@ -100,6 +104,11 @@ html(lang="en")
                   li.fragment(data-fragment-index="2") #[strong Attribute types]: (e.g. categorical, ordinal, quantitative)
                   li.fragment(data-fragment-index="3") #[strong Ordering direction]: (e.g. sequential, diverging, cyclical)
                   li.fragment(data-fragment-index="4") #[strong Data availability]: (e.g. dynamic, static)
+
+
+          section
+            div
+              img(src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo")
 
         section#datasets
           section
@@ -213,6 +222,10 @@ html(lang="en")
               li.fragment For dynamic data, you will need a data endpoint
 
 
+          section
+            div
+              img(src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo")
+
 
         section#attributes
           section
@@ -245,6 +258,11 @@ html(lang="en")
               li.fragment E.g., age, temperature, earnings
 
 
+          section
+            div
+              img(src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo")
+
+
         section#quantitative
           section
             h1 Ordering direction
@@ -258,7 +276,6 @@ html(lang="en")
             ul
               li The is a full range with a clear minimum
               li.fragment You can perform arithmetic
-              li.fragment Can be divergent or sequential
               li.fragment E.g., age, goals ⚽️, price 💰
 
           section
@@ -269,18 +286,31 @@ html(lang="en")
               li.fragment Sometimes the middle point is not zero
               li.fragment E.g., temperature, earnings, political affiliation index
 
+
+          section
+            h2 Cyclical
+            ul
+              li There is a cycle in the data
+              li.fragment No starting point (?)
+              li.fragment Can be represented with cyclical channels
+              li.fragment E.g., Days of the week, hours in the day
+
+          section
+            div
+              img(src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo")
+
         section#dataAggregation
           section
             h1 Data Aggregation
 
           section
             h2 Aggregating Spatial data
-            div E.g., count votes by:
-            ul
+            div.small E.g., count votes by:
+            ul.tiny
               li County
               li.fragment City
               li.fragment State
-              li.fragment County
+              li.fragment Country
               li.fragment Zipcode? #[span Can span multiple counties 🤷]
               li.fragment Custom areas
 
@@ -307,6 +337,10 @@ html(lang="en")
               li.fragment June
           //- TODO: Make chart grouping by date
 
+
+          section
+            div
+              img(src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo")
 
         section#practice
           section
@@ -357,10 +391,13 @@ html(lang="en")
             h2 Serving data from the back-end (Introduction to Flask)
 
         section#review
+          section
+            h1 What we learned
+
           section(data-background-size="contain" data-background="../shared_images/what_sheet.png")#what
 
           section
-            h1 What we learned
+            h2 What we learned
             ul
               li Abstracting the data
               li.fragment Types of datasets
@@ -368,6 +405,9 @@ html(lang="en")
               li.fragment Sequential, diverging, cyclical
               li.fragment Data aggregation (temporal and geo)
 
+          section
+            div
+              img(src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo")
 
     script(src="../js/reveal.js")
     script(src="../plugin/zoom/zoom.js")
