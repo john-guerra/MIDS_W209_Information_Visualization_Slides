@@ -276,7 +276,7 @@ html(lang="en")
 
           //- section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/05_rules-artery-11.png")
 
-        section
+        section#NoUnjustified3D
           section
             h1 No unjustified 2D
 
@@ -320,7 +320,22 @@ html(lang="en")
           //- section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/05_rules-artery-12.png")
 
 
-        section
+          //- ******************** HEMOVIZ!
+          //- section
+          //-   h1 HemoViz
+
+          //- //- Artery viz
+          //- section
+          //-   h3 Evaluations of Artery Visualizations for Heart Disease Diagnosis
+          //-   a(href="http://vcg.seas.harvard.edu/files/pfister/files/borkin-infovis2011_camera-ready.pdf") Paper
+          //-   br
+          //-   a(href="http://vcg.seas.harvard.edu/files/pfister/files/infovis2011_slides_0.pdf") Slides
+
+          //- section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/05_rules-artery-21.png")
+          //- section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/05_rules-artery-22.png")
+          //- section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/05_rules-artery-23.png")
+
+        section#EyesBeatMemory
           section
             h1 Eyes beat memory
 
@@ -424,23 +439,23 @@ html(lang="en")
 
           //- section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/05_rules-artery-16.png")
 
-        section
+        section#VisualizationMantra
           section
             h1 Visualization Mantra
 
           section
             h2 Visualization Mantra
             ul.tiny
-              li Overview first, zoom and filter, then details on demand.
-              li.fragment Overview first, zoom and filter, then details on demand.
-              li.fragment Overview first, zoom and filter, then details on demand.
-              li.fragment Overview first, zoom and filter, then details on demand.
-              li.fragment Overview first, zoom and filter, then details on demand.
-              li.fragment Overview first, zoom and filter, then details on demand.
-              li.fragment Overview first, zoom and filter, then details on demand.
-              li.fragment Overview first, zoom and filter, then details on demand.
-              li.fragment Overview first, zoom and filter, then details on demand.
-              li.fragment Overview first, zoom and filter, then details on demand.
+              li(style="line-height:0.7em;") Overview first, zoom and filter, then details on demand.
+              li(style="line-height:0.7em;").fragment Overview first, zoom and filter, then details on demand.
+              li(style="line-height:0.7em;").fragment Overview first, zoom and filter, then details on demand.
+              li(style="line-height:0.7em;").fragment Overview first, zoom and filter, then details on demand.
+              li(style="line-height:0.7em;").fragment Overview first, zoom and filter, then details on demand.
+              li(style="line-height:0.7em;").fragment Overview first, zoom and filter, then details on demand.
+              li(style="line-height:0.7em;").fragment Overview first, zoom and filter, then details on demand.
+              li(style="line-height:0.7em;").fragment Overview first, zoom and filter, then details on demand.
+              li(style="line-height:0.7em;").fragment Overview first, zoom and filter, then details on demand.
+              li(style="line-height:0.7em;").fragment Overview first, zoom and filter, then details on demand.
             div.reference.tiny [The Eyes Have It: A Task by Data Type Taxonomy for Information Visualizations. Shneiderman. Proc. IEEE Visual Languages, pp. 336–343, 1996.]
 
 
@@ -480,7 +495,7 @@ html(lang="en")
           //- section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/05_rules-artery-17.png")
 
           section
-            h3 Bottoms up?
+            h3 Bottom up?
 
             .flex
               .half
@@ -498,32 +513,156 @@ html(lang="en")
 
 
 
-        section
+        section#FunctionFirst
           section
             h1 Function first #[br] form next
-          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/05_rules-artery-18.png")
 
           section
-            h2 Avoid aesthetics example
+            h3 Function first
+            ul.small
+              li.fragment Start with focus on functionality
+              ul.small
+                li.fragment possible to improve aesthetics later on, as refinement
+                li.fragment if no expertise, seek for help from graphic designers
+              li.fragment dangerous to start with aesthetics
+              ul.small
+                li.fragment usually impossible to add function retroactively
+
+            div.tiny.reference [The Non-Designer’s Design Book. Robin Williams. 3rd edition. Peachpit Press, 2008.]
+
+          section
+            h2 Aesthetics do matter
+            ul
+              li.fragment Another level of function
+              ul.small
+                li.fragment visual hierarchy, alignment, flow
+                li.fragment Gestalt principles in action
+              li.fragment Very important for the enjoy task
+
+            div.tiny.reference [The Non-Designer’s Design Book. Robin Williams. 3rd edition. Peachpit Press, 2008.]
+
+
+          //- section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/05_rules-artery-18.png")
+
+          //- section
+          //-   h2 Avoid aesthetics example
             //- TODO aesthetics example
+
+          section
+            h2 Responsiveness is required
+            div(style="text-align:left") Visual feedback: three rough categories
+            ul.small.line-compressed
+              li.fragment 0.1 seconds: perceptual processing
+              ul.small
+                li.fragment subsecond response for mouseover highlighting - ballistic motion
+              li.fragment 1 second: immediate response
+              ul.small
+                li.fragment fast response after mouseclick, button press - Fitts’ Law limits on motor control
+              li.fragment 10 seconds: brief tasks
+              ul.small
+                li.fragment bounded response after dialog box - mental model of heavyweight operation (file load)
+
+          section
+            h2 Scalability considerations
+            ul.small
+              li.fragment highlight selection without complete redraw of view (graphics frontbuffer)
+              li.fragment show ⏳ for multi-second operations (check for cancel/undo)
+              li.fragment show progress bar for long operations (process in background thread)
+              li.fragment rendering speed when item count is large (guaranteed frame rate)
+
+          section
+            h2 Basic Design Principles
+            ul
+              li.fragment Proximity
+              li.fragment Alignment
+              li.fragment Repetition
+              li.fragment Contrast
+
+          section
+            h2 Proximity
+            .flex
+              .half
+                ul.small
+                  li Do group related items together
+                  li.fragment Avoid equal whitespace between unrelated
+
+              .half
+                figure
+                  img(style="max-height:300px", src="../shared_images/vad_book_alldiagrams/design_proximity.png", alt="Proximity")
+                  figcaption.tiny The Non-Designer’s Design Book, 4th ed. Robin Williams, Peachpit Press, 2015.
+
+          section
+            h2 Alignment
+            .flex
+              .half
+                ul.small
+                  li Do find/make strong line, stick to it
+                  li.fragment avoid automatic centering
+              .half
+                figure
+                  img(style="max-height:300px", src="../shared_images/vad_book_alldiagrams/design_alignment.png", alt="Alignment")
+                  figcaption.tiny The Non-Designer’s Design Book, 4th ed. Robin Williams, Peachpit Press, 2015.
+
+          section
+            h2 Repetition
+            .flex
+              .half
+                ul.small
+                  li Do unify by pushing existing consistencies
+
+              .half
+                figure
+                  img(style="max-height:300px", src="../shared_images/vad_book_alldiagrams/design_repetition.png", alt="Repetition")
+                  figcaption.tiny The Non-Designer’s Design Book, 4th ed. Robin Williams, Peachpit Press, 2015.
+
+          section
+            h2 Contrast
+            .flex
+              .half
+                ul.small
+                  li If not identical, then very different
+                  li.fragment Avoid similar
+
+              .half
+                figure
+                  img(style="max-height:300px", src="../shared_images/vad_book_alldiagrams/design_contrast.png", alt="Contrast")
+                  figcaption.tiny The Non-Designer’s Design Book, 4th ed. Robin Williams, Peachpit Press, 2015.
+
+
+          section
+            h2 Labelling
+
+
+            ul.small
+              li.fragment Make visualizations as self-documenting as possible
+              ul.small
+                li.fragment meaningful & useful title, labels, legends
+
+            figure
+              img(src="../shared_images/vad_book_alldiagrams/xkcd_labelling.png", alt="XKCD Labelling")
+              figcaption
+                a(href="https://xkcd.com/833/") https://xkcd.com/833/
+
+          section
+            h2 Labelling (2)
+
+            ul.small
+              li.fragment axes and panes/subwindows should have labels
+              ul.small
+                li.fragment and axes should have good mix/max boundary tick marks
+              li.fragment everything that’s plotted should have a legend
+              ul.small
+                li.fragment and own header/labels if not redundant with main title
+              li.fragment use reasonable numerical format
+              ul.small
+                li.fragment avoid scientific notation in most cases
+
 
 
           //- section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/05_rules-artery-19.png")
           //- section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/05_rules-artery-20.png")
 
-        section
-          section
-            h1 Artery Viz
 
-          //- Artery viz
-          section
-            h3 Evaluations of Artery Visualizations for Heart Disease Diagnosis
-            a(href="http://vcg.seas.harvard.edu/files/pfister/files/borkin-infovis2011_camera-ready.pdf") Paper
-            br
-            a(href="http://vcg.seas.harvard.edu/files/pfister/files/infovis2011_slides_0.pdf") Slides
-          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/05_rules-artery-21.png")
-          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/05_rules-artery-22.png")
-          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/05_rules-artery-23.png")
 
 
         section#review

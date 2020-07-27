@@ -226,7 +226,7 @@
             </div>
           </section>
         </section>
-        <section>
+        <section id="NoUnjustified3D">
           <section>
             <h1>No unjustified 2D</h1>
           </section>
@@ -268,7 +268,7 @@
             </div>
           </section>
         </section>
-        <section>
+        <section id="EyesBeatMemory">
           <section>
             <h1>Eyes beat memory</h1>
           </section>
@@ -373,23 +373,23 @@
             </div>
           </section>
         </section>
-        <section>
+        <section id="VisualizationMantra">
           <section>
             <h1>Visualization Mantra</h1>
           </section>
           <section>
             <h2>Visualization Mantra</h2>
             <ul class="tiny">
-              <li>Overview first, zoom and filter, then details on demand.</li>
-              <li class="fragment">Overview first, zoom and filter, then details on demand.</li>
-              <li class="fragment">Overview first, zoom and filter, then details on demand.</li>
-              <li class="fragment">Overview first, zoom and filter, then details on demand.</li>
-              <li class="fragment">Overview first, zoom and filter, then details on demand.</li>
-              <li class="fragment">Overview first, zoom and filter, then details on demand.</li>
-              <li class="fragment">Overview first, zoom and filter, then details on demand.</li>
-              <li class="fragment">Overview first, zoom and filter, then details on demand.</li>
-              <li class="fragment">Overview first, zoom and filter, then details on demand.</li>
-              <li class="fragment">Overview first, zoom and filter, then details on demand.</li>
+              <li style="line-height:0.7em;">Overview first, zoom and filter, then details on demand.</li>
+              <li class="fragment" style="line-height:0.7em;">Overview first, zoom and filter, then details on demand.</li>
+              <li class="fragment" style="line-height:0.7em;">Overview first, zoom and filter, then details on demand.</li>
+              <li class="fragment" style="line-height:0.7em;">Overview first, zoom and filter, then details on demand.</li>
+              <li class="fragment" style="line-height:0.7em;">Overview first, zoom and filter, then details on demand.</li>
+              <li class="fragment" style="line-height:0.7em;">Overview first, zoom and filter, then details on demand.</li>
+              <li class="fragment" style="line-height:0.7em;">Overview first, zoom and filter, then details on demand.</li>
+              <li class="fragment" style="line-height:0.7em;">Overview first, zoom and filter, then details on demand.</li>
+              <li class="fragment" style="line-height:0.7em;">Overview first, zoom and filter, then details on demand.</li>
+              <li class="fragment" style="line-height:0.7em;">Overview first, zoom and filter, then details on demand.</li>
             </ul>
             <div class="reference tiny">[The Eyes Have It: A Task by Data Type Taxonomy for Information Visualizations. Shneiderman. Proc. IEEE Visual Languages, pp. 336–343, 1996.]</div>
           </section>
@@ -423,7 +423,7 @@
             </figure>
           </section>
           <section>
-            <h3>Bottoms up?</h3>
+            <h3>Bottom up?</h3>
             <div class="flex">
               <div class="half">
                 <ul class="small">
@@ -442,25 +442,165 @@
             </div>
           </section>
         </section>
-        <section>
+        <section id="FunctionFirst">
           <section>
             <h1>Function first <br> form next</h1>
           </section>
-          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/05_rules-artery-18.png"></section>
           <section>
-            <h2>Avoid aesthetics example</h2>
+            <h3>Function first</h3>
+            <ul class="small">
+              <li class="fragment">Start with focus on functionality</li>
+              <ul class="small">
+                <li class="fragment">possible to improve aesthetics later on, as refinement</li>
+                <li class="fragment">if no expertise, seek for help from graphic designers</li>
+              </ul>
+              <li class="fragment">dangerous to start with aesthetics</li>
+              <ul class="small">
+                <li class="fragment">usually impossible to add function retroactively</li>
+              </ul>
+            </ul>
+            <div class="tiny reference">[The Non-Designer’s Design Book. Robin Williams. 3rd edition. Peachpit Press, 2008.]</div>
           </section>
-        </section>
-        <section>
           <section>
-            <h1>Artery Viz</h1>
+            <h2>Aesthetics do matter</h2>
+            <ul>
+              <li class="fragment">Another level of function</li>
+              <ul class="small">
+                <li class="fragment">visual hierarchy, alignment, flow</li>
+                <li class="fragment">Gestalt principles in action</li>
+              </ul>
+              <li class="fragment">Very important for the enjoy task</li>
+            </ul>
+            <div class="tiny reference">[The Non-Designer’s Design Book. Robin Williams. 3rd edition. Peachpit Press, 2008.]</div>
           </section>
           <section>
-            <h3>Evaluations of Artery Visualizations for Heart Disease Diagnosis</h3><a href="http://vcg.seas.harvard.edu/files/pfister/files/borkin-infovis2011_camera-ready.pdf">Paper</a><br><a href="http://vcg.seas.harvard.edu/files/pfister/files/infovis2011_slides_0.pdf">Slides</a>
+            <h2>Responsiveness is required</h2>
+            <div style="text-align:left">Visual feedback: three rough categories</div>
+            <ul class="small line-compressed">
+              <li class="fragment">0.1 seconds: perceptual processing</li>
+              <ul class="small">
+                <li class="fragment">subsecond response for mouseover highlighting - ballistic motion</li>
+              </ul>
+              <li class="fragment">1 second: immediate response</li>
+              <ul class="small">
+                <li class="fragment">fast response after mouseclick, button press - Fitts’ Law limits on motor control</li>
+              </ul>
+              <li class="fragment">10 seconds: brief tasks</li>
+              <ul class="small">
+                <li class="fragment">bounded response after dialog box - mental model of heavyweight operation (file load)</li>
+              </ul>
+            </ul>
           </section>
-          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/05_rules-artery-21.png"></section>
-          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/05_rules-artery-22.png"></section>
-          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/05_rules-artery-23.png"></section>
+          <section>
+            <h2>Scalability considerations</h2>
+            <ul class="small">
+              <li class="fragment">highlight selection without complete redraw of view (graphics frontbuffer)</li>
+              <li class="fragment">show ⏳ for multi-second operations (check for cancel/undo)</li>
+              <li class="fragment">show progress bar for long operations (process in background thread)</li>
+              <li class="fragment">rendering speed when item count is large (guaranteed frame rate)</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Basic Design Principles</h2>
+            <ul>
+              <li class="fragment">Proximity</li>
+              <li class="fragment">Alignment</li>
+              <li class="fragment">Repetition</li>
+              <li class="fragment">Contrast</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Proximity</h2>
+            <div class="flex">
+              <div class="half">
+                <ul class="small">
+                  <li>Do group related items together</li>
+                  <li class="fragment">Avoid equal whitespace between unrelated</li>
+                </ul>
+              </div>
+              <div class="half">
+                <figure><img style="max-height:300px" src="../shared_images/vad_book_alldiagrams/design_proximity.png" alt="Proximity">
+                  <figcaption class="tiny">The Non-Designer’s Design Book, 4th ed. Robin Williams, Peachpit Press, 2015.</figcaption>
+                </figure>
+              </div>
+            </div>
+          </section>
+          <section>
+            <h2>Alignment</h2>
+            <div class="flex">
+              <div class="half">
+                <ul class="small">
+                  <li>Do find/make strong line, stick to it</li>
+                  <li class="fragment">avoid automatic centering</li>
+                </ul>
+              </div>
+              <div class="half">
+                <figure><img style="max-height:300px" src="../shared_images/vad_book_alldiagrams/design_alignment.png" alt="Alignment">
+                  <figcaption class="tiny">The Non-Designer’s Design Book, 4th ed. Robin Williams, Peachpit Press, 2015.</figcaption>
+                </figure>
+              </div>
+            </div>
+          </section>
+          <section>
+            <h2>Repetition</h2>
+            <div class="flex">
+              <div class="half">
+                <ul class="small">
+                  <li>Do unify by pushing existing consistencies</li>
+                </ul>
+              </div>
+              <div class="half">
+                <figure><img style="max-height:300px" src="../shared_images/vad_book_alldiagrams/design_repetition.png" alt="Repetition">
+                  <figcaption class="tiny">The Non-Designer’s Design Book, 4th ed. Robin Williams, Peachpit Press, 2015.</figcaption>
+                </figure>
+              </div>
+            </div>
+          </section>
+          <section>
+            <h2>Contrast</h2>
+            <div class="flex">
+              <div class="half">
+                <ul class="small">
+                  <li>If not identical, then very different</li>
+                  <li class="fragment">Avoid similar</li>
+                </ul>
+              </div>
+              <div class="half">
+                <figure><img style="max-height:300px" src="../shared_images/vad_book_alldiagrams/design_contrast.png" alt="Contrast">
+                  <figcaption class="tiny">The Non-Designer’s Design Book, 4th ed. Robin Williams, Peachpit Press, 2015.</figcaption>
+                </figure>
+              </div>
+            </div>
+          </section>
+          <section>
+            <h2>Labelling</h2>
+            <ul class="small">
+              <li class="fragment">Make visualizations as self-documenting as possible</li>
+              <ul class="small">
+                <li class="fragment">meaningful & useful title, labels, legends</li>
+              </ul>
+            </ul>
+            <figure><img src="../shared_images/vad_book_alldiagrams/xkcd_labelling.png" alt="XKCD Labelling">
+              <figcaption><a href="https://xkcd.com/833/">https://xkcd.com/833/</a></figcaption>
+            </figure>
+          </section>
+          <section>
+            <h2>Labelling (2)</h2>
+            <ul class="small">
+              <li class="fragment">axes and panes/subwindows should have labels</li>
+              <ul class="small">
+                <li class="fragment">and axes should have good mix/max boundary tick marks</li>
+              </ul>
+              <li class="fragment">everything that’s plotted should have a legend</li>
+              <ul class="small">
+                <li class="fragment">and own header/labels if not redundant with main title</li>
+              </ul>
+              <li class="fragment">use reasonable numerical format</li>
+              <ul class="small">
+                <li class="fragment">avoid scientific notation in most cases</li>
+              </ul>
+            </ul>
+          </section>
         </section>
         <section id="review">
           <section>
