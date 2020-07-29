@@ -28,7 +28,19 @@
         <section id="outline">
           <section>
             <h2>What we are going to learn</h2>
-            <ul class="small"></ul>
+            <ul class="small">
+              <li>Position Channels (Express vs Separte/Order/Align)</li>
+              <li class="fragment">Scatterplots</li>
+              <li class="fragment">Barcharts</li>
+              <li class="fragment">Stacked Barcharts</li>
+              <li class="fragment">Grouped Barcharts</li>
+              <li class="fragment">Heatmaps</li>
+              <li class="fragment">Other Axis Orientations</li>
+              <li class="fragment">Sploms vs Parallel Coordinates</li>
+              <li class="fragment">Navio</li>
+              <li class="fragment">Radial Representations</li>
+              <li class="fragment">Pie charts</li>
+            </ul>
           </section>
         </section>
         <section>
@@ -51,15 +63,86 @@
           </section>
           <section>
             <h2>How to arrange?</h2>
-            <ul>
-              <li class="fragment">Quantitative data <span class="fragment">-> Express</span></li>
-              <li class="fragment">Categorical data <span class="fragment">-> Separate, Order, Align</span></li>
-            </ul>
+            <div class="flex">
+              <div class="half">
+                <ul class="small">
+                  <li class="fragment">Quantitative data<br><strong class="fragment">👉 Express</strong></li>
+                  <li class="fragment">Categorical data<br><strong class="fragment">👉 Separate, Order, Align</strong></li>
+                </ul>
+              </div>
+              <div class="half">
+                <figure><img class="fill" src="../shared_images/vad_book_alldiagrams/how_encode_arrange.png" alt="How, encode, Arrange"></figure>
+              </div>
+            </div>
           </section>
-          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/08_tables-spatial.003.png"></section>
-          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/08_tables-spatial.004.png"></section>
-          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/08_tables-spatial.005.png"></section>
-          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/08_tables-spatial.006.png"></section>
+          <section class="full">
+            <h2>Arange Tables</h2>
+            <div class="flex"><img class="fragment" width="45%" src="../shared_images/vad_book_alldiagrams/how_express_separate.png" alt="Express Separate Order and Align"><img class="fragment" width="45%" src="../shared_images/vad_book_alldiagrams/how_axis_orientation.png" alt="Axis Orientation"><img class="fragment" style="margin-top:40px" src="../shared_images/vad_book_alldiagrams/how_keys.png" alt="Keys"></div>
+          </section>
+          <section>
+            <h3>Keys and values</h3>
+            <div class="flex">
+              <div class="half">
+                <ul class="small">
+                  <li class="fragment">key</li>
+                  <ul class="small">
+                    <li class="fragment">independent attribute</li>
+                    <li class="fragment">used as unique index to look up items</li>
+                    <li class="fragment">simple tables: 1 key</li>
+                    <li class="fragment">multidimensional tables: multiple keys</li>
+                  </ul>
+                  <li class="fragment">value</li>
+                  <ul class="small">
+                    <li class="fragment">dependent attribute, value of cell</li>
+                    <li class="fragment">classify arrangements by key count</li>
+                    <li class="fragment">0, 1, 2, many...</li>
+                  </ul>
+                </ul>
+              </div>
+              <div class="half"><img width="200px" src="../shared_images/vad_book_alldiagrams/what_tables.png" alt="What Tables"><img class="fragment" width="100%" style="margin-top:40px" src="../shared_images/vad_book_alldiagrams/how_keys.png" alt="Keys"></div>
+            </div>
+          </section>
+          <section>
+            <h2>0 Keys</h2><img class="fill" src="../shared_images/vad_book_alldiagrams/0_keys.png" alt="0 Keys">
+          </section>
+          <section>
+            <h2>Idiom: Scatterplot</h2>
+            <div class="flex">
+              <div class="half">
+                <ul class="small">
+                  <li class="fragment"><strong>express</strong> values</li>
+                  <ul class="small">
+                    <li class="fragment">quantitative attributes</li>
+                  </ul>
+                  <li class="fragment">no keys, only values</li>
+                  <ul class="small">
+                    <li class="fragment">data</li>
+                    <ul class="small">
+                      <li class="fragment">2 quant attribs</li>
+                    </ul>
+                    <li class="fragment">mark: points</li>
+                    <li class="fragment">channels</li>
+                    <ul class="small">
+                      <li class="fragment">horiz + vert position</li>
+                    </ul>
+                    <li class="fragment">tasks</li>
+                    <ul class="small">
+                      <li class="fragment">find trends, outliers, distribution, correlation, clusters</li>
+                    </ul>
+                    <li class="fragment">scalability</li>
+                    <ul class="small">
+                      <li class="fragment">hundreds of items</li>
+                    </ul>
+                  </ul>
+                </ul>
+              </div>
+              <div class="half"><img width="250px" src="../shared_images/vad_book_alldiagrams/how_express.png" alt="Express">
+                <figure style="margin-top: 50px"><img width="120%" style="position:relative; left:-10%" src="../shared_images/vad_book_alldiagrams/scatterplot_wickham.png" alt="Scatterplot example">
+                  <figcaption class="reference">[A layered grammar of graphics. Wickham. Journ. Computational and Graphical Statistics 19:1 (2010), 3–28.]</figcaption>
+                </figure>
+              </div>
+            </div>
+          </section>
           <section>
             <h3 class="demo">Scatterplot</h3>
             <div class="blocks" id="scatterplotDiv"></div>
@@ -74,8 +157,54 @@
               
             </script><a class="tiny" target="_blank" href="https://observablehq.com/@john-guerra/scatterplot">https://observablehq.com/@john-guerra/scatterplot</a>
           </section>
-          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/08_tables-spatial.007.png"></section>
-          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/08_tables-spatial.008.png"></section>
+          <section>
+            <h2>Some Keys</h2><img class="fill" src="../shared_images/vad_book_alldiagrams/some_keys.png" alt="Some Keys">
+          </section>
+          <section class="full">
+            <h3>Some keys: Categorical regions</h3><img class="noMarginTopBottom" src="../shared_images/vad_book_alldiagrams/how_separate_order_align.png" alt="Separate Order and Align">
+            <ul class="noMarginTopBottom small">
+              <li class="fragment"><strong>regions</strong>: contiguous bounded areas distinct from each other</li>
+              <ul class="small">
+                <li class="fragment">using space to <strong>separate</strong> (proximity)</li>
+                <li class="fragment">following expressiveness principle for categorical attributes</li>
+              </ul>
+              <li class="fragment">use ordered attribute to <strong>order</strong> and <strong>align</strong> regions</li>
+            </ul><img class="noMarginTopBottom fill fragment" src="../shared_images/vad_book_alldiagrams/how_keys.png" alt="Keys">
+          </section>
+          <section>
+            <h2>Idiom: Barchart</h2>
+            <div class="flex">
+              <div class="half small">
+                <ul class="small">
+                  <li class="fragment">one key, one value</li>
+                  <li class="fragment">data</li>
+                  <ul class="small">
+                    <li class="fragment">1 categ attrib, 1 quant attrib</li>
+                  </ul>
+                  <li class="fragment">mark: lines</li>
+                  <li class="fragment">channels</li>
+                  <ul class="small">
+                    <li class="fragment">length to express quant value</li>
+                    <li class="fragment">spatial regions: one per mark</li>
+                    <ul class="small">
+                      <li class="fragment">separated horizontally, aligned vertically</li>
+                      <li class="fragment">ordered by quant attrib</li>
+                      <li class="fragment">by label (alphabetical), by length attrib (data-driven)</li>
+                    </ul>
+                  </ul>
+                  <li class="fragment">task</li>
+                  <ul class="small">
+                    <li class="fragment">compare, lookup values</li>
+                  </ul>
+                  <li class="fragment">scalability</li>
+                  <ul class="small">
+                    <li class="fragment">dozens to hundreds of levels for key attrib</li>
+                  </ul>
+                </ul>
+              </div>
+              <div class="half"><img class="fill" src="../shared_images/vad_book_alldiagrams/barchart_example.png" alt="Barchart example"></div>
+            </div>
+          </section>
           <section>
             <h3 class="demo">Barchart</h3>
             <iframe class="blocks" src="http://blockbuilder.org/mbostock/3885304"></iframe><a class="tiny" target="_blank" href="http://blockbuilder.org/mbostock/3885304">http://blockbuilder.org/mbostock/3885304</a>
