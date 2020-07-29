@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Week 13 Reducing attributes and rows. MIDS W209 Information Visualization Slides</title>
+    <meta charset="utf-8">
+    <meta name="author" content="John Alexis Guerra Gómez">
+    <meta name="description" content="Week 6 Reducing attributes and rows. MIDS W209 Information Visualization Slides">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fjalla+One|Raleway|PT+Sans+Narrow">
+    <link rel="stylesheet" href="https://use.typekit.net/yjc0afr.css">
+    <link rel="stylesheet" href="../plugin/highlight/monokai.css" id="highlight-theme">
+    <link href="../css/reveal.css" rel="stylesheet">
+    <link href="../css/theme/white.css" rel="stylesheet" id="theme">
+    <link href="../css/style.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h1 class="title">Reducing attributes and rows<br><small>MIDS W209: Information Visualization</small></h1>
+          <div class="r-stretch"></div>
+          <div class="tiny"><a href="https://johnguerra.co/" target="_blank"><strong> John Alexis Guerra Gómez</strong></a><span> |  john.guerra[at]gmail.com</span><a href="https://twitter.com/duto_guerra"> |  @duto_guerra</a><br><a href="https://johnguerra.co/lectures/MIDS_W209_Information_Visualization/06_Tabular/" target="_blank">https://johnguerra.co/lectures/MIDS_W209_Information_Visualization/06_Tabular/</a></div>
+          <div class="logo"><a href="https://datascience.berkeley.edu/"><img class="logo" src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo"></a></div>
+          <div class="tiny">Partially based on<a href="https://www.cs.ubc.ca/~tmm/talks.html#minicourse14"> slides from Tamara Munzner</a></div>
+        </section>
+        <section id="outline">
+          <section>
+            <h2>What we are going to learn</h2>
+            <ul class="small"></ul>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h2>Reduce Items and Attributes</h2>
+          </section>
+          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/14_reduce-glimmer.003.png"></section>
+          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/14_reduce-glimmer.004.png"></section>
+          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/14_reduce-glimmer.005.png"></section>
+          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/14_reduce-glimmer.006.png"></section>
+          <section class="demo">
+            <h2>Scented widgets paper</h2>
+            <iframe class="blocks" src="http://vis.berkeley.edu/papers/scented_widgets/"></iframe><a class="tiny" target="_blank" href="http://vis.berkeley.edu/papers/scented_widgets/">http://vis.berkeley.edu/papers/scented_widgets/</a>
+          </section>
+          <section class="demo">
+            <h2>Navio</h2><a class="tiny" target="_blank" href="https://observablehq.com/@john-guerra/navio-load">https://observablehq.com/@john-guerra/navio-load</a>
+          </section>
+          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/14_reduce-glimmer.007.png"></section>
+          <section>
+            <h2>DOSFA Paper</h2><a class="small" target="_blank" href="http://www.cs.ubc.ca/~tmm/courses/cpsc533c-04-spr/readings/dimorder.pdf">http://www.cs.ubc.ca/~tmm/courses/cpsc533c-04-spr/readings/dimorder.pdf</a>
+          </section>
+          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/14_reduce-glimmer.008.png"></section>
+          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/14_reduce-glimmer.009.png"></section>
+          <section>
+            <h3 class="demo">Box Plot</h3>
+            <iframe class="blocks" src="http://blockbuilder.org/mbostock/4061502"></iframe><a class="tiny" target="_blank" href="http://blockbuilder.org/mbostock/4061502">http://blockbuilder.org/mbostock/4061502</a><a class="tiny" target="_blank" href="http://bl.ocks.org/mbostock/">by mbostock</a>
+          </section>
+          <section>
+            <h3 class="demo">Violin plot</h3>
+            <iframe class="blocks" src="http://blockbuilder.org/asielen/92929960988a8935d907e39e60ea8417"></iframe><a class="tiny" target="_blank" href="http://blockbuilder.org/asielen/92929960988a8935d907e39e60ea8417">http://blockbuilder.org/asielen/92929960988a8935d907e39e60ea8417</a><a class="tiny" target="_blank" href="http://bl.ocks.org/asielen/">by asielen</a>
+          </section>
+          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/14_reduce-glimmer.010.png"></section>
+          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/14_reduce-glimmer.011.png"></section>
+          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/14_reduce-glimmer.012.png"></section>
+          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/14_reduce-glimmer.013.png"></section>
+          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/14_reduce-glimmer.014.png"></section>
+          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/14_reduce-glimmer.015.png"></section>
+          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/14_reduce-glimmer.016.png"></section>
+          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/14_reduce-glimmer.017.png"></section>
+          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/14_reduce-glimmer.018.png"></section>
+          <section>
+            <h3 class="demo">t-SNE Explorations</h3>
+            <iframe class="blocks" src="http://distill.pub/2016/misread-tsne/"></iframe><a class="tiny" target="_blank" href="http://distill.pub/2016/misread-tsne/">http://distill.pub/2016/misread-tsne/</a>
+          </section>
+          <section>
+            <h3 class="demo">Interactive T-SNE</h3>
+            <div>Project by Fabián Peña</div><a class="tiny" href="https://fabiancpl.github.io/MLExplore.js/">https://fabiancpl.github.io/MLExplore.js/</a>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h3>Embed, Focus+Context</h3>
+          </section>
+          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/15_embed-tj.003.png"></section>
+          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/15_embed-tj.004.png"></section>
+          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/15_embed-tj.005.png"></section>
+          <section>
+            <h3 class="demo">Fish eye</h3>
+            <iframe class="blocks" src="https://bost.ocks.org/mike/fisheye/"></iframe><a class="tiny" target="_blank" href="https://bost.ocks.org/mike/fisheye/">https://bost.ocks.org/mike/fisheye/</a><a class="tiny" target="_blank" href="http://bl.ocks.org/mbostock/">by mbostock</a>
+          </section>
+          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/15_embed-tj.006.png"></section>
+          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/15_embed-tj.007.png"></section>
+          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/15_embed-tj.008.png"></section>
+          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/15_embed-tj.009.png"></section>
+          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/15_embed-tj.010.png"></section>
+          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/15_embed-tj.011.png"></section>
+          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/15_embed-tj.012.png"></section>
+          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/15_embed-tj.013.png"></section>
+          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/15_embed-tj.014.png"></section>
+          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/15_embed-tj.015.png"></section>
+          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/15_embed-tj.016.png"></section>
+          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/15_embed-tj.017.png"></section>
+          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/15_embed-tj.018.png"></section>
+          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/15_embed-tj.019.png"></section>
+          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/15_embed-tj.020.png"></section>
+          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/15_embed-tj.021.png"></section>
+          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/15_embed-tj.022.png"></section>
+          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/15_embed-tj.023.png"></section>
+          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/15_embed-tj.024.png"></section>
+          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/15_embed-tj.025.png"></section>
+          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/15_embed-tj.026.png"></section>
+          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/15_embed-tj.027.png"></section>
+          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/15_embed-tj.028.png"></section>
+        </section>
+        <section id="review">
+          <section>
+            <h2>What we learned</h2>
+            <ul class="small"></ul>
+          </section>
+        </section>
+      </div>
+    </div>
+    <script src="../js/reveal.js"></script>
+    <script src="../plugin/zoom/zoom.js"></script>
+    <script src="../plugin/notes/notes.js"></script>
+    <script src="../plugin/search/search.js"></script>
+    <script src="../plugin/markdown/markdown.js"></script>
+    <script src="../plugin/highlight/highlight.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.13.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.13.1"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite-api@0.11.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-tooltip@0.23.2"></script>
+    <script src="./week4.js"></script>
+    <script>
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        hash: true,
+        //- transition: "convex",
+      
+        //- width: "100%",
+        //- height: "720px",
+      
+        plugins: [ RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight ]
+      });
+    </script>
+    <script>
+      (function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,"script","https://www.google-analytics.com/analytics.js","ga");
+      
+      ga("create", "UA-72531610-1", "auto");
+      ga("send", "pageview");
+    </script>
+  </body>
+</html>

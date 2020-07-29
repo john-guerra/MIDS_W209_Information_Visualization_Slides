@@ -1,0 +1,185 @@
+doctype html
+html(lang="en")
+  head
+    title Week 10 Manipulate Views. MIDS W209 Information Visualization Slides
+    meta(charset="utf-8")
+    meta(name="author", content="John Alexis Guerra Gómez")
+    meta(name="description", content="Week 10 Manipulate Views. MIDS W209 Information Visualization Slides")
+
+    meta(name="apple-mobile-web-app-capable" content="yes")
+    meta(name="apple-mobile-web-app-status-bar-style" content="black-translucent")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+
+    link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Fjalla+One|Raleway|PT+Sans+Narrow")
+
+    //- Adobe fonts
+    link(rel="stylesheet" href="https://use.typekit.net/yjc0afr.css")
+
+    //- <!-- Theme used for syntax highlighting of code -->
+    link(rel="stylesheet" href="../plugin/highlight/monokai.css" id="highlight-theme")
+
+
+    link(href="../css/reveal.css", rel="stylesheet")
+    link(href="../css/theme/white.css", rel="stylesheet", id="theme")
+    link(href="../css/style.css", rel="stylesheet")
+
+
+  body
+    .reveal
+      .slides
+        section
+          h1.title Manipulate Views
+            br
+            small MIDS W209: Information Visualization
+
+          div.r-stretch
+
+          div.tiny
+            a(href="https://johnguerra.co/", target="_blank") #[strong  John Alexis Guerra Gómez]
+            span  |  john.guerra[at]gmail.com
+            a(href="https://twitter.com/duto_guerra")  |  @duto_guerra
+            br
+
+            a(href="https://johnguerra.co/lectures/MIDS_W209_Information_Visualization/10_Manipulate_Views/", target="_blank") https://johnguerra.co/lectures/MIDS_W209_Information_Visualization/10_Manipulate_Views/
+
+          div.logo
+            a(href="https://datascience.berkeley.edu/")
+              img.logo(src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo")
+          div.tiny Partially based on
+            a(href="https://www.cs.ubc.ca/~tmm/talks.html#minicourse14")  slides from Tamara Munzner
+
+        //- Outline
+        section#outline
+          section
+            h2 What we are going to learn
+            ul.small
+
+
+
+        section
+          section
+            h2 Manipulate viewss
+          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/11_manipulate-genea.003.png")
+          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/11_manipulate-genea.004.png")
+          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/11_manipulate-genea.005.png")
+          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/11_manipulate-genea.006.png")
+          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/11_manipulate-genea.007.png")
+          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/11_manipulate-genea.008.png")
+          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/11_manipulate-genea.009.png")
+          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/11_manipulate-genea.010.png")
+          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/11_manipulate-genea.011.png")
+          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/11_manipulate-genea.012.png")
+          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/11_manipulate-genea.013.png")
+          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/11_manipulate-genea.014.png")
+          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/11_manipulate-genea.015.png")
+          //- lineup
+          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/11_manipulate-genea.016.png")
+          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/11_manipulate-genea.017.png")
+          section
+            h3.demo LineUP
+            //- iframe.blocks(src="http://vcg.seas.harvard.edu/files/pfister/files/2013_infovis_lineup.mp4")
+            //- Video without autoplay
+            span.
+              <video width="100%" height="100%" controls>
+                  <source src="http://vcg.seas.harvard.edu/files/pfister/files/2013_infovis_lineup.mp4" type="video/mp4">
+              </video>
+            a.tiny(target="_blank" href="http://vcg.seas.harvard.edu/files/pfister/files/2013_infovis_lineup.mp4") http://vcg.seas.harvard.edu/files/pfister/files/2013_infovis_lineup.mp4
+
+
+          section
+            h2 LineUP D3
+            a(href="https://observablehq.com/@john-guerra/lineup") https://observablehq.com/@john-guerra/lineup
+
+
+          //- Multilevel call matrices
+          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/11_manipulate-genea.018.png")
+            a.bottom.tiny(target="_blank" href="http://www.win.tue.nl/vis1/home/fvham/DL/callmatrix.pdf") http://www.win.tue.nl/vis1/home/fvham/DL/callmatrix.pdf
+
+          section
+            iframe.blocks(src="https://bost.ocks.org/mike/miserables/")
+            a(href="https://bost.ocks.org/mike/miserables/") https://bost.ocks.org/mike/miserables/
+
+
+          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/11_manipulate-genea.019.png")
+
+          section
+            //- h2 Selection in D3
+            iframe.blocks(src="https://blockbuilder.org/mbostock/7608400")
+            a.tiny(href="https://blockbuilder.org/mbostock/7608400") https://blockbuilder.org/mbostock/7608400
+
+          section
+            h2 Selection with brush
+            a(href="https://observablehq.com/@john-guerra/scatterplot-brush") https://observablehq.com/@john-guerra/scatterplot-brush
+
+
+
+          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/11_manipulate-genea.020.png")
+          //- LiveRac
+          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/11_manipulate-genea.021.png")
+          section
+            h3.demo LiveRAC
+            span.blocks
+              <iframe width="853" height="480" src="https://www.youtube.com/embed/ld0c3H0VSkw" frameborder="0" allowfullscreen></iframe>
+
+          //- Semantic vs geometric zoom
+          section
+            h3.demo Geometric Zoom
+            iframe.blocks(src="http://blockbuilder.org/mbostock/3680958")
+            a.tiny(target="_blank" href="http://blockbuilder.org/mbostock/3680958") http://blockbuilder.org/mbostock/3680958
+            a.tiny(target="_blank" href="http://bl.ocks.org/mbostock/") by mbostock
+
+          section
+            h3.demo Semantic Zoom
+            iframe.blocks(src="http://blockbuilder.org/mbostock/3681006")
+            a.tiny(target="_blank" href="http://blockbuilder.org/mbostock/3681006") http://blockbuilder.org/mbostock/3681006
+            a.tiny(target="_blank" href="http://bl.ocks.org/mbostock/") by mbostock
+
+          //- section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/11_manipulate-genea.022.png")
+          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/11_manipulate-genea.023.png")
+          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/11_manipulate-genea.024.png")
+
+
+        section#review
+          section
+            h2 What we learned
+            ul.small
+
+
+    script(src="../js/reveal.js")
+    script(src="../plugin/zoom/zoom.js")
+    script(src="../plugin/notes/notes.js")
+    script(src="../plugin/search/search.js")
+    script(src="../plugin/markdown/markdown.js")
+    script(src="../plugin/highlight/highlight.js")
+
+    script(src="https://cdn.jsdelivr.net/npm/vega@5.13.0")
+    script(src="https://cdn.jsdelivr.net/npm/vega-lite@4.13.1")
+    script(src="https://cdn.jsdelivr.net/npm/vega-lite-api@0.11.0")
+    script(src="https://cdn.jsdelivr.net/npm/vega-tooltip@0.23.2")
+    script(src="./week4.js")
+
+
+
+    script.
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        hash: true,
+        //- transition: "convex",
+
+        //- width: "100%",
+        //- height: "720px",
+
+        plugins: [ RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight ]
+      });
+    script.
+      (function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,"script","https://www.google-analytics.com/analytics.js","ga");
+
+      ga("create", "UA-72531610-1", "auto");
+      ga("send", "pageview");
+

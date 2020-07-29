@@ -1,0 +1,12 @@
+<div id="observablehq-09a24421"></div>
+<script type="module">
+  import {
+    Runtime,
+    Inspector,
+  } from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+  import define from "https://api.observablehq.com/@d3/stacked-to-grouped-bars.js?v=3";
+  const inspect = Inspector.into("#observablehq-09a24421");
+  new Runtime().module(define, (name) =>
+    name === "chart" ? inspect() : undefined
+  );
+</script>

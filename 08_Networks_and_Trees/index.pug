@@ -1,0 +1,515 @@
+doctype html
+html(lang="en")
+  head
+    title Week 8 Visualizing Networks and Trees. MIDS W209 Information Visualization Slides
+    meta(charset="utf-8")
+    meta(name="author", content="John Alexis Guerra Gómez")
+    meta(name="description", content="Week 8 Visualizing Networks and Trees. MIDS W209 Information Visualization Slides")
+
+    meta(name="apple-mobile-web-app-capable" content="yes")
+    meta(name="apple-mobile-web-app-status-bar-style" content="black-translucent")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+
+    link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Fjalla+One|Raleway|PT+Sans+Narrow")
+
+    //- Adobe fonts
+    link(rel="stylesheet" href="https://use.typekit.net/yjc0afr.css")
+
+    //- <!-- Theme used for syntax highlighting of code -->
+    link(rel="stylesheet" href="../plugin/highlight/monokai.css" id="highlight-theme")
+
+
+    link(href="../css/reveal.css", rel="stylesheet")
+    link(href="../css/theme/white.css", rel="stylesheet", id="theme")
+    link(href="../css/style.css", rel="stylesheet")
+
+
+  body
+    .reveal
+      .slides
+        section
+          h1.title Visualizing Networks and Trees
+            br
+            small MIDS W209: Information Visualization
+
+          div.r-stretch
+
+          div.tiny
+            a(href="https://johnguerra.co/", target="_blank") #[strong  John Alexis Guerra Gómez]
+            span  |  john.guerra[at]gmail.com
+            a(href="https://twitter.com/duto_guerra")  |  @duto_guerra
+            br
+
+            a(href="https://johnguerra.co/lectures/MIDS_W209_Information_Visualization/08_Networks_and_Trees/", target="_blank") https://johnguerra.co/lectures/MIDS_W209_Information_Visualization/08_Networks_and_Trees/
+
+          div.logo
+            a(href="https://datascience.berkeley.edu/")
+              img.logo(src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo")
+          div.tiny Partially based on
+            a(href="https://www.cs.ubc.ca/~tmm/talks.html#minicourse14")  slides from Tamara Munzner
+
+        //- Outline
+        section#outline
+          section
+            h2 What we are going to learn
+            ul.small.small
+
+
+        section
+          section
+            h2 Visualizing Networks
+
+          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/09_networks-star-steno-topo.002.png")
+          //- Force Directed
+          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/09_networks-star-steno-topo.003.png")
+          section
+            h3.demo Force Directed Layout
+            iframe.blocks(src="http://blockbuilder.org/mbostock/4062045")
+            div.tiny
+              a(target="_blank" href="http://blockbuilder.org/mbostock/4062045") http://blockbuilder.org/mbostock/4062045
+            div.tiny
+              a(target="_blank" href="http://bl.ocks.org/mbostock/") by mbostock
+
+
+          section
+            h2 Use the force!
+
+          section
+            h3.demo Beeswarm plot
+            iframe.blocks(src="http://blockbuilder.org/mbostock/6526445e2b44303eebf21da3b6627320")
+            div.tiny
+              a(target="_blank" href="http://blockbuilder.org/mbostock/6526445e2b44303eebf21da3b6627320") http://blockbuilder.org/mbostock/6526445e2b44303eebf21da3b6627320
+            div.tiny
+              a(target="_blank" href="http://bl.ocks.org/mbostock/") by mbostock
+
+          section
+            h3.demo Collision Detection
+            iframe.blocks(src="http://blockbuilder.org/mbostock/31ce330646fa8bcb7289ff3b97aab3f5")
+            div.tiny
+              a(target="_blank" href="http://blockbuilder.org/mbostock/31ce330646fa8bcb7289ff3b97aab3f5") http://blockbuilder.org/mbostock/31ce330646fa8bcb7289ff3b97aab3f5
+            div.tiny
+              a(target="_blank" href="http://bl.ocks.org/mbostock/") by mbostock
+
+          section
+            h3.demo Force in a Box
+            iframe.blocks(src="http://blockbuilder.org/john-guerra/14c943d8f198d9f3fef2")
+            div.tiny
+              a(target="_blank" href="http://blockbuilder.org/john-guerra/14c943d8f198d9f3fef2") http://blockbuilder.org/john-guerra/14c943d8f198d9f3fef2
+            div.tiny
+              a(target="_blank" href="http://bl.ocks.org/john-guerra/") by john-guerra
+
+          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/09_networks-star-steno-topo.004.png")
+
+
+          //- Adjacency matrix
+          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/09_networks-star-steno-topo.005.png")
+
+          section
+            h3.demo Adjacency Matrix
+            iframe.blocks(src="https://bost.ocks.org/mike/miserables/")
+            div.tiny
+              a(target="_blank" href="https://bost.ocks.org/mike/miserables/") https://bost.ocks.org/mike/miserables/
+
+
+
+
+
+
+
+          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/09_networks-star-steno-topo.006.png")
+
+
+          section
+            h2.demo Chord Diagram
+            div.left.small
+              ul.small
+                li Data: Networks (small # of nodes)
+                li Tasks: Summarize connections. Identify highest degree
+                li Considerations: Usually good for origin -> destination
+            div.right
+              img.fill(src="../shared_images/chord.svg" alt="Chord Diagram")
+              div.tiny
+                a(href="https://observablehq.com/@john-guerra/mouseover-chord-diagram") https://observablehq.com/@john-guerra/mouseover-chord-diagram
+
+
+          section
+            h2.demo Edge Bundling
+            div.left.small
+              ul.small
+                li Data: Networks
+                li Tasks: Summarize common connections.
+                li Considerations:
+                  ul.small
+                    li Reduces cluttering
+                    li Requires computing time
+                    li Works with any link based idiom
+            div.right
+              img.fill(src="../shared_images/edgeBundling.png" alt="Edge Bundling")
+              div.tiny
+                a(href="https://observablehq.com/@d3/hierarchical-edge-bundling") https://observablehq.com/@d3/hierarchical-edge-bundling
+
+          section
+            h2.demo Arc Diagram
+            div.left.small
+              ul.small
+                li Data: Networks (few nodes)
+                li Tasks: Summarize common connections.
+                li Considerations:
+                  ul.small
+                    li Nodes order matter
+                    li Better with highly clustered data
+            div.right
+              img.fill(src="../shared_images/arcDiagram.svg" alt="Arc Diagram")
+              div.tiny
+                a(href="https://observablehq.com/@d3/arc-diagram") https://observablehq.com/@d3/arc-diagram
+
+          section
+            h2.demo Arc Diagram
+            iframe.blocks(src="https://blockbuilder.org/rpgove/53bb49d6ed762139f33bdaea1f3a9e1c")
+            div.tiny
+              a(target="_blank" href="https://blockbuilder.org/rpgove/53bb49d6ed762139f33bdaea1f3a9e1c") https://blockbuilder.org/rpgove/53bb49d6ed762139f33bdaea1f3a9e1c
+            div.tiny
+              a(target="_blank" href="http://bl.ocks.org/rpgove/") by Robert Gove
+
+          section
+            h2.demo Arc Diagram
+            iframe.blocks(src="https://bost.ocks.org/mike/hive/")
+            div.tiny
+              a(target="_blank" href="https://bost.ocks.org/mike/hive/") https://bost.ocks.org/mike/hive/
+
+          section
+            h2.demo Semantic Substrates
+            div.left.small
+              ul.small
+                li Data: Networks with many edges
+                li Task: Summarize distribution of non network attribs
+                li Considerations:
+                  ul.small
+                    li Easier to understand
+                    li Scale well
+                    li Edges on demand work best
+            div.right
+              figure
+                img.fill(src="../shared_images/semanticSubstrates.gif" alt="Semantic Substrates")
+                figcaption.reference
+                  a(href="https://johnguerra.co/viz/influentials/story/?hashtag=DeepIndaba2019") https://johnguerra.co/viz/influentials/story/?hashtag=DeepIndaba2019
+
+
+
+          section
+            a(href="https://www.twosixlabs.com/6-ways-visualize-graphs/")
+              img(src="../shared_images/6waystovisualizegraphs.png", alt="Six ways of visualizing networks by Robert Gove")
+              figcaption.reference Robert Gove's Six ways of visualizing Networks
+
+
+        section
+          section
+            h1 Appendix
+
+          section
+            h2 Network Analysis Metrics
+            ul.small
+              li Connections
+              li Distribution
+              li Segmentation
+            div.tiny
+              a(href="https://en.wikipedia.org/wiki/Social_network_analysis") https://en.wikipedia.org/wiki/Social_network_analysis
+            p Use them as derived attributes
+
+          section
+            h2 Tools
+            ul.small
+              li
+                a(href="https://www.smrfoundation.org/nodexl/") NodeXL
+              li
+                a(href="https://gephi.org/") Gephi
+
+        section#Trees
+          section
+            h1 Trees
+
+          section
+            h2 Tree Definition
+            ul.small
+              li Set of nodes and links that express the parent-to-child relationship. Where each node:
+              ul.small
+                li Is uniquely labeled in the tree.
+                li Contains one or more numeric variables with values over time.
+                li Contains one or more categorical attributes that may have more than one value.
+
+          section
+            h2 Types of trees
+            img.demo(src="../shared_images/typesOfTrees.png", alt="Types of Trees")
+
+
+          //- Trees
+          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/09_networks-star-steno-topo.007.png")
+          section
+            h3.demo Radial Tree
+            iframe.blocks(src="http://blockbuilder.org/mbostock/4063550")
+            div.tiny
+              a(target="_blank" href="http://blockbuilder.org/mbostock/4063550") http://blockbuilder.org/mbostock/4063550
+            div.tiny
+              a(target="_blank" href="http://bl.ocks.org/mbostock/") by mbostock
+
+          section
+            h3.demo Dendogram
+            iframe.blocks(src="http://blockbuilder.org/mbostock/e9ba78a2c1070980d1b530800ce7fa2b")
+            div.tiny
+              a(target="_blank" href="http://blockbuilder.org/mbostock/e9ba78a2c1070980d1b530800ce7fa2b") http://blockbuilder.org/mbostock/e9ba78a2c1070980d1b530800ce7fa2b
+            div.tiny
+              a(target="_blank" href="http://bl.ocks.org/mbostock/") by mbostock
+
+
+          section
+            h2.demo Cluster Dendograms Radial
+            div.left.small
+              ul.small
+                li Data: Trees
+                li Tasks: Summarize common connections.
+                li Considerations:
+                  ul.small
+                    li Harder to read
+                    li Better space usage
+            div.right
+              a(href="https://observablehq.com/@d3/radial-dendrogram")
+                img(src="../shared_images/radialDendogram.svg" alt="Radial Dendogram")
+                span.tiny https://observablehq.com/@d3/radial-dendrogram
+
+
+          section
+            h2.demo Phylogenetic Trees
+            div.left.small
+              ul.small
+                li Data: Tree of Life
+                li Tasks: Summarize common connections. Identify Clusters.
+                li Considerations:
+                  ul.small
+                    li Harder to read
+                    li Also works with other clusters data
+            div.right
+              a(href="https://observablehq.com/@mbostock/tree-of-life")
+                img(src="../shared_images/phylogenetic.svg" alt="Phylogenetic")
+                span.tiny https://observablehq.com/@mbostock/tree-of-life
+
+
+          section
+            h3.demo Cluster Dendograms Cartesian
+            iframe.blocks(src="http://blockbuilder.org/mbostock/4063570")
+            div.tiny
+              a(target="_blank" href="http://blockbuilder.org/mbostock/4063570") http://blockbuilder.org/mbostock/4063570
+            div.tiny
+              a(target="_blank" href="http://bl.ocks.org/mbostock/") by mbostock
+
+          section
+            h2.demo Collapsible Tree
+            div.left.small
+              ul.small
+                li Data: Tree/Network
+                li Tasks: Navigate connections. Locate nodes
+                li Considerations:
+                  ul.small
+                    li Great for larger datasets
+            div.right
+              a(href="https://observablehq.com/@d3/collapsible-tree")
+                img(src="../shared_images/collapsibleTree.svg" alt="CollapsibleTree")
+                span.tiny https://observablehq.com/@d3/collapsible-tree
+
+
+          section
+            h3.demo SpaceTree
+            iframe.blocks(src="https://philogb.github.io/jit/static/v20/Jit/Examples/Spacetree/example1.html")
+            div.tiny
+              a(target="_blank" href="https://philogb.github.io/jit/static/v20/Jit/Examples/Spacetree/example1.html") https://philogb.github.io/jit/static/v20/Jit/Examples/Spacetree/example1.html
+
+          section
+            h3.demo SpaceTree
+            span.
+              <iframe width="853" height="480" src="https://www.youtube.com/embed/F7-vJBsFBWw" frameborder="0" allowful.smalllscreen></iframe>
+            div.tiny
+              a(target="_blank" href="http://www.cs.umd.edu/hcil/spacetree/") http://www.cs.umd.edu/hcil/spacetree/
+
+
+          section
+            h3.demo Degree of Interest Tree
+            span.
+              <iframe width="853" height="480" src="https://www.youtube.com/embed/RTQ0N4QY0yc" frameborder="0" allowful.smalllscreen></iframe>
+            div.tiny
+              a(target="_blank" href="http://vis.stanford.edu/papers/doitrees-revisited") http://vis.stanford.edu/papers/doitrees-revisited
+
+          section
+            h3.demo Force Directed Tree
+            iframe.blocks(src="http://blockbuilder.org/mbostock/95aa92e2f4e8345aaa55a4a94d41ce37")
+            div.tiny
+              a(target="_blank" href="http://blockbuilder.org/mbostock/95aa92e2f4e8345aaa55a4a94d41ce37") http://blockbuilder.org/mbostock/95aa92e2f4e8345aaa55a4a94d41ce37
+            div.tiny
+              a(target="_blank" href="http://bl.ocks.org/mbostock/") by mbostock
+
+        section
+          section
+            h2 Space Filling Techniques
+
+          //- Treemaps
+          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/09_networks-star-steno-topo.008.png")
+
+          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/09_networks-star-steno-topo.009.png")
+
+          section
+            h3.demo TreeMap
+            iframe.blocks(src="http://blockbuilder.org/mbostock/6bbb0a7ff7686b124d80")
+            div.tiny
+              a(target="_blank" href="http://blockbuilder.org/mbostock/6bbb0a7ff7686b124d80") http://blockbuilder.org/mbostock/6bbb0a7ff7686b124d80
+            div.tiny
+              a(target="_blank" href="http://bl.ocks.org/mbostock/") by mbostock
+
+
+          section
+            h3.demo TreeMap with parent labels
+            iframe.blocks(src="http://blockbuilder.org/mbostock/911ad09bdead40ec0061")
+            div.tiny
+              a(target="_blank" href="http://blockbuilder.org/mbostock/911ad09bdead40ec0061") http://blockbuilder.org/mbostock/911ad09bdead40ec0061
+            div.tiny
+              a(target="_blank" href="http://bl.ocks.org/mbostock/") by mbostock
+
+          section
+            h3.demo How to preprocess data for a treemap
+            div.tiny
+              a(href="https://observablehq.com/@john-guerra/treemap-from-table" target="_blank") https://observablehq.com/@john-guerra/treemap-from-table
+
+
+          section
+            iframe.blocks(src="https://finviz.com/map.ashx?t=sec")
+            div.tiny
+              a(href="https://finviz.com/map.ashx?t=sec") https://finviz.com/map.ashx?t=sec
+
+          section
+            h2.demo Icicle Tree
+            div.left.small
+              ul.small
+                li Data: Tree
+                li Tasks: Summarize values/hierarchy. Navigate links
+                li Considerations:
+                  ul.small
+                    li Uses more space than the treemap
+                    li Better for labels
+            div.right
+              a(href="https://observablehq.com/@d3/zoomable-icicle")
+                img(src="../shared_images/icicle.svg" alt="Icicle Tree")
+                span.tiny https://observablehq.com/@d3/zoomable-icicle
+
+
+          section
+            h2.demo Icicle Tree
+            div.left.small
+              ul.small
+                li Data: Tree
+                li Tasks: Summarize values/hierarchy. Navigate links. Compare values in leaves
+                li Considerations:
+                  ul.small
+                    li Careful.small with small edges
+            div.right
+              a(href="https://observablehq.com/@john-guerra/zoomable-variable-size-icicle")
+                img(src="../shared_images/variableSizeIcicle.svg" alt="Variable Size Icicle Tree")
+                span.tiny https://observablehq.com/@john-guerra/zoomable-variable-size-icicle
+
+          section
+            h2.demo Sunburst Tree
+            div.left.small
+              ul.small
+                li Data: Tree
+                li Tasks: Summarize values/hierarchy. Navigate links
+                li Considerations:
+                  ul.small
+                    li Radial values are confusing
+                    li Fancy yet difficul.smallt animation
+            div.right
+              a(href="https://observablehq.com/@d3/zoomable-sunburst")
+                img(src="../shared_images/sunburst.svg" alt="Sunburst Tree")
+                span.tiny https://observablehq.com/@d3/zoomable-sunburst
+
+
+          section
+            h3.demo Radial Treemap
+            iframe.blocks(src="http://blockbuilder.org/mbostock/ca5b03a33affa4160321")
+            div.tiny
+              a(target="_blank" href="http://blockbuilder.org/mbostock/ca5b03a33affa4160321") http://blockbuilder.org/mbostock/ca5b03a33affa4160321
+            div.tiny
+              a(target="_blank" href="http://bl.ocks.org/mbostock/") by mbostock
+
+          section
+            h3.demo Kickstarter Projects
+            iframe.blocks(src="http://blockbuilder.org/john-guerra/38b1c32154905828f019f35a026b7526")
+            div.tiny
+              a(target="_blank" href="http://blockbuilder.org/john-guerra/38b1c32154905828f019f35a026b7526") http://blockbuilder.org/john-guerra/38b1c32154905828f019f35a026b7526
+            div.tiny
+              a(target="_blank" href="http://bl.ocks.org/john-guerra/") by john-guerra
+
+
+        section
+          section
+            h2 Tree Comparison
+
+          section(data-background-size="contain" data-background="images/typesofTreeComparison.png")
+
+          section
+            h3.demo TreeVersity
+            iframe.blocks(src="https://treeversity.cattlab.umd.edu")
+            div.tiny
+              a(target="_blank" href="https://treeversity.cattlab.umd.edu") https://treeversity.cattlab.umd.edu
+
+        section
+          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/09_networks-star-steno-topo.010.png")
+          //- section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/09_networks-star-steno-topo.011.png")
+          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/09_networks-star-steno-topo.012.png")
+
+          //- Sets
+          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/09_networks-star-steno-topo.023.png")
+          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/09_networks-star-steno-topo.024.png")
+          //- section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/09_networks-star-steno-topo.025.png")
+
+
+
+        section#review
+          section
+            h2 What we learned
+            ul.small.small
+
+
+    script(src="../js/reveal.js")
+    script(src="../plugin/zoom/zoom.js")
+    script(src="../plugin/notes/notes.js")
+    script(src="../plugin/search/search.js")
+    script(src="../plugin/markdown/markdown.js")
+    script(src="../plugin/highlight/highlight.js")
+
+    script(src="https://cdn.jsdelivr.net/npm/vega@5.13.0")
+    script(src="https://cdn.jsdelivr.net/npm/vega-lite@4.13.1")
+    script(src="https://cdn.jsdelivr.net/npm/vega-lite-api@0.11.0")
+    script(src="https://cdn.jsdelivr.net/npm/vega-tooltip@0.23.2")
+    script(src="./week4.js")
+
+
+
+    script.
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        hash: true,
+        //- transition: "convex",
+
+        //- width: "100%",
+        //- height: "720px",
+
+        plugins: [ RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight ]
+      });
+    script.
+      (function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,"script","https://www.google-analytics.com/analytics.js","ga");
+
+      ga("create", "UA-72531610-1", "auto");
+      ga("send", "pageview");
+

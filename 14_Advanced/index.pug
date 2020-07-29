@@ -1,0 +1,254 @@
+doctype html
+html(lang="en")
+  head
+    title Week 14 Advanced visualization concepts. MIDS W209 Information Visualization Slides
+    meta(charset="utf-8")
+    meta(name="author", content="John Alexis Guerra Gómez")
+    meta(name="description", content="Week 14 Advanced visualization concepts. MIDS W209 Information Visualization Slides")
+
+    meta(name="apple-mobile-web-app-capable" content="yes")
+    meta(name="apple-mobile-web-app-status-bar-style" content="black-translucent")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+
+    link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Fjalla+One|Raleway|PT+Sans+Narrow")
+
+    //- Adobe fonts
+    link(rel="stylesheet" href="https://use.typekit.net/yjc0afr.css")
+
+    //- <!-- Theme used for syntax highlighting of code -->
+    link(rel="stylesheet" href="../plugin/highlight/monokai.css" id="highlight-theme")
+
+
+    link(href="../css/reveal.css", rel="stylesheet")
+    link(href="../css/theme/white.css", rel="stylesheet", id="theme")
+    link(href="../css/style.css", rel="stylesheet")
+
+
+  body
+    .reveal
+      .slides
+        section
+          h1.title Advanced visualization concepts
+            br
+            small MIDS W209: Information Visualization
+
+          div.r-stretch
+
+          div.tiny
+            a(href="https://johnguerra.co/", target="_blank") #[strong  John Alexis Guerra Gómez]
+            span  |  john.guerra[at]gmail.com
+            a(href="https://twitter.com/duto_guerra")  |  @duto_guerra
+            br
+
+            a(href="https://johnguerra.co/lectures/MIDS_W209_Information_Visualization/14_Advanced/", target="_blank") https://johnguerra.co/lectures/MIDS_W209_Information_Visualization/14_Advanced/
+
+          div.logo
+            a(href="https://datascience.berkeley.edu/")
+              img.logo(src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo")
+          div.tiny Partially based on
+            a(href="https://www.cs.ubc.ca/~tmm/talks.html#minicourse14")  slides from Tamara Munzner
+
+        //- Outline
+        section#outline
+          section
+            h2 What we are going to learn
+            ul.small
+
+
+        //- convert -density 150 -depth 8 -quality 85 ~/Dropbox/documentos/2016/andes/visual_analytics/lectures_tamara/05_rules-artery.pdf ./05_rules-artery.png
+
+
+        section
+          section
+            h2 Outline
+            ul
+              li Clustering
+              li Regression
+              li Classification
+              li Dimensionality Reduction
+              li Recommendation systems
+        section
+          section
+            h2 Clustering
+            a(href="http://scikit-learn.org/stable/modules/clustering.html#clustering")
+              img(src="http://scikit-learn.org/stable/_images/sphx_glr_plot_cluster_comparison_0011.png")
+              p.tiny http://scikit-learn.org/stable/modules/clustering.html#clustering
+
+
+          section
+            h2 When to use it?
+            ul
+              li.fragment When you want to find #[strong similar] items
+              li.fragment Depends on your distance metric
+              li.fragment When you have to many items, and you want to #[strong aggregate]
+
+
+          //- section.demo
+          //-   iframe.blocks(src="http://tech.nitoyon.com/en/blog/2013/11/07/k-means/")
+          //-   a.tiny(target="_blank"  href="http://tech.nitoyon.com/en/blog/2013/11/07/k-means/") http://tech.nitoyon.com/en/blog/2013/11/07/k-means/
+
+          section
+            h2 Examples
+            ul
+              li.fragment Customer segmentation
+              li.fragment Grouping experiment outcomes
+
+
+        section
+          section
+            h2.demo Regression
+            a(target="_blank" href="http://scikit-learn.org/stable/modules/linear_model.html#passive-aggressive-algorithms")
+              img.blocks(src="http://scikit-learn.org/stable/_images/sphx_glr_plot_ols_0011.png")
+              p.tiny http://scikit-learn.org/stable/modules/linear_model.html#passive-aggressive-algorithms
+
+          section
+            h2 When to use it?
+            ul
+              li.fragment Present (Identify/Compare) Tendency
+              li.fragment Predict values
+
+
+          section
+            h3.demo Linear Regression
+            iframe.blocks(src="http://blockbuilder.org/tmcw/3931800")
+            a.tiny(target="_blank" href="http://blockbuilder.org/tmcw/3931800") http://blockbuilder.org/tmcw/3931800
+            a.tiny(target="_blank" href="http://bl.ocks.org/tmcw/") by tmcw
+
+          section
+            h2 Examples
+            ul
+              li.fragment Stock prices
+              li.fragment Drug response
+
+
+        section
+          section
+            h2.demo Classification
+            img(src="images/sphx_glr_plot_classifier_comparison_001.png" alt="Classification algorithms")
+
+            a.tiny(href="https://scikit-learn.org/stable/modules/ensemble.html#random-forests") https://scikit-learn.org/stable/modules/ensemble.html#random-forests
+
+          section
+            h2 When to use it?
+            ul
+              li.fragment Present (Identify/Compare) Tendency
+              li.fragment Present (Identify/Compare) Groups
+              li.fragment Aggregate
+              li.fragment Predict values
+
+          section
+            h2 Examples
+            ul
+              li.fragment Photo categorization
+              li.fragment Sentiment analysis
+              li.fragment Spam filtering
+
+        section
+          section
+            h2.demo Dimensionality Reduction
+            img(src="http://scikit-learn.org/stable/_images/sphx_glr_plot_kernel_pca_0011.png")
+
+          section
+            h2 When to use it?
+            ul
+              li.fragment Attribute Filtering
+              li.fragment Categorize Documents (Topic modeling)
+
+
+        section
+          section
+            h2 Recommendation systems
+
+
+          section
+            h2 When to use it?
+            ul
+              li.fragment Large catalog, with user preference history
+              li.fragment If you like a, and b, maybe you will like c
+
+          section
+            h2 Types
+            ul
+              li.fragment Collaborative filtering
+              li.fragment Content based systems
+              li.fragment Hybrids
+
+          section
+            h2 Examples
+            ul
+              li.fragment Amazon
+              li.fragment Facebook
+              li.fragment Google
+              li.fragment Yahoo
+              li.fragment Netflix Prize
+
+        section
+          section
+            h2 How to use the algorithms?
+            ul
+              li.fragment
+                a(href="https://www.r-project.org/") R
+              li.fragment
+                a(href="http://scikit-learn.org/") scikit-learn
+              li.fragment
+                a(href="https://www.tensorflow.org/") Tensorflow (Google)
+              li.fragment
+                a(href="http://caffe.berkeleyvision.org/") Caffe
+              li.fragment
+                a(href="https://aws.amazon.com/machine-learning/") Amazon ML
+              li.fragment
+                a(href="https://spark.apache.org/docs/1.1.0/mllib-guide.html") Spark MLlib
+              li.fragment
+                a(href="https://turi.com/") Graphlab
+
+          //- section
+          //-   h2 Applied example node + R
+          //-   a(href="https://github.com/juanibarral/node_plus_r_tutorial/wiki") https://github.com/juanibarral/node_plus_r_tutorial/wiki
+
+
+
+
+        section#review
+          section
+            h2 What we learned
+            ul.small
+
+
+    script(src="../js/reveal.js")
+    script(src="../plugin/zoom/zoom.js")
+    script(src="../plugin/notes/notes.js")
+    script(src="../plugin/search/search.js")
+    script(src="../plugin/markdown/markdown.js")
+    script(src="../plugin/highlight/highlight.js")
+
+    script(src="https://cdn.jsdelivr.net/npm/vega@5.13.0")
+    script(src="https://cdn.jsdelivr.net/npm/vega-lite@4.13.1")
+    script(src="https://cdn.jsdelivr.net/npm/vega-lite-api@0.11.0")
+    script(src="https://cdn.jsdelivr.net/npm/vega-tooltip@0.23.2")
+    script(src="./week4.js")
+
+
+
+    script.
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        hash: true,
+        //- transition: "convex",
+
+        //- width: "100%",
+        //- height: "720px",
+
+        plugins: [ RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight ]
+      });
+    script.
+      (function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,"script","https://www.google-analytics.com/analytics.js","ga");
+
+      ga("create", "UA-72531610-1", "auto");
+      ga("send", "pageview");
+

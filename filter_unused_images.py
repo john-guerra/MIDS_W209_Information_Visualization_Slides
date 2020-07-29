@@ -66,8 +66,8 @@ def move_images(images_used):
 
 
 images_used = get_image_list()
-print("Images found:")
-print(images_used)
+print("Images found:", len(images_used))
+# print(images_used)
 
 print("moving images")
 move_images(images_used)
