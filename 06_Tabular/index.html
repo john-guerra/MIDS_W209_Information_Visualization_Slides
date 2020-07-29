@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Week 6 Visualizing Tabular Data. MIDS W209 Information Visualization Slides</title>
+    <meta charset="utf-8">
+    <meta name="author" content="John Alexis Guerra Gómez">
+    <meta name="description" content="Week 6 Visualizing Tabular Data. MIDS W209 Information Visualization Slides">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fjalla+One|Raleway|PT+Sans+Narrow">
+    <link rel="stylesheet" href="https://use.typekit.net/yjc0afr.css">
+    <link rel="stylesheet" href="../plugin/highlight/monokai.css" id="highlight-theme">
+    <link href="../css/reveal.css" rel="stylesheet">
+    <link href="../css/theme/white.css" rel="stylesheet" id="theme">
+    <link href="../css/style.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h1 class="title">Visualizing Tabular Data<br><small>MIDS W209: Information Visualization</small></h1>
+          <div class="r-stretch"></div>
+          <div class="tiny"><a href="https://johnguerra.co/" target="_blank"><strong> John Alexis Guerra Gómez</strong></a><span> |  john.guerra[at]gmail.com</span><a href="https://twitter.com/duto_guerra"> |  @duto_guerra</a><br><a href="https://johnguerra.co/lectures/MIDS_W209_Information_Visualization/06_Tabular/" target="_blank">https://johnguerra.co/lectures/MIDS_W209_Information_Visualization/06_Tabular/</a></div>
+          <div class="logo"><a href="https://datascience.berkeley.edu/"><img class="logo" src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo"></a></div>
+          <div class="tiny">Partially based on<a href="https://www.cs.ubc.ca/~tmm/talks.html#minicourse14"> slides from Tamara Munzner</a></div>
+        </section>
+        <section id="outline">
+          <section>
+            <h2>What we are going to learn</h2>
+            <ul class="small"></ul>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h2>Recap</h2>
+          </section>
+          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/tamara_course14_session1-15.png"></section>
+          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/tamara_course14_session1-15_highlighted.png"></section>
+          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/tamara_course14_session1-19.png"></section>
+          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/tamara_course14_session1-23.png"></section>
+          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/tamara_course14_session1-23_highlighted.png"></section>
+        </section>
+        <section>
+          <section>
+            <h1>Arranging tables</h1>
+          </section>
+          <section>
+            <h2>Why Arrange</h2>
+            <p class="fragment">Space is the most important channel</p>
+          </section>
+          <section>
+            <h2>How to arrange?</h2>
+            <ul>
+              <li class="fragment">Quantitative data <span class="fragment">-> Express</span></li>
+              <li class="fragment">Categorical data <span class="fragment">-> Separate, Order, Align</span></li>
+            </ul>
+          </section>
+          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/08_tables-spatial.003.png"></section>
+          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/08_tables-spatial.004.png"></section>
+          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/08_tables-spatial.005.png"></section>
+          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/08_tables-spatial.006.png"></section>
+          <section>
+            <h3 class="demo">Scatterplot</h3>
+            <div class="blocks" id="scatterplotDiv"></div>
+            <script type="module">
+              import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+              import notebook from "https://api.observablehq.com/@john-guerra/scatterplot.js?v=3";
+              new Runtime().module(notebook, name => {
+                if (name === "chart") {
+                  return new Inspector(document.querySelector("#scatterplotDiv"));
+                }
+              });
+              
+            </script><a class="tiny" target="_blank" href="https://observablehq.com/@john-guerra/scatterplot">https://observablehq.com/@john-guerra/scatterplot</a>
+          </section>
+          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/08_tables-spatial.007.png"></section>
+          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/08_tables-spatial.008.png"></section>
+          <section>
+            <h3 class="demo">Barchart</h3>
+            <iframe class="blocks" src="http://blockbuilder.org/mbostock/3885304"></iframe><a class="tiny" target="_blank" href="http://blockbuilder.org/mbostock/3885304">http://blockbuilder.org/mbostock/3885304</a>
+          </section>
+          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/08_tables-spatial.009.png"></section>
+          <section>
+            <h3 class="demo">Stacked barchart</h3>
+            <iframe class="blocks" src="http://blockbuilder.org/mbostock/3886208"></iframe><a class="tiny" target="_blank" href="http://blockbuilder.org/mbostock/3886208">http://blockbuilder.org/mbostock/3886208</a>
+          </section>
+          <section>
+            <h3 class="demo">d3.stack and d3.nest</h3>
+            <div class="blocks" id="d3stackandnest"></div>
+            <script type="module">
+              import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+              import define from "https://api.observablehq.com/@john-guerra/d3-stack-with-d3-nest.js?v=3";
+              const inspect = Inspector.into("#d3stackandnest");
+              (new Runtime).module(define, name => name === "chart" ? inspect() : undefined);
+            </script><a class="tiny" target="_blank" href="https://observablehq.com/@john-guerra/d3-stack-with-d3-nest">https://observablehq.com/@john-guerra/d3-stack-with-d3-nest</a>
+          </section>
+          <section>
+            <h3 class="demo">d3 stack</h3><a class="tiny" href="https://github.com/d3/d3-shape/blob/v1.3.5/README.md#stack">https://github.com/d3/d3-shape/blob/v1.3.5/README.md#stack</a><img style="height:400px" src="../shared_images/vad_book_alldiagrams/d3_stack.png" alt="d3 stack">
+          </section>
+          <section>
+            <h3 class="demo">stacked to grouped</h3>
+            <div class="blocks" id="stackedToGroupedDivLayout"></div>
+            <div class="blocks" id="stackedToGroupedDiv"></div>
+            <script type="module">
+              import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+              import notebook from "https://api.observablehq.com/@d3/stacked-to-grouped-bars.js?v=3";
+              new Runtime().module(notebook, name => {
+                if (name === "chart") {
+                  return new Inspector(document.querySelector("#stackedToGroupedDiv"));
+                }
+                if (name === "viewof layout") {
+                  return new Inspector(document.querySelector("#stackedToGroupedDivLayout"));
+                }
+              
+              });
+            </script><a class="tiny" target="_blank" href="https://observablehq.com/@d3/stacked-to-grouped-bars">https://observablehq.com/@d3/stacked-to-grouped-bars</a>
+          </section>
+          <section>
+            <h2>Interesting discussion.</h2>
+            <p>Stacked bar charts are the worst.</p><a href="https://eagereyes.org/techniques/stacked-bars-are-the-worst">Robert Kosara's blog</a>
+            <p>Make sure to read the comments</p>
+          </section>
+          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/08_tables-spatial.010.png"></section>
+          <section>
+            <h3 class="demo">Streamgraph</h3>
+            <iframe class="blocks" src="http://blockbuilder.org/mbostock/4060954"></iframe><a class="tiny" target="_blank" href="http://blockbuilder.org/mbostock/4060954">http://blockbuilder.org/mbostock/4060954</a>
+          </section>
+          <section>
+            <h3 class="demo">Streamgraph RIO2016</h3><img class="blocks" src="../shared_images/vad_book_alldiagrams/streamGraphNYTimes.png" alt="Streamgraph RIO2016 NY times"><a class="tiny" target="_blank" href="http://www.nytimes.com/interactive/2016/08/08/sports/olympics/history-olympic-dominance-charts.html?_r=0">http://www.nytimes.com/interactive/2016/08/08/sports/olympics/history-olympic-dominance-charts.html?_r=0</a>
+          </section>
+          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/08_tables-spatial.011.png"></section>
+          <section>
+            <h3 class="demo">Linechart</h3>
+            <iframe class="blocks" src="http://blockbuilder.org/mbostock/3883245"></iframe><a class="tiny" target="_blank" href="http://blockbuilder.org/mbostock/3883245">http://blockbuilder.org/mbostock/3883245</a>
+          </section>
+          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/08_tables-spatial.012.png"></section>
+          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/08_tables-spatial.013.png"></section>
+          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/08_tables-spatial.014.png"></section>
+          <section>
+            <h3 class="demo">Heatmap</h3>
+            <iframe class="blocks" src="http://blockbuilder.org/ianyfchang/8119685"></iframe><a class="tiny" target="_blank" href="http://blockbuilder.org/ianyfchang/8119685">http://blockbuilder.org/ianyfchang/8119685</a>
+          </section>
+          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/08_tables-spatial.015.png"></section>
+          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/08_tables-spatial.016.png"></section>
+          <section>
+            <h3 class="demo">Scatterplot Matrix</h3>
+            <iframe class="blocks" src="http://blockbuilder.org/mbostock/4063663"></iframe><a class="tiny" target="_blank" href="http://blockbuilder.org/mbostock/4063663">http://blockbuilder.org/mbostock/4063663</a>
+          </section>
+          <section>
+            <h2>Bonus: InMens</h2>
+            <p>What about millions of points?</p><a target="_blank" href="http://vis.stanford.edu/projects/immens/demo/splom/">http://vis.stanford.edu/projects/immens/demo/splom/</a>
+          </section>
+          <section>
+            <h3 class="demo">Parallel Coordinates</h3>
+            <iframe class="blocks" src="http://blockbuilder.org/syntagmatic/3150059"></iframe><a class="tiny" target="_blank" href="http://blockbuilder.org/syntagmatic/3150059">http://blockbuilder.org/syntagmatic/3150059</a>
+          </section>
+          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/08_tables-spatial.017.png"></section>
+          <section>
+            <h3 class="demo">Navio</h3>
+            <iframe class="blocks" src="https://navio.dev"></iframe><a class="tiny" target="_blank" href="https://navio.dev">https://navio.dev</a>
+          </section>
+          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/08_tables-spatial.018.png"></section>
+          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/08_tables-spatial.019.png"></section>
+          <section>
+            <h3 class="demo">Polar Area Chart</h3>
+            <iframe class="blocks" src="http://blockbuilder.org/curran/94f1376b946c9d217014"></iframe><a class="tiny" target="_blank" href="http://blockbuilder.org/curran/94f1376b946c9d217014">http://blockbuilder.org/curran/94f1376b946c9d217014</a>
+          </section>
+          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/08_tables-spatial.020.png"></section>
+          <section>
+            <h3 class="demo">Pie chart</h3>
+            <iframe class="blocks" src="http://blockbuilder.org/mbostock/3887235"></iframe><a class="tiny" target="_blank" href="http://blockbuilder.org/mbostock/3887235">http://blockbuilder.org/mbostock/3887235</a>
+          </section>
+          <section>
+            <h3 class="demo">Donut chart</h3>
+            <iframe class="blocks" src="http://blockbuilder.org/mbostock/1346410"></iframe><a class="tiny" target="_blank" href="http://blockbuilder.org/mbostock/1346410">http://blockbuilder.org/mbostock/1346410</a>
+          </section>
+          <section>
+            <h3 class="demo">Stacked bar chart normalized</h3>
+            <iframe class="blocks" src="http://blockbuilder.org/mbostock/3886394"></iframe><a class="tiny" target="_blank" href="http://blockbuilder.org/mbostock/3886394">http://blockbuilder.org/mbostock/3886394</a>
+          </section>
+          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/08_tables-spatial.021.png"></section>
+          <section>
+            <h3 class="demo">Glyphmap</h3>
+            <iframe class="blocks" src="http://blockbuilder.org/sxywu/8d1b563586bf411383345e95a3418715"></iframe><a class="tiny" target="_blank" href="http://blockbuilder.org/sxywu/8d1b563586bf411383345e95a3418715">http://blockbuilder.org/sxywu/8d1b563586bf411383345e95a3418715</a>
+          </section>
+          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/08_tables-spatial.022.png"></section>
+          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/08_tables-spatial.023.png"></section>
+          <section>
+            <h2>MLExplore.js</h2>
+            <div class="fragment">Dimmensionality Reduction<span class="fragment"> +  Clustering</span></div>
+            <div class="small portrait"><img src="../shared_images/vad_book_alldiagrams/Fabian.jpg" alt="Fabián Peña">
+              <div>Fabian Peña</div>
+            </div><a class="tiny" href="https://fabiancpl.github.io/MLExplore.js/">https://fabiancpl.github.io/MLExplore.js/</a>
+          </section>
+        </section>
+        <section id="review">
+          <section>
+            <h2>What we learned</h2>
+            <ul class="small"></ul>
+          </section>
+        </section>
+      </div>
+    </div>
+    <script src="../js/reveal.js"></script>
+    <script src="../plugin/zoom/zoom.js"></script>
+    <script src="../plugin/notes/notes.js"></script>
+    <script src="../plugin/search/search.js"></script>
+    <script src="../plugin/markdown/markdown.js"></script>
+    <script src="../plugin/highlight/highlight.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.13.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.13.1"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite-api@0.11.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-tooltip@0.23.2"></script>
+    <script src="./week4.js"></script>
+    <script>
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        hash: true,
+        //- transition: "convex",
+      
+        //- width: "100%",
+        //- height: "720px",
+      
+        plugins: [ RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight ]
+      });
+    </script>
+    <script>
+      (function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,"script","https://www.google-analytics.com/analytics.js","ga");
+      
+      ga("create", "UA-72531610-1", "auto");
+      ga("send", "pageview");
+    </script>
+  </body>
+</html>

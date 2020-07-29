@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Week 11 Faceting. MIDS W209 Information Visualization Slides</title>
+    <meta charset="utf-8">
+    <meta name="author" content="John Alexis Guerra Gómez">
+    <meta name="description" content="Week 6 Faceting. MIDS W209 Information Visualization Slides">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fjalla+One|Raleway|PT+Sans+Narrow">
+    <link rel="stylesheet" href="https://use.typekit.net/yjc0afr.css">
+    <link rel="stylesheet" href="../plugin/highlight/monokai.css" id="highlight-theme">
+    <link href="../css/reveal.css" rel="stylesheet">
+    <link href="../css/theme/white.css" rel="stylesheet" id="theme">
+    <link href="../css/style.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h1 class="title">Faceting<br><small>MIDS W209: Information Visualization</small></h1>
+          <div class="r-stretch"></div>
+          <div class="tiny"><a href="https://johnguerra.co/" target="_blank"><strong> John Alexis Guerra Gómez</strong></a><span> |  john.guerra[at]gmail.com</span><a href="https://twitter.com/duto_guerra"> |  @duto_guerra</a><br><a href="https://johnguerra.co/lectures/MIDS_W209_Information_Visualization/11_Faceting/" target="_blank">https://johnguerra.co/lectures/MIDS_W209_Information_Visualization/11_Faceting/</a></div>
+          <div class="logo"><a href="https://datascience.berkeley.edu/"><img class="logo" src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo"></a></div>
+          <div class="tiny">Partially based on<a href="https://www.cs.ubc.ca/~tmm/talks.html#minicourse14"> slides from Tamara Munzner</a></div>
+        </section>
+        <section id="outline">
+          <section>
+            <h2>What we are going to learn</h2>
+            <ul class="small"></ul>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h2>Facet Across Multiple Views</h2>
+          </section>
+          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/12_facet-biomech.003.png"></section>
+          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/12_facet-biomech.004.png"></section>
+          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/12_facet-biomech.008.png"></section>
+          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/12_facet-biomech.005.png"></section>
+          <section>
+            <h3 class="demo">Linked Filtering (Crossfilter)</h3>
+            <iframe class="blocks" src="http://square.github.io/crossfilter/"></iframe><a class="tiny" target="_blank" href="http://square.github.io/crossfilter/">http://square.github.io/crossfilter/</a>
+          </section>
+          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/12_facet-biomech.006.png"></section>
+          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/12_facet-biomech.007.png"></section>
+          <section>
+            <h3 class="demo">Overview/Details</h3>
+            <p class="small">Same encoding / Subset of data / Linked Navigation</p>
+            <iframe class="blocks" src="http://blockbuilder.org/mbostock/34f08d5e11952a80609169b7917d4172"></iframe><a class="tiny" target="_blank" href="http://blockbuilder.org/mbostock/34f08d5e11952a80609169b7917d4172">http://blockbuilder.org/mbostock/34f08d5e11952a80609169b7917d4172</a><a class="tiny" target="_blank" href="http://bl.ocks.org/mbostock/">by mbostock</a>
+          </section>
+          <section>
+            <h3 class="demo">Small Multiples (cubism)</h3>
+            <p class="small">Same encoding / Different data / Linked Navigation</p>
+            <iframe class="blocks" src="http://square.github.io/cubism/demo/"></iframe><a class="tiny" target="_blank" href="http://square.github.io/cubism/demo/">http://square.github.io/cubism/demo/</a>
+          </section>
+          <section>
+            <h3 class="demo">Multiform Overview/Details (Tweetometro)</h3>
+            <p class="small">Different encoding / Subset of data / Linked Navigation</p>
+            <iframe class="blocks" src="http://old.tweetometro.co/"></iframe><a class="tiny" target="_blank" href="http://old.tweetometro.co/">http://old.tweetometro.co/</a>
+          </section>
+          <section>
+            <h3 class="demo">Multiform Overview (Treeversity)</h3>
+            <p class="small">Different encoding / All data / Linked Navigation</p>
+            <iframe class="blocks" src="https://treeversity.cattlab.umd.edu/"></iframe><a class="tiny" target="_blank" href="https://treeversity.cattlab.umd.edu/">https://treeversity.cattlab.umd.edu/</a>
+          </section>
+          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/12_facet-biomech.008.png"></section>
+          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/12_facet-biomech.009.png"></section>
+          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/12_facet-biomech.010.png"></section>
+          <section>
+            <h3 class="demo">Improvise</h3>
+            <iframe class="blocks" src="http://www.cs.ou.edu/~weaver/improvise/"></iframe><a class="tiny" target="_blank" href="http://www.cs.ou.edu/~weaver/improvise/">http://www.cs.ou.edu/~weaver/improvise/</a>
+          </section>
+          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/12_facet-biomech.011.png"></section>
+          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/12_facet-biomech.012.png"></section>
+          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/12_facet-biomech.013.png"></section>
+          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/12_facet-biomech.014.png"></section>
+          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/12_facet-biomech.015.png"></section>
+          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/12_facet-biomech.016.png"></section>
+          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/12_facet-biomech.017.png"></section>
+          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/12_facet-biomech.018.png"></section>
+          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/12_facet-biomech.019.png"></section>
+          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/12_facet-biomech.020.png"></section>
+          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/12_facet-biomech.021.png"></section>
+          <section>
+            <h2>Dynamic layering</h2><a href="https://johnguerra.co/viz/influentials/story/?hashtag=ieeevis2019">https://johnguerra.co/viz/influentials/story/?hashtag=ieeevis2019</a>
+          </section>
+        </section>
+        <section id="review">
+          <section>
+            <h2>What we learned</h2>
+            <ul class="small"></ul>
+          </section>
+        </section>
+      </div>
+    </div>
+    <script src="../js/reveal.js"></script>
+    <script src="../plugin/zoom/zoom.js"></script>
+    <script src="../plugin/notes/notes.js"></script>
+    <script src="../plugin/search/search.js"></script>
+    <script src="../plugin/markdown/markdown.js"></script>
+    <script src="../plugin/highlight/highlight.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.13.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.13.1"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite-api@0.11.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-tooltip@0.23.2"></script>
+    <script src="./week4.js"></script>
+    <script>
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        hash: true,
+        //- transition: "convex",
+      
+        //- width: "100%",
+        //- height: "720px",
+      
+        plugins: [ RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight ]
+      });
+    </script>
+    <script>
+      (function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,"script","https://www.google-analytics.com/analytics.js","ga");
+      
+      ga("create", "UA-72531610-1", "auto");
+      ga("send", "pageview");
+    </script>
+  </body>
+</html>

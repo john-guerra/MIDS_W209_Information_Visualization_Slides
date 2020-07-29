@@ -368,8 +368,88 @@ body {
 }
 .reveal img.fill {
   width: 100%;
-  max-width: 900px;
+  max-width: 800px;
 }
 .reveal figcaption {
-  font-size: 20%;
+  font-size: 30%;
+}
+.reveal .left {
+  left: -8.33%;
+  text-align: left;
+  float: left;
+  width: 45%;
+  z-index: -10;
+  position: relative;
+}
+.reveal .right {
+  float: right;
+  z-index: -10;
+  width: 45%;
+  position: relative;
+}
+.reveal #handsOn pre {
+  width: 70%;
+  font-size: 0.5em;
+  float: left;
+}
+.reveal #handsOn div.target {
+  margin: 20px;
+  width: 25%;
+  float: left;
+  font: 10px sans-serif;
+}
+.reveal #handsOn div.target rect {
+  fill: #4682b4;
+}
+.reveal #handsOn div.target circle {
+  opacity: 0.3;
+}
+.reveal #handsOn div.target path.line {
+  fill: none;
+  stroke: #666;
+  stroke-width: 1.5px;
+}
+.reveal #handsOn div.target path.area {
+  fill: #e7e7e7;
+}
+.reveal #handsOn div.target .axis {
+  shape-rendering: crispEdges;
+}
+.reveal #handsOn div.target .x.axis line {
+  stroke: #bbb;
+}
+.reveal #handsOn div.target .x.axis .minor {
+  stroke-opacity: 0.5;
+}
+.reveal #handsOn div.target .x.axis path {
+  fill: none;
+}
+.reveal #handsOn div.target .y.axis line,
+.reveal #handsOn div.target .y.axis path {
+  fill: none;
+  stroke: #333;
+}
+.reveal #handsOn button.execute {
+  clear: both;
+  font-size: 0.8em;
+}
+.reveal #handsOn div.followLink {
+  font-size: 0.6em;
+}
+.reveal .contactInfo {
+  text-align: right;
+}
+.reveal .contactInfo a {
+  font-size: 0.6em;
+}
+.reveal .red {
+  color: #e80000;
+}
+.reveal img.side {
+  float: left;
+  width: 45%;
+  padding: 0 5px 0 5px;
+}
+.reveal .clear {
+  clear: both;
 }

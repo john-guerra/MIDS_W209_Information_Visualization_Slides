@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Week 9 Geo and Color Data. MIDS W209 Information Visualization Slides</title>
+    <meta charset="utf-8">
+    <meta name="author" content="John Alexis Guerra Gómez">
+    <meta name="description" content="Week 9 Geo and Color Data. MIDS W209 Information Visualization Slides">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fjalla+One|Raleway|PT+Sans+Narrow">
+    <link rel="stylesheet" href="https://use.typekit.net/yjc0afr.css">
+    <link rel="stylesheet" href="../plugin/highlight/monokai.css" id="highlight-theme">
+    <link href="../css/reveal.css" rel="stylesheet">
+    <link href="../css/theme/white.css" rel="stylesheet" id="theme">
+    <link href="../css/style.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h1 class="title">Maps and Color<br><small>MIDS W209: Information Visualization</small></h1>
+          <div class="r-stretch"></div>
+          <div class="tiny"><a href="https://johnguerra.co/" target="_blank"><strong> John Alexis Guerra Gómez</strong></a><span> |  john.guerra[at]gmail.com</span><a href="https://twitter.com/duto_guerra"> |  @duto_guerra</a><br><a href="https://johnguerra.co/lectures/MIDS_W209_Information_Visualization/06_Tabular/" target="_blank">https://johnguerra.co/lectures/MIDS_W209_Information_Visualization/06_Tabular/</a></div>
+          <div class="logo"><a href="https://datascience.berkeley.edu/"><img class="logo" src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo"></a></div>
+          <div class="tiny">Partially based on<a href="https://www.cs.ubc.ca/~tmm/talks.html#minicourse14"> slides from Tamara Munzner</a></div>
+        </section>
+        <section id="outline">
+          <section>
+            <h2>What we are going to learn</h2>
+            <ul class="small"></ul>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h2>Visualizing Spatial Data</h2>
+          </section>
+          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/08_tables-spatial.025.png"></section>
+          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/08_tables-spatial.026.png"></section>
+          <section>
+            <h3 class="demo">Choropleth map</h3>
+            <iframe class="blocks" src="http://blockbuilder.org/mbostock/4060606"></iframe><a class="tiny" target="_blank" href="http://blockbuilder.org/mbostock/4060606">http://blockbuilder.org/mbostock/4060606</a>
+          </section>
+          <section>
+            <h3 class="demo">US Grid map</h3>
+            <iframe class="blocks" src="http://blockbuilder.org/kristw/2f628465e36f9821325d"></iframe><a class="tiny" target="_blank" href="http://blockbuilder.org/kristw/2f628465e36f9821325d">http://blockbuilder.org/kristw/2f628465e36f9821325d</a><a class="tiny" target="_blank" href="http://bl.ocks.org/kristw/">by Kristw</a>
+          </section>
+          <section>
+            <h3 class="demo">Colombia Grid Map?</h3>
+            <iframe class="blocks" src="http://blockbuilder.org/john-guerra/4db5024e00a82f10a2dc"></iframe><a class="tiny" target="_blank" href="http://blockbuilder.org/john-guerra/4db5024e00a82f10a2dc">http://blockbuilder.org/john-guerra/4db5024e00a82f10a2dc</a>
+          </section>
+          <section>
+            <h2 class="demo">Map Projections</h2>
+            <iframe class="blocks" src="http://blockbuilder.org/mbostock/3711652"></iframe><a class="tiny" target="_blank" href="http://blockbuilder.org/mbostock/3711652">http://blockbuilder.org/mbostock/3711652</a>
+          </section>
+          <section>
+            <h2 class="demo">Map Projections</h2>
+            <iframe class="blocks" width="560" height="315" src="https://www.youtube.com/embed/kIID5FDi2JQ" frameborder="0" allowfullscreen></iframe>
+          </section>
+          <section>
+            <h2>Map libraries</h2>
+            <ul>
+              <li><a target="_blank" href="http://mapbox.com/">http://mapbox.com/</a></li>
+              <li><a target="_blank" href="http://leafletjs.com/">http://leafletjs.com/</a></li>
+              <li><a target="_blank" href="http://datamaps.github.io/">http://datamaps.github.io/</a></li>
+              <li><a target="_blank" href="https://github.com/emeeks/d3-carto-map">https://github.com/emeeks/d3-carto-map</a></li>
+            </ul>
+          </section>
+          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/08_tables-spatial.027.png"></section>
+          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/08_tables-spatial.028.png"></section>
+          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/08_tables-spatial.029.png"></section>
+          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/08_tables-spatial.030.png"></section>
+          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/08_tables-spatial.031.png"></section>
+          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/08_tables-spatial.032.png"></section>
+          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/08_tables-spatial.033.png"></section>
+        </section>
+        <section>
+          <section>
+            <h3>Mapbox + Tableau</h3><a href="https://www.mapbox.com/tableau/">https://www.mapbox.com/tableau/</a>
+          </section>
+          <section>
+            <h3 class="demo">Votos Fajardo</h3><a class="tiny" href="https://public.tableau.com/profile/john.alexis.guerra.g.mez#!/vizhome/votosFajardo2/Fajardo">https://public.tableau.com/profile/john.alexis.guerra.g.mez#!/vizhome/votosFajardo2/Fajardo</a>
+            <div class="blocks">
+              <div class='tableauPlaceholder' id='viz1568758234721' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;NG&#47;NGCWHPJM6&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='path' value='shared&#47;NGCWHPJM6' /> <param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;NG&#47;NGCWHPJM6&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>
+              <script type='text/javascript'>                    var divElement = document.getElementById('viz1568758234721');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height='600px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+              
+              
+            </div>
+          </section>
+          <section>
+            <h3 class="demo">Votos Concejo</h3><a class="tiny" href="https://public.tableau.com/profile/john.alexis.guerra.g.mez#!/vizhome/votosConcejo/Dashboard1">https://public.tableau.com/profile/john.alexis.guerra.g.mez#!/vizhome/votosConcejo/Dashboard1</a>
+            <div class="blocks">
+              <div class='tableauPlaceholder' id='viz1568758685092' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;vo&#47;votosConcejo&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='votosConcejo&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;vo&#47;votosConcejo&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1568758685092');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height='600px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+              
+              
+              
+            </div>
+          </section>
+          <section>
+            <h3 class="demo">Mapbox + D3</h3><a href="https://observablehq.com/@john-guerra/mapbox-d3">https://observablehq.com/@john-guerra/mapbox-d3</a>
+          </section>
+          <section>
+            <h3>Mike's maps tutorial</h3><a href="https://medium.com/@mbostock/command-line-cartography-part-1-897aa8f8ca2c">https://medium.com/@mbostock/command-line-cartography-part-1-897aa8f8ca2c</a>
+          </section>
+          <section>
+            <h3>Vega-lite Maps</h3><a href="https://observablehq.com/@vega/vega-lite-api">https://observablehq.com/@vega/vega-lite-api</a>
+          </section>
+        </section>
+        <section id="review">
+          <section>
+            <h2>What we learned</h2>
+            <ul class="small"></ul>
+          </section>
+        </section>
+      </div>
+    </div>
+    <script src="../js/reveal.js"></script>
+    <script src="../plugin/zoom/zoom.js"></script>
+    <script src="../plugin/notes/notes.js"></script>
+    <script src="../plugin/search/search.js"></script>
+    <script src="../plugin/markdown/markdown.js"></script>
+    <script src="../plugin/highlight/highlight.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.13.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.13.1"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite-api@0.11.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-tooltip@0.23.2"></script>
+    <script src="./week4.js"></script>
+    <script>
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        hash: true,
+        //- transition: "convex",
+      
+        //- width: "100%",
+        //- height: "720px",
+      
+        plugins: [ RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight ]
+      });
+    </script>
+    <script>
+      (function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,"script","https://www.google-analytics.com/analytics.js","ga");
+      
+      ga("create", "UA-72531610-1", "auto");
+      ga("send", "pageview");
+    </script>
+  </body>
+</html>

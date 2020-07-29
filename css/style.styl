@@ -324,8 +324,83 @@ body
     max-width: 600px;
   img.fill
     width: 100%
-    max-width: 900px;
+    max-width: 800px;
 
 
   figcaption
-    font-size: 20%;
+    font-size: 30%;
+
+
+  // For 07_Time
+  .left
+    left:-8.33%
+    text-align: left
+    float: left
+    width:45%
+    z-index:-10
+    position:relative;
+
+
+  .right
+    // left:31.25%
+    // top: 75px
+    float: right
+    // text-align: right
+    z-index:-10
+    width:45%
+    position:relative;
+
+  #handsOn
+    pre
+      width: 70%
+      font-size: 0.5em
+      float: left
+    div.target
+      margin: 20px
+      width: 25%
+      float: left
+      font: 10px sans-serif
+      rect
+        fill: steelblue
+      circle
+        opacity: 0.3
+      path.line
+        fill: none
+        stroke: #666
+        stroke-width: 1.5px
+      path.area
+        fill: #e7e7e7
+      .axis
+        shape-rendering: crispEdges
+      .x.axis line
+        stroke: #bbb
+      .x.axis .minor
+        stroke-opacity: .5
+      .x.axis path
+        fill: none
+      .y.axis line, .y.axis path
+        fill: none
+        stroke: #333
+    button.execute
+      clear: both
+      font-size: 0.8em
+
+    div.followLink
+      font-size: 0.6em
+
+
+  .contactInfo
+    text-align: right
+    a
+      font-size: 0.6em
+
+  .red
+    color: #e80000;
+
+  img.side
+    float:left;
+    width:45%;
+    padding: 0 5px 0 5px;
+
+  .clear
+    clear:both;

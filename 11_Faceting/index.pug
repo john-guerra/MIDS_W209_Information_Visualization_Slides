@@ -1,0 +1,182 @@
+doctype html
+html(lang="en")
+  head
+    title Week 11 Faceting. MIDS W209 Information Visualization Slides
+    meta(charset="utf-8")
+    meta(name="author", content="John Alexis Guerra Gómez")
+    meta(name="description", content="Week 6 Faceting. MIDS W209 Information Visualization Slides")
+
+    meta(name="apple-mobile-web-app-capable" content="yes")
+    meta(name="apple-mobile-web-app-status-bar-style" content="black-translucent")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+
+    link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Fjalla+One|Raleway|PT+Sans+Narrow")
+
+    //- Adobe fonts
+    link(rel="stylesheet" href="https://use.typekit.net/yjc0afr.css")
+
+    //- <!-- Theme used for syntax highlighting of code -->
+    link(rel="stylesheet" href="../plugin/highlight/monokai.css" id="highlight-theme")
+
+
+    link(href="../css/reveal.css", rel="stylesheet")
+    link(href="../css/theme/white.css", rel="stylesheet", id="theme")
+    link(href="../css/style.css", rel="stylesheet")
+
+
+  body
+    .reveal
+      .slides
+        section
+          h1.title Faceting
+            br
+            small MIDS W209: Information Visualization
+
+          div.r-stretch
+
+          div.tiny
+            a(href="https://johnguerra.co/", target="_blank") #[strong  John Alexis Guerra Gómez]
+            span  |  john.guerra[at]gmail.com
+            a(href="https://twitter.com/duto_guerra")  |  @duto_guerra
+            br
+
+            a(href="https://johnguerra.co/lectures/MIDS_W209_Information_Visualization/11_Faceting/", target="_blank") https://johnguerra.co/lectures/MIDS_W209_Information_Visualization/11_Faceting/
+
+          div.logo
+            a(href="https://datascience.berkeley.edu/")
+              img.logo(src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo")
+          div.tiny Partially based on
+            a(href="https://www.cs.ubc.ca/~tmm/talks.html#minicourse14")  slides from Tamara Munzner
+
+        //- Outline
+        section#outline
+          section
+            h2 What we are going to learn
+            ul.small
+
+
+
+        section
+          section
+            h2 Facet Across Multiple Views
+          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/12_facet-biomech.003.png")
+          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/12_facet-biomech.004.png")
+
+          //- Coordinated views
+          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/12_facet-biomech.008.png")
+
+          //- Linked Views
+          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/12_facet-biomech.005.png")
+          section
+            h3.demo Linked Filtering (Crossfilter)
+            iframe.blocks(src="http://square.github.io/crossfilter/")
+            a.tiny(target="_blank" href="http://square.github.io/crossfilter/") http://square.github.io/crossfilter/
+
+
+          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/12_facet-biomech.006.png")
+          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/12_facet-biomech.007.png")
+
+
+          section
+            h3.demo Overview/Details
+            p.small Same encoding / Subset of data / Linked Navigation
+            iframe.blocks(src="http://blockbuilder.org/mbostock/34f08d5e11952a80609169b7917d4172")
+            a.tiny(target="_blank" href="http://blockbuilder.org/mbostock/34f08d5e11952a80609169b7917d4172") http://blockbuilder.org/mbostock/34f08d5e11952a80609169b7917d4172
+            a.tiny(target="_blank" href="http://bl.ocks.org/mbostock/") by mbostock
+
+          section
+            h3.demo Small Multiples (cubism)
+            p.small Same encoding / Different data / Linked Navigation
+            iframe.blocks(src="http://square.github.io/cubism/demo/")
+            a.tiny(target="_blank" href="http://square.github.io/cubism/demo/") http://square.github.io/cubism/demo/
+
+          section
+            h3.demo Multiform Overview/Details (Tweetometro)
+            p.small Different encoding / Subset of data / Linked Navigation
+            iframe.blocks(src="http://old.tweetometro.co/")
+            a.tiny(target="_blank" href="http://old.tweetometro.co/") http://old.tweetometro.co/
+
+          section
+            h3.demo Multiform Overview (Treeversity)
+            p.small Different encoding / All data / Linked Navigation
+            iframe.blocks(src="https://treeversity.cattlab.umd.edu/")
+            a.tiny(target="_blank" href="https://treeversity.cattlab.umd.edu/") https://treeversity.cattlab.umd.edu/
+
+          //- Coordinated views
+          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/12_facet-biomech.008.png")
+
+
+          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/12_facet-biomech.009.png")
+          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/12_facet-biomech.010.png")
+
+          section
+            h3.demo Improvise
+            iframe.blocks(src="http://www.cs.ou.edu/~weaver/improvise/")
+            a.tiny(target="_blank" href="http://www.cs.ou.edu/~weaver/improvise/") http://www.cs.ou.edu/~weaver/improvise/
+
+
+          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/12_facet-biomech.011.png")
+          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/12_facet-biomech.012.png")
+          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/12_facet-biomech.013.png")
+          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/12_facet-biomech.014.png")
+          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/12_facet-biomech.015.png")
+          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/12_facet-biomech.016.png")
+          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/12_facet-biomech.017.png")
+          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/12_facet-biomech.018.png")
+          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/12_facet-biomech.019.png")
+          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/12_facet-biomech.020.png")
+          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/12_facet-biomech.021.png")
+
+
+          section
+            h2 Dynamic layering
+            a(href="https://johnguerra.co/viz/influentials/story/?hashtag=ieeevis2019") https://johnguerra.co/viz/influentials/story/?hashtag=ieeevis2019
+
+
+
+
+
+        section#review
+          section
+            h2 What we learned
+            ul.small
+
+
+    script(src="../js/reveal.js")
+    script(src="../plugin/zoom/zoom.js")
+    script(src="../plugin/notes/notes.js")
+    script(src="../plugin/search/search.js")
+    script(src="../plugin/markdown/markdown.js")
+    script(src="../plugin/highlight/highlight.js")
+
+    script(src="https://cdn.jsdelivr.net/npm/vega@5.13.0")
+    script(src="https://cdn.jsdelivr.net/npm/vega-lite@4.13.1")
+    script(src="https://cdn.jsdelivr.net/npm/vega-lite-api@0.11.0")
+    script(src="https://cdn.jsdelivr.net/npm/vega-tooltip@0.23.2")
+    script(src="./week4.js")
+
+
+
+    script.
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        hash: true,
+        //- transition: "convex",
+
+        //- width: "100%",
+        //- height: "720px",
+
+        plugins: [ RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight ]
+      });
+    script.
+      (function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,"script","https://www.google-analytics.com/analytics.js","ga");
+
+      ga("create", "UA-72531610-1", "auto");
+      ga("send", "pageview");
+
