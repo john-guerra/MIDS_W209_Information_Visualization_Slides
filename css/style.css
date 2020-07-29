@@ -365,6 +365,7 @@ body {
 }
 .reveal img {
   max-width: 600px;
+  width: 100%;
 }
 .reveal img.fill {
   width: 100%;
@@ -452,4 +453,9 @@ body {
 }
 .reveal .clear {
   clear: both;
+}
+.reveal .noMarginTopBottom,
+.reveal .noMarginTopBottom > * {
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
