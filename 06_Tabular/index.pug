@@ -70,8 +70,11 @@ html(lang="en")
         section
           section
             h2 Recap
+
           //- what?
           section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/tamara_course14_session1-15.png")
+
+
           //- what-highlighted?
           section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/tamara_course14_session1-15_highlighted.png")
           //- why
@@ -119,35 +122,38 @@ html(lang="en")
 
 
           section
-            h3 Keys and values
+            h3 Keys
             .flex
               .half
                 ul.small
-                  li.fragment key
-                  ul.small
-                    li.fragment independent attribute
-                    li.fragment used as unique index to look up items
-                    li.fragment simple tables: 1 key
-                    li.fragment multidimensional tables: multiple keys
-                  li.fragment value
-                  ul.small
-                    li.fragment dependent attribute, value of cell
-                    li.fragment classify arrangements by key count
-                    li.fragment 0, 1, 2, many...
+                  li.fragment independent attribute
+                  li.fragment used as unique index to look up items
+                  li.fragment simple tables: 1 key
+                  li.fragment multidimensional tables: multiple keys
               .half
-                img(width="200px" src="../shared_images/vad_book_alldiagrams/what_tables.png", alt="What Tables")
-                img.fragment(width="100%" style="margin-top:40px" src="../shared_images/vad_book_alldiagrams/how_keys.png", alt="Keys")
+                img.fragment.vcentered(width="100%" style="margin-top:40px" src="../shared_images/vad_book_alldiagrams/how_keys.png", alt="Keys")
 
+          section
+            h3 Values
+            .flex
+              .half
+                img.vcentered(width="200px" src="../shared_images/vad_book_alldiagrams/what_tables.png", alt="What Tables")
+              .half
+                ul.small
+                  li.fragment dependent attribute, value of cell
+                  li.fragment classify arrangements by key count
+                  li.fragment 0, 1, 2, many...
 
           //- section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/08_tables-spatial.005.png")
           //- Scatterplot
 
+        section
           section
             h2 0 Keys
             img.fill(src="../shared_images/vad_book_alldiagrams/0_keys.png", alt="0 Keys")
 
 
-          section
+          section.full
             h2 Idiom: Scatterplot
 
             .flex
@@ -158,33 +164,26 @@ html(lang="en")
                     li.fragment quantitative attributes
                   li.fragment no keys, only values
                   ul.small
-                    li.fragment data
-                    ul.small
-                      li.fragment 2 quant attribs
-                    li.fragment mark: points
-                    li.fragment channels
-                    ul.small
-                      li.fragment horiz + vert position
-                    li.fragment tasks
-                    ul.small
-                      li.fragment find trends, outliers, distribution, correlation, clusters
-                    li.fragment scalability
-                    ul.small
-                      li.fragment hundreds of items
+                    li.fragment #[strong data]: #[span.fragment 2 quant attribs]
+                    li.fragment #[strong mark]: points
+                    li.fragment #[strong channels]: #[span.fragment horiz + vert position]
+                    li.fragment #[strong tasks]: #[span.fragment identify trends, outliers, distribution, correlation, clusters]
+                    li.fragment #[strong scalability]: #[span.fragment hundreds of items]
               .half
                 img(width="250px" src="../shared_images/vad_book_alldiagrams/how_express.png", alt="Express")
 
                 figure(style="margin-top: 50px")
                   img( width="120%", style="position:relative; left:-10%" src="../shared_images/vad_book_alldiagrams/scatterplot_wickham.png", alt="Scatterplot example")
-                  figcaption.reference [A layered grammar of graphics. Wickham. Journ. Computational and Graphical Statistics 19:1 (2010), 3–28.]
+                  figcaption.reference.tiny [A layered grammar of graphics. Wickham. Journ. Computational and Graphical Statistics 19:1 (2010), 3–28.]
+
 
 
           //- section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/08_tables-spatial.006.png")
 
 
           //- Scatterplot block
-          section
-            h3.demo Scatterplot
+          section.full
+            h3.demo Idiom: Scatterplot
             div.blocks#scatterplotDiv
             script(type="module").
               import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
@@ -197,6 +196,33 @@ html(lang="en")
 
             //- iframe.blocks(src="http://blockbuilder.org/mbostock/3887118")
             a.tiny(target="_blank" href="https://observablehq.com/@john-guerra/scatterplot") https://observablehq.com/@john-guerra/scatterplot
+
+          section
+            h2 Scatterplot overplotting
+            div(class="flex", id="observablehq-f974ea53")
+              .half
+                .flex
+                  div.half(class="observablehq-viewof-r")
+                  div.half(class="observablehq-viewof-jitterValue")
+                div(class="observablehq-chart")
+              .half.fragment
+                div(class="observablehq-viewof-collisionR")
+                div(class="observablehq-chartForce")
+            div.
+
+              <script type="module">
+                import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+                import define from "https://api.observablehq.com/@john-guerra/overlapping-scatterplots.js?v=3";
+                (new Runtime).module(define, name => {
+                  if (name === "viewof r") return Inspector.into("#observablehq-f974ea53 .observablehq-viewof-r")();
+                  if (name === "viewof jitterValue") return Inspector.into("#observablehq-f974ea53 .observablehq-viewof-jitterValue")();
+                  if (name === "chart") return Inspector.into("#observablehq-f974ea53 .observablehq-chart")();
+                  if (name === "viewof collisionR") return Inspector.into("#observablehq-f974ea53 .observablehq-viewof-collisionR")();
+                  if (name === "chartForce") return Inspector.into("#observablehq-f974ea53 .observablehq-chartForce")();
+                });
+              </script>
+
+
 
           section
             h2 Some Keys
@@ -225,11 +251,11 @@ html(lang="en")
               .half.small
                 ul.small
                   li.fragment one key, one value
-                  li.fragment data
+                  li.fragment #[strong data]:
                   ul.small
                     li.fragment 1 categ attrib, 1 quant attrib
-                  li.fragment mark: lines
-                  li.fragment channels
+                  li.fragment #[strong mark]: lines
+                  li.fragment #[strong channels:]
                   ul.small
                     li.fragment length to express quant value
                     li.fragment spatial regions: one per mark
@@ -237,10 +263,10 @@ html(lang="en")
                       li.fragment separated horizontally, aligned vertically
                       li.fragment ordered by quant attrib
                       li.fragment by label (alphabetical), by length attrib (data-driven)
-                  li.fragment task
+                  li.fragment #[strong task]
                   ul.small
                     li.fragment compare, lookup values
-                  li.fragment scalability
+                  li.fragment #[strong scalability]
                   ul.small
                     li.fragment dozens to hundreds of levels for key attrib
               .half
@@ -250,13 +276,490 @@ html(lang="en")
 
           //- section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/08_tables-spatial.008.png")
 
-          //- Barchart block
-          section
-            h3.demo Barchart
-            iframe.blocks(src="http://blockbuilder.org/mbostock/3885304")
-            a.tiny(target="_blank" href="http://blockbuilder.org/mbostock/3885304") http://blockbuilder.org/mbostock/3885304
+          //- //- Barchart block
+          //- section
+          //-   h3.demo Barchart
+          //-   iframe.blocks(src="http://blockbuilder.org/mbostock/3885304")
+          //-   a.tiny(target="_blank" href="http://blockbuilder.org/mbostock/3885304") http://blockbuilder.org/mbostock/3885304
 
-          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/08_tables-spatial.009.png")
+
+          section
+            h2 Separated, aligned, but unordered
+            .flex
+              .half
+                ul.small
+                  li.fragment Good for identifying key
+                  li.fragment Bad for identifying extremes (ranked 4th? 7th?)
+                  li.fragment Good for comparing values
+              .half
+                figure
+                  img.fill( src="../shared_images/vad_book_alldiagrams/", alt="")
+                  figcaption.reference.supertiny reference
+
+          section
+            h2 Separated, aligned, and ordered
+            .flex
+              .half
+                ul.small
+                  ul.small
+                  li.fragment Bad for identifying key
+                  li.fragment Good for identifying ranking (extremes)
+                  li.fragment Good for comparing values
+              .half
+                figure
+                  img.fill( src="../shared_images/vad_book_alldiagrams/", alt="")
+                  figcaption.reference.supertiny reference
+
+          section
+            h2 Separated, not aligned or ordered
+            .flex
+              .half
+                ul.small
+                  ul.small
+                  li.fragment Bad for identifying key
+                  li.fragment Bad identifying ranking (extremes)
+                  li.fragment Bad for comparing values
+              .half
+                figure
+                  img.fill( src="../shared_images/vad_book_alldiagrams/", alt="Linechart example")
+
+          //- section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/08_tables-spatial.009.png")
+
+
+          section
+            h2 Idiom: line chart / dot plot
+            .flex
+              .twothirds
+                ul.small
+                  li.fragment one key, one value
+                  li.fragment data: 2 quant attribs
+                  ul.small
+                    li.fragment mark: points &amp; line connection marks between them
+                    li.fragment channels
+                    li.fragment ul.small
+                      li.fragment aligned lengths to express quant value
+                      li.fragment separated and ordered by key attrib into horizontal regions
+                    li.fragment task: find trend
+                    ul.small
+                      li.fragment connection marks emphasize ordering of items along key axis by explicitly showing relationship between one item and the next
+                    li.fragment scalability: hundreds of key levels, hundreds of value levels
+              .third
+                img.fill.vcentered( src="../shared_images/vad_book_alldiagrams/linechart_example.png", alt="Linechart example")
+
+
+
+          section.full
+            h3 Idiom: stacked bar chart
+            .flex
+              .twothirds
+                ul.small
+                  li.fragment 2 keys, one value
+                  li.fragment #[strong data:]
+                  ul.small
+                    li.fragment 2 categ. attrib.
+                    li.fragment 1 quant. attrib.
+                  li.fragment #[strong mark:] vertical stack of line marks
+                  li.fragment #[strong glyph:] composite object, internal structure from multiple marks
+                  li.fragment #[strong channels:] length and color hue
+                  ul.small
+                    li.fragment spatial regions: one per glyph
+                    li.fragment aligned: full glyph, lowest bar component
+                    li.fragment unaligned: other bar components
+                  li.fragment #[strong task:] part-to-whole relationship
+                  li.fragment #[strong scalability]: few bars, few stacked
+
+              .third
+                figure
+                  img(src="../shared_images/stacked_bar_chart.png", alt="Stacked bar chart")
+                  figcaption.reference
+                    a(href="https://observablehq.com/@d3/stacked-bar-chart") https://observablehq.com/@d3/stacked-bar-chart
+
+              //- TODO highlight region on hover
+
+
+
+          section
+            h2 Idiom: streamgraph
+            .flex
+              .twothirds
+                ul.small
+                  li.fragment generalized stacked graph
+                  ul.small
+                    li.fragment emphasizing horizontal continuity
+                    li.fragment vs vertical items
+                  li.fragment data
+                  ul
+                    li.fragment 1 categ key attrib (artist)
+                    li.fragment 1 ordered key attrib (time)
+                    li.fragment 1 quant value attrib (counts)
+                    li.fragment derived data
+                  li.fragment mark: layers
+                  ul
+                    li height encodes counts
+                  ul
+                    li.fragment 1 quant attrib (layer ordering)
+                  li.fragment scalability:
+                  ul
+                    li.fragment hundreds of time keys
+                    li.fragment dozens to hundreds of artist keys
+                  ul
+                    li.fragment more than stacked bars, since most layers don’t extend across whole chart
+              .third
+                figure
+                  img.fill(src="../shared_images/vad_book_alldiagrams/streamgraph.png", alt="Streamgraph")
+                  figcaption.reference [Stacked Graphs Geometry &amp; Aesthetics. Byron and Wattenberg. IEEE Trans. Visualization and Computer Graphics (Proc. InfoVis 2008) 14(6): 1245–1252, (2008).]
+
+
+
+
+          section
+            h2 Choosing bar vs line charts
+            .flex
+              .half
+                ul.small
+                  li.fragment depends on type of key attrib
+                  ul
+                    li.fragment bar charts if categorical
+                    li.fragment line charts if ordered
+                  li.fragment do not use line charts for categorical key attribs
+                  ul
+                    li.fragment violates expressiveness principle
+                    li.fragment implication of trend so strong that it overrides semantics!
+                    ul
+                      li.fragment “The more male a person is, the taller he/she is”
+              .half
+                figure
+                  img.fill(src="../shared_images/vad_book_alldiagrams/barchart_vs_linechart.png", alt="Barchart vs Linechart")
+                  figcaption.reference after [Bars and Lines: A Study of Graphic Communication. Zacks and Tversky. Memory and Cognition 27:6 (1999), 1073–1079.]
+
+          section
+            h2 Chart axes
+            .flex
+              .third
+                ul.small
+                  li.fragment labelled axis is critical
+                  li.fragment avoid cropping y-axis
+                  li.fragment include 0 at bottom left
+                  li.fragment or slope misleads
+
+              .twothirds
+                figure
+                  img.fill(src="../shared_images/vad_book_alldiagrams/planned_parenthood.png", alt="Planned Parenthood")
+                  figcaption.reference
+                    a.fill(href="http://www.thefunctionalart.com/2015/10/if-you-see-bullshit-say-bullshit.html") http://www.thefunctionalart.com/2015/10/if-you-see-bullshit-say-bullshit.html
+
+          section
+            h2 Idiom: dual-axis line charts
+            .flex
+              .half
+                ul.small
+                  li.fragment controversial
+                  li.fragment acceptable if commensurate
+                  li.fragment beware, very easy to mislead!
+              .half
+                figure
+                  img.fill(src="../shared_images/vad_book_alldiagrams/dual_axis.png", alt="Dual Axis")
+                  figcaption.reference Ben Jones @DataRemixed
+
+
+          section
+            h2 Idiom: connected scatterplots
+            .flex
+              .half
+                ul.small
+                  li.fragment scatterplot with line connection marks
+                  ul
+                    li.fragment popular in journalism
+                    li.fragment horiz + vert axes: value attribs
+                    li.fragment line connection marks: temporal order
+                  li.fragment empirical study
+                  ul
+                    li.fragment engaging, but correlation unclear
+              .half
+                figure
+                  img.fill(src="../shared_images/vad_book_alldiagrams/connected_scatterplot.png", alt="Connected Scatterplot")
+                  figcaption.reference
+                    a(href="http://steveharoz.com/research/connected_scatterplot/") http://steveharoz.com/research/connected_scatterplot/
+
+          section
+            h3 Idiom: connected scatterplots 2
+            .flex
+              .half
+                ul.small
+                  li.fragment alternative to dual-axis charts
+                  ul
+                    li.fragment horiz: time
+                    li.fragment vert: two value attribs
+              .half
+                figure
+                  img.fill(src="../shared_images/vad_book_alldiagrams/connected_scatterplots_vs_dual_axis.png", alt="Connected Scatterplot vs Dual Axis")
+                  figcaption.reference
+                    a(href="http://steveharoz.com/research/connected_scatterplot/") http://steveharoz.com/research/connected_scatterplot/
+
+          section
+            h2 Choosing line chart aspect ratios
+            ul.small
+              li.fragment 1: banking to 45 (1980s)
+              li.fragment Cleveland perceptual argument: most accurate angle judgement at 45
+
+          section
+            h2 Choosing line chart aspect ratios
+            ul.small
+              li.fragment 2: multi scale banking to 45 (2006)
+              li.fragment frequency domain analysis to find ratios
+              li.fragment FFT the data, convolve with Gaussian to smooth
+              li.fragment find interesting spikes/ranges in power spectrum
+              li.fragment cull nearby regions if similar, ensure overview
+              li.fragment create trend curves (red) for each aspect ratio
+
+
+          section
+            h2 Choosing line chart aspect ratios
+            ul.small
+              li.fragment 3: arc length based aspect ratio (2011)
+              li.fragment minimize the arc length of curve while keeping the area of the plot constant
+              li.fragment parametrization and scale invariant
+              li.fragment symmetry preserving
+              li.fragment robust & fast to compute
+              br
+              li.fragment meta-points from this progression
+              li.fragment young field; prescriptive advice changes rapidly
+              li.fragment reasonable defaults required deep dive into perception meets math
+
+          section
+            h2 Idiom: Indexed line charts
+            ul.small
+              li.fragment data: 2 quant attires
+              li.fragment 1 key + 1 value
+              li.fragment derived data: new quant value attrib
+              li.fragment index
+              li.fragment plot instead of original value
+              li.fragment task: show change over time
+              li.fragment principle: normalized, not absolute
+              li.fragment scalability same as standard line chart
+
+          section
+            h2 Idiom: Gantt charts
+            ul.small
+              li.fragment one key, two (related) values
+              li.fragment data: 1 categ attrib, 2 quant attribs
+              li.fragment mark: line
+              li.fragment length: duration
+              li.fragment channels: horiz position: start time (+end from duration)
+              li.fragment task: emphasize temporal overlaps, start/end dependencies between items
+              li.fragment scalability
+              li.fragment dozens of key levels
+              li.fragment hundreds of value levels
+
+          section
+            h2 Idiom: Slopegraphs
+            ul.small
+              li.fragment two values
+              li.fragment data
+              li.fragment 2 quant value attribs
+              li.fragment (1 derived attrib: change magnitude)
+              li.fragment mark: point + line
+              li.fragment line connecting mark between pts
+              li.fragment channels
+              li.fragment 2 vertical pos: express attrib value
+              li.fragment (linewidth/size, color)
+              li.fragment task emphasize changes in rank/value
+              li.fragment scalability hundreds of value levels
+
+          section
+            h2 Breaking conventions
+            ul.small
+              li.fragment presentation vs exploration
+              li.fragment engaging/evocative
+              li.fragment inverted y axis
+              li.fragment blood drips down on Poe
+
+          section
+            h2 2 Keys
+            ul.small
+
+          section
+            h2 Idiom: heatmap
+            ul.small
+              li.fragment two keys, one value
+              li.fragment data
+              li.fragment 2 categ attribs (gene, experimental condition)
+              li.fragment 1 quant attrib (expression levels)
+              li.fragment marks: area
+              li.fragment separate and align in 2D matrix
+              li.fragment indexed by 2 categorical attributes
+              li.fragment channels color by quant attrib (ordered diverging colormap)
+              li.fragment task find clusters, outliers
+              li.fragment scalability 1M items, 100s of categ levels, ~10 quant attrib levels
+
+          section
+            h2 Idiom: cluster heatmap
+            ul.small
+              li.fragment in addition
+              li.fragment derived data
+              li.fragment 2 cluster hierarchies
+              li.fragment dendrogram
+              li.fragment parent-child relationships in tree with connection line marks
+              li.fragment leaves aligned so interior branch heights easy to compare
+              li.fragment heatmap
+              li.fragment marks (re-)ordered by cluster hierarchy traversal
+              li.fragment task: assess quality of clusters found by automatic methods
+
+        section
+          section
+            h1 Axis Orientation
+
+          section
+            h2 Idioms: scatterplot matrix, parallel coordinates
+            ul.small
+              li.fragment  scatterplot matrix (SPLOM)
+              li.fragment  rectilinear axes, point mark
+              li.fragment  all possible pairs of axes
+              li.fragment  scalability
+              li.fragment  one dozen attribs
+              li.fragment  dozens to hundreds of items
+              li.fragment  parallel coordinates
+              li.fragment  parallel axes, jagged line representing item
+              li.fragment  rectilinear axes, item as point
+              li.fragment  axis ordering is major challenge
+              li.fragment  scalability
+              li.fragment  dozens of attribs
+              li.fragment  hundreds of items
+              li.fragment  Task: Correlation
+
+
+          section
+            h2 Idiom: scatterplot matrix
+            ul.small
+              li.fragment positive correlation
+              li.fragment diagonal low-to-high
+              li.fragment negative correlation
+              li.fragment diagonal high-to-low
+              li.fragment uncorrelated: spread out
+
+          section
+            h2 Idiom: parallel coordinates
+            ul.small
+              li.fragment positive correlation
+              li.fragment parallel line segments
+              li.fragment negative correlation
+              li.fragment all segments cross at halfway point
+              li.fragment uncorrelated
+              li.fragment scattered crossings
+
+
+          section
+            h2 Orientation limitations
+            ul.small
+              li.fragment rectilinear: scalability wrt #axes
+              li.fragment 2 axes best
+              li.fragment 3 problematic
+              li.fragment 4+ impossible
+              li.fragment parallel: unfamiliarity, training time
+
+          section
+            h2 Idioms: radial bar chart, star plot
+            ul.small
+
+              li.fragment radial bar chart
+              li.fragment radial axes meet at central ring, line mark
+              li.fragment star plot
+              li.fragment radial axes, meet at central point, line mark
+              li.fragment bar chart
+              li.fragment rectilinear axes, aligned vertically
+              br
+
+              li.fragment accuracy
+              ul.small
+                li.fragment length unaligned with radial
+                li.fragment less accurate than aligned with rectilinear
+          section
+            h2 Radial Orientation: Radar Plots
+
+          section
+            h2 "Diagram of the causes of mortality in the army in the East" (1858)
+
+          section
+            h2 “Radar graphs: Avoid them (99.9% of the time)”
+
+
+          section
+            h2 Radial Orientation: Radar Plots
+            ul.small Idioms: pie chart, polar area chart
+              li.fragment pie chart
+              li.fragment area marks with angle channel
+              li.fragment accuracy: angle/area much less accurate than line length
+              br
+              li.fragment polar area chart
+              li.fragment area marks with length channel
+              li.fragment more direct analog to bar charts
+              br
+              li.fragment data
+              li.fragment 1 categ key attrib, 1 quant value attrib
+              li.fragment task
+              li.fragment part-to-whole judgements
+
+          section
+            h2 Pie chart perception
+            ul.small
+              li.fragment some empirical evidence that people respond to arc length
+              li.fragment not angles
+              li.fragment maybe also areas?…
+              li.fragment donut charts no worse than pie charts
+
+          section
+            h2 Pie chart perception
+            ul.small
+
+              li.fragment meta-points
+              li.fragment redesign of paper figures in later blog post
+              li.fragment violin plots good for analysis but too detailed for presentation
+              li.fragment my advice: still dubious for pie/donut charts
+              li.fragment sometimes ok if just 2 attribs
+
+          section
+            h2 Idioms: normalized stacked bar chart
+            ul.small
+              li.fragment task
+              li.fragment part-to-whole judgements
+              br
+              li.fragment normalized stacked bar chart
+              li.fragment stacked bar chart, normalized to full vert height
+              li.fragment single stacked bar equivalent to full pie
+              li.fragment high information density: requires narrow rectangle
+              br
+              li.fragment pie chart
+              li.fragment information density: requires large circle
+
+          section
+            h2 Idiom: glyphmaps
+            ul.small
+              li.fragment rectilinear good for linear vs nonlinear trends
+              li.fragment radial good for cyclic patterns
+
+          section
+            h2 Idiom: glyphmaps
+            ul.small
+              li.fragment Radial orientation
+              li.fragment perceptual limits
+              li.fragment polar coordinate asymmetry
+              li.fragment angles lower precision than lengths
+              li.fragment frequently problematic
+              li.fragment sometimes can be deliberately exploited!
+              li.fragment for 2 attribs of very unequal importance
+
+          section
+            h2 Idiom: Dense software overviews
+            ul.small
+              li.fragment data: text
+              li.fragment text + 1 quant attrib per line
+              li.fragment derived data:
+              li.fragment one pixel high line
+              li.fragment length according to original
+              li.fragment color line by attrib
+              li.fragment scalability
+              li.fragment 10K+ lines
+
 
           //- Stacked barchart block
           section
@@ -267,14 +770,6 @@ html(lang="en")
           section
             h3.demo d3.stack and d3.nest
             div.blocks#d3stackandnest
-
-            //- <div id="observablehq-09a24421"></div>
-            //- <script type="module">
-            //- import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
-            //- import define from "https://api.observablehq.com/@d3/stacked-to-grouped-bars.js?v=3";
-            //- const inspect = Inspector.into("#observablehq-09a24421");
-            //- (new Runtime).module(define, name => name === "chart" ? inspect() : undefined);
-            //- </script>
 
             script(type="module").
               import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
@@ -300,6 +795,9 @@ html(lang="en")
                   return new Inspector(document.querySelector("#stackedToGroupedDiv"));
                 }
                 if (name === "viewof layout") {
+                  return new Inspector(document.querySelector("#stackedToGroupedDivLayout"));
+                }
+                if (name === "update") {
                   return new Inspector(document.querySelector("#stackedToGroupedDivLayout"));
                 }
 
