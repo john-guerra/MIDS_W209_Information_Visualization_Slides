@@ -23,8 +23,8 @@ body {
 .reveal li,
 .reveal blockquote,
 .reveal pre {
-  margin-top: 0.75em;
-  margin-bottom: 0.75em;
+  margin-top: 0.1em;
+  margin-bottom: 0.1em;
 }
 .reveal h1,
 .reveal h2,
@@ -51,6 +51,7 @@ body {
 }
 .reveal ul {
   list-style-type: circle;
+  font-size: 80%;
 }
 .reveal pre code {
   padding: 2em;
@@ -352,6 +353,7 @@ body {
 .reveal .reference {
   color: #8aa4c6;
   font-style: italic;
+  font-size: 30%;
   text-align: end;
   line-height: 1.2;
 }

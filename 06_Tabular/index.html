@@ -80,32 +80,38 @@
             <div class="flex"><img class="fragment" width="45%" src="../shared_images/vad_book_alldiagrams/how_express_separate.png" alt="Express Separate Order and Align"><img class="fragment" width="45%" src="../shared_images/vad_book_alldiagrams/how_axis_orientation.png" alt="Axis Orientation"><img class="fragment" style="margin-top:40px" src="../shared_images/vad_book_alldiagrams/how_keys.png" alt="Keys"></div>
           </section>
           <section>
-            <h3>Keys and values</h3>
+            <h3>Keys</h3>
             <div class="flex">
               <div class="half">
                 <ul class="small">
-                  <li class="fragment">key</li>
-                  <ul class="small">
-                    <li class="fragment">independent attribute</li>
-                    <li class="fragment">used as unique index to look up items</li>
-                    <li class="fragment">simple tables: 1 key</li>
-                    <li class="fragment">multidimensional tables: multiple keys</li>
-                  </ul>
-                  <li class="fragment">value</li>
-                  <ul class="small">
-                    <li class="fragment">dependent attribute, value of cell</li>
-                    <li class="fragment">classify arrangements by key count</li>
-                    <li class="fragment">0, 1, 2, many...</li>
-                  </ul>
+                  <li class="fragment">independent attribute</li>
+                  <li class="fragment">used as unique index to look up items</li>
+                  <li class="fragment">simple tables: 1 key</li>
+                  <li class="fragment">multidimensional tables: multiple keys</li>
                 </ul>
               </div>
-              <div class="half"><img width="200px" src="../shared_images/vad_book_alldiagrams/what_tables.png" alt="What Tables"><img class="fragment" width="100%" style="margin-top:40px" src="../shared_images/vad_book_alldiagrams/how_keys.png" alt="Keys"></div>
+              <div class="half"><img class="fragment vcentered" width="100%" style="margin-top:40px" src="../shared_images/vad_book_alldiagrams/how_keys.png" alt="Keys"></div>
             </div>
           </section>
           <section>
+            <h3>Values</h3>
+            <div class="flex">
+              <div class="half"><img class="vcentered" width="200px" src="../shared_images/vad_book_alldiagrams/what_tables.png" alt="What Tables"></div>
+              <div class="half">
+                <ul class="small">
+                  <li class="fragment">dependent attribute, value of cell</li>
+                  <li class="fragment">classify arrangements by key count</li>
+                  <li class="fragment">0, 1, 2, many...</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+        </section>
+        <section>
+          <section>
             <h2>0 Keys</h2><img class="fill" src="../shared_images/vad_book_alldiagrams/0_keys.png" alt="0 Keys">
           </section>
-          <section>
+          <section class="full">
             <h2>Idiom: Scatterplot</h2>
             <div class="flex">
               <div class="half">
@@ -116,35 +122,23 @@
                   </ul>
                   <li class="fragment">no keys, only values</li>
                   <ul class="small">
-                    <li class="fragment">data</li>
-                    <ul class="small">
-                      <li class="fragment">2 quant attribs</li>
-                    </ul>
-                    <li class="fragment">mark: points</li>
-                    <li class="fragment">channels</li>
-                    <ul class="small">
-                      <li class="fragment">horiz + vert position</li>
-                    </ul>
-                    <li class="fragment">tasks</li>
-                    <ul class="small">
-                      <li class="fragment">find trends, outliers, distribution, correlation, clusters</li>
-                    </ul>
-                    <li class="fragment">scalability</li>
-                    <ul class="small">
-                      <li class="fragment">hundreds of items</li>
-                    </ul>
+                    <li class="fragment"><strong>data</strong>: <span class="fragment">2 quant attribs</span></li>
+                    <li class="fragment"><strong>mark</strong>: points</li>
+                    <li class="fragment"><strong>channels</strong>: <span class="fragment">horiz + vert position</span></li>
+                    <li class="fragment"><strong>tasks</strong>: <span class="fragment">identify trends, outliers, distribution, correlation, clusters</span></li>
+                    <li class="fragment"><strong>scalability</strong>: <span class="fragment">hundreds of items</span></li>
                   </ul>
                 </ul>
               </div>
               <div class="half"><img width="250px" src="../shared_images/vad_book_alldiagrams/how_express.png" alt="Express">
                 <figure style="margin-top: 50px"><img width="120%" style="position:relative; left:-10%" src="../shared_images/vad_book_alldiagrams/scatterplot_wickham.png" alt="Scatterplot example">
-                  <figcaption class="reference">[A layered grammar of graphics. Wickham. Journ. Computational and Graphical Statistics 19:1 (2010), 3–28.]</figcaption>
+                  <figcaption class="reference tiny">[A layered grammar of graphics. Wickham. Journ. Computational and Graphical Statistics 19:1 (2010), 3–28.]</figcaption>
                 </figure>
               </div>
             </div>
           </section>
-          <section>
-            <h3 class="demo">Scatterplot</h3>
+          <section class="full">
+            <h3 class="demo">Idiom: Scatterplot</h3>
             <div class="blocks" id="scatterplotDiv"></div>
             <script type="module">
               import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
@@ -156,6 +150,38 @@
               });
               
             </script><a class="tiny" target="_blank" href="https://observablehq.com/@john-guerra/scatterplot">https://observablehq.com/@john-guerra/scatterplot</a>
+          </section>
+          <section>
+            <h2>Scatterplot overplotting</h2>
+            <div class="flex" id="observablehq-f974ea53">
+              <div class="half">
+                <div class="flex">
+                  <div class="half observablehq-viewof-r"></div>
+                  <div class="half observablehq-viewof-jitterValue"></div>
+                </div>
+                <div class="observablehq-chart"></div>
+              </div>
+              <div class="half fragment">
+                <div class="observablehq-viewof-collisionR"></div>
+                <div class="observablehq-chartForce"></div>
+              </div>
+            </div>
+            <div>
+              <script type="module">
+                import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+                import define from "https://api.observablehq.com/@john-guerra/overlapping-scatterplots.js?v=3";
+                (new Runtime).module(define, name => {
+                  if (name === "viewof r") return Inspector.into("#observablehq-f974ea53 .observablehq-viewof-r")();
+                  if (name === "viewof jitterValue") return Inspector.into("#observablehq-f974ea53 .observablehq-viewof-jitterValue")();
+                  if (name === "chart") return Inspector.into("#observablehq-f974ea53 .observablehq-chart")();
+                  if (name === "viewof collisionR") return Inspector.into("#observablehq-f974ea53 .observablehq-viewof-collisionR")();
+                  if (name === "chartForce") return Inspector.into("#observablehq-f974ea53 .observablehq-chartForce")();
+                });
+              </script>
+              
+              
+              
+            </div>
           </section>
           <section>
             <h2>Some Keys</h2><img class="fill" src="../shared_images/vad_book_alldiagrams/some_keys.png" alt="Some Keys">
@@ -177,12 +203,12 @@
               <div class="half small">
                 <ul class="small">
                   <li class="fragment">one key, one value</li>
-                  <li class="fragment">data</li>
+                  <li class="fragment"><strong>data</strong>:</li>
                   <ul class="small">
                     <li class="fragment">1 categ attrib, 1 quant attrib</li>
                   </ul>
-                  <li class="fragment">mark: lines</li>
-                  <li class="fragment">channels</li>
+                  <li class="fragment"><strong>mark</strong>: lines</li>
+                  <li class="fragment"><strong>channels:</strong></li>
                   <ul class="small">
                     <li class="fragment">length to express quant value</li>
                     <li class="fragment">spatial regions: one per mark</li>
@@ -192,11 +218,11 @@
                       <li class="fragment">by label (alphabetical), by length attrib (data-driven)</li>
                     </ul>
                   </ul>
-                  <li class="fragment">task</li>
+                  <li class="fragment"><strong>task</strong></li>
                   <ul class="small">
                     <li class="fragment">compare, lookup values</li>
                   </ul>
-                  <li class="fragment">scalability</li>
+                  <li class="fragment"><strong>scalability</strong></li>
                   <ul class="small">
                     <li class="fragment">dozens to hundreds of levels for key attrib</li>
                   </ul>
@@ -206,10 +232,532 @@
             </div>
           </section>
           <section>
-            <h3 class="demo">Barchart</h3>
-            <iframe class="blocks" src="http://blockbuilder.org/mbostock/3885304"></iframe><a class="tiny" target="_blank" href="http://blockbuilder.org/mbostock/3885304">http://blockbuilder.org/mbostock/3885304</a>
+            <h2>Separated, aligned, but unordered</h2>
+            <div class="flex">
+              <div class="half">
+                <ul class="small">
+                  <li class="fragment">Good for identifying key</li>
+                  <li class="fragment">Bad for identifying extremes (ranked 4th? 7th?)</li>
+                  <li class="fragment">Good for comparing values</li>
+                </ul>
+              </div>
+              <div class="half">
+                <figure><img class="fill" src="../shared_images/vad_book_alldiagrams/" alt="">
+                  <figcaption class="reference supertiny">reference</figcaption>
+                </figure>
+              </div>
+            </div>
           </section>
-          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/08_tables-spatial.009.png"></section>
+          <section>
+            <h2>Separated, aligned, and ordered</h2>
+            <div class="flex">
+              <div class="half">
+                <ul class="small">
+                  <ul class="small"></ul>
+                  <li class="fragment">Bad for identifying key</li>
+                  <li class="fragment">Good for identifying ranking (extremes)</li>
+                  <li class="fragment">Good for comparing values</li>
+                </ul>
+              </div>
+              <div class="half">
+                <figure><img class="fill" src="../shared_images/vad_book_alldiagrams/" alt="">
+                  <figcaption class="reference supertiny">reference</figcaption>
+                </figure>
+              </div>
+            </div>
+          </section>
+          <section>
+            <h2>Separated, not aligned or ordered</h2>
+            <div class="flex">
+              <div class="half">
+                <ul class="small">
+                  <ul class="small"></ul>
+                  <li class="fragment">Bad for identifying key</li>
+                  <li class="fragment">Bad identifying ranking (extremes)</li>
+                  <li class="fragment">Bad for comparing values</li>
+                </ul>
+              </div>
+              <div class="half">
+                <figure><img class="fill" src="../shared_images/vad_book_alldiagrams/" alt="Linechart example"></figure>
+              </div>
+            </div>
+          </section>
+          <section>
+            <h2>Idiom: line chart / dot plot</h2>
+            <div class="flex">
+              <div class="twothirds">
+                <ul class="small">
+                  <li class="fragment">one key, one value</li>
+                  <li class="fragment">data: 2 quant attribs</li>
+                  <ul class="small">
+                    <li class="fragment">mark: points &amp; line connection marks between them</li>
+                    <li class="fragment">channels</li>
+                    <li class="fragment">ul.small
+                      <li class="fragment">aligned lengths to express quant value</li>
+                      <li class="fragment">separated and ordered by key attrib into horizontal regions</li>
+                    </li>
+                    <li class="fragment">task: find trend</li>
+                    <ul class="small">
+                      <li class="fragment">connection marks emphasize ordering of items along key axis by explicitly showing relationship between one item and the next</li>
+                    </ul>
+                    <li class="fragment">scalability: hundreds of key levels, hundreds of value levels</li>
+                  </ul>
+                </ul>
+              </div>
+              <div class="third"><img class="fill vcentered" src="../shared_images/vad_book_alldiagrams/linechart_example.png" alt="Linechart example"></div>
+            </div>
+          </section>
+          <section class="full">
+            <h3>Idiom: stacked bar chart</h3>
+            <div class="flex">
+              <div class="twothirds">
+                <ul class="small">
+                  <li class="fragment">2 keys, one value</li>
+                  <li class="fragment"><strong>data:</strong></li>
+                  <ul class="small">
+                    <li class="fragment">2 categ. attrib.</li>
+                    <li class="fragment">1 quant. attrib.</li>
+                  </ul>
+                  <li class="fragment"><strong>mark:</strong> vertical stack of line marks</li>
+                  <li class="fragment"><strong>glyph:</strong> composite object, internal structure from multiple marks</li>
+                  <li class="fragment"><strong>channels:</strong> length and color hue</li>
+                  <ul class="small">
+                    <li class="fragment">spatial regions: one per glyph</li>
+                    <li class="fragment">aligned: full glyph, lowest bar component</li>
+                    <li class="fragment">unaligned: other bar components</li>
+                  </ul>
+                  <li class="fragment"><strong>task:</strong> part-to-whole relationship</li>
+                  <li class="fragment"><strong>scalability</strong>: few bars, few stacked</li>
+                </ul>
+              </div>
+              <div class="third">
+                <figure><img src="../shared_images/stacked_bar_chart.png" alt="Stacked bar chart">
+                  <figcaption class="reference"><a href="https://observablehq.com/@d3/stacked-bar-chart">https://observablehq.com/@d3/stacked-bar-chart</a></figcaption>
+                </figure>
+              </div>
+            </div>
+          </section>
+          <section>
+            <h2>Idiom: streamgraph</h2>
+            <div class="flex">
+              <div class="twothirds">
+                <ul class="small">
+                  <li class="fragment">generalized stacked graph</li>
+                  <ul class="small">
+                    <li class="fragment">emphasizing horizontal continuity</li>
+                    <li class="fragment">vs vertical items</li>
+                  </ul>
+                  <li class="fragment">data</li>
+                  <ul>
+                    <li class="fragment">1 categ key attrib (artist)</li>
+                    <li class="fragment">1 ordered key attrib (time)</li>
+                    <li class="fragment">1 quant value attrib (counts)</li>
+                    <li class="fragment">derived data</li>
+                  </ul>
+                  <li class="fragment">mark: layers</li>
+                  <ul>
+                    <li>height encodes counts</li>
+                  </ul>
+                  <ul>
+                    <li class="fragment">1 quant attrib (layer ordering)</li>
+                  </ul>
+                  <li class="fragment">scalability:</li>
+                  <ul>
+                    <li class="fragment">hundreds of time keys</li>
+                    <li class="fragment">dozens to hundreds of artist keys</li>
+                  </ul>
+                  <ul>
+                    <li class="fragment">more than stacked bars, since most layers don’t extend across whole chart</li>
+                  </ul>
+                </ul>
+              </div>
+              <div class="third">
+                <figure><img class="fill" src="../shared_images/vad_book_alldiagrams/streamgraph.png" alt="Streamgraph">
+                  <figcaption class="reference">[Stacked Graphs Geometry &amp; Aesthetics. Byron and Wattenberg. IEEE Trans. Visualization and Computer Graphics (Proc. InfoVis 2008) 14(6): 1245–1252, (2008).]</figcaption>
+                </figure>
+              </div>
+            </div>
+          </section>
+          <section>
+            <h2>Choosing bar vs line charts</h2>
+            <div class="flex">
+              <div class="half">
+                <ul class="small">
+                  <li class="fragment">depends on type of key attrib</li>
+                  <ul>
+                    <li class="fragment">bar charts if categorical</li>
+                    <li class="fragment">line charts if ordered</li>
+                  </ul>
+                  <li class="fragment">do not use line charts for categorical key attribs</li>
+                  <ul>
+                    <li class="fragment">violates expressiveness principle</li>
+                    <li class="fragment">implication of trend so strong that it overrides semantics!</li>
+                    <ul>
+                      <li class="fragment">“The more male a person is, the taller he/she is”</li>
+                    </ul>
+                  </ul>
+                </ul>
+              </div>
+              <div class="half">
+                <figure><img class="fill" src="../shared_images/vad_book_alldiagrams/barchart_vs_linechart.png" alt="Barchart vs Linechart">
+                  <figcaption class="reference">after [Bars and Lines: A Study of Graphic Communication. Zacks and Tversky. Memory and Cognition 27:6 (1999), 1073–1079.]</figcaption>
+                </figure>
+              </div>
+            </div>
+          </section>
+          <section>
+            <h2>Chart axes</h2>
+            <div class="flex">
+              <div class="third">
+                <ul class="small">
+                  <li class="fragment">labelled axis is critical</li>
+                  <li class="fragment">avoid cropping y-axis</li>
+                  <li class="fragment">include 0 at bottom left</li>
+                  <li class="fragment">or slope misleads</li>
+                </ul>
+              </div>
+              <div class="twothirds">
+                <figure><img class="fill" src="../shared_images/vad_book_alldiagrams/planned_parenthood.png" alt="Planned Parenthood">
+                  <figcaption class="reference"><a class="fill" href="http://www.thefunctionalart.com/2015/10/if-you-see-bullshit-say-bullshit.html">http://www.thefunctionalart.com/2015/10/if-you-see-bullshit-say-bullshit.html</a></figcaption>
+                </figure>
+              </div>
+            </div>
+          </section>
+          <section>
+            <h2>Idiom: dual-axis line charts</h2>
+            <div class="flex">
+              <div class="half">
+                <ul class="small">
+                  <li class="fragment">controversial</li>
+                  <li class="fragment">acceptable if commensurate</li>
+                  <li class="fragment">beware, very easy to mislead!</li>
+                </ul>
+              </div>
+              <div class="half">
+                <figure><img class="fill" src="../shared_images/vad_book_alldiagrams/dual_axis.png" alt="Dual Axis">
+                  <figcaption class="reference">Ben Jones @DataRemixed</figcaption>
+                </figure>
+              </div>
+            </div>
+          </section>
+          <section>
+            <h2>Idiom: connected scatterplots</h2>
+            <div class="flex">
+              <div class="half">
+                <ul class="small">
+                  <li class="fragment">scatterplot with line connection marks</li>
+                  <ul>
+                    <li class="fragment">popular in journalism</li>
+                    <li class="fragment">horiz + vert axes: value attribs</li>
+                    <li class="fragment">line connection marks: temporal order</li>
+                  </ul>
+                  <li class="fragment">empirical study</li>
+                  <ul>
+                    <li class="fragment">engaging, but correlation unclear</li>
+                  </ul>
+                </ul>
+              </div>
+              <div class="half">
+                <figure><img class="fill" src="../shared_images/vad_book_alldiagrams/connected_scatterplot.png" alt="Connected Scatterplot">
+                  <figcaption class="reference"><a href="http://steveharoz.com/research/connected_scatterplot/">http://steveharoz.com/research/connected_scatterplot/</a></figcaption>
+                </figure>
+              </div>
+            </div>
+          </section>
+          <section>
+            <h3>Idiom: connected scatterplots 2</h3>
+            <div class="flex">
+              <div class="half">
+                <ul class="small">
+                  <li class="fragment">alternative to dual-axis charts</li>
+                  <ul>
+                    <li class="fragment">horiz: time</li>
+                    <li class="fragment">vert: two value attribs</li>
+                  </ul>
+                </ul>
+              </div>
+              <div class="half">
+                <figure><img class="fill" src="../shared_images/vad_book_alldiagrams/connected_scatterplots_vs_dual_axis.png" alt="Connected Scatterplot vs Dual Axis">
+                  <figcaption class="reference"><a href="http://steveharoz.com/research/connected_scatterplot/">http://steveharoz.com/research/connected_scatterplot/</a></figcaption>
+                </figure>
+              </div>
+            </div>
+          </section>
+          <section>
+            <h2>Choosing line chart aspect ratios</h2>
+            <ul class="small">
+              <li class="fragment">1: banking to 45 (1980s)</li>
+              <li class="fragment">Cleveland perceptual argument: most accurate angle judgement at 45</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Choosing line chart aspect ratios</h2>
+            <ul class="small">
+              <li class="fragment">2: multi scale banking to 45 (2006)</li>
+              <li class="fragment">frequency domain analysis to find ratios</li>
+              <li class="fragment">FFT the data, convolve with Gaussian to smooth</li>
+              <li class="fragment">find interesting spikes/ranges in power spectrum</li>
+              <li class="fragment">cull nearby regions if similar, ensure overview</li>
+              <li class="fragment">create trend curves (red) for each aspect ratio</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Choosing line chart aspect ratios</h2>
+            <ul class="small">
+              <li class="fragment">3: arc length based aspect ratio (2011)</li>
+              <li class="fragment">minimize the arc length of curve while keeping the area of the plot constant</li>
+              <li class="fragment">parametrization and scale invariant</li>
+              <li class="fragment">symmetry preserving</li>
+              <li class="fragment">robust & fast to compute</li><br>
+              <li class="fragment">meta-points from this progression</li>
+              <li class="fragment">young field; prescriptive advice changes rapidly</li>
+              <li class="fragment">reasonable defaults required deep dive into perception meets math</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Idiom: Indexed line charts</h2>
+            <ul class="small">
+              <li class="fragment">data: 2 quant attires</li>
+              <li class="fragment">1 key + 1 value</li>
+              <li class="fragment">derived data: new quant value attrib</li>
+              <li class="fragment">index</li>
+              <li class="fragment">plot instead of original value</li>
+              <li class="fragment">task: show change over time</li>
+              <li class="fragment">principle: normalized, not absolute</li>
+              <li class="fragment">scalability same as standard line chart</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Idiom: Gantt charts</h2>
+            <ul class="small">
+              <li class="fragment">one key, two (related) values</li>
+              <li class="fragment">data: 1 categ attrib, 2 quant attribs</li>
+              <li class="fragment">mark: line</li>
+              <li class="fragment">length: duration</li>
+              <li class="fragment">channels: horiz position: start time (+end from duration)</li>
+              <li class="fragment">task: emphasize temporal overlaps, start/end dependencies between items</li>
+              <li class="fragment">scalability</li>
+              <li class="fragment">dozens of key levels</li>
+              <li class="fragment">hundreds of value levels</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Idiom: Slopegraphs</h2>
+            <ul class="small">
+              <li class="fragment">two values</li>
+              <li class="fragment">data</li>
+              <li class="fragment">2 quant value attribs</li>
+              <li class="fragment">(1 derived attrib: change magnitude)</li>
+              <li class="fragment">mark: point + line</li>
+              <li class="fragment">line connecting mark between pts</li>
+              <li class="fragment">channels</li>
+              <li class="fragment">2 vertical pos: express attrib value</li>
+              <li class="fragment">(linewidth/size, color)</li>
+              <li class="fragment">task emphasize changes in rank/value</li>
+              <li class="fragment">scalability hundreds of value levels</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Breaking conventions</h2>
+            <ul class="small">
+              <li class="fragment">presentation vs exploration</li>
+              <li class="fragment">engaging/evocative</li>
+              <li class="fragment">inverted y axis</li>
+              <li class="fragment">blood drips down on Poe</li>
+            </ul>
+          </section>
+          <section>
+            <h2>2 Keys</h2>
+            <ul class="small"></ul>
+          </section>
+          <section>
+            <h2>Idiom: heatmap</h2>
+            <ul class="small">
+              <li class="fragment">two keys, one value</li>
+              <li class="fragment">data</li>
+              <li class="fragment">2 categ attribs (gene, experimental condition)</li>
+              <li class="fragment">1 quant attrib (expression levels)</li>
+              <li class="fragment">marks: area</li>
+              <li class="fragment">separate and align in 2D matrix</li>
+              <li class="fragment">indexed by 2 categorical attributes</li>
+              <li class="fragment">channels color by quant attrib (ordered diverging colormap)</li>
+              <li class="fragment">task find clusters, outliers</li>
+              <li class="fragment">scalability 1M items, 100s of categ levels, ~10 quant attrib levels</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Idiom: cluster heatmap</h2>
+            <ul class="small">
+              <li class="fragment">in addition</li>
+              <li class="fragment">derived data</li>
+              <li class="fragment">2 cluster hierarchies</li>
+              <li class="fragment">dendrogram</li>
+              <li class="fragment">parent-child relationships in tree with connection line marks</li>
+              <li class="fragment">leaves aligned so interior branch heights easy to compare</li>
+              <li class="fragment">heatmap</li>
+              <li class="fragment">marks (re-)ordered by cluster hierarchy traversal</li>
+              <li class="fragment">task: assess quality of clusters found by automatic methods</li>
+            </ul>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h1>Axis Orientation</h1>
+          </section>
+          <section>
+            <h2>Idioms: scatterplot matrix, parallel coordinates</h2>
+            <ul class="small">
+              <li class="fragment"> scatterplot matrix (SPLOM)</li>
+              <li class="fragment"> rectilinear axes, point mark</li>
+              <li class="fragment"> all possible pairs of axes</li>
+              <li class="fragment"> scalability</li>
+              <li class="fragment"> one dozen attribs</li>
+              <li class="fragment"> dozens to hundreds of items</li>
+              <li class="fragment"> parallel coordinates</li>
+              <li class="fragment"> parallel axes, jagged line representing item</li>
+              <li class="fragment"> rectilinear axes, item as point</li>
+              <li class="fragment"> axis ordering is major challenge</li>
+              <li class="fragment"> scalability</li>
+              <li class="fragment"> dozens of attribs</li>
+              <li class="fragment"> hundreds of items</li>
+              <li class="fragment"> Task: Correlation</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Idiom: scatterplot matrix</h2>
+            <ul class="small">
+              <li class="fragment">positive correlation</li>
+              <li class="fragment">diagonal low-to-high</li>
+              <li class="fragment">negative correlation</li>
+              <li class="fragment">diagonal high-to-low</li>
+              <li class="fragment">uncorrelated: spread out</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Idiom: parallel coordinates</h2>
+            <ul class="small">
+              <li class="fragment">positive correlation</li>
+              <li class="fragment">parallel line segments</li>
+              <li class="fragment">negative correlation</li>
+              <li class="fragment">all segments cross at halfway point</li>
+              <li class="fragment">uncorrelated</li>
+              <li class="fragment">scattered crossings</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Orientation limitations</h2>
+            <ul class="small">
+              <li class="fragment">rectilinear: scalability wrt #axes</li>
+              <li class="fragment">2 axes best</li>
+              <li class="fragment">3 problematic</li>
+              <li class="fragment">4+ impossible</li>
+              <li class="fragment">parallel: unfamiliarity, training time</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Idioms: radial bar chart, star plot</h2>
+            <ul class="small">
+              <li class="fragment">radial bar chart</li>
+              <li class="fragment">radial axes meet at central ring, line mark</li>
+              <li class="fragment">star plot</li>
+              <li class="fragment">radial axes, meet at central point, line mark</li>
+              <li class="fragment">bar chart</li>
+              <li class="fragment">rectilinear axes, aligned vertically</li><br>
+              <li class="fragment">accuracy</li>
+              <ul class="small">
+                <li class="fragment">length unaligned with radial</li>
+                <li class="fragment">less accurate than aligned with rectilinear</li>
+              </ul>
+            </ul>
+          </section>
+          <section>
+            <h2>Radial Orientation: Radar Plots</h2>
+          </section>
+          <section>
+            <h2>"Diagram of the causes of mortality in the army in the East" (1858)</h2>
+          </section>
+          <section>
+            <h2>“Radar graphs: Avoid them (99.9% of the time)”</h2>
+          </section>
+          <section>
+            <h2>Radial Orientation: Radar Plots</h2>
+            <ul class="small">Idioms: pie chart, polar area chart
+              <li class="fragment">pie chart</li>
+              <li class="fragment">area marks with angle channel</li>
+              <li class="fragment">accuracy: angle/area much less accurate than line length</li><br>
+              <li class="fragment">polar area chart</li>
+              <li class="fragment">area marks with length channel</li>
+              <li class="fragment">more direct analog to bar charts</li><br>
+              <li class="fragment">data</li>
+              <li class="fragment">1 categ key attrib, 1 quant value attrib</li>
+              <li class="fragment">task</li>
+              <li class="fragment">part-to-whole judgements</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Pie chart perception</h2>
+            <ul class="small">
+              <li class="fragment">some empirical evidence that people respond to arc length</li>
+              <li class="fragment">not angles</li>
+              <li class="fragment">maybe also areas?…</li>
+              <li class="fragment">donut charts no worse than pie charts</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Pie chart perception</h2>
+            <ul class="small">
+              <li class="fragment">meta-points</li>
+              <li class="fragment">redesign of paper figures in later blog post</li>
+              <li class="fragment">violin plots good for analysis but too detailed for presentation</li>
+              <li class="fragment">my advice: still dubious for pie/donut charts</li>
+              <li class="fragment">sometimes ok if just 2 attribs</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Idioms: normalized stacked bar chart</h2>
+            <ul class="small">
+              <li class="fragment">task</li>
+              <li class="fragment">part-to-whole judgements</li><br>
+              <li class="fragment">normalized stacked bar chart</li>
+              <li class="fragment">stacked bar chart, normalized to full vert height</li>
+              <li class="fragment">single stacked bar equivalent to full pie</li>
+              <li class="fragment">high information density: requires narrow rectangle</li><br>
+              <li class="fragment">pie chart</li>
+              <li class="fragment">information density: requires large circle</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Idiom: glyphmaps</h2>
+            <ul class="small">
+              <li class="fragment">rectilinear good for linear vs nonlinear trends</li>
+              <li class="fragment">radial good for cyclic patterns</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Idiom: glyphmaps</h2>
+            <ul class="small">
+              <li class="fragment">Radial orientation</li>
+              <li class="fragment">perceptual limits</li>
+              <li class="fragment">polar coordinate asymmetry</li>
+              <li class="fragment">angles lower precision than lengths</li>
+              <li class="fragment">frequently problematic</li>
+              <li class="fragment">sometimes can be deliberately exploited!</li>
+              <li class="fragment">for 2 attribs of very unequal importance</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Idiom: Dense software overviews</h2>
+            <ul class="small">
+              <li class="fragment">data: text</li>
+              <li class="fragment">text + 1 quant attrib per line</li>
+              <li class="fragment">derived data:</li>
+              <li class="fragment">one pixel high line</li>
+              <li class="fragment">length according to original</li>
+              <li class="fragment">color line by attrib</li>
+              <li class="fragment">scalability</li>
+              <li class="fragment">10K+ lines</li>
+            </ul>
+          </section>
           <section>
             <h3 class="demo">Stacked barchart</h3>
             <iframe class="blocks" src="http://blockbuilder.org/mbostock/3886208"></iframe><a class="tiny" target="_blank" href="http://blockbuilder.org/mbostock/3886208">http://blockbuilder.org/mbostock/3886208</a>
@@ -239,6 +787,9 @@
                   return new Inspector(document.querySelector("#stackedToGroupedDiv"));
                 }
                 if (name === "viewof layout") {
+                  return new Inspector(document.querySelector("#stackedToGroupedDivLayout"));
+                }
+                if (name === "update") {
                   return new Inspector(document.querySelector("#stackedToGroupedDivLayout"));
                 }
               
