@@ -310,9 +310,75 @@ html(lang="en")
                 img(src="../shared_images/vad_book_alldiagrams/pr11_facet-recursive-subdivision4.png", alt="recursive subdivision")
             a.bottom.tiny [Configuring Hierarchical Layouts to Address Research Questions. Slingsby, Dykes, and Wood.  IEEE Transactions on Visualization and Computer Graphics (Proc. InfoVis 2009) 15:6 (2009), 977–984.]
           section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/12_facet-biomech.018.png")
+          section
+            h2 Superimpose Layers
+            .flex
+              .twothirds
+                ul
+                  li.fragment Layer: set of objects spread out over region
+                  ul
+                    li.fragment Each set is visually distinguishable group
+                    li.fragment Extent: whole view
+                  li.fragment Design choices
+                    li.fragment How many layers, how to distinguish?
+                    ul
+                      li.fragment Encode with different, nonoverlapping channels
+                      li.fragment Two layers achieveable, three with careful design
+                    li.fragment Small static set, or dynamic from many possible?
+              .third
+                img(src="../shared_images/vad_book_alldiagrams/pr11_facet-superimpose-layers.png", alt="superimpose layers")
           section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/12_facet-biomech.019.png")
+          section
+            h2 Static Visual Layering
+            .flex
+              .twothirds
+                ul
+                  li.fragment Foreground layer: roads
+                  ul
+                    li.fragment Hue, size distinguishing main from minor
+                    li.fragment High luminance contrast from background
+                  li.fragment Background layer: regions
+                    li.fragment Desaturated colors for water, parks, land areas
+                  li.fragment User can selectively focus attention
+                  li.fragment “Get it right in black and white”
+                    li.fragment Check luminance contrast with greyscale view
+                a.bottom.tiny [Get it right in black and white. Stone. 2010.  http://www.stonesc.com/wordpress/2010/03/get-it-right-in-black-and-white]
+              .third
+                img(src="../shared_images/vad_book_alldiagrams/pr11_facet-visual-layering1.png", alt="layered map in color")
+                img(src="../shared_images/vad_book_alldiagrams/pr11_facet-visual-layering2.png", alt="layered map in grayscale")
           section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/12_facet-biomech.020.png")
+          section
+            h2 Suprimposing Limits
+            .flex
+              .twothirds
+                ul
+                  li.fragment Few layers, but many lines
+                  ul
+                    li.fragment Up to a few dozen
+                    li.fragment But not hundreds
+                  li.fragment Superimpose vs juxtapose: empirical study
+                    li.fragment Superimposed for local, multiple for global
+                    li.fragment Tasks
+                    ul
+                      li.fragment Local: maximum, global: slope, discrimination
+                    li.fragment Same screen space for all multiples vs single superimposed
+                img(src="../shared_images/vad_book_alldiagrams/pr11_facet-superimpose-limits.png", alt="Graphical perception of multiple time series")
+              .third
+                img(src="../shared_images/vad_book_alldiagrams/pr11_superimposing-layering2.png", alt="cpu utilization over time")
           section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/12_facet-biomech.021.png")
+          section
+            h2 Dynamic Visual Layering
+            ul
+              li.fragment Interactive based on selection
+              li.fragment One-hop neighbour highlighting demos: click vs hover (lightweight)
+            .flex
+              .half
+                img(src="../shared_images/vad_book_alldiagrams/pr11_facet-dynamic-visual-layering1.png", alt="dynamic visual layering") 
+                a(href="mariandoerk.de/edgemaps/demo/") http://mariandoerk.de/edgemaps/demo/
+              .half
+                img(src="../shared_images/vad_book_alldiagrams/pr11_facet-dynamic-visual-layering2.png", alt="dynami visual layering")
+                a(href="mbostock.github.io/d3/talk/20111116/airports.html") http://mbostock.github.io/d3/talk/20111116/airports.html
+
 
 
           section
