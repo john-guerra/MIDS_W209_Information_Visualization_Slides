@@ -165,11 +165,36 @@ html(lang="en")
 
           //- Coordinated views
           section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/12_facet-biomech.008.png")
-
-
+          section
+            h2 Coordinate Views: Design Choice Interaction
+            img(src="../shared_images/vad_book_alldiagrams/pr11_facet-design-choice-interactions.png", alt="Design Choice Interaction")
+            ul
+              li.fragment Why juxtapose views?
+              ul
+                li.fragment Benefits: eyes vs memory
+                ul
+                  li.fragment Lower cognitive load to move eyes between 2 views than remembering previous state with single changing view
+                li.fragment Costs: display area, 2 views side by side each have only half the area of one view
           section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/12_facet-biomech.009.png")
-          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/12_facet-biomech.010.png")
 
+          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/12_facet-biomech.010.png")
+          section
+            h2 System: Improvise
+            .flex
+              .third
+                ul
+                  li.fragment Investigate power of multiple views
+                  ul
+                    li.fragment Pushing limits on view count, interaction complexity
+                    li.fragment How many is ok?
+                    ul
+                      li.fragment Open research question
+                    li.fragment Reorderable lists
+                      li.fragment Easy lookup
+                      li.fragment Useful when linked to other encodings
+              .twothirds
+                img(src="../shared_images/vad_book_alldiagrams/pr11_facet-improvise.png", alt="Building Highly-Coordinated Visualizations In Improvise")
+                a.bottom.tiny [Building Highly-Coordinated Visualizations In Improvise. Weaver. Proc. IEEE Symp. Information Visualization (InfoVis), pp. 159–166, 2004.]
           section
             h3.demo Improvise
             iframe.blocks(src="http://www.cs.ou.edu/~weaver/improvise/")
@@ -177,6 +202,25 @@ html(lang="en")
 
 
           section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/12_facet-biomech.011.png")
+          section
+            h2 Partition Into Views
+            .flex
+              .half
+                ul
+                  li.fragment How to divide data between views
+                  ul
+                    li.fragment Split into regions by attributes
+                    li.fragment Encodes association between items using spatial proximity 
+                    li.fragment Order of splits has major implications for what patterns are visible
+                  li.fragment No strict dividing line
+                    li.fragment View: big/detailed
+                    ul
+                      li.fragment Contiguous region in which visually encoded data is shown on the display
+                    li.fragment Glyph: small/iconic
+                      li.fragment Object with internal structure that arises from multiple marks
+              .half
+                img(src="../shared_images/vad_book_alldiagrams/pr11_facet-partition-sidebyside.png", alt="partition into side-by-side views")
+                img(src="../shared_images/vad_book_alldiagrams/pr11_facet-small-partitionviews.png", alt="partition views")
           section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/12_facet-biomech.012.png")
           section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/12_facet-biomech.013.png")
           section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/12_facet-biomech.014.png")
