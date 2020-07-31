@@ -60,13 +60,44 @@ html(lang="en")
           section
             h2 Facet Across Multiple Views
           section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/12_facet-biomech.003.png")
+          section
+            h2 Facet
+            img(src="../shared_images/vad_book_alldiagrams/pr11_facet-01.png", alt="Juxtapose, Partition, Superimpose")
           section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/12_facet-biomech.004.png")
+          section
+            h2 Juxtapose and Coordinate Views
+            img(src="../shared_images/vad_book_alldiagrams/pr11_facet-juxtapose-coordinate-views.png", alt="Share Encoding: Same/Different; Share Data: All/Subset/None; Share Navigation")
 
           //- Coordinated views
           section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/12_facet-biomech.008.png")
+          section
+            h2 Coordinate Views: Design Choice Interaction
+            img(src="../shared_images/vad_book_alldiagrams/pr11_facet-design-choice-interactions.png", alt="Design Choice Interaction")
+            ul
+              li.fragment Why juxtapose views?
+              ul
+                li.fragment Benefits: eyes vs memory
+                ul
+                  li.fragment Lower cognitive load to move eyes between 2 views than remembering previous state with single changing view
+                li.fragment Costs: display area, 2 views side by side each have only half the area of one view
 
           //- Linked Views
           section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/12_facet-biomech.005.png")
+          section
+            .flex
+              .half
+                h2 Idiom: Linked Highlighting
+                ul
+                  li.fragment See how regions contiguous in one view are distributed within another
+                  ul
+                    li.fragment Powerful and pervasive interaction idiom
+                  li.fragment Encoding: different
+                    li.fragment Multiform
+                  li.fragment Data: all shared
+                  li.fragment AKA: brushing and linking
+              .half
+                img(src="../shared_images/vad_book_alldiagrams/pr11_facet-linked-highlighting.png", alt="Visual Exploration of Large Structured Datasets")
+                a.bottom.tiny [Visual Exploration of Large Structured Datasets. Wills. Proc. New Techniques and Trends in Statistics (NTTS), pp. 237–246. IOS Press, 1995.]
           section
             h3.demo Linked Filtering (Crossfilter)
             iframe.blocks(src="http://square.github.io/crossfilter/")
@@ -74,9 +105,39 @@ html(lang="en")
 
 
           section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/12_facet-biomech.006.png")
+          section
+            .flex
+              .half
+                h2 Idiom: Overivew-detail Views
+                ul
+                  li.fragment Encoding: same
+                  li.fragment Data: subset shared
+                  li.fragment Navigation: shared
+                  ul
+                    li.fragment Bi-directional linking
+                  li.fragment Differences
+                    li.fragment Viewpoint
+                    li.fragment (Size)
+                  li.fragment Special case:  bird's-eye map
+              .half
+                h2 System: Google Maps
+                img(src="../shared_images/vad_book_alldiagrams/pr11_facet-google-map.png", alt="Overview map from Google maps")
+                a.bottom.tiny [A Review of Overview+Detail, Zooming, and Focus+Context Interfaces. Cockburn, Karlson, and Bederson. ACM Computing Surveys 41:1 (2008), 1–31.]
           section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/12_facet-biomech.007.png")
-
-
+          section
+            .flex
+              .third
+                ul
+                  li.fragment Encoding: same
+                  li.fragment Data: none shared
+                  ul
+                    li.fragment Different attributes for node colors
+                    li.fragment (Same network layout)
+                  li.fragment Navigation: shared
+              .twothirds
+                h2 System: Cerebral
+                img(src="../shared_images/vad_book_alldiagrams/pr11_facet-small-multiples.png", alt="Small multiples")
+                a.bottom.tiny [Cerebral: Visualizing Multiple Experimental Conditions on a Graph with Biological Context. Barsky, Munzner, Gardy, and Kincaid. IEEE Trans. Visualization and Computer Graphics (Proc. InfoVis 2008) 14:6 (2008), 1253–1260.]
           section
             h3.demo Overview/Details
             p.small Same encoding / Subset of data / Linked Navigation
@@ -104,11 +165,36 @@ html(lang="en")
 
           //- Coordinated views
           section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/12_facet-biomech.008.png")
-
-
+          section
+            h2 Coordinate Views: Design Choice Interaction
+            img(src="../shared_images/vad_book_alldiagrams/pr11_facet-design-choice-interactions.png", alt="Design Choice Interaction")
+            ul
+              li.fragment Why juxtapose views?
+              ul
+                li.fragment Benefits: eyes vs memory
+                ul
+                  li.fragment Lower cognitive load to move eyes between 2 views than remembering previous state with single changing view
+                li.fragment Costs: display area, 2 views side by side each have only half the area of one view
           section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/12_facet-biomech.009.png")
-          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/12_facet-biomech.010.png")
 
+          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/12_facet-biomech.010.png")
+          section
+            h2 System: Improvise
+            .flex
+              .third
+                ul
+                  li.fragment Investigate power of multiple views
+                  ul
+                    li.fragment Pushing limits on view count, interaction complexity
+                    li.fragment How many is ok?
+                    ul
+                      li.fragment Open research question
+                    li.fragment Reorderable lists
+                      li.fragment Easy lookup
+                      li.fragment Useful when linked to other encodings
+              .twothirds
+                img(src="../shared_images/vad_book_alldiagrams/pr11_facet-improvise.png", alt="Building Highly-Coordinated Visualizations In Improvise")
+                a.bottom.tiny [Building Highly-Coordinated Visualizations In Improvise. Weaver. Proc. IEEE Symp. Information Visualization (InfoVis), pp. 159–166, 2004.]
           section
             h3.demo Improvise
             iframe.blocks(src="http://www.cs.ou.edu/~weaver/improvise/")
@@ -116,16 +202,183 @@ html(lang="en")
 
 
           section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/12_facet-biomech.011.png")
+          section
+            h2 Partition Into Views
+            .flex
+              .half
+                ul
+                  li.fragment How to divide data between views
+                  ul
+                    li.fragment Split into regions by attributes
+                    li.fragment Encodes association between items using spatial proximity 
+                    li.fragment Order of splits has major implications for what patterns are visible
+                  li.fragment No strict dividing line
+                    li.fragment View: big/detailed
+                    ul
+                      li.fragment Contiguous region in which visually encoded data is shown on the display
+                    li.fragment Glyph: small/iconic
+                      li.fragment Object with internal structure that arises from multiple marks
+              .half
+                img(src="../shared_images/vad_book_alldiagrams/pr11_facet-partition-sidebyside.png", alt="partition into side-by-side views")
+                img(src="../shared_images/vad_book_alldiagrams/pr11_facet-small-partitionviews.png", alt="partition views")
           section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/12_facet-biomech.012.png")
           section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/12_facet-biomech.013.png")
+          section
+            h2 Partitioning: List Alignment
+            .flex
+              .half
+                ul
+                  li.fragment Single bar chart with grouped bars
+                  ul
+                    li.fragment Split by state into regions
+                    ul
+                      li.fragment Complex glyph within each region showing all ages
+                    li.fragment Compare: easy within state, hard across ages
+                img(src="../shared_images/vad_book_alldiagrams/pr11_facet-partition-listalignment1.png", alt="single bar chart with grouped bars")
+              .half
+                ul
+                  li.fragment Small-multiple bar charts
+                  ul
+                    li.fragment Split by age into regions
+                    ul
+                      li.fragment One chart per region
+                    li.fragment Compare: easy within age, harder across states
+                img(src="../shared_images/vad_book_alldiagrams/pr11_facet-partition-listalignment2.png", alt="small-multiple bar charts")
           section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/12_facet-biomech.014.png")
+          section
+            .flex
+              .half
+                h2 Partitioning: Recursive Subdivision
+                ul
+                  li.fragment Split by neighborhood
+                  li.fragment Then by type 
+                  li.fragment Then time
+                  ul
+                    li.fragment Years as rows
+                    li.fragment Months as columns 
+                  li.fragment Color by price
+                  li.fragment Neighborhood patterns
+                  ul
+                    li.fragment Where it’s expensive
+                    li.fragment Where you pay much more for detached type
+              .half
+                h2 System: HIVE
+                img(src="../shared_images/vad_book_alldiagrams/pr11_facet-recursive-subdivision.png", alt="recursive subdivision")
+            a.bottom.tiny [Configuring Hierarchical Layouts to Address Research Questions. Slingsby, Dykes, and Wood.  IEEE Transactions on Visualization and Computer Graphics (Proc. InfoVis 2009) 15:6 (2009), 977–984.]
           section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/12_facet-biomech.015.png")
+          section
+            .flex
+              .half
+                h2 Partitioning: Recursive Subdivision
+                ul
+                  li.fragment Switch order of splits
+                  ul
+                    li.fragment Type then neighborhood
+                  li.fragment Switch color
+                    li.fragment By price variation 
+                  li.fragment Type patterns
+                    li.fragment Within specific type, which neighborhoods inconsistent
+              .half
+                h2 System: HIVE
+                img(src="../shared_images/vad_book_alldiagrams/pr11_facet-recursive-subdivision2.png", alt="recursive subdivision")
+            a.bottom.tiny [Configuring Hierarchical Layouts to Address Research Questions. Slingsby, Dykes, and Wood.  IEEE Transactions on Visualization and Computer Graphics (Proc. InfoVis 2009) 15:6 (2009), 977–984.]
           section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/12_facet-biomech.016.png")
+          section
+            .flex
+              .half
+                h2 Partitioning: Recursive Subdivision
+                ul
+                  li.fragment Different encoding for second-level regions
+                  ul
+                    li.fragment Choropleth maps
+              .half
+                h2 System: HIVE
+                img(src="../shared_images/vad_book_alldiagrams/pr11_facet-recursive-subdivision3.png", alt="recursive subdivision")
+            a.bottom.tiny [Configuring Hierarchical Layouts to Address Research Questions. Slingsby, Dykes, and Wood.  IEEE Transactions on Visualization and Computer Graphics (Proc. InfoVis 2009) 15:6 (2009), 977–984.]  
           section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/12_facet-biomech.017.png")
+          section
+            .flex
+              .half
+                h2 Partitioning: Recursive Subdivision
+                ul
+                  li.fragment Size regions by sale counts
+                  ul
+                    li.fragment Not uniformly
+                  li.fragment Result: treemap 
+              .half
+                h2 System: HIVE
+                img(src="../shared_images/vad_book_alldiagrams/pr11_facet-recursive-subdivision4.png", alt="recursive subdivision")
+            a.bottom.tiny [Configuring Hierarchical Layouts to Address Research Questions. Slingsby, Dykes, and Wood.  IEEE Transactions on Visualization and Computer Graphics (Proc. InfoVis 2009) 15:6 (2009), 977–984.]
           section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/12_facet-biomech.018.png")
+          section
+            h2 Superimpose Layers
+            .flex
+              .twothirds
+                ul
+                  li.fragment Layer: set of objects spread out over region
+                  ul
+                    li.fragment Each set is visually distinguishable group
+                    li.fragment Extent: whole view
+                  li.fragment Design choices
+                    li.fragment How many layers, how to distinguish?
+                    ul
+                      li.fragment Encode with different, nonoverlapping channels
+                      li.fragment Two layers achieveable, three with careful design
+                    li.fragment Small static set, or dynamic from many possible?
+              .third
+                img(src="../shared_images/vad_book_alldiagrams/pr11_facet-superimpose-layers.png", alt="superimpose layers")
           section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/12_facet-biomech.019.png")
+          section
+            h2 Static Visual Layering
+            .flex
+              .twothirds
+                ul
+                  li.fragment Foreground layer: roads
+                  ul
+                    li.fragment Hue, size distinguishing main from minor
+                    li.fragment High luminance contrast from background
+                  li.fragment Background layer: regions
+                    li.fragment Desaturated colors for water, parks, land areas
+                  li.fragment User can selectively focus attention
+                  li.fragment “Get it right in black and white”
+                    li.fragment Check luminance contrast with greyscale view
+                a.bottom.tiny [Get it right in black and white. Stone. 2010.  http://www.stonesc.com/wordpress/2010/03/get-it-right-in-black-and-white]
+              .third
+                img(src="../shared_images/vad_book_alldiagrams/pr11_facet-visual-layering1.png", alt="layered map in color")
+                img(src="../shared_images/vad_book_alldiagrams/pr11_facet-visual-layering2.png", alt="layered map in grayscale")
           section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/12_facet-biomech.020.png")
+          section
+            h2 Suprimposing Limits
+            .flex
+              .twothirds
+                ul
+                  li.fragment Few layers, but many lines
+                  ul
+                    li.fragment Up to a few dozen
+                    li.fragment But not hundreds
+                  li.fragment Superimpose vs juxtapose: empirical study
+                    li.fragment Superimposed for local, multiple for global
+                    li.fragment Tasks
+                    ul
+                      li.fragment Local: maximum, global: slope, discrimination
+                    li.fragment Same screen space for all multiples vs single superimposed
+                img(src="../shared_images/vad_book_alldiagrams/pr11_facet-superimpose-limits.png", alt="Graphical perception of multiple time series")
+              .third
+                img(src="../shared_images/vad_book_alldiagrams/pr11_superimposing-layering2.png", alt="cpu utilization over time")
           section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/12_facet-biomech.021.png")
+          section
+            h2 Dynamic Visual Layering
+            ul
+              li.fragment Interactive based on selection
+              li.fragment One-hop neighbour highlighting demos: click vs hover (lightweight)
+            .flex
+              .half
+                img(src="../shared_images/vad_book_alldiagrams/pr11_facet-dynamic-visual-layering1.png", alt="dynamic visual layering") 
+                a(href="mariandoerk.de/edgemaps/demo/") http://mariandoerk.de/edgemaps/demo/
+              .half
+                img(src="../shared_images/vad_book_alldiagrams/pr11_facet-dynamic-visual-layering2.png", alt="dynami visual layering")
+                a(href="mbostock.github.io/d3/talk/20111116/airports.html") http://mbostock.github.io/d3/talk/20111116/airports.html
+
 
 
           section
