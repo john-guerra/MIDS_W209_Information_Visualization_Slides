@@ -60,13 +60,44 @@ html(lang="en")
           section
             h2 Facet Across Multiple Views
           section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/12_facet-biomech.003.png")
+          section
+            h2 Facet
+            img(src="../shared_images/vad_book_alldiagrams/pr11_facet-01.png", alt="Juxtapose, Partition, Superimpose")
           section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/12_facet-biomech.004.png")
+          section
+            h2 Juxtapose and Coordinate Views
+            img(src="../shared_images/vad_book_alldiagrams/pr11_facet-juxtapose-coordinate-views.png", alt="Share Encoding: Same/Different; Share Data: All/Subset/None; Share Navigation")
 
           //- Coordinated views
           section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/12_facet-biomech.008.png")
+          section
+            h2 Coordinate Views: Design Choice Interaction
+            img(src="../shared_images/vad_book_alldiagrams/pr11_facet-design-choice-interactions.png", alt="Design Choice Interaction")
+            ul
+              li.fragment Why juxtapose views?
+              ul
+                li.fragment Benefits: eyes vs memory
+                ul
+                  li.fragment Lower cognitive load to move eyes between 2 views than remembering previous state with single changing view
+                li.fragment Costs: display area, 2 views side by side each have only half the area of one view
 
           //- Linked Views
           section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/12_facet-biomech.005.png")
+          section
+            .flex
+              .half
+                h2 Idiom: Linked Highlighting
+                ul
+                  li.fragment See how regions contiguous in one view are distributed within another
+                  ul
+                    li.fragment Powerful and pervasive interaction idiom
+                  li.fragment Encoding: different
+                    li.fragment Multiform
+                  li.fragment Data: all shared
+                  li.fragment AKA: brushing and linking
+              .half
+                img(src="../shared_images/vad_book_alldiagrams/pr11_facet-linked-highlighting.png", alt="Visual Exploration of Large Structured Datasets")
+                a.bottom.tiny [Visual Exploration of Large Structured Datasets. Wills. Proc. New Techniques and Trends in Statistics (NTTS), pp. 237–246. IOS Press, 1995.]
           section
             h3.demo Linked Filtering (Crossfilter)
             iframe.blocks(src="http://square.github.io/crossfilter/")
@@ -74,9 +105,39 @@ html(lang="en")
 
 
           section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/12_facet-biomech.006.png")
+          section
+            .flex
+              .half
+                h2 Idiom: Overivew-detail Views
+                ul
+                  li.fragment Encoding: same
+                  li.fragment Data: subset shared
+                  li.fragment Navigation: shared
+                  ul
+                    li.fragment Bi-directional linking
+                  li.fragment Differences
+                    li.fragment Viewpoint
+                    li.fragment (Size)
+                  li.fragment Special case:  bird's-eye map
+              .half
+                h2 System: Google Maps
+                img(src="../shared_images/vad_book_alldiagrams/pr11_facet-google-map.png", alt="Overview map from Google maps")
+                a.bottom.tiny [A Review of Overview+Detail, Zooming, and Focus+Context Interfaces. Cockburn, Karlson, and Bederson. ACM Computing Surveys 41:1 (2008), 1–31.]
           section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/12_facet-biomech.007.png")
-
-
+          section
+            .flex
+              .third
+                ul
+                  li.fragment Encoding: same
+                  li.fragment Data: none shared
+                  ul
+                    li.fragment Different attributes for node colors
+                    li.fragment (Same network layout)
+                  li.fragment Navigation: shared
+              .twothirds
+                h2 System: Cerebral
+                img(src="../shared_images/vad_book_alldiagrams/pr11_facet-small-multiples.png", alt="Small multiples")
+                a.bottom.tiny [Cerebral: Visualizing Multiple Experimental Conditions on a Graph with Biological Context. Barsky, Munzner, Gardy, and Kincaid. IEEE Trans. Visualization and Computer Graphics (Proc. InfoVis 2008) 14:6 (2008), 1253–1260.]
           section
             h3.demo Overview/Details
             p.small Same encoding / Subset of data / Linked Navigation
