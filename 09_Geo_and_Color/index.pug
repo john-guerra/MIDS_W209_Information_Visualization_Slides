@@ -123,6 +123,9 @@ html(lang="en")
 
 
 
+
+
+
         section
 
           section
@@ -159,54 +162,150 @@ html(lang="en")
             h3 Vega-lite Maps
             a(href="https://observablehq.com/@vega/vega-lite-api") https://observablehq.com/@vega/vega-lite-api
 
-        //- section
-        //-   section
-        //-     h3.demo D3 v4 update pattern
-        //-     iframe.blocks(src="http://blockbuilder.org/cmgiven/32d4c53f19aea6e528faf10bfe4f3da9")
-        //-     a.tiny(target="_blank" href="http://blockbuilder.org/cmgiven/32d4c53f19aea6e528faf10bfe4f3da9") http://blockbuilder.org/cmgiven/32d4c53f19aea6e528faf10bfe4f3da9
-        //-     span by cmgiven
 
 
+        section
+          section
 
-        //- section
-        //-   section
-        //-    h1 D3 v4 Tutorial
+            h2 8. Arrange Spatial Data
+          section
+            h2 Idiom: choropleth map
+            .flex
+              .half
+                ul
+                  li.fragment use given spatial data
+                  ul
+                    li.fragment when central task is understanding spatial relationships
+                  li.fragment data
+                  ul
+                    li.fragment geographic geometry
+                    li.fragment table with 1 quant attribute per region
+                  li.fragment encoding
+                  ul
+                    li.fragment use given geometry for area mark boundaries
+                    li.fragment sequential segmented colormap [more later]
+                    li.fragment (geographic heat map)
 
-        //-   section
-        //-     h2
-        //-       a(href="https://jsfiddle.net/duto_guerra/n0tqp22x/2/") Step 0
+          section
+            h2 Population maps trickiness
+            .flex
+              .half
+                ul
+                  li.fragment beware!
+                  ul
+                    li.fragment absolute vs relative again
+                  li.fragment population density vs per capita
+                  ul
+                    li.fragment investigate with Ben Jones Tableau Public demo
+                    li.fragment http://public.tableau.com/profile/ben.jones#!/vizhome/PopVsFin/PopVsFin Are Maps of Financial Variables just Population Maps?
+                    ul
+                      li.fragment yes, unless you look at per capita (relative) numbers
+          section
+            h2 Idiom: Bayesian surprise maps
+            .flex
+              .half
+                ul
+                  li.fragment use models of expectations to highlight surprising values
+                  li.fragment confounds (population) and variance (sparsity)
+          section
+            h2 Idiom: topographic map
+            .flex
+              .half
+                ul
+                  li.fragment data
+                  ul
+                    li.fragment geographic geometry
+                  li.fragment scalar spatial field
+                  ul
+                    li.fragment 1 quant attribute per grid cell
+                  li.fragment derived data
+                  ul
+                    li.fragment isoline geometry
+                    ul
+                      li.fragment isocontours computed for specific levels of scalar values
 
-        //-     ul
-        //-       li Add https://d3js.org/d3.v4.min.js to external resources
+          section
+            h2 Idioms: isosurfaces, direct volume rendering
+            .flex
+              .half
+                ul
+                  li.fragment data
+                  ul
+                    li.fragment scalar spatial field
+                    li.fragment 1 quant attribute per grid cell
+                  li.fragment task
+                  ul
+
+                    li.fragment shape understanding, spatial relationships
+                  li.fragment isosurface
+                  ul
+                    li.fragment derived data: isocontours computed for specific levels of scalar values
+                  li.fragment direct volume rendering
+                  ul
+                    li.fragment transfer function maps scalar values to color, opacity
+                    ul
+                      li.fragment no derived geometry
+
+          section
+            h2 Vector and tensor fields
+            .flex
+              .half
+                ul
+                  li.fragment data
+                  ul
+                    li.fragment many attribs per cell
+                  li.fragment idiom families
+                  ul
+                    li.fragment flow glyphs
+                    ul
+                      li.fragment purely local
+                    li.fragment geometric flow
+                    ul
+                      li.fragment derived data from tracing particle trajectories
+                      li.fragment sparse set of seed points
+                    li.fragment texture flow
+                    ul
+                      li.fragment derived data, dense seeds
+                    li.fragment feature flow
+                    ul
+                      li.fragment global computation to detect features
+                      li.fragment encoded with one of methods above
+
+          section
+            h2 Vector fields
+            .flex
+              .half
+                ul
+                  li.fragment empirical study tasks
+                  ul
+                    li.fragment finding critical points, identifying their types
+                    li.fragment identifying what type of critical point is at a specific location
+                    li.fragment predicting where a particle starting at a specified point will end up (advection)
 
 
-
-        //-   section
-        //-     h2
-        //-       a(href="https://jsfiddle.net/duto_guerra/n0tqp22x/3/") Step 1: selections
-        //-     iframe.blocks(src="https://jsfiddle.net/duto_guerra/n0tqp22x/3/")
-
-        //-   section
-        //-     h2
-        //-       a(href="https://jsfiddle.net/duto_guerra/n0tqp22x/4/") Step 2: data binding
-        //-     iframe.blocks(src="https://jsfiddle.net/duto_guerra/n0tqp22x/4/")
-
-
-        //-   section
-        //-     h2
-        //-       a(href="https://jsfiddle.net/duto_guerra/n0tqp22x/5/") Step 3: update and remove
-        //-     iframe.blocks(src="https://jsfiddle.net/duto_guerra/n0tqp22x/5/")
-
-        //-   section
-        //-     h2
-        //-       a(href="https://jsfiddle.net/duto_guerra/n0tqp22x/6/") Step 4: svg
-        //-     iframe.blocks(src="https://jsfiddle.net/duto_guerra/n0tqp22x/6/")
-
-
-        //-   section
-        //-     h2
-        //-       a(href="https://jsfiddle.net/duto_guerra/n0tqp22x/7/") Step 5: transitions
-        //-     iframe.blocks(src="https://jsfiddle.net/duto_guerra/n0tqp22x/7/")
+          section
+            h2 Idiom: similarity-clustered streamlines
+            .flex
+              .half
+                ul
+                  li.fragment data
+                  ul
+                    li.fragment 3D vector field
+                  li.fragment derived data (from field)
+                  ul
+                    li.fragment streamlines: trajectory particle will follow
+                  li.fragment derived data (per streamline)
+                  ul
+                    li.fragment curvature, torsion, tortuosity
+                    li.fragment signature: complex weighted combination
+                    li.fragment compute cluster hierarchy across all signatures
+                    li.fragment encode: color and opacity by cluster
+                  li.fragment tasks
+                  ul
+                    li.fragment find features, query shape
+                  li.fragment scalability
+                  ul
+                    li.fragment millions of samples, hundreds of streamlines
 
 
 
