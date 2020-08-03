@@ -33,23 +33,120 @@
         </section>
         <section>
           <section>
-            <h2>Manipulate viewss</h2>
+            <h2>Manipulate views</h2>
           </section>
           <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/11_manipulate-genea.003.png"></section>
           <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/11_manipulate-genea.004.png"></section>
           <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/11_manipulate-genea.005.png"></section>
           <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/11_manipulate-genea.006.png"></section>
+          <section>
+            <h2>How to Handle Complexity: 1 Previous Strategy + 3 More</h2>
+            <div class="flex">
+              <div class="third"><img src="./shared_images/vad_book_alldiagrams/pr10_manipulate-views-derive.png" alt="derive">
+                <ul class="small">
+                  <li class="fragment">Derive new data to show within view</li>
+                  <li class="fragment">Change view over time </li>
+                  <li class="fragment">Facet across multiple views</li>
+                  <li class="fragment">Reduce items/attributes within single view</li>
+                </ul>
+              </div>
+              <div class="twothirds"><img src="../shared_images/vad_book_alldiagrams/10_manipulate-views-3-strategies.png" alt="manipulate: change, select, navigate; facet: juxtapose, parition, superimpose; reduce: filter, aggregate, embed"></div>
+            </div>
+          </section>
           <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/11_manipulate-genea.007.png"></section>
           <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/11_manipulate-genea.008.png"></section>
           <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/11_manipulate-genea.009.png"></section>
           <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/11_manipulate-genea.010.png"></section>
           <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/11_manipulate-genea.011.png"></section>
           <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/11_manipulate-genea.012.png"></section>
+          <section>
+            <h2>Idiom Design Choices: Interaction<img src="../shared_images/vad_book_alldiagrams/10_manipulate-views-3-strategies.png" alt="manipulate: change, select, navigate; facet: juxtapose, parition, superimpose; reduce: filter, aggregate, embed"></h2>
+          </section>
           <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/11_manipulate-genea.013.png"></section>
+          <section>
+            <h2>Manipulate</h2>
+            <div class="flex">
+              <div class="third"> <img src="../shared_images/vad_book_alldiagrams/pr10_manipulate-views-change.png" alt="change over time; select"></div>
+              <div class="third"><img src="../shared_images/vad_book_alldiagrams/pr10_manipulate-views-navigate.png" alt="Navigate: item reduction: zoom; pan/translate; constrained"></div>
+              <div class="third"><img src="../shared_images/vad_book_alldiagrams/pr10_manipulate-views-attribute-reduction.png" alt="attribute reduction: slice; cut; project"></div>
+            </div>
+          </section>
           <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/11_manipulate-genea.014.png"></section>
+          <section></section>
+          <h2>Change Over Time
+            <ul>
+              <li class="fragment">Change any of the other choices
+                <ul>
+                  <li class="fragment">Encoding itself</li>
+                  <li class="fragment">Parameters</li>
+                  <li class="fragment">Arrange: rearrange reorder</li>
+                  <li class="fragment">Aggregation level, what is filtered...</li>
+                </ul>
+              </li>
+              <li class="fragment">Why change?
+                <li class="fragment">One of four major strategies
+                  <ul>
+                    <li class="fragment">Change over time</li>
+                    <li class="fragment">Facet data by partitioning into multiple views</li>
+                    <li class="fragment">Reduce amount of data shown within view</li>
+                  </ul>
+                </li>
+                <li class="fragment">Most obvious, powerful, flexible</li>
+                <li class="fragment">Interaction entails change</li>
+              </li>
+            </ul>
+          </h2>
           <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/11_manipulate-genea.015.png"></section>
+          <section>
+            <div class="flex">
+              <div class="half">
+                <h2>Idiom: Re-encode</h2><img src="../shared_images/vad_book_alldiagrams/pr10_manipulate-views-reencode-tableau-1.png" alt="screenshot of re-encoding from from Tableau"><img src="../shared_images/vad_book_alldiagrams/pr10_manipulate-views-reencode-tableau-2.png" alt="screenshot of re-encoding from from Tableau">
+              </div>
+              <div class="half">
+                <h2>System: Tableau</h2><img src="../shared_images/vad_book_alldiagrams/pr10_manipulate-views-reencode-tableau-3.png" alt="screenshot of re-encoding from from Tableau"><img src="../shared_images/vad_book_alldiagrams/pr10_manipulate-views-reencode-tableau-4.png" alt="screenshot of re-encoding from from Tableau">
+              </div>
+            </div><a class="bottom tiny" href="http://tableausoftware.com">Made using Tableau</a>
+          </section>
           <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/11_manipulate-genea.016.png"></section>
+          <section>
+            <div class="flex">
+              <div class="half">
+                <h2>Idiom: Reorder</h2>
+              </div>
+              <div class="half">
+                <h2>System: DataStripes</h2>
+              </div>
+            </div>
+            <ul>
+              <li class="fragment">What: table with many attributes</li>
+              <li class="frgament">How: data-driven reordering by selecting column</li>
+              <li class="frgament">Why: find correlations between attributes</li>
+            </ul><img src="../shared_images/vad_book_alldiagrams/pr10_manipulate-views-reorder.png" alt="multiple depictions of how complex data can be ordered, by color, date, and other dimensions"><a class="bottom tiny" href="carlmanaster.github.io/datastripes/">http://carlmanaster.github.io/datastripes/</a>
+          </section>
           <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/11_manipulate-genea.017.png"></section>
+          <section>
+            <div class="flex">
+              <div class="half">
+                <h2>Idiom: Change Alignment</h2>
+                <ul>
+                  <li class="fragment">Stacked bars</li>
+                  <ul>
+                    <li class="fragment">Easy to compare</li>
+                    <ul>
+                      <li class="fragment">First segment</li>
+                      <li class="fragment">Total bar</li>
+                    </ul>
+                  </ul>
+                  <li class="fragment">Align to different segment
+                    <li class="fragment">Supports flexible comparison</li>
+                  </li>
+                </ul>
+              </div>
+              <div class="half">
+                <h2>System: LineUp</h2><img src="../shared_images/vad_book_alldiagrams/pr10_manipulate-views-change-alignment-1.png" alt="Content aligned along the left margin"><img src="../shared_images/vad_book_alldiagrams/pr10_manipulate-views-change-alignment-2.png" alt="Content aligned along the center margin"><a class="tiny">[LineUp: Visual Analysis of Multi-Attribute Rankings.Gratzl, Lex, Gehlenborg, Pfister, and Streit. IEEE Trans. Visualization and Computer Graphics (Proc. InfoVis 2013) 19:12 (2013), 2277–2286.]</a>
+              </div>
+            </div>
+          </section>
           <section>
             <h3 class="demo">LineUP</h3><span>
               <video width="100%" height="100%" controls>
@@ -61,9 +158,56 @@
           </section>
           <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/11_manipulate-genea.018.png"><a class="bottom tiny" target="_blank" href="http://www.win.tue.nl/vis1/home/fvham/DL/callmatrix.pdf">http://www.win.tue.nl/vis1/home/fvham/DL/callmatrix.pdf</a></section>
           <section>
+            <h2>Idiom: Animated Transitions</h2>
+            <ul>
+              <li class="fragment">Smooth interpolation from one state to another</li>
+              <ul>
+                <li class="fragment">Alternative to jump cuts, supports item tracking</li>
+                <ul>
+                  <li class="fragment">Best case for animation </li>
+                </ul>
+                <li class="fragment">Staging to reduce cognitive load</li>
+              </ul>
+              <li class="fragment">Example: animated transitions in statistical data graphics</li>
+            </ul><img src="pr10_manipulate-views-animated-transitions.png" alt="animated transition"><a href="https://vimeo.com/19278444">vimeo.com/19278444</a><a class="bottom tiny" href="vis.stanford.edu/papers/animated-transitions">[Animated Transitions in Statistical Data Graphics. Heer and Robertson. IEEE TVCG (Proc InfoVis 2007) 13(6):1240-1247, 2007]</a>
+          </section>
+          <section>
             <iframe class="blocks" src="https://bost.ocks.org/mike/miserables/"></iframe><a href="https://bost.ocks.org/mike/miserables/">https://bost.ocks.org/mike/miserables/</a>
           </section>
           <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/11_manipulate-genea.019.png"></section>
+          <section>
+            <h2>Select and Highlight</h2>
+            <div class="flex">
+              <div class="twothirds">
+                <ul>
+                  <li class="fragment">Selection: basic operation for most interaction</li>
+                  <li class="fragment">Design choices</li>
+                  <ul>
+                    <li class="fragment">How many selection types?</li>
+                    <ul>
+                      <li class="fragment">Interaction modalities
+                        <ul>
+                          <li class="fragment">Click/tap (heavyweight) vs. hover (lightweight but not available on most touchscreens)</li>
+                          <li class="fragment">Multiple click types (shift-click, option-click, …)</li>
+                          <li class="fragment">Proximity beyond click/hover (touching vs nearby vs distant)</li>
+                        </ul>
+                      </li>
+                      <li class="fragment">Application semantics
+                        <li class="fragment">Adding to selection set vs replacing selection</li>
+                        <li class="fragment">Can selection be null?</li>
+                        <ul>
+                          <li class="fragment">ex: toggle so nothing selected if click on background</li>
+                        </ul>
+                        <li class="fragment">Primary vs secondary (ex: source/target nodes in network)</li>
+                        <li class="fragment">Group membership (add/delete items, name group, …)</li>
+                      </li>
+                    </ul>
+                  </ul>
+                </ul>
+              </div>
+              <div class="third"><img src="../shared_images/vad_book_alldiagrams/pr10_manipulate-views-select.png" alt="Select a single plot point"></div>
+            </div>
+          </section>
           <section>
             <iframe class="blocks" src="https://blockbuilder.org/mbostock/7608400"></iframe><a class="tiny" href="https://blockbuilder.org/mbostock/7608400">https://blockbuilder.org/mbostock/7608400</a>
           </section>
@@ -71,7 +215,50 @@
             <h2>Selection with brush</h2><a href="https://observablehq.com/@john-guerra/scatterplot-brush">https://observablehq.com/@john-guerra/scatterplot-brush</a>
           </section>
           <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/11_manipulate-genea.020.png"></section>
+          <section>
+            <h2>Navigate: Changing viewpoint/visibility</h2>
+            <div class="flex">
+              <div class="half">
+                <ul>
+                  <li class="fragment">Change viewpoint</li>
+                  <ul>
+                    <li class="fragment">Changes which items are visible within view</li>
+                  </ul>
+                  <li class="fragment">Camera metaphor
+                    <li class="fragment">Pan/translate/scroll</li>
+                    <ul>
+                      <li class="fragment">Move up/down/sideways</li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              <div class="half"><img src="../shared_images/vad_book_alldiagrams/pr10_manipulate-views-navigate-reduction.png" alt="Item reduction"></div>
+            </div>
+          </section>
           <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/11_manipulate-genea.021.png"></section>
+          <section>
+            <div class="flex">
+              <div class="third">
+                <h2>Idiom: Semantic Zooming</h2>
+                <ul>
+                  <li class="fragment">Semantic zoom</li>
+                  <ul>
+                    <li class="fragment">Alternative to geometric zoom</li>
+                    <li class="fragment">Resolution-aware layout adapts to available space</li>
+                    <li class="fragment">Goal: legible at multiple scales</li>
+                    <li class="fragment">Dramatic or subtle effects</li>
+                  </ul>
+                  <li class="fragment">Visual encoding change
+                    <li class="fragment">Colored box</li>
+                    <li class="fragment">Sparkline</li>
+                    <li class="fragment">Simple line chart</li>
+                    <li class="fragment">Full chart: axes and tickmarks</li>
+                  </li>
+                </ul>
+              </div>
+              <div class="twothirds"><img src="../shared_images/vad_book_alldiagrams/pr10_manipulate-views-semantic-zooming.png" alt="Semantic zooming"></div>
+            </div><a class="bottom tiny">[LiveRAC - Interactive Visual Exploration of System Management Time-Series Data. McLachlan, Munzner, Koutsofios, and North. Proc. ACM Conf. Human Factors in Computing Systems (CHI), pp. 1483–1492, 2008.]</a>
+          </section>
           <section>
             <h3 class="demo">LiveRAC</h3><span class="blocks"><iframe width="853" height="480" src="https://www.youtube.com/embed/ld0c3H0VSkw" frameborder="0" allowfullscreen></iframe></span>
           </section>
@@ -84,6 +271,18 @@
             <iframe class="blocks" src="http://blockbuilder.org/mbostock/3681006"></iframe><a class="tiny" target="_blank" href="http://blockbuilder.org/mbostock/3681006">http://blockbuilder.org/mbostock/3681006</a><a class="tiny" target="_blank" href="http://bl.ocks.org/mbostock/">by mbostock</a>
           </section>
           <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/11_manipulate-genea.023.png"></section>
+          <section>
+            <h2>Further Reading: Ch. 11 Manipulate</h2>
+            <ul>
+              <li class="fragment">Starting Simple - Adding Value to Static Visualisation Through Simple Interaction.. A. Dix and G. Ellis. Proc. Advanced Visual Interfaces (AVI) 1998, 124-134.</li>
+              <li class="fragment">Animated Transitions in Statistical Data Graphics Jeffrey Heer and George G. Robertson. IEEE TVCG (Proc. InfoVis 2007) 13(6): 1240-1247, 2007.[Archived version]</li>
+              <li class="fragment">Selection: 524,288 Ways To Say 'This Is Interesting'. Graham J. Wills. Proc. InfoVis 1996, p 54-61.</li>
+              <li class="fragment">Pad++: A Zooming Graphical Interface for Exploring Alternate Interface Physics Ben Bederson, and James D Hollan, Proc UIST 94.</li>
+              <li class="fragment">LiveRAC - Interactive Visual Exploration of System Management Time-Series Data. Peter McLachlan, Tamara Munzner, Eleftherios Koutsofios, Stephen North. Proc. Conf. on Human Factors in Computing Systems (CHI) 2008, 1483-1492.</li>
+              <li class="fragment">Rapid Controlled Movement Through a Virtual 3D Workspace Jock Mackinlay, Stuart Card, and George Robertson. Proc SIGGRAPH '90, pp 171-176.</li>
+              <li class="fragment">Smooth and Efficient Zooming and Panning. Jack J. van Wijk and Wim A.A. Nuij, Proc. InfoVis 2003, p. 15-22.</li>
+            </ul>
+          </section>
           <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/11_manipulate-genea.024.png"></section>
         </section>
         <section id="review">

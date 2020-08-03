@@ -106,6 +106,201 @@
             <h3>Vega-lite Maps</h3><a href="https://observablehq.com/@vega/vega-lite-api">https://observablehq.com/@vega/vega-lite-api</a>
           </section>
         </section>
+        <section>
+          <section>
+            <h2>8. Arrange Spatial Data</h2>
+          </section>
+          <section>
+            <h2>Idiom: choropleth map</h2>
+            <div class="flex">
+              <div class="half">
+                <ul>
+                  <li class="fragment">use given spatial data</li>
+                  <ul>
+                    <li class="fragment">when central task is understanding spatial relationships</li>
+                  </ul>
+                  <li class="fragment">data</li>
+                  <ul>
+                    <li class="fragment">geographic geometry</li>
+                    <li class="fragment">table with 1 quant attribute per region</li>
+                  </ul>
+                  <li class="fragment">encoding</li>
+                  <ul>
+                    <li class="fragment">use given geometry for area mark boundaries</li>
+                    <li class="fragment">sequential segmented colormap [more later]</li>
+                    <li class="fragment">(geographic heat map)</li>
+                  </ul>
+                </ul>
+              </div>
+            </div>
+          </section>
+          <section>
+            <h2>Population maps trickiness</h2>
+            <div class="flex">
+              <div class="half">
+                <ul>
+                  <li class="fragment">beware!</li>
+                  <ul>
+                    <li class="fragment">absolute vs relative again</li>
+                  </ul>
+                  <li class="fragment">population density vs per capita</li>
+                  <ul>
+                    <li class="fragment">investigate with Ben Jones Tableau Public demo</li>
+                    <li class="fragment">http://public.tableau.com/profile/ben.jones#!/vizhome/PopVsFin/PopVsFin Are Maps of Financial Variables just Population Maps?</li>
+                    <ul>
+                      <li class="fragment">yes, unless you look at per capita (relative) numbers</li>
+                    </ul>
+                  </ul>
+                </ul>
+              </div>
+            </div>
+          </section>
+          <section>
+            <h2>Idiom: Bayesian surprise maps</h2>
+            <div class="flex">
+              <div class="half">
+                <ul>
+                  <li class="fragment">use models of expectations to highlight surprising values</li>
+                  <li class="fragment">confounds (population) and variance (sparsity)</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+          <section>
+            <h2>Idiom: topographic map</h2>
+            <div class="flex">
+              <div class="half">
+                <ul>
+                  <li class="fragment">data</li>
+                  <ul>
+                    <li class="fragment">geographic geometry</li>
+                  </ul>
+                  <li class="fragment">scalar spatial field</li>
+                  <ul>
+                    <li class="fragment">1 quant attribute per grid cell</li>
+                  </ul>
+                  <li class="fragment">derived data</li>
+                  <ul>
+                    <li class="fragment">isoline geometry</li>
+                    <ul>
+                      <li class="fragment">isocontours computed for specific levels of scalar values</li>
+                    </ul>
+                  </ul>
+                </ul>
+              </div>
+            </div>
+          </section>
+          <section>
+            <h2>Idioms: isosurfaces, direct volume rendering</h2>
+            <div class="flex">
+              <div class="half">
+                <ul>
+                  <li class="fragment">data</li>
+                  <ul>
+                    <li class="fragment">scalar spatial field</li>
+                    <li class="fragment">1 quant attribute per grid cell</li>
+                  </ul>
+                  <li class="fragment">task</li>
+                  <ul>
+                    <li class="fragment">shape understanding, spatial relationships</li>
+                  </ul>
+                  <li class="fragment">isosurface</li>
+                  <ul>
+                    <li class="fragment">derived data: isocontours computed for specific levels of scalar values</li>
+                  </ul>
+                  <li class="fragment">direct volume rendering</li>
+                  <ul>
+                    <li class="fragment">transfer function maps scalar values to color, opacity</li>
+                    <ul>
+                      <li class="fragment">no derived geometry</li>
+                    </ul>
+                  </ul>
+                </ul>
+              </div>
+            </div>
+          </section>
+          <section>
+            <h2>Vector and tensor fields</h2>
+            <div class="flex">
+              <div class="half">
+                <ul>
+                  <li class="fragment">data</li>
+                  <ul>
+                    <li class="fragment">many attribs per cell</li>
+                  </ul>
+                  <li class="fragment">idiom families</li>
+                  <ul>
+                    <li class="fragment">flow glyphs</li>
+                    <ul>
+                      <li class="fragment">purely local</li>
+                    </ul>
+                    <li class="fragment">geometric flow</li>
+                    <ul>
+                      <li class="fragment">derived data from tracing particle trajectories</li>
+                      <li class="fragment">sparse set of seed points</li>
+                    </ul>
+                    <li class="fragment">texture flow</li>
+                    <ul>
+                      <li class="fragment">derived data, dense seeds</li>
+                    </ul>
+                    <li class="fragment">feature flow</li>
+                    <ul>
+                      <li class="fragment">global computation to detect features</li>
+                      <li class="fragment">encoded with one of methods above</li>
+                    </ul>
+                  </ul>
+                </ul>
+              </div>
+            </div>
+          </section>
+          <section>
+            <h2>Vector fields</h2>
+            <div class="flex">
+              <div class="half">
+                <ul>
+                  <li class="fragment">empirical study tasks</li>
+                  <ul>
+                    <li class="fragment">finding critical points, identifying their types</li>
+                    <li class="fragment">identifying what type of critical point is at a specific location</li>
+                    <li class="fragment">predicting where a particle starting at a specified point will end up (advection)</li>
+                  </ul>
+                </ul>
+              </div>
+            </div>
+          </section>
+          <section>
+            <h2>Idiom: similarity-clustered streamlines</h2>
+            <div class="flex">
+              <div class="half">
+                <ul>
+                  <li class="fragment">data</li>
+                  <ul>
+                    <li class="fragment">3D vector field</li>
+                  </ul>
+                  <li class="fragment">derived data (from field)</li>
+                  <ul>
+                    <li class="fragment">streamlines: trajectory particle will follow</li>
+                  </ul>
+                  <li class="fragment">derived data (per streamline)</li>
+                  <ul>
+                    <li class="fragment">curvature, torsion, tortuosity</li>
+                    <li class="fragment">signature: complex weighted combination</li>
+                    <li class="fragment">compute cluster hierarchy across all signatures</li>
+                    <li class="fragment">encode: color and opacity by cluster</li>
+                  </ul>
+                  <li class="fragment">tasks</li>
+                  <ul>
+                    <li class="fragment">find features, query shape</li>
+                  </ul>
+                  <li class="fragment">scalability</li>
+                  <ul>
+                    <li class="fragment">millions of samples, hundreds of streamlines</li>
+                  </ul>
+                </ul>
+              </div>
+            </div>
+          </section>
+        </section>
         <section id="review">
           <section>
             <h2>What we learned</h2>
