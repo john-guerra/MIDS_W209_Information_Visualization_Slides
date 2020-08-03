@@ -468,6 +468,195 @@ html(lang="en")
           //- section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/09_networks-star-steno-topo.025.png")
 
 
+        section
+          section
+            h1 Ch 9. Arrange Networks and Trees
+
+          section.full
+            h2 Arrange networks and trees
+
+            img(style="max-height: 400px" src="../shared_images/vad_book_alldiagrams/how_networks_and_trees.png", alt="How Networks and Trees")
+
+
+          section.full
+            h3 Idiom: force-directed placement
+            .flex
+              .twothirds
+                ul.small
+
+                  li.fragment visual encoding
+                  ul
+                    li.fragment link connection marks, node point marks
+                  li.fragment considerations
+                    li.fragment spatial position: no meaning directly encoded
+                    ul
+                      li.fragment left free to minimize crossings
+                    li.fragment proximity semantics?
+                    ul
+                      li.fragment sometimes meaningful
+                      li.fragment sometimes arbitrary, artifact of layout algorithm
+                      li.fragment tension with length
+                      ul
+                        li.fragment long edges more visually salient than short
+                  li.fragment tasks
+                  ul
+                    li.fragment explore topology; locate paths, clusters
+                  li.fragment scalability
+                  ul
+                    li.fragment node/edge density E < 4N
+
+
+          section.full
+            h3 Idiom: sfdp (multi-level force-directed placement)
+            .flex
+              .twothirds
+                ul.small
+                  li.fragment data
+                  ul
+                    li.fragment original: network
+                    li.fragment derived: cluster hierarchy atop it
+                  li.fragment considerations
+                  ul
+                    li.fragment better algorithm for same encoding technique
+                    ul
+                      li.fragment same: fundamental use of space
+                      li.fragment hierarchy used for algorithm speed/quality but not shown explicitly
+                    ul
+                      li.fragment (more on algorithm vs encoding in afternoon)
+                  li.fragment scalability
+                    li.fragment nodes, edges: 1K-10K
+                    li.fragment hairball problem eventually hits
+
+          section
+            h2 Idiom: adjacency matrix view
+            .flex
+              .twothirds
+                ul.small
+
+                  li.fragment data: network
+                  ul
+                    li.fragment transform into same data/encoding as heatmap
+                  li.fragment derived data: table from network
+                  ul
+                    li.fragment 1 quant attrib
+                    ul
+                      li.fragment weighted edge between nodes
+                    li.fragment 2 categ attribs: node list x 2
+                  li.fragment visual encoding
+                  ul
+                    li.fragment cell shows presence/absence of edge
+                  li.fragment tasks:
+                    ul
+                      li.fragment Identify clusters (topology)
+                      li.fragment Summarize Topology/Distribution
+                  li.fragment scalability
+                  ul
+                    li.fragment 1K nodes, 1M edges
+
+          section
+            h2 Connection vs. adjacency comparison
+            .flex
+              .twothirds
+                ul.small
+
+                  li.fragment adjacency matrix strengths
+                  ul
+                    li.fragment predictability, scalability, supports reordering
+                    li.fragment some topology tasks trainable
+                  li.fragment node-link diagram strengths
+                  ul
+                    li.fragment topology understanding, path tracing
+                    li.fragment intuitive, no training needed
+                  li.fragment empirical study
+                  ul
+                    li.fragment node-link best for small networks
+                    li.fragment matrix best for large networks
+                    ul
+                      li.fragment if tasks don’t involve topological structure!
+
+
+          section
+            h2 Idiom: radial node-link tree
+            .flex
+              .half
+                ul.small
+                  li.fragment data
+                  ul
+                    li.fragment tree
+                  li.fragment encoding
+                  ul
+                    li.fragment link connection marks
+                    li.fragment point node marks
+                    li.fragment radial axis orientation
+                    ul
+                      li.fragment angular proximity: siblings
+                      li.fragment distance from center: depth in tree
+                  li.fragment tasks
+                  ul
+                    li.fragment understanding topology,  following paths
+                  li.fragment scalability
+                    li.fragment 1K - 10K nodes
+          section
+            h2 Idiom: treemap
+            .flex
+              .half
+                ul.small
+
+                  li.fragment data
+                  ul
+                    li.fragment tree
+                    li.fragment 1 quant attrib at leaf nodes
+                  li.fragment encoding
+                  ul
+                    li.fragment area containment marks for hierarchical structure
+                    li.fragment rectilinear orientation
+                    li.fragment area encodes quant attrib
+                  li.fragment tasks
+                  ul
+                    li.fragment query attribute at leaf nodes
+                  li.fragment scalability
+                  ul
+                    li.fragment 1M leaf nodes
+          section
+            h2 Link marks: Connection and containment
+            .flex
+              .half
+                ul.small
+                  li.fragment marks as links (vs. nodes)
+                  ul
+                    li.fragment common case in network drawing
+                    li.fragment 1D case: connection
+                    ul
+                      li.fragment ex: all node-link diagrams
+                      li.fragment emphasizes topology, path tracing
+                      li.fragment networks and trees
+                    li.fragment 2D case: containment
+                    ul
+                      li.fragment ex: all treemap variants
+                      li.fragment emphasizes attribute values at leaves (size coding)
+                      li.fragment only trees
+          section
+            h2 Tree drawing idioms comparison
+            .flex
+              .half
+                ul.small
+                  li.fragment data shown
+                  ul
+                    li.fragment link relationships
+                    li.fragment tree depth
+                    li.fragment sibling order
+                  li.fragment design choices
+                  ul
+                    li.fragment connection vs containment link marks
+                    li.fragment rectilinear vs radial layout
+                    li.fragment spatial position channels
+                  li.fragment considerations
+                  ul
+                    li.fragment redundant? arbitrary?
+                    li.fragment information density?
+                    ul
+                      li.fragment avoid wasting space
+
 
         section#review
           section

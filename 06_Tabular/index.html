@@ -29,7 +29,7 @@
           <section>
             <h2>What we are going to learn</h2>
             <ul class="small">
-              <li>Position Channels (Express vs Separte/Order/Align)</li>
+              <li>Arranging Tables</li>
               <li class="fragment">Scatterplots</li>
               <li class="fragment">Barcharts</li>
               <li class="fragment">Stacked Barcharts</li>
@@ -42,10 +42,8 @@
               <li class="fragment">Pie charts</li>
             </ul>
           </section>
-        </section>
-        <section>
           <section>
-            <h2>Recap</h2>
+            <h1>Recap what/why/how</h1>
           </section>
           <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/tamara_course14_session1-15.png"></section>
           <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/tamara_course14_session1-15_highlighted.png"></section>
@@ -53,7 +51,7 @@
           <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/tamara_course14_session1-23.png"></section>
           <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/tamara_course14_session1-23_highlighted.png"></section>
         </section>
-        <section>
+        <section id="arrangingTables">
           <section>
             <h1>Arranging tables</h1>
           </section>
@@ -77,35 +75,41 @@
           </section>
           <section class="full">
             <h2>Arange Tables</h2>
-            <div class="flex"><img class="fragment" width="45%" src="../shared_images/vad_book_alldiagrams/how_express_separate.png" alt="Express Separate Order and Align"><img class="fragment" width="45%" src="../shared_images/vad_book_alldiagrams/how_axis_orientation.png" alt="Axis Orientation"><img class="fragment" style="margin-top:40px" src="../shared_images/vad_book_alldiagrams/how_keys.png" alt="Keys"></div>
+            <div class="flex"><img class="fragment" style="flex-basis:45%" src="../shared_images/vad_book_alldiagrams/how_express_separate.png" alt="Express Separate Order and Align"><img class="fragment" style="flex-basis:45%" src="../shared_images/vad_book_alldiagrams/how_axis_orientation.png" alt="Axis Orientation"><img class="fragment" style="margin-top:40px; flex-basis:100%" src="../shared_images/vad_book_alldiagrams/how_keys.png" alt="Keys"></div>
           </section>
           <section>
-            <h3>Keys and values</h3>
+            <h3>Keys</h3>
             <div class="flex">
               <div class="half">
                 <ul class="small">
-                  <li class="fragment">key</li>
-                  <ul class="small">
-                    <li class="fragment">independent attribute</li>
-                    <li class="fragment">used as unique index to look up items</li>
-                    <li class="fragment">simple tables: 1 key</li>
-                    <li class="fragment">multidimensional tables: multiple keys</li>
-                  </ul>
-                  <li class="fragment">value</li>
-                  <ul class="small">
-                    <li class="fragment">dependent attribute, value of cell</li>
-                    <li class="fragment">classify arrangements by key count</li>
-                    <li class="fragment">0, 1, 2, many...</li>
-                  </ul>
+                  <li class="fragment">independent attribute</li>
+                  <li class="fragment">used as unique index to look up items</li>
+                  <li class="fragment">simple tables: 1 key</li>
+                  <li class="fragment">multidimensional tables: multiple keys</li>
                 </ul>
               </div>
-              <div class="half"><img width="200px" src="../shared_images/vad_book_alldiagrams/what_tables.png" alt="What Tables"><img class="fragment" width="100%" style="margin-top:40px" src="../shared_images/vad_book_alldiagrams/how_keys.png" alt="Keys"></div>
+              <div class="half"><img class="fragment vcentered" width="100%" style="margin-top:40px" src="../shared_images/vad_book_alldiagrams/how_keys.png" alt="Keys"></div>
             </div>
           </section>
           <section>
+            <h3>Values</h3>
+            <div class="flex">
+              <div class="half"><img class="vcentered" width="200px" src="../shared_images/vad_book_alldiagrams/what_tables.png" alt="What Tables"></div>
+              <div class="half">
+                <ul class="small">
+                  <li class="fragment">dependent attribute, value of cell</li>
+                  <li class="fragment">classify arrangements by key count</li>
+                  <li class="fragment">0, 1, 2, many...</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+        </section>
+        <section>
+          <section>
             <h2>0 Keys</h2><img class="fill" src="../shared_images/vad_book_alldiagrams/0_keys.png" alt="0 Keys">
           </section>
-          <section>
+          <section class="full">
             <h2>Idiom: Scatterplot</h2>
             <div class="flex">
               <div class="half">
@@ -116,35 +120,23 @@
                   </ul>
                   <li class="fragment">no keys, only values</li>
                   <ul class="small">
-                    <li class="fragment">data</li>
-                    <ul class="small">
-                      <li class="fragment">2 quant attribs</li>
-                    </ul>
-                    <li class="fragment">mark: points</li>
-                    <li class="fragment">channels</li>
-                    <ul class="small">
-                      <li class="fragment">horiz + vert position</li>
-                    </ul>
-                    <li class="fragment">tasks</li>
-                    <ul class="small">
-                      <li class="fragment">find trends, outliers, distribution, correlation, clusters</li>
-                    </ul>
-                    <li class="fragment">scalability</li>
-                    <ul class="small">
-                      <li class="fragment">hundreds of items</li>
-                    </ul>
+                    <li class="fragment"><strong>data</strong>: <span class="fragment">2 quant attribs</span></li>
+                    <li class="fragment"><strong>mark</strong>: points</li>
+                    <li class="fragment"><strong>channels</strong>: <span class="fragment">horiz + vert position</span></li>
+                    <li class="fragment"><strong>tasks</strong>: <span class="fragment">identify trends, outliers, distribution, correlation, clusters</span></li>
+                    <li class="fragment"><strong>scalability</strong>: <span class="fragment">hundreds of items</span></li>
                   </ul>
                 </ul>
               </div>
               <div class="half"><img width="250px" src="../shared_images/vad_book_alldiagrams/how_express.png" alt="Express">
                 <figure style="margin-top: 50px"><img width="120%" style="position:relative; left:-10%" src="../shared_images/vad_book_alldiagrams/scatterplot_wickham.png" alt="Scatterplot example">
-                  <figcaption class="reference">[A layered grammar of graphics. Wickham. Journ. Computational and Graphical Statistics 19:1 (2010), 3–28.]</figcaption>
+                  <figcaption class="reference tiny">[A layered grammar of graphics. Wickham. Journ. Computational and Graphical Statistics 19:1 (2010), 3–28.]</figcaption>
                 </figure>
               </div>
             </div>
           </section>
-          <section>
-            <h3 class="demo">Scatterplot</h3>
+          <section class="full">
+            <h3 class="demo">Idiom: Scatterplot</h3>
             <div class="blocks" id="scatterplotDiv"></div>
             <script type="module">
               import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
@@ -156,6 +148,38 @@
               });
               
             </script><a class="tiny" target="_blank" href="https://observablehq.com/@john-guerra/scatterplot">https://observablehq.com/@john-guerra/scatterplot</a>
+          </section>
+          <section>
+            <h2>Scatterplot overplotting</h2>
+            <div class="flex" id="observablehq-f974ea53">
+              <div class="half">
+                <div class="flex">
+                  <div class="half observablehq-viewof-r"></div>
+                  <div class="half observablehq-viewof-jitterValue"></div>
+                </div>
+                <div class="observablehq-chart"></div>
+              </div>
+              <div class="half fragment">
+                <div class="observablehq-viewof-collisionR"></div>
+                <div class="observablehq-chartForce"></div>
+              </div>
+            </div>
+            <div>
+              <script type="module">
+                import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+                import define from "https://api.observablehq.com/@john-guerra/overlapping-scatterplots.js?v=3";
+                (new Runtime).module(define, name => {
+                  if (name === "viewof r") return Inspector.into("#observablehq-f974ea53 .observablehq-viewof-r")();
+                  if (name === "viewof jitterValue") return Inspector.into("#observablehq-f974ea53 .observablehq-viewof-jitterValue")();
+                  if (name === "chart") return Inspector.into("#observablehq-f974ea53 .observablehq-chart")();
+                  if (name === "viewof collisionR") return Inspector.into("#observablehq-f974ea53 .observablehq-viewof-collisionR")();
+                  if (name === "chartForce") return Inspector.into("#observablehq-f974ea53 .observablehq-chartForce")();
+                });
+              </script>
+              
+              
+              
+            </div>
           </section>
           <section>
             <h2>Some Keys</h2><img class="fill" src="../shared_images/vad_book_alldiagrams/some_keys.png" alt="Some Keys">
@@ -177,12 +201,12 @@
               <div class="half small">
                 <ul class="small">
                   <li class="fragment">one key, one value</li>
-                  <li class="fragment">data</li>
+                  <li class="fragment"><strong>data</strong>:</li>
                   <ul class="small">
                     <li class="fragment">1 categ attrib, 1 quant attrib</li>
                   </ul>
-                  <li class="fragment">mark: lines</li>
-                  <li class="fragment">channels</li>
+                  <li class="fragment"><strong>mark</strong>: lines</li>
+                  <li class="fragment"><strong>channels:</strong></li>
                   <ul class="small">
                     <li class="fragment">length to express quant value</li>
                     <li class="fragment">spatial regions: one per mark</li>
@@ -192,11 +216,11 @@
                       <li class="fragment">by label (alphabetical), by length attrib (data-driven)</li>
                     </ul>
                   </ul>
-                  <li class="fragment">task</li>
+                  <li class="fragment"><strong>task</strong></li>
                   <ul class="small">
                     <li class="fragment">compare, lookup values</li>
                   </ul>
-                  <li class="fragment">scalability</li>
+                  <li class="fragment"><strong>scalability</strong></li>
                   <ul class="small">
                     <li class="fragment">dozens to hundreds of levels for key attrib</li>
                   </ul>
@@ -205,11 +229,445 @@
               <div class="half"><img class="fill" src="../shared_images/vad_book_alldiagrams/barchart_example.png" alt="Barchart example"></div>
             </div>
           </section>
-          <section>
-            <h3 class="demo">Barchart</h3>
-            <iframe class="blocks" src="http://blockbuilder.org/mbostock/3885304"></iframe><a class="tiny" target="_blank" href="http://blockbuilder.org/mbostock/3885304">http://blockbuilder.org/mbostock/3885304</a>
+          <section class="full">
+            <h3>Separate, order and align</h3>
+            <div class="flex">
+              <div class="third">
+                <ul class="small">
+                  <li class="fragment"><strong>Separate</strong>: Helps differentiating</li>
+                  <li class="fragment"><strong>Order</strong>: Helps locating/lookup</li>
+                  <li class="fragment"><strong>Align</strong>: Helps comparing</li>
+                </ul>
+              </div>
+              <div class="twothirds">
+                <div id="observablehq-e122dc3a">
+                  <div class="observablehq-viewof-options"></div>
+                  <div class="observablehq-chart"></div>
+                  <div style="overflow: hidden;"><a style="display: block; float:right;" href="https://observablehq.com/@berkeleyvis/separate-order-and-align"><object type="image/svg+xml" style="pointer-events: none;" width=180 height=22 data="https://static.observableusercontent.com/files/c3fab254a006f1a3a1f9f63aba8ab1460db4752529036b9962950bde0ec195bab823daa6b278b1c3401e545b3bd640ddfdcad805cf9859af218cb2b9fed4ddf0"></object></a></div>
+                </div>
+                <script type="module">
+                  import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+                  import define from "https://api.observablehq.com/@berkeleyvis/separate-order-and-align.js?v=3";
+                  (new Runtime).module(define, name => {
+                    if (name === "viewof options") return Inspector.into("#observablehq-e122dc3a .observablehq-viewof-options")();
+                    if (name === "chart") return Inspector.into("#observablehq-e122dc3a .observablehq-chart")();
+                  });
+                </script>
+                
+                
+              </div>
+            </div>
           </section>
-          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/08_tables-spatial.009.png"></section>
+          <section class="full">
+            <h3>Idiom: stacked bar chart</h3>
+            <div class="flex">
+              <div class="twothirds">
+                <ul class="small">
+                  <li class="fragment">2 keys, one value</li>
+                  <li class="fragment"><strong>data:</strong></li>
+                  <ul class="small">
+                    <li class="fragment">2 categ. attrib.</li>
+                    <li class="fragment">1 quant. attrib.</li>
+                  </ul>
+                  <li class="fragment"><strong>mark:</strong> vertical stack of line marks</li>
+                  <li class="fragment"><strong>glyph:</strong> composite object, internal structure from multiple marks</li>
+                  <li class="fragment"><strong>channels:</strong> length and color hue</li>
+                  <ul class="small">
+                    <li class="fragment">spatial regions: one per glyph</li>
+                    <li class="fragment">aligned: full glyph, lowest bar component</li>
+                    <li class="fragment">unaligned: other bar components</li>
+                  </ul>
+                  <li class="fragment"><strong>task:</strong> part-to-whole relationship</li>
+                  <li class="fragment"><strong>scalability</strong>: few bars, few stacked</li>
+                </ul>
+              </div>
+              <div class="third">
+                <figure><img src="../shared_images/stacked_bar_chart.png" alt="Stacked bar chart">
+                  <figcaption class="reference"><a href="https://observablehq.com/@d3/stacked-bar-chart">https://observablehq.com/@d3/stacked-bar-chart</a></figcaption>
+                </figure>
+              </div>
+            </div>
+          </section>
+          <section>
+            <h3 class="demo">stacked to grouped</h3>
+            <div class="blocks" id="stackedToGroupedDivLayout"></div>
+            <div class="blocks" id="stackedToGroupedDiv"></div>
+            <script type="module">
+              import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+              import notebook from "https://api.observablehq.com/@d3/stacked-to-grouped-bars.js?v=3";
+              new Runtime().module(notebook, name => {
+                if (name === "chart") {
+                  return new Inspector(document.querySelector("#stackedToGroupedDiv"));
+                }
+                if (name === "viewof layout") {
+                  return new Inspector(document.querySelector("#stackedToGroupedDivLayout"));
+                }
+                if (name === "update") {
+                  return new Inspector(document.querySelector("#stackedToGroupedDivLayout"));
+                }
+              
+              });
+            </script><a class="tiny" target="_blank" href="https://observablehq.com/@d3/stacked-to-grouped-bars">https://observablehq.com/@d3/stacked-to-grouped-bars</a>
+          </section>
+          <section>
+            <h2>Interesting discussion.</h2>
+            <p>Stacked bar charts are the worst.</p><a href="https://eagereyes.org/techniques/stacked-bars-are-the-worst">Robert Kosara's blog</a>
+            <p>Make sure to read the comments</p>
+          </section>
+          <section>
+            <h2>Chart axes</h2>
+            <div class="flex">
+              <div class="third">
+                <ul class="small">
+                  <li class="fragment">labelled axis is critical</li>
+                  <li class="fragment">avoid cropping y-axis</li>
+                  <li class="fragment">include 0 at bottom left</li>
+                  <li class="fragment">or slope misleads</li>
+                </ul>
+              </div>
+              <div class="twothirds">
+                <figure><img class="fill" src="../shared_images/vad_book_alldiagrams/planned_parenthood.png" alt="Planned Parenthood">
+                  <figcaption class="reference"><a class="fill" href="http://www.thefunctionalart.com/2015/10/if-you-see-bullshit-say-bullshit.html">http://www.thefunctionalart.com/2015/10/if-you-see-bullshit-say-bullshit.html</a></figcaption>
+                </figure>
+              </div>
+            </div>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h2>2 Keys</h2>
+            <ul class="small"></ul>
+          </section>
+          <section class="full">
+            <h2>Idiom: heatmap</h2>
+            <div class="flex">
+              <div class="twothirds">
+                <ul class="small">
+                  <li class="fragment">two keys, one value</li>
+                  <ul>
+                    <li class="fragment">data</li>
+                    <ul>
+                      <li class="fragment">2 categ attribs (gene, experimental condition)</li>
+                      <li class="fragment">1 quant attrib (expression levels)</li>
+                    </ul>
+                    <li class="fragment">marks: area</li>
+                    <ul>
+                      <li class="fragment">separate and align in 2D matrix</li>
+                      <li class="fragment">indexed by 2 categorical attributes</li>
+                    </ul>
+                    <li class="fragment">channels</li>
+                    <ul>
+                      <li class="fragment">color by quant attrib</li>
+                      <ul>
+                        <li class="fragment">(ordered diverging colormap)</li>
+                      </ul>
+                    </ul>
+                    <li class="fragment">task find clusters, outliers</li>
+                    <li class="fragment">scalability</li>
+                    <ul>
+                      <li class="fragment">1M items, 100s of categ levels, ~10 quant attrib levels</li>
+                    </ul>
+                  </ul>
+                </ul>
+              </div>
+              <div class="third">
+                <figure><img class="fill" src="../shared_images/vad_book_alldiagrams/heatmap.png" alt="Heatmap"></figure>
+              </div>
+            </div>
+          </section>
+          <section>
+            <h2>Idiom: cluster heatmap</h2>
+            <div class="flex">
+              <div class="half">
+                <ul class="small">
+                  <li class="fragment">in addition</li>
+                  <ul>
+                    <li class="fragment">derived data</li>
+                    <ul>
+                      <li class="fragment">2 cluster hierarchies</li>
+                    </ul>
+                    <li class="fragment">dendrogram</li>
+                    <ul>
+                      <li class="fragment">parent-child relationships in tree with connection line marks</li>
+                      <li class="fragment">leaves aligned so interior branch heights easy to compare</li>
+                    </ul>
+                    <li class="fragment">heatmap</li>
+                    <ul>
+                      <li class="fragment">marks (re-)ordered by cluster hierarchy traversal</li>
+                      <li class="fragment">task: assess quality of clusters found by automatic methods</li>
+                    </ul>
+                  </ul>
+                </ul>
+              </div>
+              <div class="half">
+                <figure><img class="fill" src="../shared_images/vad_book_alldiagrams/cluster_heatmap.png" alt="Cluster Heatmap"></figure>
+                <figure><img class="fill" src="../shared_images/vad_book_alldiagrams/two_keys.png" alt="Two Keys"></figure>
+              </div>
+            </div>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h1>Axis Orientation</h1><img class="fill" src="../shared_images/vad_book_alldiagrams/how_axis_orientation_only.png" alt="Axis orientation">
+          </section>
+          <section class="full">
+            <h3>Idiom: scatterplot matrix</h3>
+            <div class="flex">
+              <div class="half">
+                <ul class="small">
+                  <li class="fragment">rectilinear axes, point mark</li>
+                  <li class="fragment">all possible pairs of axes</li>
+                  <li class="fragment">scalability</li>
+                  <ul>
+                    <li class="fragment">one dozen attribs</li>
+                    <li class="fragment">dozens to hundreds of items</li>
+                  </ul>
+                  <li class="fragment">Task:</li>
+                  <ul>
+                    <li class="fragment">Summarize / Explore</li>
+                  </ul>
+                </ul>
+              </div>
+              <div class="half"></div>
+            </div>
+          </section>
+          <section>
+            <h2>Idiom: parallel coordinates</h2>
+            <div class="flex">
+              <div class="half">
+                <ul class="small">
+                  <li class="fragment">parallel axes, jagged line representing item</li>
+                  <li class="fragment">rectilinear axes, item as point</li>
+                  <li class="fragment">axis ordering is major challenge</li>
+                  <li class="fragment">scalability</li>
+                  <ul>
+                    <li class="fragment">dozens of attribs</li>
+                    <li class="fragment">hundreds of items</li>
+                  </ul>
+                  <li class="fragment">Task</li>
+                  <ul>
+                    <li class="fragment">Summarize / Explore</li>
+                  </ul>
+                </ul>
+              </div>
+              <div class="half"></div>
+            </div>
+          </section>
+          <section>
+            <h2>Task Correlation</h2>
+            <div class="flex">
+              <div class="half">
+                <ul class="small">
+                  <li class="fragment">scatterplot matrix</li>
+                  <ul>
+                    <li class="fragment">positive correlation</li>
+                    <ul>
+                      <li class="fragment">diagonal low-to-high</li>
+                    </ul>
+                    <li class="fragment">negative correlation</li>
+                    <ul>
+                      <li class="fragment">diagonal high-to-low</li>
+                    </ul>
+                    <li class="fragment">uncorrelated: spread out</li>
+                  </ul>
+                </ul>
+                <ul class="small">
+                  <li class="fragment">parallel coordinates</li>
+                  <ul>
+                    <li class="fragment">positive correlation</li>
+                    <ul>
+                      <li class="fragment">parallel line segments</li>
+                    </ul>
+                    <li class="fragment">negative correlation</li>
+                    <ul>
+                      <li class="fragment">all segments cross at halfway point</li>
+                    </ul>
+                    <li class="fragment">uncorrelated</li>
+                    <ul>
+                      <li class="fragment">scattered crossings</li>
+                    </ul>
+                  </ul>
+                </ul>
+              </div>
+            </div>
+          </section>
+          <section>
+            <h2>Orientation limitations</h2>
+            <div class="flex">
+              <div class="half">
+                <ul class="small">
+                  <li class="fragment">rectilinear: scalability wrt #axes</li>
+                  <ul>
+                    <li class="fragment">2 axes best</li>
+                    <li class="fragment">3 problematic</li>
+                    <li class="fragment">4+ impossible</li>
+                  </ul>
+                  <li class="fragment">parallel: unfamiliarity, training time</li>
+                </ul>
+              </div>
+              <div class="half"></div>
+            </div>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h1>Radial Orientations</h1>
+          </section>
+          <section>
+            <h2>Idioms: radial bar chart, star plot</h2>
+            <div class="flex">
+              <div class="half">
+                <ul class="small">
+                  <li class="fragment">radial bar chart</li>
+                  <ul>
+                    <li class="fragment">radial axes meet at central ring, line mark</li>
+                  </ul>
+                  <li class="fragment">star plot</li>
+                  <ul>
+                    <li class="fragment">radial axes, meet at central point, line mark</li>
+                  </ul>
+                  <li class="fragment">bar chart</li>
+                  <ul>
+                    <li class="fragment">rectilinear axes, aligned vertically</li>
+                  </ul><br>
+                  <li class="fragment">accuracy</li>
+                  <ul class="small">
+                    <li class="fragment">length unaligned with radial</li>
+                    <li class="fragment">less accurate than aligned with rectilinear</li>
+                  </ul>
+                </ul>
+              </div>
+              <div class="half"></div>
+            </div>
+          </section>
+          <section>
+            <h2>Idiom: Radar Plots</h2>
+            <div class="flex">
+              <div class="half">
+                <ul>
+                  <li class="fragment">task: comparison</li>
+                  <li class="fragment">scalability: Similar to parallel coords.</li>
+                  <li class="fragment">order of attributes matter</li>
+                </ul>
+              </div>
+              <div class="half"></div>
+            </div>
+          </section>
+          <section>
+            <h2>“Radar graphs: Avoid them (99.9% of the time)”</h2>
+            <figure><img class="fill" src="../shared_images/vad_book_alldiagrams/avoid_radar_charts.png" alt="Avoid Radar Charts">
+              <figcaption class="reference"><a href="http://www.thefunctionalart.com/2012/11/radar-graphs-avoid-them-999-of-time.html">http://www.thefunctionalart.com/2012/11/radar-graphs-avoid-them-999-of-time.html</a><span>[Slide courtesy of Ben Jones]</span></figcaption>
+            </figure>
+          </section>
+          <section>
+            <h2>Radial Orientation: Radar Plots</h2>
+            <div class="flex">
+              <div class="half"></div>
+              <div class="half"></div>
+            </div>
+            <ul class="small">Idioms: pie chart, polar area chart
+              <li class="fragment">pie chart</li>
+              <li class="fragment">area marks with angle channel</li>
+              <li class="fragment">accuracy: angle/area much less accurate than line length</li><br>
+              <li class="fragment">polar area chart</li>
+              <li class="fragment">area marks with length channel</li>
+              <li class="fragment">more direct analog to bar charts</li><br>
+              <li class="fragment">data</li>
+              <li class="fragment">1 categ key attrib, 1 quant value attrib</li>
+              <li class="fragment">task</li>
+              <li class="fragment">part-to-whole judgements</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Pie chart perception</h2>
+            <div class="flex">
+              <div class="half"></div>
+              <div class="half"></div>
+            </div>
+            <ul class="small">
+              <li class="fragment">some empirical evidence that people respond to arc length</li>
+              <li class="fragment">not angles</li>
+              <li class="fragment">maybe also areas?…</li>
+              <li class="fragment">donut charts no worse than pie charts</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Pie chart perception</h2>
+            <div class="flex">
+              <div class="half"></div>
+              <div class="half"></div>
+            </div>
+            <ul class="small">
+              <li class="fragment">meta-points</li>
+              <li class="fragment">redesign of paper figures in later blog post</li>
+              <li class="fragment">violin plots good for analysis but too detailed for presentation</li>
+              <li class="fragment">my advice: still dubious for pie/donut charts</li>
+              <li class="fragment">sometimes ok if just 2 attribs</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Idioms: normalized stacked bar chart</h2>
+            <div class="flex">
+              <div class="half"></div>
+              <div class="half"></div>
+            </div>
+            <ul class="small">
+              <li class="fragment">task</li>
+              <li class="fragment">part-to-whole judgements</li><br>
+              <li class="fragment">normalized stacked bar chart</li>
+              <li class="fragment">stacked bar chart, normalized to full vert height</li>
+              <li class="fragment">single stacked bar equivalent to full pie</li>
+              <li class="fragment">high information density: requires narrow rectangle</li><br>
+              <li class="fragment">pie chart</li>
+              <li class="fragment">information density: requires large circle</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Idiom: glyphmaps</h2>
+            <div class="flex">
+              <div class="half"></div>
+              <div class="half"></div>
+            </div>
+            <ul class="small">
+              <li class="fragment">rectilinear good for linear vs nonlinear trends</li>
+              <li class="fragment">radial good for cyclic patterns</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Idiom: glyphmaps</h2>
+            <div class="flex">
+              <div class="half"></div>
+              <div class="half"></div>
+            </div>
+            <ul class="small">
+              <li class="fragment">Radial orientation</li>
+              <li class="fragment">perceptual limits</li>
+              <li class="fragment">polar coordinate asymmetry</li>
+              <li class="fragment">angles lower precision than lengths</li>
+              <li class="fragment">frequently problematic</li>
+              <li class="fragment">sometimes can be deliberately exploited!</li>
+              <li class="fragment">for 2 attribs of very unequal importance</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Idiom: Dense software overviews</h2>
+            <div class="flex">
+              <div class="half"></div>
+              <div class="half"></div>
+            </div>
+            <ul class="small">
+              <li class="fragment">data: text</li>
+              <li class="fragment">text + 1 quant attrib per line</li>
+              <li class="fragment">derived data:</li>
+              <li class="fragment">one pixel high line</li>
+              <li class="fragment">length according to original</li>
+              <li class="fragment">color line by attrib</li>
+              <li class="fragment">scalability</li>
+              <li class="fragment">10K+ lines</li>
+            </ul>
+          </section>
+        </section>
+        <section>
           <section>
             <h3 class="demo">Stacked barchart</h3>
             <iframe class="blocks" src="http://blockbuilder.org/mbostock/3886208"></iframe><a class="tiny" target="_blank" href="http://blockbuilder.org/mbostock/3886208">http://blockbuilder.org/mbostock/3886208</a>
@@ -226,29 +684,6 @@
           </section>
           <section>
             <h3 class="demo">d3 stack</h3><a class="tiny" href="https://github.com/d3/d3-shape/blob/v1.3.5/README.md#stack">https://github.com/d3/d3-shape/blob/v1.3.5/README.md#stack</a><img style="height:400px" src="../shared_images/vad_book_alldiagrams/d3_stack.png" alt="d3 stack">
-          </section>
-          <section>
-            <h3 class="demo">stacked to grouped</h3>
-            <div class="blocks" id="stackedToGroupedDivLayout"></div>
-            <div class="blocks" id="stackedToGroupedDiv"></div>
-            <script type="module">
-              import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
-              import notebook from "https://api.observablehq.com/@d3/stacked-to-grouped-bars.js?v=3";
-              new Runtime().module(notebook, name => {
-                if (name === "chart") {
-                  return new Inspector(document.querySelector("#stackedToGroupedDiv"));
-                }
-                if (name === "viewof layout") {
-                  return new Inspector(document.querySelector("#stackedToGroupedDivLayout"));
-                }
-              
-              });
-            </script><a class="tiny" target="_blank" href="https://observablehq.com/@d3/stacked-to-grouped-bars">https://observablehq.com/@d3/stacked-to-grouped-bars</a>
-          </section>
-          <section>
-            <h2>Interesting discussion.</h2>
-            <p>Stacked bar charts are the worst.</p><a href="https://eagereyes.org/techniques/stacked-bars-are-the-worst">Robert Kosara's blog</a>
-            <p>Make sure to read the comments</p>
           </section>
           <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/08_tables-spatial.010.png"></section>
           <section>

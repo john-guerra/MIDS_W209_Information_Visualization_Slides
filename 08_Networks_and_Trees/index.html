@@ -386,6 +386,253 @@
           <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/09_networks-star-steno-topo.023.png"></section>
           <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/09_networks-star-steno-topo.024.png"></section>
         </section>
+        <section>
+          <section>
+            <h1>Ch 9. Arrange Networks and Trees</h1>
+          </section>
+          <section class="full">
+            <h2>Arrange networks and trees</h2><img style="max-height: 400px" src="../shared_images/vad_book_alldiagrams/how_networks_and_trees.png" alt="How Networks and Trees">
+          </section>
+          <section class="full">
+            <h3>Idiom: force-directed placement</h3>
+            <div class="flex">
+              <div class="twothirds">
+                <ul class="small">
+                  <li class="fragment">visual encoding</li>
+                  <ul>
+                    <li class="fragment">link connection marks, node point marks</li>
+                  </ul>
+                  <li class="fragment">considerations
+                    <li class="fragment">spatial position: no meaning directly encoded</li>
+                    <ul>
+                      <li class="fragment">left free to minimize crossings</li>
+                    </ul>
+                    <li class="fragment">proximity semantics?</li>
+                    <ul>
+                      <li class="fragment">sometimes meaningful</li>
+                      <li class="fragment">sometimes arbitrary, artifact of layout algorithm</li>
+                      <li class="fragment">tension with length</li>
+                      <ul>
+                        <li class="fragment">long edges more visually salient than short</li>
+                      </ul>
+                    </ul>
+                  </li>
+                  <li class="fragment">tasks</li>
+                  <ul>
+                    <li class="fragment">explore topology; locate paths, clusters</li>
+                  </ul>
+                  <li class="fragment">scalability</li>
+                  <ul>
+                    <li class="fragment">node/edge density E < 4N</li>
+                  </ul>
+                </ul>
+              </div>
+            </div>
+          </section>
+          <section class="full">
+            <h3>Idiom: sfdp (multi-level force-directed placement)</h3>
+            <div class="flex">
+              <div class="twothirds">
+                <ul class="small">
+                  <li class="fragment">data</li>
+                  <ul>
+                    <li class="fragment">original: network</li>
+                    <li class="fragment">derived: cluster hierarchy atop it</li>
+                  </ul>
+                  <li class="fragment">considerations</li>
+                  <ul>
+                    <li class="fragment">better algorithm for same encoding technique</li>
+                    <ul>
+                      <li class="fragment">same: fundamental use of space</li>
+                      <li class="fragment">hierarchy used for algorithm speed/quality but not shown explicitly</li>
+                    </ul>
+                    <ul>
+                      <li class="fragment">(more on algorithm vs encoding in afternoon)</li>
+                    </ul>
+                  </ul>
+                  <li class="fragment">scalability
+                    <li class="fragment">nodes, edges: 1K-10K</li>
+                    <li class="fragment">hairball problem eventually hits</li>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
+          <section>
+            <h2>Idiom: adjacency matrix view</h2>
+            <div class="flex">
+              <div class="twothirds">
+                <ul class="small">
+                  <li class="fragment">data: network</li>
+                  <ul>
+                    <li class="fragment">transform into same data/encoding as heatmap</li>
+                  </ul>
+                  <li class="fragment">derived data: table from network</li>
+                  <ul>
+                    <li class="fragment">1 quant attrib</li>
+                    <ul>
+                      <li class="fragment">weighted edge between nodes</li>
+                    </ul>
+                    <li class="fragment">2 categ attribs: node list x 2</li>
+                  </ul>
+                  <li class="fragment">visual encoding</li>
+                  <ul>
+                    <li class="fragment">cell shows presence/absence of edge</li>
+                  </ul>
+                  <li class="fragment">tasks:
+                    <ul>
+                      <li class="fragment">Identify clusters (topology)</li>
+                      <li class="fragment">Summarize Topology/Distribution</li>
+                    </ul>
+                  </li>
+                  <li class="fragment">scalability</li>
+                  <ul>
+                    <li class="fragment">1K nodes, 1M edges</li>
+                  </ul>
+                </ul>
+              </div>
+            </div>
+          </section>
+          <section>
+            <h2>Connection vs. adjacency comparison</h2>
+            <div class="flex">
+              <div class="twothirds">
+                <ul class="small">
+                  <li class="fragment">adjacency matrix strengths</li>
+                  <ul>
+                    <li class="fragment">predictability, scalability, supports reordering</li>
+                    <li class="fragment">some topology tasks trainable</li>
+                  </ul>
+                  <li class="fragment">node-link diagram strengths</li>
+                  <ul>
+                    <li class="fragment">topology understanding, path tracing</li>
+                    <li class="fragment">intuitive, no training needed</li>
+                  </ul>
+                  <li class="fragment">empirical study</li>
+                  <ul>
+                    <li class="fragment">node-link best for small networks</li>
+                    <li class="fragment">matrix best for large networks</li>
+                    <ul>
+                      <li class="fragment">if tasks don’t involve topological structure!</li>
+                    </ul>
+                  </ul>
+                </ul>
+              </div>
+            </div>
+          </section>
+          <section>
+            <h2>Idiom: radial node-link tree</h2>
+            <div class="flex">
+              <div class="half">
+                <ul class="small">
+                  <li class="fragment">data</li>
+                  <ul>
+                    <li class="fragment">tree</li>
+                  </ul>
+                  <li class="fragment">encoding</li>
+                  <ul>
+                    <li class="fragment">link connection marks</li>
+                    <li class="fragment">point node marks</li>
+                    <li class="fragment">radial axis orientation</li>
+                    <ul>
+                      <li class="fragment">angular proximity: siblings</li>
+                      <li class="fragment">distance from center: depth in tree</li>
+                    </ul>
+                  </ul>
+                  <li class="fragment">tasks</li>
+                  <ul>
+                    <li class="fragment">understanding topology,  following paths</li>
+                  </ul>
+                  <li class="fragment">scalability
+                    <li class="fragment">1K - 10K nodes</li>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
+          <section>
+            <h2>Idiom: treemap</h2>
+            <div class="flex">
+              <div class="half">
+                <ul class="small">
+                  <li class="fragment">data</li>
+                  <ul>
+                    <li class="fragment">tree</li>
+                    <li class="fragment">1 quant attrib at leaf nodes</li>
+                  </ul>
+                  <li class="fragment">encoding</li>
+                  <ul>
+                    <li class="fragment">area containment marks for hierarchical structure</li>
+                    <li class="fragment">rectilinear orientation</li>
+                    <li class="fragment">area encodes quant attrib</li>
+                  </ul>
+                  <li class="fragment">tasks</li>
+                  <ul>
+                    <li class="fragment">query attribute at leaf nodes</li>
+                  </ul>
+                  <li class="fragment">scalability</li>
+                  <ul>
+                    <li class="fragment">1M leaf nodes</li>
+                  </ul>
+                </ul>
+              </div>
+            </div>
+          </section>
+          <section>
+            <h2>Link marks: Connection and containment</h2>
+            <div class="flex">
+              <div class="half">
+                <ul class="small">
+                  <li class="fragment">marks as links (vs. nodes)</li>
+                  <ul>
+                    <li class="fragment">common case in network drawing</li>
+                    <li class="fragment">1D case: connection</li>
+                    <ul>
+                      <li class="fragment">ex: all node-link diagrams</li>
+                      <li class="fragment">emphasizes topology, path tracing</li>
+                      <li class="fragment">networks and trees</li>
+                    </ul>
+                    <li class="fragment">2D case: containment</li>
+                    <ul>
+                      <li class="fragment">ex: all treemap variants</li>
+                      <li class="fragment">emphasizes attribute values at leaves (size coding)</li>
+                      <li class="fragment">only trees</li>
+                    </ul>
+                  </ul>
+                </ul>
+              </div>
+            </div>
+          </section>
+          <section>
+            <h2>Tree drawing idioms comparison</h2>
+            <div class="flex">
+              <div class="half">
+                <ul class="small">
+                  <li class="fragment">data shown</li>
+                  <ul>
+                    <li class="fragment">link relationships</li>
+                    <li class="fragment">tree depth</li>
+                    <li class="fragment">sibling order</li>
+                  </ul>
+                  <li class="fragment">design choices</li>
+                  <ul>
+                    <li class="fragment">connection vs containment link marks</li>
+                    <li class="fragment">rectilinear vs radial layout</li>
+                    <li class="fragment">spatial position channels</li>
+                  </ul>
+                  <li class="fragment">considerations</li>
+                  <ul>
+                    <li class="fragment">redundant? arbitrary?</li>
+                    <li class="fragment">information density?</li>
+                    <ul>
+                      <li class="fragment">avoid wasting space</li>
+                    </ul>
+                  </ul>
+                </ul>
+              </div>
+            </div>
+          </section>
+        </section>
         <section id="review">
           <section>
             <h2>What we learned</h2>

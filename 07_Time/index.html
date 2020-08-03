@@ -31,7 +31,7 @@
             <ul class="small"></ul>
           </section>
         </section>
-        <section>
+        <section id="intro">
           <section>
             <h1>Visualizing Time</h1>
           </section>
@@ -50,31 +50,253 @@
             </ul>
           </section>
         </section>
-        <section>
+        <section id="idioms">
           <section>
             <h1>Idioms</h1>
           </section>
-          <section>
-            <h2 class="demo">Idiom: Line chart</h2>
-            <div class="left small">
-              <ul>
-                <li class="fragment">Data: Table, many timelines</li>
-                <li class="fragment">Tasks: Compare trends and similarities (with many), locate outliers</li>
-                <li class="fragment">Visual Representation: Line, vertical position, color hue</li>
-                <li class="fragment">Considerations:
-                  <ul>
-                    <li>Time usually goes from left to right</li>
+          <section id="lineChart">
+            <h2>Idiom: line chart / dot plot</h2>
+            <div class="flex">
+              <div class="twothirds">
+                <ul class="small">
+                  <li class="fragment">one key, one value</li>
+                  <li class="fragment">data: 2 quant attribs</li>
+                  <ul class="small">
+                    <li class="fragment">mark: points &amp; line connection marks between them</li>
+                    <li class="fragment">channels</li>
+                    <li class="fragment">ul.small
+                      <li class="fragment">aligned lengths to express quant value</li>
+                      <li class="fragment">separated and ordered by key attrib into horizontal regions</li>
+                    </li>
+                    <li class="fragment">task: find trend</li>
+                    <ul class="small">
+                      <li class="fragment">connection marks emphasize ordering of items along key axis by explicitly showing relationship between one item and the next</li>
+                    </ul>
+                    <li class="fragment">scalability: hundreds of key levels, hundreds of value levels</li>
                   </ul>
-                </li>
-              </ul>
+                </ul>
+              </div>
+              <div class="third"><img class="fill vcentered" src="../shared_images/vad_book_alldiagrams/linechart_example.png" alt="Linechart example"></div>
             </div>
-            <div class="right"><img src="../shared_images/vad_book_alldiagrams/linechart.png" alt="Line chart"></div>
           </section>
           <section>
+            <h2>Idiom: streamgraph</h2>
+            <div class="flex">
+              <div class="twothirds">
+                <ul class="small">
+                  <li class="fragment">generalized stacked graph</li>
+                  <ul class="small">
+                    <li class="fragment">emphasizing horizontal continuity</li>
+                    <li class="fragment">vs vertical items</li>
+                  </ul>
+                  <li class="fragment">data</li>
+                  <ul>
+                    <li class="fragment">1 categ key attrib (artist)</li>
+                    <li class="fragment">1 ordered key attrib (time)</li>
+                    <li class="fragment">1 quant value attrib (counts)</li>
+                    <li class="fragment">derived data</li>
+                  </ul>
+                  <li class="fragment">mark: layers</li>
+                  <ul>
+                    <li>height encodes counts</li>
+                  </ul>
+                  <ul>
+                    <li class="fragment">1 quant attrib (layer ordering)</li>
+                  </ul>
+                  <li class="fragment">scalability:</li>
+                  <ul>
+                    <li class="fragment">hundreds of time keys</li>
+                    <li class="fragment">dozens to hundreds of artist keys</li>
+                  </ul>
+                  <ul>
+                    <li class="fragment">more than stacked bars, since most layers don’t extend across whole chart</li>
+                  </ul>
+                </ul>
+              </div>
+              <div class="third">
+                <figure><img class="fill" src="../shared_images/vad_book_alldiagrams/streamgraph.png" alt="Streamgraph">
+                  <figcaption class="reference">[Stacked Graphs Geometry &amp; Aesthetics. Byron and Wattenberg. IEEE Trans. Visualization and Computer Graphics (Proc. InfoVis 2008) 14(6): 1245–1252, (2008).]</figcaption>
+                </figure>
+              </div>
+            </div>
+          </section>
+          <section>
+            <h2>Choosing bar vs line charts</h2>
+            <div class="flex">
+              <div class="half">
+                <ul class="small">
+                  <li class="fragment">depends on type of key attrib</li>
+                  <ul>
+                    <li class="fragment">bar charts if categorical</li>
+                    <li class="fragment">line charts if ordered</li>
+                  </ul>
+                  <li class="fragment">do not use line charts for categorical key attribs</li>
+                  <ul>
+                    <li class="fragment">violates expressiveness principle</li>
+                    <li class="fragment">implication of trend so strong that it overrides semantics!</li>
+                    <ul>
+                      <li class="fragment">“The more male a person is, the taller he/she is”</li>
+                    </ul>
+                  </ul>
+                </ul>
+              </div>
+              <div class="half">
+                <figure><img class="fill" src="../shared_images/vad_book_alldiagrams/barchart_vs_linechart.png" alt="Barchart vs Linechart">
+                  <figcaption class="reference">after [Bars and Lines: A Study of Graphic Communication. Zacks and Tversky. Memory and Cognition 27:6 (1999), 1073–1079.]</figcaption>
+                </figure>
+              </div>
+            </div>
+          </section>
+          <section id="multiLineChart">
             <h3 class="demo">Multi-series Line chart</h3>
             <iframe class="blocks" src="http://blockbuilder.org/mbostock/3884955"></iframe><a class="tiny" target="_blank" href="http://blockbuilder.org/mbostock/3884955">http://blockbuilder.org/mbostock/3884955</a><a class="tiny" target="_blank" href="http://bl.ocks.org/mbostock/">by mbostock</a>
           </section>
           <section>
+            <h2>Idiom: dual-axis line charts</h2>
+            <div class="flex">
+              <div class="half">
+                <ul class="small">
+                  <li class="fragment">controversial</li>
+                  <li class="fragment">acceptable if commensurate</li>
+                  <li class="fragment">beware, very easy to mislead!</li>
+                </ul>
+              </div>
+              <div class="half">
+                <figure><img class="fill" src="../shared_images/vad_book_alldiagrams/dual_axis.png" alt="Dual Axis">
+                  <figcaption class="reference">Ben Jones @DataRemixed</figcaption>
+                </figure>
+              </div>
+            </div>
+          </section>
+          <section>
+            <h2>Idiom: connected scatterplots</h2>
+            <div class="flex">
+              <div class="half">
+                <ul class="small">
+                  <li class="fragment">scatterplot with line connection marks</li>
+                  <ul>
+                    <li class="fragment">popular in journalism</li>
+                    <li class="fragment">horiz + vert axes: value attribs</li>
+                    <li class="fragment">line connection marks: temporal order</li>
+                  </ul>
+                  <li class="fragment">empirical study</li>
+                  <ul>
+                    <li class="fragment">engaging, but correlation unclear</li>
+                  </ul>
+                </ul>
+              </div>
+              <div class="half">
+                <figure><img class="fill" src="../shared_images/vad_book_alldiagrams/connected_scatterplot.png" alt="Connected Scatterplot">
+                  <figcaption class="reference"><a href="http://steveharoz.com/research/connected_scatterplot/">http://steveharoz.com/research/connected_scatterplot/</a></figcaption>
+                </figure>
+              </div>
+            </div>
+          </section>
+          <section>
+            <h3>Idiom: connected scatterplots 2</h3>
+            <div class="flex">
+              <div class="half">
+                <ul class="small">
+                  <li class="fragment">alternative to dual-axis charts</li>
+                  <ul>
+                    <li class="fragment">horiz: time</li>
+                    <li class="fragment">vert: two value attribs</li>
+                  </ul>
+                </ul>
+              </div>
+              <div class="half">
+                <figure><img class="fill" src="../shared_images/vad_book_alldiagrams/connected_scatterplots_vs_dual_axis.png" alt="Connected Scatterplot vs Dual Axis">
+                  <figcaption class="reference"><a href="http://steveharoz.com/research/connected_scatterplot/">http://steveharoz.com/research/connected_scatterplot/</a></figcaption>
+                </figure>
+              </div>
+            </div>
+          </section>
+          <section>
+            <h2>Choosing line chart aspect ratios</h2>
+            <ul class="small">
+              <li class="fragment">1: banking to 45 (1980s)</li>
+              <li class="fragment">Cleveland perceptual argument: most accurate angle judgement at 45</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Choosing line chart aspect ratios</h2>
+            <ul class="small">
+              <li class="fragment">2: multi scale banking to 45 (2006)</li>
+              <li class="fragment">frequency domain analysis to find ratios</li>
+              <li class="fragment">FFT the data, convolve with Gaussian to smooth</li>
+              <li class="fragment">find interesting spikes/ranges in power spectrum</li>
+              <li class="fragment">cull nearby regions if similar, ensure overview</li>
+              <li class="fragment">create trend curves (red) for each aspect ratio</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Choosing line chart aspect ratios</h2>
+            <ul class="small">
+              <li class="fragment">3: arc length based aspect ratio (2011)</li>
+              <li class="fragment">minimize the arc length of curve while keeping the area of the plot constant</li>
+              <li class="fragment">parametrization and scale invariant</li>
+              <li class="fragment">symmetry preserving</li>
+              <li class="fragment">robust & fast to compute</li><br>
+              <li class="fragment">meta-points from this progression</li>
+              <li class="fragment">young field; prescriptive advice changes rapidly</li>
+              <li class="fragment">reasonable defaults required deep dive into perception meets math</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Idiom: Indexed line charts</h2>
+            <ul class="small">
+              <li class="fragment">data: 2 quant attires</li>
+              <li class="fragment">1 key + 1 value</li>
+              <li class="fragment">derived data: new quant value attrib</li>
+              <li class="fragment">index</li>
+              <li class="fragment">plot instead of original value</li>
+              <li class="fragment">task: show change over time</li>
+              <li class="fragment">principle: normalized, not absolute</li>
+              <li class="fragment">scalability same as standard line chart</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Idiom: Gantt charts</h2>
+            <ul class="small">
+              <li class="fragment">one key, two (related) values</li>
+              <li class="fragment">data: 1 categ attrib, 2 quant attribs</li>
+              <li class="fragment">mark: line</li>
+              <li class="fragment">length: duration</li>
+              <li class="fragment">channels: horiz position: start time (+end from duration)</li>
+              <li class="fragment">task: emphasize temporal overlaps, start/end dependencies between items</li>
+              <li class="fragment">scalability</li>
+              <li class="fragment">dozens of key levels</li>
+              <li class="fragment">hundreds of value levels</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Idiom: Slopegraphs</h2>
+            <ul class="small">
+              <li class="fragment">two values</li>
+              <li class="fragment">data</li>
+              <li class="fragment">2 quant value attribs</li>
+              <li class="fragment">(1 derived attrib: change magnitude)</li>
+              <li class="fragment">mark: point + line</li>
+              <li class="fragment">line connecting mark between pts</li>
+              <li class="fragment">channels</li>
+              <li class="fragment">2 vertical pos: express attrib value</li>
+              <li class="fragment">(linewidth/size, color)</li>
+              <li class="fragment">task emphasize changes in rank/value</li>
+              <li class="fragment">scalability hundreds of value levels</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Breaking conventions</h2>
+            <ul class="small">
+              <li class="fragment">presentation vs exploration</li>
+              <li class="fragment">engaging/evocative</li>
+              <li class="fragment">inverted y axis</li>
+              <li class="fragment">blood drips down on Poe</li>
+            </ul>
+          </section>
+        </section>
+        <section>
+          <section id="horizonCharts">
             <h2 class="demo">idiom: Horizon charts</h2>
             <div class="left small">
               <ul>
@@ -94,14 +316,14 @@
             <h2 class="demo">Cubism</h2><a target="_blank" href="http://square.github.io/cubism/">http://square.github.io/cubism/</a>
             <iframe class="blocks" src="http://square.github.io/cubism/"></iframe>
           </section>
-          <section>
+          <section id="joyPlot">
             <h3 class="demo">Joyplots</h3>
             <iframe class="blocks" src="https://blockbuilder.org/john-guerra/2bb5a08bd6f17a5cb4efd6ad6d98973c"></iframe><a class="tiny" target="_blank" href="https://blockbuilder.org/john-guerra/2bb5a08bd6f17a5cb4efd6ad6d98973c">https://blockbuilder.org/john-guerra/2bb5a08bd6f17a5cb4efd6ad6d98973c</a>
           </section>
           <section>
             <h3 class="demo">Joyplot vega-lite</h3><a class="tiny" href="https://observablehq.com/@vega/psr-b1919-21-with-vega-lite">https://observablehq.com/@vega/psr-b1919-21-with-vega-lite</a>
           </section>
-          <section>
+          <section id="calendarView">
             <h2 class="demo">idiom: Calendar view</h2>
             <div class="left small">
               <ul>
@@ -117,7 +339,7 @@
             <h3 class="demo">Calendar View</h3>
             <iframe class="blocks" src="http://blockbuilder.org/mbostock/4063318"></iframe><a class="tiny" target="_blank" href="http://blockbuilder.org/mbostock/4063318">http://blockbuilder.org/mbostock/4063318</a><a class="tiny" target="_blank" href="http://bl.ocks.org/mbostock/">by mbostock</a>
           </section>
-          <section>
+          <section id="radialTimeline">
             <h2 class="demo">idiom: Radial timelines</h2>
             <div class="left small">
               <ul>
@@ -129,8 +351,8 @@
             </div>
             <div class="right"><a target="_blank" href="http://www.climate-lab-book.ac.uk/spirals/"><img src="../shared_images/vad_book_alldiagrams/spiral_may2016.gif" alt="radial_heatmapl"></a><a class="tiny" target="_blank" href="http://www.climate-lab-book.ac.uk/spirals/"> http://www.climate-lab-book.ac.uk/spirals/</a></div>
           </section>
-          <section>
-            <h2 class="demo">Gant charts</h2>
+          <section id="gantt">
+            <h2 class="demo">Gantt charts</h2>
             <div class="left">
               <ul class="small">
                 <li class="fragment">Data: Two time attribs (start end)</li>
@@ -148,6 +370,10 @@
             </ul>
           </section>
           <section>
+            <h2>Nightingale Chart</h2>
+            <div>"Diagram of the causes of mortality in the army in the East" (1858)</div>
+          </section>
+          <section>
             <h3 class="demo">Stacked Area chart</h3>
             <iframe class="blocks" src="http://blockbuilder.org/mbostock/3020685"></iframe><a class="tiny" target="_blank" href="http://blockbuilder.org/mbostock/3020685">http://blockbuilder.org/mbostock/3020685</a><a class="tiny" target="_blank" href="http://bl.ocks.org/mbostock/">by mbostock</a>
           </section>
@@ -159,7 +385,7 @@
             <h3 class="demo">Stacked Radial Area</h3><a href="https://observablehq.com/@d3/radial-area-chart">https://observablehq.com/@d3/radial-area-chart</a>
           </section>
         </section>
-        <section>
+        <section id="hcilTemporal">
           <section>
             <h2>HCIL work on Temporal events</h2><a target="_blank" href="http://www.cs.umd.edu/hcil/temporalviz/"><img src="../shared_images/vad_book_alldiagrams/hcil_logo.jpg"></a><a target="_blank" href="http://www.cs.umd.edu/hcil/temporalviz/">http://www.cs.umd.edu/hcil/temporalviz/</a>
           </section>
@@ -229,7 +455,7 @@
               </span>
           </section>
         </section>
-        <section>
+        <section id="commonTricks">
           <section>
             <h2>Common Derives/Tricks for Temporal data</h2>
           </section>
