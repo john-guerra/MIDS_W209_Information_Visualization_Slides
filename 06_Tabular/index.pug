@@ -44,7 +44,7 @@ html(lang="en")
 
           div.logo
             a(href="https://datascience.berkeley.edu/")
-              img.logo(src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo")
+              img.logo(data-src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo")
           div.tiny Partially based on
             a(href="https://www.cs.ubc.ca/~tmm/talks.html#minicourse14")  slides from Tamara Munzner
 
@@ -103,7 +103,7 @@ html(lang="en")
                     strong.fragment 👉 Separate, Order, Align
               .half
                 figure
-                  img.fill(src="../shared_images/vad_book_alldiagrams/how_encode_arrange.png", alt="How, encode, Arrange")
+                  img.fill(data-src="../shared_images/vad_book_alldiagrams/how_encode_arrange.png", alt="How, encode, Arrange")
 
 
           //- section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/08_tables-spatial.003.png")
@@ -147,7 +147,7 @@ html(lang="en")
         section
           section
             h2 0 Keys
-            img.fill(src="../shared_images/vad_book_alldiagrams/0_keys.png", alt="0 Keys")
+            img.fill(data-src="../shared_images/vad_book_alldiagrams/0_keys.png", alt="0 Keys")
 
 
           section.full
@@ -191,7 +191,7 @@ html(lang="en")
                 }
               });
 
-            //- iframe.blocks(src="http://blockbuilder.org/mbostock/3887118")
+            //- iframe.blocks(data-src="http://blockbuilder.org/mbostock/3887118")
             a.tiny(target="_blank" href="https://observablehq.com/@john-guerra/scatterplot") https://observablehq.com/@john-guerra/scatterplot
 
           section
@@ -223,11 +223,11 @@ html(lang="en")
 
           section
             h2 Some Keys
-            img.fill(src="../shared_images/vad_book_alldiagrams/some_keys.png", alt="Some Keys")
+            img.fill(data-src="../shared_images/vad_book_alldiagrams/some_keys.png", alt="Some Keys")
 
           section.full
             h3 Some keys: Categorical regions
-            img.noMarginTopBottom(src="../shared_images/vad_book_alldiagrams/how_separate_order_align.png", alt="Separate Order and Align")
+            img.noMarginTopBottom(data-src="../shared_images/vad_book_alldiagrams/how_separate_order_align.png", alt="Separate Order and Align")
             ul.noMarginTopBottom.small
               li.fragment #[strong regions]: contiguous bounded areas distinct from each other
               ul.small
@@ -235,7 +235,7 @@ html(lang="en")
                 li.fragment following expressiveness principle for categorical attributes
               li.fragment use ordered attribute to #[strong order] and #[strong align] regions
 
-            img.noMarginTopBottom.fill.fragment(src="../shared_images/vad_book_alldiagrams/how_keys.png", alt="Keys")
+            img.noMarginTopBottom.fill.fragment(data-src="../shared_images/vad_book_alldiagrams/how_keys.png", alt="Keys")
 
           //- section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/08_tables-spatial.007.png")
 
@@ -268,7 +268,7 @@ html(lang="en")
                     li.fragment dozens to hundreds of levels for key attrib
               .half
 
-                img.fill(src="../shared_images/vad_book_alldiagrams/barchart_example.png", alt="Barchart example")
+                img.fill(data-src="../shared_images/vad_book_alldiagrams/barchart_example.png", alt="Barchart example")
 
 
           //- section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/08_tables-spatial.008.png")
@@ -276,7 +276,7 @@ html(lang="en")
           //- //- Barchart block
           //- section
           //-   h3.demo Barchart
-          //-   iframe.blocks(src="http://blockbuilder.org/mbostock/3885304")
+          //-   iframe.blocks(data-src="http://blockbuilder.org/mbostock/3885304")
           //-   a.tiny(target="_blank" href="http://blockbuilder.org/mbostock/3885304") http://blockbuilder.org/mbostock/3885304
 
 
@@ -332,7 +332,7 @@ html(lang="en")
 
               .third
                 figure
-                  img(src="../shared_images/stacked_bar_chart.png", alt="Stacked bar chart")
+                  img(data-src="../shared_images/stacked_bar_chart.png", alt="Stacked bar chart")
                   figcaption.reference
                     a(href="https://observablehq.com/@d3/stacked-bar-chart") https://observablehq.com/@d3/stacked-bar-chart
 
@@ -352,17 +352,14 @@ html(lang="en")
                 if (name === "viewof layout") {
                   return new Inspector(document.querySelector("#stackedToGroupedDivLayout"));
                 }
-                if (name === "update") {
-                  return new Inspector(document.querySelector("#stackedToGroupedDivLayout"));
-                }
 
               });
             a.tiny(target="_blank" href="https://observablehq.com/@d3/stacked-to-grouped-bars") https://observablehq.com/@d3/stacked-to-grouped-bars
 
           section
-            h2 Interesting discussion.
-            p Stacked bar charts are the worst.
-            a(href="https://eagereyes.org/techniques/stacked-bars-are-the-worst") Robert Kosara's blog
+            h2 "Stacked bar charts are the worst".
+            p Interesting discussion from
+              a(href="https://eagereyes.org/techniques/stacked-bars-are-the-worst") Robert Kosara's blog
             p Make sure to read the comments
 
 
@@ -379,7 +376,7 @@ html(lang="en")
 
               .twothirds
                 figure
-                  img.fill(src="../shared_images/vad_book_alldiagrams/planned_parenthood.png", alt="Planned Parenthood")
+                  img.fill(data-src="../shared_images/vad_book_alldiagrams/planned_parenthood.png", alt="Planned Parenthood")
                   figcaption.reference
                     a.fill(href="http://www.thefunctionalart.com/2015/10/if-you-see-bullshit-say-bullshit.html") http://www.thefunctionalart.com/2015/10/if-you-see-bullshit-say-bullshit.html
 
@@ -414,7 +411,7 @@ html(lang="en")
                       li.fragment 1M items, 100s of categ levels, ~10 quant attrib levels
               .third
                 figure
-                  img.fill(src="../shared_images/vad_book_alldiagrams/heatmap.png", alt="Heatmap")
+                  img.fill(data-src="../shared_images/vad_book_alldiagrams/heatmap.png", alt="Heatmap")
 
 
           section
@@ -437,9 +434,67 @@ html(lang="en")
                       li.fragment task: assess quality of clusters found by automatic methods
               .half
                 figure
-                  img.fill(src="../shared_images/vad_book_alldiagrams/cluster_heatmap.png", alt="Cluster Heatmap")
+                  img.fill(data-src="../shared_images/vad_book_alldiagrams/cluster_heatmap.png", alt="Cluster Heatmap")
                 figure
-                  img.fill(src="../shared_images/vad_book_alldiagrams/two_keys.png", alt="Two Keys")
+                  img.fill(data-src="../shared_images/vad_book_alldiagrams/two_keys.png", alt="Two Keys")
+
+          section
+            h2 Idiom: 2D density plots
+            .flex
+              .half
+                ul.small
+                  li.fragment Scatter-plot meet heat-map
+                  ul
+                    li.fragment derived data
+                    ul
+                      li.fragment Teselate space info areas
+                      li.fragment Count number of elements falling on that area
+
+                    li.fragment #[strong Mark]: Dots (boxes)
+                    li.fragment #[strong Channels]:
+                    ul
+                      li.fragment Position: Location of areas
+                      li.fragment Color (brightness): Number of elements
+                    ul
+                      li.fragment marks (re-)ordered by cluster hierarchy traversal
+                    li.fragment #[strong Tasks]: Summarize distribution.
+                    li.fragment #[strong Scalability:]
+                    ul
+                      li.fragment Millions of rows (might require preprocessing)
+
+              .half.
+                <div id="observablehq-d74d4a6f">
+                  <div class="r-stack">
+                    <div class="fragment observablehq-moviesScatterplot"></div>
+                    <div class="fragment observablehq-moviesDensityCircles"></div>
+                    <div class="fragment observablehq-moviesDensityBoxes"></div>
+                  </div>
+                  <div style="overflow: hidden;"><a style="display: block; float:right;" href="https://observablehq.com/@john-guerra/data-transformation@307"><object type="image/svg+xml" style="pointer-events: none;" width=180 height=22 data="https://static.observableusercontent.com/files/c3fab254a006f1a3a1f9f63aba8ab1460db4752529036b9962950bde0ec195bab823daa6b278b1c3401e545b3bd640ddfdcad805cf9859af218cb2b9fed4ddf0"></object></a></div>
+                </div>
+                <script type="module">
+                  import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+                  import define from "https://api.observablehq.com/@john-guerra/data-transformation@307.js?v=3";
+                  (new Runtime).module(define, name => {
+                    if (name === "moviesScatterplot") return Inspector.into("#observablehq-d74d4a6f .observablehq-moviesScatterplot")();
+                    if (name === "moviesDensityCircles") return Inspector.into("#observablehq-d74d4a6f .observablehq-moviesDensityCircles")();
+                    if (name === "moviesDensityBoxes") return Inspector.into("#observablehq-d74d4a6f .observablehq-moviesDensityBoxes")();
+                  });
+                </script>
+
+          section.full
+            h2 Interactive Density Plot
+            div.
+              <div id="observablehq-8ab2bcad">
+                <div class="observablehq-chart"></div>
+                <div style="overflow: hidden;"><a style="display: block; float:right;" href="https://observablehq.com/@john-guerra/density-plot"><object type="image/svg+xml" style="pointer-events: none;" width=180 height=22 data="https://static.observableusercontent.com/files/c3fab254a006f1a3a1f9f63aba8ab1460db4752529036b9962950bde0ec195bab823daa6b278b1c3401e545b3bd640ddfdcad805cf9859af218cb2b9fed4ddf0"></object></a></div>
+              </div>
+              <script type="module">
+                import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+                import define from "https://api.observablehq.com/@john-guerra/density-plot.js?v=3";
+                (new Runtime).module(define, name => {
+                  if (name === "chart") return Inspector.into("#observablehq-8ab2bcad .observablehq-chart")();
+                });
+              </script>
 
 
 
@@ -447,7 +502,7 @@ html(lang="en")
           section
             h1 Axis Orientation
 
-            img.fill(src="../shared_images/vad_book_alldiagrams/how_axis_orientation_only.png", alt="Axis orientation")
+            img.fill(data-src="../shared_images/vad_book_alldiagrams/how_axis_orientation_only.png", alt="Axis orientation")
 
           section.full
             h3 Idiom: scatterplot matrix
@@ -463,10 +518,18 @@ html(lang="en")
                   li.fragment Task:
                   ul
                     li.fragment Summarize / Explore
-              .half
+              .half.
+                <div id="observablehq-0a20feb3"></div>
+                <script type="module">
+                import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+                import define from "https://api.observablehq.com/@d3/brushable-scatterplot-matrix.js?v=3";
+                const inspect = Inspector.into("#observablehq-0a20feb3");
+                (new Runtime).module(define, name => name === "chart" ? inspect() : undefined);
+                </script>
 
-          section
-            h2 Idiom: parallel coordinates
+
+          section.full
+            h3 Idiom: parallel coordinates
             .flex
               .half
                 ul.small
@@ -480,7 +543,20 @@ html(lang="en")
                   li.fragment Task
                   ul
                     li.fragment Summarize / Explore
-              .half
+              .half.
+                <div id="observablehq-e6eae5aa">
+                  <div class="observablehq-viewof-keyz"></div>
+                  <div class="observablehq-chart"></div>
+                  <div style="overflow: hidden;"><a style="display: block; float:right;" href="https://observablehq.com/@d3/parallel-coordinates"><object type="image/svg+xml" style="pointer-events: none;" width=180 height=22 data="https://static.observableusercontent.com/files/c3fab254a006f1a3a1f9f63aba8ab1460db4752529036b9962950bde0ec195bab823daa6b278b1c3401e545b3bd640ddfdcad805cf9859af218cb2b9fed4ddf0"></object></a></div>
+                </div>
+                <script type="module">
+                  import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+                  import define from "https://api.observablehq.com/d/1c5aef8b35140e76.js?v=3";
+                  (new Runtime).module(define, name => {
+                    if (name === "viewof keyz") return Inspector.into("#observablehq-e6eae5aa .observablehq-viewof-keyz")();
+                    if (name === "chart") return Inspector.into("#observablehq-e6eae5aa .observablehq-chart")();
+                  });
+                </script>
 
           section
             h2 Task Correlation
@@ -525,13 +601,25 @@ html(lang="en")
                   li.fragment parallel: unfamiliarity, training time
               .half
 
+          //- Navio
+          section
+            h3.demo Navio
+            iframe.blocks(data-src="https://navio.dev")
+            a.tiny(target="_blank" href="https://navio.dev") https://navio.dev
+
+          section
+            h2 Bonus: InMens
+            p What about millions of points?
+
+            a(target="_blank" href="http://vis.stanford.edu/projects/immens/demo/splom/") http://vis.stanford.edu/projects/immens/demo/splom/
+
 
         section
           section
             h1 Radial Orientations
 
           section
-            h2 Idioms: radial bar chart, star plot
+            h3 Idioms: radial bar chart, star plot
             .flex
               .half
                 ul.small
@@ -566,128 +654,194 @@ html(lang="en")
 
 
           section
-            h2 “Radar graphs: Avoid them (99.9% of the time)”
+            h4 “Radar graphs: Avoid them (99.9% of the time)”
 
             figure
-              img.fill(src="../shared_images/vad_book_alldiagrams/avoid_radar_charts.png", alt="Avoid Radar Charts")
+              .r-stack
+                img.fragment.fill(style="max-width:700px" data-src="../shared_images/vad_book_alldiagrams/avoid_radar_charts.png", alt="Avoid Radar Charts")
+                img.fragment(data-src="../shared_images/vad_book_alldiagrams/radar_graph_fixed.png", alt="Radar graph fixed")
               figcaption.reference
                 a(href="http://www.thefunctionalart.com/2012/11/radar-graphs-avoid-them-999-of-time.html") http://www.thefunctionalart.com/2012/11/radar-graphs-avoid-them-999-of-time.html
-                span [Slide courtesy of Ben Jones]
+                div [Slide courtesy of Ben Jones]
 
 
           section
             h2 Radial Orientation: Radar Plots
+
+          section
+            h3 Idioms: pie chart, polar area chart
             .flex
               .half
+                ul.tiny
+                  li.fragment pie chart
+                  ul
+                    li.fragment area marks with angle channel
+                    li.fragment accuracy: angle/area much less accurate than line length
+                  br
+                  li.fragment polar area chart
+                  ul
+                    li.fragment area marks with length channel
+                    li.fragment more direct analog to bar charts
+                  br
+                  li.fragment data
+                  ul
+                    li.fragment 1 categ key attrib, 1 quant value attrib
+                  li.fragment task
+                  ul
+                    li.fragment part-to-whole judgements
               .half
 
-            ul.small Idioms: pie chart, polar area chart
-              li.fragment pie chart
-              li.fragment area marks with angle channel
-              li.fragment accuracy: angle/area much less accurate than line length
-              br
-              li.fragment polar area chart
-              li.fragment area marks with length channel
-              li.fragment more direct analog to bar charts
-              br
-              li.fragment data
-              li.fragment 1 categ key attrib, 1 quant value attrib
-              li.fragment task
-              li.fragment part-to-whole judgements
 
           section
             h2 Pie chart perception
             .flex
               .half
+                ul.small
+                  li.fragment some empirical evidence that people respond to arc length
+                  ul
+                    li.fragment not angles
+                    li.fragment maybe also areas?…
+                  li.fragment donut charts no worse than pie charts
               .half
+                figure
 
-            ul.small
-              li.fragment some empirical evidence that people respond to arc length
-              li.fragment not angles
-              li.fragment maybe also areas?…
-              li.fragment donut charts no worse than pie charts
+                  img.fill(data-src="../shared_images/vad_book_alldiagrams/pie_chart_perception.png", alt="Pie chart perception")
+
+                  figcaption.reference [Arcs, Angles, or Areas: Individual Data Encodings in Pie and Donut Charts. Skau and Kosara. Proc. EuroVis 2016.]
+
 
           section
-            h2 Pie chart perception
+            h2 Pie chart perception 2
             .flex
               .half
+                ul.small
+
+                  li.fragment meta-points
+                  ul
+                    li.fragment redesign of paper figures in later blog post
+                    ul
+                      li.fragment violin plots good for analysis but too detailed for presentation
+                    li.fragment Tamara's advice: still dubious for pie/donut charts
+                    ul
+                      li.fragment sometimes ok if just 2 attribs
               .half
+                figure
 
-            ul.small
+                  img.fill(data-src="../shared_images/vad_book_alldiagrams/pie_chart_perception_2.png", alt="Pie chart perception 2")
 
-              li.fragment meta-points
-              li.fragment redesign of paper figures in later blog post
-              li.fragment violin plots good for analysis but too detailed for presentation
-              li.fragment my advice: still dubious for pie/donut charts
-              li.fragment sometimes ok if just 2 attribs
+                  figcaption.reference
+                    a(href="https://eagereyes.org/blog/2016/an-illustrated-tour-of-the-pie-chart-study-results") https://eagereyes.org/blog/2016/an-illustrated-tour-of-the-pie-chart-study-results
+
 
           section
-            h2 Idioms: normalized stacked bar chart
+            h3 Idioms: normalized stacked bar chart
             .flex
               .half
+                ul.tiny
+                  li.fragment task
+                  ul
+                    li.fragment part-to-whole judgments
+                  br
+                  li.fragment normalized stacked bar chart
+                  ul
+                    li.fragment stacked bar chart, normalized to full vert height
+                    li.fragment single stacked bar equivalent to full pie
+                    ul
+                      li.fragment high information density: requires narrow rectangle
+                  br
+                  li.fragment pie chart
+                  ul
+                    li.fragment information density: requires large circle
               .half
+                figure
 
-            ul.small
-              li.fragment task
-              li.fragment part-to-whole judgements
-              br
-              li.fragment normalized stacked bar chart
-              li.fragment stacked bar chart, normalized to full vert height
-              li.fragment single stacked bar equivalent to full pie
-              li.fragment high information density: requires narrow rectangle
-              br
-              li.fragment pie chart
-              li.fragment information density: requires large circle
+                  img.fill(style="max-width: 300px", data-src="../shared_images/vad_book_alldiagrams/normalized_stacked_barchart.png", alt="Normalized Stacked Bar Chart")
+
+                  figcaption.reference
+                    a(href="http://bl.ocks.org/mbostock/3886208") http://bl.ocks.org/mbostock/3886208
+                    a(href="http://bl.ocks.org/mbostock/3887235") http://bl.ocks.org/mbostock/3887235
+                    a(href="http://bl.ocks.org/mbostock/3886394") http://bl.ocks.org/mbostock/3886394
+
+
+
+
 
           section
             h2 Idiom: glyphmaps
             .flex
               .half
+                ul.small
+                  li.fragment rectilinear good for linear vs nonlinear trends
+                  li.fragment radial good for cyclic patterns
+                br
+                img.fragment(src="../shared_images/vad_book_alldiagrams/axis_rectilinear_and_radial.png", alt="Axis rectilinear and radial")
               .half
+                figure
 
-            ul.small
-              li.fragment rectilinear good for linear vs nonlinear trends
-              li.fragment radial good for cyclic patterns
+                  img.fill(data-src="../shared_images/vad_book_alldiagrams/glyphmaps.png", alt="Glyphmap")
+                  figcaption.reference [Glyph-maps for Visually Exploring Temporal Patterns in Climate Data and Models. Wickham, Hofmann, Wickham, and Cook. Environmetrics 23:5 (2012), 382–393.]
+
+
+          //- Glyphmap block
+          section
+            h3.demo Glyphmap
+            iframe.blocks(data-src="http://blockbuilder.org/sxywu/8d1b563586bf411383345e95a3418715")
+            a.tiny(target="_blank" href="http://blockbuilder.org/sxywu/8d1b563586bf411383345e95a3418715") http://blockbuilder.org/sxywu/8d1b563586bf411383345e95a3418715
+
+
+
 
           section
-            h2 Idiom: glyphmaps
+            h2 Radial orientation
             .flex
               .half
-              .half
+                ul.small
+                  li.fragment perceptual limits
+                  ul
+                    li.fragment polar coordinate asymmetry
+                    ul
+                      li.fragment angles lower precision than lengths
+                      li.fragment frequently problematic
+                      li.fragment sometimes can be deliberately exploited!
+                      ul
+                        li.fragment for 2 attribs of very unequal importance
 
-            ul.small
-              li.fragment Radial orientation
-              li.fragment perceptual limits
-              li.fragment polar coordinate asymmetry
-              li.fragment angles lower precision than lengths
-              li.fragment frequently problematic
-              li.fragment sometimes can be deliberately exploited!
-              li.fragment for 2 attribs of very unequal importance
+                figure
+                  img(src="../shared_images/vad_book_alldiagrams/radial_weaknesses.png", alt="Radial Weaknesses")
+                  figcaption.reference [Uncovering Strengths and Weaknesses of Radial Visualizations - an Empirical Approach. Diehl, Beck and Burch. IEEE TVCG (Proc. InfoVis) 16(6):935--942, 2010.]
+              .half
+                img(style="max-width:200px", src="../shared_images/vad_book_alldiagrams/axis_orientation_vertical.png", alt="Axis Orientation")
+
 
           section
             h2 Idiom: Dense software overviews
             .flex
               .half
+                ul.small
+                  li.fragment data: text
+                  ul
+                    li.fragment text + 1 quant attrib per line
+                  li.fragment derived data:
+                  ul
+                    li.fragment one pixel high line
+                    li.fragment length according to original
+                  li.fragment color line by attrib
+                  li.fragment scalability
+                  ulli.fragment 10K+ lines
               .half
 
-            ul.small
-              li.fragment data: text
-              li.fragment text + 1 quant attrib per line
-              li.fragment derived data:
-              li.fragment one pixel high line
-              li.fragment length according to original
-              li.fragment color line by attrib
-              li.fragment scalability
-              li.fragment 10K+ lines
+                figure
+                  img(src="../shared_images/vad_book_alldiagrams/dense_software_overviews.png", alt="Dense Software Overviews")
+                  figcaption.reference [Visualization of test information to assist fault localization. Jones, Harrold, Stasko. Proc. ICSE 2002, p 467-477.]
 
         section
-
-
+          section
+            h1 Tables with D3
 
           //- Stacked barchart block
           section
             h3.demo Stacked barchart
-            iframe.blocks(src="http://blockbuilder.org/mbostock/3886208")
+            iframe.blocks(data-src="http://blockbuilder.org/mbostock/3886208")
             a.tiny(target="_blank" href="http://blockbuilder.org/mbostock/3886208") http://blockbuilder.org/mbostock/3886208
 
           section
@@ -707,126 +861,55 @@ html(lang="en")
             img(style="height:400px", src="../shared_images/vad_book_alldiagrams/d3_stack.png", alt="d3 stack")
 
 
-
-
-
-
-
-          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/08_tables-spatial.010.png")
-          //- Streamgraph block
-          section
-            h3.demo Streamgraph
-            iframe.blocks(src="http://blockbuilder.org/mbostock/4060954")
-            a.tiny(target="_blank" href="http://blockbuilder.org/mbostock/4060954") http://blockbuilder.org/mbostock/4060954
-
-          //- Streamgraph block
-          section
-            h3.demo Streamgraph RIO2016
-            img.blocks(src="../shared_images/vad_book_alldiagrams/streamGraphNYTimes.png",alt="Streamgraph RIO2016 NY times")
-            a.tiny(target="_blank" href="http://www.nytimes.com/interactive/2016/08/08/sports/olympics/history-olympic-dominance-charts.html?_r=0") http://www.nytimes.com/interactive/2016/08/08/sports/olympics/history-olympic-dominance-charts.html?_r=0
-
-
-          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/08_tables-spatial.011.png")
-          //- Linechart block
-          section
-            h3.demo Linechart
-            iframe.blocks(src="http://blockbuilder.org/mbostock/3883245")
-            a.tiny(target="_blank" href="http://blockbuilder.org/mbostock/3883245") http://blockbuilder.org/mbostock/3883245
-
-          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/08_tables-spatial.012.png")
-          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/08_tables-spatial.013.png")
-
-          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/08_tables-spatial.014.png")
-
           //- Heatmap block
           section
             h3.demo Heatmap
-            iframe.blocks(src="http://blockbuilder.org/ianyfchang/8119685")
+            iframe.blocks(data-src="http://blockbuilder.org/ianyfchang/8119685")
             a.tiny(target="_blank" href="http://blockbuilder.org/ianyfchang/8119685") http://blockbuilder.org/ianyfchang/8119685
-          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/08_tables-spatial.015.png")
 
 
-
-
-          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/08_tables-spatial.016.png")
           //- Scatterplot Matrix block
           section
             h3.demo Scatterplot Matrix
-            iframe.blocks(src="http://blockbuilder.org/mbostock/4063663")
+            iframe.blocks(data-src="http://blockbuilder.org/mbostock/4063663")
             a.tiny(target="_blank" href="http://blockbuilder.org/mbostock/4063663") http://blockbuilder.org/mbostock/4063663
 
-          section
-            h2 Bonus: InMens
-            p What about millions of points?
-
-            a(target="_blank" href="http://vis.stanford.edu/projects/immens/demo/splom/") http://vis.stanford.edu/projects/immens/demo/splom/
 
           //- Parallel Coordinates block
           section
             h3.demo Parallel Coordinates
-            iframe.blocks(src="http://blockbuilder.org/syntagmatic/3150059")
+            iframe.blocks(data-src="http://blockbuilder.org/syntagmatic/3150059")
             a.tiny(target="_blank" href="http://blockbuilder.org/syntagmatic/3150059") http://blockbuilder.org/syntagmatic/3150059
 
-          //- PC correlation
-          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/08_tables-spatial.017.png")
 
-          //- Navio
-          section
-            h3.demo Navio
-            iframe.blocks(src="https://navio.dev")
-            a.tiny(target="_blank" href="https://navio.dev") https://navio.dev
 
-          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/08_tables-spatial.018.png")
-          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/08_tables-spatial.019.png")
           //- Polar Area Chart block
           section
             h3.demo Polar Area Chart
-            iframe.blocks(src="http://blockbuilder.org/curran/94f1376b946c9d217014")
+            iframe.blocks(data-src="http://blockbuilder.org/curran/94f1376b946c9d217014")
             a.tiny(target="_blank" href="http://blockbuilder.org/curran/94f1376b946c9d217014") http://blockbuilder.org/curran/94f1376b946c9d217014
 
-          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/08_tables-spatial.020.png")
 
           //- Pie chart block
           section
             h3.demo Pie chart
-            iframe.blocks(src="http://blockbuilder.org/mbostock/3887235")
+            iframe.blocks(data-src="http://blockbuilder.org/mbostock/3887235")
             a.tiny(target="_blank" href="http://blockbuilder.org/mbostock/3887235") http://blockbuilder.org/mbostock/3887235
 
           //- Donut chart block
           section
             h3.demo Donut chart
-            iframe.blocks(src="http://blockbuilder.org/mbostock/1346410")
+            iframe.blocks(data-src="http://blockbuilder.org/mbostock/1346410")
             a.tiny(target="_blank" href="http://blockbuilder.org/mbostock/1346410") http://blockbuilder.org/mbostock/1346410
 
           //- Stacked bar chart normalized block
           section
             h3.demo Stacked bar chart normalized
-            iframe.blocks(src="http://blockbuilder.org/mbostock/3886394")
+            iframe.blocks(data-src="http://blockbuilder.org/mbostock/3886394")
             a.tiny(target="_blank" href="http://blockbuilder.org/mbostock/3886394") http://blockbuilder.org/mbostock/3886394
 
-          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/08_tables-spatial.021.png")
 
-          //- Glyphmap block
-          section
-            h3.demo Glyphmap
-            iframe.blocks(src="http://blockbuilder.org/sxywu/8d1b563586bf411383345e95a3418715")
-            a.tiny(target="_blank" href="http://blockbuilder.org/sxywu/8d1b563586bf411383345e95a3418715") http://blockbuilder.org/sxywu/8d1b563586bf411383345e95a3418715
-
-
-          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/08_tables-spatial.022.png")
-          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/08_tables-spatial.023.png")
           //- section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/08_tables-spatial.024.png")
-
-
-          section
-            h2 MLExplore.js
-            div.fragment Dimmensionality Reduction
-              span.fragment  +  Clustering
-            div.small.portrait
-              img(src="../shared_images/vad_book_alldiagrams/Fabian.jpg" alt="Fabián Peña")
-              div Fabian Peña
-            a.tiny(href="https://fabiancpl.github.io/MLExplore.js/") https://fabiancpl.github.io/MLExplore.js/
-
 
 
 
