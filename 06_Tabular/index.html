@@ -22,7 +22,7 @@
           <h1 class="title">Visualizing Tabular Data<br><small>MIDS W209: Information Visualization</small></h1>
           <div class="r-stretch"></div>
           <div class="tiny"><a href="https://johnguerra.co/" target="_blank"><strong> John Alexis Guerra Gómez</strong></a><span> |  john.guerra[at]gmail.com</span><a href="https://twitter.com/duto_guerra"> |  @duto_guerra</a><br><a href="https://johnguerra.co/lectures/MIDS_W209_Information_Visualization/06_Tabular/" target="_blank">https://johnguerra.co/lectures/MIDS_W209_Information_Visualization/06_Tabular/</a></div>
-          <div class="logo"><a href="https://datascience.berkeley.edu/"><img class="logo" src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo"></a></div>
+          <div class="logo"><a href="https://datascience.berkeley.edu/"><img class="logo" data-src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo"></a></div>
           <div class="tiny">Partially based on<a href="https://www.cs.ubc.ca/~tmm/talks.html#minicourse14"> slides from Tamara Munzner</a></div>
         </section>
         <section id="outline">
@@ -69,7 +69,7 @@
                 </ul>
               </div>
               <div class="half">
-                <figure><img class="fill" src="../shared_images/vad_book_alldiagrams/how_encode_arrange.png" alt="How, encode, Arrange"></figure>
+                <figure><img class="fill" data-src="../shared_images/vad_book_alldiagrams/how_encode_arrange.png" alt="How, encode, Arrange"></figure>
               </div>
             </div>
           </section>
@@ -107,7 +107,7 @@
         </section>
         <section>
           <section>
-            <h2>0 Keys</h2><img class="fill" src="../shared_images/vad_book_alldiagrams/0_keys.png" alt="0 Keys">
+            <h2>0 Keys</h2><img class="fill" data-src="../shared_images/vad_book_alldiagrams/0_keys.png" alt="0 Keys">
           </section>
           <section class="full">
             <h2>Idiom: Scatterplot</h2>
@@ -182,10 +182,10 @@
             </div>
           </section>
           <section>
-            <h2>Some Keys</h2><img class="fill" src="../shared_images/vad_book_alldiagrams/some_keys.png" alt="Some Keys">
+            <h2>Some Keys</h2><img class="fill" data-src="../shared_images/vad_book_alldiagrams/some_keys.png" alt="Some Keys">
           </section>
           <section class="full">
-            <h3>Some keys: Categorical regions</h3><img class="noMarginTopBottom" src="../shared_images/vad_book_alldiagrams/how_separate_order_align.png" alt="Separate Order and Align">
+            <h3>Some keys: Categorical regions</h3><img class="noMarginTopBottom" data-src="../shared_images/vad_book_alldiagrams/how_separate_order_align.png" alt="Separate Order and Align">
             <ul class="noMarginTopBottom small">
               <li class="fragment"><strong>regions</strong>: contiguous bounded areas distinct from each other</li>
               <ul class="small">
@@ -193,7 +193,7 @@
                 <li class="fragment">following expressiveness principle for categorical attributes</li>
               </ul>
               <li class="fragment">use ordered attribute to <strong>order</strong> and <strong>align</strong> regions</li>
-            </ul><img class="noMarginTopBottom fill fragment" src="../shared_images/vad_book_alldiagrams/how_keys.png" alt="Keys">
+            </ul><img class="noMarginTopBottom fill fragment" data-src="../shared_images/vad_book_alldiagrams/how_keys.png" alt="Keys">
           </section>
           <section>
             <h2>Idiom: Barchart</h2>
@@ -226,7 +226,7 @@
                   </ul>
                 </ul>
               </div>
-              <div class="half"><img class="fill" src="../shared_images/vad_book_alldiagrams/barchart_example.png" alt="Barchart example"></div>
+              <div class="half"><img class="fill" data-src="../shared_images/vad_book_alldiagrams/barchart_example.png" alt="Barchart example"></div>
             </div>
           </section>
           <section class="full">
@@ -282,7 +282,7 @@
                 </ul>
               </div>
               <div class="third">
-                <figure><img src="../shared_images/stacked_bar_chart.png" alt="Stacked bar chart">
+                <figure><img data-src="../shared_images/stacked_bar_chart.png" alt="Stacked bar chart">
                   <figcaption class="reference"><a href="https://observablehq.com/@d3/stacked-bar-chart">https://observablehq.com/@d3/stacked-bar-chart</a></figcaption>
                 </figure>
               </div>
@@ -302,16 +302,13 @@
                 if (name === "viewof layout") {
                   return new Inspector(document.querySelector("#stackedToGroupedDivLayout"));
                 }
-                if (name === "update") {
-                  return new Inspector(document.querySelector("#stackedToGroupedDivLayout"));
-                }
               
               });
             </script><a class="tiny" target="_blank" href="https://observablehq.com/@d3/stacked-to-grouped-bars">https://observablehq.com/@d3/stacked-to-grouped-bars</a>
           </section>
           <section>
-            <h2>Interesting discussion.</h2>
-            <p>Stacked bar charts are the worst.</p><a href="https://eagereyes.org/techniques/stacked-bars-are-the-worst">Robert Kosara's blog</a>
+            <h2>"Stacked bar charts are the worst".</h2>
+            <p>Interesting discussion from<a href="https://eagereyes.org/techniques/stacked-bars-are-the-worst">Robert Kosara's blog</a></p>
             <p>Make sure to read the comments</p>
           </section>
           <section>
@@ -326,7 +323,7 @@
                 </ul>
               </div>
               <div class="twothirds">
-                <figure><img class="fill" src="../shared_images/vad_book_alldiagrams/planned_parenthood.png" alt="Planned Parenthood">
+                <figure><img class="fill" data-src="../shared_images/vad_book_alldiagrams/planned_parenthood.png" alt="Planned Parenthood">
                   <figcaption class="reference"><a class="fill" href="http://www.thefunctionalart.com/2015/10/if-you-see-bullshit-say-bullshit.html">http://www.thefunctionalart.com/2015/10/if-you-see-bullshit-say-bullshit.html</a></figcaption>
                 </figure>
               </div>
@@ -371,7 +368,7 @@
                 </ul>
               </div>
               <div class="third">
-                <figure><img class="fill" src="../shared_images/vad_book_alldiagrams/heatmap.png" alt="Heatmap"></figure>
+                <figure><img class="fill" data-src="../shared_images/vad_book_alldiagrams/heatmap.png" alt="Heatmap"></figure>
               </div>
             </div>
           </section>
@@ -400,15 +397,85 @@
                 </ul>
               </div>
               <div class="half">
-                <figure><img class="fill" src="../shared_images/vad_book_alldiagrams/cluster_heatmap.png" alt="Cluster Heatmap"></figure>
-                <figure><img class="fill" src="../shared_images/vad_book_alldiagrams/two_keys.png" alt="Two Keys"></figure>
+                <figure><img class="fill" data-src="../shared_images/vad_book_alldiagrams/cluster_heatmap.png" alt="Cluster Heatmap"></figure>
+                <figure><img class="fill" data-src="../shared_images/vad_book_alldiagrams/two_keys.png" alt="Two Keys"></figure>
               </div>
+            </div>
+          </section>
+          <section>
+            <h2>Idiom: 2D density plots</h2>
+            <div class="flex">
+              <div class="half">
+                <ul class="small">
+                  <li class="fragment">Scatter-plot meet heat-map</li>
+                  <ul>
+                    <li class="fragment">derived data</li>
+                    <ul>
+                      <li class="fragment">Teselate space info areas</li>
+                      <li class="fragment">Count number of elements falling on that area</li>
+                    </ul>
+                    <li class="fragment"><strong>Mark</strong>: Dots (boxes)</li>
+                    <li class="fragment"><strong>Channels</strong>:</li>
+                    <ul>
+                      <li class="fragment">Position: Location of areas</li>
+                      <li class="fragment">Color (brightness): Number of elements</li>
+                    </ul>
+                    <ul>
+                      <li class="fragment">marks (re-)ordered by cluster hierarchy traversal</li>
+                    </ul>
+                    <li class="fragment"><strong>Tasks</strong>: Summarize distribution.</li>
+                    <li class="fragment"><strong>Scalability:</strong></li>
+                    <ul>
+                      <li class="fragment">Millions of rows (might require preprocessing)</li>
+                    </ul>
+                  </ul>
+                </ul>
+              </div>
+              <div class="half">
+                <div id="observablehq-d74d4a6f">
+                  <div class="r-stack">
+                    <div class="fragment observablehq-moviesScatterplot"></div>
+                    <div class="fragment observablehq-moviesDensityCircles"></div>
+                    <div class="fragment observablehq-moviesDensityBoxes"></div>
+                  </div>
+                  <div style="overflow: hidden;"><a style="display: block; float:right;" href="https://observablehq.com/@john-guerra/data-transformation@307"><object type="image/svg+xml" style="pointer-events: none;" width=180 height=22 data="https://static.observableusercontent.com/files/c3fab254a006f1a3a1f9f63aba8ab1460db4752529036b9962950bde0ec195bab823daa6b278b1c3401e545b3bd640ddfdcad805cf9859af218cb2b9fed4ddf0"></object></a></div>
+                </div>
+                <script type="module">
+                  import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+                  import define from "https://api.observablehq.com/@john-guerra/data-transformation@307.js?v=3";
+                  (new Runtime).module(define, name => {
+                    if (name === "moviesScatterplot") return Inspector.into("#observablehq-d74d4a6f .observablehq-moviesScatterplot")();
+                    if (name === "moviesDensityCircles") return Inspector.into("#observablehq-d74d4a6f .observablehq-moviesDensityCircles")();
+                    if (name === "moviesDensityBoxes") return Inspector.into("#observablehq-d74d4a6f .observablehq-moviesDensityBoxes")();
+                  });
+                </script>
+                
+              </div>
+            </div>
+          </section>
+          <section class="full">
+            <h2>Interactive Density Plot</h2>
+            <div>
+              <div id="observablehq-8ab2bcad">
+                <div class="observablehq-chart"></div>
+                <div style="overflow: hidden;"><a style="display: block; float:right;" href="https://observablehq.com/@john-guerra/density-plot"><object type="image/svg+xml" style="pointer-events: none;" width=180 height=22 data="https://static.observableusercontent.com/files/c3fab254a006f1a3a1f9f63aba8ab1460db4752529036b9962950bde0ec195bab823daa6b278b1c3401e545b3bd640ddfdcad805cf9859af218cb2b9fed4ddf0"></object></a></div>
+              </div>
+              <script type="module">
+                import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+                import define from "https://api.observablehq.com/@john-guerra/density-plot.js?v=3";
+                (new Runtime).module(define, name => {
+                  if (name === "chart") return Inspector.into("#observablehq-8ab2bcad .observablehq-chart")();
+                });
+              </script>
+              
+              
+              
             </div>
           </section>
         </section>
         <section>
           <section>
-            <h1>Axis Orientation</h1><img class="fill" src="../shared_images/vad_book_alldiagrams/how_axis_orientation_only.png" alt="Axis orientation">
+            <h1>Axis Orientation</h1><img class="fill" data-src="../shared_images/vad_book_alldiagrams/how_axis_orientation_only.png" alt="Axis orientation">
           </section>
           <section class="full">
             <h3>Idiom: scatterplot matrix</h3>
@@ -428,11 +495,21 @@
                   </ul>
                 </ul>
               </div>
-              <div class="half"></div>
+              <div class="half">
+                <div id="observablehq-0a20feb3"></div>
+                <script type="module">
+                import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+                import define from "https://api.observablehq.com/@d3/brushable-scatterplot-matrix.js?v=3";
+                const inspect = Inspector.into("#observablehq-0a20feb3");
+                (new Runtime).module(define, name => name === "chart" ? inspect() : undefined);
+                </script>
+                
+                
+              </div>
             </div>
           </section>
-          <section>
-            <h2>Idiom: parallel coordinates</h2>
+          <section class="full">
+            <h3>Idiom: parallel coordinates</h3>
             <div class="flex">
               <div class="half">
                 <ul class="small">
@@ -450,7 +527,22 @@
                   </ul>
                 </ul>
               </div>
-              <div class="half"></div>
+              <div class="half">
+                <div id="observablehq-e6eae5aa">
+                  <div class="observablehq-viewof-keyz"></div>
+                  <div class="observablehq-chart"></div>
+                  <div style="overflow: hidden;"><a style="display: block; float:right;" href="https://observablehq.com/@d3/parallel-coordinates"><object type="image/svg+xml" style="pointer-events: none;" width=180 height=22 data="https://static.observableusercontent.com/files/c3fab254a006f1a3a1f9f63aba8ab1460db4752529036b9962950bde0ec195bab823daa6b278b1c3401e545b3bd640ddfdcad805cf9859af218cb2b9fed4ddf0"></object></a></div>
+                </div>
+                <script type="module">
+                  import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+                  import define from "https://api.observablehq.com/d/1c5aef8b35140e76.js?v=3";
+                  (new Runtime).module(define, name => {
+                    if (name === "viewof keyz") return Inspector.into("#observablehq-e6eae5aa .observablehq-viewof-keyz")();
+                    if (name === "chart") return Inspector.into("#observablehq-e6eae5aa .observablehq-chart")();
+                  });
+                </script>
+                
+              </div>
             </div>
           </section>
           <section>
@@ -508,13 +600,21 @@
               <div class="half"></div>
             </div>
           </section>
+          <section>
+            <h3 class="demo">Navio</h3>
+            <iframe class="blocks" data-src="https://navio.dev"></iframe><a class="tiny" target="_blank" href="https://navio.dev">https://navio.dev</a>
+          </section>
+          <section>
+            <h2>Bonus: InMens</h2>
+            <p>What about millions of points?</p><a target="_blank" href="http://vis.stanford.edu/projects/immens/demo/splom/">http://vis.stanford.edu/projects/immens/demo/splom/</a>
+          </section>
         </section>
         <section>
           <section>
             <h1>Radial Orientations</h1>
           </section>
           <section>
-            <h2>Idioms: radial bar chart, star plot</h2>
+            <h3>Idioms: radial bar chart, star plot</h3>
             <div class="flex">
               <div class="half">
                 <ul class="small">
@@ -554,123 +654,199 @@
             </div>
           </section>
           <section>
-            <h2>“Radar graphs: Avoid them (99.9% of the time)”</h2>
-            <figure><img class="fill" src="../shared_images/vad_book_alldiagrams/avoid_radar_charts.png" alt="Avoid Radar Charts">
-              <figcaption class="reference"><a href="http://www.thefunctionalart.com/2012/11/radar-graphs-avoid-them-999-of-time.html">http://www.thefunctionalart.com/2012/11/radar-graphs-avoid-them-999-of-time.html</a><span>[Slide courtesy of Ben Jones]</span></figcaption>
+            <h4>“Radar graphs: Avoid them (99.9% of the time)”</h4>
+            <figure>
+              <div class="r-stack"><img class="fragment fill" style="max-width:700px" data-src="../shared_images/vad_book_alldiagrams/avoid_radar_charts.png" alt="Avoid Radar Charts"><img class="fragment" data-src="../shared_images/vad_book_alldiagrams/radar_graph_fixed.png" alt="Radar graph fixed"></div>
+              <figcaption class="reference"><a href="http://www.thefunctionalart.com/2012/11/radar-graphs-avoid-them-999-of-time.html">http://www.thefunctionalart.com/2012/11/radar-graphs-avoid-them-999-of-time.html</a>
+                <div>[Slide courtesy of Ben Jones]</div>
+              </figcaption>
             </figure>
           </section>
           <section>
             <h2>Radial Orientation: Radar Plots</h2>
+          </section>
+          <section>
+            <h3>Idioms: pie chart, polar area chart</h3>
             <div class="flex">
-              <div class="half"></div>
+              <div class="half">
+                <ul class="tiny">
+                  <li class="fragment">pie chart</li>
+                  <ul>
+                    <li class="fragment">area marks with angle channel</li>
+                    <li class="fragment">accuracy: angle/area much less accurate than line length</li>
+                  </ul><br>
+                  <li class="fragment">polar area chart</li>
+                  <ul>
+                    <li class="fragment">area marks with length channel</li>
+                    <li class="fragment">more direct analog to bar charts</li>
+                  </ul><br>
+                  <li class="fragment">data</li>
+                  <ul>
+                    <li class="fragment">1 categ key attrib, 1 quant value attrib</li>
+                  </ul>
+                  <li class="fragment">task</li>
+                  <ul>
+                    <li class="fragment">part-to-whole judgements</li>
+                  </ul>
+                </ul>
+              </div>
               <div class="half"></div>
             </div>
-            <ul class="small">Idioms: pie chart, polar area chart
-              <li class="fragment">pie chart</li>
-              <li class="fragment">area marks with angle channel</li>
-              <li class="fragment">accuracy: angle/area much less accurate than line length</li><br>
-              <li class="fragment">polar area chart</li>
-              <li class="fragment">area marks with length channel</li>
-              <li class="fragment">more direct analog to bar charts</li><br>
-              <li class="fragment">data</li>
-              <li class="fragment">1 categ key attrib, 1 quant value attrib</li>
-              <li class="fragment">task</li>
-              <li class="fragment">part-to-whole judgements</li>
-            </ul>
           </section>
           <section>
             <h2>Pie chart perception</h2>
             <div class="flex">
-              <div class="half"></div>
-              <div class="half"></div>
+              <div class="half">
+                <ul class="small">
+                  <li class="fragment">some empirical evidence that people respond to arc length</li>
+                  <ul>
+                    <li class="fragment">not angles</li>
+                    <li class="fragment">maybe also areas?…</li>
+                  </ul>
+                  <li class="fragment">donut charts no worse than pie charts</li>
+                </ul>
+              </div>
+              <div class="half">
+                <figure><img class="fill" data-src="../shared_images/vad_book_alldiagrams/pie_chart_perception.png" alt="Pie chart perception">
+                  <figcaption class="reference">[Arcs, Angles, or Areas: Individual Data Encodings in Pie and Donut Charts. Skau and Kosara. Proc. EuroVis 2016.]</figcaption>
+                </figure>
+              </div>
             </div>
-            <ul class="small">
-              <li class="fragment">some empirical evidence that people respond to arc length</li>
-              <li class="fragment">not angles</li>
-              <li class="fragment">maybe also areas?…</li>
-              <li class="fragment">donut charts no worse than pie charts</li>
-            </ul>
           </section>
           <section>
-            <h2>Pie chart perception</h2>
+            <h2>Pie chart perception 2</h2>
             <div class="flex">
-              <div class="half"></div>
-              <div class="half"></div>
+              <div class="half">
+                <ul class="small">
+                  <li class="fragment">meta-points</li>
+                  <ul>
+                    <li class="fragment">redesign of paper figures in later blog post</li>
+                    <ul>
+                      <li class="fragment">violin plots good for analysis but too detailed for presentation</li>
+                    </ul>
+                    <li class="fragment">Tamara's advice: still dubious for pie/donut charts</li>
+                    <ul>
+                      <li class="fragment">sometimes ok if just 2 attribs</li>
+                    </ul>
+                  </ul>
+                </ul>
+              </div>
+              <div class="half">
+                <figure><img class="fill" data-src="../shared_images/vad_book_alldiagrams/pie_chart_perception_2.png" alt="Pie chart perception 2">
+                  <figcaption class="reference"><a href="https://eagereyes.org/blog/2016/an-illustrated-tour-of-the-pie-chart-study-results">https://eagereyes.org/blog/2016/an-illustrated-tour-of-the-pie-chart-study-results</a></figcaption>
+                </figure>
+              </div>
             </div>
-            <ul class="small">
-              <li class="fragment">meta-points</li>
-              <li class="fragment">redesign of paper figures in later blog post</li>
-              <li class="fragment">violin plots good for analysis but too detailed for presentation</li>
-              <li class="fragment">my advice: still dubious for pie/donut charts</li>
-              <li class="fragment">sometimes ok if just 2 attribs</li>
-            </ul>
           </section>
           <section>
-            <h2>Idioms: normalized stacked bar chart</h2>
+            <h3>Idioms: normalized stacked bar chart</h3>
             <div class="flex">
-              <div class="half"></div>
-              <div class="half"></div>
+              <div class="half">
+                <ul class="tiny">
+                  <li class="fragment">task</li>
+                  <ul>
+                    <li class="fragment">part-to-whole judgments</li>
+                  </ul><br>
+                  <li class="fragment">normalized stacked bar chart</li>
+                  <ul>
+                    <li class="fragment">stacked bar chart, normalized to full vert height</li>
+                    <li class="fragment">single stacked bar equivalent to full pie</li>
+                    <ul>
+                      <li class="fragment">high information density: requires narrow rectangle</li>
+                    </ul>
+                  </ul><br>
+                  <li class="fragment">pie chart</li>
+                  <ul>
+                    <li class="fragment">information density: requires large circle</li>
+                  </ul>
+                </ul>
+              </div>
+              <div class="half">
+                <figure><img class="fill" style="max-width: 300px" data-src="../shared_images/vad_book_alldiagrams/normalized_stacked_barchart.png" alt="Normalized Stacked Bar Chart">
+                  <figcaption class="reference"><a href="http://bl.ocks.org/mbostock/3886208">http://bl.ocks.org/mbostock/3886208</a><a href="http://bl.ocks.org/mbostock/3887235">http://bl.ocks.org/mbostock/3887235</a><a href="http://bl.ocks.org/mbostock/3886394">http://bl.ocks.org/mbostock/3886394</a></figcaption>
+                </figure>
+              </div>
             </div>
-            <ul class="small">
-              <li class="fragment">task</li>
-              <li class="fragment">part-to-whole judgements</li><br>
-              <li class="fragment">normalized stacked bar chart</li>
-              <li class="fragment">stacked bar chart, normalized to full vert height</li>
-              <li class="fragment">single stacked bar equivalent to full pie</li>
-              <li class="fragment">high information density: requires narrow rectangle</li><br>
-              <li class="fragment">pie chart</li>
-              <li class="fragment">information density: requires large circle</li>
-            </ul>
           </section>
           <section>
             <h2>Idiom: glyphmaps</h2>
             <div class="flex">
-              <div class="half"></div>
-              <div class="half"></div>
+              <div class="half">
+                <ul class="small">
+                  <li class="fragment">rectilinear good for linear vs nonlinear trends</li>
+                  <li class="fragment">radial good for cyclic patterns</li>
+                </ul><br><img class="fragment" src="../shared_images/vad_book_alldiagrams/axis_rectilinear_and_radial.png" alt="Axis rectilinear and radial">
+              </div>
+              <div class="half">
+                <figure><img class="fill" data-src="../shared_images/vad_book_alldiagrams/glyphmaps.png" alt="Glyphmap">
+                  <figcaption class="reference">[Glyph-maps for Visually Exploring Temporal Patterns in Climate Data and Models. Wickham, Hofmann, Wickham, and Cook. Environmetrics 23:5 (2012), 382–393.]</figcaption>
+                </figure>
+              </div>
             </div>
-            <ul class="small">
-              <li class="fragment">rectilinear good for linear vs nonlinear trends</li>
-              <li class="fragment">radial good for cyclic patterns</li>
-            </ul>
           </section>
           <section>
-            <h2>Idiom: glyphmaps</h2>
+            <h3 class="demo">Glyphmap</h3>
+            <iframe class="blocks" data-src="http://blockbuilder.org/sxywu/8d1b563586bf411383345e95a3418715"></iframe><a class="tiny" target="_blank" href="http://blockbuilder.org/sxywu/8d1b563586bf411383345e95a3418715">http://blockbuilder.org/sxywu/8d1b563586bf411383345e95a3418715</a>
+          </section>
+          <section>
+            <h2>Radial orientation</h2>
             <div class="flex">
-              <div class="half"></div>
-              <div class="half"></div>
+              <div class="half">
+                <ul class="small">
+                  <li class="fragment">perceptual limits</li>
+                  <ul>
+                    <li class="fragment">polar coordinate asymmetry</li>
+                    <ul>
+                      <li class="fragment">angles lower precision than lengths</li>
+                      <li class="fragment">frequently problematic</li>
+                      <li class="fragment">sometimes can be deliberately exploited!</li>
+                      <ul>
+                        <li class="fragment">for 2 attribs of very unequal importance</li>
+                      </ul>
+                    </ul>
+                  </ul>
+                </ul>
+                <figure><img src="../shared_images/vad_book_alldiagrams/radial_weaknesses.png" alt="Radial Weaknesses">
+                  <figcaption class="reference">[Uncovering Strengths and Weaknesses of Radial Visualizations - an Empirical Approach. Diehl, Beck and Burch. IEEE TVCG (Proc. InfoVis) 16(6):935--942, 2010.]</figcaption>
+                </figure>
+              </div>
+              <div class="half"><img style="max-width:200px" src="../shared_images/vad_book_alldiagrams/axis_orientation_vertical.png" alt="Axis Orientation"></div>
             </div>
-            <ul class="small">
-              <li class="fragment">Radial orientation</li>
-              <li class="fragment">perceptual limits</li>
-              <li class="fragment">polar coordinate asymmetry</li>
-              <li class="fragment">angles lower precision than lengths</li>
-              <li class="fragment">frequently problematic</li>
-              <li class="fragment">sometimes can be deliberately exploited!</li>
-              <li class="fragment">for 2 attribs of very unequal importance</li>
-            </ul>
           </section>
           <section>
             <h2>Idiom: Dense software overviews</h2>
             <div class="flex">
-              <div class="half"></div>
-              <div class="half"></div>
+              <div class="half">
+                <ul class="small">
+                  <li class="fragment">data: text</li>
+                  <ul>
+                    <li class="fragment">text + 1 quant attrib per line</li>
+                  </ul>
+                  <li class="fragment">derived data:</li>
+                  <ul>
+                    <li class="fragment">one pixel high line</li>
+                    <li class="fragment">length according to original</li>
+                  </ul>
+                  <li class="fragment">color line by attrib</li>
+                  <li class="fragment">scalability</li>
+                  <ulli class="fragment">10K+ lines</ulli>
+                </ul>
+              </div>
+              <div class="half">
+                <figure><img src="../shared_images/vad_book_alldiagrams/dense_software_overviews.png" alt="Dense Software Overviews">
+                  <figcaption class="reference">[Visualization of test information to assist fault localization. Jones, Harrold, Stasko. Proc. ICSE 2002, p 467-477.]</figcaption>
+                </figure>
+              </div>
             </div>
-            <ul class="small">
-              <li class="fragment">data: text</li>
-              <li class="fragment">text + 1 quant attrib per line</li>
-              <li class="fragment">derived data:</li>
-              <li class="fragment">one pixel high line</li>
-              <li class="fragment">length according to original</li>
-              <li class="fragment">color line by attrib</li>
-              <li class="fragment">scalability</li>
-              <li class="fragment">10K+ lines</li>
-            </ul>
           </section>
         </section>
         <section>
           <section>
+            <h1>Tables with D3</h1>
+          </section>
+          <section>
             <h3 class="demo">Stacked barchart</h3>
-            <iframe class="blocks" src="http://blockbuilder.org/mbostock/3886208"></iframe><a class="tiny" target="_blank" href="http://blockbuilder.org/mbostock/3886208">http://blockbuilder.org/mbostock/3886208</a>
+            <iframe class="blocks" data-src="http://blockbuilder.org/mbostock/3886208"></iframe><a class="tiny" target="_blank" href="http://blockbuilder.org/mbostock/3886208">http://blockbuilder.org/mbostock/3886208</a>
           </section>
           <section>
             <h3 class="demo">d3.stack and d3.nest</h3>
@@ -685,77 +861,33 @@
           <section>
             <h3 class="demo">d3 stack</h3><a class="tiny" href="https://github.com/d3/d3-shape/blob/v1.3.5/README.md#stack">https://github.com/d3/d3-shape/blob/v1.3.5/README.md#stack</a><img style="height:400px" src="../shared_images/vad_book_alldiagrams/d3_stack.png" alt="d3 stack">
           </section>
-          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/08_tables-spatial.010.png"></section>
-          <section>
-            <h3 class="demo">Streamgraph</h3>
-            <iframe class="blocks" src="http://blockbuilder.org/mbostock/4060954"></iframe><a class="tiny" target="_blank" href="http://blockbuilder.org/mbostock/4060954">http://blockbuilder.org/mbostock/4060954</a>
-          </section>
-          <section>
-            <h3 class="demo">Streamgraph RIO2016</h3><img class="blocks" src="../shared_images/vad_book_alldiagrams/streamGraphNYTimes.png" alt="Streamgraph RIO2016 NY times"><a class="tiny" target="_blank" href="http://www.nytimes.com/interactive/2016/08/08/sports/olympics/history-olympic-dominance-charts.html?_r=0">http://www.nytimes.com/interactive/2016/08/08/sports/olympics/history-olympic-dominance-charts.html?_r=0</a>
-          </section>
-          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/08_tables-spatial.011.png"></section>
-          <section>
-            <h3 class="demo">Linechart</h3>
-            <iframe class="blocks" src="http://blockbuilder.org/mbostock/3883245"></iframe><a class="tiny" target="_blank" href="http://blockbuilder.org/mbostock/3883245">http://blockbuilder.org/mbostock/3883245</a>
-          </section>
-          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/08_tables-spatial.012.png"></section>
-          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/08_tables-spatial.013.png"></section>
-          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/08_tables-spatial.014.png"></section>
           <section>
             <h3 class="demo">Heatmap</h3>
-            <iframe class="blocks" src="http://blockbuilder.org/ianyfchang/8119685"></iframe><a class="tiny" target="_blank" href="http://blockbuilder.org/ianyfchang/8119685">http://blockbuilder.org/ianyfchang/8119685</a>
+            <iframe class="blocks" data-src="http://blockbuilder.org/ianyfchang/8119685"></iframe><a class="tiny" target="_blank" href="http://blockbuilder.org/ianyfchang/8119685">http://blockbuilder.org/ianyfchang/8119685</a>
           </section>
-          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/08_tables-spatial.015.png"></section>
-          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/08_tables-spatial.016.png"></section>
           <section>
             <h3 class="demo">Scatterplot Matrix</h3>
-            <iframe class="blocks" src="http://blockbuilder.org/mbostock/4063663"></iframe><a class="tiny" target="_blank" href="http://blockbuilder.org/mbostock/4063663">http://blockbuilder.org/mbostock/4063663</a>
-          </section>
-          <section>
-            <h2>Bonus: InMens</h2>
-            <p>What about millions of points?</p><a target="_blank" href="http://vis.stanford.edu/projects/immens/demo/splom/">http://vis.stanford.edu/projects/immens/demo/splom/</a>
+            <iframe class="blocks" data-src="http://blockbuilder.org/mbostock/4063663"></iframe><a class="tiny" target="_blank" href="http://blockbuilder.org/mbostock/4063663">http://blockbuilder.org/mbostock/4063663</a>
           </section>
           <section>
             <h3 class="demo">Parallel Coordinates</h3>
-            <iframe class="blocks" src="http://blockbuilder.org/syntagmatic/3150059"></iframe><a class="tiny" target="_blank" href="http://blockbuilder.org/syntagmatic/3150059">http://blockbuilder.org/syntagmatic/3150059</a>
+            <iframe class="blocks" data-src="http://blockbuilder.org/syntagmatic/3150059"></iframe><a class="tiny" target="_blank" href="http://blockbuilder.org/syntagmatic/3150059">http://blockbuilder.org/syntagmatic/3150059</a>
           </section>
-          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/08_tables-spatial.017.png"></section>
-          <section>
-            <h3 class="demo">Navio</h3>
-            <iframe class="blocks" src="https://navio.dev"></iframe><a class="tiny" target="_blank" href="https://navio.dev">https://navio.dev</a>
-          </section>
-          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/08_tables-spatial.018.png"></section>
-          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/08_tables-spatial.019.png"></section>
           <section>
             <h3 class="demo">Polar Area Chart</h3>
-            <iframe class="blocks" src="http://blockbuilder.org/curran/94f1376b946c9d217014"></iframe><a class="tiny" target="_blank" href="http://blockbuilder.org/curran/94f1376b946c9d217014">http://blockbuilder.org/curran/94f1376b946c9d217014</a>
+            <iframe class="blocks" data-src="http://blockbuilder.org/curran/94f1376b946c9d217014"></iframe><a class="tiny" target="_blank" href="http://blockbuilder.org/curran/94f1376b946c9d217014">http://blockbuilder.org/curran/94f1376b946c9d217014</a>
           </section>
-          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/08_tables-spatial.020.png"></section>
           <section>
             <h3 class="demo">Pie chart</h3>
-            <iframe class="blocks" src="http://blockbuilder.org/mbostock/3887235"></iframe><a class="tiny" target="_blank" href="http://blockbuilder.org/mbostock/3887235">http://blockbuilder.org/mbostock/3887235</a>
+            <iframe class="blocks" data-src="http://blockbuilder.org/mbostock/3887235"></iframe><a class="tiny" target="_blank" href="http://blockbuilder.org/mbostock/3887235">http://blockbuilder.org/mbostock/3887235</a>
           </section>
           <section>
             <h3 class="demo">Donut chart</h3>
-            <iframe class="blocks" src="http://blockbuilder.org/mbostock/1346410"></iframe><a class="tiny" target="_blank" href="http://blockbuilder.org/mbostock/1346410">http://blockbuilder.org/mbostock/1346410</a>
+            <iframe class="blocks" data-src="http://blockbuilder.org/mbostock/1346410"></iframe><a class="tiny" target="_blank" href="http://blockbuilder.org/mbostock/1346410">http://blockbuilder.org/mbostock/1346410</a>
           </section>
           <section>
             <h3 class="demo">Stacked bar chart normalized</h3>
-            <iframe class="blocks" src="http://blockbuilder.org/mbostock/3886394"></iframe><a class="tiny" target="_blank" href="http://blockbuilder.org/mbostock/3886394">http://blockbuilder.org/mbostock/3886394</a>
-          </section>
-          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/08_tables-spatial.021.png"></section>
-          <section>
-            <h3 class="demo">Glyphmap</h3>
-            <iframe class="blocks" src="http://blockbuilder.org/sxywu/8d1b563586bf411383345e95a3418715"></iframe><a class="tiny" target="_blank" href="http://blockbuilder.org/sxywu/8d1b563586bf411383345e95a3418715">http://blockbuilder.org/sxywu/8d1b563586bf411383345e95a3418715</a>
-          </section>
-          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/08_tables-spatial.022.png"></section>
-          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/08_tables-spatial.023.png"></section>
-          <section>
-            <h2>MLExplore.js</h2>
-            <div class="fragment">Dimmensionality Reduction<span class="fragment"> +  Clustering</span></div>
-            <div class="small portrait"><img src="../shared_images/vad_book_alldiagrams/Fabian.jpg" alt="Fabián Peña">
-              <div>Fabian Peña</div>
-            </div><a class="tiny" href="https://fabiancpl.github.io/MLExplore.js/">https://fabiancpl.github.io/MLExplore.js/</a>
+            <iframe class="blocks" data-src="http://blockbuilder.org/mbostock/3886394"></iframe><a class="tiny" target="_blank" href="http://blockbuilder.org/mbostock/3886394">http://blockbuilder.org/mbostock/3886394</a>
           </section>
         </section>
         <section id="review">
