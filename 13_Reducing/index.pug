@@ -1,7 +1,7 @@
 doctype html
 html(lang="en")
   head
-    title Week 13 Reducing attributes and rows. MIDS W209 Information Visualization Slides
+    title Week 13 Reducing Attributes and Rows. MIDS W209 Information Visualization Slides
     meta(charset="utf-8")
     meta(name="author", content="John Alexis Guerra Gómez")
     meta(name="description", content="Week 6 Reducing attributes and rows. MIDS W209 Information Visualization Slides")
@@ -28,7 +28,7 @@ html(lang="en")
     .reveal
       .slides
         section
-          h1.title Reducing attributes and rows
+          h1.title Reducing Attributes and Rows
             br
             small MIDS W209: Information Visualization
 
@@ -51,7 +51,7 @@ html(lang="en")
         //- Outline
         section#outline
           section
-            h2 What we are going to learn
+            h2 What We Are Going to Learn
             ul.small
 
         section
@@ -141,8 +141,28 @@ html(lang="en")
           section
             h3 Embed, Focus+Context
           section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/15_embed-tj.003.png")
-          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/15_embed-tj.004.png")
 
+          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/15_embed-tj.004.png")
+          section
+            h2 Reduce Items and Attributes
+            .flex
+              .half 
+              ul
+                li.fragment Feduce/increase: inverses
+                li.fragment Filter
+                ul
+                  li.fragment Pro: straightforward and intuitive
+                  ul
+                    li.fragment To understand and compute
+                  li.fragment Con: out of sight, out of mind
+                li.fragment Aggregation
+                  li.fragment Pro: inform about whole set
+                  li.fragment Con: difficult to avoid losing signal 
+                li.fragment Not mutually exclusive
+                  li.fragment Combine filter, aggregate
+                  li.fragment Combine reduce, change, facet
+              .half
+                img(src="../shared_images/vad_book_alldiagrams/pr13_reduce-items-attributes.png", alt="Filter by items and by attributes; aggregate by items and by attributes; reduce filter and aggregate")
           //- Fish eye
           section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/15_embed-tj.005.png")
 
@@ -153,6 +173,21 @@ html(lang="en")
             a.tiny(target="_blank" href="http://bl.ocks.org/mbostock/") by mbostock
 
           section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/15_embed-tj.006.png")
+          section
+            h2 Idiom: Scented Widgets
+            .flex
+              .twothirds
+                ul
+                  li.fragment Augmented widgets show information scent
+                  ul
+                    li.fragment Cues to show whether value in drilling down further vs looking elsewhere
+                  li.fragment Concise use of space: histogram on slider
+                img(src="../shared_images/vad_book_alldiagrams/pr13_reduce-scented-widgets1.png", alt="")
+                a.bottom.tiny(href="www.win.tue.nl/~selzen/paper/InfoVis2014.pdf") [Multivariate Network Exploration and Presentation: From Detail to Overview via Selections and Aggregations.  van den Elzen, van Wijk, IEEE TVCG 20(12): 2014 (Proc. InfoVis 2014).]
+              .third
+                img(src="../shared_images/vad_book_alldiagrams/pr13_reduce-scented-widgets2.png", alt="")
+                a.tiny [Scented Widgets: Improving Navigation Cues with Embedded Visualizations. Willett, Heer, and Agrawala. IEEE TVCG (Proc. InfoVis 2007) 13:6 (2007), 1129–1136.]
+                img(src="../shared_images/vad_book_alldiagrams/pr13_reduce-scented-widgets3.png", alt="")
           section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/15_embed-tj.007.png")
           section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/15_embed-tj.008.png")
           section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/15_embed-tj.009.png")
