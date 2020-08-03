@@ -278,6 +278,7 @@ body {
 .reveal .logo {
   display: flex;
   height: 50px;
+  width: inherit;
   margin-right: 10px;
 }
 .reveal .flex {
