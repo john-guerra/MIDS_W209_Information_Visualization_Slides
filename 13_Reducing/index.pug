@@ -190,8 +190,56 @@ html(lang="en")
                 img(src="../shared_images/vad_book_alldiagrams/pr13_reduce-scented-widgets3.png", alt="")
           section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/15_embed-tj.007.png")
           section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/15_embed-tj.008.png")
+          section
+            h2 Idiom: Histogram
+            .flex
+              .half
+              ul
+                li.fragment Static item aggregation
+                li.fragment Task: find distribution
+                li.fragment Data: table
+                li.fragment Derived data
+                ul
+                  li.fragment New table: keys are bins, values are counts
+                li.fragment Bin size crucial
+                  li.fragment Pattern can change dramatically depending on discretization
+                  li.fragment Opportunity for interaction: control bin size on the fly
+              .half
+                img(src="../shared_images/vad_book_alldiagrams/pr13_reduce-histogram.png", alt="Histogram")
           section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/15_embed-tj.009.png")
+          section
+            h2 Idiom: Boxplot
+            .flex
+              .half
+                ul
+                  li.fragment Static item aggregation
+                  li.fragment Task: find distribution
+                  li.fragment Data: table
+                  li.fragment Derived data
+                  ul
+                    li.fragment 5 quant attribs
+                    ul
+                      li.fragment Median: central line
+                      li.fragment Lower and upper quartile: boxes
+                      li.fragment Lower upper fences: whiskers
+                      ul
+                        li.fragment Values beyond which items are outliers
+                    li.fragment Outliers beyond fence cutoffs explicitly shown
+              .half
+                img(src="../shared_images/vad_book_alldiagrams/pr13_reduce-boxplot.png", alt="Boxplot")
+                a.bottom.tiny [40 years of boxplots. Wickham and Stryjewski. 2012. had.co.nz]
           section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/15_embed-tj.010.png")
+          section
+            h2 Idiom: Hierarchical Parallel Coordinates
+            ul
+              li.fragment Dynamic item aggregation
+              li.fragment Derived data: hierarchical clustering
+              li.fragment Encoding: 
+              ul
+                li.fragment Cluster band with variable transparency, line at mean, width by min/max values
+                li.fragment Color by proximity in hierarchy
+            img(src="../shared_images/vad_book_alldiagrams/pr13_reduce-hierarchical-clustering.png", alt="")
+            a.bottom.tiny [Hierarchical Parallel Coordinates for Exploration of Large Datasets. Fua, Ward, and Rundensteiner. Proc. IEEE Visualization Conference (Vis ’99), pp. 43– 50, 1999.]
           section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/15_embed-tj.011.png")
           section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/15_embed-tj.012.png")
           section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/15_embed-tj.013.png")
