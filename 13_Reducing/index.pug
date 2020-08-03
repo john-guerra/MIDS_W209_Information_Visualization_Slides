@@ -241,13 +241,104 @@ html(lang="en")
             img(src="../shared_images/vad_book_alldiagrams/pr13_reduce-hierarchical-clustering.png", alt="")
             a.bottom.tiny [Hierarchical Parallel Coordinates for Exploration of Large Datasets. Fua, Ward, and Rundensteiner. Proc. IEEE Visualization Conference (Vis ’99), pp. 43– 50, 1999.]
           section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/15_embed-tj.011.png")
+          section
+            h2 Dimensionality Reduction
+            ul
+              li.fragment Attribute aggregation
+              ul
+                li.fragment Derive low-dimensional target space from high-dimensional measured space
+                ul
+                  li.fragment Capture most of variance with minimal error
+                li.fragment Use when you can’t directly measure what you care about
+                  li.fragment True dimensionality of dataset conjectured to be smaller than dimensionality of measurements
+                  li.fragment Latent factors, hidden variables
+            img(src="../shared_images/vad_book_alldiagrams/pr13_reduce-dimensionality.png", alt="Taking tumor measurement data in 9D measured space and running dimensionality reduction derives that data in a 2D target space where it is easier to see groupings of benign and malignant tumors")
           section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/15_embed-tj.012.png")
+          section
+            h2 Dimensionality Reduction for Documents
+            img(src="../shared_images/vad_book_alldiagrams/pr13_reduce-dimensionality-for-documents.png", alt="")
           section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/15_embed-tj.013.png")
+          section
+            h2 Dimensionality vs. Attribute Reduction
+            ul
+              li.fragment Vocab use in field not consistent
+              ul
+                li.fragment Dimension/attribute
+              li.fragment Attribute reduction: reduce set with filtering
+                li.fragment Includes orthographic projection
+              li.fragment Dimensionality reduction: create smaller set of new dims/attribs
+                li.fragment Typically implies dimensional aggregation, not just filtering
+                li.fragment Vocab: projection/mapping
           section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/15_embed-tj.014.png")
+          section
+            h2 Estimating True Dimensionality
+            ul
+              li.fragment How do you know when you would benefit from DR?
+              ul
+                li.fragment Consider error for low-dim projection vs. high-dim projection
+              li.fragment No single correct answer; many metrics proposed
+                li.fragment Cumulative variance that is not accounted for
+                li.fragment Strain: Match variations in distance (vs. actual distance values)
+                li.fragment Stress: Difference between interpoint distances in high and low dims
+            img(src="../shared_images/vad_book_alldiagrams/pr13_estimate-true-dimensionality.png", alt="")
           section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/15_embed-tj.015.png")
+          section
+            h2 Estimating True Dimensionality
+            ul
+              li.fragment Scree plots as simply way: error against # attribs
+            img(src="", alt="")
+              ul
+                li.fragment Original dataset: 294 dims
+                li.fragment Estimate: Almost all variance preserved with less than 20 dims
+            a.bottom.tiny [Fig 2. DimStiller: Workflows for dimensional analysis and reduction. Ingram et al. Proc. VAST 2010, p 3-10]
           section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/15_embed-tj.016.png")
+          section
+            h2 Dimensionality Reduction and Visualization
+            ul
+              li.fragment Why do people do DR?
+              ul
+                li.fragment Improve performance of downstream algorithm
+                ul
+                  li.fragment Avoid curse of dimensionality
+                li.fragment Data analysis
+                  li.fragment If look at the output: visual data analysis
+              li.fragment Abstract tasks when visualizing DR data 
+                li.fragment Dimension-oriented tasks
+                  li.fragment Naming synthesized dims, mapping synthesized dims to original dims
+                li.fragment Cluster-oriented tasks
+                  li.fragment Verifying clusters, naming clusters, matching clusters and classes
+            a.bottom.tiny [Visualizing Dimensionally-Reduced Data: Interviews with Analysts and a Characterization of Task Sequences. Brehmer, Sedlmair, Ingram, and Munzner. Proc. BELIV 2014.]
           section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/15_embed-tj.017.png")
+          section
+            h2 Linear Dimensionality Reduction
+            ul
+              li.fragment Principal components analysis (PCA)
+              ul
+                li.fragment Finding axes: first with most variance, second with next most, …
+                li.fragment Describe location of each point as linear combination of weights for each axis
+                ul
+                  li.fragment Mapping synthesized dims to original dims
+            img(src="../shared_images/vad_book_alldiagrams/pr13_reduce-dimensionality-scatterplot.png", alt="")
+            a.bottom.tiny [http://en.wikipedia.org/wiki/File:GaussianScatterPCA.png]
           section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/15_embed-tj.018.png")
+          section
+            h2 Nonlinear Dimensionality Reduction
+            ul
+              li.fragment Pro: can handle curved rather than linear structure
+              li.fragment Cons: lose all ties to original dims/attribs
+              ul
+                li.fragment New dimensions often cannot be easily related to originals
+                ul
+                  li.fragment Mapping synthesized dims to original dims task is difficult
+              li.fragment Many techniques proposed
+                li.fragment Many literatures: visualization, machine learning, optimization, psychology, ... 
+                li.fragment Techniques: t-SNE, MDS (multidimensional scaling), charting, isomap, LLE,…
+                  li.fragment t-SNE: excellent for clusters
+                  ul
+                    li.fragment But some trickiness remains: http://distill.pub/2016/misread-tsne/
+                  li.fragment MDS: confusingly, entire family of techniques, both linear and nonlinear
+                    li.fragment Minimize stress or strain metrics
+                    li.fragment Early formulations equivalent to PCA
           section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/15_embed-tj.019.png")
           section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/15_embed-tj.020.png")
           section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/15_embed-tj.021.png")
