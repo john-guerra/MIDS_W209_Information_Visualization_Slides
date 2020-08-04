@@ -60,6 +60,74 @@
             <h3 class="demo">Violin plot</h3>
             <iframe class="blocks" src="http://blockbuilder.org/asielen/92929960988a8935d907e39e60ea8417"></iframe><a class="tiny" target="_blank" href="http://blockbuilder.org/asielen/92929960988a8935d907e39e60ea8417">http://blockbuilder.org/asielen/92929960988a8935d907e39e60ea8417</a><a class="tiny" target="_blank" href="http://bl.ocks.org/asielen/">by asielen</a>
           </section>
+          <section>
+            <h2>Idiom: 2D density plots</h2>
+            <div class="flex">
+              <div class="half">
+                <ul class="small">
+                  <li class="fragment">Scatter-plot meet heat-map</li>
+                  <ul>
+                    <li class="fragment">derived data</li>
+                    <ul>
+                      <li class="fragment">Teselate space info areas</li>
+                      <li class="fragment">Count number of elements falling on that area</li>
+                    </ul>
+                    <li class="fragment"><strong>Mark</strong>: Dots (boxes)</li>
+                    <li class="fragment"><strong>Channels</strong>:</li>
+                    <ul>
+                      <li class="fragment">Position: Location of areas</li>
+                      <li class="fragment">Color (brightness): Number of elements</li>
+                    </ul>
+                    <ul>
+                      <li class="fragment">marks (re-)ordered by cluster hierarchy traversal</li>
+                    </ul>
+                    <li class="fragment"><strong>Tasks</strong>: Summarize distribution.</li>
+                    <li class="fragment"><strong>Scalability:</strong></li>
+                    <ul>
+                      <li class="fragment">Millions of rows (might require preprocessing)</li>
+                    </ul>
+                  </ul>
+                </ul>
+              </div>
+              <div class="half">
+                <div id="observablehq-d74d4a6f">
+                  <div class="r-stack">
+                    <div class="fragment observablehq-moviesScatterplot"></div>
+                    <div class="fragment observablehq-moviesDensityCircles"></div>
+                    <div class="fragment observablehq-moviesDensityBoxes"></div>
+                  </div>
+                  <div style="overflow: hidden;"><a style="display: block; float:right;" href="https://observablehq.com/@john-guerra/data-transformation@307"><object type="image/svg+xml" style="pointer-events: none;" width=180 height=22 data="https://static.observableusercontent.com/files/c3fab254a006f1a3a1f9f63aba8ab1460db4752529036b9962950bde0ec195bab823daa6b278b1c3401e545b3bd640ddfdcad805cf9859af218cb2b9fed4ddf0"></object></a></div>
+                </div>
+                <script type="module">
+                  import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+                  import define from "https://api.observablehq.com/@john-guerra/data-transformation@307.js?v=3";
+                  (new Runtime).module(define, name => {
+                    if (name === "moviesScatterplot") return Inspector.into("#observablehq-d74d4a6f .observablehq-moviesScatterplot")();
+                    if (name === "moviesDensityCircles") return Inspector.into("#observablehq-d74d4a6f .observablehq-moviesDensityCircles")();
+                    if (name === "moviesDensityBoxes") return Inspector.into("#observablehq-d74d4a6f .observablehq-moviesDensityBoxes")();
+                  });
+                </script>
+                
+              </div>
+            </div>
+          </section>
+          <section class="full">
+            <h2>Interactive Density Plot</h2>
+            <div>
+              <div id="observablehq-8ab2bcad">
+                <div class="observablehq-chart"></div>
+                <div style="overflow: hidden;"><a style="display: block; float:right;" href="https://observablehq.com/@john-guerra/density-plot"><object type="image/svg+xml" style="pointer-events: none;" width=180 height=22 data="https://static.observableusercontent.com/files/c3fab254a006f1a3a1f9f63aba8ab1460db4752529036b9962950bde0ec195bab823daa6b278b1c3401e545b3bd640ddfdcad805cf9859af218cb2b9fed4ddf0"></object></a></div>
+              </div>
+              <script type="module">
+                import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+                import define from "https://api.observablehq.com/@john-guerra/density-plot.js?v=3";
+                (new Runtime).module(define, name => {
+                  if (name === "chart") return Inspector.into("#observablehq-8ab2bcad .observablehq-chart")();
+                });
+              </script>
+              
+            </div>
+          </section>
           <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/14_reduce-glimmer.010.png"></section>
           <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/14_reduce-glimmer.011.png"></section>
           <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/14_reduce-glimmer.012.png"></section>
@@ -131,7 +199,6 @@
     <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.13.1"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-lite-api@0.11.0"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-tooltip@0.23.2"></script>
-    <script src="./week4.js"></script>
     <script>
       Reveal.initialize({
         controls: true,
