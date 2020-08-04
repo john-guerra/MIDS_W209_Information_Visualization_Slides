@@ -156,47 +156,64 @@ html(lang="en")
                   img.fill(data-src="../shared_images/vad_book_alldiagrams/dual_axis.png", alt="Dual Axis")
                   figcaption.reference Ben Jones @DataRemixed
 
-          section
-            h2 Choosing line chart aspect ratios
-            ul.small
-              li.fragment 1: banking to 45 (1980s)
-              li.fragment Cleveland perceptual argument: most accurate angle judgement at 45
+          section.full
+            h3 Line chart aspect ratio
+            .flex
+              .half
+                ul.tiny
+                  li.fragment 1: banking to 45 (1980s)
+                    ul
+                      li.fragment Cleveland perceptual argument: most accurate angle judgement at 45
+              .half
 
-          section
-            h2 Choosing line chart aspect ratios
-            ul.small
-              li.fragment 2: multi scale banking to 45 (2006)
-              li.fragment frequency domain analysis to find ratios
-              li.fragment FFT the data, convolve with Gaussian to smooth
-              li.fragment find interesting spikes/ranges in power spectrum
-              li.fragment cull nearby regions if similar, ensure overview
-              li.fragment create trend curves (red) for each aspect ratio
+          section.full
+            h3 Line chart aspect ratio
+            .flex
+              .half
+                ul.tiny
+                  li.fragment 2: multi scale banking to 45 (2006)
+                    ul
+                      li.fragment frequency domain analysis to find ratios
+                      li.fragment FFT the data, convolve with Gaussian to smooth
+                      li.fragment find interesting spikes/ranges in power spectrum
+                      li.fragment cull nearby regions if similar, ensure overview
+                      li.fragment create trend curves (red) for each aspect ratio
+              .half
 
 
-          section
-            h2 Choosing line chart aspect ratios
-            ul.small
-              li.fragment 3: arc length based aspect ratio (2011)
-              li.fragment minimize the arc length of curve while keeping the area of the plot constant
-              li.fragment parametrization and scale invariant
-              li.fragment symmetry preserving
-              li.fragment robust & fast to compute
-              br
-              li.fragment meta-points from this progression
-              li.fragment young field; prescriptive advice changes rapidly
-              li.fragment reasonable defaults required deep dive into perception meets math
+          section.full
+            h3 Line chart aspect ratio
+            .flex
+              .half
+                ul.tiny
+                  li.fragment 3: arc length based aspect ratio (2011)
+                    ul
+                      li.fragment minimize the arc length of curve while keeping the area of the plot constant
+                      li.fragment parametrization and scale invariant
+                      li.fragment symmetry preserving
+                      li.fragment robust & fast to compute
+                      br
+                      li.fragment meta-points from this progression
+                      li.fragment young field; prescriptive advice changes rapidly
+                      li.fragment reasonable defaults required deep dive into perception meets math
+              .half
 
           section
             h2 Idiom: Indexed line charts
-            ul.small
-              li.fragment data: 2 quant attires
-              li.fragment 1 key + 1 value
-              li.fragment derived data: new quant value attrib
-              li.fragment index
-              li.fragment plot instead of original value
-              li.fragment task: show change over time
-              li.fragment principle: normalized, not absolute
-              li.fragment scalability same as standard line chart
+            .flex
+              .half
+                ul.small
+                  li.fragment data: 2 quant attires
+                    ul
+                      li.fragment 1 key + 1 value
+                  li.fragment derived data: new quant value attrib
+                    ul
+                      li index
+                      li plot instead of original value
+                  li.fragment task: show change over time
+                    ul
+                      li principle: normalized, not absolute
+                  li.fragment scalability same as standard line chart
 
 
         section#areaCharts
