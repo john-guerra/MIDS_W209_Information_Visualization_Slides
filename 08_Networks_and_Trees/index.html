@@ -22,409 +22,62 @@
           <h1 class="title">Visualizing Networks and Trees<br><small>MIDS W209: Information Visualization</small></h1>
           <div class="r-stretch"></div>
           <div class="tiny"><a href="https://johnguerra.co/" target="_blank"><strong> John Alexis Guerra Gómez</strong></a><span> |  john.guerra[at]gmail.com</span><a href="https://twitter.com/duto_guerra"> |  @duto_guerra</a><br><a href="https://johnguerra.co/lectures/MIDS_W209_Information_Visualization/08_Networks_and_Trees/" target="_blank">https://johnguerra.co/lectures/MIDS_W209_Information_Visualization/08_Networks_and_Trees/</a></div>
-          <div class="logo"><a href="https://datascience.berkeley.edu/"><img class="logo" src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo"></a></div>
+          <div class="logo"><a href="https://datascience.berkeley.edu/"><img class="logo" data-src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo"></a></div>
           <div class="tiny">Partially based on<a href="https://www.cs.ubc.ca/~tmm/talks.html#minicourse14"> slides from Tamara Munzner</a></div>
         </section>
         <section id="outline">
+          <section class="full">
+            <h2>Arrange networks and trees</h2><img style="max-height: 400px" data-src="../shared_images/vad_book_alldiagrams/how_networks_and_trees.png" alt="How Networks and Trees">
+          </section>
           <section>
             <h2>What we are going to learn</h2>
             <ul class="small small"></ul>
           </section>
         </section>
-        <section>
+        <section id="forceSimulations">
           <section>
-            <h2>Visualizing Networks</h2>
-          </section>
-          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/09_networks-star-steno-topo.002.png"></section>
-          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/09_networks-star-steno-topo.003.png"></section>
-          <section>
-            <h3 class="demo">Force Directed Layout</h3>
-            <iframe class="blocks" src="http://blockbuilder.org/mbostock/4062045"></iframe>
-            <div class="tiny"><a target="_blank" href="http://blockbuilder.org/mbostock/4062045">http://blockbuilder.org/mbostock/4062045</a></div>
-            <div class="tiny"><a target="_blank" href="http://bl.ocks.org/mbostock/">by mbostock</a></div>
-          </section>
-          <section>
-            <h2>Use the force!</h2>
-          </section>
-          <section>
-            <h3 class="demo">Beeswarm plot</h3>
-            <iframe class="blocks" src="http://blockbuilder.org/mbostock/6526445e2b44303eebf21da3b6627320"></iframe>
-            <div class="tiny"><a target="_blank" href="http://blockbuilder.org/mbostock/6526445e2b44303eebf21da3b6627320">http://blockbuilder.org/mbostock/6526445e2b44303eebf21da3b6627320</a></div>
-            <div class="tiny"><a target="_blank" href="http://bl.ocks.org/mbostock/">by mbostock</a></div>
-          </section>
-          <section>
-            <h3 class="demo">Collision Detection</h3>
-            <iframe class="blocks" src="http://blockbuilder.org/mbostock/31ce330646fa8bcb7289ff3b97aab3f5"></iframe>
-            <div class="tiny"><a target="_blank" href="http://blockbuilder.org/mbostock/31ce330646fa8bcb7289ff3b97aab3f5">http://blockbuilder.org/mbostock/31ce330646fa8bcb7289ff3b97aab3f5</a></div>
-            <div class="tiny"><a target="_blank" href="http://bl.ocks.org/mbostock/">by mbostock</a></div>
-          </section>
-          <section>
-            <h3 class="demo">Force in a Box</h3>
-            <iframe class="blocks" src="http://blockbuilder.org/john-guerra/14c943d8f198d9f3fef2"></iframe>
-            <div class="tiny"><a target="_blank" href="http://blockbuilder.org/john-guerra/14c943d8f198d9f3fef2">http://blockbuilder.org/john-guerra/14c943d8f198d9f3fef2</a></div>
-            <div class="tiny"><a target="_blank" href="http://bl.ocks.org/john-guerra/">by john-guerra</a></div>
-          </section>
-          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/09_networks-star-steno-topo.004.png"></section>
-          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/09_networks-star-steno-topo.005.png"></section>
-          <section>
-            <h3 class="demo">Adjacency Matrix</h3>
-            <iframe class="blocks" src="https://bost.ocks.org/mike/miserables/"></iframe>
-            <div class="tiny"><a target="_blank" href="https://bost.ocks.org/mike/miserables/">https://bost.ocks.org/mike/miserables/</a></div>
-          </section>
-          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/09_networks-star-steno-topo.006.png"></section>
-          <section>
-            <h2 class="demo">Chord Diagram</h2>
-            <div class="left small">
-              <ul class="small">
-                <li>Data: Networks (small # of nodes)</li>
-                <li>Tasks: Summarize connections. Identify highest degree</li>
-                <li>Considerations: Usually good for origin -> destination</li>
-              </ul>
-            </div>
-            <div class="right"><img class="fill" src="../shared_images/chord.svg" alt="Chord Diagram">
-              <div class="tiny"><a href="https://observablehq.com/@john-guerra/mouseover-chord-diagram">https://observablehq.com/@john-guerra/mouseover-chord-diagram</a></div>
-            </div>
-          </section>
-          <section>
-            <h2 class="demo">Edge Bundling</h2>
-            <div class="left small">
-              <ul class="small">
-                <li>Data: Networks</li>
-                <li>Tasks: Summarize common connections.</li>
-                <li>Considerations:
-                  <ul class="small">
-                    <li>Reduces cluttering</li>
-                    <li>Requires computing time</li>
-                    <li>Works with any link based idiom</li>
-                  </ul>
-                </li>
-              </ul>
-            </div>
-            <div class="right"><img class="fill" src="../shared_images/edgeBundling.png" alt="Edge Bundling">
-              <div class="tiny"><a href="https://observablehq.com/@d3/hierarchical-edge-bundling">https://observablehq.com/@d3/hierarchical-edge-bundling</a></div>
-            </div>
-          </section>
-          <section>
-            <h2 class="demo">Arc Diagram</h2>
-            <div class="left small">
-              <ul class="small">
-                <li>Data: Networks (few nodes)</li>
-                <li>Tasks: Summarize common connections.</li>
-                <li>Considerations:
-                  <ul class="small">
-                    <li>Nodes order matter</li>
-                    <li>Better with highly clustered data</li>
-                  </ul>
-                </li>
-              </ul>
-            </div>
-            <div class="right"><img class="fill" src="../shared_images/arcDiagram.svg" alt="Arc Diagram">
-              <div class="tiny"><a href="https://observablehq.com/@d3/arc-diagram">https://observablehq.com/@d3/arc-diagram</a></div>
-            </div>
-          </section>
-          <section>
-            <h2 class="demo">Arc Diagram</h2>
-            <iframe class="blocks" src="https://blockbuilder.org/rpgove/53bb49d6ed762139f33bdaea1f3a9e1c"></iframe>
-            <div class="tiny"><a target="_blank" href="https://blockbuilder.org/rpgove/53bb49d6ed762139f33bdaea1f3a9e1c">https://blockbuilder.org/rpgove/53bb49d6ed762139f33bdaea1f3a9e1c</a></div>
-            <div class="tiny"><a target="_blank" href="http://bl.ocks.org/rpgove/">by Robert Gove</a></div>
-          </section>
-          <section>
-            <h2 class="demo">Arc Diagram</h2>
-            <iframe class="blocks" src="https://bost.ocks.org/mike/hive/"></iframe>
-            <div class="tiny"><a target="_blank" href="https://bost.ocks.org/mike/hive/">https://bost.ocks.org/mike/hive/</a></div>
-          </section>
-          <section>
-            <h2 class="demo">Semantic Substrates</h2>
-            <div class="left small">
-              <ul class="small">
-                <li>Data: Networks with many edges</li>
-                <li>Task: Summarize distribution of non network attribs</li>
-                <li>Considerations:
-                  <ul class="small">
-                    <li>Easier to understand</li>
-                    <li>Scale well</li>
-                    <li>Edges on demand work best</li>
-                  </ul>
-                </li>
-              </ul>
-            </div>
-            <div class="right">
-              <figure><img class="fill" src="../shared_images/semanticSubstrates.gif" alt="Semantic Substrates">
-                <figcaption class="reference"><a href="https://johnguerra.co/viz/influentials/story/?hashtag=DeepIndaba2019">https://johnguerra.co/viz/influentials/story/?hashtag=DeepIndaba2019</a></figcaption>
-              </figure>
-            </div>
-          </section>
-          <section><a href="https://www.twosixlabs.com/6-ways-visualize-graphs/"><img src="../shared_images/6waystovisualizegraphs.png" alt="Six ways of visualizing networks by Robert Gove">
-              <figcaption class="reference">Robert Gove's Six ways of visualizing Networks</figcaption></a></section>
-        </section>
-        <section>
-          <section>
-            <h1>Appendix</h1>
-          </section>
-          <section>
-            <h2>Network Analysis Metrics</h2>
-            <ul class="small">
-              <li>Connections</li>
-              <li>Distribution</li>
-              <li>Segmentation</li>
-            </ul>
-            <div class="tiny"><a href="https://en.wikipedia.org/wiki/Social_network_analysis">https://en.wikipedia.org/wiki/Social_network_analysis</a></div>
-            <p>Use them as derived attributes</p>
-          </section>
-          <section>
-            <h2>Tools</h2>
-            <ul class="small">
-              <li><a href="https://www.smrfoundation.org/nodexl/">NodeXL</a></li>
-              <li><a href="https://gephi.org/">Gephi</a></li>
-            </ul>
-          </section>
-        </section>
-        <section id="Trees">
-          <section>
-            <h1>Trees</h1>
-          </section>
-          <section>
-            <h2>Tree Definition</h2>
-            <ul class="small">
-              <li>Set of nodes and links that express the parent-to-child relationship. Where each node:</li>
-              <ul class="small">
-                <li>Is uniquely labeled in the tree.</li>
-                <li>Contains one or more numeric variables with values over time.</li>
-                <li>Contains one or more categorical attributes that may have more than one value.</li>
-              </ul>
-            </ul>
-          </section>
-          <section>
-            <h2>Types of trees</h2><img class="demo" src="../shared_images/typesOfTrees.png" alt="Types of Trees">
-          </section>
-          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/09_networks-star-steno-topo.007.png"></section>
-          <section>
-            <h3 class="demo">Radial Tree</h3>
-            <iframe class="blocks" src="http://blockbuilder.org/mbostock/4063550"></iframe>
-            <div class="tiny"><a target="_blank" href="http://blockbuilder.org/mbostock/4063550">http://blockbuilder.org/mbostock/4063550</a></div>
-            <div class="tiny"><a target="_blank" href="http://bl.ocks.org/mbostock/">by mbostock</a></div>
-          </section>
-          <section>
-            <h3 class="demo">Dendogram</h3>
-            <iframe class="blocks" src="http://blockbuilder.org/mbostock/e9ba78a2c1070980d1b530800ce7fa2b"></iframe>
-            <div class="tiny"><a target="_blank" href="http://blockbuilder.org/mbostock/e9ba78a2c1070980d1b530800ce7fa2b">http://blockbuilder.org/mbostock/e9ba78a2c1070980d1b530800ce7fa2b</a></div>
-            <div class="tiny"><a target="_blank" href="http://bl.ocks.org/mbostock/">by mbostock</a></div>
-          </section>
-          <section>
-            <h2 class="demo">Cluster Dendograms Radial</h2>
-            <div class="left small">
-              <ul class="small">
-                <li>Data: Trees</li>
-                <li>Tasks: Summarize common connections.</li>
-                <li>Considerations:
-                  <ul class="small">
-                    <li>Harder to read</li>
-                    <li>Better space usage</li>
-                  </ul>
-                </li>
-              </ul>
-            </div>
-            <div class="right"><a href="https://observablehq.com/@d3/radial-dendrogram"><img src="../shared_images/radialDendogram.svg" alt="Radial Dendogram"><span class="tiny">https://observablehq.com/@d3/radial-dendrogram</span></a></div>
-          </section>
-          <section>
-            <h2 class="demo">Phylogenetic Trees</h2>
-            <div class="left small">
-              <ul class="small">
-                <li>Data: Tree of Life</li>
-                <li>Tasks: Summarize common connections. Identify Clusters.</li>
-                <li>Considerations:
-                  <ul class="small">
-                    <li>Harder to read</li>
-                    <li>Also works with other clusters data</li>
-                  </ul>
-                </li>
-              </ul>
-            </div>
-            <div class="right"><a href="https://observablehq.com/@mbostock/tree-of-life"><img src="../shared_images/phylogenetic.svg" alt="Phylogenetic"><span class="tiny">https://observablehq.com/@mbostock/tree-of-life</span></a></div>
-          </section>
-          <section>
-            <h3 class="demo">Cluster Dendograms Cartesian</h3>
-            <iframe class="blocks" src="http://blockbuilder.org/mbostock/4063570"></iframe>
-            <div class="tiny"><a target="_blank" href="http://blockbuilder.org/mbostock/4063570">http://blockbuilder.org/mbostock/4063570</a></div>
-            <div class="tiny"><a target="_blank" href="http://bl.ocks.org/mbostock/">by mbostock</a></div>
-          </section>
-          <section>
-            <h2 class="demo">Collapsible Tree</h2>
-            <div class="left small">
-              <ul class="small">
-                <li>Data: Tree/Network</li>
-                <li>Tasks: Navigate connections. Locate nodes</li>
-                <li>Considerations:
-                  <ul class="small">
-                    <li>Great for larger datasets</li>
-                  </ul>
-                </li>
-              </ul>
-            </div>
-            <div class="right"><a href="https://observablehq.com/@d3/collapsible-tree"><img src="../shared_images/collapsibleTree.svg" alt="CollapsibleTree"><span class="tiny">https://observablehq.com/@d3/collapsible-tree</span></a></div>
-          </section>
-          <section>
-            <h3 class="demo">SpaceTree</h3>
-            <iframe class="blocks" src="https://philogb.github.io/jit/static/v20/Jit/Examples/Spacetree/example1.html"></iframe>
-            <div class="tiny"><a target="_blank" href="https://philogb.github.io/jit/static/v20/Jit/Examples/Spacetree/example1.html">https://philogb.github.io/jit/static/v20/Jit/Examples/Spacetree/example1.html</a></div>
-          </section>
-          <section>
-            <h3 class="demo">SpaceTree</h3><span><iframe width="853" height="480" src="https://www.youtube.com/embed/F7-vJBsFBWw" frameborder="0" allowful.smalllscreen></iframe></span>
-            <div class="tiny"><a target="_blank" href="http://www.cs.umd.edu/hcil/spacetree/">http://www.cs.umd.edu/hcil/spacetree/</a></div>
-          </section>
-          <section>
-            <h3 class="demo">Degree of Interest Tree</h3><span><iframe width="853" height="480" src="https://www.youtube.com/embed/RTQ0N4QY0yc" frameborder="0" allowful.smalllscreen></iframe></span>
-            <div class="tiny"><a target="_blank" href="http://vis.stanford.edu/papers/doitrees-revisited">http://vis.stanford.edu/papers/doitrees-revisited</a></div>
-          </section>
-          <section>
-            <h3 class="demo">Force Directed Tree</h3>
-            <iframe class="blocks" src="http://blockbuilder.org/mbostock/95aa92e2f4e8345aaa55a4a94d41ce37"></iframe>
-            <div class="tiny"><a target="_blank" href="http://blockbuilder.org/mbostock/95aa92e2f4e8345aaa55a4a94d41ce37">http://blockbuilder.org/mbostock/95aa92e2f4e8345aaa55a4a94d41ce37</a></div>
-            <div class="tiny"><a target="_blank" href="http://bl.ocks.org/mbostock/">by mbostock</a></div>
-          </section>
-        </section>
-        <section>
-          <section>
-            <h2>Space Filling Techniques</h2>
-          </section>
-          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/09_networks-star-steno-topo.008.png"></section>
-          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/09_networks-star-steno-topo.009.png"></section>
-          <section>
-            <h3 class="demo">TreeMap</h3>
-            <iframe class="blocks" src="http://blockbuilder.org/mbostock/6bbb0a7ff7686b124d80"></iframe>
-            <div class="tiny"><a target="_blank" href="http://blockbuilder.org/mbostock/6bbb0a7ff7686b124d80">http://blockbuilder.org/mbostock/6bbb0a7ff7686b124d80</a></div>
-            <div class="tiny"><a target="_blank" href="http://bl.ocks.org/mbostock/">by mbostock</a></div>
-          </section>
-          <section>
-            <h3 class="demo">TreeMap with parent labels</h3>
-            <iframe class="blocks" src="http://blockbuilder.org/mbostock/911ad09bdead40ec0061"></iframe>
-            <div class="tiny"><a target="_blank" href="http://blockbuilder.org/mbostock/911ad09bdead40ec0061">http://blockbuilder.org/mbostock/911ad09bdead40ec0061</a></div>
-            <div class="tiny"><a target="_blank" href="http://bl.ocks.org/mbostock/">by mbostock</a></div>
-          </section>
-          <section>
-            <h3 class="demo">How to preprocess data for a treemap</h3>
-            <div class="tiny"><a href="https://observablehq.com/@john-guerra/treemap-from-table" target="_blank">https://observablehq.com/@john-guerra/treemap-from-table</a></div>
-          </section>
-          <section>
-            <iframe class="blocks" src="https://finviz.com/map.ashx?t=sec"></iframe>
-            <div class="tiny"><a href="https://finviz.com/map.ashx?t=sec">https://finviz.com/map.ashx?t=sec</a></div>
-          </section>
-          <section>
-            <h2 class="demo">Icicle Tree</h2>
-            <div class="left small">
-              <ul class="small">
-                <li>Data: Tree</li>
-                <li>Tasks: Summarize values/hierarchy. Navigate links</li>
-                <li>Considerations:
-                  <ul class="small">
-                    <li>Uses more space than the treemap</li>
-                    <li>Better for labels</li>
-                  </ul>
-                </li>
-              </ul>
-            </div>
-            <div class="right"><a href="https://observablehq.com/@d3/zoomable-icicle"><img src="../shared_images/icicle.svg" alt="Icicle Tree"><span class="tiny">https://observablehq.com/@d3/zoomable-icicle</span></a></div>
-          </section>
-          <section>
-            <h2 class="demo">Icicle Tree</h2>
-            <div class="left small">
-              <ul class="small">
-                <li>Data: Tree</li>
-                <li>Tasks: Summarize values/hierarchy. Navigate links. Compare values in leaves</li>
-                <li>Considerations:
-                  <ul class="small">
-                    <li>Careful.small with small edges</li>
-                  </ul>
-                </li>
-              </ul>
-            </div>
-            <div class="right"><a href="https://observablehq.com/@john-guerra/zoomable-variable-size-icicle"><img src="../shared_images/variableSizeIcicle.svg" alt="Variable Size Icicle Tree"><span class="tiny">https://observablehq.com/@john-guerra/zoomable-variable-size-icicle</span></a></div>
-          </section>
-          <section>
-            <h2 class="demo">Sunburst Tree</h2>
-            <div class="left small">
-              <ul class="small">
-                <li>Data: Tree</li>
-                <li>Tasks: Summarize values/hierarchy. Navigate links</li>
-                <li>Considerations:
-                  <ul class="small">
-                    <li>Radial values are confusing</li>
-                    <li>Fancy yet difficul.smallt animation</li>
-                  </ul>
-                </li>
-              </ul>
-            </div>
-            <div class="right"><a href="https://observablehq.com/@d3/zoomable-sunburst"><img src="../shared_images/sunburst.svg" alt="Sunburst Tree"><span class="tiny">https://observablehq.com/@d3/zoomable-sunburst</span></a></div>
-          </section>
-          <section>
-            <h3 class="demo">Radial Treemap</h3>
-            <iframe class="blocks" src="http://blockbuilder.org/mbostock/ca5b03a33affa4160321"></iframe>
-            <div class="tiny"><a target="_blank" href="http://blockbuilder.org/mbostock/ca5b03a33affa4160321">http://blockbuilder.org/mbostock/ca5b03a33affa4160321</a></div>
-            <div class="tiny"><a target="_blank" href="http://bl.ocks.org/mbostock/">by mbostock</a></div>
-          </section>
-          <section>
-            <h3 class="demo">Kickstarter Projects</h3>
-            <iframe class="blocks" src="http://blockbuilder.org/john-guerra/38b1c32154905828f019f35a026b7526"></iframe>
-            <div class="tiny"><a target="_blank" href="http://blockbuilder.org/john-guerra/38b1c32154905828f019f35a026b7526">http://blockbuilder.org/john-guerra/38b1c32154905828f019f35a026b7526</a></div>
-            <div class="tiny"><a target="_blank" href="http://bl.ocks.org/john-guerra/">by john-guerra</a></div>
-          </section>
-        </section>
-        <section>
-          <section>
-            <h2>Tree Comparison</h2>
-          </section>
-          <section data-background-size="contain" data-background="images/typesofTreeComparison.png"></section>
-          <section>
-            <h3 class="demo">TreeVersity</h3>
-            <iframe class="blocks" src="https://treeversity.cattlab.umd.edu"></iframe>
-            <div class="tiny"><a target="_blank" href="https://treeversity.cattlab.umd.edu">https://treeversity.cattlab.umd.edu</a></div>
-          </section>
-        </section>
-        <section>
-          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/09_networks-star-steno-topo.010.png"></section>
-          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/09_networks-star-steno-topo.012.png"></section>
-          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/09_networks-star-steno-topo.023.png"></section>
-          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/09_networks-star-steno-topo.024.png"></section>
-        </section>
-        <section>
-          <section>
-            <h1>Ch 9. Arrange Networks and Trees</h1>
-          </section>
-          <section class="full">
-            <h2>Arrange networks and trees</h2><img style="max-height: 400px" src="../shared_images/vad_book_alldiagrams/how_networks_and_trees.png" alt="How Networks and Trees">
+            <h1>Networks: force simulations</h1>
           </section>
           <section class="full">
             <h3>Idiom: force-directed placement</h3>
             <div class="flex">
               <div class="twothirds">
-                <ul class="small">
-                  <li class="fragment">visual encoding</li>
-                  <ul>
-                    <li class="fragment">link connection marks, node point marks</li>
-                  </ul>
-                  <li class="fragment">considerations
-                    <li class="fragment">spatial position: no meaning directly encoded</li>
+                <ul>
+                  <li class="fragment">visual encoding
                     <ul>
-                      <li class="fragment">left free to minimize crossings</li>
-                    </ul>
-                    <li class="fragment">proximity semantics?</li>
-                    <ul>
-                      <li class="fragment">sometimes meaningful</li>
-                      <li class="fragment">sometimes arbitrary, artifact of layout algorithm</li>
-                      <li class="fragment">tension with length</li>
-                      <ul>
-                        <li class="fragment">long edges more visually salient than short</li>
-                      </ul>
+                      <li>link connection marks, node point marks</li>
                     </ul>
                   </li>
-                  <li class="fragment">tasks</li>
-                  <ul>
-                    <li class="fragment">explore topology; locate paths, clusters</li>
-                  </ul>
-                  <li class="fragment">scalability</li>
-                  <ul>
-                    <li class="fragment">node/edge density E < 4N</li>
-                  </ul>
+                  <li class="fragment">considerations
+                    <ul>
+                      <li class="fragment">spatial position: no meaning directly encoded
+                        <ul>
+                          <li>left free to minimize crossings</li>
+                        </ul>
+                      </li>
+                      <li class="fragment">proximity semantics?
+                        <ul>
+                          <li>sometimes meaningful</li>
+                          <li>sometimes arbitrary, artifact of layout algorithm</li>
+                          <li class="fragment">tension with length
+                            <ul>
+                              <li class="fragment">long edges more visually salient than short</li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="fragment">tasks
+                    <ul>
+                      <li class="fragment">explore topology; locate paths, clusters</li>
+                    </ul>
+                  </li>
+                  <li class="fragment">scalability
+                    <ul>
+                      <li class="fragment">node/edge density E < 4N</li>
+                    </ul>
+                  </li>
                 </ul>
               </div>
             </div>
@@ -458,6 +111,35 @@
               </div>
             </div>
           </section>
+          <section>
+            <h3 class="demo">Force Directed Layout</h3>
+            <iframe class="blocks" data-src="http://blockbuilder.org/mbostock/4062045"></iframe>
+            <div class="tiny"><a target="_blank" href="http://blockbuilder.org/mbostock/4062045">http://blockbuilder.org/mbostock/4062045</a></div>
+            <div class="tiny"><a target="_blank" href="http://bl.ocks.org/mbostock/">by mbostock</a></div>
+          </section>
+          <section>
+            <h2>Use the force!</h2>
+          </section>
+          <section>
+            <h3 class="demo">Beeswarm plot</h3>
+            <iframe class="blocks" data-src="http://blockbuilder.org/mbostock/6526445e2b44303eebf21da3b6627320"></iframe>
+            <div class="tiny"><a target="_blank" href="http://blockbuilder.org/mbostock/6526445e2b44303eebf21da3b6627320">http://blockbuilder.org/mbostock/6526445e2b44303eebf21da3b6627320</a></div>
+            <div class="tiny"><a target="_blank" href="http://bl.ocks.org/mbostock/">by mbostock</a></div>
+          </section>
+          <section>
+            <h3 class="demo">Collision Detection</h3>
+            <iframe class="blocks" data-src="http://blockbuilder.org/mbostock/31ce330646fa8bcb7289ff3b97aab3f5"></iframe>
+            <div class="tiny"><a target="_blank" href="http://blockbuilder.org/mbostock/31ce330646fa8bcb7289ff3b97aab3f5">http://blockbuilder.org/mbostock/31ce330646fa8bcb7289ff3b97aab3f5</a></div>
+            <div class="tiny"><a target="_blank" href="http://bl.ocks.org/mbostock/">by mbostock</a></div>
+          </section>
+          <section>
+            <h3 class="demo">Force in a Box</h3>
+            <iframe class="blocks" data-src="http://blockbuilder.org/john-guerra/14c943d8f198d9f3fef2"></iframe>
+            <div class="tiny"><a target="_blank" href="http://blockbuilder.org/john-guerra/14c943d8f198d9f3fef2">http://blockbuilder.org/john-guerra/14c943d8f198d9f3fef2</a></div>
+            <div class="tiny"><a target="_blank" href="http://bl.ocks.org/john-guerra/">by john-guerra</a></div>
+          </section>
+        </section>
+        <section id="matrix">
           <section>
             <h2>Idiom: adjacency matrix view</h2>
             <div class="flex">
@@ -494,6 +176,11 @@
             </div>
           </section>
           <section>
+            <h3 class="demo">Adjacency Matrix</h3>
+            <iframe class="blocks" data-src="https://bost.ocks.org/mike/miserables/"></iframe>
+            <div class="tiny"><a target="_blank" href="https://bost.ocks.org/mike/miserables/">https://bost.ocks.org/mike/miserables/</a></div>
+          </section>
+          <section>
             <h2>Connection vs. adjacency comparison</h2>
             <div class="flex">
               <div class="twothirds">
@@ -519,6 +206,158 @@
                 </ul>
               </div>
             </div>
+          </section>
+        </section>
+        <section id="otherNetworks">
+          <section>
+            <h1>Networks: Other Idioms</h1>
+          </section>
+          <section>
+            <h2 class="demo">Chord Diagram</h2>
+            <div class="left small">
+              <ul class="small">
+                <li>Data: Networks (small # of nodes)</li>
+                <li>Tasks: Summarize connections. Identify highest degree</li>
+                <li>Considerations: Usually good for origin -> destination</li>
+              </ul>
+            </div>
+            <div class="right"><img class="fill" data-src="../shared_images/chord.svg" alt="Chord Diagram">
+              <div class="tiny"><a href="https://observablehq.com/@john-guerra/mouseover-chord-diagram">https://observablehq.com/@john-guerra/mouseover-chord-diagram</a></div>
+            </div>
+          </section>
+          <section>
+            <h2 class="demo">Edge Bundling</h2>
+            <div class="left small">
+              <ul class="small">
+                <li>Data: Networks</li>
+                <li>Tasks: Summarize common connections.</li>
+                <li>Considerations:
+                  <ul class="small">
+                    <li>Reduces cluttering</li>
+                    <li>Requires computing time</li>
+                    <li>Works with any link based idiom</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div class="right"><img class="fill" data-src="../shared_images/edgeBundling.png" alt="Edge Bundling">
+              <div class="tiny"><a href="https://observablehq.com/@d3/hierarchical-edge-bundling">https://observablehq.com/@d3/hierarchical-edge-bundling</a></div>
+            </div>
+          </section>
+          <section>
+            <h2 class="demo">Arc Diagram</h2>
+            <div class="left small">
+              <ul class="small">
+                <li>Data: Networks (few nodes)</li>
+                <li>Tasks: Summarize common connections.</li>
+                <li>Considerations:
+                  <ul class="small">
+                    <li>Nodes order matter</li>
+                    <li>Better with highly clustered data</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div class="right"><img class="fill" data-src="../shared_images/arcDiagram.svg" alt="Arc Diagram">
+              <div class="tiny"><a href="https://observablehq.com/@d3/arc-diagram">https://observablehq.com/@d3/arc-diagram</a></div>
+            </div>
+          </section>
+          <section>
+            <h2 class="demo">Arc Diagram</h2>
+            <iframe class="blocks" data-src="https://blockbuilder.org/rpgove/53bb49d6ed762139f33bdaea1f3a9e1c"></iframe>
+            <div class="tiny"><a target="_blank" href="https://blockbuilder.org/rpgove/53bb49d6ed762139f33bdaea1f3a9e1c">https://blockbuilder.org/rpgove/53bb49d6ed762139f33bdaea1f3a9e1c</a></div>
+            <div class="tiny"><a target="_blank" href="http://bl.ocks.org/rpgove/">by Robert Gove</a></div>
+          </section>
+          <section data-background-size="contain" data-background-iframe="https://bost.ocks.org/mike/hive/"></section>
+          <section>
+            <h2 class="demo">Hive Plots</h2>
+            <div class="tiny"><a target="_blank" href="https://bost.ocks.org/mike/hive/">https://bost.ocks.org/mike/hive/</a></div>
+          </section>
+          <section>
+            <h2 class="demo">Semantic Substrates</h2>
+            <div class="left small">
+              <ul class="small">
+                <li>Data: Networks with many edges</li>
+                <li>Task: Summarize distribution of non network attribs</li>
+                <li>Considerations:
+                  <ul class="small">
+                    <li>Easier to understand</li>
+                    <li>Scale well</li>
+                    <li>Edges on demand work best</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div class="right">
+              <figure><img class="fill" data-src="../shared_images/semanticSubstrates.gif" alt="Semantic Substrates">
+                <figcaption class="reference"><a href="https://johnguerra.co/viz/influentials/story/?hashtag=DeepIndaba2019">https://johnguerra.co/viz/influentials/story/?hashtag=DeepIndaba2019</a></figcaption>
+              </figure>
+            </div>
+          </section>
+          <section><a href="https://www.twosixlabs.com/6-ways-visualize-graphs/"><img data-src="../shared_images/6waystovisualizegraphs.png" alt="Six ways of visualizing networks by Robert Gove">
+              <figcaption class="reference">Robert Gove's Six ways of visualizing Networks</figcaption></a></section>
+        </section>
+        <section>
+          <section>
+            <h1>Networks Extras</h1>
+          </section>
+          <section>
+            <h2>Network Analysis Metrics</h2>
+            <ul class="small">
+              <li>Connections</li>
+              <li>Distribution</li>
+              <li>Segmentation</li>
+            </ul>
+            <div class="tiny"><a href="https://en.wikipedia.org/wiki/Social_network_analysis">https://en.wikipedia.org/wiki/Social_network_analysis</a></div>
+            <p>Use them as derived attributes</p>
+          </section>
+          <section>
+            <h2>Tools</h2>
+            <ul class="small">
+              <li><a href="https://www.smrfoundation.org/nodexl/">NodeXL</a></li>
+              <li><a href="https://gephi.org/">Gephi</a></li>
+            </ul>
+          </section>
+        </section>
+        <section id="trees">
+          <section>
+            <h1>Trees</h1>
+          </section>
+          <section>
+            <h2>Tree Definition</h2>
+            <ul class="small">
+              <li>Set of nodes and links that express the parent-to-child relationship. Where each node:</li>
+              <ul class="small">
+                <li>Is uniquely labeled in the tree.</li>
+                <li>Contains one or more numeric variables with values over time.</li>
+                <li>Contains one or more categorical attributes that may have more than one value.</li>
+              </ul>
+            </ul>
+          </section>
+          <section>
+            <h2>Types of trees</h2><img class="demo" data-src="../shared_images/typesOfTrees.png" alt="Types of Trees">
+          </section>
+          <section>
+            <h2>How are trees stored</h2>
+            <ul>
+              <li class="fragment">JSON file</li>
+              <li class="fragment">GraphML file</li>
+              <li class="fragment">Table
+                <ul>
+                  <li class="fragment">Multiple attributes define hierarchy (e.g. State, City, Neighborhood)</li>
+                  <li class="fragment">One attribute defines hierarchy with a separator (e.g. California/San Francisco/Presidio)</li>
+                  <li class="fragment">One attribute defines parent id</li>
+                </ul>
+              </li>
+            </ul>
+          </section>
+          <section>
+            <h2>Treemap from table</h2><a href="https://observablehq.com/@john-guerra/treemap-from-table">https://observablehq.com/@john-guerra/treemap-from-table</a>
+          </section>
+        </section>
+        <section id="nodeLinkTrees">
+          <section>
+            <h1>Trees: Node-link</h1>
           </section>
           <section>
             <h2>Idiom: radial node-link tree</h2>
@@ -549,6 +388,95 @@
                 </ul>
               </div>
             </div>
+          </section>
+          <section>
+            <h3 class="demo">Radial Tree</h3>
+            <iframe class="blocks" data-src="http://blockbuilder.org/mbostock/4063550"></iframe>
+            <div class="tiny"><a target="_blank" href="http://blockbuilder.org/mbostock/4063550">http://blockbuilder.org/mbostock/4063550</a></div>
+            <div class="tiny"><a target="_blank" href="http://bl.ocks.org/mbostock/">by mbostock</a></div>
+          </section>
+          <section>
+            <h3 class="demo">Dendogram</h3>
+            <iframe class="blocks" data-src="http://blockbuilder.org/mbostock/e9ba78a2c1070980d1b530800ce7fa2b"></iframe>
+            <div class="tiny"><a target="_blank" href="http://blockbuilder.org/mbostock/e9ba78a2c1070980d1b530800ce7fa2b">http://blockbuilder.org/mbostock/e9ba78a2c1070980d1b530800ce7fa2b</a></div>
+            <div class="tiny"><a target="_blank" href="http://bl.ocks.org/mbostock/">by mbostock</a></div>
+          </section>
+          <section>
+            <h2 class="demo">Cluster Dendograms Radial</h2>
+            <div class="left small">
+              <ul class="small">
+                <li>Data: Trees</li>
+                <li>Tasks: Summarize common connections.</li>
+                <li>Considerations:
+                  <ul class="small">
+                    <li>Harder to read</li>
+                    <li>Better space usage</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div class="right"><a href="https://observablehq.com/@d3/radial-dendrogram"><img data-src="../shared_images/radialDendogram.svg" alt="Radial Dendogram"><span class="tiny">https://observablehq.com/@d3/radial-dendrogram</span></a></div>
+          </section>
+          <section>
+            <h2 class="demo">Phylogenetic Trees</h2>
+            <div class="left small">
+              <ul class="small">
+                <li>Data: Tree of Life</li>
+                <li>Tasks: Summarize common connections. Identify Clusters.</li>
+                <li>Considerations:
+                  <ul class="small">
+                    <li>Harder to read</li>
+                    <li>Also works with other clusters data</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div class="right"><a href="https://observablehq.com/@mbostock/tree-of-life"><img data-src="../shared_images/phylogenetic.svg" alt="Phylogenetic"><span class="tiny">https://observablehq.com/@mbostock/tree-of-life</span></a></div>
+          </section>
+          <section>
+            <h3 class="demo">Cluster Dendograms Cartesian</h3>
+            <iframe class="blocks" data-src="http://blockbuilder.org/mbostock/4063570"></iframe>
+            <div class="tiny"><a target="_blank" href="http://blockbuilder.org/mbostock/4063570">http://blockbuilder.org/mbostock/4063570</a></div>
+            <div class="tiny"><a target="_blank" href="http://bl.ocks.org/mbostock/">by mbostock</a></div>
+          </section>
+          <section>
+            <h3 class="demo">Force Directed Tree</h3>
+            <iframe class="blocks" data-src="http://blockbuilder.org/mbostock/95aa92e2f4e8345aaa55a4a94d41ce37"></iframe>
+            <div class="tiny"><a target="_blank" href="http://blockbuilder.org/mbostock/95aa92e2f4e8345aaa55a4a94d41ce37">http://blockbuilder.org/mbostock/95aa92e2f4e8345aaa55a4a94d41ce37</a></div>
+            <div class="tiny"><a target="_blank" href="http://bl.ocks.org/mbostock/">by mbostock</a></div>
+          </section>
+          <section>
+            <h2 class="demo">Collapsible Tree</h2>
+            <div class="left small">
+              <ul class="small">
+                <li>Data: Tree/Network</li>
+                <li>Tasks: Navigate connections. Locate nodes</li>
+                <li>Considerations:
+                  <ul class="small">
+                    <li>Great for larger datasets</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div class="right"><a href="https://observablehq.com/@d3/collapsible-tree"><img data-src="../shared_images/collapsibleTree.svg" alt="CollapsibleTree"><span class="tiny">https://observablehq.com/@d3/collapsible-tree</span></a></div>
+          </section>
+          <section>
+            <h3 class="demo">SpaceTree</h3>
+            <iframe class="blocks" data-src="https://philogb.github.io/jit/static/v20/Jit/Examples/Spacetree/example1.html"></iframe>
+            <div class="tiny"><a target="_blank" href="https://philogb.github.io/jit/static/v20/Jit/Examples/Spacetree/example1.html">https://philogb.github.io/jit/static/v20/Jit/Examples/Spacetree/example1.html</a></div>
+          </section>
+          <section>
+            <h3 class="demo">SpaceTree</h3><span><iframe width="853" height="480" data-src="https://www.youtube.com/embed/F7-vJBsFBWw" frameborder="0" allowful.smalllscreen></iframe></span>
+            <div class="tiny"><a target="_blank" href="http://www.cs.umd.edu/hcil/spacetree/">http://www.cs.umd.edu/hcil/spacetree/</a></div>
+          </section>
+          <section>
+            <h3 class="demo">Degree of Interest Tree</h3><span><iframe width="853" height="480" data-src="https://www.youtube.com/embed/RTQ0N4QY0yc" frameborder="0" allowful.smalllscreen></iframe></span>
+            <div class="tiny"><a target="_blank" href="http://vis.stanford.edu/papers/doitrees-revisited">http://vis.stanford.edu/papers/doitrees-revisited</a></div>
+          </section>
+        </section>
+        <section id="treesContainment">
+          <section>
+            <h1>Trees: Containment</h1>
           </section>
           <section>
             <h2>Idiom: treemap</h2>
@@ -603,6 +531,83 @@
               </div>
             </div>
           </section>
+          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/09_networks-star-steno-topo.008.png"></section>
+          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/09_networks-star-steno-topo.009.png"></section>
+          <section>
+            <h3 class="demo">TreeMap</h3>
+            <iframe class="blocks" data-src="http://blockbuilder.org/mbostock/6bbb0a7ff7686b124d80"></iframe>
+            <div class="tiny"><a target="_blank" href="http://blockbuilder.org/mbostock/6bbb0a7ff7686b124d80">http://blockbuilder.org/mbostock/6bbb0a7ff7686b124d80</a></div>
+            <div class="tiny"><a target="_blank" href="http://bl.ocks.org/mbostock/">by mbostock</a></div>
+          </section>
+          <section>
+            <h3 class="demo">TreeMap with parent labels</h3>
+            <iframe class="blocks" data-src="http://blockbuilder.org/mbostock/911ad09bdead40ec0061"></iframe>
+            <div class="tiny"><a target="_blank" href="http://blockbuilder.org/mbostock/911ad09bdead40ec0061">http://blockbuilder.org/mbostock/911ad09bdead40ec0061</a></div>
+            <div class="tiny"><a target="_blank" href="http://bl.ocks.org/mbostock/">by mbostock</a></div>
+          </section>
+          <section>
+            <iframe class="blocks" data-src="https://finviz.com/map.ashx?t=sec"></iframe>
+            <div class="tiny"><a href="https://finviz.com/map.ashx?t=sec">https://finviz.com/map.ashx?t=sec</a></div>
+          </section>
+          <section>
+            <h2 class="demo">Icicle Tree</h2>
+            <div class="left small">
+              <ul class="small">
+                <li>Data: Tree</li>
+                <li>Tasks: Summarize values/hierarchy. Navigate links</li>
+                <li>Considerations:
+                  <ul class="small">
+                    <li>Uses more space than the treemap</li>
+                    <li>Better for labels</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div class="right"><a href="https://observablehq.com/@d3/zoomable-icicle"><img data-src="../shared_images/icicle.svg" alt="Icicle Tree"><span class="tiny">https://observablehq.com/@d3/zoomable-icicle</span></a></div>
+          </section>
+          <section>
+            <h2 class="demo">Icicle Tree</h2>
+            <div class="left small">
+              <ul class="small">
+                <li>Data: Tree</li>
+                <li>Tasks: Summarize values/hierarchy. Navigate links. Compare values in leaves</li>
+                <li>Considerations:
+                  <ul class="small">
+                    <li>Careful.small with small edges</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div class="right"><a href="https://observablehq.com/@john-guerra/zoomable-variable-size-icicle"><img data-src="../shared_images/variableSizeIcicle.svg" alt="Variable Size Icicle Tree"><span class="tiny">https://observablehq.com/@john-guerra/zoomable-variable-size-icicle</span></a></div>
+          </section>
+          <section>
+            <h2 class="demo">Sunburst Tree</h2>
+            <div class="left small">
+              <ul class="small">
+                <li>Data: Tree</li>
+                <li>Tasks: Summarize values/hierarchy. Navigate links</li>
+                <li>Considerations:
+                  <ul class="small">
+                    <li>Radial values are confusing</li>
+                    <li>Fancy yet difficul.smallt animation</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div class="right"><a href="https://observablehq.com/@d3/zoomable-sunburst"><img data-src="../shared_images/sunburst.svg" alt="Sunburst Tree"><span class="tiny">https://observablehq.com/@d3/zoomable-sunburst</span></a></div>
+          </section>
+          <section>
+            <h3 class="demo">Radial Treemap</h3>
+            <iframe class="blocks" data-src="http://blockbuilder.org/mbostock/ca5b03a33affa4160321"></iframe>
+            <div class="tiny"><a target="_blank" href="http://blockbuilder.org/mbostock/ca5b03a33affa4160321">http://blockbuilder.org/mbostock/ca5b03a33affa4160321</a></div>
+            <div class="tiny"><a target="_blank" href="http://bl.ocks.org/mbostock/">by mbostock</a></div>
+          </section>
+          <section>
+            <h3 class="demo">Kickstarter Projects</h3>
+            <iframe class="blocks" data-src="http://blockbuilder.org/john-guerra/38b1c32154905828f019f35a026b7526"></iframe>
+            <div class="tiny"><a target="_blank" href="http://blockbuilder.org/john-guerra/38b1c32154905828f019f35a026b7526">http://blockbuilder.org/john-guerra/38b1c32154905828f019f35a026b7526</a></div>
+            <div class="tiny"><a target="_blank" href="http://bl.ocks.org/john-guerra/">by john-guerra</a></div>
+          </section>
           <section>
             <h2>Tree drawing idioms comparison</h2>
             <div class="flex">
@@ -632,6 +637,23 @@
               </div>
             </div>
           </section>
+        </section>
+        <section>
+          <section>
+            <h2>Tree Comparison</h2>
+          </section>
+          <section data-background-size="contain" data-background="images/typesofTreeComparison.png"></section>
+          <section>
+            <h3 class="demo">TreeVersity</h3>
+            <iframe class="blocks" data-src="https://treeversity.cattlab.umd.edu"></iframe>
+            <div class="tiny"><a target="_blank" href="https://treeversity.cattlab.umd.edu">https://treeversity.cattlab.umd.edu</a></div>
+          </section>
+        </section>
+        <section>
+          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/09_networks-star-steno-topo.010.png"></section>
+          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/09_networks-star-steno-topo.012.png"></section>
+          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/09_networks-star-steno-topo.023.png"></section>
+          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/09_networks-star-steno-topo.024.png"></section>
         </section>
         <section id="review">
           <section>
@@ -665,7 +687,7 @@
     <script>
       (function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      m=s.getElementsByTagName(o)[0];a.async=1;a.data-src=g;m.parentNode.insertBefore(a,m)
       })(window,document,"script","https://www.google-analytics.com/analytics.js","ga");
       
       ga("create", "UA-72531610-1", "auto");
