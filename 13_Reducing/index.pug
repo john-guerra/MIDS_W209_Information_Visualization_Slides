@@ -94,6 +94,65 @@ html(lang="en")
             a.tiny(target="_blank" href="http://blockbuilder.org/asielen/92929960988a8935d907e39e60ea8417") http://blockbuilder.org/asielen/92929960988a8935d907e39e60ea8417
             a.tiny(target="_blank" href="http://bl.ocks.org/asielen/") by asielen
 
+
+          section
+            h2 Idiom: 2D density plots
+            .flex
+              .half
+                ul.small
+                  li.fragment Scatter-plot meet heat-map
+                  ul
+                    li.fragment derived data
+                    ul
+                      li.fragment Teselate space info areas
+                      li.fragment Count number of elements falling on that area
+
+                    li.fragment #[strong Mark]: Dots (boxes)
+                    li.fragment #[strong Channels]:
+                    ul
+                      li.fragment Position: Location of areas
+                      li.fragment Color (brightness): Number of elements
+                    ul
+                      li.fragment marks (re-)ordered by cluster hierarchy traversal
+                    li.fragment #[strong Tasks]: Summarize distribution.
+                    li.fragment #[strong Scalability:]
+                    ul
+                      li.fragment Millions of rows (might require preprocessing)
+
+              .half.
+                <div id="observablehq-d74d4a6f">
+                  <div class="r-stack">
+                    <div class="fragment observablehq-moviesScatterplot"></div>
+                    <div class="fragment observablehq-moviesDensityCircles"></div>
+                    <div class="fragment observablehq-moviesDensityBoxes"></div>
+                  </div>
+                  <div style="overflow: hidden;"><a style="display: block; float:right;" href="https://observablehq.com/@john-guerra/data-transformation@307"><object type="image/svg+xml" style="pointer-events: none;" width=180 height=22 data="https://static.observableusercontent.com/files/c3fab254a006f1a3a1f9f63aba8ab1460db4752529036b9962950bde0ec195bab823daa6b278b1c3401e545b3bd640ddfdcad805cf9859af218cb2b9fed4ddf0"></object></a></div>
+                </div>
+                <script type="module">
+                  import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+                  import define from "https://api.observablehq.com/@john-guerra/data-transformation@307.js?v=3";
+                  (new Runtime).module(define, name => {
+                    if (name === "moviesScatterplot") return Inspector.into("#observablehq-d74d4a6f .observablehq-moviesScatterplot")();
+                    if (name === "moviesDensityCircles") return Inspector.into("#observablehq-d74d4a6f .observablehq-moviesDensityCircles")();
+                    if (name === "moviesDensityBoxes") return Inspector.into("#observablehq-d74d4a6f .observablehq-moviesDensityBoxes")();
+                  });
+                </script>
+
+          section.full
+            h2 Interactive Density Plot
+            div.
+              <div id="observablehq-8ab2bcad">
+                <div class="observablehq-chart"></div>
+                <div style="overflow: hidden;"><a style="display: block; float:right;" href="https://observablehq.com/@john-guerra/density-plot"><object type="image/svg+xml" style="pointer-events: none;" width=180 height=22 data="https://static.observableusercontent.com/files/c3fab254a006f1a3a1f9f63aba8ab1460db4752529036b9962950bde0ec195bab823daa6b278b1c3401e545b3bd640ddfdcad805cf9859af218cb2b9fed4ddf0"></object></a></div>
+              </div>
+              <script type="module">
+                import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+                import define from "https://api.observablehq.com/@john-guerra/density-plot.js?v=3";
+                (new Runtime).module(define, name => {
+                  if (name === "chart") return Inspector.into("#observablehq-8ab2bcad .observablehq-chart")();
+                });
+              </script>
+
           section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/14_reduce-glimmer.010.png")
           section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/14_reduce-glimmer.011.png")
           section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/14_reduce-glimmer.012.png")
@@ -196,8 +255,6 @@ html(lang="en")
     script(src="https://cdn.jsdelivr.net/npm/vega-lite@4.13.1")
     script(src="https://cdn.jsdelivr.net/npm/vega-lite-api@0.11.0")
     script(src="https://cdn.jsdelivr.net/npm/vega-tooltip@0.23.2")
-    script(src="./week4.js")
-
 
 
     script.
