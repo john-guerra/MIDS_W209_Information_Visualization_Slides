@@ -214,7 +214,7 @@ html(lang="en")
                     ul
                       li principle: normalized, not absolute
                   li.fragment scalability same as standard line chart
-
+              .half
 
         section#areaCharts
           section
@@ -280,13 +280,15 @@ html(lang="en")
           section#gantt
             h2.demo Gantt charts
             div.left
-              ul.small
+              ul.tiny
                 li.fragment Data: Two time attribs (start end)
                 li.fragment Tasks: Summarize duration (features), compare events, identify intersections/dependencies
                 li.fragment Visual Representation: Line, express for time, separate/order/aligned for tasks, color hues
             div.right
-              img(data-src="../shared_images/vad_book_alldiagrams/gantChart.png", alt="Gant Chart")
-              a.tiny(href="https://observablehq.com/@john-guerra/mids-assignments-timeline") https://observablehq.com/@john-guerra/mids-assignments-timeline
+              figure
+                img.fill(data-src="../shared_images/vad_book_alldiagrams/gantChart.png", alt="Gant Chart")
+                figcaption.reference
+                  a.tiny(href="https://observablehq.com/@john-guerra/mids-assignments-timeline") https://observablehq.com/@john-guerra/mids-assignments-timeline
 
 
           section
@@ -645,10 +647,10 @@ html(lang="en")
     script(src="../plugin/markdown/markdown.js")
     script(src="../plugin/highlight/highlight.js")
 
-    script(src="https://cdn.jsdelivr.net/npm/vega@5.13.0")
-    script(src="https://cdn.jsdelivr.net/npm/vega-lite@4.13.1")
-    script(src="https://cdn.jsdelivr.net/npm/vega-lite-api@0.11.0")
-    script(src="https://cdn.jsdelivr.net/npm/vega-tooltip@0.23.2")
+    //- script(src="https://cdn.jsdelivr.net/npm/vega@5.13.0")
+    //- script(src="https://cdn.jsdelivr.net/npm/vega-lite@4.13.1")
+    //- script(src="https://cdn.jsdelivr.net/npm/vega-lite-api@0.11.0")
+    //- script(src="https://cdn.jsdelivr.net/npm/vega-tooltip@0.23.2")
 
     script.
       Reveal.initialize({
