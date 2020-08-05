@@ -40,6 +40,11 @@ html(lang="en")
             a(href="https://twitter.com/duto_guerra")  |  @duto_guerra
             br
 
+            a(href="https://andyreagan.com/", target="_blank") #[strong  Andy Reagan]
+            span  |  andy[at]andyreagan.com
+            a(href="https://twitter.com/andyreagan")  |  @andyreagan
+            br
+
             a(href="https://johnguerra.co/lectures/MIDS_W209_Information_Visualization/08_Networks_and_Trees/", target="_blank") https://johnguerra.co/lectures/MIDS_W209_Information_Visualization/08_Networks_and_Trees/
 
           div.logo
@@ -56,17 +61,38 @@ html(lang="en")
 
             img(style="max-height: 400px" data-src="../shared_images/vad_book_alldiagrams/how_networks_and_trees.png", alt="How Networks and Trees")
 
-
           section
             h2 What we are going to learn
             ul.small.small
+              li.fragment How to recognize, create, and store network data
+              li.fragment Algorithms to visualize network data
+              li.fragment How to use color
+                
+        section#networkData
+          section
+            h1 Networks: Data        
+            
+          section
+            h3 Define network data
+            p Networks are defined by two things: nodes, heirachy, and connections between those nodes.
 
+          section
+            h3 How to store network data
+            ul.small.small
+              li.fragment Node and link files
+              li.fragment Adjacency matrix
+              li.fragment Nested: XML/JSON
+              li.fragment Flat
+              
+          section
+            h3 How to create network data
+            ul.small.small
+              li.fragment Group-by
+              li.fragment Extract links
 
         section#forceSimulations
           section
             h1 Networks: force simulations
-
-
 
           section.full
             h3 Idiom: force-directed placement
@@ -154,14 +180,13 @@ html(lang="en")
             div.tiny
               a(target="_blank" href="http://bl.ocks.org/john-guerra/") by john-guerra
 
-
-        section#matrix
+        section#adjacencyIdiom        
           section
             h2 Idiom: adjacency matrix view
             .flex
               .twothirds
                 ul.small
-
+  
                   li.fragment data: network
                   ul
                     li.fragment transform into same data/encoding as heatmap
@@ -181,21 +206,19 @@ html(lang="en")
                   li.fragment scalability
                   ul
                     li.fragment 1K nodes, 1M edges
-
+  
           section
             h3.demo Adjacency Matrix
             iframe.blocks(data-src="https://bost.ocks.org/mike/miserables/")
             div.tiny
               a(target="_blank" href="https://bost.ocks.org/mike/miserables/") https://bost.ocks.org/mike/miserables/
-
-
-
+  
           section
             h2 Connection vs. adjacency comparison
             .flex
               .twothirds
                 ul.small
-
+  
                   li.fragment adjacency matrix strengths
                   ul
                     li.fragment predictability, scalability, supports reordering
@@ -211,8 +234,7 @@ html(lang="en")
                     ul
                       li.fragment if tasks don’t involve topological structure!
 
-
-        section#otherNetworks
+        section#otherNetworkIdioms
           section
             h1 Networks: Other Idioms
 
@@ -333,9 +355,9 @@ html(lang="en")
                   </script>
                 a(href="https://observablehq.com/@john-guerra/parallel-sets") https://observablehq.com/@john-guerra/parallel-sets
 
-        section#networkExtras
+        section#networkStatistics
           section
-            h1 Networks Extras
+            h1 Metrics and Statistics
 
           section
             h2 Network Analysis Metrics
@@ -347,15 +369,131 @@ html(lang="en")
               a(href="https://en.wikipedia.org/wiki/Social_network_analysis") https://en.wikipedia.org/wiki/Social_network_analysis
             p Use them as derived attributes
 
+        section#networkTools
           section
-            h2 Tools
+            h1 Tools
+
+          section
+            h3 Tools that contain layout algorithms
             ul.small
+              li
+                a(href="https://github.com/d3/d3-force") d3            
+              li
+                a(href="https://networkx.github.io/") networkX
               li
                 a(href="https://www.smrfoundation.org/nodexl/") NodeXL
               li
                 a(href="https://gephi.org/") Gephi
+              li
+                a(href="") LaTeX                
+              li
+                a(href="") Command line                
 
+          section
+            h3 Combining layouts and visualization
+            p Many possibilities: connect any tools that can compute layouts to any other visualation tool. A few useful examples:
+            ul.small
+              li d3 + vega-lite
+              li networkX + matplotlib (built-in)
+              
+        section#colorIntro
+          section
+            h1 Color
 
+          section
+            h3 Encode > Map > Color
+            img(style="max-height: 400px" data-src="../shared_images/vad_book_alldiagrams/10_01_encode_map.png", alt="Encode Map Color")
+            
+        section#colorDetail
+          section
+            h3 Categorical vs Ordered Color
+            img(style="max-height: 400px" data-src="../shared_images/vad_book_alldiagrams/10_02_encode_map.png", alt="Encode Map Color")
+
+          section
+            h3 Decomposing color
+            ul.small
+              li first rule: do not talk about color!
+              ul.small
+                li color is confusing if treated as monolithic
+              li decompose into three channels                
+              ul.small
+                li ordered can show magnitude
+                ul.small
+                  li luminance: how bright                
+                  li saturation: how colorful
+                li categorical can show identity
+                ul.small
+                  li hue: what color
+              li channels have different properties
+              ul.small
+                li what they convey directly to perceptual system
+                li how much they can convey: how many discriminable bins can we use?
+            img(style="max-height: 400px" data-src="../shared_images/vad_book_alldiagrams/10_03_HSL.png", alt="HSL")
+
+          section
+            h3 Spectral sensitivity
+            img(style="max-height: 400px" data-src="../shared_images/vad_book_alldiagrams/10_03_spectral_sensitivity.png", alt="Spectral sensitivity")
+
+          section
+            h3 Luminance
+            ul.small
+              li need luminance for edge detection
+              ul.small
+                li fine-grained detail only visible through luminance contrast
+                li legible text requires luminance contrast!
+              li intrinsic perceptual ordering      
+            
+            img(style="max-height: 400px" data-src="../shared_images/vad_book_alldiagrams/10_03_spectral_sensitivity.png", alt="Spectral sensitivity")
+
+          section
+            h3 Opponent color and color deficiency            
+            
+          section
+            h3 Color spaces
+            
+          section
+            h3 Designing for color deficiency: Check with simulator
+            
+          section
+            h3 Designing for color deficiency: Avoid encoding by hue alone
+            
+          section
+            h3 Color deficiency: Reduces color to 2 dimensions
+            
+          section
+            h3 Designing for color deficiency: Blue-Orange is safe
+            
+          section
+            h3 Bezold Effect: Outlines matter                       
+
+          section
+            h3 Relative judgements: Color & illumination                                   
+            
+          section
+            h3 Categorical color: limited number of discriminable bins                                               
+            
+          section
+            h3 Glyphs
+
+          section
+            h3 ColorBrewer
+            
+          section
+            h3 Ordered color: Rainbow is poor default      
+            
+          section
+            h3 Viridis
+            
+          section
+            h3 Colormaps
+            
+        section#mapOther
+          section
+            h3 Map other channels
+            
+          section
+            h3 Angle            
+                                        
         section#review
           section
             h2 What we learned
