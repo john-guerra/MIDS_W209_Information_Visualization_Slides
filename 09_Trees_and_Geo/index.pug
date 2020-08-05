@@ -1,10 +1,10 @@
 doctype html
 html(lang="en")
   head
-    title Week 9 Geo and Color Data. MIDS W209 Information Visualization Slides
+    title Week 9 Trees and Geo. MIDS W209 Information Visualization Slides
     meta(charset="utf-8")
     meta(name="author", content="John Alexis Guerra Gómez")
-    meta(name="description", content="Week 9 Geo and Color Data. MIDS W209 Information Visualization Slides")
+    meta(name="description", content="Week 9 Trees and Geo. MIDS W209 Information Visualization Slides")
 
     meta(name="apple-mobile-web-app-capable" content="yes")
     meta(name="apple-mobile-web-app-status-bar-style" content="black-translucent")
@@ -28,7 +28,7 @@ html(lang="en")
     .reveal
       .slides
         section
-          h1.title Maps and Color
+          h1.title Trees and Geo
             br
             small MIDS W209: Information Visualization
 
@@ -59,6 +59,351 @@ html(lang="en")
             h2 Visualizing Spatial Data
 
           section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/08_tables-spatial.025.png")
+
+
+        section#trees
+          section
+            h1 Trees
+
+          section
+            h2 Tree Definition
+            ul.small
+              li Set of nodes and links that express the parent-to-child relationship. Where each node:
+              ul.small
+                li Is uniquely labeled in the tree.
+                li Contains one or more numeric variables with values over time.
+                li Contains one or more categorical attributes that may have more than one value.
+
+          section
+            h2 Types of trees
+            img.demo(data-src="../shared_images/typesOfTrees.png", alt="Types of Trees")
+
+          section
+            h2 How are trees stored
+            ul
+              li.fragment JSON file
+              li.fragment GraphML file
+              li.fragment Table
+                ul
+                  li.fragment Multiple attributes define hierarchy (e.g. State, City, Neighborhood)
+                  li.fragment One attribute defines hierarchy with a separator (e.g. California/San Francisco/Presidio)
+                  li.fragment One attribute defines parent id
+
+          section
+            h2 Treemap from table
+            a(href="https://observablehq.com/@john-guerra/treemap-from-table") https://observablehq.com/@john-guerra/treemap-from-table
+
+
+        section#nodeLinkTrees
+          section
+            h1 Trees: Node-link
+
+
+          section
+            h2 Idiom: radial node-link tree
+            .flex
+              .half
+                ul.small
+                  li.fragment data
+                  ul
+                    li.fragment tree
+                  li.fragment encoding
+                  ul
+                    li.fragment link connection marks
+                    li.fragment point node marks
+                    li.fragment radial axis orientation
+                    ul
+                      li.fragment angular proximity: siblings
+                      li.fragment distance from center: depth in tree
+                  li.fragment tasks
+                  ul
+                    li.fragment understanding topology,  following paths
+                  li.fragment scalability
+                    li.fragment 1K - 10K nodes
+
+          section
+            h3.demo Radial Tree
+            iframe.blocks(data-src="http://blockbuilder.org/mbostock/4063550")
+            div.tiny
+              a(target="_blank" href="http://blockbuilder.org/mbostock/4063550") http://blockbuilder.org/mbostock/4063550
+            div.tiny
+              a(target="_blank" href="http://bl.ocks.org/mbostock/") by mbostock
+
+          section
+            h3.demo Dendogram
+            iframe.blocks(data-src="http://blockbuilder.org/mbostock/e9ba78a2c1070980d1b530800ce7fa2b")
+            div.tiny
+              a(target="_blank" href="http://blockbuilder.org/mbostock/e9ba78a2c1070980d1b530800ce7fa2b") http://blockbuilder.org/mbostock/e9ba78a2c1070980d1b530800ce7fa2b
+            div.tiny
+              a(target="_blank" href="http://bl.ocks.org/mbostock/") by mbostock
+
+
+          section
+            h2.demo Cluster Dendograms Radial
+            div.left.small
+              ul.small
+                li Data: Trees
+                li Tasks: Summarize common connections.
+                li Considerations:
+                  ul.small
+                    li Harder to read
+                    li Better space usage
+            div.right
+              a(href="https://observablehq.com/@d3/radial-dendrogram")
+                img(data-src="../shared_images/radialDendogram.svg" alt="Radial Dendogram")
+                span.tiny https://observablehq.com/@d3/radial-dendrogram
+
+          section
+            h2.demo Phylogenetic Trees
+            div.left.small
+              ul.small
+                li Data: Tree of Life
+                li Tasks: Summarize common connections. Identify Clusters.
+                li Considerations:
+                  ul.small
+                    li Harder to read
+                    li Also works with other clusters data
+            div.right
+              a(href="https://observablehq.com/@mbostock/tree-of-life")
+                img(data-src="../shared_images/phylogenetic.svg" alt="Phylogenetic")
+                span.tiny https://observablehq.com/@mbostock/tree-of-life
+
+
+          section
+            h3.demo Cluster Dendograms Cartesian
+            iframe.blocks(data-src="http://blockbuilder.org/mbostock/4063570")
+            div.tiny
+              a(target="_blank" href="http://blockbuilder.org/mbostock/4063570") http://blockbuilder.org/mbostock/4063570
+            div.tiny
+              a(target="_blank" href="http://bl.ocks.org/mbostock/") by mbostock
+
+          section
+            h3.demo Force Directed Tree
+            iframe.blocks(data-src="http://blockbuilder.org/mbostock/95aa92e2f4e8345aaa55a4a94d41ce37")
+            div.tiny
+              a(target="_blank" href="http://blockbuilder.org/mbostock/95aa92e2f4e8345aaa55a4a94d41ce37") http://blockbuilder.org/mbostock/95aa92e2f4e8345aaa55a4a94d41ce37
+            div.tiny
+              a(target="_blank" href="http://bl.ocks.org/mbostock/") by mbostock
+
+
+          section
+            h2.demo Collapsible Tree
+            div.left.small
+              ul.small
+                li Data: Tree/Network
+                li Tasks: Navigate connections. Locate nodes
+                li Considerations:
+                  ul.small
+                    li Great for larger datasets
+            div.right
+              a(href="https://observablehq.com/@d3/collapsible-tree")
+                img(data-src="../shared_images/collapsibleTree.svg" alt="CollapsibleTree")
+                span.tiny https://observablehq.com/@d3/collapsible-tree
+
+
+          section
+            h3.demo SpaceTree
+            iframe.blocks(data-src="https://philogb.github.io/jit/static/v20/Jit/Examples/Spacetree/example1.html")
+            div.tiny
+              a(target="_blank" href="https://philogb.github.io/jit/static/v20/Jit/Examples/Spacetree/example1.html") https://philogb.github.io/jit/static/v20/Jit/Examples/Spacetree/example1.html
+
+          section
+            h3.demo SpaceTree
+            span.
+              <iframe width="853" height="480" data-src="https://www.youtube.com/embed/F7-vJBsFBWw" frameborder="0" allowful.smalllscreen></iframe>
+            div.tiny
+              a(target="_blank" href="http://www.cs.umd.edu/hcil/spacetree/") http://www.cs.umd.edu/hcil/spacetree/
+
+
+          section
+            h3.demo Degree of Interest Tree
+            span.
+              <iframe width="853" height="480" data-src="https://www.youtube.com/embed/RTQ0N4QY0yc" frameborder="0" allowful.smalllscreen></iframe>
+            div.tiny
+              a(target="_blank" href="http://vis.stanford.edu/papers/doitrees-revisited") http://vis.stanford.edu/papers/doitrees-revisited
+
+
+
+        section#treesContainment
+          section
+            h1 Trees: Containment
+
+          section
+            h2 Idiom: treemap
+            .flex
+              .half
+                ul.small
+
+                  li.fragment data
+                  ul
+                    li.fragment tree
+                    li.fragment 1 quant attrib at leaf nodes
+                  li.fragment encoding
+                  ul
+                    li.fragment area containment marks for hierarchical structure
+                    li.fragment rectilinear orientation
+                    li.fragment area encodes quant attrib
+                  li.fragment tasks
+                  ul
+                    li.fragment query attribute at leaf nodes
+                  li.fragment scalability
+                  ul
+                    li.fragment 1M leaf nodes
+          section
+            h2 Link marks: Connection and containment
+            .flex
+              .half
+                ul.small
+                  li.fragment marks as links (vs. nodes)
+                  ul
+                    li.fragment common case in network drawing
+                    li.fragment 1D case: connection
+                    ul
+                      li.fragment ex: all node-link diagrams
+                      li.fragment emphasizes topology, path tracing
+                      li.fragment networks and trees
+                    li.fragment 2D case: containment
+                    ul
+                      li.fragment ex: all treemap variants
+                      li.fragment emphasizes attribute values at leaves (size coding)
+                      li.fragment only trees
+
+          //- Treemaps
+          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/09_networks-star-steno-topo.008.png")
+
+          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/09_networks-star-steno-topo.009.png")
+
+          section
+            h3.demo TreeMap
+            iframe.blocks(data-src="http://blockbuilder.org/mbostock/6bbb0a7ff7686b124d80")
+            div.tiny
+              a(target="_blank" href="http://blockbuilder.org/mbostock/6bbb0a7ff7686b124d80") http://blockbuilder.org/mbostock/6bbb0a7ff7686b124d80
+            div.tiny
+              a(target="_blank" href="http://bl.ocks.org/mbostock/") by mbostock
+
+
+          section
+            h3.demo TreeMap with parent labels
+            iframe.blocks(data-src="http://blockbuilder.org/mbostock/911ad09bdead40ec0061")
+            div.tiny
+              a(target="_blank" href="http://blockbuilder.org/mbostock/911ad09bdead40ec0061") http://blockbuilder.org/mbostock/911ad09bdead40ec0061
+            div.tiny
+              a(target="_blank" href="http://bl.ocks.org/mbostock/") by mbostock
+
+
+          section
+            iframe.blocks(data-src="https://finviz.com/map.ashx?t=sec")
+            div.tiny
+              a(href="https://finviz.com/map.ashx?t=sec") https://finviz.com/map.ashx?t=sec
+
+          section
+            h2.demo Icicle Tree
+            div.left.small
+              ul.small
+                li Data: Tree
+                li Tasks: Summarize values/hierarchy. Navigate links
+                li Considerations:
+                  ul.small
+                    li Uses more space than the treemap
+                    li Better for labels
+            div.right
+              a(href="https://observablehq.com/@d3/zoomable-icicle")
+                img(data-src="../shared_images/icicle.svg" alt="Icicle Tree")
+                span.tiny https://observablehq.com/@d3/zoomable-icicle
+
+
+          section
+            h2.demo Icicle Tree
+            div.left.small
+              ul.small
+                li Data: Tree
+                li Tasks: Summarize values/hierarchy. Navigate links. Compare values in leaves
+                li Considerations:
+                  ul.small
+                    li Careful.small with small edges
+            div.right
+              a(href="https://observablehq.com/@john-guerra/zoomable-variable-size-icicle")
+                img(data-src="../shared_images/variableSizeIcicle.svg" alt="Variable Size Icicle Tree")
+                span.tiny https://observablehq.com/@john-guerra/zoomable-variable-size-icicle
+
+          section
+            h2.demo Sunburst Tree
+            div.left.small
+              ul.small
+                li Data: Tree
+                li Tasks: Summarize values/hierarchy. Navigate links
+                li Considerations:
+                  ul.small
+                    li Radial values are confusing
+                    li Fancy yet difficul.smallt animation
+            div.right
+              a(href="https://observablehq.com/@d3/zoomable-sunburst")
+                img(data-src="../shared_images/sunburst.svg" alt="Sunburst Tree")
+                span.tiny https://observablehq.com/@d3/zoomable-sunburst
+
+
+          section
+            h3.demo Radial Treemap
+            iframe.blocks(data-src="http://blockbuilder.org/mbostock/ca5b03a33affa4160321")
+            div.tiny
+              a(target="_blank" href="http://blockbuilder.org/mbostock/ca5b03a33affa4160321") http://blockbuilder.org/mbostock/ca5b03a33affa4160321
+            div.tiny
+              a(target="_blank" href="http://bl.ocks.org/mbostock/") by mbostock
+
+          section
+            h3.demo Kickstarter Projects
+            iframe.blocks(data-src="http://blockbuilder.org/john-guerra/38b1c32154905828f019f35a026b7526")
+            div.tiny
+              a(target="_blank" href="http://blockbuilder.org/john-guerra/38b1c32154905828f019f35a026b7526") http://blockbuilder.org/john-guerra/38b1c32154905828f019f35a026b7526
+            div.tiny
+              a(target="_blank" href="http://bl.ocks.org/john-guerra/") by john-guerra
+
+          section
+            h2 Tree drawing idioms comparison
+            .flex
+              .half
+                ul.small
+                  li.fragment data shown
+                  ul
+                    li.fragment link relationships
+                    li.fragment tree depth
+                    li.fragment sibling order
+                  li.fragment design choices
+                  ul
+                    li.fragment connection vs containment link marks
+                    li.fragment rectilinear vs radial layout
+                    li.fragment spatial position channels
+                  li.fragment considerations
+                  ul
+                    li.fragment redundant? arbitrary?
+                    li.fragment information density?
+                    ul
+                      li.fragment avoid wasting space
+
+
+        section
+          section
+            h2 Tree Comparison
+
+          section(data-background-size="contain" data-background="images/typesofTreeComparison.png")
+
+          section
+            h3.demo TreeVersity
+            iframe.blocks(data-src="https://treeversity.cattlab.umd.edu")
+            div.tiny
+              a(target="_blank" href="https://treeversity.cattlab.umd.edu") https://treeversity.cattlab.umd.edu
+
+        //- section
+        //-   section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/09_networks-star-steno-topo.010.png")
+        //-   //- section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/09_networks-star-steno-topo.011.png")
+        //-   section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/09_networks-star-steno-topo.012.png")
+
+        //-   //- Sets
+        //-   section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/09_networks-star-steno-topo.023.png")
+        //-   section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/09_networks-star-steno-topo.024.png")
+          //- section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/09_networks-star-steno-topo.025.png")
+
+
 
 
         section
