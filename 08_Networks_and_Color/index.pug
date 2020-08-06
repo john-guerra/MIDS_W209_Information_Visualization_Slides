@@ -24,6 +24,8 @@ html(lang="en")
     link(href="../css/style.css", rel="stylesheet")
 
 
+
+
   body
     .reveal
       .slides
@@ -64,31 +66,91 @@ html(lang="en")
           section
             h2 What we are going to learn
             ul.small.small
-              li.fragment How to recognize, create, and store network data
-              li.fragment Algorithms to visualize network data
-              li.fragment How to use color
-                
-        section#networkData
+              li.fragment How to recognize, create, and store networks.
+              li.fragment Algorithms to visualize network data.
+              li.fragment How to use color.
+
+        section#networkBasics
           section
-            h1 Networks: Data        
-            
+            h1 Networks: Basics
+
+          section(style="text-align: left")
+            h3 Define networks
+            div
+              p Networks are defined by two things: nodes and links.
+              br
+              p <strong>Nodes</strong> = A collection of entities which have properties that are somehow related to each other.
+              ul.small.small
+                li e.g., people, forks in rivers, proteins, webpages, organisms, etc.
+              p <strong>Edges</strong> = Connections between nodes.
+              ul.small.small
+                li Links may be directed or undirected.
+                li Links may be binary or weighted.
+
           section
-            h3 Define network data
-            p Networks are defined by two things: nodes, heirachy, and connections between those nodes.
+            h2 Just some examples
+            ul
+              li Tournaments.
+              li Organization charts.
+              li Genealogy.
+              li Diagramming (e.g., Visio).
+              li Biological interactions (genes, proteins) .
+              li Computer networks.
+              li Social networks.
+              li Simulation and modeling.
+              li Integrated circuit design .
+              li River systems.
+              li #[a(href="http://www.uvm.edu/pdodds/teaching/courses/coconuts/slides/complex-networks/") Many, many more (and some history)].
+
 
           section
             h3 How to store network data
             ul.small.small
-              li.fragment Node and link files
-              li.fragment Adjacency matrix
-              li.fragment Nested: XML/JSON
-              li.fragment Flat
-              
+              li.fragment Node and link files.
+              li.fragment Adjacency matrix.
+              li.fragment Nested: XML/JSON.
+              li.fragment Flat.
+              li.fragment #[a(target="_blank" href="https://networkx.github.io/documentation/stable/reference/readwrite/index.html") Many others: list of formats from NetworkX].
+
+          section
+            h3 Node and link files
+            img(style="" data-src="../shared_images/networks/edgelist.png", alt="Edge List")
+
+          section
+            h3 Node and link files
+            img(style="" data-src="../shared_images/networks/adjacencylist.png", alt="Adjacency List")
+
+          section
+            h3 Adjacency matrix
+            div.scrollable-slide
+              img(style="width: auto; max-height: 1000px;" data-src="../shared_images/networks/adjacencymatrix.png", alt="Adjacency Matrix")
+
+          section
+            h3 Nested: XML/JSON
+            div.scrollable-slide
+              img(style="width: auto; max-height: 1000px;" data-src="../shared_images/networks/graphml.png", alt="GraphML")
+
           section
             h3 How to create network data
-            ul.small.small
-              li.fragment Group-by
-              li.fragment Extract links
+            ul
+              li.fragment Group-by common attribute.
+              li.fragment Identify nodes, extract links.
+
+          section(style="text-align: left")
+            h3 From flat data
+            p Say we have tabular data for Les Miserables with columns for "scene", "character", and "line". We want to examine the network of which characters co-occur in scenes. Take all unique characters are nodes, and link between all characters in a scene together.
+            ul
+              li JS: #[code d3.nest().key(function(d) { return d.scene; })].
+              li Python: #[code pd.groupby('scene')].
+
+          section
+            h3 Identify nodes, extract links.
+            p Social network data extract.
+            ul
+              li Loop through all of the messages.
+              li Add to a list of all users.
+              li Add to an edge list that has all "mentions" of another user.
+
 
         section#forceSimulations
           section
@@ -180,13 +242,13 @@ html(lang="en")
             div.tiny
               a(target="_blank" href="http://bl.ocks.org/john-guerra/") by john-guerra
 
-        section#adjacencyIdiom        
+        section#adjacencyIdiom
           section
             h2 Idiom: adjacency matrix view
             .flex
               .twothirds
                 ul.small
-  
+
                   li.fragment data: network
                   ul
                     li.fragment transform into same data/encoding as heatmap
@@ -206,19 +268,19 @@ html(lang="en")
                   li.fragment scalability
                   ul
                     li.fragment 1K nodes, 1M edges
-  
+
           section
             h3.demo Adjacency Matrix
             iframe.blocks(data-src="https://bost.ocks.org/mike/miserables/")
             div.tiny
               a(target="_blank" href="https://bost.ocks.org/mike/miserables/") https://bost.ocks.org/mike/miserables/
-  
+
           section
             h2 Connection vs. adjacency comparison
             .flex
               .twothirds
                 ul.small
-  
+
                   li.fragment adjacency matrix strengths
                   ul
                     li.fragment predictability, scalability, supports reordering
@@ -290,11 +352,12 @@ html(lang="en")
             div.tiny
               a(target="_blank" href="http://bl.ocks.org/rpgove/") by Robert Gove
 
-          section(data-background-size="contain" data-background-iframe="https://bost.ocks.org/mike/hive/")
           section
             h2.demo Hive Plots
             div.tiny
               a(target="_blank" href="https://bost.ocks.org/mike/hive/") https://bost.ocks.org/mike/hive/
+
+          section(data-background-size="contain" data-background-iframe="https://bost.ocks.org/mike/hive/")
 
           section
             h2.demo Semantic Substrates
@@ -359,15 +422,74 @@ html(lang="en")
           section
             h1 Metrics and Statistics
 
+
           section
-            h2 Network Analysis Metrics
-            ul.small
-              li Connections
-              li Distribution
-              li Segmentation
-            div.tiny
-              a(href="https://en.wikipedia.org/wiki/Social_network_analysis") https://en.wikipedia.org/wiki/Social_network_analysis
-            p Use them as derived attributes
+            h3 Simple stuff
+            div.left
+              ul
+                li # nodes, # edges.
+                li Connected components: count of separate groups of nodes.
+                li Graph density: percent of possible links that are present.
+            div.right
+              figure
+                img.fill(data-src="../shared_images/networks/1.png")
+
+          section
+            h3 Degree Distribution
+            div.left
+              ul
+                li E.g., run “Average Degree” tab in Gephi.
+                li For pure random networks: $P_k = e ^ { \langle k \rangle } \frac{ \langle k \rangle ^k}{k!}$.
+                li For preferential attachment: $P_k ~\sim~ k ^ {-\gamma}$.
+            div.right
+              figure
+                img.fill(data-src="../shared_images/networks/3.png")
+
+
+          section
+            h3 Path Length
+            div.left
+              ul
+                li E.g., run “Avg. Path Length” in Gephi.
+                li The path length between nodes i and j defined as $d_{ij}$.
+                li Average path length $\langle d_{ij} \rangle$.
+                li Network diameter $d_\max = \max _{i,j} d_{ij}$.
+            div.right
+              figure
+                img.fill(data-src="../shared_images/networks/2.png")
+
+          section
+            h3 Centrality
+            div.left
+              ul
+                li Betweenness centrality: number of shortest paths across node.
+                li Degree centrality (node degree), also edge centrality (not in Gephi, use networkX).
+                li Eigenvector centrality $Ax = \lambda x$.
+                li Closeness $d_{cl} = \left [  \sum _{ij}  d_{ij} ^ {-1} / n \choose 2 \right ] ^ {-1}$.
+            div.right
+              figure
+                img.fill(data-src="../shared_images/networks/4.png")
+
+          section
+            h3 More centrality
+            div
+              ul
+                li PageRank, like eigenvector centrality, can be written as an eigenvalue problem: $$PR(p_i) = \frac{1-d}{N} + \sum _{p_j} \frac{PR(p_j)}{L(p_j)}.$$
+
+          section
+            h3 Clustering
+            div.left
+              ul
+                li Watts and Strogatz measure: $$ C_1 = \left \langle \frac{\sum_{j_1,j_2\in N} a_{j_1j_2}}{k_i(k_i-1)/2} \right \rangle .$$
+                li Newman (and Gephi): $$ C_2  = \frac{3 \times \textrm{triangles}}{\textrm{triples}} .$$
+            div.right
+              figure
+                img.fill(data-src="../shared_images/networks/5.png")
+
+          section
+            h3 Modularity and Structure
+            figure
+                img.fill(data-src="../shared_images/networks/6.png")
 
         section#networkTools
           section
@@ -377,25 +499,41 @@ html(lang="en")
             h3 Tools that contain layout algorithms
             ul.small
               li
-                a(href="https://github.com/d3/d3-force") d3            
+                a(href="https://github.com/d3/d3-force") d3.
               li
-                a(href="https://networkx.github.io/") networkX
+                a(href="https://networkx.github.io/") networkX.
               li
-                a(href="https://www.smrfoundation.org/nodexl/") NodeXL
+                a(href="https://www.smrfoundation.org/nodexl/") NodeXL.
               li
-                a(href="https://gephi.org/") Gephi
+                a(href="https://gephi.org/") Gephi.
               li
-                a(href="") LaTeX                
+                a(href="https://github.com/hackl/tikz-network") LaTeX (TikZ).
               li
-                a(href="") Command line                
+                a(href="https://graphviz.org/") Graphviz (dot).
 
           section
             h3 Combining layouts and visualization
             p Many possibilities: connect any tools that can compute layouts to any other visualation tool. A few useful examples:
             ul.small
-              li d3 + vega-lite
-              li networkX + matplotlib (built-in)
-              
+              li d3 + vega-lite (we've seen many d3!).
+              li networkX + matplotlib (built-in).
+
+          section
+            h3 NetworkX
+            div.scrollable-slide
+              img(style="width: auto; max-height: 1000px;" data-src="../shared_images/networks/networkx1.png", alt="NetworkX Force")
+            div.tiny
+              a(target="_blank" href="https://github.com/andyreagan/MIDS_W209_Data_Visualization_Slides/blob/master/13/Exercises/Network-data.ipynb") notebook
+
+          section
+            h3 NetworkX
+            div.scrollable-slide
+              img(style="width: auto; max-height: 1000px;" data-src="../shared_images/networks/networkx2.png", alt="NetworkX Circle")
+
+          section
+            h3 NetworkX
+            li NetworkX has #[a(href="http://networkx.github.io/documentation/latest/gallery.html") a nice online gallery] of other, fancier drawings.
+
         section#colorIntro
           section
             h1 Color
@@ -403,102 +541,172 @@ html(lang="en")
           section
             h3 Encode > Map > Color
             img(style="max-height: 400px" data-src="../shared_images/vad_book_alldiagrams/10_01_encode_map.png", alt="Encode Map Color")
-            
+
         section#colorDetail
           section
             h3 Categorical vs Ordered Color
-            img(style="max-height: 400px" data-src="../shared_images/vad_book_alldiagrams/10_02_encode_map.png", alt="Encode Map Color")
+            img(style="max-height: 400px" data-src="../shared_images/vad_book_alldiagrams/color/1.png")
 
           section
             h3 Decomposing color
-            ul.small
-              li first rule: do not talk about color!
+            div.left(style="width:65%;")
               ul.small
-                li color is confusing if treated as monolithic
-              li decompose into three channels                
-              ul.small
-                li ordered can show magnitude
+                li first rule: do not talk about color!
                 ul.small
-                  li luminance: how bright                
-                  li saturation: how colorful
-                li categorical can show identity
+                  li color is confusing if treated as monolithic
+                li decompose into three channels
                 ul.small
-                  li hue: what color
-              li channels have different properties
-              ul.small
-                li what they convey directly to perceptual system
-                li how much they can convey: how many discriminable bins can we use?
-            img(style="max-height: 400px" data-src="../shared_images/vad_book_alldiagrams/10_03_HSL.png", alt="HSL")
+                  li ordered can show magnitude
+                  ul.small
+                    li luminance: how bright
+                    li saturation: how colorful
+                  li categorical can show identity
+                  ul.small
+                    li hue: what color
+                li channels have different properties
+                ul.small
+                  li what they convey directly to perceptual system
+                  li how much they can convey: how many discriminable bins can we use?
+            div.right(style="width:30%;")
+              img(style="max-height: 400px" data-src="../shared_images/vad_book_alldiagrams/color/2.png")
 
           section
             h3 Spectral sensitivity
-            img(style="max-height: 400px" data-src="../shared_images/vad_book_alldiagrams/10_03_spectral_sensitivity.png", alt="Spectral sensitivity")
+            img(style="max-height: 400px" data-src="../shared_images/vad_book_alldiagrams/color/3.png")
 
           section
             h3 Luminance
-            ul.small
-              li need luminance for edge detection
+            div.left
               ul.small
-                li fine-grained detail only visible through luminance contrast
-                li legible text requires luminance contrast!
-              li intrinsic perceptual ordering      
-            
-            img(style="max-height: 400px" data-src="../shared_images/vad_book_alldiagrams/10_03_spectral_sensitivity.png", alt="Spectral sensitivity")
+                li need luminance for edge detection
+                ul.small
+                  li fine-grained detail only visible through luminance contrast
+                  li legible text requires luminance contrast!
+                li intrinsic perceptual ordering
+            div.right
+              img(style="max-height: 400px" data-src="../shared_images/vad_book_alldiagrams/color/4.png")
 
-          section
-            h3 Opponent color and color deficiency            
-            
           section
             h3 Color spaces
-            
-          section
-            h3 Designing for color deficiency: Check with simulator
-            
-          section
-            h3 Designing for color deficiency: Avoid encoding by hue alone
-            
-          section
-            h3 Color deficiency: Reduces color to 2 dimensions
-            
-          section
-            h3 Designing for color deficiency: Blue-Orange is safe
-            
-          section
-            h3 Bezold Effect: Outlines matter                       
+            img(style="max-height: 400px" data-src="../shared_images/vad_book_alldiagrams/color/6.png")
 
           section
-            h3 Relative judgements: Color & illumination                                   
-            
+            h3 Designing for color deficiency: Check with simulator
+            img(style="max-height: 400px" data-src="../shared_images/vad_book_alldiagrams/color/7.png")
+
           section
-            h3 Categorical color: limited number of discriminable bins                                               
-            
+            h3 Designing for color deficiency: Avoid encoding by hue alone
+            div.left
+              ul
+                li Redundantly encode.
+                  ul
+                    li Vary luminance.
+                    li Change shape.
+            div.right
+              img(style="max-height: 400px" data-src="../shared_images/vad_book_alldiagrams/color/8.png")
+
+          section
+            h3 Color deficiency: Reduces color to 2 dimensions
+            img(style="max-height: 400px" data-src="../shared_images/vad_book_alldiagrams/color/9.png")
+
+          section
+            h3 Designing for color deficiency: Blue-Orange is safe
+            img(style="max-height: 400px" data-src="../shared_images/vad_book_alldiagrams/color/10.png")
+
+          section
+            h3 Bezold Effect: Outlines matter
+            img(style="max-height: 400px" data-src="../shared_images/vad_book_alldiagrams/color/11.png")
+
+          section
+            h3 Relative judgements: Color & illumination
+            img(style="max-height: 400px" data-src="../shared_images/vad_book_alldiagrams/color/12.png")
+
+          section
+            h3 Relative judgements: Color & illumination
+            img(style="max-height: 400px" data-src="../shared_images/vad_book_alldiagrams/color/13.png")
+
+          section
+            h3 Categorical color: limited number of discriminable bins
+            div.left
+              ul
+                li Human perception built on relative comparisons.
+                  ul
+                    li Great if color is contiguous.
+                    li Suprisingly bad for absolute comparisons.
+                li Noncontiguous small regions of color.
+                  ul
+                    li Fewer bins than you want.
+                    li Rule of thumn: 6-12 bins, including background and highlights.
+            div.right
+              img(style="max-height: 400px" data-src="../shared_images/vad_book_alldiagrams/color/14.png")
+
           section
             h3 Glyphs
+            div.left
+              ul
+                li Glyphs: composite objects.
+                  ul
+                    li Internal structure with multiple marks.
+                li Alternative to color encoding.
+                  ul
+                    li Or coding with any single channel.
+            div.right
+              img(style="max-height: 400px" data-src="../shared_images/vad_book_alldiagrams/color/15.png")
 
           section
             h3 ColorBrewer
-            
+            img(style="max-height: 400px" data-src="../shared_images/vad_book_alldiagrams/color/16.png")
+
           section
-            h3 Ordered color: Rainbow is poor default      
-            
+            h3 Ordered color: Rainbow is poor default
+            div.left
+              ul
+                li Problems:
+                  ul
+                    li Perceptually unordered.
+                    li Perceptually nonlinear.
+                li Benefits:
+                  ul
+                    li Fine-grained structure visible and nameable.
+                li Alternative:
+                  ul
+                    li Large-scale structure: fewer hues.
+                    li Fine structure: multiple hues with monotonically increasing luminance [vs viridis R/python].
+            div.right
+              img(style="max-height: 400px" data-src="../shared_images/vad_book_alldiagrams/color/18.png")
+
+
           section
             h3 Viridis
-            
+            p Colorful, perceptually uniform, colorblind-safe, monotonically increasing luminance.
+            img(style="max-height: 400px" data-src="../shared_images/vad_book_alldiagrams/color/19.png")
+
           section
             h3 Colormaps
-            
+            div.left
+              img(style="max-height: 400px" data-src="../shared_images/vad_book_alldiagrams/color/21.png")
+            div.left
+              img(style="max-height: 400px" data-src="../shared_images/vad_book_alldiagrams/color/25.png")
+
         section#mapOther
           section
-            h3 Map other channels
+            h1 Map other channels
             
+          section      
+            div.scrollable-slide      
+              img(style="width: auto; max-height: 1000px;" data-src="../shared_images/vad_book_alldiagrams/color/23.png")
+
           section
-            h3 Angle            
-                                        
+            h3 Angle
+            img(style="max-height: 400px" data-src="../shared_images/vad_book_alldiagrams/color/24.png")
+
         section#review
           section
             h2 What we learned
             ul.small.small
-
+              li.fragment How to recognize, create, and store networks.
+              li.fragment Algorithms to visualize network data.
+              li.fragment How to use color.
 
     script(src="../js/reveal.js")
     script(src="../plugin/zoom/zoom.js")
@@ -506,6 +714,7 @@ html(lang="en")
     script(src="../plugin/search/search.js")
     script(src="../plugin/markdown/markdown.js")
     script(src="../plugin/highlight/highlight.js")
+    script(src="../plugin/math/math.js")
 
     //- script(src="https://cdn.jsdelivr.net/npm/vega@5.13.0")
     //- script(src="https://cdn.jsdelivr.net/npm/vega-lite@4.13.1")
@@ -524,7 +733,11 @@ html(lang="en")
         //- width: "100%",
         //- height: "720px",
 
-        plugins: [ RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight ]
+        math: {
+          mathjax: 'https://cdn.jsdelivr.net/gh/mathjax/mathjax@2.7.8/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+        },
+        plugins: [ RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight, RevealMath ]
       });
     script.
       (function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){
