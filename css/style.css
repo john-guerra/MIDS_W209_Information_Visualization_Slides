@@ -462,3 +462,16 @@ body {
   margin-top: 0px;
   margin-bottom: 0px;
 }
+
+
+.scrollable-slide {
+    height: 500px;
+    overflow-y: auto !important;
+}
+.scrollable-slide::before {
+    background: none !important;
+}
+
+.scrollable-slide::after {
+    box-shadow: none !important;
+}
