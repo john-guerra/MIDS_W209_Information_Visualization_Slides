@@ -53,6 +53,9 @@ body {
   list-style-type: circle;
   font-size: 80%;
 }
+.reveal ul.normal {
+  font-size: 100%;
+}
 .reveal pre code {
   padding: 2em;
   word-wrap: normal;

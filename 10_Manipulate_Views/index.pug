@@ -23,6 +23,17 @@ html(lang="en")
     link(href="../css/theme/white.css", rel="stylesheet", id="theme")
     link(href="../css/style.css", rel="stylesheet")
 
+    style.
+      #d3ShowReel svg {
+        font-family: "Helvetica Neue", Helvetica;
+        font-size: 12pt;
+      }
+
+      #d3ShowReel .line {
+        fill: none;
+        stroke: #000;
+        stroke-width: 2px;
+      }
 
   body
     .reveal
@@ -44,7 +55,7 @@ html(lang="en")
 
           div.logo
             a(href="https://datascience.berkeley.edu/")
-              img.logo(src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo")
+              img.logo(data-src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo")
           div.tiny Partially based on
             a(href="https://www.cs.ubc.ca/~tmm/talks.html#minicourse14")  slides from Tamara Munzner
 
@@ -58,92 +69,146 @@ html(lang="en")
 
         section
           section
-            h2 Manipulate views
+            h1 Manipulate views
           section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/11_manipulate-genea.003.png")
           section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/11_manipulate-genea.004.png")
-          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/11_manipulate-genea.005.png")
-          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/11_manipulate-genea.006.png")
+
+
+          //- section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/11_manipulate-genea.005.png")
+          //- section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/11_manipulate-genea.006.png")
           section
-            h2 How to Handle Complexity: 1 Previous Strategy + 3 More
+            h3 How to Handle Complexity
             .flex
               .third
-                img(src="./shared_images/vad_book_alldiagrams/pr10_manipulate-views-derive.png", alt="derive")
-                ul.small
-                  li.fragment Derive new data to show within view
+                div.small(style="text-align:left") 3 Strategies
+                ul.tiny
+
                   li.fragment Change view over time
                   li.fragment Facet across multiple views
                   li.fragment Reduce items/attributes within single view
+                div.fragment.small(style="text-align:left") + 1 previous
+                  ul.tiny
+                    li Derive new data to show within view
+                      img(data-src="../shared_images/vad_book_alldiagrams/pr10_manipulate-views-derive.png", alt="derive")
+
               .twothirds
-                img(src="../shared_images/vad_book_alldiagrams/10_manipulate-views-3-strategies.png", alt="manipulate: change, select, navigate; facet: juxtapose, parition, superimpose; reduce: filter, aggregate, embed")
-          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/11_manipulate-genea.007.png")
-          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/11_manipulate-genea.008.png")
-          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/11_manipulate-genea.009.png")
-          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/11_manipulate-genea.010.png")
-          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/11_manipulate-genea.011.png")
-          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/11_manipulate-genea.012.png")
+                img(data-src="../shared_images/vad_book_alldiagrams/10_manipulate-views-3-strategies.png", alt="manipulate: change, select, navigate; facet: juxtapose, parition, superimpose; reduce: filter, aggregate, embed")
+
           section
-            h2 Idiom Design Choices: Interaction
-              img(src="../shared_images/vad_book_alldiagrams/10_manipulate-views-3-strategies.png", alt="manipulate: change, select, navigate; facet: juxtapose, parition, superimpose; reduce: filter, aggregate, embed")
-          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/11_manipulate-genea.013.png")
+            h2 Strategies
+
+            ul(style="font-size:100%")
+              li Change view over time #[strong.fragment 👈 most obvious one: Interaction]
+              li Facet
+              li Reduce
+              li Derive
+          //- section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/11_manipulate-genea.007.png")
+          //- section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/11_manipulate-genea.008.png")
+          //- section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/11_manipulate-genea.009.png")
+          //- section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/11_manipulate-genea.010.png")
+          //- section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/11_manipulate-genea.011.png")
+          //- section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/11_manipulate-genea.012.png")
+
+
+          //- section
+          //-   h2 Idiom Design Choices: Interaction
+          //-   img(data-src="../shared_images/vad_book_alldiagrams/10_manipulate-views-3-strategies.png", alt="manipulate: change, select, navigate; facet: juxtapose, parition, superimpose; reduce: filter, aggregate, embed")
+
+
+          //- section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/11_manipulate-genea.013.png")
           section
             h2 Manipulate
             .flex
               .third
-                img(src="../shared_images/vad_book_alldiagrams/pr10_manipulate-views-change.png", alt="change over time; select")
+                img.fragment(data-src="../shared_images/vad_book_alldiagrams/pr10_manipulate-views-change.png", alt="change over time; select")
               .third
-                img(src="../shared_images/vad_book_alldiagrams/pr10_manipulate-views-navigate.png", alt="Navigate: item reduction: zoom; pan/translate; constrained")
+                img.fragment(data-src="../shared_images/vad_book_alldiagrams/pr10_manipulate-views-navigate.png", alt="Navigate: item reduction: zoom; pan/translate; constrained")
               .third
-                img(src="../shared_images/vad_book_alldiagrams/pr10_manipulate-views-attribute-reduction.png", alt="attribute reduction: slice; cut; project")
-          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/11_manipulate-genea.014.png")
-          section
-          h2 Change Over Time
-              ul
-                li.fragment Change any of the other choices
-                  ul
-                    li.fragment Encoding itself
-                    li.fragment Parameters
-                    li.fragment Arrange: rearrange reorder
-                    li.fragment Aggregation level, what is filtered...
-                li.fragment Why change?
-                    li.fragment One of four major strategies
-                      ul
-                        li.fragment Change over time
-                        li.fragment Facet data by partitioning into multiple views
-                        li.fragment Reduce amount of data shown within view
-                    li.fragment Most obvious, powerful, flexible
-                    li.fragment Interaction entails change
+                img.fragment(data-src="../shared_images/vad_book_alldiagrams/pr10_manipulate-views-attribute-reduction.png", alt="attribute reduction: slice; cut; project")
 
-          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/11_manipulate-genea.015.png")
+
+          //- section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/11_manipulate-genea.014.png")
           section
+            h2 Change Over Time
+            ul
+              li.fragment Change any of the other choices
+                ul
+                  li.fragment Encoding itself
+                  li.fragment Parameters
+                  li.fragment Arrange: rearrange reorder
+                  li.fragment Aggregation level, what is filtered...
+                  br
+                  li.fragment Interaction entails change
+
+            //- TODO add gifs for each type of change
+
+          //- section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/11_manipulate-genea.015.png")
+          section
+            h3 Change Encoding
             .flex
               .half
-                h2 Idiom: Re-encode
-                img(src="../shared_images/vad_book_alldiagrams/pr10_manipulate-views-reencode-tableau-1.png", alt="screenshot of re-encoding from from Tableau")
-                img(src="../shared_images/vad_book_alldiagrams/pr10_manipulate-views-reencode-tableau-2.png", alt="screenshot of re-encoding from from Tableau")
+                img.fragment(data-src="../shared_images/vad_book_alldiagrams/pr10_manipulate-views-reencode-tableau-1.png", alt="screenshot of re-encoding from from Tableau")
+                img.fragment(data-src="../shared_images/vad_book_alldiagrams/pr10_manipulate-views-reencode-tableau-2.png", alt="screenshot of re-encoding from from Tableau")
               .half
-                h2 System: Tableau
-                img(src="../shared_images/vad_book_alldiagrams/pr10_manipulate-views-reencode-tableau-3.png", alt="screenshot of re-encoding from from Tableau")
-                img(src="../shared_images/vad_book_alldiagrams/pr10_manipulate-views-reencode-tableau-4.png", alt="screenshot of re-encoding from from Tableau")
-            a.bottom.tiny(href="http://tableausoftware.com") Made using Tableau
+
+                img.fragment(data-src="../shared_images/vad_book_alldiagrams/pr10_manipulate-views-reencode-tableau-3.png", alt="screenshot of re-encoding from from Tableau")
+                img.fragment(data-src="../shared_images/vad_book_alldiagrams/pr10_manipulate-views-reencode-tableau-4.png", alt="screenshot of re-encoding from from Tableau")
+            a.bottom.reference(href="http://tableausoftware.com") Made using Tableau
+
+          section
+            h3 Change Encoding: Vega Lite
+
+            img(data-src="../shared_images/vega-lite_demo.gif", alt="Vega Lite Change Encoding")
+            div.small.fragment Not so easy in D3 🤷🏼‍♂️
+
+
+
+          section
+            h2 Change Parameters
+            .flex
+              .half
+                ul
+                  li.fragment widgets and controls
+                    ul
+                      li sliders, buttons, radio buttons,  checkboxes,  dropdowns/comboboxes
+                  li.fragment pros
+                    ul
+                      li clear affordances, self-documenting (with labels)
+                  li.fragment cons
+                    ul
+                      li uses screen space
+                  li.fragment design choices
+                    ul
+                      li separated vs interleaved
+                        ul
+                          li controls & canvas
+                div.reference slide inspired by: Alexander Lex, Utah
+              .half
+                figure
+                  img(src="../shared_images/vad_book_alldiagrams/grow_of_a_nation.png", alt="Growth of a Nation")
+                  figcaption.reference
+                    a(href="http://laurenwood.github.io/") [Growth of a Nation](http://laurenwood.github.io/)
           //- lineup
-          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/11_manipulate-genea.016.png")
+          //- section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/11_manipulate-genea.016.png")
           section
-            .flex
-              .half
-                h2 Idiom: Reorder
-              .half
-                h2 System: DataStripes
+            h2 Reorder: DataStripes
             ul
               li.fragment What: table with many attributes
-              li.frgament How: data-driven reordering by selecting column
-              li.frgament Why: find correlations between attributes
-            img(src="../shared_images/vad_book_alldiagrams/pr10_manipulate-views-reorder.png", alt="multiple depictions of how complex data can be ordered, by color, date, and other dimensions")
-            a.bottom.tiny(href="carlmanaster.github.io/datastripes/") http://carlmanaster.github.io/datastripes/
-          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/11_manipulate-genea.017.png")
+              li.fragment How: data-driven reordering by selecting column
+              li.fragment Why: find correlations between attributes
+            figure
+              img(data-src="../shared_images/vad_book_alldiagrams/pr10_manipulate-views-reorder.png", alt="multiple depictions of how complex data can be ordered, by color, date, and other dimensions")
+              figcaption.reference
+                a(href="http://carlmanaster.github.io/datastripes/") http://carlmanaster.github.io/datastripes/
+
+          //- TODO: Gif for datastripes
+
+
+          //- section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/11_manipulate-genea.017.png")
           section
+            h2 Re-Align: LineUp
             .flex
               .half
-                h2 Idiom: Change Alignment
                 ul
                   li.fragment Stacked bars
                   ul
@@ -154,44 +219,84 @@ html(lang="en")
                   li.fragment Align to different segment
                     li.fragment Supports flexible comparison
               .half
-                h2 System: LineUp
-                img(src="../shared_images/vad_book_alldiagrams/pr10_manipulate-views-change-alignment-1.png", alt="Content aligned along the left margin")
-                img(src="../shared_images/vad_book_alldiagrams/pr10_manipulate-views-change-alignment-2.png", alt="Content aligned along the center margin")
-                a.tiny [LineUp: Visual Analysis of Multi-Attribute Rankings.Gratzl, Lex, Gehlenborg, Pfister, and Streit. IEEE Trans. Visualization and Computer Graphics (Proc. InfoVis 2013) 19:12 (2013), 2277–2286.]
+
+                figure
+                  img(data-src="../shared_images/vad_book_alldiagrams/pr10_manipulate-views-change-alignment-1.png", alt="Content aligned along the left margin")
+                  img(data-src="../shared_images/vad_book_alldiagrams/pr10_manipulate-views-change-alignment-2.png", alt="Content aligned along the center margin")
+
+                  figcaption.reference [LineUp: Visual Analysis of Multi-Attribute Rankings.Gratzl, Lex, Gehlenborg, Pfister, and Streit. IEEE Trans. Visualization and Computer Graphics (Proc. InfoVis 2013) 19:12 (2013), 2277–2286.]
+
+
           section
             h3.demo LineUP
-            //- iframe.blocks(src="http://vcg.seas.harvard.edu/files/pfister/files/2013_infovis_lineup.mp4")
+            //- iframe.blocks(data-src="http://vcg.seas.harvard.edu/files/pfister/files/2013_infovis_lineup.mp4")
             //- Video without autoplay
             span.
               <video width="100%" height="100%" controls>
-                  <source src="http://vcg.seas.harvard.edu/files/pfister/files/2013_infovis_lineup.mp4" type="video/mp4">
+                  <source data-src="http://vcg.seas.harvard.edu/files/pfister/files/2013_infovis_lineup.mp4" type="video/mp4">
               </video>
             a.tiny(target="_blank" href="http://vcg.seas.harvard.edu/files/pfister/files/2013_infovis_lineup.mp4") http://vcg.seas.harvard.edu/files/pfister/files/2013_infovis_lineup.mp4
 
 
-          section
-            h2 LineUP D3
-            a(href="https://observablehq.com/@john-guerra/lineup") https://observablehq.com/@john-guerra/lineup
+          section.full
+            h3 "LineUP" D3
+            div(style="font-size:12pt;").
+              <div id="observablehq-30df3492">
+                <div class="observablehq-viewof-coeficients"></div>
+                <div style="overflow: scroll;" class="observablehq-chart"></div>
+                <div style="overflow: hidden;"><a style="display: block; float:right;" href="https://observablehq.com/@john-guerra/lineup"><object type="image/svg+xml" style="pointer-events: none;" width=180 height=22 data="https://static.observableusercontent.com/files/c3fab254a006f1a3a1f9f63aba8ab1460db4752529036b9962950bde0ec195bab823daa6b278b1c3401e545b3bd640ddfdcad805cf9859af218cb2b9fed4ddf0"></object></a></div>
+              </div>
+              <script type="module">
+                import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+                import define from "https://api.observablehq.com/@john-guerra/lineup.js?v=3";
+                (new Runtime).module(define, name => {
+                  if (name === "viewof coeficients") return Inspector.into("#observablehq-30df3492 .observablehq-viewof-coeficients")();
+                  if (name === "chart") return Inspector.into("#observablehq-30df3492 .observablehq-chart")();
+                });
+              </script>
+
+            a.reference(href="https://observablehq.com/@john-guerra/lineup") https://observablehq.com/@john-guerra/lineup
 
 
           //- Multilevel call matrices
-          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/11_manipulate-genea.018.png")
-            a.bottom.tiny(target="_blank" href="http://www.win.tue.nl/vis1/home/fvham/DL/callmatrix.pdf") http://www.win.tue.nl/vis1/home/fvham/DL/callmatrix.pdf
+          //- section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/11_manipulate-genea.018.png")
+
+
+          //-   a.bottom.tiny(target="_blank" href="http://www.win.tue.nl/vis1/home/fvham/DL/callmatrix.pdf") http://www.win.tue.nl/vis1/home/fvham/DL/callmatrix.pdf
+
+
           section
-            h2 Idiom: Animated Transitions
-            ul
-              li.fragment Smooth interpolation from one state to another
-              ul
-                li.fragment Alternative to jump cuts, supports item tracking
-                ul
-                  li.fragment Best case for animation
-                li.fragment Staging to reduce cognitive load
-              li.fragment Example: animated transitions in statistical data graphics
-            img(src="pr10_manipulate-views-animated-transitions.png", alt="animated transition")
-            a(href="https://vimeo.com/19278444") vimeo.com/19278444
-            a.bottom.tiny(href="vis.stanford.edu/papers/animated-transitions") [Animated Transitions in Statistical Data Graphics. Heer and Robertson. IEEE TVCG (Proc InfoVis 2007) 13(6):1240-1247, 2007]
+            h3 Idiom: Animated Transitions
+            .flex
+              .half
+                ul.noMarginTopBottom
+                  li.fragment Smooth interpolation from one state to another
+                  ul
+                    li.fragment Alternative to jump cuts, supports item tracking
+                    ul
+                      li.fragment Best case for animation
+                    li.fragment Staging to reduce cognitive load
+                  li.fragment Example: animated transitions in statistical data graphics
+              .half
+                figurenoMarginTopBottom
+                  img(data-src="../shared_images/vad_book_alldiagrams/pr10_manipulate-views-animated-transitions.png", alt="animated transition")
+                  a.reference(href="https://vimeo.com/19278444") vimeo.com/19278444
+                  figcaption.referece
+                    a(href="vis.stanford.edu/papers/animated-transitions") [Animated Transitions in Statistical Data Graphics. Heer and Robertson. IEEE TVCG (Proc InfoVis 2007) 13(6):1240-1247, 2007]
+
+
+          section.full
+            h2 D3 show reel
+            div#d3ShowReel.
+              <div id="observablehq-15c27bb5"></div>
+              <script type="module">
+              import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+              import define from "https://api.observablehq.com/d/90fc58032421b463.js?v=3";
+              const inspect = Inspector.into("#observablehq-15c27bb5");
+              (new Runtime).module(define, name => name === "chart" ? inspect() : undefined);
+              </script>
           section
-            iframe.blocks(src="https://bost.ocks.org/mike/miserables/")
+            iframe.blocks(data-src="https://bost.ocks.org/mike/miserables/")
             a(href="https://bost.ocks.org/mike/miserables/") https://bost.ocks.org/mike/miserables/
 
 
@@ -219,10 +324,10 @@ html(lang="en")
                         li.fragment Primary vs secondary (ex: source/target nodes in network)
                         li.fragment Group membership (add/delete items, name group, …)
               .third
-                img(src="../shared_images/vad_book_alldiagrams/pr10_manipulate-views-select.png", alt="Select a single plot point")
+                img(data-src="../shared_images/vad_book_alldiagrams/pr10_manipulate-views-select.png", alt="Select a single plot point")
           section
             //- h2 Selection in D3
-            iframe.blocks(src="https://blockbuilder.org/mbostock/7608400")
+            iframe.blocks(data-src="https://blockbuilder.org/mbostock/7608400")
             a.tiny(href="https://blockbuilder.org/mbostock/7608400") https://blockbuilder.org/mbostock/7608400
 
           section
@@ -246,7 +351,7 @@ html(lang="en")
                     ul
                       li.fragment Move up/down/sideways
               .half
-                img(src="../shared_images/vad_book_alldiagrams/pr10_manipulate-views-navigate-reduction.png", alt="Item reduction")
+                img(data-src="../shared_images/vad_book_alldiagrams/pr10_manipulate-views-navigate-reduction.png", alt="Item reduction")
           section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/11_manipulate-genea.021.png")
           section
             .flex
@@ -265,23 +370,23 @@ html(lang="en")
                     li.fragment Simple line chart
                     li.fragment Full chart: axes and tickmarks
               .twothirds
-                img(src="../shared_images/vad_book_alldiagrams/pr10_manipulate-views-semantic-zooming.png", alt="Semantic zooming")
+                img(data-src="../shared_images/vad_book_alldiagrams/pr10_manipulate-views-semantic-zooming.png", alt="Semantic zooming")
             a.bottom.tiny [LiveRAC - Interactive Visual Exploration of System Management Time-Series Data. McLachlan, Munzner, Koutsofios, and North. Proc. ACM Conf. Human Factors in Computing Systems (CHI), pp. 1483–1492, 2008.]
           section
             h3.demo LiveRAC
             span.blocks
-              <iframe width="853" height="480" src="https://www.youtube.com/embed/ld0c3H0VSkw" frameborder="0" allowfullscreen></iframe>
+              <iframe width="853" height="480" data-src="https://www.youtube.com/embed/ld0c3H0VSkw" frameborder="0" allowfullscreen></iframe>
 
           //- Semantic vs geometric zoom
           section
             h3.demo Geometric Zoom
-            iframe.blocks(src="http://blockbuilder.org/mbostock/3680958")
+            iframe.blocks(data-src="http://blockbuilder.org/mbostock/3680958")
             a.tiny(target="_blank" href="http://blockbuilder.org/mbostock/3680958") http://blockbuilder.org/mbostock/3680958
             a.tiny(target="_blank" href="http://bl.ocks.org/mbostock/") by mbostock
 
           section
             h3.demo Semantic Zoom
-            iframe.blocks(src="http://blockbuilder.org/mbostock/3681006")
+            iframe.blocks(data-src="http://blockbuilder.org/mbostock/3681006")
             a.tiny(target="_blank" href="http://blockbuilder.org/mbostock/3681006") http://blockbuilder.org/mbostock/3681006
             a.tiny(target="_blank" href="http://bl.ocks.org/mbostock/") by mbostock
 
@@ -337,7 +442,7 @@ html(lang="en")
     script.
       (function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      m=s.getElementsByTagName(o)[0];a.async=1;a.data-src=g;m.parentNode.insertBefore(a,m)
       })(window,document,"script","https://www.google-analytics.com/analytics.js","ga");
 
       ga("create", "UA-72531610-1", "auto");
