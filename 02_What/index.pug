@@ -227,6 +227,70 @@ html(lang="en")
               img(src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo")
 
 
+        section#datasetStorage
+          section
+            h1 Dataset Storage
+
+          section
+            h3 Compute vs Store
+            ul
+              li Always a balancing act.
+              li Front end computation is faster than you may expect, while load times are user-dependent.
+
+          section
+            h3 API basics
+            ul
+              li API's are just HTTP/HTTPS endpoints like any other web page.
+              li Response headers can indicate expected file type returned.
+              li Demo: hit #[a(href="http://hedonometer.org/api/v1/happiness/?format=json&title=en_all&date__gt=2020-05-01&limit=10") hedonometer.org/api/v1/happiness/?format=json&title=en_all&date__gt=2020-05-01&limit=10]
+
+          section
+            h3 Connecting to a database
+            ul
+              li D3 needs an API (Flask or likewise).
+              li Python/R: many options (sqlalchemy, native clients, etc).
+              li Tableau built-in: live vs extract.
+
+          section
+            h3 Case studies for complex data processing
+            ul
+              li MapD.
+              li Hedonometer.
+
+          section
+            h3 MapD
+            ul
+              li Original #[a(href="http://go.mapd.com/resources_whitepaper_mapd_lp.html") white paper].
+              ul
+                li Computation done server side on custom hardware: GPU memory.
+                li Interacts with front end via API.
+                li Fast on a scale that's unimaginable in the front-end alone.
+            img(src="../shared_images/mapd.png" alt="MapD")
+         
+          section
+            h3 Hedonometer
+            ul
+              li Based on 10% decahose feed of all Tweets, ~250-500GB uncompressed per day.
+              ul
+                li Processing of Tweets to word count dictionaries done in parallel on 200+ node cluster.
+                li Jobs in 15 minute increments, run hourly.
+                li Webserver consumes these dictionaries, sums daily (Jenkins).
+                li Time series data is precomputed, fixed-length word count vectors precomputed for each day.
+                
+          section
+            h3 Hedonometer
+            img(src="../shared_images/hedonometer-webserver.png" alt="MapD")                            
+
+          section
+            h3 Summary: questions to ask
+            ul
+              li Where is the data?
+              li What format is it in?
+              li How big is the data?
+              li How complex or computationally intensive is the processing needed?
+              li Never forget ethics: was it collected with consent for this use?
+
+
         section#attributes
           section
             h1 Types of Attributes
