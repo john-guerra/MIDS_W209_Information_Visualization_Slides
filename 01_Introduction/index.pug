@@ -33,9 +33,7 @@ html(lang="en")
           h1.title Introduction
             br
             small MIDS W209: Information Visualization
-
           div.r-stretch
-
 
           div.tiny
             a(href="https://johnguerra.co/", target="_blank") #[strong  John Alexis Guerra Gómez]
@@ -715,7 +713,7 @@ html(lang="en")
           section
             h1 Abstraction in Action
 
-          section
+          section   
             h3 The what/why/how framework allows us to make productive comparisons of different vis idioms. A couple examples:
             ul
               li Pie chart vs bar chart
@@ -726,9 +724,13 @@ html(lang="en")
             p You've seen both. Simply put, the question is ill-formed. No single correct answer! We need the framework:
             ul
               li What: #[strong #[span.fragment tabular data]].
-              li How: #[strong #[span.fragment bar or pie chart]].
+              li Idiom: #[strong #[span.fragment bar or pie chart]].
+              ul.fragment
+                li.framgment How (encode bar chart): line marks, value channel aligned vertical position, key attribute horizontal position.
+                li.framgment How (encode bar chart): area marks (wedges), value channel angle.
               li.fragment #[strong Why]: Identify one, the largest group.
               li.fragment #[strong Why]: Identify one, the 2nd/3rd/4th largest group (rank them).
+              li.fragment #[strong Why]: Compare value.
               li.fragment #[strong Why]: Identify distribution of parts of the whole, is a group 1/2, 1/3, 1/4 of whole?.
 
           section
@@ -750,7 +752,10 @@ html(lang="en")
           section
             ul
               li What: #[strong #[span.fragment Weighted average measure over words]].
-              li How: #[strong #[span.fragment Word cloud vs word shift graph]].
+              li Idiom: #[strong #[span.fragment Word cloud vs word shift graph]].
+              ul.fragment
+                li.framgment How (encode word cloud): mark text, value channel size, spatial position random, color random.
+                li.framgment How (encode word shift graph): mark text, mark line, share value channel horizontal position, shared value ranked channel vertical position, line key type channel color.
               li.fragment #[strong Why]: Enjoy.
               li.fragment #[strong Why]: Identify one, the largest word.
               li.fragment #[strong Why]: Identify one, the 2nd/3rd/4th largest word (rank them).
