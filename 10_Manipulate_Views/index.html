@@ -14,6 +14,19 @@
     <link href="../css/reveal.css" rel="stylesheet">
     <link href="../css/theme/white.css" rel="stylesheet" id="theme">
     <link href="../css/style.css" rel="stylesheet">
+    <style>
+      #d3ShowReel svg {
+        font-family: "Helvetica Neue", Helvetica;
+        font-size: 12pt;
+      }
+      
+      #d3ShowReel .line {
+        fill: none;
+        stroke: #000;
+        stroke-width: 2px;
+      }
+      
+    </style>
   </head>
   <body>
     <div class="reveal">
@@ -22,7 +35,7 @@
           <h1 class="title">Manipulate Views<br><small>MIDS W209: Information Visualization</small></h1>
           <div class="r-stretch"></div>
           <div class="tiny"><a href="https://johnguerra.co/" target="_blank"><strong> John Alexis Guerra Gómez</strong></a><span> |  john.guerra[at]gmail.com</span><a href="https://twitter.com/duto_guerra"> |  @duto_guerra</a><br><a href="https://johnguerra.co/lectures/MIDS_W209_Information_Visualization/10_Manipulate_Views/" target="_blank">https://johnguerra.co/lectures/MIDS_W209_Information_Visualization/10_Manipulate_Views/</a></div>
-          <div class="logo"><a href="https://datascience.berkeley.edu/"><img class="logo" src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo"></a></div>
+          <div class="logo"><a href="https://datascience.berkeley.edu/"><img class="logo" data-src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo"></a></div>
           <div class="tiny">Partially based on<a href="https://www.cs.ubc.ca/~tmm/talks.html#minicourse14"> slides from Tamara Munzner</a></div>
         </section>
         <section id="outline">
@@ -33,101 +46,125 @@
         </section>
         <section>
           <section>
-            <h2>Manipulate views</h2>
+            <h1>Manipulate views</h1>
           </section>
           <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/11_manipulate-genea.003.png"></section>
           <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/11_manipulate-genea.004.png"></section>
-          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/11_manipulate-genea.005.png"></section>
-          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/11_manipulate-genea.006.png"></section>
           <section>
-            <h2>How to Handle Complexity: 1 Previous Strategy + 3 More</h2>
+            <h3>How to Handle Complexity</h3>
             <div class="flex">
-              <div class="third"><img src="./shared_images/vad_book_alldiagrams/pr10_manipulate-views-derive.png" alt="derive">
-                <ul class="small">
-                  <li class="fragment">Derive new data to show within view</li>
+              <div class="third">
+                <div class="small" style="text-align:left">3 Strategies</div>
+                <ul class="tiny">
                   <li class="fragment">Change view over time</li>
                   <li class="fragment">Facet across multiple views</li>
                   <li class="fragment">Reduce items/attributes within single view</li>
                 </ul>
+                <div class="fragment small" style="text-align:left">+ 1 previous
+                  <ul class="tiny">
+                    <li>Derive new data to show within view<img data-src="../shared_images/vad_book_alldiagrams/pr10_manipulate-views-derive.png" alt="derive"></li>
+                  </ul>
+                </div>
               </div>
-              <div class="twothirds"><img src="../shared_images/vad_book_alldiagrams/10_manipulate-views-3-strategies.png" alt="manipulate: change, select, navigate; facet: juxtapose, parition, superimpose; reduce: filter, aggregate, embed"></div>
+              <div class="twothirds"><img data-src="../shared_images/vad_book_alldiagrams/10_manipulate-views-3-strategies.png" alt="manipulate: change, select, navigate; facet: juxtapose, parition, superimpose; reduce: filter, aggregate, embed"></div>
             </div>
           </section>
-          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/11_manipulate-genea.007.png"></section>
-          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/11_manipulate-genea.008.png"></section>
-          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/11_manipulate-genea.009.png"></section>
-          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/11_manipulate-genea.010.png"></section>
-          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/11_manipulate-genea.011.png"></section>
-          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/11_manipulate-genea.012.png"></section>
           <section>
-            <h2>Idiom Design Choices: Interaction<img src="../shared_images/vad_book_alldiagrams/10_manipulate-views-3-strategies.png" alt="manipulate: change, select, navigate; facet: juxtapose, parition, superimpose; reduce: filter, aggregate, embed"></h2>
+            <h2>Strategies</h2>
+            <ul style="font-size:100%">
+              <li>Change view over time <strong class="fragment">👈 most obvious one: Interaction</strong></li>
+              <li>Facet</li>
+              <li>Reduce</li>
+              <li>Derive</li>
+            </ul>
           </section>
-          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/11_manipulate-genea.013.png"></section>
           <section>
             <h2>Manipulate</h2>
             <div class="flex">
-              <div class="third"><img src="../shared_images/vad_book_alldiagrams/pr10_manipulate-views-change.png" alt="change over time; select"></div>
-              <div class="third"><img src="../shared_images/vad_book_alldiagrams/pr10_manipulate-views-navigate.png" alt="Navigate: item reduction: zoom; pan/translate; constrained"></div>
-              <div class="third"><img src="../shared_images/vad_book_alldiagrams/pr10_manipulate-views-attribute-reduction.png" alt="attribute reduction: slice; cut; project"></div>
+              <div class="third"><img class="fragment" data-src="../shared_images/vad_book_alldiagrams/pr10_manipulate-views-change.png" alt="change over time; select"></div>
+              <div class="third"><img class="fragment" data-src="../shared_images/vad_book_alldiagrams/pr10_manipulate-views-navigate.png" alt="Navigate: item reduction: zoom; pan/translate; constrained"></div>
+              <div class="third"><img class="fragment" data-src="../shared_images/vad_book_alldiagrams/pr10_manipulate-views-attribute-reduction.png" alt="attribute reduction: slice; cut; project"></div>
             </div>
           </section>
-          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/11_manipulate-genea.014.png"></section>
-          <section></section>
-          <h2>Change Over Time
+          <section>
+            <h2>Change Over Time</h2>
             <ul>
               <li class="fragment">Change any of the other choices
                 <ul>
                   <li class="fragment">Encoding itself</li>
                   <li class="fragment">Parameters</li>
                   <li class="fragment">Arrange: rearrange reorder</li>
-                  <li class="fragment">Aggregation level, what is filtered...</li>
+                  <li class="fragment">Aggregation level, what is filtered...</li><br>
+                  <li class="fragment">Interaction entails change</li>
                 </ul>
               </li>
-              <li class="fragment">Why change?
-                <li class="fragment">One of four major strategies
-                  <ul>
-                    <li class="fragment">Change over time</li>
-                    <li class="fragment">Facet data by partitioning into multiple views</li>
-                    <li class="fragment">Reduce amount of data shown within view</li>
-                  </ul>
-                </li>
-                <li class="fragment">Most obvious, powerful, flexible</li>
-                <li class="fragment">Interaction entails change</li>
-              </li>
             </ul>
-          </h2>
-          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/11_manipulate-genea.015.png"></section>
-          <section>
-            <div class="flex">
-              <div class="half">
-                <h2>Idiom: Re-encode</h2><img src="../shared_images/vad_book_alldiagrams/pr10_manipulate-views-reencode-tableau-1.png" alt="screenshot of re-encoding from from Tableau"><img src="../shared_images/vad_book_alldiagrams/pr10_manipulate-views-reencode-tableau-2.png" alt="screenshot of re-encoding from from Tableau">
-              </div>
-              <div class="half">
-                <h2>System: Tableau</h2><img src="../shared_images/vad_book_alldiagrams/pr10_manipulate-views-reencode-tableau-3.png" alt="screenshot of re-encoding from from Tableau"><img src="../shared_images/vad_book_alldiagrams/pr10_manipulate-views-reencode-tableau-4.png" alt="screenshot of re-encoding from from Tableau">
-              </div>
-            </div><a class="bottom tiny" href="http://tableausoftware.com">Made using Tableau</a>
           </section>
-          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/11_manipulate-genea.016.png"></section>
           <section>
+            <h3>Change Encoding</h3>
+            <div class="flex">
+              <div class="half"><img class="fragment" data-src="../shared_images/vad_book_alldiagrams/pr10_manipulate-views-reencode-tableau-1.png" alt="screenshot of re-encoding from from Tableau"><img class="fragment" data-src="../shared_images/vad_book_alldiagrams/pr10_manipulate-views-reencode-tableau-2.png" alt="screenshot of re-encoding from from Tableau"></div>
+              <div class="half"><img class="fragment" data-src="../shared_images/vad_book_alldiagrams/pr10_manipulate-views-reencode-tableau-3.png" alt="screenshot of re-encoding from from Tableau"><img class="fragment" data-src="../shared_images/vad_book_alldiagrams/pr10_manipulate-views-reencode-tableau-4.png" alt="screenshot of re-encoding from from Tableau"></div>
+            </div><a class="bottom reference" href="http://tableausoftware.com">Made using Tableau</a>
+          </section>
+          <section>
+            <h3>Change Encoding: Vega Lite</h3><img data-src="../shared_images/vega-lite_demo.gif" alt="Vega Lite Change Encoding">
+            <div class="small fragment">Not so easy in D3 🤷🏼‍♂️</div>
+          </section>
+          <section>
+            <h2>Change Parameters</h2>
             <div class="flex">
               <div class="half">
-                <h2>Idiom: Reorder</h2>
+                <ul>
+                  <li class="fragment">widgets and controls
+                    <ul>
+                      <li>sliders, buttons, radio buttons,  checkboxes,  dropdowns/comboboxes</li>
+                    </ul>
+                  </li>
+                  <li class="fragment">pros
+                    <ul>
+                      <li>clear affordances, self-documenting (with labels)</li>
+                    </ul>
+                  </li>
+                  <li class="fragment">cons
+                    <ul>
+                      <li>uses screen space</li>
+                    </ul>
+                  </li>
+                  <li class="fragment">design choices
+                    <ul>
+                      <li>separated vs interleaved
+                        <ul>
+                          <li>controls & canvas</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+                <div class="reference">slide inspired by: Alexander Lex, Utah</div>
               </div>
               <div class="half">
-                <h2>System: DataStripes</h2>
+                <figure><img src="../shared_images/vad_book_alldiagrams/grow_of_a_nation.png" alt="Growth of a Nation">
+                  <figcaption class="reference"><a href="http://laurenwood.github.io/">[Growth of a Nation](http://laurenwood.github.io/)</a></figcaption>
+                </figure>
               </div>
             </div>
+          </section>
+          <section>
+            <h2>Reorder: DataStripes</h2>
             <ul>
               <li class="fragment">What: table with many attributes</li>
-              <li class="frgament">How: data-driven reordering by selecting column</li>
-              <li class="frgament">Why: find correlations between attributes</li>
-            </ul><img src="../shared_images/vad_book_alldiagrams/pr10_manipulate-views-reorder.png" alt="multiple depictions of how complex data can be ordered, by color, date, and other dimensions"><a class="bottom tiny" href="carlmanaster.github.io/datastripes/">http://carlmanaster.github.io/datastripes/</a>
+              <li class="fragment">How: data-driven reordering by selecting column</li>
+              <li class="fragment">Why: find correlations between attributes</li>
+            </ul>
+            <figure><img data-src="../shared_images/vad_book_alldiagrams/pr10_manipulate-views-reorder.png" alt="multiple depictions of how complex data can be ordered, by color, date, and other dimensions">
+              <figcaption class="reference"><a href="http://carlmanaster.github.io/datastripes/">http://carlmanaster.github.io/datastripes/</a></figcaption>
+            </figure>
           </section>
-          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/11_manipulate-genea.017.png"></section>
           <section>
+            <h2>Re-Align: LineUp</h2>
             <div class="flex">
               <div class="half">
-                <h2>Idiom: Change Alignment</h2>
                 <ul>
                   <li class="fragment">Stacked bars</li>
                   <ul>
@@ -143,36 +180,74 @@
                 </ul>
               </div>
               <div class="half">
-                <h2>System: LineUp</h2><img src="../shared_images/vad_book_alldiagrams/pr10_manipulate-views-change-alignment-1.png" alt="Content aligned along the left margin"><img src="../shared_images/vad_book_alldiagrams/pr10_manipulate-views-change-alignment-2.png" alt="Content aligned along the center margin"><a class="tiny">[LineUp: Visual Analysis of Multi-Attribute Rankings.Gratzl, Lex, Gehlenborg, Pfister, and Streit. IEEE Trans. Visualization and Computer Graphics (Proc. InfoVis 2013) 19:12 (2013), 2277–2286.]</a>
+                <figure><img data-src="../shared_images/vad_book_alldiagrams/pr10_manipulate-views-change-alignment-1.png" alt="Content aligned along the left margin"><img data-src="../shared_images/vad_book_alldiagrams/pr10_manipulate-views-change-alignment-2.png" alt="Content aligned along the center margin">
+                  <figcaption class="reference">[LineUp: Visual Analysis of Multi-Attribute Rankings.Gratzl, Lex, Gehlenborg, Pfister, and Streit. IEEE Trans. Visualization and Computer Graphics (Proc. InfoVis 2013) 19:12 (2013), 2277–2286.]</figcaption>
+                </figure>
               </div>
             </div>
           </section>
           <section>
             <h3 class="demo">LineUP</h3><span>
               <video width="100%" height="100%" controls>
-                  <source src="http://vcg.seas.harvard.edu/files/pfister/files/2013_infovis_lineup.mp4" type="video/mp4">
+                  <source data-src="http://vcg.seas.harvard.edu/files/pfister/files/2013_infovis_lineup.mp4" type="video/mp4">
               </video></span><a class="tiny" target="_blank" href="http://vcg.seas.harvard.edu/files/pfister/files/2013_infovis_lineup.mp4">http://vcg.seas.harvard.edu/files/pfister/files/2013_infovis_lineup.mp4</a>
           </section>
-          <section>
-            <h2>LineUP D3</h2><a href="https://observablehq.com/@john-guerra/lineup">https://observablehq.com/@john-guerra/lineup</a>
+          <section class="full">
+            <h3>"LineUP" D3</h3>
+            <div style="font-size:12pt;">
+              <div id="observablehq-30df3492">
+                <div class="observablehq-viewof-coeficients"></div>
+                <div style="overflow: scroll;" class="observablehq-chart"></div>
+                <div style="overflow: hidden;"><a style="display: block; float:right;" href="https://observablehq.com/@john-guerra/lineup"><object type="image/svg+xml" style="pointer-events: none;" width=180 height=22 data="https://static.observableusercontent.com/files/c3fab254a006f1a3a1f9f63aba8ab1460db4752529036b9962950bde0ec195bab823daa6b278b1c3401e545b3bd640ddfdcad805cf9859af218cb2b9fed4ddf0"></object></a></div>
+              </div>
+              <script type="module">
+                import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+                import define from "https://api.observablehq.com/@john-guerra/lineup.js?v=3";
+                (new Runtime).module(define, name => {
+                  if (name === "viewof coeficients") return Inspector.into("#observablehq-30df3492 .observablehq-viewof-coeficients")();
+                  if (name === "chart") return Inspector.into("#observablehq-30df3492 .observablehq-chart")();
+                });
+              </script>
+              
+            </div><a class="reference" href="https://observablehq.com/@john-guerra/lineup">https://observablehq.com/@john-guerra/lineup</a>
           </section>
-          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/11_manipulate-genea.018.png"><a class="bottom tiny" target="_blank" href="http://www.win.tue.nl/vis1/home/fvham/DL/callmatrix.pdf">http://www.win.tue.nl/vis1/home/fvham/DL/callmatrix.pdf</a></section>
           <section>
-            <h2>Idiom: Animated Transitions</h2>
-            <ul>
-              <li class="fragment">Smooth interpolation from one state to another</li>
-              <ul>
-                <li class="fragment">Alternative to jump cuts, supports item tracking</li>
-                <ul>
-                  <li class="fragment">Best case for animation</li>
+            <h3>Idiom: Animated Transitions</h3>
+            <div class="flex">
+              <div class="half">
+                <ul class="noMarginTopBottom">
+                  <li class="fragment">Smooth interpolation from one state to another</li>
+                  <ul>
+                    <li class="fragment">Alternative to jump cuts, supports item tracking</li>
+                    <ul>
+                      <li class="fragment">Best case for animation</li>
+                    </ul>
+                    <li class="fragment">Staging to reduce cognitive load</li>
+                  </ul>
+                  <li class="fragment">Example: animated transitions in statistical data graphics</li>
                 </ul>
-                <li class="fragment">Staging to reduce cognitive load</li>
-              </ul>
-              <li class="fragment">Example: animated transitions in statistical data graphics</li>
-            </ul><img src="pr10_manipulate-views-animated-transitions.png" alt="animated transition"><a href="https://vimeo.com/19278444">vimeo.com/19278444</a><a class="bottom tiny" href="vis.stanford.edu/papers/animated-transitions">[Animated Transitions in Statistical Data Graphics. Heer and Robertson. IEEE TVCG (Proc InfoVis 2007) 13(6):1240-1247, 2007]</a>
+              </div>
+              <div class="half">
+                <figurenoMarginTopBottom><img data-src="../shared_images/vad_book_alldiagrams/pr10_manipulate-views-animated-transitions.png" alt="animated transition"><a class="reference" href="https://vimeo.com/19278444">vimeo.com/19278444</a>
+                  <figcaption class="referece"><a href="vis.stanford.edu/papers/animated-transitions">[Animated Transitions in Statistical Data Graphics. Heer and Robertson. IEEE TVCG (Proc InfoVis 2007) 13(6):1240-1247, 2007]</a></figcaption>
+                </figurenoMarginTopBottom>
+              </div>
+            </div>
+          </section>
+          <section class="full">
+            <h2>D3 show reel</h2>
+            <div id="d3ShowReel">
+              <div id="observablehq-15c27bb5"></div>
+              <script type="module">
+              import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+              import define from "https://api.observablehq.com/d/90fc58032421b463.js?v=3";
+              const inspect = Inspector.into("#observablehq-15c27bb5");
+              (new Runtime).module(define, name => name === "chart" ? inspect() : undefined);
+              </script>
+            </div>
           </section>
           <section>
-            <iframe class="blocks" src="https://bost.ocks.org/mike/miserables/"></iframe><a href="https://bost.ocks.org/mike/miserables/">https://bost.ocks.org/mike/miserables/</a>
+            <iframe class="blocks" data-src="https://bost.ocks.org/mike/miserables/"></iframe><a href="https://bost.ocks.org/mike/miserables/">https://bost.ocks.org/mike/miserables/</a>
           </section>
           <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/11_manipulate-genea.019.png"></section>
           <section>
@@ -205,11 +280,11 @@
                   </ul>
                 </ul>
               </div>
-              <div class="third"><img src="../shared_images/vad_book_alldiagrams/pr10_manipulate-views-select.png" alt="Select a single plot point"></div>
+              <div class="third"><img data-src="../shared_images/vad_book_alldiagrams/pr10_manipulate-views-select.png" alt="Select a single plot point"></div>
             </div>
           </section>
           <section>
-            <iframe class="blocks" src="https://blockbuilder.org/mbostock/7608400"></iframe><a class="tiny" href="https://blockbuilder.org/mbostock/7608400">https://blockbuilder.org/mbostock/7608400</a>
+            <iframe class="blocks" data-src="https://blockbuilder.org/mbostock/7608400"></iframe><a class="tiny" href="https://blockbuilder.org/mbostock/7608400">https://blockbuilder.org/mbostock/7608400</a>
           </section>
           <section>
             <h2>Selection with brush</h2><a href="https://observablehq.com/@john-guerra/scatterplot-brush">https://observablehq.com/@john-guerra/scatterplot-brush</a>
@@ -232,7 +307,7 @@
                   </li>
                 </ul>
               </div>
-              <div class="half"><img src="../shared_images/vad_book_alldiagrams/pr10_manipulate-views-navigate-reduction.png" alt="Item reduction"></div>
+              <div class="half"><img data-src="../shared_images/vad_book_alldiagrams/pr10_manipulate-views-navigate-reduction.png" alt="Item reduction"></div>
             </div>
           </section>
           <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/11_manipulate-genea.021.png"></section>
@@ -256,19 +331,19 @@
                   </li>
                 </ul>
               </div>
-              <div class="twothirds"><img src="../shared_images/vad_book_alldiagrams/pr10_manipulate-views-semantic-zooming.png" alt="Semantic zooming"></div>
+              <div class="twothirds"><img data-src="../shared_images/vad_book_alldiagrams/pr10_manipulate-views-semantic-zooming.png" alt="Semantic zooming"></div>
             </div><a class="bottom tiny">[LiveRAC - Interactive Visual Exploration of System Management Time-Series Data. McLachlan, Munzner, Koutsofios, and North. Proc. ACM Conf. Human Factors in Computing Systems (CHI), pp. 1483–1492, 2008.]</a>
           </section>
           <section>
-            <h3 class="demo">LiveRAC</h3><span class="blocks"><iframe width="853" height="480" src="https://www.youtube.com/embed/ld0c3H0VSkw" frameborder="0" allowfullscreen></iframe></span>
+            <h3 class="demo">LiveRAC</h3><span class="blocks"><iframe width="853" height="480" data-src="https://www.youtube.com/embed/ld0c3H0VSkw" frameborder="0" allowfullscreen></iframe></span>
           </section>
           <section>
             <h3 class="demo">Geometric Zoom</h3>
-            <iframe class="blocks" src="http://blockbuilder.org/mbostock/3680958"></iframe><a class="tiny" target="_blank" href="http://blockbuilder.org/mbostock/3680958">http://blockbuilder.org/mbostock/3680958</a><a class="tiny" target="_blank" href="http://bl.ocks.org/mbostock/">by mbostock</a>
+            <iframe class="blocks" data-src="http://blockbuilder.org/mbostock/3680958"></iframe><a class="tiny" target="_blank" href="http://blockbuilder.org/mbostock/3680958">http://blockbuilder.org/mbostock/3680958</a><a class="tiny" target="_blank" href="http://bl.ocks.org/mbostock/">by mbostock</a>
           </section>
           <section>
             <h3 class="demo">Semantic Zoom</h3>
-            <iframe class="blocks" src="http://blockbuilder.org/mbostock/3681006"></iframe><a class="tiny" target="_blank" href="http://blockbuilder.org/mbostock/3681006">http://blockbuilder.org/mbostock/3681006</a><a class="tiny" target="_blank" href="http://bl.ocks.org/mbostock/">by mbostock</a>
+            <iframe class="blocks" data-src="http://blockbuilder.org/mbostock/3681006"></iframe><a class="tiny" target="_blank" href="http://blockbuilder.org/mbostock/3681006">http://blockbuilder.org/mbostock/3681006</a><a class="tiny" target="_blank" href="http://bl.ocks.org/mbostock/">by mbostock</a>
           </section>
           <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/11_manipulate-genea.023.png"></section>
           <section>
@@ -321,7 +396,7 @@
     <script>
       (function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      m=s.getElementsByTagName(o)[0];a.async=1;a.data-src=g;m.parentNode.insertBefore(a,m)
       })(window,document,"script","https://www.google-analytics.com/analytics.js","ga");
       
       ga("create", "UA-72531610-1", "auto");
