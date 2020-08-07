@@ -100,6 +100,11 @@
               </li>
             </ul>
           </section>
+        </section>
+        <section>
+          <section>
+            <h1>Change Encoding / Parameters</h1>
+          </section>
           <section>
             <h3>Change Encoding</h3>
             <div class="flex">
@@ -149,6 +154,11 @@
                 </figure>
               </div>
             </div>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h1>Animations</h1>
           </section>
           <section>
             <h2>Reorder: DataStripes</h2>
@@ -249,9 +259,43 @@
           <section>
             <iframe class="blocks" data-src="https://bost.ocks.org/mike/miserables/"></iframe><a href="https://bost.ocks.org/mike/miserables/">https://bost.ocks.org/mike/miserables/</a>
           </section>
-          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/11_manipulate-genea.019.png"></section>
           <section>
-            <h2>Select and Highlight</h2>
+            <h2>Collapsible Tree</h2>
+            <div class="flex">
+              <div class="half">
+                <div>Tree drilldown / rollup</div>
+              </div>
+            </div>
+          </section>
+          <section>
+            <h2>Zoomable bar chart</h2>
+            <div class="flex">
+              <div class="half">
+                <ul>
+                  <li class="fragment">Tree drilldown / rollup</li>
+                  <li class="fragment">Value comparison</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+          <section>
+            <h2>Zoomable Icicle</h2>
+            <div class="flex">
+              <div class="half">
+                <ul>
+                  <li class="fragment">Tree drilldown / rollup</li>
+                  <li class="fragment">Value comparison</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h1>Interactions</h1>
+          </section>
+          <section>
+            <h2>Selection</h2>
             <div class="flex">
               <div class="twothirds">
                 <ul>
@@ -284,22 +328,158 @@
             </div>
           </section>
           <section>
+            <h2>Types of selection</h2>
+            <div class="flex">
+              <div class="half">
+                <ul>
+                  <li class="fragment">Interval
+                    <ul>
+                      <li class="fragment">Brush 1D</li>
+                      <li class="fragment">Brush 2D</li>
+                    </ul>
+                  </li>
+                  <li class="fragment">Individual
+                    <ul>
+                      <li class="fragment">Closest item (hover)</li>
+                      <li class="fragment">Click to select</li>
+                    </ul>
+                  </li>
+                  <li class="fragment">Multi
+                    <ul>
+                      <li class="fragment">Shift click</li>
+                      <li class="fragment">By similarity (e.g. connection, same State)</li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
+          <section>
+            <h2>Voronoi Maps</h2>
+            <div class="flex">
+              <div class="half">
+                <ul>
+                  <li class="fragment">Tesselate the canvas</li>
+                  <li class="fragment">Quickly find the closest point</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+          <section>
             <iframe class="blocks" data-src="https://blockbuilder.org/mbostock/7608400"></iframe><a class="tiny" href="https://blockbuilder.org/mbostock/7608400">https://blockbuilder.org/mbostock/7608400</a>
           </section>
           <section>
             <h2>Selection with brush</h2><a href="https://observablehq.com/@john-guerra/scatterplot-brush">https://observablehq.com/@john-guerra/scatterplot-brush</a>
           </section>
+          <section>
+            <h2>Highlight</h2>
+            <div class="flex">
+              <div class="half">
+                <ul class="tiny">
+                  <li class="fragment">highlight: change visual encoding for selection targets
+                    <ul>
+                      <li class="fragment">visual feedback closely tied to but separable from selection (interaction)</li>
+                    </ul>
+                  </li>
+                  <li class="fragment">design choices: typical visual channels
+                    <ul>
+                      <li class="fragment">change item color
+                        <ul>
+                          <li class="fragment">but hides existing color coding</li>
+                        </ul>
+                      </li>
+                      <li class="fragment">add outline mark</li>
+                      <li class="fragment">change size (ex: increase outline mark linewidth)</li>
+                      <li class="fragment">change shape (ex: from solid to dashed line for link mark)</li>
+                    </ul>
+                  </li>
+                  <li class="fragment">unusual channels: motion
+                    <ul>
+                      <li class="fragment">motion: usually avoid for single view
+                        <ul>
+                          <li class="fragment">with multiple views, could justify to draw attention to other views</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
+          <section>
+            <h2>Interaction technology</h2>
+            <div class="flex">
+              <div class="half">
+                <ul>
+                  <li class="fragment">what do you design for?
+                    <ul>
+                      <li class="fragment">mouse & keyboard on desktop?
+                        <ul>
+                          <li class="fragment">large screens, hover, multiple clicks</li>
+                        </ul>
+                      </li>
+                      <li class="fragment">touch interaction on mobile?
+                        <ul>
+                          <li class="fragment">small screens, no hover, just tap</li>
+                        </ul>
+                      </li><br>
+                      <li class="fragment">gestures from video / sensors?
+                        <ul>
+                          <li class="fragment">ergonomic reality vs movie bombast</li>
+                        </ul>
+                      </li><br>
+                      <li class="fragment">eye tracking?</li>
+                    </ul>
+                  </li>
+                </ul>
+                <div class="reference">slide inspired by: Alexander Lex, Utah</div>
+              </div>
+            </div>
+          </section>
+          <section>
+            <h2>Tooltips</h2>
+            <div class="flex">
+              <div class="half">
+                <ul>
+                  <li class="fragment">popup information for selection
+                    <ul>
+                      <li class="fragment">hover or click</li>
+                      <li class="fragment">can provide useful additional detail on demand</li>
+                      <li class="fragment">beware: does not support overview!
+                        <ul>
+                          <li class="fragment">always consider if there’s a way to visually encode directly to provide overview</li>
+                          <li class="fragment">“If you make a rollover or tooltip, assume nobody will see it. If it's important, make it explicit. “
+                            <ul>
+                              <li class="fragment">Gregor Aisch, NYTimes</li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h1>Navigate</h1>
+          </section>
+          <section class="full"><img class="fill" src="../shared_images/vad_book_alldiagrams/how_navigate.png" alt="How Navigate"></section>
           <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/11_manipulate-genea.020.png"></section>
           <section>
             <h2>Navigate: Changing viewpoint/visibility</h2>
             <div class="flex">
               <div class="half">
                 <ul>
-                  <li class="fragment">Change viewpoint</li>
-                  <ul>
-                    <li class="fragment">Changes which items are visible within view</li>
-                  </ul>
+                  <li class="fragment">Change viewpoint
+                    <ul>
+                      <li class="fragment">Changes which items are visible within view</li>
+                    </ul>
+                  </li>
                   <li class="fragment">Camera metaphor
+                    <li class="fragment">Zoom</li>
                     <li class="fragment">Pan/translate/scroll</li>
                     <ul>
                       <li class="fragment">Move up/down/sideways</li>
