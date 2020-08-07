@@ -141,7 +141,9 @@ html(lang="en")
                   li.fragment Interaction entails change
 
             //- TODO add gifs for each type of change
-
+        section
+          section
+            h1 Change Encoding / Parameters
           //- section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/11_manipulate-genea.015.png")
           section
             h3 Change Encoding
@@ -160,7 +162,6 @@ html(lang="en")
 
             img(data-src="../shared_images/vega-lite_demo.gif", alt="Vega Lite Change Encoding")
             div.small.fragment Not so easy in D3 🤷🏼‍♂️
-
 
 
           section
@@ -188,6 +189,13 @@ html(lang="en")
                   img(src="../shared_images/vad_book_alldiagrams/grow_of_a_nation.png", alt="Growth of a Nation")
                   figcaption.reference
                     a(href="http://laurenwood.github.io/") [Growth of a Nation](http://laurenwood.github.io/)
+
+          //- TODO give a better example for parameters
+
+        section
+          section
+            h1 Animations
+
           //- lineup
           //- section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/11_manipulate-genea.016.png")
           section
@@ -299,10 +307,34 @@ html(lang="en")
             iframe.blocks(data-src="https://bost.ocks.org/mike/miserables/")
             a(href="https://bost.ocks.org/mike/miserables/") https://bost.ocks.org/mike/miserables/
 
-
-          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/11_manipulate-genea.019.png")
           section
-            h2 Select and Highlight
+            h2 Collapsible Tree
+            .flex
+              .half
+                div Tree drilldown / rollup
+
+          section
+            h2 Zoomable bar chart
+            .flex
+              .half
+                ul
+                  li.fragment Tree drilldown / rollup
+                  li.fragment Value comparison
+
+          section
+            h2 Zoomable Icicle
+            .flex
+              .half
+                ul
+                  li.fragment Tree drilldown / rollup
+                  li.fragment Value comparison
+        section
+          section
+            h1 Interactions
+
+          //- section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/11_manipulate-genea.019.png")
+          section
+            h2 Selection
             .flex
               .twothirds
                 ul
@@ -325,6 +357,34 @@ html(lang="en")
                         li.fragment Group membership (add/delete items, name group, …)
               .third
                 img(data-src="../shared_images/vad_book_alldiagrams/pr10_manipulate-views-select.png", alt="Select a single plot point")
+
+          section
+            h2 Types of selection
+            .flex
+              .half
+                ul
+                  li.fragment Interval
+                    ul
+                      li.fragment Brush 1D
+                      li.fragment Brush 2D
+                  li.fragment Individual
+                    ul
+                      li.fragment Closest item (hover)
+                      li.fragment Click to select
+                  li.fragment Multi
+                    ul
+                      li.fragment Shift click
+                      li.fragment By similarity (e.g. connection, same State)
+
+          section
+            h2 Voronoi Maps
+            .flex
+              .half
+                ul
+                  li.fragment Tesselate the canvas
+                  li.fragment Quickly find the closest point
+
+
           section
             //- h2 Selection in D3
             iframe.blocks(data-src="https://blockbuilder.org/mbostock/7608400")
@@ -334,6 +394,71 @@ html(lang="en")
             h2 Selection with brush
             a(href="https://observablehq.com/@john-guerra/scatterplot-brush") https://observablehq.com/@john-guerra/scatterplot-brush
 
+          section
+            h2 Highlight
+            .flex
+              .half
+                ul.tiny
+                  li.fragment highlight: change visual encoding for selection targets
+                    ul
+                      li.fragment visual feedback closely tied to but separable from selection (interaction)
+                  li.fragment design choices: typical visual channels
+                    ul
+                      li.fragment change item color
+                        ul
+                          li.fragment but hides existing color coding
+                      li.fragment add outline mark
+                      li.fragment change size (ex: increase outline mark linewidth)
+                      li.fragment change shape (ex: from solid to dashed line for link mark)
+                  li.fragment unusual channels: motion
+                    ul
+                      li.fragment motion: usually avoid for single view
+                        ul
+                          li.fragment with multiple views, could justify to draw attention to other views
+
+          section
+            h2 Interaction technology
+            .flex
+              .half
+                ul
+                  li.fragment what do you design for?
+                    ul
+                      li.fragment mouse & keyboard on desktop?
+                        ul
+                          li.fragment large screens, hover, multiple clicks
+                      li.fragment touch interaction on mobile?
+                        ul
+                          li.fragment small screens, no hover, just tap
+                      br
+                      li.fragment gestures from video / sensors?
+                        ul
+                          li.fragment ergonomic reality vs movie bombast
+                      br
+                      li.fragment eye tracking?
+                div.reference slide inspired by: Alexander Lex, Utah
+
+          section
+            h2 Tooltips
+            .flex
+              .half
+                ul
+                  li.fragment popup information for selection
+                    ul
+                      li.fragment hover or click
+                      li.fragment can provide useful additional detail on demand
+                      li.fragment beware: does not support overview!
+                        ul
+                          li.fragment always consider if there’s a way to visually encode directly to provide overview
+                          li.fragment “If you make a rollover or tooltip, assume nobody will see it. If it's important, make it explicit. “
+                            ul
+                              li.fragment Gregor Aisch, NYTimes
+
+        section
+          section
+            h1 Navigate
+
+          section.full
+            img.fill(src="../shared_images/vad_book_alldiagrams/how_navigate.png", alt="How Navigate")
 
 
           section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/11_manipulate-genea.020.png")
@@ -344,9 +469,10 @@ html(lang="en")
               .half
                 ul
                   li.fragment Change viewpoint
-                  ul
-                    li.fragment Changes which items are visible within view
+                    ul
+                      li.fragment Changes which items are visible within view
                   li.fragment Camera metaphor
+                    li.fragment Zoom
                     li.fragment Pan/translate/scroll
                     ul
                       li.fragment Move up/down/sideways
