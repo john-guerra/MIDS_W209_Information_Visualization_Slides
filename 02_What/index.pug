@@ -261,9 +261,11 @@ html(lang="en")
             ul
               li MapD.
               li Hedonometer.
+              li imMens.
+              li Crossfilter.
 
           section
-            h3 MapD
+            h3 MapD (now Omni-Sci)
             ul
               li Original #[a(href="http://go.mapd.com/resources_whitepaper_mapd_lp.html") white paper].
               ul
@@ -285,6 +287,31 @@ html(lang="en")
           section
             h3 Hedonometer
             img(src="../shared_images/hedonometer-webserver.png" alt="MapD")
+            
+          section
+            h3 imMens
+            ul
+              li Based on binned aggregation.
+              li Precomputes multivariate data projections and store these as data tiles.
+              li Front-end dynamically loads appropriate data tiles and uses WebGL for data processing and rendering.
+            div.
+              <iframe src="https://player.vimeo.com/video/68736161" width="640" height="400" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+              <p><a href="https://vimeo.com/68736161">imMens: Real-time Visual Querying of Big Data</a> from <a href="https://vimeo.com/stanfordvis">Stanford Visualization Group</a> on <a href="https://vimeo.com">Vimeo</a>.</p>              
+            div.reference
+              a(href="http://vis.stanford.edu/projects/immens/") imMens by Stanford
+              
+          section
+            h3 Tiled backend
+            img(src="../shared_images/tiled.png" alt="Tiled")              
+              
+          section
+            h3 Crossfilter
+            ul
+              li Purely front-end.
+              li Hashed lookup optimized for filter operations in-memory.
+              li Scales to 100's of thousands of records.
+            div.reference
+              a(href="https://crossfilter.github.io/crossfilter/") Crossfilter Demo             
 
           section
             h3 Summary: questions to ask
