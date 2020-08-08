@@ -104,7 +104,7 @@ html(lang="en")
             .flex
               .half
                 ul.small
-                  li.fragment data
+                  li.fragment Data:
                   ul
                     li.fragment tree
                   li.fragment encoding
@@ -115,7 +115,7 @@ html(lang="en")
                     ul
                       li.fragment angular proximity: siblings
                       li.fragment distance from center: depth in tree
-                  li.fragment tasks
+                  li.fragment Task:
                   ul
                     li.fragment understanding topology,  following paths
                   li.fragment scalability
@@ -234,7 +234,7 @@ html(lang="en")
               .half
                 ul.small
 
-                  li.fragment data
+                  li.fragment Data:
                   ul
                     li.fragment tree
                     li.fragment 1 quant attrib at leaf nodes
@@ -243,7 +243,7 @@ html(lang="en")
                     li.fragment area containment marks for hierarchical structure
                     li.fragment rectilinear orientation
                     li.fragment area encodes quant attrib
-                  li.fragment tasks
+                  li.fragment Tasks:
                   ul
                     li.fragment query attribute at leaf nodes
                   li.fragment scalability
@@ -363,7 +363,7 @@ html(lang="en")
             .flex
               .half
                 ul.small
-                  li.fragment data shown
+                  li.fragment Data shown:
                   ul
                     li.fragment link relationships
                     li.fragment tree depth
@@ -404,9 +404,6 @@ html(lang="en")
           //- section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/09_networks-star-steno-topo.025.png")
 
 
-
-
-
         section
           section
             h1 Geo
@@ -416,111 +413,178 @@ html(lang="en")
             .flex
               .half
                 ul
-                  li.fragment use given spatial data
+                  li.fragment Use given spatial data:
                   ul
-                    li.fragment when central task is understanding spatial relationships
-                  li.fragment data
+                    li.fragment When central task is understanding spatial relationships.
+                  li.fragment Data:
                   ul
-                    li.fragment geographic geometry
-                    li.fragment table with 1 quant attribute per region
-                  li.fragment encoding
+                    li.fragment Geographic geometry.
+                    li.fragment Table with 1 quant attribute per region.
+                  li.fragment Encoding:
                   ul
-                    li.fragment use given geometry for area mark boundaries
-                    li.fragment sequential segmented colormap [more later]
-                    li.fragment (geographic heat map)
+                    li.fragment Use given geometry for area mark boundaries.
+                    li.fragment Sequential segmented colormap.
+                    li.fragment Essentially, geographic heat map.
+                    
+          //- Choropleth map block
+          section
+            h3.demo Choropleth map
+            .flex
+              .third
+                ul
+                  li.fragment Familiar.
+                  li.fragment Areas encode...state area.
+              .twothirds.
+                <div id="observablehq-6b04a5b2"></div>
+                <script type="module">
+                import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+                import define from "https://api.observablehq.com/@d3/choropleth.js?v=3";
+                const inspect = Inspector.into("#observablehq-6b04a5b2");
+                (new Runtime).module(define, name => name === "chart" ? inspect() : undefined);
+                </script>
+                
+          section
+            h3.demo Bivariate Choropleth map
+            div.
+              <div id="observablehq-745f68a6"></div>
+              <script type="module">
+              import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+              import define from "https://api.observablehq.com/@d3/bivariate-choropleth.js?v=3";
+              const inspect = Inspector.into("#observablehq-745f68a6");
+              (new Runtime).module(define, name => name === "chart" ? inspect() : undefined);
+              </script>
+                    
 
           section
             h2 Idiom: dot map
             .flex
-              .half
+              .third
                 ul
-                  li.fragment Good for population density
-                  li.fragment Might require opengl
-                  li.fragment Task summarize
-              .half.
+                  li.fragment Good for population density.
+                  li.fragment Might require opengl.
+                  li.fragment Task summarize.
+              .twothids(width="600px", height="600px").
                 <div id="observablehq-12c2ba3e"></div>
                 <script type="module">
                 import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
                 import define from "https://api.observablehq.com/@aboutaaron/racial-demographic-dot-density-map.js?v=3";
                 const inspect = Inspector.into("#observablehq-12c2ba3e");
-                (new Runtime).module(define, name => name === "chart" ? inspect() : undefined);
+                const main = new Runtime().module(define, name => {
+                    if (name === "chart") {
+                        return inspect();
+                    }
+                });
+                main.redefine("dimensions", {width: 600, height: 600});
                 </script>
-
-
-
-
-                //- a(href="https://observablehq.com/@aboutaaron/racial-demographic-dot-density-map") https://observablehq.com/@aboutaaron/racial-demographic-dot-density-map
 
           section
             h2 Idiom: bubble map
             .flex
-              .half
+              .third
                 ul
-                  li.fragment Alternative for choroplet
-                  li.fragment Be careful with occlusion
-              .half
-                a(href="https://observablehq.com/@aboutaaron/racial-demographic-dot-density-map") https://observablehq.com/@aboutaaron/racial-demographic-dot-density-map
-
-          //- Choropleth map block
-          section
-            h3.demo Choropleth map
-            iframe.blocks(src="http://blockbuilder.org/mbostock/4060606")
-            a.tiny(target="_blank" href="http://blockbuilder.org/mbostock/4060606") http://blockbuilder.org/mbostock/4060606
+                  li.fragment Alternative for choropleth.
+                  li.fragment Be careful with occlusion.
+              .twothirds.
+                <div id="observablehq-76cbf6dc"></div>
+                <script type="module">
+                import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+                import define from "https://api.observablehq.com/@d3/bubble-map.js?v=3";
+                const inspect = Inspector.into("#observablehq-76cbf6dc");
+                const main = new Runtime().module(define, name => {
+                    if (name === "chart") {
+                        return inspect();
+                    }
+                });
+                // main.redefine("dimensions", {width: 600, height: 600});
+                </script>
 
 
           //- US Grid map
           section
             h3.demo US Grid map
-            iframe.blocks(src="http://blockbuilder.org/kristw/2f628465e36f9821325d")
-            a.tiny(target="_blank" href="http://blockbuilder.org/kristw/2f628465e36f9821325d") http://blockbuilder.org/kristw/2f628465e36f9821325d
-            a.tiny(target="_blank" href="http://bl.ocks.org/kristw/") by Kristw
-
-
-
-          //- US Grid map
-          section
-            h3.demo Colombia Grid Map?
-            iframe.blocks(src="http://blockbuilder.org/john-guerra/4db5024e00a82f10a2dc")
-            a.tiny(target="_blank" href="http://blockbuilder.org/john-guerra/4db5024e00a82f10a2dc") http://blockbuilder.org/john-guerra/4db5024e00a82f10a2dc
+            div(width="600px", height="600px").
+              <div id="observablehq-f627f1c3"></div>
+              <script type="module">
+              import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+              import define from "https://api.observablehq.com/@john-guerra/us-grid-maps.js?v=3";
+              const inspect = Inspector.into("#observablehq-f627f1c3");
+              const main = new Runtime().module(define, name => name === "chart" ? inspect() : undefined);
+              main.redefine("width", 800);
+              </script>
 
 
           section
             h2 Population maps trickiness
             .flex
-              .half
+              ul
+                li.fragment Beware!
                 ul
-                  li.fragment beware!
+                  li.fragment Absolute vs relative again.
+                li.fragment Population density vs per capita.
+                ul
+                  li.fragment Investigate with #[a(href="http://public.tableau.com/profile/ben.jones#!/vizhome/PopVsFin/PopVsFin") Ben Jones Tableau Public demo].
+                  li.fragment   Are Maps of Financial Variables just Population Maps?
                   ul
-                    li.fragment absolute vs relative again
-                  li.fragment population density vs per capita
-                  ul
-                    li.fragment investigate with Ben Jones Tableau Public demo
-                    li.fragment http://public.tableau.com/profile/ben.jones#!/vizhome/PopVsFin/PopVsFin Are Maps of Financial Variables just Population Maps?
-                    ul
-                      li.fragment yes, unless you look at per capita (relative) numbers
+                    li.fragment Yes, unless you look at per capita (relative) numbers.
           section
             h2 Idiom: Bayesian surprise maps
             .flex
               .half
                 ul
-                  li.fragment use models of expectations to highlight surprising values
-                  li.fragment confounds (population) and variance (sparsity)
+                  li.fragment Use models of expectations to highlight surprising values.
+                  li.fragment Confounds (population) and variance (sparsity).
+
+          section
+            h2 Bayesian surprise map
+            img.demo(data-src="../shared_images/bayesian-surprise.png", alt="Types of Trees")
+            div #[a.tiny(href="https://idl.cs.washington.edu/files/2017-SurpriseMaps-InfoVis.pdf") Surprise! Bayesian Weighting for De-Biasing Thematic Maps]                  
+            
           section
             h2 Idiom: topographic map
             .flex
               .half
                 ul
-                  li.fragment data
+                  li.fragment Data:
                   ul
-                    li.fragment geographic geometry
-                  li.fragment scalar spatial field
+                    li.fragment Geographic geometry.
+                  li.fragment Scalar spatial field:
                   ul
-                    li.fragment 1 quant attribute per grid cell
-                  li.fragment derived data
+                    li.fragment 1 quant attribute per grid cell.
+                  li.fragment Derived data:
                   ul
-                    li.fragment isoline geometry
+                    li.fragment Isoline geometry.
                     ul
-                      li.fragment isocontours computed for specific levels of scalar values
+                      li.fragment Isocontours computed for specific levels of scalar values.
+                      
+          section
+            h2 Idiom: cartogram
+            .flex
+              .half
+                ul
+                  li.fragment Data:
+                  ul
+                    li.fragment Geographic geometry.
+                    li.fragment Continuous value at each geometry.
+                  li.fragment Derived data:
+                  ul
+                    li.fragment New geographic geometry: many algorithm choices.
+                  li.fragment Then encoded as choropleth.
+                  
+          section
+            h2 Cartogram 1
+            div.
+              <div id="observablehq-78f5dd89"></div>
+              <script type="module">
+              import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+              import define from "https://api.observablehq.com/@d3/non-contiguous-cartogram.js?v=3";
+              const inspect = Inspector.into("#observablehq-78f5dd89");
+              (new Runtime).module(define, name => name === "chart" ? inspect() : undefined);
+              </script>
+            
+          section
+            h2 Cartogram 2
+            img.demo(data-src="../shared_images/cartogram-2.png", alt="Cartogram 2")
+            div #[a.tiny(href="https://www.pnas.org/content/pnas/101/20/7499.full.pdf") Diffusion-based method for producing density-equalizing maps]
 
         section
           section
@@ -529,92 +593,96 @@ html(lang="en")
           section
             h2 Idioms: isosurfaces, direct volume rendering
             .flex
-              .half
+              ul
+                li.fragment Data:
                 ul
-                  li.fragment data
+                  li.fragment Scalar spatial field.
+                  li.fragment 1 quant attribute per grid cell.
+                li.fragment Task:
+                ul
+                  li.fragment Shape understanding, spatial relationships.
+                li.fragment Isosurface:
+                ul
+                  li.fragment Derived data: isocontours computed for specific levels of scalar values.
+                li.fragment Direct volume rendering:
+                ul
+                  li.fragment Transfer function maps scalar values to color, opacity.
                   ul
-                    li.fragment scalar spatial field
-                    li.fragment 1 quant attribute per grid cell
-                  li.fragment task
-                  ul
-
-                    li.fragment shape understanding, spatial relationships
-                  li.fragment isosurface
-                  ul
-                    li.fragment derived data: isocontours computed for specific levels of scalar values
-                  li.fragment direct volume rendering
-                  ul
-                    li.fragment transfer function maps scalar values to color, opacity
-                    ul
-                      li.fragment no derived geometry
+                    li.fragment No derived geometry.
+                    
+          section
+            h2 Isosurfaces example
+            img.demo(data-src="../shared_images/isosurface.png", alt="Isosurfaces")
+            div #[a.tiny(href="https://arxiv.org/pdf/1710.01199.pdf") Two-dimensional dynamics of elasto-inertial turbulence and its role in polymer drag reduction]
+                                    
 
           section
             h2 Vector and tensor fields
-            .flex
-              .half
+            ul
+              li.fragment Data:
+              ul
+                li.fragment Many attribs per cell.
+              li.fragment Idiom families:
+              ul
+                li.fragment Flow glyphs:
                 ul
-                  li.fragment data
-                  ul
-                    li.fragment many attribs per cell
-                  li.fragment idiom families
-                  ul
-                    li.fragment flow glyphs
-                    ul
-                      li.fragment purely local
-                    li.fragment geometric flow
-                    ul
-                      li.fragment derived data from tracing particle trajectories
-                      li.fragment sparse set of seed points
-                    li.fragment texture flow
-                    ul
-                      li.fragment derived data, dense seeds
-                    li.fragment feature flow
-                    ul
-                      li.fragment global computation to detect features
-                      li.fragment encoded with one of methods above
+                  li.fragment Purely local.
+                li.fragment Geometric flow:
+                ul
+                  li.fragment Derived data from tracing particle trajectories.
+                  li.fragment Sparse set of seed points.
+                li.fragment Texture flow:
+                ul
+                  li.fragment Derived data, dense seeds.
+                li.fragment Feature flow:
+                ul
+                  li.fragment Global computation to detect features.
+                  li.fragment Encoded with one of methods above.
 
           section
             h2 Vector fields
             .flex
-              .half
+              ul
+                li.fragment Empirical study tasks:
                 ul
-                  li.fragment empirical study tasks
-                  ul
-                    li.fragment finding critical points, identifying their types
-                    li.fragment identifying what type of critical point is at a specific location
-                    li.fragment predicting where a particle starting at a specified point will end up (advection)
-
+                  li.fragment Finding critical points, identifying their types.
+                  li.fragment Identifying what type of critical point is at a specific location.
+                  li.fragment Predicting where a particle starting at a specified point will end up (advection).
 
           section
-            h2 Idiom: similarity-clustered streamlines
-            .flex
-              .half
-                ul
-                  li.fragment data
-                  ul
-                    li.fragment 3D vector field
-                  li.fragment derived data (from field)
-                  ul
-                    li.fragment streamlines: trajectory particle will follow
-                  li.fragment derived data (per streamline)
-                  ul
-                    li.fragment curvature, torsion, tortuosity
-                    li.fragment signature: complex weighted combination
-                    li.fragment compute cluster hierarchy across all signatures
-                    li.fragment encode: color and opacity by cluster
-                  li.fragment tasks
-                  ul
-                    li.fragment find features, query shape
-                  li.fragment scalability
-                  ul
-                    li.fragment millions of samples, hundreds of streamlines
+            h2 Vector field example
+            img.demo(data-src="../shared_images/lorenz-vectors.png", alt="Isosurfaces")
 
+          section
+            h2 Name that dynamical system
+            img.demo(data-src="../shared_images/lorenz.png", alt="Isosurfaces")            
+            
+          section
+            h3 Idiom: similarity-clustered streamlines
+            ul
+              li.fragment Data:
+              ul
+                li.fragment 3D vector field.
+              li.fragment Derived data (from field):
+              ul
+                li.fragment Streamlines: trajectory particle will follow.
+              li.fragment Derived data (per streamline):
+              ul
+                li.fragment Curvature, torsion, tortuosity.
+                li.fragment Signature: complex weighted combination.
+                li.fragment Compute cluster hierarchy across all signatures.
+                li.fragment Encode: color and opacity by cluster.
+              li.fragment Task:
+              ul
+                li.fragment Find features, query shape.
+              li.fragment Scalability:
+              ul
+                li.fragment Millions of samples, hundreds of streamlines.
 
-
-
-
-
-
+          section
+            h2 Streamlines
+            img.demo(data-src="../shared_images/wind-map.png", alt="Wind Map")               
+            div.tiny #[a(href="http://hint.fm/wind/") Original inspiration]
 
         section
           section
