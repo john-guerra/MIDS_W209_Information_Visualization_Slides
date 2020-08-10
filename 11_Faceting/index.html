@@ -22,7 +22,7 @@
           <h1 class="title">Faceting<br><small>MIDS W209: Information Visualization</small></h1>
           <div class="r-stretch"></div>
           <div class="tiny"><a href="https://johnguerra.co/" target="_blank"><strong> John Alexis Guerra Gómez</strong></a><span> |  john.guerra[at]gmail.com</span><a href="https://twitter.com/duto_guerra"> |  @duto_guerra</a><br><a href="https://johnguerra.co/lectures/MIDS_W209_Information_Visualization/11_Faceting/" target="_blank">https://johnguerra.co/lectures/MIDS_W209_Information_Visualization/11_Faceting/</a></div>
-          <div class="logo"><a href="https://datascience.berkeley.edu/"><img class="logo" src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo"></a></div>
+          <div class="logo"><a href="https://datascience.berkeley.edu/"><img class="logo" data-src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo"></a></div>
           <div class="tiny">Partially based on<a href="https://www.cs.ubc.ca/~tmm/talks.html#minicourse14"> slides from Tamara Munzner</a></div>
         </section>
         <section id="outline">
@@ -31,37 +31,149 @@
             <ul class="small"></ul>
           </section>
         </section>
-        <section>
+        <section id="intro">
           <section>
             <h2>Facet Across Multiple Views</h2>
           </section>
           <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/12_facet-biomech.003.png"></section>
           <section>
-            <h2>Facet</h2><img src="../shared_images/vad_book_alldiagrams/pr11_facet-01.png" alt="Juxtapose, Partition, Superimpose">
+            <h2>Facet</h2><img data-src="../shared_images/vad_book_alldiagrams/pr11_facet-01.png" alt="Juxtapose, Partition, Superimpose">
           </section>
-          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/12_facet-biomech.004.png"></section>
+        </section>
+        <section id="juxtapose">
           <section>
-            <h2>Juxtapose and Coordinate Views</h2><img src="../shared_images/vad_book_alldiagrams/pr11_facet-juxtapose-coordinate-views.png" alt="Share Encoding: Same/Different; Share Data: All/Subset/None; Share Navigation">
+            <h1>Juxtapose</h1>
           </section>
-          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/12_facet-biomech.008.png"></section>
+          <section class="full">
+            <h3>Juxtapose and Coordinate Views</h3><img class="fill" data-src="../shared_images/vad_book_alldiagrams/pr11_facet-juxtapose-coordinate-views.png" alt="Share Encoding: Same/Different; Share Data: All/Subset/None; Share Navigation">
+          </section>
+          <section class="full">
+            <h3>Coordinate Views: <br> Design Choice Interaction</h3><img class="fill" data-src="../shared_images/vad_book_alldiagrams/pr11_facet-design-choice-interactions.png" alt="Design Choice Interaction">
+          </section>
           <section>
-            <h2>Coordinate Views: Design Choice Interaction</h2><img src="../shared_images/vad_book_alldiagrams/pr11_facet-design-choice-interactions.png" alt="Design Choice Interaction">
+            <h2>Juxtapose</h2>
             <ul>
-              <li class="fragment">Why juxtapose views?</li>
-              <ul>
-                <li class="fragment">Benefits: eyes vs memory</li>
+              <li class="fragment">Design Choices
                 <ul>
-                  <li class="fragment">Lower cognitive load to move eyes between 2 views than remembering previous state with single changing view</li>
+                  <li class="fragment">View count
+                    <ul>
+                      <li>few vs many</li>
+                    </ul>
+                  </li>
+                  <li class="fragment">view visibility</li>
+                  <li class="fragment">view arrangment
+                    <ul>
+                      <li class="fragment">User managed vs system aligned</li>
+                    </ul>
+                  </li>
                 </ul>
-                <li class="fragment">Costs: display area, 2 views side by side each have only half the area of one view</li>
-              </ul>
+              </li>
+              <li class="fragment">Why juxtapose views?
+                <ul>
+                  <li class="fragment">Benefits: eyes vs memory
+                    <ul>
+                      <li class="fragment">Lower cognitive load to move eyes between 2 views than remembering previous state with single changing view</li>
+                    </ul>
+                  </li>
+                  <li class="fragment">Costs: display area, 2 views side by side each have only half the area of one view</li>
+                </ul>
+              </li>
             </ul>
+          </section>
+        </section>
+        <section id="shareEncoding">
+          <section>
+            <h1>Share Encoding</h1>
+          </section>
+          <section>
+            <h3>Idiom: Overivew-detail Views</h3>
+            <div class="flex">
+              <div class="half">
+                <div class="small left-align">System: Google Maps</div>
+                <ul>
+                  <li class="fragment">Encoding: same</li>
+                  <li class="fragment">Data: subset shared</li>
+                  <li class="fragment">Navigation: shared
+                    <ul>
+                      <li class="fragment">Bi-directional linking</li>
+                    </ul>
+                  </li>
+                  <li class="fragment">Differences
+                    <ul>
+                      <li class="fragment">Viewpoint</li>
+                      <li class="fragment">(Size)</li>
+                    </ul>
+                  </li>
+                  <li class="fragment">Special case:  bird's-eye map</li>
+                </ul>
+              </div>
+              <div class="half">
+                <figure><img data-src="../shared_images/vad_book_alldiagrams/pr11_facet-google-map.png" alt="Overview map from Google maps">
+                  <figcaption class="reference tiny">[A Review of Overview+Detail, Zooming, and Focus+Context Interfaces. Cockburn, Karlson, and Bederson. ACM Computing Surveys 41:1 (2008), 1–31.]</figcaption>
+                </figure>
+              </div>
+            </div>
+          </section>
+          <section>
+            <h2>Idiom: Small Multiples</h2>
+            <div class="flex">
+              <div class="third">
+                <div class="left-align">System: Cerebral</div>
+                <ul>
+                  <li class="fragment">Encoding: same</li>
+                  <li class="fragment">Data: none shared</li>
+                  <ul>
+                    <li class="fragment">Different attributes for node colors</li>
+                    <li class="fragment">(Same network layout)</li>
+                  </ul>
+                  <li class="fragment">Navigation: shared</li>
+                </ul>
+              </div>
+              <div class="twothirds">
+                <figure><img data-src="../shared_images/vad_book_alldiagrams/pr11_facet-small-multiples.png" alt="Small multiples">
+                  <figcaption class="reference">[Cerebral: Visualizing Multiple Experimental Conditions on a Graph with Biological Context. Barsky, Munzner, Gardy, and Kincaid. IEEE Trans. Visualization and Computer Graphics (Proc. InfoVis 2008) 14:6 (2008), 1253–1260.]</figcaption>
+                </figure>
+              </div>
+            </div>
+          </section>
+          <section>
+            <h3 class="demo">Focus / Context</h3>
+            <p class="small">Same encoding / Subset of data / Linked Navigation</p>
+            <div>
+              <div id="observablehq-7c887b88">
+                <div class="observablehq-chart"></div>
+                <div class="observablehq-viewof-focus"></div>
+                <div style="display:none" class="observablehq-update"></div>
+                <div style="overflow: hidden;"><a style="display: block; float:right;" href="https://observablehq.com/d/066542b3dff540c8"><object type="image/svg+xml" style="pointer-events: none;" width=180 height=22 data="https://static.observableusercontent.com/files/c3fab254a006f1a3a1f9f63aba8ab1460db4752529036b9962950bde0ec195bab823daa6b278b1c3401e545b3bd640ddfdcad805cf9859af218cb2b9fed4ddf0"></object></a></div>
+              </div>
+              <script type="module">
+                import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+                import define from "https://api.observablehq.com/d/066542b3dff540c8.js?v=3";
+                (new Runtime).module(define, name => {
+                  if (name === "chart") return Inspector.into("#observablehq-7c887b88 .observablehq-chart")();
+                  if (name === "viewof focus") return Inspector.into("#observablehq-7c887b88 .observablehq-viewof-focus")();
+                  if (name === "update") return Inspector.into("#observablehq-7c887b88 .observablehq-update")();
+                });
+              </script>
+              
+            </div>
+          </section>
+          <section>
+            <h3 class="demo">Small Multiples (cubism)</h3>
+            <p class="small">Same encoding / Different data / Linked Navigation</p>
+            <iframe class="blocks" data-src="http://square.github.io/cubism/demo/"></iframe><a class="tiny" target="_blank" href="http://square.github.io/cubism/demo/">http://square.github.io/cubism/demo/</a>
+          </section>
+        </section>
+        <section id="shareData">
+          <section>
+            <h1>Share Data</h1>
           </section>
           <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/12_facet-biomech.005.png"></section>
           <section>
+            <h2>Idiom: Linked Highlighting</h2>
             <div class="flex">
               <div class="half">
-                <h2>Idiom: Linked Highlighting</h2>
+                <div class="left-align">System: EDV</div>
                 <ul>
                   <li class="fragment">See how regions contiguous in one view are distributed within another</li>
                   <ul>
@@ -74,92 +186,30 @@
                   <li class="fragment">AKA: brushing and linking</li>
                 </ul>
               </div>
-              <div class="half"><img src="../shared_images/vad_book_alldiagrams/pr11_facet-linked-highlighting.png" alt="Visual Exploration of Large Structured Datasets"><a class="bottom tiny">[Visual Exploration of Large Structured Datasets. Wills. Proc. New Techniques and Trends in Statistics (NTTS), pp. 237–246. IOS Press, 1995.]</a></div>
+              <div class="half">
+                <figure><img data-src="../shared_images/vad_book_alldiagrams/pr11_facet-linked-highlighting.png" alt="Visual Exploration of Large Structured Datasets">
+                  <figcaption class="reference">figcaption.reference [Visual Exploration of Large Structured Datasets. Wills. Proc. New Techniques and Trends in Statistics (NTTS), pp. 237–246. IOS Press, 1995.]</figcaption>
+                </figure>
+              </div>
             </div>
           </section>
           <section>
             <h3 class="demo">Linked Filtering (Crossfilter)</h3>
-            <iframe class="blocks" src="http://square.github.io/crossfilter/"></iframe><a class="tiny" target="_blank" href="http://square.github.io/crossfilter/">http://square.github.io/crossfilter/</a>
+            <iframe class="blocks" data-src="https://crossfilter.github.io/crossfilter/"></iframe><a class="tiny" target="_blank" href="https://crossfilter.github.io/crossfilter/">https://crossfilter.github.io/crossfilter/</a>
           </section>
-          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/12_facet-biomech.006.png"></section>
-          <section>
-            <div class="flex">
-              <div class="half">
-                <h2>Idiom: Overivew-detail Views</h2>
-                <ul>
-                  <li class="fragment">Encoding: same</li>
-                  <li class="fragment">Data: subset shared</li>
-                  <li class="fragment">Navigation: shared</li>
-                  <ul>
-                    <li class="fragment">Bi-directional linking</li>
-                  </ul>
-                  <li class="fragment">Differences
-                    <li class="fragment">Viewpoint</li>
-                    <li class="fragment">(Size)</li>
-                  </li>
-                  <li class="fragment">Special case:  bird's-eye map</li>
-                </ul>
-              </div>
-              <div class="half">
-                <h2>System: Google Maps</h2><img src="../shared_images/vad_book_alldiagrams/pr11_facet-google-map.png" alt="Overview map from Google maps"><a class="bottom tiny">[A Review of Overview+Detail, Zooming, and Focus+Context Interfaces. Cockburn, Karlson, and Bederson. ACM Computing Surveys 41:1 (2008), 1–31.]</a>
-              </div>
-            </div>
-          </section>
-          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/12_facet-biomech.007.png"></section>
-          <section>
-            <div class="flex">
-              <div class="third">
-                <ul>
-                  <li class="fragment">Encoding: same</li>
-                  <li class="fragment">Data: none shared</li>
-                  <ul>
-                    <li class="fragment">Different attributes for node colors</li>
-                    <li class="fragment">(Same network layout)</li>
-                  </ul>
-                  <li class="fragment">Navigation: shared</li>
-                </ul>
-              </div>
-              <div class="twothirds">
-                <h2>System: Cerebral</h2><img src="../shared_images/vad_book_alldiagrams/pr11_facet-small-multiples.png" alt="Small multiples"><a class="bottom tiny">[Cerebral: Visualizing Multiple Experimental Conditions on a Graph with Biological Context. Barsky, Munzner, Gardy, and Kincaid. IEEE Trans. Visualization and Computer Graphics (Proc. InfoVis 2008) 14:6 (2008), 1253–1260.]</a>
-              </div>
-            </div>
-          </section>
-          <section>
-            <h3 class="demo">Overview/Details</h3>
-            <p class="small">Same encoding / Subset of data / Linked Navigation</p>
-            <iframe class="blocks" src="http://blockbuilder.org/mbostock/34f08d5e11952a80609169b7917d4172"></iframe><a class="tiny" target="_blank" href="http://blockbuilder.org/mbostock/34f08d5e11952a80609169b7917d4172">http://blockbuilder.org/mbostock/34f08d5e11952a80609169b7917d4172</a><a class="tiny" target="_blank" href="http://bl.ocks.org/mbostock/">by mbostock</a>
-          </section>
-          <section>
-            <h3 class="demo">Small Multiples (cubism)</h3>
-            <p class="small">Same encoding / Different data / Linked Navigation</p>
-            <iframe class="blocks" src="http://square.github.io/cubism/demo/"></iframe><a class="tiny" target="_blank" href="http://square.github.io/cubism/demo/">http://square.github.io/cubism/demo/</a>
-          </section>
-          <section>
-            <h3 class="demo">Multiform Overview/Details (Tweetometro)</h3>
-            <p class="small">Different encoding / Subset of data / Linked Navigation</p>
-            <iframe class="blocks" src="http://old.tweetometro.co/"></iframe><a class="tiny" target="_blank" href="http://old.tweetometro.co/">http://old.tweetometro.co/</a>
+          <section class="full">
+            <h3 class="demo">Multiform Overview / Details</h3>
+            <p class="small">Tweetometro: Different encoding / Subset of data / Linked Navigation</p>
+            <figure>
+              <figcaption class="reference" target="_blank" href="http://old.tweetometro.co/">http://old.tweetometro.co/</figcaption>
+              <video data-src="../shared_images/tweetometro.mp4" autoplay="true" loop="true" showcontrols="false"></video>
+            </figure>
           </section>
           <section>
             <h3 class="demo">Multiform Overview (Treeversity)</h3>
             <p class="small">Different encoding / All data / Linked Navigation</p>
-            <iframe class="blocks" src="https://treeversity.cattlab.umd.edu/"></iframe><a class="tiny" target="_blank" href="https://treeversity.cattlab.umd.edu/">https://treeversity.cattlab.umd.edu/</a>
+            <iframe class="blocks" data-src="https://treeversity.cattlab.umd.edu/"></iframe><a class="tiny" target="_blank" href="https://treeversity.cattlab.umd.edu/">https://treeversity.cattlab.umd.edu/</a>
           </section>
-          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/12_facet-biomech.008.png"></section>
-          <section>
-            <h2>Coordinate Views: Design Choice Interaction</h2><img src="../shared_images/vad_book_alldiagrams/pr11_facet-design-choice-interactions.png" alt="Design Choice Interaction">
-            <ul>
-              <li class="fragment">Why juxtapose views?</li>
-              <ul>
-                <li class="fragment">Benefits: eyes vs memory</li>
-                <ul>
-                  <li class="fragment">Lower cognitive load to move eyes between 2 views than remembering previous state with single changing view</li>
-                </ul>
-                <li class="fragment">Costs: display area, 2 views side by side each have only half the area of one view</li>
-              </ul>
-            </ul>
-          </section>
-          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/12_facet-biomech.009.png"></section>
-          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/12_facet-biomech.010.png"></section>
           <section>
             <h2>System: Improvise</h2>
             <div class="flex">
@@ -179,46 +229,63 @@
                   </ul>
                 </ul>
               </div>
-              <div class="twothirds"><img src="../shared_images/vad_book_alldiagrams/pr11_facet-improvise.png" alt="Building Highly-Coordinated Visualizations In Improvise"><a class="bottom tiny">[Building Highly-Coordinated Visualizations In Improvise. Weaver. Proc. IEEE Symp. Information Visualization (InfoVis), pp. 159–166, 2004.]</a></div>
+              <div class="twothirds">
+                <figure><img data-src="../shared_images/vad_book_alldiagrams/pr11_facet-improvise.png" alt="Building Highly-Coordinated Visualizations In Improvise">
+                  <figcaption class="reference">[Building Highly-Coordinated Visualizations In Improvise. Weaver. Proc. IEEE Symp. Information Visualization (InfoVis), pp. 159–166, 2004.]</figcaption>
+                </figure>
+              </div>
             </div>
           </section>
           <section>
             <h3 class="demo">Improvise</h3>
-            <iframe class="blocks" src="http://www.cs.ou.edu/~weaver/improvise/"></iframe><a class="tiny" target="_blank" href="http://www.cs.ou.edu/~weaver/improvise/">http://www.cs.ou.edu/~weaver/improvise/</a>
+            <iframe class="blocks" data-src="http://www.cs.ou.edu/~weaver/improvise/"></iframe><a class="tiny" target="_blank" href="http://www.cs.ou.edu/~weaver/improvise/">http://www.cs.ou.edu/~weaver/improvise/</a>
           </section>
-          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/12_facet-biomech.011.png"></section>
+        </section>
+        <section id="shareNavigation">
+          <section>
+            <h1>Share Navigation</h1>
+          </section>
+        </section>
+        <section id="partition">
+          <section>
+            <h1>Partition</h1>
+          </section>
           <section>
             <h2>Partition Into Views</h2>
             <div class="flex">
               <div class="half">
-                <ul>
-                  <li class="fragment">How to divide data between views</li>
-                  <ul>
-                    <li class="fragment">Split into regions by attributes</li>
-                    <li class="fragment">Encodes association between items using spatial proximity</li>
-                    <li class="fragment">Order of splits has major implications for what patterns are visible</li>
-                  </ul>
-                  <li class="fragment">No strict dividing line
-                    <li class="fragment">View: big/detailed</li>
+                <ul class="tiny">
+                  <li class="fragment">How to divide data between views
                     <ul>
-                      <li class="fragment">Contiguous region in which visually encoded data is shown on the display</li>
+                      <li class="fragment">Split into regions by attributes</li>
+                      <li class="fragment">Encodes association between items using spatial proximity</li>
+                      <li class="fragment">Order of splits has major implications for what patterns are visible</li>
                     </ul>
-                    <li class="fragment">Glyph: small/iconic
-                      <li class="fragment">Object with internal structure that arises from multiple marks</li>
-                    </li>
+                  </li>
+                  <li class="fragment">No strict dividing line
+                    <ul>
+                      <li class="fragment">View: big/detailed
+                        <ul>
+                          <li class="fragment">Contiguous region in which visually encoded data is shown on the display</li>
+                        </ul>
+                      </li>
+                      <li class="fragment">Glyph: small/iconic
+                        <ul>
+                          <li class="fragment">Object with internal structure that arises from multiple marks</li>
+                        </ul>
+                      </li>
+                    </ul>
                   </li>
                 </ul>
               </div>
-              <div class="half"><img src="../shared_images/vad_book_alldiagrams/pr11_facet-partition-sidebyside.png" alt="partition into side-by-side views"><img src="../shared_images/vad_book_alldiagrams/pr11_facet-small-partitionviews.png" alt="partition views"></div>
+              <div class="half"><img data-src="../shared_images/vad_book_alldiagrams/pr11_facet-partition-sidebyside.png" alt="partition into side-by-side views"><img data-src="../shared_images/vad_book_alldiagrams/pr11_facet-small-partitionviews.png" alt="partition views"></div>
             </div>
           </section>
-          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/12_facet-biomech.012.png"></section>
-          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/12_facet-biomech.013.png"></section>
-          <section>
-            <h2>Partitioning: List Alignment</h2>
+          <section class="full">
+            <h3>Partitioning: List Alignment</h3>
             <div class="flex">
               <div class="half">
-                <ul>
+                <ul class="tiny">
                   <li class="fragment">Single bar chart with grouped bars</li>
                   <ul>
                     <li class="fragment">Split by state into regions</li>
@@ -227,10 +294,10 @@
                     </ul>
                     <li class="fragment">Compare: easy within state, hard across ages</li>
                   </ul>
-                </ul><img src="../shared_images/vad_book_alldiagrams/pr11_facet-partition-listalignment1.png" alt="single bar chart with grouped bars">
+                </ul><img data-src="../shared_images/vad_book_alldiagrams/pr11_facet-partition-listalignment1.png" alt="single bar chart with grouped bars">
               </div>
               <div class="half">
-                <ul>
+                <ul class="tiny">
                   <li class="fragment">Small-multiple bar charts</li>
                   <ul>
                     <li class="fragment">Split by age into regions</li>
@@ -239,64 +306,75 @@
                     </ul>
                     <li class="fragment">Compare: easy within age, harder across states</li>
                   </ul>
-                </ul><img src="../shared_images/vad_book_alldiagrams/pr11_facet-partition-listalignment2.png" alt="small-multiple bar charts">
+                </ul><img data-src="../shared_images/vad_book_alldiagrams/pr11_facet-partition-listalignment2.png" alt="small-multiple bar charts">
               </div>
             </div>
           </section>
-          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/12_facet-biomech.014.png"></section>
           <section>
+            <h3>Partitioning: Recursive Subdivision</h3>
             <div class="flex">
-              <div class="half">
-                <h2>Partitioning: Recursive Subdivision</h2>
+              <div class="third small">
+                <div class="left-align">System: HIVE</div><br>
                 <ul>
                   <li class="fragment">Split by neighborhood</li>
                   <li class="fragment">Then by type</li>
-                  <li class="fragment">Then time</li>
-                  <ul>
-                    <li class="fragment">Years as rows</li>
-                    <li class="fragment">Months as columns</li>
-                  </ul>
-                  <li class="fragment">Color by price</li>
-                  <li class="fragment">Neighborhood patterns</li>
-                  <ul>
-                    <li class="fragment">Where it’s expensive</li>
-                    <li class="fragment">Where you pay much more for detached type</li>
-                  </ul>
+                  <li class="fragment">Then time
+                    <ul>
+                      <li class="fragment">Years as rows</li>
+                      <li class="fragment">Months as columns</li>
+                    </ul>
+                  </li>
+                  <li class="fragment">Color by price</li><br>
+                  <li class="fragment">Neighborhood patterns
+                    <ul>
+                      <li class="fragment">Where it’s expensive</li>
+                      <li class="fragment">Where you pay much more for detached type</li>
+                    </ul>
+                  </li>
                 </ul>
               </div>
-              <div class="half">
-                <h2>System: HIVE</h2><img src="../shared_images/vad_book_alldiagrams/pr11_facet-recursive-subdivision.png" alt="recursive subdivision">
+              <div class="twothirds">
+                <figure><img data-src="../shared_images/vad_book_alldiagrams/pr11_facet-recursive-subdivision.png" alt="recursive subdivision">
+                  <figcaption class="reference">[Configuring Hierarchical Layouts to Address Research Questions. Slingsby, Dykes, and Wood.  IEEE Transactions on Visualization and Computer Graphics (Proc. InfoVis 2009) 15:6 (2009), 977–984.]</figcaption>
+                </figure>
               </div>
-            </div><a class="bottom tiny">[Configuring Hierarchical Layouts to Address Research Questions. Slingsby, Dykes, and Wood.  IEEE Transactions on Visualization and Computer Graphics (Proc. InfoVis 2009) 15:6 (2009), 977–984.]</a>
+            </div>
           </section>
-          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/12_facet-biomech.015.png"></section>
           <section>
+            <h3>Partitioning: Recursive Subdivision</h3>
             <div class="flex">
-              <div class="half">
-                <h2>Partitioning: Recursive Subdivision</h2>
+              <div class="third small">
+                <div class="left-align">System: HIVE</div><br>
                 <ul>
-                  <li class="fragment">Switch order of splits</li>
-                  <ul>
-                    <li class="fragment">Type then neighborhood</li>
-                  </ul>
+                  <li class="fragment">Switch order of splits
+                    <ul>
+                      <li class="fragment">Type then neighborhood</li>
+                    </ul>
+                  </li>
                   <li class="fragment">Switch color
-                    <li class="fragment">By price variation</li>
+                    <ul>
+                      <li class="fragment">By price variation</li>
+                    </ul>
                   </li>
                   <li class="fragment">Type patterns
-                    <li class="fragment">Within specific type, which neighborhoods inconsistent</li>
+                    <ul>
+                      <li class="fragment">Within specific type, which neighborhoods inconsistent</li>
+                    </ul>
                   </li>
                 </ul>
               </div>
-              <div class="half">
-                <h2>System: HIVE</h2><img src="../shared_images/vad_book_alldiagrams/pr11_facet-recursive-subdivision2.png" alt="recursive subdivision">
+              <div class="twothirds">
+                <figure><img data-src="../shared_images/vad_book_alldiagrams/pr11_facet-recursive-subdivision2.png" alt="recursive subdivision">
+                  <figcaption class="reference">[Configuring Hierarchical Layouts to Address Research Questions. Slingsby, Dykes, and Wood.  IEEE Transactions on Visualization and Computer Graphics (Proc. InfoVis 2009) 15:6 (2009), 977–984.]</figcaption>
+                </figure>
               </div>
-            </div><a class="bottom tiny">[Configuring Hierarchical Layouts to Address Research Questions. Slingsby, Dykes, and Wood.  IEEE Transactions on Visualization and Computer Graphics (Proc. InfoVis 2009) 15:6 (2009), 977–984.]</a>
+            </div>
           </section>
-          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/12_facet-biomech.016.png"></section>
           <section>
+            <h3>Partitioning: Recursive Subdivision</h3>
             <div class="flex">
-              <div class="half">
-                <h2>Partitioning: Recursive Subdivision</h2>
+              <div class="third small">
+                <div class="left-align">System: HIVE</div><br>
                 <ul>
                   <li class="fragment">Different encoding for second-level regions</li>
                   <ul>
@@ -304,16 +382,18 @@
                   </ul>
                 </ul>
               </div>
-              <div class="half">
-                <h2>System: HIVE</h2><img src="../shared_images/vad_book_alldiagrams/pr11_facet-recursive-subdivision3.png" alt="recursive subdivision">
+              <div class="twothirds">
+                <figure><img data-src="../shared_images/vad_book_alldiagrams/pr11_facet-recursive-subdivision3.png" alt="recursive subdivision">
+                  <figcaption class="reference">[Configuring Hierarchical Layouts to Address Research Questions. Slingsby, Dykes, and Wood.  IEEE Transactions on Visualization and Computer Graphics (Proc. InfoVis 2009) 15:6 (2009), 977–984.]</figcaption>
+                </figure>
               </div>
-            </div><a class="bottom tiny">[Configuring Hierarchical Layouts to Address Research Questions. Slingsby, Dykes, and Wood.  IEEE Transactions on Visualization and Computer Graphics (Proc. InfoVis 2009) 15:6 (2009), 977–984.]</a>
+            </div>
           </section>
-          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/12_facet-biomech.017.png"></section>
           <section>
+            <h3>Partitioning: Recursive Subdivision</h3>
             <div class="flex">
-              <div class="half">
-                <h2>Partitioning: Recursive Subdivision</h2>
+              <div class="third small">
+                <div class="left-align">System: HIVE</div><br>
                 <ul>
                   <li class="fragment">Size regions by sale counts</li>
                   <ul>
@@ -322,17 +402,23 @@
                   <li class="fragment">Result: treemap</li>
                 </ul>
               </div>
-              <div class="half">
-                <h2>System: HIVE</h2><img src="../shared_images/vad_book_alldiagrams/pr11_facet-recursive-subdivision4.png" alt="recursive subdivision">
+              <div class="twothirds">
+                <figure><img data-src="../shared_images/vad_book_alldiagrams/pr11_facet-recursive-subdivision4.png" alt="recursive subdivision">
+                  <figcaption class="reference">figcaption.reference [Configuring Hierarchical Layouts to Address Research Questions. Slingsby, Dykes, and Wood.  IEEE Transactions on Visualization and Computer Graphics (Proc. InfoVis 2009) 15:6 (2009), 977–984.]</figcaption>
+                </figure>
               </div>
-            </div><a class="bottom tiny">[Configuring Hierarchical Layouts to Address Research Questions. Slingsby, Dykes, and Wood.  IEEE Transactions on Visualization and Computer Graphics (Proc. InfoVis 2009) 15:6 (2009), 977–984.]</a>
+            </div>
           </section>
-          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/12_facet-biomech.018.png"></section>
+        </section>
+        <section>
+          <section>
+            <h1>Superimpose</h1>
+          </section>
           <section>
             <h2>Superimpose Layers</h2>
             <div class="flex">
-              <div class="twothirds">
-                <ul>
+              <div class="half">
+                <ul class="tiny">
                   <li class="fragment">Layer: set of objects spread out over region</li>
                   <ul>
                     <li class="fragment">Each set is visually distinguishable group</li>
@@ -348,12 +434,11 @@
                   </li>
                 </ul>
               </div>
-              <div class="third"><img src="../shared_images/vad_book_alldiagrams/pr11_facet-superimpose-layers.png" alt="superimpose layers"></div>
+              <div class="half"><img data-src="../shared_images/vad_book_alldiagrams/pr11_facet-superimpose-layers.png" alt="superimpose layers"></div>
             </div>
           </section>
-          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/12_facet-biomech.019.png"></section>
           <section>
-            <h2>Static Visual Layering</h2>
+            <h3>Static Visual Layering</h3>
             <div class="flex">
               <div class="twothirds">
                 <ul>
@@ -364,21 +449,22 @@
                   </ul>
                   <li class="fragment">Background layer: regions
                     <li class="fragment">Desaturated colors for water, parks, land areas</li>
+                    <figure></figure>
+                    <li class="fragment">User can selectively focus attention</li>
                   </li>
-                  <li class="fragment">User can selectively focus attention</li>
                   <li class="fragment">“Get it right in black and white”
                     <li class="fragment">Check luminance contrast with greyscale view</li>
+                    <figcaption class="reference">[Get it right in black and white. Stone. 2010. http://www.stonesc.com/wordpress/2010/03/get-it-right-in-black-and-white]</figcaption>
                   </li>
-                </ul><a class="bottom tiny">[Get it right in black and white. Stone. 2010. http://www.stonesc.com/wordpress/2010/03/get-it-right-in-black-and-white]</a>
+                </ul>
               </div>
-              <div class="third"><img src="../shared_images/vad_book_alldiagrams/pr11_facet-visual-layering1.png" alt="layered map in color"><img src="../shared_images/vad_book_alldiagrams/pr11_facet-visual-layering2.png" alt="layered map in grayscale"></div>
+              <div class="third"><img data-src="../shared_images/vad_book_alldiagrams/pr11_facet-visual-layering1.png" alt="layered map in color"><img data-src="../shared_images/vad_book_alldiagrams/pr11_facet-visual-layering2.png" alt="layered map in grayscale"></div>
             </div>
           </section>
-          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/12_facet-biomech.020.png"></section>
           <section>
             <h2>Suprimposing Limits</h2>
             <div class="flex">
-              <div class="twothirds">
+              <div class="twothirds small">
                 <ul>
                   <li class="fragment">Few layers, but many lines</li>
                   <ul>
@@ -393,21 +479,28 @@
                     </ul>
                     <li class="fragment">Same screen space for all multiples vs single superimposed</li>
                   </li>
-                </ul><img src="../shared_images/vad_book_alldiagrams/pr11_facet-superimpose-limits.png" alt="Graphical perception of multiple time series">
+                </ul><img class="fragment" data-src="../shared_images/vad_book_alldiagrams/pr11_facet-superimpose-limits.png" alt="Graphical perception of multiple time series">
               </div>
-              <div class="third"><img src="../shared_images/vad_book_alldiagrams/pr11_superimposing-layering2.png" alt="cpu utilization over time"></div>
+              <div class="third"><img data-src="../shared_images/vad_book_alldiagrams/pr11_superimposing-layering2.png" alt="cpu utilization over time"></div>
             </div>
           </section>
-          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/12_facet-biomech.021.png"></section>
-          <section>
-            <h2>Dynamic Visual Layering</h2>
-            <ul>
+          <section class="full">
+            <h3 class="demo">Dynamic Visual Layering</h3>
+            <ul class="tiny">
               <li class="fragment">Interactive based on selection.</li>
               <li class="fragment">One-hop neighbour highlighting demos: click vs hover (lightweight).</li>
             </ul>
             <div class="flex">
-              <div class="half"><img src="../shared_images/vad_book_alldiagrams/pr11_facet-dynamic-visual-layering1.png" alt="dynamic visual layering"><a href="mariandoerk.de/edgemaps/demo/">http://mariandoerk.de/edgemaps/demo/</a></div>
-              <div class="half"><img src="../shared_images/vad_book_alldiagrams/pr11_facet-dynamic-visual-layering2.png" alt="dynami visual layering"><a href="mbostock.github.io/d3/talk/20111116/airports.html">http://mbostock.github.io/d3/talk/20111116/airports.html</a></div>
+              <div class="half">
+                <figure><img data-src="../shared_images/vad_book_alldiagrams/pr11_facet-dynamic-visual-layering1.png" alt="dynamic visual layering">
+                  <figcaption class="reference"><a href="mariandoerk.de/edgemaps/demo/">http://mariandoerk.de/edgemaps/demo/</a></figcaption>
+                </figure>
+              </div>
+              <div class="half">
+                <figure><img data-src="../shared_images/vad_book_alldiagrams/pr11_facet-dynamic-visual-layering2.png" alt="dynami visual layering">
+                  <figcaption class="reference"><a href="mbostock.github.io/d3/talk/20111116/airports.html">http://mbostock.github.io/d3/talk/20111116/airports.html</a></figcaption>
+                </figure>
+              </div>
             </div>
           </section>
           <section>
@@ -461,10 +554,6 @@
     <script src="../plugin/search/search.js"></script>
     <script src="../plugin/markdown/markdown.js"></script>
     <script src="../plugin/highlight/highlight.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega@5.13.0"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.13.1"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega-lite-api@0.11.0"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega-tooltip@0.23.2"></script>
     <script>
       Reveal.initialize({
         controls: true,
@@ -483,7 +572,7 @@
     <script>
       (function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      m=s.getElementsByTagName(o)[0];a.async=1;a.data-src=g;m.parentNode.insertBefore(a,m)
       })(window,document,"script","https://www.google-analytics.com/analytics.js","ga");
       
       ga("create", "UA-72531610-1", "auto");
