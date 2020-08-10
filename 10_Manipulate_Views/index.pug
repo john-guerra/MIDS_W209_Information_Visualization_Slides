@@ -64,10 +64,17 @@ html(lang="en")
           section
             h2 What we are going to learn
             ul.small
+              li.fragment Manipulate Views
+                ul
+                  li.fragment Change Encodings / Parameters
+                  li.fragment Animations
+                  li.fragment Interactions
+                  li.fragment Navigate
+              li.fragment Case Studies
 
 
 
-        section
+        section#manipulateViews
           section
             h1 Manipulate views
           section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/11_manipulate-genea.003.png")
@@ -141,7 +148,8 @@ html(lang="en")
                   li.fragment Interaction entails change
 
             //- TODO add gifs for each type of change
-        section
+
+        section#changeEncoding
           section
             h1 Change Encoding / Parameters
           //- section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/11_manipulate-genea.015.png")
@@ -191,8 +199,8 @@ html(lang="en")
                     a(href="http://laurenwood.github.io/") [Growth of a Nation](http://laurenwood.github.io/)
 
         section(data-background-iframe="http://hedonometer.org/timeseries/en_all/?from=2015-07-16&to=2017-01-12&date=2016-11-09")
-          
-        section
+
+        section#animations
           section
             h1 Animations
 
@@ -306,11 +314,11 @@ html(lang="en")
           section
             iframe.blocks(data-src="https://bost.ocks.org/mike/miserables/")
             a(href="https://bost.ocks.org/mike/miserables/") https://bost.ocks.org/mike/miserables/
-            
+
           section
             h3 Animating the show reel: Flubber
             img(data-src="../shared_images/flubber.gif", alt="Flubber")
-            
+
 
           section
             h2 Collapsible Tree
@@ -333,7 +341,8 @@ html(lang="en")
                 ul
                   li.fragment Tree drilldown / rollup
                   li.fragment Value comparison
-        section
+
+        section#interactions
           section
             h1 Interactions
 
@@ -458,7 +467,29 @@ html(lang="en")
                             ul
                               li.fragment Gregor Aisch, NYTimes
 
-        section
+          section
+            h2 Responsiveness is required
+
+            ul.noMarginTopBottom.line-compressed
+              li.fragment visual feedback: three rough categories
+                ul
+                  li.fragment 0.1 seconds: perceptual processing
+                    ul
+                      li.fragment subsecond response for mouseover highlighting - ballistic motion
+                  li.fragment 1 second: immediate response
+                    ul
+                      li.fragment fast response after mouseclick, button press - Fitts’ Law limits on motor control
+                  li.fragment 10 seconds: brief tasks
+                    ul
+                      li.fragment bounded response after dialog box - mental model of heavyweight operation (file load)
+              li.fragment scalability considerations
+                ul.tiny
+                  li.fragment highlight selection without complete redraw of view (graphics frontbuffer)
+                  li.fragment show hourglass for multi-second operations (check for cancel/undo)
+                  li.fragment show progress bar for long operations (process in background thread)
+                  li.fragment rendering speed when item count is large (guaranteed frame rate)
+
+        section#navigate
           section
             h1 Navigate
 
@@ -469,21 +500,75 @@ html(lang="en")
           section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/11_manipulate-genea.020.png")
           //- LiveRac
           section
-            h2 Navigate: Changing viewpoint/visibility
+            h3 Navigate: Changing viewpoint/visibility
             .flex
               .half
-                ul
+                ul.normal
                   li.fragment Change viewpoint
                     ul
                       li.fragment Changes which items are visible within view
                   li.fragment Camera metaphor
-                    li.fragment Zoom
-                    li.fragment Pan/translate/scroll
                     ul
-                      li.fragment Move up/down/sideways
+                      li.fragment Pan/translate/scroll
+                      li.fragment Rotate
+                      li.fragment Zoom
+              .half
+                img(data-src="../shared_images/vad_book_alldiagrams/how_navigate_zoom_pan_constrained.png", alt="Change viewpoint")
+
+          section
+            h3 Pan / Translate / Scroll
+            .flex
+              .half
+                ul.normal
+                  li.fragment Move up/down
+                  li.fragment Move sideways
+                  li.fragment Go to location
               .half
                 img(data-src="../shared_images/vad_book_alldiagrams/pr10_manipulate-views-navigate-reduction.png", alt="Item reduction")
-          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/11_manipulate-genea.021.png")
+
+          section.full
+            h2 Idiom: Scrollytelling
+            .flex
+              .twothirds
+                ul.small
+                  li.fragment how: navigate page by scrolling (panning down)
+                  li.fragment pros:
+                    ul
+                      li.fragment People don't click, but they scroll
+                      li.fragment Bottom up approach
+                      li.fragment Good for mobile
+                  li.fragment cons:
+                    ul.tiny
+                      li.fragment full-screen mode may lack affordances
+                      li.fragment scrolljacking, no direct access
+                      li.fragment unexpected behaviour
+                      li.fragment continuous control for discrete steps
+
+                  li.fragment.small
+                    a(href="https://eagereyes.org/blog/2016/the-scrollytelling-scourge") Eagereyes take on scrollyteling
+                  li.fragment.small
+                    a(href="https://bost.ocks.org/mike/scroll/") MBostock's guidelines for scrollyteling
+                div.reference slide inspired by: Alexander Lex, Utah
+              .third
+                figure
+                  video(style="max-width:250px", data-src="../shared_images/segundaVueltaStory.mp4" alt="Colombian Election results storytelling video" autoplay="true" loop="true")
+                  figcaption.reference
+                    a(href="https://johnguerra.co/viz/resultadosSegundaVuelta2018/") Colombian Election results
+
+
+          section
+            h3 Zoom
+            .flex
+              .twothirds
+                ul
+                  li.fragment enlarge/shrink world == move camera closer/further
+                  li.fragment #[strong geometric zoom]: standard, like moving physical object
+                  li.fragment #[strong semantic zoom]: keep objects same size, but change the scale / viewport
+
+              .third
+                img(data-src="../shared_images/vad_book_alldiagrams/navigate_zoom.png", alt="Item reduction")
+
+
           section
             h2 Idiom: Semantic Zooming
             .flex
@@ -501,9 +586,12 @@ html(lang="en")
                     li.fragment Simple line chart
                     li.fragment Full chart: axes and tickmarks
               .twothirds
+
                 figure
                   img(data-src="../shared_images/vad_book_alldiagrams/pr10_manipulate-views-semantic-zooming.png", alt="Semantic zooming")
                   figcaption.reference [LiveRAC - Interactive Visual Exploration of System Management Time-Series Data. McLachlan, Munzner, Koutsofios, and North. Proc. ACM Conf. Human Factors in Computing Systems (CHI), pp. 1483–1492, 2008.]
+
+
           section
             h3.demo LiveRAC
             span.blocks
@@ -512,41 +600,139 @@ html(lang="en")
           //- Semantic vs geometric zoom
           section
             h3.demo Geometric Zoom
-            iframe.blocks(data-src="http://blockbuilder.org/mbostock/3680958")
-            a.tiny(target="_blank" href="http://blockbuilder.org/mbostock/3680958") http://blockbuilder.org/mbostock/3680958
-            a.tiny(target="_blank" href="http://bl.ocks.org/mbostock/") by mbostock
+            div.
+              <div id="observablehq-3f273885"></div>
+              <script type="module">
+              import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+              import define from "https://api.observablehq.com/@john-guerra/svg-geometric-zoom.js?v=3";
+              const inspect = Inspector.into("#observablehq-3f273885");
+              (new Runtime).module(define, name => name === "chart" ? inspect() : undefined);
+              </script>
+            a(href="https://observablehq.com/@john-guerra/svg-geometric-zoom").reference https://observablehq.com/@john-guerra/svg-geometric-zoom
 
           section
             h3.demo Semantic Zoom
-            iframe.blocks(data-src="http://blockbuilder.org/mbostock/3681006")
-            a.tiny(target="_blank" href="http://blockbuilder.org/mbostock/3681006") http://blockbuilder.org/mbostock/3681006
-            a.tiny(target="_blank" href="http://bl.ocks.org/mbostock/") by mbostock
-
-          //- //- section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/11_manipulate-genea.022.png")
-          //- section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/11_manipulate-genea.023.png")
-          //- section
-          //-   h2 Further Reading: Ch. 11 Manipulate
-          //-   ul
-          //-     li.fragment Starting Simple - Adding Value to Static Visualisation Through Simple Interaction.. A. Dix and G. Ellis. Proc. Advanced Visual Interfaces (AVI) 1998, 124-134.
-          //-     li.fragment Animated Transitions in Statistical Data Graphics Jeffrey Heer and George G. Robertson. IEEE TVCG (Proc. InfoVis 2007) 13(6): 1240-1247, 2007.[Archived version]
-          //-     li.fragment Selection: 524,288 Ways To Say 'This Is Interesting'. Graham J. Wills. Proc. InfoVis 1996, p 54-61.
-          //-     li.fragment Pad++: A Zooming Graphical Interface for Exploring Alternate Interface Physics Ben Bederson, and James D Hollan, Proc UIST 94.
-          //-     li.fragment LiveRAC - Interactive Visual Exploration of System Management Time-Series Data. Peter McLachlan, Tamara Munzner, Eleftherios Koutsofios, Stephen North. Proc. Conf. on Human Factors in Computing Systems (CHI) 2008, 1483-1492.
-          //-     li.fragment Rapid Controlled Movement Through a Virtual 3D Workspace Jock Mackinlay, Stuart Card, and George Robertson. Proc SIGGRAPH '90, pp 171-176.
-          //-     li.fragment Smooth and Efficient Zooming and Panning. Jack J. van Wijk and Wim A.A. Nuij, Proc. InfoVis 2003, p. 15-22.
-          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/11_manipulate-genea.024.png")
+            div.
+              <div id="observablehq-57b18532"></div>
+              <script type="module">
+              import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+              import define from "https://api.observablehq.com/@john-guerra/svg-semantic-zoom.js?v=3";
+              const inspect = Inspector.into("#observablehq-57b18532");
+              (new Runtime).module(define, name => name === "chart" ? inspect() : undefined);
+              </script>
+            a(href="https://observablehq.com/@john-guerra/svg-semantic-zoom").reference https://observablehq.com/@john-guerra/svg-semantic-zoom
 
 
-        section
+
+          section.fill
+            h2.demo Rotate
+            div.
+              <div id="observablehq-02609b50"></div>
+              <script type="module">
+              import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+              import define from "https://api.observablehq.com/@d3/world-tour.js?v=3";
+              const inspect = Inspector.into("#observablehq-02609b50");
+              (new Runtime).module(define, name => name === "canvas" ? inspect() : undefined);
+              </script>
+
+          section.fill
+            h2.demo Zoom to constrained
+
+            div.
+              <div id="observablehq-90f0961c"></div>
+              <script type="module">
+              import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+              import define from "https://api.observablehq.com/d/09dda39910e94703.js?v=3";
+              const inspect = Inspector.into("#observablehq-90f0961c");
+              (new Runtime).module(define, name => name === "chart" ? inspect() : undefined);
+              </script>
+
+          section.fill
+            h3.demo Transition + Animated navigation
+            div.
+              <div id="observablehq-de04b13f"></div>
+              <script type="module">
+              import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+              import define from "https://api.observablehq.com/@john-guerra/zoomable-variable-size-icicle.js?v=3";
+              const inspect = Inspector.into("#observablehq-de04b13f");
+              (new Runtime).module(define, name => name === "chart" ? inspect() : undefined);
+              </script>
+
+          section.fill
+            h3.demo Barchart race
+            div.
+              <style>
+              text {
+                font-size: 14pt;
+              }
+              </style>
+              <div id="observablehq-9a6c6af1">
+                <div class="observablehq-viewof-replay"></div>
+                <div class="observablehq-chart"></div>
+                <div style="overflow: hidden;"><a style="display: block; float:right;" href="https://observablehq.com/@d3/bar-chart-race"><object type="image/svg+xml" style="pointer-events: none;" width=180 height=22 data="https://static.observableusercontent.com/files/c3fab254a006f1a3a1f9f63aba8ab1460db4752529036b9962950bde0ec195bab823daa6b278b1c3401e545b3bd640ddfdcad805cf9859af218cb2b9fed4ddf0"></object></a></div>
+              </div>
+              <script type="module">
+                import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+                import define from "https://api.observablehq.com/@d3/bar-chart-race.js?v=3";
+                (new Runtime).module(define, name => {
+                  if (name === "viewof replay") return Inspector.into("#observablehq-9a6c6af1 .observablehq-viewof-replay")();
+                  if (name === "chart") return Inspector.into("#observablehq-9a6c6af1 .observablehq-chart")();
+                });
+              </script>
+
           section
-            h2 Scrollyteling
+            h2 Interaction benefits
+            ul
+              li.fragment interaction pros
+                ul
+                  li.fragment major advantage of computer-based vs paper-based visualization
+                  li.fragment flexible, powerful, intuitive
+                    ul
+                      li.fragment exploratory data analysis: change as you go during analysis process
+                      li.fragment fluid task switching: different visual encodings support different tasks
+                  li.fragment animated transitions provide excellent support
+                    ul
+                      li.fragment empirical evidence that animated transitions help people stay oriented
 
           section
-            h2 Colombian Elections
+            h2 Interaction limitations
+            ul
+              li.fragment interaction has a time cost
+                ul
+                  li.fragment sometimes minor, sometimes significant
+                  li.fragment degenerates to human-powered search in worst case
+              li.fragment remembering previous state imposes cognitive load
+                ul
+                  li.fragment rule of thumb: eyes over memory
+                    ul
+                      li.fragment hard to compare visible item to memory of what you saw
+                      li.fragment ex: maintaining context/orientation when navigating
+                      li.fragment ex: tracking complex changes during animation
+              li.fragment controls may take screen real estate
+                ul
+                  li.fragment or invisible functionality may be difficult to discover (lack of affordances)
+              li.fragment users may not interact as planned by designer
+                ul
+                  li.fragment NYTimes logs show ~90% don’t interact beyond scrollytelling - Aisch, 2016
 
+
+        section#manipulateViewCaseStudies
           section
-            h2 Twitter Influentials
+            h2 Manipulate View Case Studies
 
+          section.full
+            h2.demo Colombian Elections
+            figure
+              video(style="max-width:300px", data-src="../shared_images/segundaVueltaStory.mp4" alt="Colombian Election results storytelling video" autoplay="true" loop="true")
+              figcaption.reference
+                a(href="https://johnguerra.co/viz/resultadosSegundaVuelta2018/") https://johnguerra.co/viz/resultadosSegundaVuelta2018/
+
+          section.full
+            h2.demo Twitter Influentials
+            figure
+              video(style="max-width:300px", data-src="../shared_images/segundaVueltaStory.mp4" alt="Colombian Election results storytelling video" autoplay="true" loop="true")
+              figcaption.reference
+                a(href="https://johnguerra.co/viz/resultadosSegundaVuelta2018/") https://johnguerra.co/viz/resultadosSegundaVuelta2018/
 
 
 
@@ -554,7 +740,13 @@ html(lang="en")
           section
             h2 What we learned
             ul.small
-
+              li.fragment Manipulate Views
+                ul
+                  li.fragment Change Encodings / Parameters
+                  li.fragment Animations
+                  li.fragment Interactions
+                  li.fragment Navigate
+              li.fragment Case Studies
 
     script(src="../js/reveal.js")
     script(src="../plugin/zoom/zoom.js")

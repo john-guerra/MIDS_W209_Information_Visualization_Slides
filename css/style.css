@@ -6,6 +6,7 @@ body {
   font-weight: 400;
   font-style: normal;
   color: #474747;
+ul
 }
 .reveal .controls {
   color: #003a70;
@@ -474,4 +475,7 @@ body {
 }
 .reveal .scrollable-slide::after {
   box-shadow: none !important;
+}
+.reveal .normal:font-size: 100% {
+  line-height: 1.85em;
 }
