@@ -264,7 +264,78 @@ html(lang="en")
               img(data-src="../shared_images/vad_book_alldiagrams/pr13_reduce-hierarchical-clustering.png", alt="")
               figcaption.reference [Hierarchical Parallel Coordinates for Exploration of Large Datasets. Fua, Ward, and Rundensteiner. Proc. IEEE Visualization Conference (Vis ’99), pp. 43– 50, 1999.]
 
-        section
+
+        section#spatialAggregation
+          section
+            h1 Spatial Aggregation
+
+          section
+            h2 Geo level
+
+            ul
+              li.fragment Country
+              li.fragment State
+              li.fragment City
+              li.fragment Neighborhood
+
+          section
+            h2 Overlapping
+            ul
+              li Zip Codes
+              li Disputed borders
+
+          section
+            h2 Regions
+
+            ul
+              li Aggregate by commonalities
+                ul
+                  li.fragment e.g. Agricultural vs Industrial Regions
+                  li.fragment e.g. Historically right vs left wing
+              li Aggregate by the data attributes
+
+          section
+            h2 Geo patterns vs political patterns
+
+            ul
+              li Risaralda example
+
+
+        section#spatialAggregation
+          section
+            h1 Time Aggregation
+
+          section
+            h2 Date Part vs Truncate
+
+            ul
+              li.fragment Date Part: extract a part of the date
+              li.fragment Date Truncate: cut the date at a certain level
+
+          section
+            h2 Date Truncate
+
+            ul
+              li Different levels can hide seasonality
+              li Sometimes too much detail is unnecessary
+
+          section
+            h2 Date Part
+
+            ul
+              li Useful for highlighting human patterns
+                ul
+                  li Weekends
+                  li Night time
+                  li Holidays
+                  li Summer vs Winter
+
+          section
+            h2 Calendar Views
+
+
+
+        section#dimensionalityReduction
           section
             h1 Dimensionality Reduction
 
@@ -409,7 +480,7 @@ html(lang="en")
 
 
 
-        section
+        section#focusContext
           section
             h1 Embed, Focus+Context
 
