@@ -39,7 +39,7 @@ html(lang="en")
             span  |  john.guerra[at]gmail.com
             a(href="https://twitter.com/duto_guerra")  |  @duto_guerra
             br
-            
+
             a(href="https://andyreagan.com/", target="_blank") #[strong  Andy Reagan]
             span  |  andy[at]andyreagan.com |
             a(href="https://twitter.com/andyreagan") @andyreagan
@@ -501,8 +501,8 @@ html(lang="en")
 
           section
             h2 Distortion Costs and Benefits
-            .flex
-              .half
+            div.flex
+              div.half
                 ul.tiny
                   li.fragment Benefits
                     ul
@@ -516,18 +516,158 @@ html(lang="en")
                     li.fragment Object constancy/tracking maybe impaired
 
                 a.reference(href="https://www.youtube.com/watch?v=hm2oFBqVM9o") [https://www.youtube.com/watch?v=hm2oFBqVM9o]
-              .half
+              div.half
                 figure
                   img(data-src="../shared_images/vad_book_alldiagrams/pr13_embed-distortion.png", alt="")
                   figcaption.reference.tiny [Living Flows: Enhanced Exploration of Edge-Bundled Graphs Based on GPU-Intensive Edge Rendering. Lambert, Auber, and Melançon. Proc. Intl. Conf. Information Visualisation (IV), pp. 523–530, 2010.]
 
-
-
-
-
         section
           section
             h3 Exploratory Data Analysis (EDA)
+
+          section(data-background-size="contain" data-background="../shared_images/haystack.png")
+            h3 What's in the data?
+
+          section
+            h3 Tukey
+            p(style="text-align: left;" class="small") #[span.fragment #[strong Exposure], the effective laying open of the data to display the unanticipated, is to us a major portion of data analysis.] #[span.fragment Formal statistics has given almost no guidance to exposure;] #[span.fragment indeed, it is not clear how the #[strong informality] and #[strong flexibility] appropriate to the #[strong exploratory character of exposure] can be fitted into any of the structures of formal statistics so far proposed.]
+            p(style="text-align: left;" class="small") #[span.fragment Nothing - not the careful logic of mathematics, not statistical models and theories, not the awesome arithmetic power of modern computers - nothing can substitute here for the #[strong flexibility of the informed human mind].] #[span.fragment Accordingly, both approaches and techniques need to be structured so as to #[strong facilitate human involvement and intervention].]
+
+          section
+            h3 Summary statistics
+            ul
+              li Useful to look at clean data, that you understand & trust.
+              li Can be misleading.
+              li Remember the datasaurus!
+
+
+          section
+            h3 Data munging
+            img(data-src="../shared_images/data_munging.png")
+
+          section
+            h3 60%
+
+          section
+            h3 Data munging
+            img(data-src="../shared_images/data_file_messy.png")
+
+          section
+            h3 Data munging
+            img(data-src="../shared_images/data_file_clean.png")
+
+          section
+            h3 Data quality hurdles
+            ul
+              li Missing Data.
+              li Erroneous Values.
+              li Type Conversion.
+              li Entity Resolution.
+              li Data Integration.
+
+          section
+            h3 More bad data
+            img(data-src="../shared_images/data_file_worse.png")
+
+          section
+            h3 Data filtering
+            div.flex
+              div.third
+                span 5.77967973162 3.26834145824 0.06418251738 4.38979192127 4.68302244707 4.82366715649 4.68587041117 0.04360063509 5.90498807235 4.3618070355 0.0017977901 4.9891841837 4.56259294774 5.44050157565 5.19592386044 15.6959515181 3.22732340991 5.57228018649 3.7148892443 5.00286245308 4.68302244707 4.82366715649 4.68587041117 0.04360063509 5.90498807235 4.68302244707
+              div.twothirds
+                img(data-src="../shared_images/ship.png")
+
+          section
+            img(data-src="../shared_images/fish_weights.png")
+
+          section
+            h4 The first sign that a visualization is good is that it shows you a problem in your data.
+            p Wattenberg
+
+          section
+            h3 Data Tranformations and Iteration
+
+          section
+            h3 Looks like this:
+            img(data-src="../shared_images/pandas-screen.png")
+
+          section
+            h3 Think of it as a data cube:
+            img(data-src="../shared_images/data-cube.png")
+
+          section
+            h3 Common transformations
+            ul
+              li Normalize.
+              li Log.
+              li Power.
+              li Binning.
+              li Grouping.
+
+          section
+            h3 Histograms, histograms, histograms
+            p.fragment An cornerstone in the EDA toolbox!
+            p.fragment “Above all else show the data” -Tufte
+
+          section
+            h3 Correlation
+            img(data-src="../shared_images/gapminder.png")
+
+          section
+            h3 Hypothesis generation
+            img(data-src="../shared_images/splom.png")
+
+          section
+            h3 Mantras
+            ul
+              li.fragment Be skeptical: what assumptions have been made?
+              li.fragment Explore iteratively: start simple, keep asking questions.
+              li.fragment Avoid fixation: use a variety of graphics to inspect more angles.
+
+          section
+            h3 Paradoxes
+            img(data-src="../shared_images/simpsons_paradox.png")
+
+          section
+            h3 Which one has the real data?
+            p
+              img(data-src="../shared_images/wickham.png")
+            p
+              a(href="http://jonathanstray.com/papers/wickham.pdf") Graphical Inference for Infovis
+
+          section
+            h3 Iteration demo
+            img(data-src="../shared_images/hedo01.png")
+
+          section
+            img(data-src="../shared_images/hedo02.png")
+
+          section
+            img(data-src="../shared_images/hedo03.png")
+
+          section
+            h3 Check on NaNs
+            img(data-src="../shared_images/hedo04.png")
+
+          section
+            h3 Polyhanna?
+            img(data-src="../shared_images/hedo05.png")
+
+          section
+            img(data-src="../shared_images/hedo06.png")
+
+          section
+            img(data-src="../shared_images/hedo07.png")
+
+          section
+            img(data-src="../shared_images/hedo08.png")
+
+          section
+            img(data-src="../shared_images/hedo09.png")
+
+          section
+            img(data-src="../shared_images/hedo08.png" height="300px")
+            img(data-src="../shared_images/hedo09.png" height="300px")
 
         section#review
           section
