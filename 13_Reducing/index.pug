@@ -44,7 +44,7 @@ html(lang="en")
 
           div.logo
             a(href="https://datascience.berkeley.edu/")
-              img.logo(src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo")
+              img.logo(data-src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo")
           div.tiny Partially based on
             a(href="https://www.cs.ubc.ca/~tmm/talks.html#minicourse14")  slides from Tamara Munzner
 
@@ -54,57 +54,95 @@ html(lang="en")
             h2 What We Are Going to Learn
             ul.small
 
-        section
+        section#reduceItemsAndAttributes
           section
-            h2 Reduce Items and Attributes
+            h1 Reduce Items and Attributes
           section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/14_reduce-glimmer.003.png")
           section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/14_reduce-glimmer.004.png")
-          section
-            h2 Reduce Items and Attributes
+
+
+
+          section.full
+            h3.demo Reduce Items and Attributes
             .flex
               .half
-              ul.small
-                li.fragment Feduce/increase: inverses
-                li.fragment Filter
-                ul.small
-                  li.fragment Pro: straightforward and intuitive
-                  ul.small
-                    li.fragment To understand and compute
-                  li.fragment Con: out of sight, out of mind
-                li.fragment Aggregation
-                  li.fragment Pro: inform about whole set
-                  li.fragment Con: difficult to avoid losing signal
-                li.fragment Not mutually exclusive
-                  li.fragment Combine filter, aggregate
-                  li.fragment Combine reduce, change, facet
+                ul
+                  li.fragment Reduce / Increase: inverses
+                  li.fragment Filter
+                    ul.small
+                      li.fragment Pro: straightforward and intuitive
+                        ul.small
+                          li.fragment To understand and compute
+                      li.fragment Con: out of sight, out of mind
+                  li.fragment Aggregation
+                    ul
+                      li.fragment Pro: inform about whole set
+                      li.fragment Con: difficult to avoid losing signal
+                  li.fragment Not mutually exclusive
+                    ul
+                      li.fragment Combine filter, aggregate
+                      li.fragment Combine reduce, change, facet
               .half
-                img(src="../shared_images/vad_book_alldiagrams/pr13_reduce-items-attributes.png", alt="Filter by items and by attributes; aggregate by items and by attributes; reduce filter and aggregate")
+                img(data-src="../shared_images/vad_book_alldiagrams/pr13_reduce-items-attributes.png", alt="Filter by items and by attributes; aggregate by items and by attributes; reduce filter and aggregate")
+
           section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/14_reduce-glimmer.005.png")
-          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/14_reduce-glimmer.006.png")
+          //- section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/14_reduce-glimmer.006.png")
+
+          //- section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/14_reduce-glimmer.008.png")
+
+
           section
-            h2 Idiom: Scented Widgets
+            h2 Idiom: Histogram
+            .flex
+              .half
+                ul.small
+                  li.fragment Static item aggregation
+                  li.fragment Task: find distribution
+                  li.fragment Data: table
+                  li.fragment Derived data
+                  ul.small
+                    li.fragment New table: keys are bins, values are counts
+                  li.fragment Bin size crucial
+                    li.fragment Pattern can change dramatically depending on discretization
+                    li.fragment Opportunity for interaction: control bin size on the fly
+              .half
+                img(data-src="../shared_images/vad_book_alldiagrams/pr13_reduce-histogram.png", alt="Histogram")
+
+          section.full
+            h3.demo Idiom: Scented Widgets
             .flex
               .twothirds
                 ul.small
                   li.fragment Augmented widgets show information scent
-                  ul.small
-                    li.fragment Cues to show whether value in drilling down further vs looking elsewhere
+                    ul.small
+                      li.fragment Cues to show whether value in drilling down further vs looking elsewhere
                   li.fragment Concise use of space: histogram on slider
-                img(src="../shared_images/vad_book_alldiagrams/pr13_reduce-scented-widgets1.png", alt="")
-                a.bottom.tiny(href="www.win.tue.nl/~selzen/paper/InfoVis2014.pdf") [Multivariate Network Exploration and Presentation: From Detail to Overview via Selections and Aggregations.  van den Elzen, van Wijk, IEEE TVCG 20(12): 2014 (Proc. InfoVis 2014).]
+                br
+                figure
+                  img(style="width:450px", data-src="../shared_images/vad_book_alldiagrams/pr13_reduce-scented-widgets1.png", alt="Scented Widgets full application")
+                  figcaption.reference
+                    a(href="www.win.tue.nl/~selzen/paper/InfoVis2014.pdf") [Multivariate Network Exploration and Presentation: From Detail to Overview via Selections and Aggregations.  van den Elzen, van Wijk, IEEE TVCG 20(12): 2014 (Proc. InfoVis 2014).]
               .third
-                img(src="../shared_images/vad_book_alldiagrams/pr13_reduce-scented-widgets2.png", alt="")
-                a.tiny [Scented Widgets: Improving Navigation Cues with Embedded Visualizations. Willett, Heer, and Agrawala. IEEE TVCG (Proc. InfoVis 2007) 13:6 (2007), 1129–1136.]
-                img(src="../shared_images/vad_book_alldiagrams/pr13_reduce-scented-widgets3.png", alt="")
+                figure
+                  img(data-src="../shared_images/vad_book_alldiagrams/pr13_reduce-scented-widgets2.png", alt="Scented Widgets example")
+                  img(data-src="../shared_images/vad_book_alldiagrams/pr13_reduce-scented-widgets3.png", alt="Scented Widgets filters' panel")
+                  figcaption.reference
+                    a [Scented Widgets: Improving Navigation Cues with Embedded Visualizations. Willett, Heer, and Agrawala. IEEE TVCG (Proc. InfoVis 2007) 13:6 (2007), 1129–1136.]
+
 
           section.demo
-            h2 Scented widgets paper
-            iframe.blocks(src="http://vis.berkeley.edu/papers/scented_widgets/")
-            a.tiny(target="_blank" href="http://vis.berkeley.edu/papers/scented_widgets/") http://vis.berkeley.edu/papers/scented_widgets/
+            h3.demo Scented widgets paper
+            figure
+              figcaption.reference.tiny(target="_blank" href="http://vis.berkeley.edu/papers/scented_widgets/") http://vis.berkeley.edu/papers/scented_widgets/
+              iframe.blocks(data-src="http://vis.berkeley.edu/papers/scented_widgets/")
+
 
           section.demo
             h2 Navio
-            a.tiny(target="_blank" href="https://observablehq.com/@john-guerra/navio-load") https://observablehq.com/@john-guerra/navio-load
+            figure
+              img(data-src="../shared_images/navio_thumb_v4.gif", alt="Navio Demo")
+              figcaption.reference
+                a(target="_blank" href="https://navio.dev") https://navio.dev
 
 
           section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/14_reduce-glimmer.007.png")
@@ -114,24 +152,8 @@ html(lang="en")
             a.small(target="_blank" href="http://www.cs.ubc.ca/~tmm/courses/cpsc533c-04-spr/readings/dimorder.pdf") http://www.cs.ubc.ca/~tmm/courses/cpsc533c-04-spr/readings/dimorder.pdf
 
 
-          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/14_reduce-glimmer.008.png")
-          section
-           h2 Idiom: Histogram
-            .flex
-              .half
-              ul.small
-                li.fragment Static item aggregation
-                li.fragment Task: find distribution
-                li.fragment Data: table
-                li.fragment Derived data
-                ul.small
-                  li.fragment New table: keys are bins, values are counts
-                li.fragment Bin size crucial
-                  li.fragment Pattern can change dramatically depending on discretization
-                  li.fragment Opportunity for interaction: control bin size on the fly
-              .half
-                img(src="../shared_images/vad_book_alldiagrams/pr13_reduce-histogram.png", alt="Histogram")
-          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/14_reduce-glimmer.009.png")
+
+          //- section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/14_reduce-glimmer.009.png")
           section
             h2 Idiom: Boxplot
             .flex
@@ -151,17 +173,18 @@ html(lang="en")
                         li.fragment Values beyond which items are outliers
                     li.fragment Outliers beyond fence cutoffs explicitly shown
               .half
-                img(src="../shared_images/vad_book_alldiagrams/pr13_reduce-boxplot.png", alt="Boxplot")
-                a.bottom.tiny [40 years of boxplots. Wickham and Stryjewski. 2012. had.co.nz]
+                figure
+                  img(data-src="../shared_images/vad_book_alldiagrams/pr13_reduce-boxplot.png", alt="Boxplot")
+                  figcaption.reference [40 years of boxplots. Wickham and Stryjewski. 2012. had.co.nz]
           section
             h3.demo Box Plot
-            iframe.blocks(src="http://blockbuilder.org/mbostock/4061502")
+            iframe.blocks(data-src="http://blockbuilder.org/mbostock/4061502")
             a.tiny(target="_blank" href="http://blockbuilder.org/mbostock/4061502") http://blockbuilder.org/mbostock/4061502
             a.tiny(target="_blank" href="http://bl.ocks.org/mbostock/") by mbostock
 
           section
             h3.demo Violin plot
-            iframe.blocks(src="http://blockbuilder.org/asielen/92929960988a8935d907e39e60ea8417")
+            iframe.blocks(data-src="http://blockbuilder.org/asielen/92929960988a8935d907e39e60ea8417")
             a.tiny(target="_blank" href="http://blockbuilder.org/asielen/92929960988a8935d907e39e60ea8417") http://blockbuilder.org/asielen/92929960988a8935d907e39e60ea8417
             a.tiny(target="_blank" href="http://bl.ocks.org/asielen/") by asielen
 
@@ -224,9 +247,11 @@ html(lang="en")
                 });
               </script>
 
-          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/14_reduce-glimmer.010.png")
-          section
-            h2 Idiom: Hierarchical Parallel Coordinates
+          //- section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/14_reduce-glimmer.010.png")
+
+
+          section.full
+            h4.demo Idiom: Hierarchical Parallel Coordinates
             ul.small
               li.fragment Dynamic item aggregation
               li.fragment Derived data: hierarchical clustering
@@ -234,12 +259,19 @@ html(lang="en")
               ul.small
                 li.fragment Cluster band with variable transparency, line at mean, width by min/max values
                 li.fragment Color by proximity in hierarchy
-            img(src="../shared_images/vad_book_alldiagrams/pr13_reduce-hierarchical-clustering.png", alt="")
-            a.bottom.tiny [Hierarchical Parallel Coordinates for Exploration of Large Datasets. Fua, Ward, and Rundensteiner. Proc. IEEE Visualization Conference (Vis ’99), pp. 43– 50, 1999.]
 
-          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/14_reduce-glimmer.011.png")
+            figure
+              img(data-src="../shared_images/vad_book_alldiagrams/pr13_reduce-hierarchical-clustering.png", alt="")
+              figcaption.reference [Hierarchical Parallel Coordinates for Exploration of Large Datasets. Fua, Ward, and Rundensteiner. Proc. IEEE Visualization Conference (Vis ’99), pp. 43– 50, 1999.]
+
+        section
           section
-            h2 Dimensionality Reduction
+            h1 Dimensionality Reduction
+
+
+          //- section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/14_reduce-glimmer.011.png")
+          section.full
+            h3.demo Dimensionality Reduction
             ul.small
               li.fragment Attribute aggregation
               ul.small
@@ -249,65 +281,87 @@ html(lang="en")
                 li.fragment Use when you can’t directly measure what you care about
                   li.fragment True dimensionality of dataset conjectured to be smaller than dimensionality of measurements
                   li.fragment Latent factors, hidden variables
-            img(src="../shared_images/vad_book_alldiagrams/pr13_reduce-dimensionality.png", alt="Taking tumor measurement data in 9D measured space and running dimensionality reduction derives that data in a 2D target space where it is easier to see groupings of benign and malignant tumors")
-          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/14_reduce-glimmer.012.png")
+            img(data-src="../shared_images/vad_book_alldiagrams/pr13_reduce-dimensionality.png", alt="Taking tumor measurement data in 9D measured space and running dimensionality reduction derives that data in a 2D target space where it is easier to see groupings of benign and malignant tumors")
+
+
+          //- section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/14_reduce-glimmer.012.png")
+
+          section.full
+            h4 Dimensionality Reduction for Documents
+            img.fill(data-src="../shared_images/vad_book_alldiagrams/pr13_reduce-dimensionality-for-documents.png", alt="")
+
+
+          //- section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/14_reduce-glimmer.013.png")
           section
-            h2 Dimensionality Reduction for Documents
-            img(src="../shared_images/vad_book_alldiagrams/pr13_reduce-dimensionality-for-documents.png", alt="")
-          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/14_reduce-glimmer.013.png")
-          section
-            h2 Dimensionality vs. Attribute Reduction
-            ul.small
+            h4 Dimensionality vs. Attribute Reduction
+            ul.normal.small
               li.fragment Vocab use in field not consistent
-              ul.small
-                li.fragment Dimension/attribute
+                ul.small
+                  li.fragment Dimension/attribute
               li.fragment Attribute reduction: reduce set with filtering
-                li.fragment Includes orthographic projection
+                ul
+                  li.fragment Includes orthographic projection
               li.fragment Dimensionality reduction: create smaller set of new dims/attribs
-                li.fragment Typically implies dimensional aggregation, not just filtering
-                li.fragment Vocab: projection/mapping
-          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/14_reduce-glimmer.014.png")
+                ul
+                  li.fragment Typically implies dimensional aggregation, not just filtering
+                  li.fragment Vocab: projection/mapping
+
+          //- section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/14_reduce-glimmer.014.png")
           section
-            h2 Estimating True Dimensionality
-            ul.small
+            h3 Estimating True Dimensionality
+            ul.tiny
               li.fragment How do you know when you would benefit from DR?
-              ul.small
-                li.fragment Consider error for low-dim projection vs. high-dim projection
+                ul.small
+                  li.fragment Consider error for low-dim projection vs. high-dim projection
               li.fragment No single correct answer; many metrics proposed
-                li.fragment Cumulative variance that is not accounted for
-                li.fragment Strain: Match variations in distance (vs. actual distance values)
-                li.fragment Stress: Difference between interpoint distances in high and low dims
-            img(src="../shared_images/vad_book_alldiagrams/pr13_estimate-true-dimensionality.png", alt="")
-          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/14_reduce-glimmer.015.png")
+                ul
+                  li.fragment Cumulative variance that is not accounted for
+                  li.fragment Strain: Match variations in distance (vs. actual distance values)
+                  li.fragment Stress: Difference between interpoint distances in high and low dims
+
+
+            img(style="width:400px", data-src="../shared_images/vad_book_alldiagrams/pr13_estimate-true-dimensionality.png", alt="Stresss Function")
+
+
+
+          //- section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/14_reduce-glimmer.015.png")
           section
-            h2 Estimating True Dimensionality
+            h3 Estimating True Dimensionality
             ul.small
               li.fragment Scree plots as simply way: error against # attribs
-              //- img(src="", alt="")
-              ul.small
-                li.fragment Original dataset: 294 dims
-                li.fragment Estimate: Almost all variance preserved with less than 20 dims
-            a.bottom.tiny [Fig 2. DimStiller: Workflows for dimensional analysis and reduction. Ingram et al. Proc. VAST 2010, p 3-10]
-          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/14_reduce-glimmer.016.png")
+                ul.small
+                  li.fragment Original dataset: 294 dims
+                  li.fragment Estimate: Almost all variance preserved with less than 20 dims
+            figure
+              img(style="width:400px", data-src="../shared_images/vad_book_alldiagrams/spree_plots.png", alt="Spree Plots")
+              figcaption.reference [Fig 2. DimStiller: Workflows for dimensional analysis and reduction. Ingram et al. Proc. VAST 2010, p 3-10]
+
+
+          //- section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/14_reduce-glimmer.016.png")
           section
-            h2 Dimensionality Reduction and Visualization
+            h3 Dimensionality Reduction and Visualization
             ul.small
               li.fragment Why do people do DR?
-              ul.small
-                li.fragment Improve performance of downstream algorithm
                 ul.small
-                  li.fragment Avoid curse of dimensionality
-                li.fragment Data analysis
-                  li.fragment If look at the output: visual data analysis
+                  li.fragment Improve performance of downstream algorithm
+                    ul.small
+                      li.fragment Avoid curse of dimensionality
+                  li.fragment Data analysis
+                    ul
+                      li.fragment If look at the output: visual data analysis
               li.fragment Abstract tasks when visualizing DR data
-                li.fragment Dimension-oriented tasks
+                ul
+                  li.fragment Dimension-oriented tasks
                   li.fragment Naming synthesized dims, mapping synthesized dims to original dims
                 li.fragment Cluster-oriented tasks
-                  li.fragment Verifying clusters, naming clusters, matching clusters and classes
-            a.bottom.tiny [Visualizing Dimensionally-Reduced Data: Interviews with Analysts and a Characterization of Task Sequences. Brehmer, Sedlmair, Ingram, and Munzner. Proc. BELIV 2014.]
-          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/14_reduce-glimmer.017.png")
-          section
-            h2 Linear Dimensionality Reduction
+                  ul
+                    li.fragment Verifying clusters, naming clusters, matching clusters and classes
+            div.reference [Visualizing Dimensionally-Reduced Data: Interviews with Analysts and a Characterization of Task Sequences. Brehmer, Sedlmair, Ingram, and Munzner. Proc. BELIV 2014.]
+
+
+          //- section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/14_reduce-glimmer.017.png")
+          section.full
+            h3.demo Linear Dimensionality Reduction
             ul.small
               li.fragment Principal components analysis (PCA)
               ul.small
@@ -315,31 +369,35 @@ html(lang="en")
                 li.fragment Describe location of each point as linear combination of weights for each axis
                 ul.small
                   li.fragment Mapping synthesized dims to original dims
-            img(src="../shared_images/vad_book_alldiagrams/pr13_reduce-dimensionality-scatterplot.png", alt="")
-            a.bottom.tiny [http://en.wikipedia.org/wiki/File:GaussianScatterPCA.png]
-          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/14_reduce-glimmer.018.png")
+            figure
+              img(style="width:300px", data-src="../shared_images/vad_book_alldiagrams/pr13_reduce-dimensionality-scatterplot.png", alt="Linear Dimensionality Reduction")
+              figcaption.reference
+                a(href="https://en.wikipedia.org/wiki/File:GaussianScatterPCA.png") [http://en.wikipedia.org/wiki/File:GaussianScatterPCA.png]
+          //- section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/14_reduce-glimmer.018.png")
+
           section
-            h2 Nonlinear Dimensionality Reduction
-            ul.small
+            h4 Nonlinear Dimensionality Reduction
+            ul.tiny
               li.fragment Pro: can handle curved rather than linear structure
               li.fragment Cons: lose all ties to original dims/attribs
-              ul.small
-                li.fragment New dimensions often cannot be easily related to originals
                 ul.small
-                  li.fragment Mapping synthesized dims to original dims task is difficult
+                  li.fragment New dimensions often cannot be easily related to originals
+                    ul.small
+                      li.fragment Mapping synthesized dims to original dims task is difficult
               li.fragment Many techniques proposed
                 li.fragment Many literatures: visualization, machine learning, optimization, psychology, ...
                 li.fragment Techniques: t-SNE, MDS (multidimensional scaling), charting, isomap, LLE,…
                   li.fragment t-SNE: excellent for clusters
-                  ul.small
-                    li.fragment But some trickiness remains: http://distill.pub/2016/misread-tsne/
+                    ul.small
+                      li.fragment But some trickiness remains: http://distill.pub/2016/misread-tsne/
                   li.fragment MDS: confusingly, entire family of techniques, both linear and nonlinear
-                    li.fragment Minimize stress or strain metrics
-                    li.fragment Early formulations equivalent to PCA
+                    ul
+                      li.fragment Minimize stress or strain metrics
+                      li.fragment Early formulations equivalent to PCA
 
           section
             h3.demo t-SNE Explorations
-            iframe.blocks(src="http://distill.pub/2016/misread-tsne/")
+            iframe.blocks(data-src="http://distill.pub/2016/misread-tsne/")
             a.tiny(target="_blank" href="http://distill.pub/2016/misread-tsne/") http://distill.pub/2016/misread-tsne/
 
 
@@ -349,159 +407,117 @@ html(lang="en")
             a.tiny(href="https://fabiancpl.github.io/MLExplore.js/") https://fabiancpl.github.io/MLExplore.js/
 
 
-          //- section
-          //-   h3 More extras
-          //-   p Tamara's slides on her work on dimensionality reduction
-
-          //- section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/14_reduce-glimmer.019.png")
-          //- section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/14_reduce-glimmer.020.png")
-          //- section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/14_reduce-glimmer.021.png")
-          //- section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/14_reduce-glimmer.022.png")
-          //- section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/14_reduce-glimmer.023.png")
-          //- section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/14_reduce-glimmer.024.png")
-          //- section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/14_reduce-glimmer.025.png")
-          //- section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/14_reduce-glimmer.026.png")
-          //- section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/14_reduce-glimmer.027.png")
-          //- section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/14_reduce-glimmer.028.png")
-          //- section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/14_reduce-glimmer.029.png")
-          //- section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/14_reduce-glimmer.030.png")
-          //- section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/14_reduce-glimmer.031.png")
-
 
 
         section
           section
-            h3 Embed, Focus+Context
-          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/15_embed-tj.003.png")
+            h1 Embed, Focus+Context
+
+
+          //- section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/15_embed-tj.003.png")
           section
             h2 Embed: Focus+Context
             .flex
-              .half
+              .twothirds
                 ul.small
                   li.fragment Combine information within single view
                   li.fragment Elide
-                  ul.small
-                    li.fragment Selectively filter and aggregate
+                    ul.small
+                      li.fragment Selectively filter and aggregate
                   li.fragment Superimpose layer
-                    li.fragment Local lens
+                    ul
+                      li.fragment Local lens
                   li.fragment Distortion design choices
-                    li.fragment Region shape: radial, rectilinear, complex
-                    li.fragment How many regions: one, many
-                    li.fragment Region extent: local, global
-                    li.fragment Interaction metaphor
-              .half
-                img(src="../shared_images/vad_book_alldiagrams/pr13_embed-focus-context.png", alt="elide data, superimpose data, distort geometry")
-          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/15_embed-tj.004.png")
-          section
-            h2 Idiom: DOITrees Revisited
-            ul.small
+                    ul
+                      li.fragment Region shape: radial, rectilinear, complex
+                      li.fragment How many regions: one, many
+                      li.fragment Region extent: local, global
+                      li.fragment Interaction metaphor
+              .third
+                figure
+                  img(data-src="../shared_images/vad_book_alldiagrams/pr13_embed-focus-context.png", alt="elide data, superimpose data, distort geometry")
+          //- section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/15_embed-tj.004.png")
+          section.full
+            h3 Idiom: DOITrees Revisited
+            ul
               li.fragment Elide
               ul.small
                 li.fragment Some items dynamically filtered out
                 li.fragment Some items dynamically aggregated together
                 li.fragment Some items shown in detail
-            img(src="../shared_images/vad_book_alldiagrams/pr13_embed-doitrees.png", alt="")
-            a.bottom.tiny [DOITrees Revisited: Scalable, Space-Constrained Visualization of Hierarchical Data. Heer and Card. Proc. Advanced Visual Interfaces (AVI), pp. 421–424, 2004.]
+            figure.noMarginTopBottom
+              img(data-src="../shared_images/vad_book_alldiagrams/pr13_embed-doitrees.png", alt="")
+              figcaption.reference [DOITrees Revisited: Scalable, Space-Constrained Visualization of Hierarchical Data. Heer and Card. Proc. Advanced Visual Interfaces (AVI), pp. 421–424, 2004.]
+
           //- Fish eye
-          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/15_embed-tj.005.png")
+          //- section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/15_embed-tj.005.png")
           section
             h2 Idiom: Fisheye Lens
             .flex
               .half
                 ul.small
                   li.fragment Distort geometry
-                  ul.small
-                    li.fragment Shape: radial
-                    li.fragment Focus: single extent
-                    li.fragment Extent: local
-                    li.fragment Metaphor: draggable lens
-                img(src="../shared_images/vad_book_alldiagrams/pr13_embed-fisheye1.png", alt="")
+                    ul.small
+                      li.fragment Shape: radial
+                      li.fragment Focus: single extent
+                      li.fragment Extent: local
+                      li.fragment Metaphor: draggable lens
+                img(data-src="../shared_images/vad_book_alldiagrams/pr13_embed-fisheye1.png", alt="")
               .half
-                img(src="../shared_images/vad_book_alldiagrams/pr13_embed-fisheye2.png", alt="")
+                img(data-src="../shared_images/vad_book_alldiagrams/pr13_embed-fisheye2.png", alt="")
           section
             h3.demo Fish eye
-            iframe.blocks(src="https://bost.ocks.org/mike/fisheye/")
+            iframe.blocks(data-src="https://bost.ocks.org/mike/fisheye/")
             a.tiny(target="_blank" href="https://bost.ocks.org/mike/fisheye/") https://bost.ocks.org/mike/fisheye/
             a.tiny(target="_blank" href="http://bl.ocks.org/mbostock/") by mbostock
 
-          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/15_embed-tj.006.png")
-          section
-            h2 Idiom: Stretch and Squish Navigation
+          //- section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/15_embed-tj.006.png")
+          section.full
+            h3.demo Idiom: Stretch and Squish Navigation
             .flex
               .half
-                ul.small
+                div.small.left-align System: TreeJuxtaposer
+                ul.tiny(style="margin-top:20px")
                   li.fragment Distort geometry
-                  ul.small
-                    li.fragment Shape: rectilinear
-                    li.fragment Foci: multiple
-                    li.fragment Impact: global
-                    li.fragment Metaphor: stretch and squish, borders fixed
-                img(src="./shared_images/vad_book_alldiagrams/pr13_embed-stretch-and-squish1.png", alt="")
-                a.small(href="https://youtu.be/GdaPj8a9QEo") [https://youtu.be/GdaPj8a9QEo]
+                    ul
+                      li.fragment Shape: rectilinear
+                      li.fragment Foci: multiple
+                      li.fragment Impact: global
+                      li.fragment Metaphor: stretch and squish, borders fixed
+                figure
+                  img(style="width:300px", data-src="../shared_images/vad_book_alldiagrams/pr13_embed-stretch-and-squish1.png", alt="")
+                  figcaption.reference
+                    a(href="https://youtu.be/GdaPj8a9QEo") [https://youtu.be/GdaPj8a9QEo]
               .half
-                h2 System: TreeJuxtaposer
-                img(src="./shared_images/vad_book_alldiagrams/pr13_embed-stretch-and-squish2.png", alt="")
-            a.bottom.tiny [TreeJuxtaposer: Scalable Tree Comparison Using Focus+Context With Guaranteed Visibility. Munzner, Guimbretiere, Tasiran, Zhang, and Zhou. ACM Transactions on Graphics (Proc. SIGGRAPH) 22:3 (2003), 453– 462.]
-          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/15_embed-tj.007.png")
+                figure
+                  img(data-src="../shared_images/vad_book_alldiagrams/pr13_embed-stretch-and-squish2.png", alt="")
+                  figcaption.reference [TreeJuxtaposer: Scalable Tree Comparison Using Focus+Context With Guaranteed Visibility. Munzner, Guimbretiere, Tasiran, Zhang, and Zhou. ACM Transactions on Graphics (Proc. SIGGRAPH) 22:3 (2003), 453– 462.]
+
+
           section
             h2 Distortion Costs and Benefits
             .flex
               .half
-                ul
+                ul.tiny
                   li.fragment Benefits
-                  ul
-                    li.fragment Combine focus and context information in single view
-                  li.fragment Costs
-                    li.fragment Length comparisons impaired
                     ul
-                      li.fragment Network/tree topology comparisons unaffected: connection, containment
+                      li.fragment Combine focus and context information in single view
+                  li.fragment Costs
+                    ul
+                      li.fragment Length comparisons impaired
+                        ul
+                          li.fragment Network/tree topology comparisons unaffected: connection, containment
                     li.fragment Effects of distortion unclear if original structure unfamiliar
                     li.fragment Object constancy/tracking maybe impaired
-                a(href="https://www.youtube.com/watch?v=hm2oFBqVM9o") [https://www.youtube.com/watch?v=hm2oFBqVM9o]
+
+                a.reference(href="https://www.youtube.com/watch?v=hm2oFBqVM9o") [https://www.youtube.com/watch?v=hm2oFBqVM9o]
               .half
-                img(src="../shared_images/vad_book_alldiagrams/pr13_embed-distortion.png", alt="")
-            a.bottom.tiny [Living Flows: Enhanced Exploration of Edge-Bundled Graphs Based on GPU-Intensive Edge Rendering. Lambert, Auber, and Melançon. Proc. Intl. Conf. Information Visualisation (IV), pp. 523–530, 2010.]
-          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/15_embed-tj.008.png")
-          section
-            h2 Further Reading
-            ul
-              li.fragment Visualization Analysis and Design. Munzner.  AK Peters / CRC Press, Oct 2014.
-              ul
-                li.fragment Chap 14: Embed: Focus+Context
-              li.fragment A Review of Overview+Detail, Zooming, and Focus+Context Interfaces. Cockburn, Karlson, and Bederson.  ACM Computing Surveys 41:1 (2008), 1–31.
-              li.fragment A Guide to Visual Multi-Level Interface Design From Synthesis of Empirical Study Evidence. Lam and Munzner. Synthesis Lectures on Visualization Series, Morgan Claypool, 2010.
-              li.fragment Hierarchical Aggregation for Information Visualization: Overview, Techniques and Design Guidelines. Elmqvist and Fekete. IEEE Transactions on Visualization and Computer Graphics 16:3 (2010), 439–454.
-              li.fragment A Fisheye Follow-up: Further Reflection on Focus + Context. Furnas. Proc. ACM Conf. Human Factors in Computing Systems (CHI), pp. 999–1008, 2006.
-          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/15_embed-tj.009.png")
+                figure
+                  img(data-src="../shared_images/vad_book_alldiagrams/pr13_embed-distortion.png", alt="")
+                  figcaption.reference.tiny [Living Flows: Enhanced Exploration of Edge-Bundled Graphs Based on GPU-Intensive Edge Rendering. Lambert, Auber, and Melançon. Proc. Intl. Conf. Information Visualisation (IV), pp. 523–530, 2010.]
 
-          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/15_embed-tj.010.png")
 
-          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/15_embed-tj.011.png")
 
-          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/15_embed-tj.012.png")
-
-          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/15_embed-tj.013.png")
-
-          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/15_embed-tj.014.png")
-
-          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/15_embed-tj.015.png")
-
-          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/15_embed-tj.016.png")
-
-          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/15_embed-tj.017.png")
-
-          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/15_embed-tj.018.png")
-
-          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/15_embed-tj.019.png")
-          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/15_embed-tj.020.png")
-          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/15_embed-tj.021.png")
-          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/15_embed-tj.022.png")
-          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/15_embed-tj.023.png")
-          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/15_embed-tj.024.png")
-          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/15_embed-tj.025.png")
-          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/15_embed-tj.026.png")
-          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/15_embed-tj.027.png")
-          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/15_embed-tj.028.png")
 
 
         section
@@ -512,6 +528,41 @@ html(lang="en")
           section
             h2 What we learned
             ul.small
+
+        //- section#extraTreeJuxtaposer
+        //-   section
+        //-     h1 Extra TreeJuxtaposer
+
+        //-   section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/15_embed-tj.009.png")
+
+        //-   section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/15_embed-tj.010.png")
+
+        //-   section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/15_embed-tj.011.png")
+
+        //-   section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/15_embed-tj.012.png")
+
+        //-   section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/15_embed-tj.013.png")
+
+        //-   section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/15_embed-tj.014.png")
+
+        //-   section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/15_embed-tj.015.png")
+
+        //-   section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/15_embed-tj.016.png")
+
+        //-   section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/15_embed-tj.017.png")
+
+        //-   section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/15_embed-tj.018.png")
+
+        //-   section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/15_embed-tj.019.png")
+        //-   section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/15_embed-tj.020.png")
+        //-   section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/15_embed-tj.021.png")
+        //-   section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/15_embed-tj.022.png")
+        //-   section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/15_embed-tj.023.png")
+        //-   section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/15_embed-tj.024.png")
+        //-   section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/15_embed-tj.025.png")
+        //-   section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/15_embed-tj.026.png")
+        //-   section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/15_embed-tj.027.png")
+        //-   section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/15_embed-tj.028.png")
 
 
     script(src="../js/reveal.js")
@@ -544,7 +595,7 @@ html(lang="en")
     script.
       (function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      m=s.getElementsByTagName(o)[0];a.async=1;a.data-src=g;m.parentNode.insertBefore(a,m)
       })(window,document,"script","https://www.google-analytics.com/analytics.js","ga");
 
       ga("create", "UA-72531610-1", "auto");
