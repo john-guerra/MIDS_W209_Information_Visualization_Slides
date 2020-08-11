@@ -1,7 +1,7 @@
 doctype html
 html(lang="en")
   head
-    title Week 4 How is visualized. MIDS W209 Information Visualization Slides
+    title Week 4 How is Visualized. MIDS W209 Information Visualization Slides
     meta(charset="utf-8")
     meta(name="author", content="John Alexis Guerra Gómez")
     meta(name="description", content="Week 4 How is visualized. MIDS W209 Information Visualization Slides")
@@ -28,7 +28,7 @@ html(lang="en")
     .reveal
       .slides
         section
-          h1.title How is visualized
+          h1.title How Is Visualized
             br
             small MIDS W209: Information Visualization
 
@@ -51,7 +51,7 @@ html(lang="en")
         //- Outline
         section#outline
           section
-            h2 What we are going to learn
+            h2 What We Are Going to Learn
             ul.small
               li.fragment Marks
               li.fragment Channels
@@ -75,7 +75,7 @@ html(lang="en")
           section(data-background-size="contain" data-background="../shared_images/how_sheet.png")
 
           section
-            h2 Analyze idiom structure
+            h2 Analyze Idiom Structure
             div#marksAndChannelsTarget
             div.tiny
               a(href="https://observablehq.com/@mitvis/data-types-graphical-marks-and-visual-encoding-channels").tiny.reference Based on chart by Aravind Satyanarayan
@@ -115,28 +115,28 @@ html(lang="en")
 
           //- section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/tamara_course14_session1-30.png")
           section
-            h3 What marks and channels?
+            h3 What Marks and Channels? Part I
             img.demo(src="../shared_images/visualEncoding1.png")
           section(data-transition="fade")
-            h3 What marks and channels?
+            h3 What marks and channels? Part I
             img.demo(src="../shared_images/visualEncoding1_answer.png")
           section
-            h3 What marks and channels?
+            h3 What Marks and Channels? Part II
             img.demo(src="../shared_images/visualEncoding2.png")
           section(data-transition="fade")
-            h3 What marks and channels?
+            h3 What Marks and Channels? Part II
             img.demo(src="../shared_images/visualEncoding2_answer.png")
           section
-            h3 What marks and channels?
+            h3 What Marks and Channels? Part II
             img.demo(src="../shared_images/visualEncoding3.png")
           section(data-transition="fade")
-            h3 What marks and channels?
+            h3 What Marks and Channels? Part III
             img.demo(src="../shared_images/visualEncoding3_answer.png")
           section
-            h3 What marks and channels?
+            h3 What Marks and Channels? Part IV
             img.demo(src="../shared_images/visualEncoding4.png")
           section(data-transition="fade")
-            h3 What marks and channels?
+            h3 What Marks and Channels? Part IV
             img.demo(src="../shared_images/visualEncoding4_answer.png")
 
 
@@ -159,8 +159,8 @@ html(lang="en")
               div.half
                 ul
                   li Zero-dimensional
-                  li Conveys position only
-                  li Can be #[strong size] and #[strong shape] coded
+                  li Convey position only
+                  li Can be #[strong size-] and #[strong shape-]coded
               div.half.fragment.flex
                 div#pointExample1.markExample
                 div.fragment#pointExample2.markExample
@@ -184,7 +184,7 @@ html(lang="en")
                 ul
                   li One-dimensional
                   li Convey position and length
-                  li Can be only #[strong width] coded
+                  li Can be only #[strong width-]coded
 
           section
             h2 Areas
@@ -219,17 +219,17 @@ html(lang="en")
           section
             h2 Expressiveness
             ul
-              li Visual encoding should express all of, and only of, the information in the dataset
-              li.fragment Ordered data should be shown in a way we perceive as ordered
-              li.fragment Match channel and data characteristics
+              li Visual encoding should express all of—and only—the information in the dataset.
+              li.fragment Ordered data should be shown in a way we perceive as ordered.
+              li.fragment Match channel and data characteristics.
 
           section
             h2 Effectiveness
-            p Encode most important attributes with highest ranked channels
+            p Encode most important attributes with highest-ranked channels
             p.tiny.reference [Automating the Design of Graphical Presentations of Relational Information. Mackinlay.  ACM Trans. on Graphics (TOG) 5:2 (1986), 110–141]
 
           section
-            h2 Where does the ranking come from?
+            h2 Where Does the Ranking Come From?
 
             ul
               li.fragment Accuracy
@@ -255,7 +255,7 @@ html(lang="en")
           //- section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/tamara_course14_session1-34.png")
 
           section.full
-            h3 Accuracy: Vis Experiments
+            h3 Accuracy: Visualization Experiments
             figure
               img(style="max-height:400px", src="../shared_images/vad_book_alldiagrams/vis_experiments.png" alt="Vis experiments results showing best accuracy")
               figcaption.tiny.reference
@@ -277,6 +277,7 @@ html(lang="en")
               div.half How many steps are usable?
                 br
                 span.fragment line width: Not many 🤷🏼‍♂️
+                // @john-guerra "line width" shows up as text in the HTML output
 
               div.half
                 figure
@@ -340,27 +341,27 @@ html(lang="en")
           //- TODO containment example
 
           section
-            h2 Grouping 2
+            h2 Grouping (cont.)
             .flex
               .half
                 ul
                   li.fragment Proximity: #[span.fragment 👉 use spatial separation]
-                  li.fragment Similarity: #[span.fragment 👉 Use categorical channels]
+                  li.fragment Similarity: #[span.fragment 👉 use categorical channels]
               .half
                 img(src="../shared_images/vad_book_alldiagrams/identity_channels.png", alt="Identity Channels")
 
           //- TODO Add examples for proximity and similarity
 
           section
-            h2 Relative vs Absolute Judgements
+            h2 Relative vs. Absolute Judgments
             .flex
               div.half.small
                 ul
-                  li Perceptual #[span.fragment 👉 mostly relative judgements, not absolute]
+                  li Perceptual #[span.fragment 👉 mostly relative judgments, not absolute]
                   li.fragment That’s why accuracy increases with:
                     ul
-                      li common frame
-                      li scale and alignment
+                      li Common frame
+                      li Scale and alignment
               .half
                 figure
                   img.fragment(height="160px" src="../shared_images/vad_book_alldiagrams/absolute_relative1.png" alt="Not Aligned comparison")
@@ -371,13 +372,13 @@ html(lang="en")
 
           section
             h2 Weber's Law
-            div Ratio of increment to background is constant.
+            div The ratio of increment to background is constant.
               ul.line-compressed
                 li Lift 2Kg
-                li.fragment then add 2Kg
-                li.fragment then add 20K
-                li.fragment then add 2K #[span.fragment would you feel them?]
-            div.fragment Popup is hard in a noisy visualization
+                li.fragment Then add 2Kg
+                li.fragment Then add 20K
+                li.fragment Then add 2K #[span.fragment — would you feel them?]
+            div.fragment Popup is hard in a noisy visualization.
 
 
 
@@ -394,15 +395,15 @@ html(lang="en")
         section#chooseYourPath
 
           section
-            h1 Practice: Choose your path
+            h1 Practice: Choose Your Path
 
 
           section
-            h2 Which tool for the job
+            h2 Which Tool for the Job?
 
             div.flex.bigger
               strong.quarter.r-frame.fragment D3
-              strong.quarter.r-frame.fragment Vega-lite
+              strong.quarter.r-frame.fragment Vega-Lite
               strong.quarter.r-frame.fragment Altair
               strong.quarter.r-frame.fragment Tableau
 
@@ -410,7 +411,7 @@ html(lang="en")
             h2 When D3
             ul
               li Interactivity
-              li.fragment Custom Made Visualizations
+              li.fragment Custom-made visualizations
               li.fragment Performance
               li.fragment Differentiate
               li.fragment Force simulations
@@ -419,20 +420,20 @@ html(lang="en")
           section
             h2 When Vega-Lite
             ul
-              li You need something quick
-              li.fragment Yet flexible
-              li.fragment Web Based
+              li You need something quick...
+              li.fragment ...Yet flexible
+              li.fragment Web-based
               li.fragment Facets!
               li.fragment Coordinated views
               li.fragment Automate your charts
 
 
           section
-            h2 Altair
+            h2 When Altair
 
             ul
               li You love Python
-              li.fragment Same as vega-lite
+              li.fragment Same as Vega-Lite
               li.fragment Your model is in Python
               li.fragment Great syntactic sugar
 
@@ -440,18 +441,18 @@ html(lang="en")
             h2 When Tableau
 
             ul
-              li Visual Exploration
+              li Visual exploration
               li.fragment First pass through the data
               li.fragment Don't need complex charts
-              li.fragment Don't mind Tableau Branding
+              li.fragment Don't mind Tableau branding
               li.fragment Can spend the budget
 
           section
-            h2 Choose your Path
+            h2 Choose Your Path
 
             div.flex.bigger
               strong.quarter.r-frame.fragment D3
-              strong.quarter.r-frame.fragment Vega-lite
+              strong.quarter.r-frame.fragment Vega-Lite
               strong.quarter.r-frame.fragment Altair
               strong.quarter.r-frame.fragment Tableau
 
@@ -460,7 +461,7 @@ html(lang="en")
           section(data-background-size="contain" data-background="../shared_images/how_sheet.png")#what
 
           section
-            h2 What we learned
+            h2 What We Learned
             ul.small
               li.fragment Marks
               li.fragment Channels
