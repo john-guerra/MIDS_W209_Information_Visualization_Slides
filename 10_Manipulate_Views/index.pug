@@ -51,6 +51,11 @@ html(lang="en")
             a(href="https://twitter.com/duto_guerra")  |  @duto_guerra
             br
 
+            a(href="https://andyreagan.com/", target="_blank") #[strong  Andy Reagan]
+            span  |  andy[at]andyreagan.com |
+            a(href="https://twitter.com/andyreagan") @andyreagan
+            br
+
             a(href="https://johnguerra.co/lectures/MIDS_W209_Information_Visualization/10_Manipulate_Views/", target="_blank") https://johnguerra.co/lectures/MIDS_W209_Information_Visualization/10_Manipulate_Views/
 
           div.logo
@@ -198,7 +203,29 @@ html(lang="en")
                   figcaption.reference
                     a(href="http://laurenwood.github.io/") [Growth of a Nation](http://laurenwood.github.io/)
 
-        section(data-background-iframe="http://hedonometer.org/timeseries/en_all/?from=2015-07-16&to=2017-01-12&date=2016-11-09")
+        section
+          section
+            h1 Case Study: Changing Encoding and Parameters
+            h3 Hedonometer.org
+
+          section
+            h3 Line Chart Changes
+            ul
+              li.fragment Change time parameter using brush
+              li.fragment Change time parameter using menu
+              li.fragment Change encoding of day-of-week using menu
+
+          section
+            h3 Word shift graph changes
+            ul
+              li.fragment Change time parameter with menu + date picker
+              li.fragment Change language parameter with translation toggle
+              li.fragment Change position encoding with bar selector
+
+          section
+            h3 Demo
+
+          section(data-background-iframe="http://hedonometer.org/timeseries/en_all/?from=2015-07-16&to=2017-01-12&date=2016-11-09")
 
         section#animations
           section
@@ -311,6 +338,7 @@ html(lang="en")
               const inspect = Inspector.into("#observablehq-15c27bb5");
               (new Runtime).module(define, name => name === "chart" ? inspect() : undefined);
               </script>
+
           section
             iframe.blocks(data-src="https://bost.ocks.org/mike/miserables/")
             a(href="https://bost.ocks.org/mike/miserables/") https://bost.ocks.org/mike/miserables/
@@ -734,6 +762,10 @@ html(lang="en")
               figcaption.reference
                 a(href="https://johnguerra.co/viz/resultadosSegundaVuelta2018/") https://johnguerra.co/viz/resultadosSegundaVuelta2018/
 
+
+        section#animationsDemo
+          section
+            h2 Animations on the web
 
 
         section#review
