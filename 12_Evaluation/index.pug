@@ -39,11 +39,11 @@ html(lang="en")
             span  |  john.guerra[at]gmail.com
             a(href="https://twitter.com/duto_guerra")  |  @duto_guerra
             br
-            
+
             a(href="https://andyreagan.com/", target="_blank") #[strong  Andy Reagan]
             span  |  andy[at]andyreagan.com |
             a(href="https://twitter.com/andyreagan") @andyreagan
-            br            
+            br
 
             a(href="https://johnguerra.co/lectures/MIDS_W209_Information_Visualization/12_Evaluation/", target="_blank") https://johnguerra.co/lectures/MIDS_W209_Information_Visualization/12_Evaluation/
 
@@ -208,16 +208,16 @@ html(lang="en")
           section
             h3 Direct Observation: tracking users
             ul
-              li Diaries
-              li Interaction Logs and web analytics
+              li Diaries.
+              li Interaction Logs and web analytics.
 
           section
             h2 MILCS
             ul
-              li Multi-dimensional
-              li In-depth
-              li Long-term
-              li Case studies
+              li Multi-dimensional.
+              li In-depth.
+              li Long-term.
+              li Case studies.
 
           section
             h2 TreeVersity MILCS
@@ -234,8 +234,8 @@ html(lang="en")
             h2 Prototyping
             ul
               li Low vs high fidelity?
-              li Read data
-              li Build scenarios, tell a story
+              li Read data.
+              li Build scenarios, tell a story.
 
           section
             h2 Quatitative evaluation
@@ -244,18 +244,131 @@ html(lang="en")
         section
           section
             h2 Running a Usability Study
-            p Adapt current slides
+
 
           section
-            h3 ...
+            h3 Validity Checks
+            ul
+              li Earlier Stages:
+                ul
+                  li Observe and interview target users (needs assessment).
+                  li Design data abstraction/operation (data types, transformation, operations) .
+                  li Justify encoding/interaction design (design heuristics, perception research).
+                  li Informal analysis/qualitative analysis of prototypes (task-based).
+                  li Algorithm complexity analysis/evaluation.
+
+              li Mid- and Later Stages:
+                ul
+                  li Qualitative analysis of system (task-based).
+                  li Algorithm performance analysis.
+                  li Lab or crowdsourced user study.
+                  li Field study of the deployed system.
 
           section
-            h3 prioriziation
+            h3 Formal Usability Study
+            h4.fragment Goal: Does the visualization allow the user/analyst to perform key tasks?
 
+          section
+            h3 Task-Oriented Visual Insights
+            ul
+              li Basic Insights:
+                ul
+                  li Read a value.
+                  li Identify extrema.
+                  li Characterize distribution.
+                  li Describe correlation.
+              li Comparative Insights:
+                ul
+                  li Compare values.
+                  li Compare extrema.
+                  li Compare distribution.
+                  li Compare correlation.
+
+          section
+            h3 Usability Study: Logistics
+            ul
+              li You will need: 
+                ul
+                  li Visualization with test data loaded.
+                  li Consent form (if required).
+                  li Task list.
+                  li Protocol (study procedures and debrief questions).
+                  li Surveys/interviews and any additional data-collection instruments.
+                  li Audio or video recorder, notepad.
+
+          section
+            h3 How Many People Do You Need?
+            img(data-src="../shared_images/usability-size.png")
+
+          section
+            h3 "Lab" doesn’t need to mean a formal lab 
+            
+          section
+            h3 Software for Collecting Audio/Video
+            ul
+              li Video of user.
+              li Screen capture of user actions.
+              li Audio of entire session.
+            
+          section
+            h3 Online Tools
+            ul
+              li Surveys.
+              li Mouse tracking/navigation tracking.
+              
+          section
+            h3 You’ve Collected Data
+            div.flex
+              div.left
+                ul
+                  li Task completion.
+                  li Time on task.
+                  li Notes.
+                  li Interview responses.
+                  li Survey responses.
+                  li … then what?
+              div.right
+                img(data-src="../shared_images/user-study-result.png")
+                div.tiny #[a(href="") Table source: Stasko, J., Catrambone, R., Guzdial, M., & McDonald, K. (2000). An evaluation of space-filling information visualizations for depicting hierarchical structures.]
+            aside(class="notes").                
+              How is the task completion recorded, does the analyst note it themsleves, do they write something down. 
+                
+          section
+            h3 What is the analyst’s information scent?                
+            aside(class="notes").
+              A term originating from Peter Pirolli and Stuart Card PARC looking at    meaning
+              Accounts for not just completion but also situating WHAT the person was doing, may wish to do think aloud as well. It’s not always obvious what leads to the challenge.  Like a detective, not always obvious. Transating to design. 
+            
+          section
+            h3 MoSCoW Prioritization            
+            ul
+              li Must.
+              li Should.
+              li Could.
+              li Won't.
+            aside(class="notes").
+              Discuss brief history, came from the dynamic software development method. 
+              
+          section
+            h3 Severity Ratings       
+            ol
+              li Not a real problem.
+              li Cosmetic.
+              li Minor usability issue.
+              li Major usability issue.
+              li Critical issue.
+            aside(class="notes").
+
+          section
+            h3 Limitations
+            ol
+              li Ecological validity
+              li Are performance-oriented tasks the complete story?
+            aside(class="notes").
+            
         section
           section
             h2 Usability Study Demo
-
 
         section
           section
@@ -265,7 +378,7 @@ html(lang="en")
         section
           section
             h2 Interview Fereshteh Amini
-
+            p Fereshteh Amini is a Data Visualization Specialist at Microsoft with a PhD from the University of Manitoba.
 
 
         // Design principles
