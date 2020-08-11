@@ -63,7 +63,7 @@ html(lang="en")
           section
             h1 Reduce Items and Attributes
           section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/14_reduce-glimmer.003.png")
-          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/14_reduce-glimmer.004.png")
+          //- section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/14_reduce-glimmer.004.png")
 
 
 
@@ -90,28 +90,27 @@ html(lang="en")
               .half
                 img(data-src="../shared_images/vad_book_alldiagrams/pr13_reduce-items-attributes.png", alt="Filter by items and by attributes; aggregate by items and by attributes; reduce filter and aggregate")
 
+
+        section#itemFiltering
+          section
+            h1 Item Filtering
+
           section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/14_reduce-glimmer.005.png")
           //- section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/14_reduce-glimmer.006.png")
 
           //- section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/14_reduce-glimmer.008.png")
 
 
+          SECTION
+            h2 Crossfiltering
+
+            ul
+              li.fragment Item filtering
+              li.fragment Coordinated views/controls combined
+              li.fragment All scented histogram bisliders update when any ranges change
+
           section
-            h2 Idiom: Histogram
-            .flex
-              .half
-                ul.small
-                  li.fragment Static item aggregation
-                  li.fragment Task: find distribution
-                  li.fragment Data: table
-                  li.fragment Derived data
-                  ul.small
-                    li.fragment New table: keys are bins, values are counts
-                  li.fragment Bin size crucial
-                    li.fragment Pattern can change dramatically depending on discretization
-                    li.fragment Opportunity for interaction: control bin size on the fly
-              .half
-                img(data-src="../shared_images/vad_book_alldiagrams/pr13_reduce-histogram.png", alt="Histogram")
+            h2 Faceted Search
 
           section.full
             h3.demo Idiom: Scented Widgets
@@ -150,12 +149,51 @@ html(lang="en")
                 a(target="_blank" href="https://navio.dev") https://navio.dev
 
 
+        section#attributeFiltering
+          section
+            h1 Attribute Filtering
+
+
+          //- DOSFA
           section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/14_reduce-glimmer.007.png")
 
           section
             h2 DOSFA Paper
             a.small(target="_blank" href="http://www.cs.ubc.ca/~tmm/courses/cpsc533c-04-spr/readings/dimorder.pdf") http://www.cs.ubc.ca/~tmm/courses/cpsc533c-04-spr/readings/dimorder.pdf
 
+          section
+            h2 Navio Load Notebook
+
+          section
+            h2 UMAP Playground
+
+          section
+            h2 Dimensionality Reduction
+
+          section
+            h2 Aggregation: Hierarchichal cluster explorer
+
+
+        section#itemAggregation
+          section
+            h1 Item Aggregation
+
+          section
+            h2 Idiom: Histogram
+            .flex
+              .half
+                ul.small
+                  li.fragment Static item aggregation
+                  li.fragment Task: find distribution
+                  li.fragment Data: table
+                  li.fragment Derived data
+                  ul.small
+                    li.fragment New table: keys are bins, values are counts
+                  li.fragment Bin size crucial
+                    li.fragment Pattern can change dramatically depending on discretization
+                    li.fragment Opportunity for interaction: control bin size on the fly
+              .half
+                img(data-src="../shared_images/vad_book_alldiagrams/pr13_reduce-histogram.png", alt="Histogram")
 
 
           //- section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/14_reduce-glimmer.009.png")
@@ -269,7 +307,89 @@ html(lang="en")
               img(data-src="../shared_images/vad_book_alldiagrams/pr13_reduce-hierarchical-clustering.png", alt="")
               figcaption.reference [Hierarchical Parallel Coordinates for Exploration of Large Datasets. Fua, Ward, and Rundensteiner. Proc. IEEE Visualization Conference (Vis ’99), pp. 43– 50, 1999.]
 
-        section
+
+        section#spatialAggregation
+          section
+            h1 Spatial Aggregation
+
+          section
+            h2 Geo level
+            ul
+              li.fragment Country
+              li.fragment State
+              li.fragment City
+              li.fragment Neighborhood
+
+
+          section
+            h2 Aggregation Problems
+            ul
+              li.fragment MAUP: Modifiable Areal Unit Problem
+              li.fragment gerrymandering (manipulating voting district boundaries) is only one example!
+              li.fragment zone effects
+              li.fragment scale effects
+
+          //- TODO Add examples
+
+
+          section
+            h2 Overlapping
+            ul
+              li Zip Codes
+              li Disputed borders
+
+          section
+            h2 Regions
+
+            ul
+              li Aggregate by commonalities
+                ul
+                  li.fragment e.g. Agricultural vs Industrial Regions
+                  li.fragment e.g. Historically right vs left wing
+              li Aggregate by the data attributes
+
+          section
+            h2 Geo patterns vs political patterns
+
+            ul
+              li Risaralda example
+
+
+        section#spatialAggregation
+          section
+            h1 Time Aggregation
+
+          section
+            h2 Date Part vs Truncate
+
+            ul
+              li.fragment Date Part: extract a part of the date
+              li.fragment Date Truncate: cut the date at a certain level
+
+          section
+            h2 Date Truncate
+
+            ul
+              li Different levels can hide seasonality
+              li Sometimes too much detail is unnecessary
+
+          section
+            h2 Date Part
+
+            ul
+              li Useful for highlighting human patterns
+                ul
+                  li Weekends
+                  li Night time
+                  li Holidays
+                  li Summer vs Winter
+
+          section
+            h2 Calendar Views
+
+
+
+        section#dimensionalityReduction
           section
             h1 Dimensionality Reduction
 
@@ -414,7 +534,7 @@ html(lang="en")
 
 
 
-        section
+        section#focusContext
           section
             h1 Embed, Focus+Context
 
