@@ -21,7 +21,7 @@
         <section>
           <h1 class="title">Reducing Attributes and Rows<br><small>MIDS W209: Information Visualization</small></h1>
           <div class="r-stretch"></div>
-          <div class="tiny"><a href="https://johnguerra.co/" target="_blank"><strong> John Alexis Guerra Gómez</strong></a><span> |  john.guerra[at]gmail.com</span><a href="https://twitter.com/duto_guerra"> |  @duto_guerra</a><br><a href="https://johnguerra.co/lectures/MIDS_W209_Information_Visualization/06_Tabular/" target="_blank">https://johnguerra.co/lectures/MIDS_W209_Information_Visualization/06_Tabular/</a></div>
+          <div class="tiny"><a href="https://johnguerra.co/" target="_blank"><strong> John Alexis Guerra Gómez</strong></a><span> |  john.guerra[at]gmail.com</span><a href="https://twitter.com/duto_guerra"> |  @duto_guerra</a><br><a href="https://andyreagan.com/" target="_blank"><strong> Andy Reagan</strong></a><span> |  andy[at]andyreagan.com |</span><a href="https://twitter.com/andyreagan">@andyreagan</a><br><a href="https://johnguerra.co/lectures/MIDS_W209_Information_Visualization/06_Tabular/" target="_blank">https://johnguerra.co/lectures/MIDS_W209_Information_Visualization/06_Tabular/</a></div>
           <div class="logo"><a href="https://datascience.berkeley.edu/"><img class="logo" data-src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo"></a></div>
           <div class="tiny">Partially based on<a href="https://www.cs.ubc.ca/~tmm/talks.html#minicourse14"> slides from Tamara Munzner</a></div>
         </section>
@@ -36,7 +36,6 @@
             <h1>Reduce Items and Attributes</h1>
           </section>
           <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/14_reduce-glimmer.003.png"></section>
-          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/14_reduce-glimmer.004.png"></section>
           <section class="full">
             <h3 class="demo">Reduce Items and Attributes</h3>
             <div class="flex">
@@ -70,27 +69,22 @@
               <div class="half"><img data-src="../shared_images/vad_book_alldiagrams/pr13_reduce-items-attributes.png" alt="Filter by items and by attributes; aggregate by items and by attributes; reduce filter and aggregate"></div>
             </div>
           </section>
-          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/14_reduce-glimmer.005.png"></section>
+        </section>
+        <section id="itemFiltering">
           <section>
-            <h2>Idiom: Histogram</h2>
-            <div class="flex">
-              <div class="half">
-                <ul class="small">
-                  <li class="fragment">Static item aggregation</li>
-                  <li class="fragment">Task: find distribution</li>
-                  <li class="fragment">Data: table</li>
-                  <li class="fragment">Derived data</li>
-                  <ul class="small">
-                    <li class="fragment">New table: keys are bins, values are counts</li>
-                  </ul>
-                  <li class="fragment">Bin size crucial
-                    <li class="fragment">Pattern can change dramatically depending on discretization</li>
-                    <li class="fragment">Opportunity for interaction: control bin size on the fly</li>
-                  </li>
-                </ul>
-              </div>
-              <div class="half"><img data-src="../shared_images/vad_book_alldiagrams/pr13_reduce-histogram.png" alt="Histogram"></div>
-            </div>
+            <h1>Item Filtering</h1>
+          </section>
+          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/14_reduce-glimmer.005.png"></section>
+          <SECTION>
+            <h2>Crossfiltering</h2>
+            <ul>
+              <li class="fragment">Item filtering</li>
+              <li class="fragment">Coordinated views/controls combined</li>
+              <li class="fragment">All scented histogram bisliders update when any ranges change</li>
+            </ul>
+          </SECTION>
+          <section>
+            <h2>Faceted Search</h2>
           </section>
           <section class="full">
             <h3 class="demo">Idiom: Scented Widgets</h3>
@@ -128,9 +122,52 @@
               <figcaption class="reference"><a target="_blank" href="https://navio.dev">https://navio.dev</a></figcaption>
             </figure>
           </section>
+        </section>
+        <section id="attributeFiltering">
+          <section>
+            <h1>Attribute Filtering</h1>
+          </section>
           <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/14_reduce-glimmer.007.png"></section>
           <section>
             <h2>DOSFA Paper</h2><a class="small" target="_blank" href="http://www.cs.ubc.ca/~tmm/courses/cpsc533c-04-spr/readings/dimorder.pdf">http://www.cs.ubc.ca/~tmm/courses/cpsc533c-04-spr/readings/dimorder.pdf</a>
+          </section>
+          <section>
+            <h2>Navio Load Notebook</h2>
+          </section>
+          <section>
+            <h2>UMAP Playground</h2>
+          </section>
+          <section>
+            <h2>Dimensionality Reduction</h2>
+          </section>
+          <section>
+            <h2>Aggregation: Hierarchichal cluster explorer</h2>
+          </section>
+        </section>
+        <section id="itemAggregation">
+          <section>
+            <h1>Item Aggregation</h1>
+          </section>
+          <section>
+            <h2>Idiom: Histogram</h2>
+            <div class="flex">
+              <div class="half">
+                <ul class="small">
+                  <li class="fragment">Static item aggregation</li>
+                  <li class="fragment">Task: find distribution</li>
+                  <li class="fragment">Data: table</li>
+                  <li class="fragment">Derived data</li>
+                  <ul class="small">
+                    <li class="fragment">New table: keys are bins, values are counts</li>
+                  </ul>
+                  <li class="fragment">Bin size crucial
+                    <li class="fragment">Pattern can change dramatically depending on discretization</li>
+                    <li class="fragment">Opportunity for interaction: control bin size on the fly</li>
+                  </li>
+                </ul>
+              </div>
+              <div class="half"><img data-src="../shared_images/vad_book_alldiagrams/pr13_reduce-histogram.png" alt="Histogram"></div>
+            </div>
           </section>
           <section>
             <h2>Idiom: Boxplot</h2>
@@ -265,6 +302,15 @@
               <li class="fragment">State</li>
               <li class="fragment">City</li>
               <li class="fragment">Neighborhood</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Aggregation Problems</h2>
+            <ul>
+              <li class="fragment">MAUP: Modifiable Areal Unit Problem</li>
+              <li class="fragment">gerrymandering (manipulating voting district boundaries) is only one example!</li>
+              <li class="fragment">zone effects</li>
+              <li class="fragment">scale effects</li>
             </ul>
           </section>
           <section>
