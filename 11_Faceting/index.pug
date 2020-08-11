@@ -40,6 +40,11 @@ html(lang="en")
             a(href="https://twitter.com/duto_guerra")  |  @duto_guerra
             br
 
+            a(href="https://andyreagan.com/", target="_blank") #[strong  Andy Reagan]
+            span  |  andy[at]andyreagan.com |
+            a(href="https://twitter.com/andyreagan") @andyreagan
+            br
+
             a(href="https://johnguerra.co/lectures/MIDS_W209_Information_Visualization/11_Faceting/", target="_blank") https://johnguerra.co/lectures/MIDS_W209_Information_Visualization/11_Faceting/
 
           div.logo
@@ -492,10 +497,100 @@ html(lang="en")
             ul
               li.fragment Python Dash (from Plotly folks).
               li.fragment R Shiny.
-              li.fragment Metabase ... sorta.
+              li.fragment Metabase?.
               li.fragment Flask + Altair.
               li.fragment Flask + D3.
 
+          section
+            h3 Taking apart Dash
+            pre(class="python" style="font-size: 18px;")
+              code.
+                import dash
+                import dash_core_components as dcc
+                import dash_html_components as html
+                import plotly.express as px
+                import pandas as pd
+    
+                external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
+    
+                app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
+    
+                df = pd.read_csv('https://gist.githubusercontent.com/.../gdp-life-exp-2007.csv')
+    
+                fig = px.scatter(df, x="gdp per capita", y="life expectancy",
+                                 size="population", color="continent", hover_name="country",
+                                 log_x=True, size_max=60)
+    
+                app.layout = html.Div([
+                    dcc.Graph(
+                        id='life-exp-vs-gdp',
+                        figure=fig
+                    )
+                ])
+    
+                if __name__ == '__main__':
+                    app.run_server(debug=True)
+              <!-- a(href="https://dash.plotly.com/layout") https://dash.plotly.com/layout -->
+
+          section
+            h3 Taking apart Dash
+            img(data-src="../shared_images/dash-screenshot.png")            
+            
+          section
+            h3 Under the hood: it's Flask
+            img(data-src="../shared_images/dash-flask.png")                        
+            
+          section
+            h3 Follow a request
+            img(data-src="../shared_images/dash-request.png")                        
+            
+          section
+            h3 The code we used:
+            pre(class="python" style="font-size: 18px;")
+              code.
+                import dash
+                import dash_core_components as dcc
+                import dash_html_components as html
+                import plotly.express as px
+                import pandas as pd
+    
+                external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
+    
+                app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
+    
+                df = pd.read_csv('https://gist.githubusercontent.com/.../gdp-life-exp-2007.csv')
+    
+                fig = px.scatter(df, x="gdp per capita", y="life expectancy",
+                                 size="population", color="continent", hover_name="country",
+                                 log_x=True, size_max=60)
+    
+                app.layout = html.Div([
+                    dcc.Graph(
+                        id='life-exp-vs-gdp',
+                        figure=fig
+                    )
+                ])
+    
+                if __name__ == '__main__':
+                    app.run_server(debug=True)            
+                  
+          section
+            h3 So we'll render a template like this:
+            pre(class="html" style="font-size: 18px;")
+              code
+                | html
+                | head
+                |   {{ for headers in app.headers }}
+                |   {{ header }}
+                |   {{ endfor }}
+                |   <link rel="stylesheet" href="/assets/base.css?m=1596812599.0">
+                | /head
+                | body
+                |   {{ for div in app.layout }}
+                |   {{ div.render_elements() }}
+                |   {{ endfor }}             
+                | /body
+                | /html
 
         section#architecture
           section
@@ -511,6 +606,37 @@ html(lang="en")
                 li.fragment Processing engine.
                 li.fragment CDNs.
                 li.fragment Static storage.
+                
+          section
+            h3 Building blocks on the web
+            ul
+              li.fragment Front end client:
+                ul
+                  li.fragment JavaScript libraries, run in real time.
+                  li.fragment Access everything through browser-implemented APIs.
+              li.fragment Server:
+                ul
+                  li.fragment Database.
+                  li.fragment Files (database is a layer over files).
+                  li.fragment Web app (running Python/R/Node/etc.).
+                  li.fragment Other pieces of a web stack: Apache/Nginx/Gunicorn/UWSGI/etc.
+                  li.fragment Non-web facing processing automation / schedulers (Airflow/Jenkins/cron).
+                  
+          section
+            h3 Example: visualization system relying on Twitter data
+            img(data-src="../shared_images/Twitter-Service-Architecture-Diagram.png")
+            
+          section
+            h3 MassMutual's client marketing system
+            img(data-src="../shared_images/Marketing-Logical-Arch---Page-1.png")
+            
+          section
+            h3 MassMutual's advisor-facing mobile app
+            img(data-src="../shared_images/AdvisorMobile-High-Level-0.png")
+            
+          section
+            h3 MassMutual's Prediction API
+            img(data-src="../shared_images/Prediction-API-v2-Architecture-2019-05-07.png")            
 
         section#visualizationMantra
           section
