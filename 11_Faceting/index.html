@@ -21,7 +21,7 @@
         <section>
           <h1 class="title">Faceting<br><small>MIDS W209: Information Visualization</small></h1>
           <div class="r-stretch"></div>
-          <div class="tiny"><a href="https://johnguerra.co/" target="_blank"><strong> John Alexis Guerra Gómez</strong></a><span> |  john.guerra[at]gmail.com</span><a href="https://twitter.com/duto_guerra"> |  @duto_guerra</a><br><a href="https://johnguerra.co/lectures/MIDS_W209_Information_Visualization/11_Faceting/" target="_blank">https://johnguerra.co/lectures/MIDS_W209_Information_Visualization/11_Faceting/</a></div>
+          <div class="tiny"><a href="https://johnguerra.co/" target="_blank"><strong> John Alexis Guerra Gómez</strong></a><span> |  john.guerra[at]gmail.com</span><a href="https://twitter.com/duto_guerra"> |  @duto_guerra</a><br><a href="https://andyreagan.com/" target="_blank"><strong> Andy Reagan</strong></a><span> |  andy[at]andyreagan.com |</span><a href="https://twitter.com/andyreagan">@andyreagan</a><br><a href="https://johnguerra.co/lectures/MIDS_W209_Information_Visualization/11_Faceting/" target="_blank">https://johnguerra.co/lectures/MIDS_W209_Information_Visualization/11_Faceting/</a></div>
           <div class="logo"><a href="https://datascience.berkeley.edu/"><img class="logo" data-src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo"></a></div>
           <div class="tiny">Partially based on<a href="https://www.cs.ubc.ca/~tmm/talks.html#minicourse14"> slides from Tamara Munzner</a></div>
         </section>
@@ -530,10 +530,92 @@
             <ul>
               <li class="fragment">Python Dash (from Plotly folks).</li>
               <li class="fragment">R Shiny.</li>
-              <li class="fragment">Metabase ... sorta.</li>
+              <li class="fragment">Metabase?.</li>
               <li class="fragment">Flask + Altair.</li>
               <li class="fragment">Flask + D3.</li>
             </ul>
+          </section>
+          <section>
+            <h3>Taking apart Dash</h3>
+            <pre class="python" style="font-size: 18px;"><code>import dash
+import dash_core_components as dcc
+import dash_html_components as html
+import plotly.express as px
+import pandas as pd
+
+external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
+
+app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
+
+df = pd.read_csv('https://gist.githubusercontent.com/.../gdp-life-exp-2007.csv')
+
+fig = px.scatter(df, x="gdp per capita", y="life expectancy",
+                 size="population", color="continent", hover_name="country",
+                 log_x=True, size_max=60)
+
+app.layout = html.Div([
+    dcc.Graph(
+        id='life-exp-vs-gdp',
+        figure=fig
+    )
+])
+
+if __name__ == '__main__':
+    app.run_server(debug=True)</code><!-- a(href="https://dash.plotly.com/layout") https://dash.plotly.com/layout --></pre>
+          </section>
+          <section>
+            <h3>Taking apart Dash</h3><img data-src="../shared_images/dash-screenshot.png">
+          </section>
+          <section>
+            <h3>Under the hood: it's Flask</h3><img data-src="../shared_images/dash-flask.png">
+          </section>
+          <section>
+            <h3>Follow a request</h3><img data-src="../shared_images/dash-request.png">
+          </section>
+          <section>
+            <h3>The code we used:</h3>
+            <pre class="python" style="font-size: 18px;"><code>import dash
+import dash_core_components as dcc
+import dash_html_components as html
+import plotly.express as px
+import pandas as pd
+
+external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
+
+app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
+
+df = pd.read_csv('https://gist.githubusercontent.com/.../gdp-life-exp-2007.csv')
+
+fig = px.scatter(df, x="gdp per capita", y="life expectancy",
+                 size="population", color="continent", hover_name="country",
+                 log_x=True, size_max=60)
+
+app.layout = html.Div([
+    dcc.Graph(
+        id='life-exp-vs-gdp',
+        figure=fig
+    )
+])
+
+if __name__ == '__main__':
+    app.run_server(debug=True)            
+  </code></pre>
+          </section>
+          <section>
+            <h3>So we'll render a template like this:</h3>
+            <pre class="html" style="font-size: 18px;"><code>html
+head
+  {{ for headers in app.headers }}
+  {{ header }}
+  {{ endfor }}
+  <link rel="stylesheet" href="/assets/base.css?m=1596812599.0">
+/head
+body
+  {{ for div in app.layout }}
+  {{ div.render_elements() }}
+  {{ endfor }}             
+/body
+/html</code></pre>
           </section>
         </section>
         <section id="architecture">
@@ -552,6 +634,38 @@
                 <li class="fragment">Static storage.</li>
               </ul>
             </ul>
+          </section>
+          <section>
+            <h3>Building blocks on the web</h3>
+            <ul>
+              <li class="fragment">Front end client:
+                <ul>
+                  <li class="fragment">JavaScript libraries, run in real time.</li>
+                  <li class="fragment">Access everything through browser-implemented APIs.</li>
+                </ul>
+              </li>
+              <li class="fragment">Server:
+                <ul>
+                  <li class="fragment">Database.</li>
+                  <li class="fragment">Files (database is a layer over files).</li>
+                  <li class="fragment">Web app (running Python/R/Node/etc.).</li>
+                  <li class="fragment">Other pieces of a web stack: Apache/Nginx/Gunicorn/UWSGI/etc.</li>
+                  <li class="fragment">Non-web facing processing automation / schedulers (Airflow/Jenkins/cron).</li>
+                </ul>
+              </li>
+            </ul>
+          </section>
+          <section>
+            <h3>Example: visualization system relying on Twitter data</h3><img data-src="../shared_images/Twitter-Service-Architecture-Diagram.png">
+          </section>
+          <section>
+            <h3>MassMutual's client marketing system</h3><img data-src="../shared_images/Marketing-Logical-Arch---Page-1.png">
+          </section>
+          <section>
+            <h3>MassMutual's advisor-facing mobile app</h3><img data-src="../shared_images/AdvisorMobile-High-Level-0.png">
+          </section>
+          <section>
+            <h3>MassMutual's Prediction API</h3><img data-src="../shared_images/Prediction-API-v2-Architecture-2019-05-07.png">
           </section>
         </section>
         <section id="visualizationMantra">
