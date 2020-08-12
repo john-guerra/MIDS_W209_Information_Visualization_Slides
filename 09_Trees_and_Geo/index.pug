@@ -39,7 +39,7 @@ html(lang="en")
             span  |  john.guerra[at]gmail.com
             a(href="https://twitter.com/duto_guerra")  |  @duto_guerra
             br
-            
+
             a(href="https://andyreagan.com/", target="_blank") #[strong  Andy Reagan]
             span  |  andy[at]andyreagan.com
             a(href="https://twitter.com/andyreagan")  |  @andyreagan
@@ -77,7 +77,7 @@ html(lang="en")
               ul.small
                 li Is uniquely labeled in the tree
                 li Contains one or more numeric variables with values over time
-                li Contains one or more categorical attributes that may have more than one value 
+                li Contains one or more categorical attributes that may have more than one value
 
           section
             h2 Types of Trees
@@ -331,7 +331,7 @@ html(lang="en")
                 li Considerations:
                   ul.small
                     li Careful with small edges
-                    
+
             div.right
               a(href="https://observablehq.com/@john-guerra/zoomable-variable-size-icicle")
                 img(data-src="../shared_images/variableSizeIcicle.svg" alt="Variable Size Icicle Tree")
@@ -438,7 +438,7 @@ html(lang="en")
                     li.fragment Use given geometry for area mark boundaries
                     li.fragment Sequential segmented colormap
                     li.fragment Essentially, geographic heat map
-                    
+
           //- Choropleth map block
           section
             h3.demo Choropleth Map
@@ -455,7 +455,7 @@ html(lang="en")
                 const inspect = Inspector.into("#observablehq-6b04a5b2");
                 (new Runtime).module(define, name => name === "chart" ? inspect() : undefined);
                 </script>
-                
+
           section
             h3.demo Bivariate Choropleth Map
             div.
@@ -466,7 +466,7 @@ html(lang="en")
               const inspect = Inspector.into("#observablehq-745f68a6");
               (new Runtime).module(define, name => name === "chart" ? inspect() : undefined);
               </script>
-                    
+
 
           section
             h2 Idiom: Dot Map
@@ -550,8 +550,8 @@ html(lang="en")
           section
             h2 Bayesian Surprise Map
             img.demo(data-src="../shared_images/bayesian-surprise.png", alt="Types of Trees")
-            div #[a.tiny(href="https://idl.cs.washington.edu/files/2017-SurpriseMaps-InfoVis.pdf") Surprise! Bayesian Weighting for De-Biasing Thematic Maps]                  
-            
+            div #[a.tiny(href="https://idl.cs.washington.edu/files/2017-SurpriseMaps-InfoVis.pdf") Surprise! Bayesian Weighting for De-Biasing Thematic Maps]
+
           section
             h2 Idiom: Topographic Map
             .flex
@@ -568,7 +568,7 @@ html(lang="en")
                     li.fragment Isoline geometry
                     ul
                       li.fragment Isocontours computed for specific levels of scalar values
-                      
+
           section
             h2 Idiom: Cartogram
             .flex
@@ -582,7 +582,7 @@ html(lang="en")
                   ul
                     li.fragment New geographic geometry: many algorithm choices
                   li.fragment Then encoded as choropleth
-                  
+
           section
             h2 Cartogram 1
             div.
@@ -593,7 +593,7 @@ html(lang="en")
               const inspect = Inspector.into("#observablehq-78f5dd89");
               (new Runtime).module(define, name => name === "chart" ? inspect() : undefined);
               </script>
-            
+
           section
             h2 Cartogram 2
             img.demo(data-src="../shared_images/cartogram-2.png", alt="Cartogram 2")
@@ -622,12 +622,12 @@ html(lang="en")
                   li.fragment Transfer function maps scalar values to color, opacity
                   ul
                     li.fragment No derived geometry
-                    
+
           section
             h2 Isosurfaces Example
             img.demo(data-src="../shared_images/isosurface.png", alt="Isosurfaces")
             div #[a.tiny(href="https://arxiv.org/pdf/1710.01199.pdf") Two-dimensional dynamics of elasto-inertial turbulence and its role in polymer drag reduction]
-                                    
+
 
           section
             h2 Vector and Tensor Fields
@@ -668,8 +668,8 @@ html(lang="en")
 
           section
             h2 Name That Dynamical System
-            img.demo(data-src="../shared_images/lorenz.jpeg", alt="Lorenz")            
-            
+            img.demo(data-src="../shared_images/lorenz.jpeg", alt="Lorenz")
+
           section
             h3 Idiom: Similarity-Clustered Streamlines
             ul
@@ -694,8 +694,50 @@ html(lang="en")
 
           section
             h2 Streamlines
-            img.demo(data-src="../shared_images/wind-map.png", alt="Wind Map")               
+            img.demo(data-src="../shared_images/wind-map.png", alt="Wind Map")
             div.tiny #[a(href="http://hint.fm/wind/") Original inspiration]
+
+
+        section
+          section
+            h2 Map Libraries
+            ul
+              li
+                a(target="_blank" href="http://mapbox.com/") Mapbox
+              li
+                a(target="_blank" href="http://leafletjs.com/") Leaflet
+              li
+                a(target="_blank" href="http://datamaps.github.io/") DataMaps
+              li
+                a(target="_blank" href="https://github.com/emeeks/d3-carto-map") d3-carto-map
+
+
+          section
+            h3 Mapbox and Tableau
+            a(href="https://www.mapbox.com/tableau/") Maps in Tableau
+
+          section
+            h2 Mapbox + Tableau examples
+
+          section
+            h3.demo Votos Fajardo
+            a.tiny(href="https://public.tableau.com/profile/john.alexis.guerra.g.mez#!/vizhome/votosFajardo2/Fajardo") votosFajardo2
+            div.blocks.
+              <div class='tableauPlaceholder' id='viz1568758234721' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;NG&#47;NGCWHPJM6&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='path' value='shared&#47;NGCWHPJM6' /> <param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;NG&#47;NGCWHPJM6&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>
+              <script type='text/javascript'>                    var divElement = document.getElementById('viz1568758234721');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height='600px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+
+
+          section
+            h3.demo Votos Concejo
+            a.tiny(href="https://public.tableau.com/profile/john.alexis.guerra.g.mez#!/vizhome/votosConcejo/Dashboard1") votosConcejo
+            div.blocks.
+              <div class='tableauPlaceholder' id='viz1568758685092' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;vo&#47;votosConcejo&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='votosConcejo&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;vo&#47;votosConcejo&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1568758685092');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height='600px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+
+
+          section
+            h3.demo Mapbox and D3
+            a(href="https://observablehq.com/@john-guerra/mapbox-d3") https://observablehq.com/@john-guerra/mapbox-d3
+
 
         section
           section
@@ -712,17 +754,20 @@ html(lang="en")
             iframe.blocks(width="560", height="315", src="https://www.youtube.com/embed/kIID5FDi2JQ",frameborder="0" allowfullscreen)
 
 
+
+
           section
-            h2 Map Libraries
-            ul
-              li
-                a(target="_blank" href="http://mapbox.com/") Mapbox
-              li
-                a(target="_blank" href="http://leafletjs.com/") Leaflet
-              li
-                a(target="_blank" href="http://datamaps.github.io/") DataMaps
-              li
-                a(target="_blank" href="https://github.com/emeeks/d3-carto-map") d3-carto-map
+            h3 Mike's Maps Tutorial
+            a(href="https://medium.com/@mbostock/command-line-cartography-part-1-897aa8f8ca2c") Command-Line Cartography, Part 1
+
+        section
+          section
+            h3 Vega-Lite Maps
+            a(href="https://observablehq.com/@vega/vega-lite-api") Vega-Lite API
+
+
+
+
 
 
 
@@ -741,41 +786,7 @@ html(lang="en")
 
 
 
-        section
 
-          section
-            h3 Mapbox and Tableau
-            a(href="https://www.mapbox.com/tableau/") Maps in Tableau
-
-
-          section
-            h3.demo Votos Fajardo
-            a.tiny(href="https://public.tableau.com/profile/john.alexis.guerra.g.mez#!/vizhome/votosFajardo2/Fajardo") votosFajardo2
-            div.blocks.
-              <div class='tableauPlaceholder' id='viz1568758234721' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;NG&#47;NGCWHPJM6&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='path' value='shared&#47;NGCWHPJM6' /> <param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;NG&#47;NGCWHPJM6&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>
-              <script type='text/javascript'>                    var divElement = document.getElementById('viz1568758234721');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height='600px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
-
-
-          section
-            h3.demo Votos Concejo
-            a.tiny(href="https://public.tableau.com/profile/john.alexis.guerra.g.mez#!/vizhome/votosConcejo/Dashboard1") votosConcejo
-            div.blocks.
-              <div class='tableauPlaceholder' id='viz1568758685092' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;vo&#47;votosConcejo&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='votosConcejo&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;vo&#47;votosConcejo&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1568758685092');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height='600px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
-
-
-
-          section
-            h3.demo Mapbox and D3
-            a(href="https://observablehq.com/@john-guerra/mapbox-d3") https://observablehq.com/@john-guerra/mapbox-d3
-
-
-          section
-            h3 Mike's Maps Tutorial
-            a(href="https://medium.com/@mbostock/command-line-cartography-part-1-897aa8f8ca2c") Command-Line Cartography, Part 1
-
-          section
-            h3 Vega-Lite Maps
-            a(href="https://observablehq.com/@vega/vega-lite-api") Vega-Lite API
 
 
 
