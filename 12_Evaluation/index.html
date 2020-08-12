@@ -1,26 +1,455 @@
-<!DOCTYPE html><html lang="en"><head><title>Week 12 HCI and Evaluation. MIDS W209 Information Visualization Slides</title><meta charset="utf-8"><meta name="author" content="John Alexis Guerra Gómez"><meta name="description" content="Week 6 Visualizing Tabular Data. MIDS W209 Information Visualization Slides"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fjalla+One|Raleway|PT+Sans+Narrow"><link rel="stylesheet" href="https://use.typekit.net/yjc0afr.css"><link rel="stylesheet" href="../plugin/highlight/monokai.css" id="highlight-theme"><link href="../css/reveal.css" rel="stylesheet"><link href="../css/theme/white.css" rel="stylesheet" id="theme"><link href="../css/style.css" rel="stylesheet"></head><body><div class="reveal"><div class="slides"><section><h1 class="title">HCI and Evaluation<br><small>MIDS W209: Information Visualization</small></h1><div class="r-stretch"></div><div class="tiny"><a href="https://johnguerra.co/" target="_blank"><strong> John Alexis Guerra Gómez</strong></a><span> |  john.guerra[at]gmail.com</span><a href="https://twitter.com/duto_guerra"> |  @duto_guerra</a><br><a href="https://andyreagan.com/" target="_blank"><strong> Andy Reagan</strong></a><span> |  andy[at]andyreagan.com |</span><a href="https://twitter.com/andyreagan">@andyreagan</a><br><a href="https://johnguerra.co/lectures/MIDS_W209_Information_Visualization/12_Evaluation/" target="_blank">https://johnguerra.co/lectures/MIDS_W209_Information_Visualization/12_Evaluation/</a></div><div class="logo"><a href="https://datascience.berkeley.edu/"><img class="logo" src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo"></a></div><div class="tiny">Partially based on<a href="https://www.cs.ubc.ca/~tmm/talks.html#minicourse14"> slides from Tamara Munzner</a></div></section><section id="outline"><section><h2>What we are going to learn</h2><ul class="small"></ul></section></section><section><section><h2>Evaluation</h2><ul><li>Controlled Experiments</li><li>Natural settings</li><li>Any setting not involving users</li></ul></section><section><h2>Expert reviews</h2><ul><li>Design Experts</li><li>Visualization Experts</li><li>Usability Experts</li><li>Domain Experts</li></ul></section><section><h2>Types of expert reviews</h2><ul class="small"><li>Heuristic evaluation (golden rules)</li><li>Guidelines review</li><li>Consistency inspection</li><li>Cognitive walkthrough</li><li>Metaphors of human thinking</li><li>Formal usability inspection (courtroom style)</li><li>Accesibility inspection</li></ul></section><section><h2>8 golden rules of design</h2><ul class="small"><li>Strive for consistency</li><li>Cater for universal usability</li><li>Offer informative feedback</li><li>Design dialogs to yield closure</li><li>Prevent errors</li><li>Permit easy reversal of actions</li><li>Support internal locus of control</li><li>Reduce short-term memory load</li></ul></section></section><section><section><h2>Controlled Experiments</h2><ul><li>Experiments in the lab</li><li>Controlled confounding variables</li><li>Measure one or more quantitative variables</li><li><ul><li>Usability testing</li><li>Living labs</li></ul></li></ul></section><section><h3>What to measure?</h3><ul><li>Time to learn</li><li>Speed of performance</li><li>Rate of errors</li><li>Retention over time</li><li>Subject satisfaction</li></ul></section></section><section><section><h2 class="demo">Usability Testing</h2><span><a data-flickr-embed="true"  href="https://www.flickr.com/photos/yandle/3231980616/in/photolist-5VAKeJ-e6vGNu-5VAMNf-5VAJkd-5VASE7-8uu5ej-3j3Cw-7WKyy5-7WKqhG-7WGg1p-bWf1T-cN17Zf-mLmuep-5iDL3Q-7WGaTx-bWf6R-pTf438-7WKzxd-7WGgwR-5VACYA-5VAHzY-5VwiYB-5VAGNL-5VADX3-5VwrGk-7yX8Zc-2vyF2V-7yX96K-dGkneA-7z2MTA-jrkhAN-fQ1cWh-69mwdv-dSJH5t-5iKD8N-2b6Jr-7WGk2x-7WGbSp-5VAQ8f-7WGb6a-7WKXYh-5iFg8H-7WGeMg-7WKssG-7WKtKd-bWffr-7WKt9m-7WKrxA-8ZAttz-7WKzLN" title="Brighton Uni Usability Lab"><img src="https://c1.staticflickr.com/4/3094/3231980616_5ccd164737_b.jpg" width="1024" height="685" alt="Brighton Uni Usability Lab"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
-</span></section><section><h3>Natural settings involving users</h3><ul><li>Observation</li><li>Interviews</li><li>Logging</li></ul></section><section><h2>Triangulation</h2><p>Different researchers observe the same effect</p></section><section><h2>Interviews</h2><ul><li>Unstructured</li><li>Structured</li><li>Semi-structured</li><li>Focus group</li><li>Telephone/Online interviews</li></ul></section><section><h2>Questionnaire</h2><p>Like interviews but without the researcher present</p></section></section><section><section><h1>Likert Scales</h1></section><section><h2>Likert Scale</h2><p>What do you think?</p><ul><li>Strongly disagree</li><li>disagree</li><li>ok</li><li>agree</li><li>Strongly agree</li></ul></section><section><h2>More about likert scales</h2><ul><li>Can be 3, 5, 7 or more responses</li><li>Continuos or Discrete</li><li>Middle response is the balance</li></ul></section><section><h3 class="demo">Likert Scales D3</h3><iframe class="blocks" src="https://blockbuilder.org/john-guerra/57d31bae7685139cecd731bba9f48090"></iframe><a class="tiny" target="_blank" href="https://blockbuilder.org/john-guerra/57d31bae7685139cecd731bba9f48090">https://blockbuilder.org/john-guerra/57d31bae7685139cecd731bba9f48090</a></section><section><h3 class="demo">Likert Scales Vega-lite</h3><iframe class="blocks" src="https://vega.github.io/vega-lite/examples/layer_likert.html"></iframe><a class="tiny" target="_blank" href="https://vega.github.io/vega-lite/examples/layer_likert.html">https://vega.github.io/vega-lite/examples/layer_likert.html</a></section><section><h3 class="demo">Likert Scales Vega-lite</h3><iframe class="blocks" src="https://vega.github.io/vega-lite/examples/concat_layer_voyager_result.html"></iframe><a class="tiny" target="_blank" href="https://vega.github.io/vega-lite/examples/concat_layer_voyager_result.html">https://vega.github.io/vega-lite/examples/concat_layer_voyager_result.html</a></section></section><section><section><h1>Other methods</h1></section><section><h2>Observation</h2><ul><li>User's setting</li><li>Can be direct or indirect</li></ul></section><section><h2>Direct Observation in the field</h2><p>Ethnography</p></section><section><h3>Direct Observation in controlled environments</h3><ul><li>Think aloud techniques</li></ul></section><section><h3>Direct Observation: tracking users</h3><ul><li>Diaries</li><li>Interaction Logs and web analytics</li></ul></section><section><h2>MILCS</h2><ul><li>Multi-dimensional</li><li>In-depth</li><li>Long-term</li><li>Case studies</li></ul></section><section><h2>TreeVersity MILCS</h2><ul><li>13 Different case studies, with 9 agencies</li><li><a href="http://treeversity.cattlab.umd.edu/">http://treeversity.cattlab.umd.edu/</a></li></ul></section><section><h2>Focus groups</h2><p>One researcher, many attendees</p></section><section><h2>Prototyping</h2><ul><li>Low vs high fidelity?</li><li>Read data</li><li>Build scenarios, tell a story</li></ul></section><section><h2>Quatitative evaluation</h2><a href="http://yatani.jp/teaching/doku.php?id=hcistats:anova">http://yatani.jp/teaching/doku.php?id=hcistats:anova</a></section></section><section><section><h2>Running a Usability Study</h2></section><section><h3>Validity Checks</h3><ul><li>Earlier Stages:<ul><li>Observe and interview target users (needs assessment).</li><li>Design data abstraction/operation (data types, transformation, operations) .</li><li>Justify encoding/interaction design (design heuristics, perception research).</li><li>Informal analysis/qualitative analysis of prototypes (task-based).</li><li>Algorithm complexity analysis/evaluation.</li></ul></li><li>Mid- and Later Stages:<ul><li>Qualitative analysis of system (task-based).</li><li>Algorithm performance analysis.</li><li>Lab or crowdsourced user study.</li><li>Field study of the deployed system.</li></ul></li></ul></section><section><h3>Formal Usability Study</h3><h4 class="fragment">Goal: Does the visualization allow the user/analyst to perform key tasks?</h4></section><section><h3>Task-Oriented Visual Insights</h3><ul><li>Basic Insights:<ul><li>Read a value.</li><li>Identify extrema.</li><li>Characterize distribution.</li><li>Describe correlation.</li></ul></li><li>Comparative Insights:<ul><li>Compare values.</li><li>Compare extrema.</li><li>Compare distribution.</li><li>Compare correlation.</li></ul></li></ul></section><section><h3>Usability Study: Logistics</h3><ul><li>You will need: <ul><li>Visualization with test data loaded.</li><li>Consent form (if required).</li><li>Task list.</li><li>Protocol (study procedures and debrief questions).</li><li>Surveys/interviews and any additional data-collection instruments.</li><li>Audio or video recorder, notepad.</li></ul></li></ul></section><section><h3>How Many People Do You Need?</h3><img data-src="../shared_images/usability-size.png"></section><section><h3>"Lab" doesn’t need to mean a formal lab </h3></section><section><h3>Software for Collecting Audio/Video</h3><ul><li>Video of user</li><li>Screen capture of user actions</li><li>Audio of entire session</li></ul></section><section><h3>Online Tools</h3><ul><li>Surveys </li><li>Mouse tracking/navigation tracking</li></ul></section><section><h3>You’ve Collected Data</h3><div class="flex"><div class="left"><ul><li>Task completion </li><li>Time on task</li><li>Notes</li><li>Interview responses</li><li>Survey responses </li><li>… then what?</li></ul></div><div class="right"><img data-src="../shared_images/user-study-result.png"><div class="tiny"><a href="">Table source: Stasko, J., Catrambone, R., Guzdial, M., & McDonald, K. (2000). An evaluation of space-filling information visualizations for depicting hierarchical structures.</a></div></div></div><aside class="notes">A term originating from Peter Pirolli and Stuart Card PARC looking at    meaning
-Accounts for not just completion but also situating WHAT the person was doing, may wish to do think aloud as well. It’s not always obvious what leads to the challenge.  Like a detective, not always obvious. Transating to design. 
-
-
-
-
-</aside></section><section><h3>prioriziation            </h3></section><section><h3>prioriziation</h3></section></section><section><section><h2>Usability Study Demo</h2></section></section><section><section><h2>Interview Michael Bessey</h2><p>Michael Bessey leads the Data Visualization team in MassMutual's centralized Data Science Department. Through his time here, Michael has led efforts to build and rebuild visualization systems that drive decision making through the top levels of the company.</p></section></section><section><section><h2>Interview Fereshteh Amini</h2></section></section><!-- Design principles--><section><h2>References</h2><ul><li><a href="http://cs.umd.edu/hcil/DTUI6/">Shneiderman, B. and Plaisant, C., 1987. Designing the user interface: Strategies for effective human-computer interaction</a></li><li><a href="http://www.id-book.com/">Rogers, Y., Sharp, H., Preece, J. and Tepper, M., 2007. Interaction design: beyond human-computer interaction.</a></li><li><a href="https://www.amazon.com/Doing-Psychology-Experiments-David-Martin/dp/0495115770"> Martin, D.W., 2007. Doing psychology experiments. Cengage Learning.</a></li></ul></section><section id="review"><section><h2>What we learned</h2><ul class="small"></ul></section></section></div></div><script src="../js/reveal.js"></script><script src="../plugin/zoom/zoom.js"></script><script src="../plugin/notes/notes.js"></script><script src="../plugin/search/search.js"></script><script src="../plugin/markdown/markdown.js"></script><script src="../plugin/highlight/highlight.js"></script><script src="https://cdn.jsdelivr.net/npm/vega@5.13.0"></script><script src="https://cdn.jsdelivr.net/npm/vega-lite@4.13.1"></script><script src="https://cdn.jsdelivr.net/npm/vega-lite-api@0.11.0"></script><script src="https://cdn.jsdelivr.net/npm/vega-tooltip@0.23.2"></script><script>Reveal.initialize({
-  controls: true,
-  progress: true,
-  history: true,
-  center: true,
-  hash: true,
-  //- transition: "convex",
-
-  //- width: "100%",
-  //- height: "720px",
-
-  plugins: [ RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight ]
-});</script><script>(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,"script","https://www.google-analytics.com/analytics.js","ga");
-
-ga("create", "UA-72531610-1", "auto");
-ga("send", "pageview");</script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Week 12 HCI and Evaluation. MIDS W209 Information Visualization Slides</title>
+    <meta charset="utf-8">
+    <meta name="author" content="John Alexis Guerra Gómez">
+    <meta name="description" content="Week 6 Visualizing Tabular Data. MIDS W209 Information Visualization Slides">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fjalla+One|Raleway|PT+Sans+Narrow">
+    <link rel="stylesheet" href="https://use.typekit.net/yjc0afr.css">
+    <link rel="stylesheet" href="../plugin/highlight/monokai.css" id="highlight-theme">
+    <link href="../css/reveal.css" rel="stylesheet">
+    <link href="../css/theme/white.css" rel="stylesheet" id="theme">
+    <link href="../css/style.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h1 class="title">HCI and Evaluation<br><small>MIDS W209: Information Visualization</small></h1>
+          <div class="r-stretch"></div>
+          <div class="tiny"><a href="https://johnguerra.co/" target="_blank"><strong> John Alexis Guerra Gómez</strong></a><span> |  john.guerra[at]gmail.com</span><a href="https://twitter.com/duto_guerra"> |  @duto_guerra</a><br><a href="https://andyreagan.com/" target="_blank"><strong> Andy Reagan</strong></a><span> |  andy[at]andyreagan.com |</span><a href="https://twitter.com/andyreagan">@andyreagan</a><br><a href="https://johnguerra.co/lectures/MIDS_W209_Information_Visualization/12_Evaluation/" target="_blank">https://johnguerra.co/lectures/MIDS_W209_Information_Visualization/12_Evaluation/</a></div>
+          <div class="logo"><a href="https://datascience.berkeley.edu/"><img class="logo" src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo"></a></div>
+          <div class="tiny">Partially based on<a href="https://www.cs.ubc.ca/~tmm/talks.html#minicourse14"> slides from Tamara Munzner</a></div>
+        </section>
+        <section id="outline">
+          <section>
+            <h2>What we are going to learn</h2>
+            <ul class="small"></ul>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h2>Evaluation</h2>
+            <ul>
+              <li>Controlled Experiments</li>
+              <li>Natural settings</li>
+              <li>Any setting not involving users</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Expert reviews</h2>
+            <ul>
+              <li>Design Experts</li>
+              <li>Visualization Experts</li>
+              <li>Usability Experts</li>
+              <li>Domain Experts</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Types of expert reviews</h2>
+            <ul class="small">
+              <li>Heuristic evaluation (golden rules)</li>
+              <li>Guidelines review</li>
+              <li>Consistency inspection</li>
+              <li>Cognitive walkthrough</li>
+              <li>Metaphors of human thinking</li>
+              <li>Formal usability inspection (courtroom style)</li>
+              <li>Accesibility inspection</li>
+            </ul>
+          </section>
+          <section>
+            <h2>8 golden rules of design</h2>
+            <ul class="small">
+              <li>Strive for consistency</li>
+              <li>Cater for universal usability</li>
+              <li>Offer informative feedback</li>
+              <li>Design dialogs to yield closure</li>
+              <li>Prevent errors</li>
+              <li>Permit easy reversal of actions</li>
+              <li>Support internal locus of control</li>
+              <li>Reduce short-term memory load</li>
+            </ul>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h2>Controlled Experiments</h2>
+            <ul>
+              <li>Experiments in the lab</li>
+              <li>Controlled confounding variables</li>
+              <li>Measure one or more quantitative variables</li>
+              <li>
+                <ul>
+                  <li>Usability testing</li>
+                  <li>Living labs</li>
+                </ul>
+              </li>
+            </ul>
+          </section>
+          <section>
+            <h3>What to measure?</h3>
+            <ul>
+              <li>Time to learn</li>
+              <li>Speed of performance</li>
+              <li>Rate of errors</li>
+              <li>Retention over time</li>
+              <li>Subject satisfaction</li>
+            </ul>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h1>Usability Testing</h1>
+          </section>
+          <section>
+            <h2 class="demo">Usability Testing</h2><span>
+              <a data-flickr-embed="true"  href="https://www.flickr.com/photos/yandle/3231980616/in/photolist-5VAKeJ-e6vGNu-5VAMNf-5VAJkd-5VASE7-8uu5ej-3j3Cw-7WKyy5-7WKqhG-7WGg1p-bWf1T-cN17Zf-mLmuep-5iDL3Q-7WGaTx-bWf6R-pTf438-7WKzxd-7WGgwR-5VACYA-5VAHzY-5VwiYB-5VAGNL-5VADX3-5VwrGk-7yX8Zc-2vyF2V-7yX96K-dGkneA-7z2MTA-jrkhAN-fQ1cWh-69mwdv-dSJH5t-5iKD8N-2b6Jr-7WGk2x-7WGbSp-5VAQ8f-7WGb6a-7WKXYh-5iFg8H-7WGeMg-7WKssG-7WKtKd-bWffr-7WKt9m-7WKrxA-8ZAttz-7WKzLN" title="Brighton Uni Usability Lab"><img src="https://c1.staticflickr.com/4/3094/3231980616_5ccd164737_b.jpg" width="1024" height="685" alt="Brighton Uni Usability Lab"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+              </span>
+          </section>
+          <section>
+            <h3>Natural settings involving users</h3>
+            <ul>
+              <li>Observation</li>
+              <li>Interviews</li>
+              <li>Logging</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Triangulation</h2>
+            <p>Different researchers observe the same effect</p>
+          </section>
+          <section>
+            <h2>Interviews</h2>
+            <ul>
+              <li>Unstructured</li>
+              <li>Structured</li>
+              <li>Semi-structured</li>
+              <li>Focus group</li>
+              <li>Telephone/Online interviews</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Questionnaire</h2>
+            <p>Like interviews but without the researcher present</p>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h1>Likert Scales</h1>
+          </section>
+          <section>
+            <h2>Likert Scale</h2>
+            <p>What do you think?</p>
+            <ul>
+              <li>Strongly disagree</li>
+              <li>disagree</li>
+              <li>ok</li>
+              <li>agree</li>
+              <li>Strongly agree</li>
+            </ul>
+          </section>
+          <section>
+            <h2>More about likert scales</h2>
+            <ul>
+              <li>Can be 3, 5, 7 or more responses</li>
+              <li>Continuos or Discrete</li>
+              <li>Middle response is the balance</li>
+            </ul>
+          </section>
+          <section>
+            <h3 class="demo">Likert Scales D3</h3>
+            <iframe class="blocks" src="https://blockbuilder.org/john-guerra/57d31bae7685139cecd731bba9f48090"></iframe><a class="tiny" target="_blank" href="https://blockbuilder.org/john-guerra/57d31bae7685139cecd731bba9f48090">https://blockbuilder.org/john-guerra/57d31bae7685139cecd731bba9f48090</a>
+          </section>
+          <section>
+            <h3 class="demo">Likert Scales Vega-lite</h3>
+            <iframe class="blocks" src="https://vega.github.io/vega-lite/examples/layer_likert.html"></iframe><a class="tiny" target="_blank" href="https://vega.github.io/vega-lite/examples/layer_likert.html">https://vega.github.io/vega-lite/examples/layer_likert.html</a>
+          </section>
+          <section>
+            <h3 class="demo">Likert Scales Vega-lite</h3>
+            <iframe class="blocks" src="https://vega.github.io/vega-lite/examples/concat_layer_voyager_result.html"></iframe><a class="tiny" target="_blank" href="https://vega.github.io/vega-lite/examples/concat_layer_voyager_result.html">https://vega.github.io/vega-lite/examples/concat_layer_voyager_result.html</a>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h1>Other methods</h1>
+          </section>
+          <section>
+            <h2>Observation</h2>
+            <ul>
+              <li>User's setting</li>
+              <li>Can be direct or indirect</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Direct Observation in the field</h2>
+            <p>Ethnography</p>
+          </section>
+          <section>
+            <h3>Direct Observation in controlled environments</h3>
+            <ul>
+              <li>Think aloud techniques</li>
+            </ul>
+          </section>
+          <section>
+            <h3>Direct Observation: tracking users</h3>
+            <ul>
+              <li>Diaries.</li>
+              <li>Interaction Logs and web analytics.</li>
+            </ul>
+          </section>
+          <section>
+            <h2>MILCS</h2>
+            <ul>
+              <li>Multi-dimensional.</li>
+              <li>In-depth.</li>
+              <li>Long-term.</li>
+              <li>Case studies.</li>
+            </ul>
+          </section>
+          <section>
+            <h2>TreeVersity MILCS</h2>
+            <ul>
+              <li>13 Different case studies, with 9 agencies</li>
+              <li><a href="http://treeversity.cattlab.umd.edu/">http://treeversity.cattlab.umd.edu/</a></li>
+            </ul>
+          </section>
+          <section>
+            <h2>Focus groups</h2>
+            <p>One researcher, many attendees</p>
+          </section>
+          <section>
+            <h2>Prototyping</h2>
+            <ul>
+              <li>Low vs high fidelity?</li>
+              <li>Read data.</li>
+              <li>Build scenarios, tell a story.</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Quatitative evaluation</h2><a href="http://yatani.jp/teaching/doku.php?id=hcistats:anova">http://yatani.jp/teaching/doku.php?id=hcistats:anova</a>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h2>Running a Usability Study</h2>
+          </section>
+          <section>
+            <h3>Validity Checks</h3>
+            <ul>
+              <li>Earlier Stages:
+                <ul>
+                  <li>Observe and interview target users (needs assessment).</li>
+                  <li>Design data abstraction/operation (data types, transformation, operations) .</li>
+                  <li>Justify encoding/interaction design (design heuristics, perception research).</li>
+                  <li>Informal analysis/qualitative analysis of prototypes (task-based).</li>
+                  <li>Algorithm complexity analysis/evaluation.</li>
+                </ul>
+              </li>
+              <li>Mid- and Later Stages:
+                <ul>
+                  <li>Qualitative analysis of system (task-based).</li>
+                  <li>Algorithm performance analysis.</li>
+                  <li>Lab or crowdsourced user study.</li>
+                  <li>Field study of the deployed system.</li>
+                </ul>
+              </li>
+            </ul>
+          </section>
+          <section>
+            <h3>Formal Usability Study</h3>
+            <h4 class="fragment">Goal: Does the visualization allow the user/analyst to perform key tasks?</h4>
+          </section>
+          <section>
+            <h3>Task-Oriented Visual Insights</h3>
+            <ul>
+              <li>Basic Insights:
+                <ul>
+                  <li>Read a value.</li>
+                  <li>Identify extrema.</li>
+                  <li>Characterize distribution.</li>
+                  <li>Describe correlation.</li>
+                </ul>
+              </li>
+              <li>Comparative Insights:
+                <ul>
+                  <li>Compare values.</li>
+                  <li>Compare extrema.</li>
+                  <li>Compare distribution.</li>
+                  <li>Compare correlation.</li>
+                </ul>
+              </li>
+            </ul>
+          </section>
+          <section>
+            <h3>Usability Study: Logistics</h3>
+            <ul>
+              <li>You will need:
+                <ul>
+                  <li>Visualization with test data loaded.</li>
+                  <li>Consent form (if required).</li>
+                  <li>Task list.</li>
+                  <li>Protocol (study procedures and debrief questions).</li>
+                  <li>Surveys/interviews and any additional data-collection instruments.</li>
+                  <li>Audio or video recorder, notepad.</li>
+                </ul>
+              </li>
+            </ul>
+          </section>
+          <section>
+            <h3>How Many People Do You Need?</h3><img data-src="../shared_images/usability-size.png">
+          </section>
+          <section>
+            <h3>"Lab" doesn’t need to mean a formal lab</h3>
+          </section>
+          <section>
+            <h3>Software for Collecting Audio/Video</h3>
+            <ul>
+              <li>Video of user.</li>
+              <li>Screen capture of user actions.</li>
+              <li>Audio of entire session.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>Online Tools</h3>
+            <ul>
+              <li>Surveys.</li>
+              <li>Mouse tracking/navigation tracking.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>You’ve Collected Data</h3>
+            <div class="flex">
+              <div class="left">
+                <ul>
+                  <li>Task completion.</li>
+                  <li>Time on task.</li>
+                  <li>Notes.</li>
+                  <li>Interview responses.</li>
+                  <li>Survey responses.</li>
+                  <li>… then what?</li>
+                </ul>
+              </div>
+              <div class="right"><img data-src="../shared_images/user-study-result.png">
+                <div class="tiny"><a href="">Table source: Stasko, J., Catrambone, R., Guzdial, M., & McDonald, K. (2000). An evaluation of space-filling information visualizations for depicting hierarchical structures.</a></div>
+              </div>
+            </div>
+            <aside class="notes">
+              How is the task completion recorded, does the analyst note it themsleves, do they write something down.
+              
+            </aside>
+          </section>
+          <section>
+            <h3>What is the analyst’s information scent?</h3>
+            <aside class="notes">
+              A term originating from Peter Pirolli and Stuart Card PARC looking at    meaning
+              Accounts for not just completion but also situating WHAT the person was doing, may wish to do think aloud as well. It’s not always obvious what leads to the challenge.  Like a detective, not always obvious. Transating to design.
+              
+            </aside>
+          </section>
+          <section>
+            <h3>MoSCoW Prioritization</h3>
+            <ul>
+              <li>Must.</li>
+              <li>Should.</li>
+              <li>Could.</li>
+              <li>Won't.</li>
+            </ul>
+            <aside class="notes">
+              Discuss brief history, came from the dynamic software development method.
+              
+            </aside>
+          </section>
+          <section>
+            <h3>Severity Ratings</h3>
+            <ol>
+              <li>Not a real problem.</li>
+              <li>Cosmetic.</li>
+              <li>Minor usability issue.</li>
+              <li>Major usability issue.</li>
+              <li>Critical issue.</li>
+            </ol>
+            <aside class="notes"></aside>
+          </section>
+          <section>
+            <h3>Limitations</h3>
+            <ol>
+              <li>Ecological validity</li>
+              <li>Are performance-oriented tasks the complete story?</li>
+            </ol>
+            <aside class="notes"></aside>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h2>Usability Study Demo</h2>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h2>Interview Michael Bessey</h2>
+            <p>Michael Bessey leads the Data Visualization team in MassMutual's centralized Data Science Department. Through his time here, Michael has led efforts to build and rebuild visualization systems that drive decision making through the top levels of the company.</p>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h2>Interview Fereshteh Amini</h2>
+            <p>Fereshteh Amini is a Data Visualization Specialist at Microsoft with a PhD from the University of Manitoba.</p>
+          </section>
+        </section>
+        <!-- Design principles-->
+        <section>
+          <h2>References</h2>
+          <ul>
+            <li><a href="http://cs.umd.edu/hcil/DTUI6/">Shneiderman, B. and Plaisant, C., 1987. Designing the user interface: Strategies for effective human-computer interaction</a></li>
+            <li><a href="http://www.id-book.com/">Rogers, Y., Sharp, H., Preece, J. and Tepper, M., 2007. Interaction design: beyond human-computer interaction.</a></li>
+            <li><a href="https://www.amazon.com/Doing-Psychology-Experiments-David-Martin/dp/0495115770"> Martin, D.W., 2007. Doing psychology experiments. Cengage Learning.</a></li>
+          </ul>
+        </section>
+        <section id="review">
+          <section>
+            <h2>What we learned</h2>
+            <ul class="small"></ul>
+          </section>
+        </section>
+      </div>
+    </div>
+    <script src="../js/reveal.js"></script>
+    <script src="../plugin/zoom/zoom.js"></script>
+    <script src="../plugin/notes/notes.js"></script>
+    <script src="../plugin/search/search.js"></script>
+    <script src="../plugin/markdown/markdown.js"></script>
+    <script src="../plugin/highlight/highlight.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.13.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.13.1"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite-api@0.11.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-tooltip@0.23.2"></script>
+    <script>
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        hash: true,
+        //- transition: "convex",
+      
+        //- width: "100%",
+        //- height: "720px",
+      
+        plugins: [ RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight ]
+      });
+    </script>
+    <script>
+      (function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,"script","https://www.google-analytics.com/analytics.js","ga");
+      
+      ga("create", "UA-72531610-1", "auto");
+      ga("send", "pageview");
+    </script>
+  </body>
+</html>

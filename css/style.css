@@ -104,6 +104,8 @@ ul
 }
 .reveal img.demo {
   max-height: 500px;
+  width: auto;
+  height: auto;
 }
 .reveal iframe.demo {
   width: 100%;
@@ -304,7 +306,7 @@ ul
   margin-left: 1.5%;
 }
 .reveal .flex .half {
-  width: 40%;
+  width: 45%;
   margin: auto;
 }
 .reveal .flex .twothirds {

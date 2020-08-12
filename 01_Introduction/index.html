@@ -1,4 +1,254 @@
-<!DOCTYPE html><html lang="en"><head><title>Week 1 Introduction. MIDS W209 Information Visualization Slides</title><meta charset="utf-8"><meta name="author" content="John Alexis Guerra Gómez"><meta name="description" content="Week 1 Introduction. MIDS W209 Information Visualization Slides. "><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fjalla+One|Raleway|PT+Sans+Narrow"><link rel="stylesheet" href="https://use.typekit.net/yjc0afr.css"><link rel="stylesheet" href="../plugin/highlight/monokai.css" id="highlight-theme"><link href="../css/reveal.css" rel="stylesheet"><link href="../css/theme/white.css" rel="stylesheet" id="theme"><link href="../css/style.css" rel="stylesheet"></head><body><div class="reveal"><div class="slides"><section><h1 class="title">Introduction<br><small>MIDS W209: Information Visualization</small></h1><div class="r-stretch"></div><div class="tiny"><a href="https://johnguerra.co/" target="_blank"><strong> John Alexis Guerra Gómez</strong></a><span> |  john.guerra[at]gmail.com</span><a href="https://twitter.com/duto_guerra"> |  @duto_guerra</a><br><a href="https://andyreagan.com/" target="_blank"><strong> Andy Reagan</strong></a><span> |  andy[at]andyreagan.com</span><a href="https://twitter.com/andyreagan"> |  @andyreagan</a><br><a href="https://johnguerra.co/lectures/MIDS_W209_Information_Visualization/01_Introduction/" target="_blank">https://johnguerra.co/lectures/MIDS_W209_Information_Visualization/01_Introduction/</a></div><div class="logo"><a href="https://datascience.berkeley.edu/"><img class="logo" src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo"></a></div><div class="tiny">Partially based on<a href="https://www.cs.ubc.ca/~tmm/talks.html#minicourse14"> slides from Tamara Munzner</a></div></section><section><section><h2>What we are going to learn</h2><ul><li>Infovis definition</li><li class="fragment">Why should we visualize?</li><li class="fragment">What are insights?</li><li class="fragment">Problem abstraction</li><li class="fragment">Visualization tools landscape</li></ul></section></section><section id="definitions"><section><h1>Definitions</h1></section><section><h2>Defining Information Visualization (vis)</h2><p>Computer-based visualization systems provide visual representations of datasets<span class="fragment"> designed to help people carry out <strong>tasks</strong> more effectively.</span></p><p class="fragment">Why?</p></section><section><h2>Have the human in the loop</h2><p>Visualization is suitable when there is a need to <strong>augment human capabilities</strong> rather than replace people with computational decision-making methods.</p></section><section><h2>Three requirements</h2><br><div class="flex"><div class="third fragment"><strong>Users</strong></div><div class="third fragment"><strong>Data</strong></div><div class="third fragment"><strong>Tasks</strong></div></div><br><div class="fragment">A good visualization enables <strong>users</strong> to complete <strong>tasks</strong> effectively on the <strong>data</strong>.</div></section><section><h2>When not to use vis</h2><p>Don’t need vis when fully automatic solution exists and is trusted</p></section><section><h2>But...</h2><ul><li>Many analysis problems are ill-specified.</li><ul><li class="fragment">Don’t know exactly what questions to ask in advance</li></ul></ul></section><section><h2>What vis allows for</h2><ul class="small"><li class="fragment">Long-term use for end users (e.g., exploratory analysis of scientific data)</li><li class="fragment">Presentation of known results</li><li class="fragment">Stepping stone to better understanding of requirements before developing models</li><li class="fragment">Helps developers of automatic solution refine/debug, determine parameters</li><li class="fragment">Helps end users of automatic solutions verify, build trust</li></ul></section><section><h2>Why use an external representation?</h2><p>Computer-based visualization systems provide <strong>visual representations</strong> of datasets designed to help people carry out tasks more effectively.</p></section><section><h2 class="demo">Why use an external representation?</h2><p class="fragment">External representation: <span class="fragment">replace cognition <span class="fragment">with perception</span></span></p><img class="fragment side" src="../shared_images/cognition.png"><img class="fragment side" src="../shared_images/perception.png"><span class="clear"></span><p class="small tiny fragment">[Cerebral: Visualizing Multiple Experimental Conditions on a Graph with Biological Context. Barsky, Munzner, Gardy, and Kincaid. IEEE TVCG (Proc. InfoVis) 14(6):1253-1260, 2008.]</p></section><section><h2>Why use a computer in the loop?</h2><p><strong>Computer-based</strong> visualization systems provide visual representations of datasets designed to help people carry out tasks more effectively.</p></section><section><h2>Why have a computer in the loop?</h2><ul><li class="fragment">Beyond human patience</li><li class="fragment">Scale to large datasets</li><li class="fragment">Support interactivity</li></ul></section><section><h2>Why depend on vision?</h2><p>Computer-based visualization systems provide <strong>visual</strong> representations of datasets designed to help people carry out tasks more effectively.</p></section><section><h3>Why depend on vision?</h3><ul class="tiny"><li class="fragment">Human visual system is high-bandwidth channel to brain</li><ul><li class="fragment">Overview possible due to background processing</li><li class="fragment">Subjective experience of seeing everything simultaneously</li><li class="fragment">Significant processing occurs in parallel and pre-attentively</li></ul><li class="fragment">Sound: lower bandwidth and different semantics</li><ul><li class="fragment">Overview not supported</li><li class="fragment">Subjective experience of sequential stream</li></ul><li class="fragment">Touch/haptics: impoverished record/replay capacity<ul><li class="fragment">Only very low-bandwidth communication thus far</li></ul></li><li class="fragment">Taste, smell: no viable record/replay devices</li></ul></section><section><h2>Why show data in detail?</h2><ul><li class="fragment">Summaries lose information.</li><ul><li class="fragment">Confirm expected and find unexpected patterns.</li><li class="fragment">Assess validity of statistical model.</li></ul></ul></section><section><div><img src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo"></div></section></section><section id="vizDesignSpace"><section><h1>Visualization Design Space</h1></section><section><h1>Idioms</h1><p>Distinct approach to creating or manipulating visual representations</p></section><section><h2>Think about...</h2><p>In how many ways can you visualize the numbers 13 and 23?</p></section><section><h2>Idiom design space</h2><p>The design space of possible vis idioms is huge and includes the considerations of both how to create and how to interact with visual representations.</p></section><section><h2>Idioms</h2><ul class="small"><li class="fragment">How to draw it: <strong>visual encoding</strong> idiom</li><ul><li class="fragment">Many possibilities for how to create</li></ul><li class="fragment">How to manipulate it: <strong>interaction</strong> idiom</li><ul><li class="fragment">Even more possibilities</li><li class="fragment">Make single idiom dynamic</li><li class="fragment">Link multiple idioms together through interaction</li></ul></ul></section><section><h3>Why focus on tasks and effectiveness?</h3><p>Computer-based visualization systems provide visual representations of datasets designed to help people carry out <strong>tasks</strong> more <strong>effectively</strong>.</p></section><section><h3>Why focus on tasks and effectiveness?</h3><ul class="small"><li class="fragment">Tasks serve as constraint on design (as do data)</li><ul><li class="fragment">Idioms do not serve all tasks equally!</li><li class="fragment">Challenge: recast tasks from domain-specific vocabulary to abstract forms</li></ul><li class="fragment">Most possibilities ineffective</li><ul><li class="fragment">Validation is necessary, but tricky</li><li class="fragment">Increases chance of finding good solutions if you understand full space of possibilities</li></ul></ul></section><section><h3>What counts as effective?</h3><ul><li class="fragment">Novel: enable entirely new kinds of analysis</li><li class="fragment">Faster: speed up existing workflows</li></ul></section><section><h2>Resource limitations</h2><p>Vis designers must take into account three very different kinds of resource limitations: those of computers, of humans, and of displays.</p></section><section><h2>Computational limits</h2><ul><li class="fragment">Processing time</li><li class="fragment">System memory</li></ul></section><section><h2>Human limits</h2><ul><li class="fragment">Human attention</li><li class="fragment">Memory</li><li class="fragment">Retention</li></ul></section><section><h2>Display limits</h2><ul><li class="fragment">Pixels are precious resource, the most constrained resource</li><li class="fragment">Information density: ratio of space used to encode information vs. unused white space</li><ul><li class="fragment">Trade-off between clutter and wasting space, find sweet spot between dense and sparse</li></ul></ul></section><section><div><img src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo"></div></section></section><section id="whyVisualize"><section><h1>Why should we visualize?</h1></section><section><h3>The purpose of visualization is <strong>insight</strong>, not pictures</h3><div class="portrait"><a class="right" href="https://medium.com/multiple-views-visualization-research-explained/the-purpose-of-visualization-is-insight-not-pictures-an-interview-with-visualization-pioneer-ben-beb15b2d8e9b" target="_blank" rel="noopener noreferrer"><div><img src="../shared_images/ben_pic_fp_cropped.jpg" alt="Ben Shneiderman photo"></div><div class="small">Ben Shneiderman</div></a></div></section><section><h3>The purpose of data science is <strong>insight</strong>, not (just) models</h3><div class="portrait"><a class="right"><img src="../shared_images/foto_JohnGuerra_2019.jpg" alt="My photo"><br><span class="small">John Alexis Guerra Gómez</span></a></div></section><section class="full"><h3>Anscombe's quartet</h3><table class="anscombeTable">
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Week 1 Introduction. MIDS W209 Information Visualization Slides</title>
+    <meta charset="utf-8">
+    <meta name="author" content="John Alexis Guerra Gómez">
+    <meta name="description" content="Week 1 Introduction. MIDS W209 Information Visualization Slides. ">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fjalla+One|Raleway|PT+Sans+Narrow">
+    <link rel="stylesheet" href="https://use.typekit.net/yjc0afr.css">
+    <link rel="stylesheet" href="../plugin/highlight/monokai.css" id="highlight-theme">
+    <link href="../css/reveal.css" rel="stylesheet">
+    <link href="../css/theme/white.css" rel="stylesheet" id="theme">
+    <link href="../css/style.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h1 class="title">Introduction<br><small>MIDS W209: Information Visualization</small></h1>
+          <div class="r-stretch"></div>
+          <div class="tiny"><a href="https://johnguerra.co/" target="_blank"><strong> John Alexis Guerra Gómez</strong></a><span> |  john.guerra[at]gmail.com</span><a href="https://twitter.com/duto_guerra"> |  @duto_guerra</a><br><a href="https://andyreagan.com/" target="_blank"><strong> Andy Reagan</strong></a><span> |  andy[at]andyreagan.com</span><a href="https://twitter.com/andyreagan"> |  @andyreagan</a><br><a href="https://johnguerra.co/lectures/MIDS_W209_Information_Visualization/01_Introduction/" target="_blank">https://johnguerra.co/lectures/MIDS_W209_Information_Visualization/01_Introduction/</a></div>
+          <div class="logo"><a href="https://datascience.berkeley.edu/"><img class="logo" src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo"></a></div>
+          <div class="tiny">Partially based on<a href="https://www.cs.ubc.ca/~tmm/talks.html#minicourse14"> slides from Tamara Munzner</a></div>
+        </section>
+        <section>
+          <section>
+            <h2>What we are going to learn</h2>
+            <ul>
+              <li>Infovis definition</li>
+              <li class="fragment">Why should we visualize?</li>
+              <li class="fragment">What are insights?</li>
+              <li class="fragment">Problem abstraction</li>
+              <li class="fragment">Visualization tools landscape</li>
+            </ul>
+          </section>
+        </section>
+        <section id="definitions">
+          <section>
+            <h1>Definitions</h1>
+          </section>
+          <section>
+            <h2>Defining Information Visualization (vis)</h2>
+            <p>Computer-based visualization systems provide visual representations of datasets<span class="fragment"> designed to help people carry out <strong>tasks</strong> more effectively.</span></p>
+            <p class="fragment">Why?</p>
+          </section>
+          <section>
+            <h2>Have the human in the loop</h2>
+            <p>Visualization is suitable when there is a need to <strong>augment human capabilities</strong> rather than replace people with computational decision-making methods.</p>
+          </section>
+          <section>
+            <h2>Three requirements</h2><br>
+            <div class="flex">
+              <div class="third fragment"><strong>Users</strong></div>
+              <div class="third fragment"><strong>Data</strong></div>
+              <div class="third fragment"><strong>Tasks</strong></div>
+            </div><br>
+            <div class="fragment">A good visualization enables <strong>users</strong> to complete <strong>tasks</strong> effectively on the <strong>data</strong>.</div>
+          </section>
+          <section>
+            <h2>When not to use vis</h2>
+            <p>Don’t need vis when fully automatic solution exists and is trusted</p>
+          </section>
+          <section>
+            <h2>But...</h2>
+            <ul>
+              <li>Many analysis problems are ill-specified.</li>
+              <ul>
+                <li class="fragment">Don’t know exactly what questions to ask in advance</li>
+              </ul>
+            </ul>
+          </section>
+          <section>
+            <h2>What vis allows for</h2>
+            <ul class="small">
+              <li class="fragment">Long-term use for end users (e.g., exploratory analysis of scientific data)</li>
+              <li class="fragment">Presentation of known results</li>
+              <li class="fragment">Stepping stone to better understanding of requirements before developing models</li>
+              <li class="fragment">Helps developers of automatic solution refine/debug, determine parameters</li>
+              <li class="fragment">Helps end users of automatic solutions verify, build trust</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Why use an external representation?</h2>
+            <p>Computer-based visualization systems provide <strong>visual representations</strong> of datasets designed to help people carry out tasks more effectively.</p>
+          </section>
+          <section>
+            <h2 class="demo">Why use an external representation?</h2>
+            <p class="fragment">External representation: <span class="fragment">replace cognition <span class="fragment">with perception</span></span></p><img class="fragment side" src="../shared_images/cognition.png"><img class="fragment side" src="../shared_images/perception.png"><span class="clear"></span>
+            <p class="small tiny fragment">[Cerebral: Visualizing Multiple Experimental Conditions on a Graph with Biological Context. Barsky, Munzner, Gardy, and Kincaid. IEEE TVCG (Proc. InfoVis) 14(6):1253-1260, 2008.]</p>
+          </section>
+          <section>
+            <h2>Why use a computer in the loop?</h2>
+            <p><strong>Computer-based</strong> visualization systems provide visual representations of datasets designed to help people carry out tasks more effectively.</p>
+          </section>
+          <section>
+            <h2>Why have a computer in the loop?</h2>
+            <ul>
+              <li class="fragment">Beyond human patience</li>
+              <li class="fragment">Scale to large datasets</li>
+              <li class="fragment">Support interactivity</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Why depend on vision?</h2>
+            <p>Computer-based visualization systems provide <strong>visual</strong> representations of datasets designed to help people carry out tasks more effectively.</p>
+          </section>
+          <section>
+            <h3>Why depend on vision?</h3>
+            <ul class="tiny">
+              <li class="fragment">Human visual system is high-bandwidth channel to brain</li>
+              <ul>
+                <li class="fragment">Overview possible due to background processing</li>
+                <li class="fragment">Subjective experience of seeing everything simultaneously</li>
+                <li class="fragment">Significant processing occurs in parallel and pre-attentively</li>
+              </ul>
+              <li class="fragment">Sound: lower bandwidth and different semantics</li>
+              <ul>
+                <li class="fragment">Overview not supported</li>
+                <li class="fragment">Subjective experience of sequential stream</li>
+              </ul>
+              <li class="fragment">Touch/haptics: impoverished record/replay capacity
+                <ul>
+                  <li class="fragment">Only very low-bandwidth communication thus far</li>
+                </ul>
+              </li>
+              <li class="fragment">Taste, smell: no viable record/replay devices</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Why show data in detail?</h2>
+            <ul>
+              <li class="fragment">Summaries lose information.</li>
+              <ul>
+                <li class="fragment">Confirm expected and find unexpected patterns.</li>
+                <li class="fragment">Assess validity of statistical model.</li>
+              </ul>
+            </ul>
+          </section>
+          <section>
+            <div><img src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo"></div>
+          </section>
+        </section>
+        <section id="vizDesignSpace">
+          <section>
+            <h1>Visualization Design Space</h1>
+          </section>
+          <section>
+            <h1>Idioms</h1>
+            <p>Distinct approach to creating or manipulating visual representations</p>
+          </section>
+          <section>
+            <h2>Think about...</h2>
+            <p>In how many ways can you visualize the numbers 13 and 23?</p>
+          </section>
+          <section>
+            <h2>Idiom design space</h2>
+            <p>The design space of possible vis idioms is huge and includes the considerations of both how to create and how to interact with visual representations.</p>
+          </section>
+          <section>
+            <h2>Idioms</h2>
+            <ul class="small">
+              <li class="fragment">How to draw it: <strong>visual encoding</strong> idiom</li>
+              <ul>
+                <li class="fragment">Many possibilities for how to create</li>
+              </ul>
+              <li class="fragment">How to manipulate it: <strong>interaction</strong> idiom</li>
+              <ul>
+                <li class="fragment">Even more possibilities</li>
+                <li class="fragment">Make single idiom dynamic</li>
+                <li class="fragment">Link multiple idioms together through interaction</li>
+              </ul>
+            </ul>
+          </section>
+          <section>
+            <h3>Why focus on tasks and effectiveness?</h3>
+            <p>Computer-based visualization systems provide visual representations of datasets designed to help people carry out <strong>tasks</strong> more <strong>effectively</strong>.</p>
+          </section>
+          <section>
+            <h3>Why focus on tasks and effectiveness?</h3>
+            <ul class="small">
+              <li class="fragment">Tasks serve as constraint on design (as do data)</li>
+              <ul>
+                <li class="fragment">Idioms do not serve all tasks equally!</li>
+                <li class="fragment">Challenge: recast tasks from domain-specific vocabulary to abstract forms</li>
+              </ul>
+              <li class="fragment">Most possibilities ineffective</li>
+              <ul>
+                <li class="fragment">Validation is necessary, but tricky</li>
+                <li class="fragment">Increases chance of finding good solutions if you understand full space of possibilities</li>
+              </ul>
+            </ul>
+          </section>
+          <section>
+            <h3>What counts as effective?</h3>
+            <ul>
+              <li class="fragment">Novel: enable entirely new kinds of analysis</li>
+              <li class="fragment">Faster: speed up existing workflows</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Resource limitations</h2>
+            <p>Vis designers must take into account three very different kinds of resource limitations: those of computers, of humans, and of displays.</p>
+          </section>
+          <section>
+            <h2>Computational limits</h2>
+            <ul>
+              <li class="fragment">Processing time</li>
+              <li class="fragment">System memory</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Human limits</h2>
+            <ul>
+              <li class="fragment">Human attention</li>
+              <li class="fragment">Memory</li>
+              <li class="fragment">Retention</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Display limits</h2>
+            <ul>
+              <li class="fragment">Pixels are precious resource, the most constrained resource</li>
+              <li class="fragment">Information density: ratio of space used to encode information vs. unused white space</li>
+              <ul>
+                <li class="fragment">Trade-off between clutter and wasting space, find sweet spot between dense and sparse</li>
+              </ul>
+            </ul>
+          </section>
+          <section>
+            <div><img src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo"></div>
+          </section>
+        </section>
+        <section id="whyVisualize">
+          <section>
+            <h1>Why should we visualize?</h1>
+          </section>
+          <section>
+            <h3>The purpose of visualization is <strong>insight</strong>, not pictures</h3>
+            <div class="portrait"><a class="right" href="https://medium.com/multiple-views-visualization-research-explained/the-purpose-of-visualization-is-insight-not-pictures-an-interview-with-visualization-pioneer-ben-beb15b2d8e9b" target="_blank" rel="noopener noreferrer">
+                <div><img style="width:auto" src="../shared_images/ben_pic_fp_cropped.jpg" alt="Ben Shneiderman photo"></div>
+                <div class="small">Ben Shneiderman</div></a></div>
+          </section>
+          <section>
+            <h3>The purpose of data science is <strong>insight</strong>, not (just) models</h3>
+            <div class="portrait"><a class="right"><img style="width:auto" src="../shared_images/foto_JohnGuerra_2019.jpg" alt="My photo"><br><span class="small">John Alexis Guerra Gómez</span></a></div>
+          </section>
+          <section class="full">
+            <h3>Anscombe's quartet</h3><table class="anscombeTable">
        <tbody>
               <tr>
                      <th colspan="2">I</th>
@@ -128,79 +378,456 @@
               </tr>
        </tbody>
 </table>
-<span class="fragment anscombeResult" style="margin-left:20px"><table>
-<tbody><tr>
-<th>Property</th>
-<th>Value</th>
-</tr>
-<tr>
-<td>Mean of <i>x</i></td>
-<td>9</td>
-</tr>
-<tr>
-<td>Variance</a> of <i>x</i></td>
-<td>11</td>
-</tr>
-<tr>
-<td>Mean of <i>y</i></td>
-<td>7.50</td>
-</tr>
-<tr>
-<td>Variance of <i>y</i></td>
-<td>4.125</td>
-</tr>
-<tr>
-<td>Correlation between <i>x</i> and <i>y</i></td>
-<td>0.816</td>
-</tr>
-<tr>
-<td>Linear regression</td>
-<td><i>y</i>&nbsp;=&nbsp;3.00&nbsp;+&nbsp;0.500<i>x</i></td>
-</tr>
-<tr>
-<td>Coefficient of determination of the linear regression</td>
-<td>0.67</td>
-</tr>
-</tbody></table>
-</span></section><section><h2>Anscombe's visualized</h2><div><div id="observablehq-c877aaaf"></div>
-<script type="module">
-import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
-import define from "https://api.observablehq.com/@john-guerra/anscombes-quartet.js?v=3";
-const inspect = Inspector.into("#observablehq-c877aaaf");
-(new Runtime).module(define, name => name === "anscombe" ? inspect() : undefined);
-</script>
-</div></section><section><h3>More examples, same statistics</h3><img class="r-stretch" src="../shared_images/datasaurus-dozen.png"><div><a class="tiny" href="https://dabblingwithdata.wordpress.com/2017/05/03/the-datasaurus-a-monstrous-anscombe-for-the-21st-century/">https://dabblingwithdata.wordpress.com/2017/05/03/the-datasaurus-a-monstrous-anscombe-for-the-21st-century/</a></div></section><section><h3>Datasaurus!</h3><img class="r-stretch" src="../shared_images/datasaurus-main.png"><div><a class="tiny" href="https://dabblingwithdata.wordpress.com/2017/05/03/the-datasaurus-a-monstrous-anscombe-for-the-21st-century/">https://dabblingwithdata.wordpress.com/2017/05/03/the-datasaurus-a-monstrous-anscombe-for-the-21st-century/</a></div></section><section><div><img src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo"></div></section></section><section id="visualAnalytics"><section><h1>Visual Analytics</h1><div>How do people do data science?</div></section><section data-background-image="../shared_images/DS_to_VA_01.svg" alt="Data Science to Visual Analytics" data-background-size="contain"></section><section data-background-image="../shared_images/DS_to_VA_02.svg" alt="Data Science to Visual Analytics" data-background-size="contain"></section><section data-background-image="../shared_images/DS_to_VA_03.svg" alt="Data Science to Visual Analytics" data-background-size="contain"></section><section data-background-image="../shared_images/DS_to_VA_04.svg" alt="Data Science to Visual Analytics" data-background-size="contain"></section><section data-background-image="../shared_images/DS_to_VA_05.svg" alt="Data Science to Visual Analytics" data-background-size="contain"></section><section data-background-image="../shared_images/DS_to_VA_06.svg" alt="Data Science to Visual Analytics" data-background-size="contain"></section><section><table id="comparisonTable"><tr><td class="fragment"><h2>Traditional</h2><ul><li>Query for known patterns</li><li>Display results using  traditional techniques</li></ul><br><strong>Pros:</strong><br><ul><li>Many solutions</li><li>Easier to implement</li></ul><br><strong>Cons:</strong><br><ul><li>Can’t search for the unexpected</li></ul></td><td class="fragment"><h2>Data Mining/ML</h2><ul><li>Based on statistics</li><li>Black box approach</li><li>Output outliers and correlations</li><li> Human out of the loop</li></ul><br><strong>Pros:</strong><br><ul><li> Scalable</li></ul><br><strong>Cons:</strong><ul><li> Analysts have to make sense of the results</li><li> Makes assumptions on the data</li></ul></td><td class="fragment"><h2>InfoVis</h2><ul><li> Visual interactive interfaces</li><li> Human in the loop</li></ul><br><strong>Pros:</strong><br><ul><li> Visual bandwidth is enormous</li><li> Experts decided what to search for</li><li> Identify unknown patterns and errors in the data</li></ul><br><strong>Cons</strong><br><ul><li>Scalability can be an issue</li></ul></td></tr></table></section><section id="insight"><h2>In Infovis, we look for insights</h2><ul><li class="fragment">Deep understanding</li><li class="fragment">Meaningful</li><li class="fragment">Non-obvious</li><li class="fragment">Actionable</li><li class="fragment">Based on data</li></ul></section><section><h2>An insight is:</h2><ul><li class="fragment">Something that the <strong>user</strong> can learn from the <strong>data</strong> using the <strong>infovis</strong></li><li class="fragment">Which she didn't know/expect</li><li class="fragment">Also, is useful/needed for her</li><li class="fragment">Moreover, she didn't know of it</li><li class="fragment">And that she can leverage</li></ul></section><section><div><img src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo"></div></section></section><section id="insights"><section id="insightsExample"><h1>Insights</h1></section><section id="InsightTweetometro"><h2>Tweetometro</h2><p>Task: Twitter behavior during presidential elections</p><p>User: me</p></section><section><iframe class="r-stretch" src="http://old.tweetometro.co" alt="../shared_images/tweetometro.png"></iframe><a href="http://old.tweetometro.co">http://old.tweetometro.co</a></section><section><h2>Normal tweets</h2><img class="r-stretch" src="../shared_images/all_tweets_May_25_2014.png" alt="All tweets collected, line chart of number of retweets by time for the first two hours"></section><section><h2>Weird tweets?</h2><img class="r-stretch" src="../shared_images/suspicious_tweets_May_25_2014.png" alt="Suspicious tweets, that increased to many retweets in one second"></section><section><h2>Creation dates</h2><img class="r-stretch" src="../shared_images/user_creation_date_May_25_2014.png" al="User creation dates, most of them belong to the same week"></section><section><h2>Number of followers</h2><img class="r-stretch" src="../shared_images/num_followers_May_25_2014.png" alt="Number of followers"></section><section class="full"><span class="r-stretch"><div class='tableauPlaceholder' id='viz1593024408194' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;An&#47;AnlisisPosiblesRobotsEleccionesColombiaMay25&#47;AnlisisEleccionesPresidencialesColombia&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='AnlisisPosiblesRobotsEleccionesColombiaMay25&#47;AnlisisEleccionesPresidencialesColombia' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;An&#47;AnlisisPosiblesRobotsEleccionesColombiaMay25&#47;AnlisisEleccionesPresidencialesColombia&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en' /></object></div>
-<script type='text/javascript'>
-  var divElement = document.getElementById("viz1593024408194");
-  var vizElement = divElement.getElementsByTagName("object")[0];
-  vizElement.style.minWidth = "960px";
-  vizElement.style.maxWidth = "100%";
-  vizElement.style.minHeight = "587px";
-  vizElement.style.maxHeight = divElement.offsetWidth * 0.75 + "px";
-  var scriptElement = document.createElement("script");
-  scriptElement.src = "https://public.tableau.com/javascripts/api/viz_v1.js";
-  vizElement.parentNode.insertBefore(scriptElement, vizElement);
-
-</script>
-
-</span><a class="tiny" href="https://public.tableau.com/profile/john.alexis.guerra.g.mez#!/vizhome/AnlisisPosiblesRobotsEleccionesColombiaMay25/AnlisisEleccionesPresidencialesColombia">Dashboard link</a></section><section id="InsightCars"><h2>What car to buy?</h2><p>User: person buying a car</p><p>Task: What's the best car to buy?</p><p>Data: all cars on sale</p></section><section><h2>Normal procedure</h2><p>Ask friends and family</p></section><section id="Renault4" data-background="../shared_images/renault4.jpg"></section><section id="Renault4Pimped" data-background="../shared_images/renault4_pimped.jpg"></section><section id="Renault4Crashed" data-background="../shared_images/renault4_crashed.jpg"></section><section><h2>Problem</h2><p>That's inferring statistics from a sample n = 1</p></section><section><h2>Better approach</h2><p>Data-based decisions</p></section><section><img src="../shared_images/tucarro.png"><a href="https://tucarro.com">https://tucarro.com</a></section><section data-background-iframe="https://johnguerra.co/viz/carrosUsados/todosPuntos.html"></section><section data-background-iframe="https://johnguerra.co/viz/carrosUsados/depreciacionMarcas.html"></section><section data-background-iframe="https://johnguerra.co/viz/carrosUsados/depreciacionesCarros.html"></section><section><h2>Jeep Willys</h2><div class="flex"><ul class="half small"><li>Colombia bought many Jeeps after the war</li><li>They are the a sort of mountain taxi</li><li>There is a trend to pimp them up</li></ul><div class="half"><img src="../shared_images/Willys_small.jpg" alt="Colombian Jeep Willys. Foto by John Alexis Guerra Gómez"></div></div></section><section><div><img src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo"></div></section></section><section id="problemAbstraction"><section><h1>Problem Abstraction</h1></section><section><h2 class="demo">What/Why/How</h2><div class="flex"><div class="twothirds small line-compressed"><ul><li class="fragment"><strong style="color:#ce4113">What</strong> is visualized?<ul><li><strong>data </strong> abstraction</li></ul></li><li class="fragment"><strong style="color:#e8b32d">Why</strong> is the user looking at it?<ul><li><strong>task </strong> abstraction</li></ul></li><li class="fragment"><strong style="color:#6ada6f">How</strong> is visualized?<ul><li><strong>idiom </strong> visual encoding and interaction</li></ul></li></ul><br><span class="small"><div class="left-align fragment">Abstract language avoids domain specific pitfals</div><div class="left-align fragment">What/Why/How to navigate systematically the design space</div></span></div><div class="third"><img style="max-height:300px" src="../shared_images/what_why_how.png"></div></div></section><section data-background-size="contain" data-background="../shared_images/what_sheet.png" id="what"></section><section data-background-size="contain" data-background="../shared_images/why_sheet.png" id="why"></section><section data-background-size="contain" data-background="../shared_images/how_sheet.png" id="how"></section><section><h2>Abstraction Example</h2></section><section><h2 class="demo">SpaceTree</h2><iframe class="r-stretch" src="https://www.cs.umd.edu/hcil/spacetree/"></iframe><a class="tiny" href="https://www.cs.umd.edu/hcil/spacetree/">http://www.cs.umd.edu/hcil/spacetree/</a></section><section><h2 class="demo">SpaceTree</h2><span><iframe width="640" height="480" src="https://www.youtube.com/embed/-vXRJ_Ry_yE?rel=0" frameborder="0" allowfullscreen></iframe>
-</span></section><section><h2 class="demo">TreeJuxtaposer</h2><iframe class="r-stretch" src="https://www.cs.ubc.ca/~tmm/papers/tj/"></iframe><a class="tiny" href="https://www.cs.ubc.ca/~tmm/papers/tj/">https://www.cs.ubc.ca/~tmm/papers/tj/</a></section><section><h2 class="demo">TreeJuxtaposer</h2><span><iframe width="640" height="480" src="https://www.youtube.com/embed/GdaPj8a9QEo?rel=0" frameborder="0" allowfullscreen></iframe>
-</span></section><section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/tamara_course14_session1-24.png"></section><section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/tamara_course14_session1-25.png"></section><section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/tamara_course14_session1-26.png"></section><section><div><img src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo"></div></section></section><section id="abstractionExamples"><section><h1>Abstraction in Action</h1></section><section>  <h3>The what/why/how framework allows us to make productive comparisons of different vis idioms. A couple examples:</h3><ul><li>Pie chart vs bar chart</li><li>Word clouds vs word shift graphs</li></ul></section><section><h3>The classic: pie chart vs bar chart.</h3><p>You've seen both. Simply put, the question is ill-formed. No single correct answer! We need the framework:</p><ul><li>What: <strong><span class="fragment">tabular data</span></strong>.</li><li>Idiom: <strong><span class="fragment">bar or pie chart</span></strong>.</li><ul class="fragment"><li class="framgment">How (encode bar chart): line marks, value channel aligned vertical position, key attribute horizontal position.</li><li class="framgment">How (encode bar chart): area marks (wedges), value channel angle.</li></ul><li class="fragment"><strong>Why</strong>: Identify one, the largest group.</li><li class="fragment"><strong>Why</strong>: Identify one, the 2nd/3rd/4th largest group (rank them).</li><li class="fragment"><strong>Why</strong>: Compare value.</li><li class="fragment"><strong>Why</strong>: Identify distribution of parts of the whole, is a group 1/2, 1/3, 1/4 of whole?.</li></ul></section><section><div><img src="../shared_images/1280px-Piecharts.png" alt="Pie vs bar chart."></div><div><a class="tiny" href="https://upload.wikimedia.org/wikipedia/commons/b/b4/Piecharts.svg">image courtesy of WikiPedia</a></div></section><section><h3>Word clouds vs word shift graph</h3><p>You've seen a word cloud, maybe not a word shift graph, let's look at one first.</p></section><section data-background-iframe="http://hedonometer.org/timeseries/en_all/?from=2015-07-16&amp;to=2017-01-12&amp;date=2016-11-09"></section><section><h3>The same data on a word cloud</h3><img src="../shared_images/word_cloud.png" alt="Word cloud."></section><section><ul><li>What: <strong><span class="fragment">Weighted average measure over words</span></strong>.</li><li>Idiom: <strong><span class="fragment">Word cloud vs word shift graph</span></strong>.</li><ul class="fragment"><li class="framgment">How (encode word cloud): mark text, value channel size, spatial position random, color random.</li><li class="framgment">How (encode word shift graph): mark text, mark line, share value channel horizontal position, shared value ranked channel vertical position, line key type channel color.</li></ul><li class="fragment"><strong>Why</strong>: Enjoy.</li><li class="fragment"><strong>Why</strong>: Identify one, the largest word.</li><li class="fragment"><strong>Why</strong>: Identify one, the 2nd/3rd/4th largest word (rank them).</li><li class="fragment"><strong>Why</strong>: Compare distribution of words.</li><li class="fragment"><strong>Why</strong>: Summarize features.</li></ul></section><section><div><img src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo"></div></section></section><section id="practice"><h1>Practice</h1></section><section id="vizToolSpace"><section><h2>The visualization tool space</h2><div class="tiny">Partially based on<a href="https://courses.cs.washington.edu/courses/cse442/17au/lectures/CSE442-Tools.pdf"> slides from Jeff Heer</a></div></section><section class="full" data-transition="none" data-background-size="contain" data-background="../shared_images/Jeff/CSE442-Tools-8.png"><a class="page-watermark" href="https://courses.cs.washington.edu/courses/cse442/17au/lectures/CSE442-Tools.pdf">slides from Jeff Heer</a></section><section class="full" data-transition="none" data-background-size="contain" data-background="../shared_images/Jeff/CSE442-Tools-9.png"><a class="page-watermark" href="https://courses.cs.washington.edu/courses/cse442/17au/lectures/CSE442-Tools.pdf">slides from Jeff Heer</a></section><section class="full" data-transition="none" data-background-size="contain" data-background="../shared_images/Jeff/CSE442-Tools-19.png"><a class="page-watermark" href="https://courses.cs.washington.edu/courses/cse442/17au/lectures/CSE442-Tools.pdf">slides from Jeff Heer</a></section><section class="full" data-transition="none" data-background-size="contain" data-background="../shared_images/Jeff/CSE442-Tools-27.png"><a class="page-watermark" href="https://courses.cs.washington.edu/courses/cse442/17au/lectures/CSE442-Tools.pdf">slides from Jeff Heer</a></section><section class="full" data-transition="none" data-background-size="contain" data-background="../shared_images/Jeff/CSE442-Tools-34.png"><a class="page-watermark" href="https://courses.cs.washington.edu/courses/cse442/17au/lectures/CSE442-Tools.pdf">slides from Jeff Heer</a></section><section class="full" data-transition="none" data-background-size="contain" data-background="../shared_images/Jeff/CSE442-Tools-36.png"><a class="page-watermark" href="https://courses.cs.washington.edu/courses/cse442/17au/lectures/CSE442-Tools.pdf">slides from Jeff Heer</a></section><section class="full" data-transition="none" data-background-size="contain" data-background="../shared_images/Jeff/CSE442-Tools-37.png"><a class="page-watermark" href="https://courses.cs.washington.edu/courses/cse442/17au/lectures/CSE442-Tools.pdf">slides from Jeff Heer</a></section><section id="chooseTool"><h2>Choose your tool</h2><div class="flex bigger"><strong class="quarter r-frame fragment">D3</strong><strong class="quarter r-frame fragment">Vega-lite</strong><strong class="quarter r-frame fragment">Altair</strong><strong class="quarter r-frame fragment">Tableau</strong></div></section><section><div><img src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo"></div></section></section><section id="webDevBasics"><section><h1>Web Development Basics</h1><a class="tiny" href="https://observablehq.com/@observablehq/introduction-to-html">https://observablehq.com/@observablehq/introduction-to-html</a></section><section id="observable"><h1>Introduction to Observable</h1><ul><li><a class="tiny" href="https://observablehq.com/@observablehq/five-minute-introduction">https://observablehq.com/@observablehq/five-minute-introduction</a></li><li><a class="tiny" href="https://observablehq.com/@observablehq/observables-not-javascript">https://observablehq.com/@observablehq/observables-not-javascript</a></li><li><a class="tiny" href="https://observablehq.com/@observablehq/user-manual">https://observablehq.com/@observablehq/user-manual</a></li></ul></section></section><section id="d3Intro"><section><h1 class="demo">Introduction to D3</h1><a class="tiny" href="https://observablehq.com/@d3/learn-d3">https://observablehq.com/@d3/learn-d3</a></section></section><section id="vegaLiteIntro"><section><h1>Introduction to Vega-lite</h1><a class="tiny" href="https://observablehq.com/@uwdata/introduction-to-vega-lite">https://observablehq.com/@uwdata/introduction-to-vega-lite</a></section></section><section id="altairIntro"><section><h1>Introduction to Python and Altair</h1><a class="tiny" href="https://altair-viz.github.io/getting_started/overview.html">https://altair-viz.github.io/getting_started/overview.html</a></section><section><h1>Interview Jake VanderPlas, Part 1</h1></section></section><section id="tableauIntro"><section><h1>Introduction to Tableau</h1><a class="tiny" href="https://www.tableau.com/learn/get-started/creator">https://www.tableau.com/learn/get-started/creator</a></section></section><section id="review"><section><h1>What we learned</h1><ul><li class="fragment">Infovis definition</li><li class="fragment">Why should we visualize?</li><li class="fragment">What are insights?</li><li class="fragment">Problem abstraction</li><li class="fragment">Visualization tools landscape</li></ul></section></section></div></div><script src="../js/reveal.js"></script><script src="../plugin/zoom/zoom.js"></script><script src="../plugin/notes/notes.js"></script><script src="../plugin/search/search.js"></script><script src="../plugin/markdown/markdown.js"></script><script src="../plugin/highlight/highlight.js"></script><script>Reveal.initialize({
-  controls: true,
-  progress: true,
-  history: true,
-  center: true,
-  hash: true,
-  //- transition: "convex",
-
-  //- width: "90%",
-  //- height: "100%",
-
-  plugins: [ RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight ]
-});</script><script>(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,"script","https://www.google-analytics.com/analytics.js","ga");
-
-ga("create", "UA-72531610-1", "auto");
-ga("send", "pageview");</script></body></html>
+<span class="fragment anscombeResult" style="margin-left:20px">
+              <table>
+              <tbody><tr>
+              <th>Property</th>
+              <th>Value</th>
+              </tr>
+              <tr>
+              <td>Mean of <i>x</i></td>
+              <td>9</td>
+              </tr>
+              <tr>
+              <td>Variance</a> of <i>x</i></td>
+              <td>11</td>
+              </tr>
+              <tr>
+              <td>Mean of <i>y</i></td>
+              <td>7.50</td>
+              </tr>
+              <tr>
+              <td>Variance of <i>y</i></td>
+              <td>4.125</td>
+              </tr>
+              <tr>
+              <td>Correlation between <i>x</i> and <i>y</i></td>
+              <td>0.816</td>
+              </tr>
+              <tr>
+              <td>Linear regression</td>
+              <td><i>y</i>&nbsp;=&nbsp;3.00&nbsp;+&nbsp;0.500<i>x</i></td>
+              </tr>
+              <tr>
+              <td>Coefficient of determination of the linear regression</td>
+              <td>0.67</td>
+              </tr>
+              </tbody></table>
+              </span>
+          </section>
+          <section>
+            <h2>Anscombe's visualized</h2>
+            <div>
+              <div id="observablehq-c877aaaf"></div>
+              <script type="module">
+              import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+              import define from "https://api.observablehq.com/@john-guerra/anscombes-quartet.js?v=3";
+              const inspect = Inspector.into("#observablehq-c877aaaf");
+              (new Runtime).module(define, name => name === "anscombe" ? inspect() : undefined);
+              </script>
+              
+            </div>
+          </section>
+          <section>
+            <h3>More examples, same statistics</h3><img class="r-stretch" src="../shared_images/datasaurus-dozen.png">
+            <div><a class="tiny" href="https://dabblingwithdata.wordpress.com/2017/05/03/the-datasaurus-a-monstrous-anscombe-for-the-21st-century/">https://dabblingwithdata.wordpress.com/2017/05/03/the-datasaurus-a-monstrous-anscombe-for-the-21st-century/</a></div>
+          </section>
+          <section>
+            <h3>Datasaurus!</h3><img class="r-stretch" src="../shared_images/datasaurus-main.png">
+            <div><a class="tiny" href="https://dabblingwithdata.wordpress.com/2017/05/03/the-datasaurus-a-monstrous-anscombe-for-the-21st-century/">https://dabblingwithdata.wordpress.com/2017/05/03/the-datasaurus-a-monstrous-anscombe-for-the-21st-century/</a></div>
+          </section>
+          <section>
+            <div><img src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo"></div>
+          </section>
+        </section>
+        <section id="visualAnalytics">
+          <section>
+            <h1>Visual Analytics</h1>
+            <div>How do people do data science?</div>
+          </section>
+          <section data-background-image="../shared_images/DS_to_VA_01.svg" alt="Data Science to Visual Analytics" data-background-size="contain"></section>
+          <section data-background-image="../shared_images/DS_to_VA_02.svg" alt="Data Science to Visual Analytics" data-background-size="contain"></section>
+          <section data-background-image="../shared_images/DS_to_VA_03.svg" alt="Data Science to Visual Analytics" data-background-size="contain"></section>
+          <section data-background-image="../shared_images/DS_to_VA_04.svg" alt="Data Science to Visual Analytics" data-background-size="contain"></section>
+          <section data-background-image="../shared_images/DS_to_VA_05.svg" alt="Data Science to Visual Analytics" data-background-size="contain"></section>
+          <section data-background-image="../shared_images/DS_to_VA_06.svg" alt="Data Science to Visual Analytics" data-background-size="contain"></section>
+          <section>
+            <table id="comparisonTable">
+              <tr>
+                <td class="fragment">
+                  <h2>Traditional</h2>
+                  <ul>
+                    <li>Query for known patterns</li>
+                    <li>Display results using  traditional techniques</li>
+                  </ul><br><strong>Pros:</strong><br>
+                  <ul>
+                    <li>Many solutions</li>
+                    <li>Easier to implement</li>
+                  </ul><br><strong>Cons:</strong><br>
+                  <ul>
+                    <li>Can’t search for the unexpected</li>
+                  </ul>
+                </td>
+                <td class="fragment">
+                  <h2>Data Mining/ML</h2>
+                  <ul>
+                    <li>Based on statistics</li>
+                    <li>Black box approach</li>
+                    <li>Output outliers and correlations</li>
+                    <li> Human out of the loop</li>
+                  </ul><br><strong>Pros:</strong><br>
+                  <ul>
+                    <li> Scalable</li>
+                  </ul><br><strong>Cons:</strong>
+                  <ul>
+                    <li> Analysts have to make sense of the results</li>
+                    <li> Makes assumptions on the data</li>
+                  </ul>
+                </td>
+                <td class="fragment">
+                  <h2>InfoVis</h2>
+                  <ul>
+                    <li> Visual interactive interfaces</li>
+                    <li> Human in the loop</li>
+                  </ul><br><strong>Pros:</strong><br>
+                  <ul>
+                    <li> Visual bandwidth is enormous</li>
+                    <li> Experts decided what to search for</li>
+                    <li> Identify unknown patterns and errors in the data</li>
+                  </ul><br><strong>Cons</strong><br>
+                  <ul>
+                    <li>Scalability can be an issue</li>
+                  </ul>
+                </td>
+              </tr>
+            </table>
+          </section>
+          <section id="insight">
+            <h2>In Infovis, we look for insights</h2>
+            <ul>
+              <li class="fragment">Deep understanding</li>
+              <li class="fragment">Meaningful</li>
+              <li class="fragment">Non-obvious</li>
+              <li class="fragment">Actionable</li>
+              <li class="fragment">Based on data</li>
+            </ul>
+          </section>
+          <section>
+            <h2>An insight is:</h2>
+            <ul>
+              <li class="fragment">Something that the <strong>user</strong> can learn from the <strong>data</strong> using the <strong>infovis</strong></li>
+              <li class="fragment">Which she didn't know/expect</li>
+              <li class="fragment">Also, is useful/needed for her</li>
+              <li class="fragment">Moreover, she didn't know of it</li>
+              <li class="fragment">And that she can leverage</li>
+            </ul>
+          </section>
+          <section>
+            <div><img src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo"></div>
+          </section>
+        </section>
+        <section id="insights">
+          <section id="insightsExample">
+            <h1>Insights</h1>
+          </section>
+          <section id="InsightTweetometro">
+            <h2>Tweetometro</h2>
+            <p>Task: Twitter behavior during presidential elections</p>
+            <p>User: me</p>
+          </section>
+          <section>
+            <iframe class="r-stretch" src="http://old.tweetometro.co" alt="../shared_images/tweetometro.png"></iframe><a href="http://old.tweetometro.co">http://old.tweetometro.co</a>
+          </section>
+          <section>
+            <h2>Normal tweets</h2><img class="r-stretch" src="../shared_images/all_tweets_May_25_2014.png" alt="All tweets collected, line chart of number of retweets by time for the first two hours">
+          </section>
+          <section>
+            <h2>Weird tweets?</h2><img class="r-stretch" src="../shared_images/suspicious_tweets_May_25_2014.png" alt="Suspicious tweets, that increased to many retweets in one second">
+          </section>
+          <section>
+            <h2>Creation dates</h2><img class="r-stretch" src="../shared_images/user_creation_date_May_25_2014.png" al="User creation dates, most of them belong to the same week">
+          </section>
+          <section>
+            <h2>Number of followers</h2><img class="r-stretch" src="../shared_images/num_followers_May_25_2014.png" alt="Number of followers">
+          </section>
+          <section class="full"><span class="r-stretch">
+              <div class='tableauPlaceholder' id='viz1593024408194' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;An&#47;AnlisisPosiblesRobotsEleccionesColombiaMay25&#47;AnlisisEleccionesPresidencialesColombia&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='AnlisisPosiblesRobotsEleccionesColombiaMay25&#47;AnlisisEleccionesPresidencialesColombia' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;An&#47;AnlisisPosiblesRobotsEleccionesColombiaMay25&#47;AnlisisEleccionesPresidencialesColombia&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en' /></object></div>
+              <script type='text/javascript'>
+                var divElement = document.getElementById("viz1593024408194");
+                var vizElement = divElement.getElementsByTagName("object")[0];
+                vizElement.style.minWidth = "960px";
+                vizElement.style.maxWidth = "100%";
+                vizElement.style.minHeight = "587px";
+                vizElement.style.maxHeight = divElement.offsetWidth * 0.75 + "px";
+                var scriptElement = document.createElement("script");
+                scriptElement.src = "https://public.tableau.com/javascripts/api/viz_v1.js";
+                vizElement.parentNode.insertBefore(scriptElement, vizElement);
+              
+              </script>
+              
+              </span><a class="tiny" href="https://public.tableau.com/profile/john.alexis.guerra.g.mez#!/vizhome/AnlisisPosiblesRobotsEleccionesColombiaMay25/AnlisisEleccionesPresidencialesColombia">Dashboard link</a></section>
+          <section id="InsightCars">
+            <h2>What car to buy?</h2>
+            <p>User: person buying a car</p>
+            <p>Task: What's the best car to buy?</p>
+            <p>Data: all cars on sale</p>
+          </section>
+          <section>
+            <h2>Normal procedure</h2>
+            <p>Ask friends and family</p>
+          </section>
+          <section id="Renault4" data-background="../shared_images/renault4.jpg"></section>
+          <section id="Renault4Pimped" data-background="../shared_images/renault4_pimped.jpg"></section>
+          <section id="Renault4Crashed" data-background="../shared_images/renault4_crashed.jpg"></section>
+          <section>
+            <h2>Problem</h2>
+            <p>That's inferring statistics from a sample n = 1</p>
+          </section>
+          <section>
+            <h2>Better approach</h2>
+            <p>Data-based decisions</p>
+          </section>
+          <section><img src="../shared_images/tucarro.png"><a href="https://tucarro.com">https://tucarro.com</a></section>
+          <section data-background-iframe="https://johnguerra.co/viz/carrosUsados/todosPuntos.html"></section>
+          <section data-background-iframe="https://johnguerra.co/viz/carrosUsados/depreciacionMarcas.html"></section>
+          <section data-background-iframe="https://johnguerra.co/viz/carrosUsados/depreciacionesCarros.html"></section>
+          <section>
+            <h2>Jeep Willys</h2>
+            <div class="flex">
+              <ul class="half small">
+                <li>Colombia bought many Jeeps after the war</li>
+                <li>They are the a sort of mountain taxi</li>
+                <li>There is a trend to pimp them up</li>
+              </ul>
+              <div class="half"><img src="../shared_images/Willys_small.jpg" alt="Colombian Jeep Willys. Foto by John Alexis Guerra Gómez"></div>
+            </div>
+          </section>
+          <section>
+            <div><img src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo"></div>
+          </section>
+        </section>
+        <section id="problemAbstraction">
+          <section>
+            <h1>Problem Abstraction</h1>
+          </section>
+          <section>
+            <h2 class="demo">What/Why/How</h2>
+            <div class="flex">
+              <div class="twothirds small line-compressed">
+                <ul>
+                  <li class="fragment"><strong style="color:#ce4113">What</strong> is visualized?
+                    <ul>
+                      <li><strong>data </strong> abstraction</li>
+                    </ul>
+                  </li>
+                  <li class="fragment"><strong style="color:#e8b32d">Why</strong> is the user looking at it?
+                    <ul>
+                      <li><strong>task </strong> abstraction</li>
+                    </ul>
+                  </li>
+                  <li class="fragment"><strong style="color:#6ada6f">How</strong> is visualized?
+                    <ul>
+                      <li><strong>idiom </strong> visual encoding and interaction</li>
+                    </ul>
+                  </li>
+                </ul><br><span class="small">
+                  <div class="left-align fragment">Abstract language avoids domain specific pitfals</div>
+                  <div class="left-align fragment">What/Why/How to navigate systematically the design space</div></span>
+              </div>
+              <div class="third"><img style="max-height:300px" src="../shared_images/what_why_how.png"></div>
+            </div>
+          </section>
+          <section data-background-size="contain" data-background="../shared_images/what_sheet.png" id="what"></section>
+          <section data-background-size="contain" data-background="../shared_images/why_sheet.png" id="why"></section>
+          <section data-background-size="contain" data-background="../shared_images/how_sheet.png" id="how"></section>
+          <section>
+            <h2>Abstraction Example</h2>
+          </section>
+          <section>
+            <h2 class="demo">SpaceTree</h2>
+            <iframe class="r-stretch" src="https://www.cs.umd.edu/hcil/spacetree/"></iframe><a class="tiny" href="https://www.cs.umd.edu/hcil/spacetree/">http://www.cs.umd.edu/hcil/spacetree/</a>
+          </section>
+          <section>
+            <h2 class="demo">SpaceTree</h2><span>
+              <iframe width="640" height="480" src="https://www.youtube.com/embed/-vXRJ_Ry_yE?rel=0" frameborder="0" allowfullscreen></iframe>
+              </span>
+          </section>
+          <section>
+            <h2 class="demo">TreeJuxtaposer</h2>
+            <iframe class="r-stretch" src="https://www.cs.ubc.ca/~tmm/papers/tj/"></iframe><a class="tiny" href="https://www.cs.ubc.ca/~tmm/papers/tj/">https://www.cs.ubc.ca/~tmm/papers/tj/</a>
+          </section>
+          <section>
+            <h2 class="demo">TreeJuxtaposer</h2><span>
+              <iframe width="640" height="480" src="https://www.youtube.com/embed/GdaPj8a9QEo?rel=0" frameborder="0" allowfullscreen></iframe>
+              </span>
+          </section>
+          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/tamara_course14_session1-24.png"></section>
+          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/tamara_course14_session1-25.png"></section>
+          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/tamara_course14_session1-26.png"></section>
+          <section>
+            <div><img src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo"></div>
+          </section>
+        </section>
+        <section id="abstractionExamples">
+          <section>
+            <h1>Abstraction in Action</h1>
+          </section>
+          <section>
+            <h3>The what/why/how framework allows us to make productive comparisons of different vis idioms. A couple examples:</h3>
+            <ul>
+              <li>Pie chart vs bar chart</li>
+              <li>Word clouds vs word shift graphs</li>
+            </ul>
+          </section>
+          <section>
+            <h3>The classic: pie chart vs bar chart.</h3>
+            <p>You've seen both. Simply put, the question is ill-formed. No single correct answer! We need the framework:</p>
+            <ul>
+              <li>What: <strong><span class="fragment">tabular data</span></strong>.</li>
+              <li>Idiom: <strong><span class="fragment">bar or pie chart</span></strong>.</li>
+              <ul class="fragment">
+                <li class="framgment">How (encode bar chart): line marks, value channel aligned vertical position, key attribute horizontal position.</li>
+                <li class="framgment">How (encode bar chart): area marks (wedges), value channel angle.</li>
+              </ul>
+              <li class="fragment"><strong>Why</strong>: Identify one, the largest group.</li>
+              <li class="fragment"><strong>Why</strong>: Identify one, the 2nd/3rd/4th largest group (rank them).</li>
+              <li class="fragment"><strong>Why</strong>: Compare value.</li>
+              <li class="fragment"><strong>Why</strong>: Identify distribution of parts of the whole, is a group 1/2, 1/3, 1/4 of whole?.</li>
+            </ul>
+          </section>
+          <section>
+            <div><img src="../shared_images/1280px-Piecharts.png" alt="Pie vs bar chart."></div>
+            <div><a class="tiny" href="https://upload.wikimedia.org/wikipedia/commons/b/b4/Piecharts.svg">image courtesy of WikiPedia</a></div>
+          </section>
+          <section>
+            <h3>Word clouds vs word shift graph</h3>
+            <p>You've seen a word cloud, maybe not a word shift graph, let's look at one first.</p>
+          </section>
+          <section data-background-iframe="http://hedonometer.org/timeseries/en_all/?from=2015-07-16&amp;to=2017-01-12&amp;date=2016-11-09"></section>
+          <section>
+            <h3>The same data on a word cloud</h3><img src="../shared_images/word_cloud.png" alt="Word cloud.">
+          </section>
+          <section>
+            <ul>
+              <li>What: <strong><span class="fragment">Weighted average measure over words</span></strong>.</li>
+              <li>Idiom: <strong><span class="fragment">Word cloud vs word shift graph</span></strong>.</li>
+              <ul class="fragment">
+                <li class="framgment">How (encode word cloud): mark text, value channel size, spatial position random, color random.</li>
+                <li class="framgment">How (encode word shift graph): mark text, mark line, share value channel horizontal position, shared value ranked channel vertical position, line key type channel color.</li>
+              </ul>
+              <li class="fragment"><strong>Why</strong>: Enjoy.</li>
+              <li class="fragment"><strong>Why</strong>: Identify one, the largest word.</li>
+              <li class="fragment"><strong>Why</strong>: Identify one, the 2nd/3rd/4th largest word (rank them).</li>
+              <li class="fragment"><strong>Why</strong>: Compare distribution of words.</li>
+              <li class="fragment"><strong>Why</strong>: Summarize features.</li>
+            </ul>
+          </section>
+          <section>
+            <div><img src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo"></div>
+          </section>
+        </section>
+        <section id="practice">
+          <h1>Practice</h1>
+        </section>
+        <section id="vizToolSpace">
+          <section>
+            <h2>The visualization tool space</h2>
+            <div class="tiny">Partially based on<a href="https://courses.cs.washington.edu/courses/cse442/17au/lectures/CSE442-Tools.pdf"> slides from Jeff Heer</a></div>
+          </section>
+          <section class="full" data-transition="none" data-background-size="contain" data-background="../shared_images/Jeff/CSE442-Tools-8.png"><a class="page-watermark" href="https://courses.cs.washington.edu/courses/cse442/17au/lectures/CSE442-Tools.pdf">slides from Jeff Heer</a></section>
+          <section class="full" data-transition="none" data-background-size="contain" data-background="../shared_images/Jeff/CSE442-Tools-9.png"><a class="page-watermark" href="https://courses.cs.washington.edu/courses/cse442/17au/lectures/CSE442-Tools.pdf">slides from Jeff Heer</a></section>
+          <section class="full" data-transition="none" data-background-size="contain" data-background="../shared_images/Jeff/CSE442-Tools-19.png"><a class="page-watermark" href="https://courses.cs.washington.edu/courses/cse442/17au/lectures/CSE442-Tools.pdf">slides from Jeff Heer</a></section>
+          <section class="full" data-transition="none" data-background-size="contain" data-background="../shared_images/Jeff/CSE442-Tools-27.png"><a class="page-watermark" href="https://courses.cs.washington.edu/courses/cse442/17au/lectures/CSE442-Tools.pdf">slides from Jeff Heer</a></section>
+          <section class="full" data-transition="none" data-background-size="contain" data-background="../shared_images/Jeff/CSE442-Tools-34.png"><a class="page-watermark" href="https://courses.cs.washington.edu/courses/cse442/17au/lectures/CSE442-Tools.pdf">slides from Jeff Heer</a></section>
+          <section class="full" data-transition="none" data-background-size="contain" data-background="../shared_images/Jeff/CSE442-Tools-36.png"><a class="page-watermark" href="https://courses.cs.washington.edu/courses/cse442/17au/lectures/CSE442-Tools.pdf">slides from Jeff Heer</a></section>
+          <section class="full" data-transition="none" data-background-size="contain" data-background="../shared_images/Jeff/CSE442-Tools-37.png"><a class="page-watermark" href="https://courses.cs.washington.edu/courses/cse442/17au/lectures/CSE442-Tools.pdf">slides from Jeff Heer</a></section>
+          <section id="chooseTool">
+            <h2>Choose your tool</h2>
+            <div class="flex bigger"><strong class="quarter r-frame fragment">D3</strong><strong class="quarter r-frame fragment">Vega-lite</strong><strong class="quarter r-frame fragment">Altair</strong><strong class="quarter r-frame fragment">Tableau</strong></div>
+          </section>
+          <section>
+            <div><img src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo"></div>
+          </section>
+        </section>
+        <section id="webDevBasics">
+          <section>
+            <h1>Web Development Basics</h1><a class="tiny" href="https://observablehq.com/@observablehq/introduction-to-html">https://observablehq.com/@observablehq/introduction-to-html</a>
+          </section>
+          <section id="observable">
+            <h1>Introduction to Observable</h1>
+            <ul>
+              <li><a class="tiny" href="https://observablehq.com/@observablehq/five-minute-introduction">https://observablehq.com/@observablehq/five-minute-introduction</a></li>
+              <li><a class="tiny" href="https://observablehq.com/@observablehq/observables-not-javascript">https://observablehq.com/@observablehq/observables-not-javascript</a></li>
+              <li><a class="tiny" href="https://observablehq.com/@observablehq/user-manual">https://observablehq.com/@observablehq/user-manual</a></li>
+            </ul>
+          </section>
+        </section>
+        <section id="d3Intro">
+          <section>
+            <h1 class="demo">Introduction to D3</h1><a class="tiny" href="https://observablehq.com/@d3/learn-d3">https://observablehq.com/@d3/learn-d3</a>
+          </section>
+        </section>
+        <section id="vegaLiteIntro">
+          <section>
+            <h1>Introduction to Vega-lite</h1><a class="tiny" href="https://observablehq.com/@uwdata/introduction-to-vega-lite">https://observablehq.com/@uwdata/introduction-to-vega-lite</a>
+          </section>
+        </section>
+        <section id="altairIntro">
+          <section>
+            <h1>Introduction to Python and Altair</h1><a class="tiny" href="https://altair-viz.github.io/getting_started/overview.html">https://altair-viz.github.io/getting_started/overview.html</a>
+          </section>
+          <section>
+            <h1>Interview Jake VanderPlas, Part 1</h1>
+          </section>
+        </section>
+        <section id="tableauIntro">
+          <section>
+            <h1>Introduction to Tableau</h1><a class="tiny" href="https://www.tableau.com/learn/get-started/creator">https://www.tableau.com/learn/get-started/creator</a>
+          </section>
+        </section>
+        <section id="review">
+          <section>
+            <h1>What we learned</h1>
+            <ul>
+              <li class="fragment">Infovis definition</li>
+              <li class="fragment">Why should we visualize?</li>
+              <li class="fragment">What are insights?</li>
+              <li class="fragment">Problem abstraction</li>
+              <li class="fragment">Visualization tools landscape</li>
+            </ul>
+          </section>
+        </section>
+      </div>
+    </div>
+    <script src="../js/reveal.js"></script>
+    <script src="../plugin/zoom/zoom.js"></script>
+    <script src="../plugin/notes/notes.js"></script>
+    <script src="../plugin/search/search.js"></script>
+    <script src="../plugin/markdown/markdown.js"></script>
+    <script src="../plugin/highlight/highlight.js"></script>
+    <script>
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        hash: true,
+        //- transition: "convex",
+      
+        //- width: "90%",
+        //- height: "100%",
+      
+        plugins: [ RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight ]
+      });
+    </script>
+    <script>
+      (function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,"script","https://www.google-analytics.com/analytics.js","ga");
+      
+      ga("create", "UA-72531610-1", "auto");
+      ga("send", "pageview");
+    </script>
+  </body>
+</html>

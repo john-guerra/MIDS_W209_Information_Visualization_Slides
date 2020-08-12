@@ -27,7 +27,7 @@
         </section>
         <section id="outline">
           <section>
-            <h2>What we are going to learn</h2>
+            <h2>What We Are Going to Learn</h2>
             <ul class="small"></ul>
           </section>
         </section>
@@ -44,33 +44,33 @@
           <section>
             <h2>Tree Definition</h2>
             <ul class="small">
-              <li>Set of nodes and links that express the parent-to-child relationship. Where each node:</li>
+              <li>Set of nodes and links that express the parent-to-child relationship, where each node:</li>
               <ul class="small">
-                <li>Is uniquely labeled in the tree.</li>
-                <li>Contains one or more numeric variables with values over time.</li>
-                <li>Contains one or more categorical attributes that may have more than one value.</li>
+                <li>Is uniquely labeled in the tree</li>
+                <li>Contains one or more numeric variables with values over time</li>
+                <li>Contains one or more categorical attributes that may have more than one value</li>
               </ul>
             </ul>
           </section>
           <section>
-            <h2>Types of trees</h2><img class="demo" data-src="../shared_images/typesOfTrees.png" alt="Types of Trees">
+            <h2>Types of Trees</h2><img class="demo" data-src="../shared_images/typesOfTrees.png" alt="Types of Trees">
           </section>
           <section>
-            <h2>How are trees stored</h2>
+            <h2>How Trees Are Stored</h2>
             <ul>
               <li class="fragment">JSON file</li>
               <li class="fragment">GraphML file</li>
               <li class="fragment">Table
                 <ul>
-                  <li class="fragment">Multiple attributes define hierarchy (e.g. State, City, Neighborhood)</li>
+                  <li class="fragment">Multiple attributes define hierarchy (e.g., state, city, neighborhood)</li>
                   <li class="fragment">One attribute defines hierarchy with a separator (e.g. California/San Francisco/Presidio)</li>
-                  <li class="fragment">One attribute defines parent id</li>
+                  <li class="fragment">One attribute defines parent ID</li>
                 </ul>
               </li>
             </ul>
           </section>
           <section>
-            <h2>Treemap from table</h2><a href="https://observablehq.com/@john-guerra/treemap-from-table">https://observablehq.com/@john-guerra/treemap-from-table</a>
+            <h2>Treemap from Table</h2><a href="https://observablehq.com/@john-guerra/treemap-from-table">Treemap from table</a>
           </section>
         </section>
         <section id="nodeLinkTrees">
@@ -78,30 +78,30 @@
             <h1>Trees: Node-link</h1>
           </section>
           <section>
-            <h2>Idiom: radial node-link tree</h2>
+            <h2>Idiom: Radial Node-Link Tree</h2>
             <div class="flex">
               <div class="half">
                 <ul class="small">
                   <li class="fragment">Data:</li>
                   <ul>
-                    <li class="fragment">tree</li>
+                    <li class="fragment">Tree</li>
                   </ul>
-                  <li class="fragment">encoding</li>
+                  <li class="fragment">Encoding:</li>
                   <ul>
-                    <li class="fragment">link connection marks</li>
-                    <li class="fragment">point node marks</li>
-                    <li class="fragment">radial axis orientation</li>
+                    <li class="fragment">Link connection marks</li>
+                    <li class="fragment">Point node marks</li>
+                    <li class="fragment">Radial axis orientation</li>
                     <ul>
-                      <li class="fragment">angular proximity: siblings</li>
-                      <li class="fragment">distance from center: depth in tree</li>
+                      <li class="fragment">Angular proximity: siblings</li>
+                      <li class="fragment">Distance from center: depth in tree</li>
                     </ul>
                   </ul>
                   <li class="fragment">Task:</li>
                   <ul>
-                    <li class="fragment">understanding topology,  following paths</li>
+                    <li class="fragment">Understanding topology, following paths</li>
                   </ul>
-                  <li class="fragment">scalability
-                    <li class="fragment">1K - 10K nodes</li>
+                  <li class="fragment">Scalability
+                    <li class="fragment">1,000 to 10,000 nodes</li>
                   </li>
                 </ul>
               </div>
@@ -110,21 +110,25 @@
           <section>
             <h3 class="demo">Radial Tree</h3>
             <iframe class="blocks" data-src="http://blockbuilder.org/mbostock/4063550"></iframe>
-            <div class="tiny"><a target="_blank" href="http://blockbuilder.org/mbostock/4063550">http://blockbuilder.org/mbostock/4063550</a></div>
-            <div class="tiny"><a target="_blank" href="http://bl.ocks.org/mbostock/">by mbostock</a></div>
+            <div class="tiny"><a target="_blank" href="http://blockbuilder.org/mbostock/4063550">Radial Tidy Tree</a></div>
+            <div class="tiny"><a target="_blank" href="http://bl.ocks.org/mbostock/">by mbostock</a>
+              <!-- @john-guerra Note: the content extends off the slide and image is not visible-->
+            </div>
           </section>
           <section>
             <h3 class="demo">Dendogram</h3>
             <iframe class="blocks" data-src="http://blockbuilder.org/mbostock/e9ba78a2c1070980d1b530800ce7fa2b"></iframe>
-            <div class="tiny"><a target="_blank" href="http://blockbuilder.org/mbostock/e9ba78a2c1070980d1b530800ce7fa2b">http://blockbuilder.org/mbostock/e9ba78a2c1070980d1b530800ce7fa2b</a></div>
-            <div class="tiny"><a target="_blank" href="http://bl.ocks.org/mbostock/">by mbostock</a></div>
+            <div class="tiny"><a target="_blank" href="http://blockbuilder.org/mbostock/e9ba78a2c1070980d1b530800ce7fa2b">Tidy Tree vs. Dendogram</a></div>
+            <div class="tiny"><a target="_blank" href="http://bl.ocks.org/mbostock/">by mbostock</a>
+              <!-- @john-guerra Note: the content extends off the slide and image is not visible-->
+            </div>
           </section>
           <section>
             <h2 class="demo">Cluster Dendograms Radial</h2>
             <div class="left small">
               <ul class="small">
-                <li>Data: Trees</li>
-                <li>Tasks: Summarize common connections.</li>
+                <li>Data: trees</li>
+                <li>Tasks: summarize common connections</li>
                 <li>Considerations:
                   <ul class="small">
                     <li>Harder to read</li>
@@ -139,12 +143,12 @@
             <h2 class="demo">Phylogenetic Trees</h2>
             <div class="left small">
               <ul class="small">
-                <li>Data: Tree of Life</li>
-                <li>Tasks: Summarize common connections. Identify Clusters.</li>
+                <li>Data: tree of life</li>
+                <li>Tasks: summarize common connections; identify clusters</li>
                 <li>Considerations:
                   <ul class="small">
                     <li>Harder to read</li>
-                    <li>Also works with other clusters data</li>
+                    <li>Also works with other clusters' data</li>
                   </ul>
                 </li>
               </ul>
@@ -154,21 +158,25 @@
           <section>
             <h3 class="demo">Cluster Dendograms Cartesian</h3>
             <iframe class="blocks" data-src="http://blockbuilder.org/mbostock/4063570"></iframe>
-            <div class="tiny"><a target="_blank" href="http://blockbuilder.org/mbostock/4063570">http://blockbuilder.org/mbostock/4063570</a></div>
-            <div class="tiny"><a target="_blank" href="http://bl.ocks.org/mbostock/">by mbostock</a></div>
+            <div class="tiny"><a target="_blank" href="http://blockbuilder.org/mbostock/4063570">Cluster Dendrogram</a></div>
+            <div class="tiny"><a target="_blank" href="http://bl.ocks.org/mbostock/">by mbostock</a>
+              <!-- @john-guerra Note: the content extends off the slide and image is not visible-->
+            </div>
           </section>
           <section>
-            <h3 class="demo">Force Directed Tree</h3>
+            <h3 class="demo">Force-Directed Tree</h3>
             <iframe class="blocks" data-src="http://blockbuilder.org/mbostock/95aa92e2f4e8345aaa55a4a94d41ce37"></iframe>
-            <div class="tiny"><a target="_blank" href="http://blockbuilder.org/mbostock/95aa92e2f4e8345aaa55a4a94d41ce37">http://blockbuilder.org/mbostock/95aa92e2f4e8345aaa55a4a94d41ce37</a></div>
-            <div class="tiny"><a target="_blank" href="http://bl.ocks.org/mbostock/">by mbostock</a></div>
+            <div class="tiny"><a target="_blank" href="http://blockbuilder.org/mbostock/95aa92e2f4e8345aaa55a4a94d41ce37">Force-Directed Tree</a></div>
+            <div class="tiny"><a target="_blank" href="http://bl.ocks.org/mbostock/">by mbostock</a>
+              <!-- @john-guerra Note: the content extends off the slide and image is not visible-->
+            </div>
           </section>
           <section>
             <h2 class="demo">Collapsible Tree</h2>
             <div class="left small">
               <ul class="small">
-                <li>Data: Tree/Network</li>
-                <li>Tasks: Navigate connections. Locate nodes</li>
+                <li>Data: tree/network</li>
+                <li>Tasks: navigate connections; locate nodes</li>
                 <li>Considerations:
                   <ul class="small">
                     <li>Great for larger datasets</li>
@@ -179,17 +187,17 @@
             <div class="right"><a href="https://observablehq.com/@d3/collapsible-tree"><img data-src="../shared_images/collapsibleTree.svg" alt="CollapsibleTree"><span class="tiny">https://observablehq.com/@d3/collapsible-tree</span></a></div>
           </section>
           <section>
-            <h3 class="demo">SpaceTree</h3>
+            <h3 class="demo">Spacetree</h3>
             <iframe class="blocks" data-src="https://philogb.github.io/jit/static/v20/Jit/Examples/Spacetree/example1.html"></iframe>
-            <div class="tiny"><a target="_blank" href="https://philogb.github.io/jit/static/v20/Jit/Examples/Spacetree/example1.html">https://philogb.github.io/jit/static/v20/Jit/Examples/Spacetree/example1.html</a></div>
+            <div class="tiny"><a target="_blank" href="https://philogb.github.io/jit/static/v20/Jit/Examples/Spacetree/example1.html">Spacetree: Tree Animation</a></div>
           </section>
           <section>
-            <h3 class="demo">SpaceTree</h3><span><iframe width="853" height="480" data-src="https://www.youtube.com/embed/F7-vJBsFBWw" frameborder="0" allowful.smalllscreen></iframe></span>
-            <div class="tiny"><a target="_blank" href="http://www.cs.umd.edu/hcil/spacetree/">http://www.cs.umd.edu/hcil/spacetree/</a></div>
+            <h3 class="demo">Spacetree (cont.)</h3><span><iframe width="853" height="480" data-src="https://www.youtube.com/embed/F7-vJBsFBWw" frameborder="0" allowful.smalllscreen></iframe></span>
+            <div class="tiny"><a target="_blank" href="http://www.cs.umd.edu/hcil/spacetree/">SpaceTree: a novel node-link tree browser</a></div>
           </section>
           <section>
             <h3 class="demo">Degree of Interest Tree</h3><span><iframe width="853" height="480" data-src="https://www.youtube.com/embed/RTQ0N4QY0yc" frameborder="0" allowful.smalllscreen></iframe></span>
-            <div class="tiny"><a target="_blank" href="http://vis.stanford.edu/papers/doitrees-revisited">http://vis.stanford.edu/papers/doitrees-revisited</a></div>
+            <div class="tiny"><a target="_blank" href="http://vis.stanford.edu/papers/doitrees-revisited">DOITrees Revisited: Scalable, Space-Constrained Visualization of Hierarchical Data</a></div>
           </section>
         </section>
         <section id="treesContainment">
@@ -197,52 +205,52 @@
             <h1>Trees: Containment</h1>
           </section>
           <section>
-            <h2>Idiom: treemap</h2>
+            <h2>Idiom: Treemap</h2>
             <div class="flex">
               <div class="half">
                 <ul class="small">
                   <li class="fragment">Data:</li>
                   <ul>
-                    <li class="fragment">tree</li>
-                    <li class="fragment">1 quant attrib at leaf nodes</li>
+                    <li class="fragment">Tree</li>
+                    <li class="fragment">One quantitative attribute at leaf nodes</li>
                   </ul>
-                  <li class="fragment">encoding</li>
+                  <li class="fragment">Encoding</li>
                   <ul>
-                    <li class="fragment">area containment marks for hierarchical structure</li>
-                    <li class="fragment">rectilinear orientation</li>
-                    <li class="fragment">area encodes quant attrib</li>
+                    <li class="fragment">Area containment marks for hierarchical structure</li>
+                    <li class="fragment">Rectilinear orientation</li>
+                    <li class="fragment">Area encodes quantitative attribute</li>
                   </ul>
                   <li class="fragment">Tasks:</li>
                   <ul>
-                    <li class="fragment">query attribute at leaf nodes</li>
+                    <li class="fragment">Query attribute at leaf nodes</li>
                   </ul>
-                  <li class="fragment">scalability</li>
+                  <li class="fragment">Scalability:</li>
                   <ul>
-                    <li class="fragment">1M leaf nodes</li>
+                    <li class="fragment">One million leaf nodes</li>
                   </ul>
                 </ul>
               </div>
             </div>
           </section>
           <section>
-            <h2>Link marks: Connection and containment</h2>
+            <h2>Link Marks: Connection and Containment</h2>
             <div class="flex">
               <div class="half">
                 <ul class="small">
-                  <li class="fragment">marks as links (vs. nodes)</li>
+                  <li class="fragment">Marks as links (vs. nodes):</li>
                   <ul>
-                    <li class="fragment">common case in network drawing</li>
+                    <li class="fragment">Common case in network drawing</li>
                     <li class="fragment">1D case: connection</li>
                     <ul>
-                      <li class="fragment">ex: all node-link diagrams</li>
-                      <li class="fragment">emphasizes topology, path tracing</li>
-                      <li class="fragment">networks and trees</li>
+                      <li class="fragment">Example: all node-link diagrams</li>
+                      <li class="fragment">Emphasizes topology, path tracing</li>
+                      <li class="fragment">Networks and trees</li>
                     </ul>
                     <li class="fragment">2D case: containment</li>
                     <ul>
-                      <li class="fragment">ex: all treemap variants</li>
-                      <li class="fragment">emphasizes attribute values at leaves (size coding)</li>
-                      <li class="fragment">only trees</li>
+                      <li class="fragment">Example: all treemap variants</li>
+                      <li class="fragment">Emphasizes attribute values at leaves (size coding)</li>
+                      <li class="fragment">Only trees</li>
                     </ul>
                   </ul>
                 </ul>
@@ -252,30 +260,34 @@
           <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/09_networks-star-steno-topo.008.png"></section>
           <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/09_networks-star-steno-topo.009.png"></section>
           <section>
-            <h3 class="demo">TreeMap</h3>
+            <h3 class="demo">Treemap</h3>
             <iframe class="blocks" data-src="http://blockbuilder.org/mbostock/6bbb0a7ff7686b124d80"></iframe>
-            <div class="tiny"><a target="_blank" href="http://blockbuilder.org/mbostock/6bbb0a7ff7686b124d80">http://blockbuilder.org/mbostock/6bbb0a7ff7686b124d80</a></div>
-            <div class="tiny"><a target="_blank" href="http://bl.ocks.org/mbostock/">by mbostock</a></div>
+            <div class="tiny"><a target="_blank" href="http://blockbuilder.org/mbostock/6bbb0a7ff7686b124d80">Treemap</a></div>
+            <div class="tiny"><a target="_blank" href="http://bl.ocks.org/mbostock/">by mbostock</a>
+              <!-- @john-guerra Note: image not visible and slide content off screen-->
+            </div>
           </section>
           <section>
-            <h3 class="demo">TreeMap with parent labels</h3>
+            <h3 class="demo">Treemap with Parent Labels</h3>
             <iframe class="blocks" data-src="http://blockbuilder.org/mbostock/911ad09bdead40ec0061"></iframe>
-            <div class="tiny"><a target="_blank" href="http://blockbuilder.org/mbostock/911ad09bdead40ec0061">http://blockbuilder.org/mbostock/911ad09bdead40ec0061</a></div>
+            <div class="tiny"><a target="_blank" href="http://blockbuilder.org/mbostock/911ad09bdead40ec0061">Nested Treemap</a></div>
             <div class="tiny"><a target="_blank" href="http://bl.ocks.org/mbostock/">by mbostock</a></div>
           </section>
           <section>
             <iframe class="blocks" data-src="https://finviz.com/map.ashx?t=sec"></iframe>
-            <div class="tiny"><a href="https://finviz.com/map.ashx?t=sec">https://finviz.com/map.ashx?t=sec</a></div>
+            <div class="tiny"><a href="https://finviz.com/map.ashx?t=sec">S&P 500 Map</a>
+              <!-- @john-guerra Note: image not displaying-->
+            </div>
           </section>
           <section>
             <h2 class="demo">Icicle Tree</h2>
             <div class="left small">
               <ul class="small">
-                <li>Data: Tree</li>
-                <li>Tasks: Summarize values/hierarchy. Navigate links</li>
+                <li>Data: tree</li>
+                <li>Tasks: summarize values/hierarchy; navigate links</li>
                 <li>Considerations:
                   <ul class="small">
-                    <li>Uses more space than the treemap</li>
+                    <li>Us es more space than the treemap</li>
                     <li>Better for labels</li>
                   </ul>
                 </li>
@@ -284,14 +296,14 @@
             <div class="right"><a href="https://observablehq.com/@d3/zoomable-icicle"><img data-src="../shared_images/icicle.svg" alt="Icicle Tree"><span class="tiny">https://observablehq.com/@d3/zoomable-icicle</span></a></div>
           </section>
           <section>
-            <h2 class="demo">Icicle Tree</h2>
+            <h2 class="demo">Icicle Tree (cont.)</h2>
             <div class="left small">
               <ul class="small">
-                <li>Data: Tree</li>
-                <li>Tasks: Summarize values/hierarchy. Navigate links. Compare values in leaves</li>
+                <li>Data: tree</li>
+                <li>Tasks: summarize values/hierarchy; navigate links; compare values in leaves</li>
                 <li>Considerations:
                   <ul class="small">
-                    <li>Careful.small with small edges</li>
+                    <li>Careful with small edges</li>
                   </ul>
                 </li>
               </ul>
@@ -302,12 +314,12 @@
             <h2 class="demo">Sunburst Tree</h2>
             <div class="left small">
               <ul class="small">
-                <li>Data: Tree</li>
-                <li>Tasks: Summarize values/hierarchy. Navigate links</li>
+                <li>Data: tree</li>
+                <li>Tasks: summarize values/hierarchy; navigate links</li>
                 <li>Considerations:
                   <ul class="small">
                     <li>Radial values are confusing</li>
-                    <li>Fancy yet difficul.smallt animation</li>
+                    <li>Fancy yet difficult animation</li>
                   </ul>
                 </li>
               </ul>
@@ -317,38 +329,40 @@
           <section>
             <h3 class="demo">Radial Treemap</h3>
             <iframe class="blocks" data-src="http://blockbuilder.org/mbostock/ca5b03a33affa4160321"></iframe>
-            <div class="tiny"><a target="_blank" href="http://blockbuilder.org/mbostock/ca5b03a33affa4160321">http://blockbuilder.org/mbostock/ca5b03a33affa4160321</a></div>
+            <div class="tiny"><a target="_blank" href="http://blockbuilder.org/mbostock/ca5b03a33affa4160321">Circle-Packing</a></div>
             <div class="tiny"><a target="_blank" href="http://bl.ocks.org/mbostock/">by mbostock</a></div>
           </section>
           <section>
             <h3 class="demo">Kickstarter Projects</h3>
             <iframe class="blocks" data-src="http://blockbuilder.org/john-guerra/38b1c32154905828f019f35a026b7526"></iframe>
             <div class="tiny"><a target="_blank" href="http://blockbuilder.org/john-guerra/38b1c32154905828f019f35a026b7526">http://blockbuilder.org/john-guerra/38b1c32154905828f019f35a026b7526</a></div>
-            <div class="tiny"><a target="_blank" href="http://bl.ocks.org/john-guerra/">by john-guerra</a></div>
+            <div class="tiny"><a target="_blank" href="http://bl.ocks.org/john-guerra/">by john-guerra</a>
+              <!-- @john-guerra Note: content extends off slide and image does not display-->
+            </div>
           </section>
           <section>
-            <h2>Tree drawing idioms comparison</h2>
+            <h2>Tree Drawing Idioms Comparison</h2>
             <div class="flex">
               <div class="half">
                 <ul class="small">
                   <li class="fragment">Data shown:</li>
                   <ul>
-                    <li class="fragment">link relationships</li>
-                    <li class="fragment">tree depth</li>
-                    <li class="fragment">sibling order</li>
+                    <li class="fragment">Link relationships</li>
+                    <li class="fragment">Tree depth</li>
+                    <li class="fragment">Sibling order</li>
                   </ul>
-                  <li class="fragment">design choices</li>
+                  <li class="fragment">Design choices</li>
                   <ul>
-                    <li class="fragment">connection vs containment link marks</li>
-                    <li class="fragment">rectilinear vs radial layout</li>
-                    <li class="fragment">spatial position channels</li>
+                    <li class="fragment">Connection vs. containment link marks</li>
+                    <li class="fragment">Rectilinear vs. radial layout</li>
+                    <li class="fragment">Spatial position channels</li>
                   </ul>
-                  <li class="fragment">considerations</li>
+                  <li class="fragment">Considerations</li>
                   <ul>
-                    <li class="fragment">redundant? arbitrary?</li>
-                    <li class="fragment">information density?</li>
+                    <li class="fragment">Redundant? arbitrary?</li>
+                    <li class="fragment">Information density?</li>
                     <ul>
-                      <li class="fragment">avoid wasting space</li>
+                      <li class="fragment">Avoid wasting space</li>
                     </ul>
                   </ul>
                 </ul>
@@ -364,7 +378,9 @@
           <section>
             <h3 class="demo">TreeVersity</h3>
             <iframe class="blocks" data-src="https://treeversity.cattlab.umd.edu"></iframe>
-            <div class="tiny"><a target="_blank" href="https://treeversity.cattlab.umd.edu">https://treeversity.cattlab.umd.edu</a></div>
+            <div class="tiny"><a target="_blank" href="https://treeversity.cattlab.umd.edu">UMD Budget 2010 - 2012</a>
+              <!-- @john-guerra Note: content extends off slide and image does not display-->
+            </div>
           </section>
         </section>
         <section>
@@ -372,36 +388,36 @@
             <h1>Geo</h1>
           </section>
           <section>
-            <h2>Idiom: choropleth map</h2>
+            <h2>Idiom: Choropleth Map</h2>
             <div class="flex">
               <div class="half">
                 <ul>
                   <li class="fragment">Use given spatial data:</li>
                   <ul>
-                    <li class="fragment">When central task is understanding spatial relationships.</li>
+                    <li class="fragment">When central task is understanding spatial relationships</li>
                   </ul>
                   <li class="fragment">Data:</li>
                   <ul>
-                    <li class="fragment">Geographic geometry.</li>
-                    <li class="fragment">Table with 1 quant attribute per region.</li>
+                    <li class="fragment">Geographic geometry</li>
+                    <li class="fragment">Table with one quantitative attribute per region</li>
                   </ul>
                   <li class="fragment">Encoding:</li>
                   <ul>
-                    <li class="fragment">Use given geometry for area mark boundaries.</li>
-                    <li class="fragment">Sequential segmented colormap.</li>
-                    <li class="fragment">Essentially, geographic heat map.</li>
+                    <li class="fragment">Use given geometry for area mark boundaries</li>
+                    <li class="fragment">Sequential segmented colormap</li>
+                    <li class="fragment">Essentially, geographic heat map</li>
                   </ul>
                 </ul>
               </div>
             </div>
           </section>
           <section>
-            <h3 class="demo">Choropleth map</h3>
+            <h3 class="demo">Choropleth Map</h3>
             <div class="flex">
               <div class="third">
                 <ul>
-                  <li class="fragment">Familiar.</li>
-                  <li class="fragment">Areas encode...state area.</li>
+                  <li class="fragment">Familiar</li>
+                  <li class="fragment">Areas encode... state area</li>
                 </ul>
               </div>
               <div class="twothirds">
@@ -417,7 +433,7 @@
             </div>
           </section>
           <section>
-            <h3 class="demo">Bivariate Choropleth map</h3>
+            <h3 class="demo">Bivariate Choropleth Map</h3>
             <div>
               <div id="observablehq-745f68a6"></div>
               <script type="module">
@@ -426,18 +442,18 @@
               const inspect = Inspector.into("#observablehq-745f68a6");
               (new Runtime).module(define, name => name === "chart" ? inspect() : undefined);
               </script>
-                    
+              
               
             </div>
           </section>
           <section>
-            <h2>Idiom: dot map</h2>
+            <h2>Idiom: Dot Map</h2>
             <div class="flex">
               <div class="third">
                 <ul>
-                  <li class="fragment">Good for population density.</li>
-                  <li class="fragment">Might require opengl.</li>
-                  <li class="fragment">Task summarize.</li>
+                  <li class="fragment">Good for population density</li>
+                  <li class="fragment">Might require opengl</li>
+                  <li class="fragment">Task summarize</li>
                 </ul>
               </div>
               <div class="twothids" width="600px" height="600px">
@@ -458,12 +474,12 @@
             </div>
           </section>
           <section>
-            <h2>Idiom: bubble map</h2>
+            <h2>Idiom: Bubble Map</h2>
             <div class="flex">
               <div class="third">
                 <ul>
-                  <li class="fragment">Alternative for choropleth.</li>
-                  <li class="fragment">Be careful with occlusion.</li>
+                  <li class="fragment">Alternative for choropleth</li>
+                  <li class="fragment">Be careful with occlusion</li>
                 </ul>
               </div>
               <div class="twothirds">
@@ -485,7 +501,7 @@
             </div>
           </section>
           <section>
-            <h3 class="demo">US Grid map</h3>
+            <h3 class="demo">U.S. Grid Map</h3>
             <div width="600px" height="600px">
               <div id="observablehq-f627f1c3"></div>
               <script type="module">
@@ -500,57 +516,57 @@
             </div>
           </section>
           <section>
-            <h2>Population maps trickiness</h2>
+            <h2>Population Maps Trickiness</h2>
             <div class="flex">
               <ul>
                 <li class="fragment">Beware!</li>
                 <ul>
-                  <li class="fragment">Absolute vs relative again.</li>
+                  <li class="fragment">Absolute vs. relative again</li>
                 </ul>
-                <li class="fragment">Population density vs per capita.</li>
+                <li class="fragment">Population density vs. per capita</li>
                 <ul>
-                  <li class="fragment">Investigate with <a href="http://public.tableau.com/profile/ben.jones#!/vizhome/PopVsFin/PopVsFin">Ben Jones Tableau Public demo</a>.</li>
-                  <li class="fragment">  Are Maps of Financial Variables just Population Maps?</li>
+                  <li class="fragment">Investigate with <a href="http://public.tableau.com/profile/ben.jones#!/vizhome/PopVsFin/PopVsFin">Ben Jones Tableau Public demo</a></li>
+                  <li class="fragment"> Are maps of financial variables just population maps?</li>
                   <ul>
-                    <li class="fragment">Yes, unless you look at per capita (relative) numbers.</li>
+                    <li class="fragment">Yes, unless you look at per capita (relative) numbers</li>
                   </ul>
                 </ul>
               </ul>
             </div>
           </section>
           <section>
-            <h2>Idiom: Bayesian surprise maps</h2>
+            <h2>Idiom: Bayesian Surprise Maps</h2>
             <div class="flex">
               <div class="half">
                 <ul>
-                  <li class="fragment">Use models of expectations to highlight surprising values.</li>
-                  <li class="fragment">Confounds (population) and variance (sparsity).</li>
+                  <li class="fragment">Use models of expectations to highlight surprising values</li>
+                  <li class="fragment">Confounds (population) and variance (sparsity)</li>
                 </ul>
               </div>
             </div>
           </section>
           <section>
-            <h2>Bayesian surprise map</h2><img class="demo" data-src="../shared_images/bayesian-surprise.png" alt="Types of Trees">
-            <div><a class="tiny" href="https://idl.cs.washington.edu/files/2017-SurpriseMaps-InfoVis.pdf">Surprise! Bayesian Weighting for De-Biasing Thematic Maps</a>                  </div>
+            <h2>Bayesian Surprise Map</h2><img class="demo" data-src="../shared_images/bayesian-surprise.png" alt="Types of Trees">
+            <div><a class="tiny" href="https://idl.cs.washington.edu/files/2017-SurpriseMaps-InfoVis.pdf">Surprise! Bayesian Weighting for De-Biasing Thematic Maps</a></div>
           </section>
           <section>
-            <h2>Idiom: topographic map</h2>
+            <h2>Idiom: Topographic Map</h2>
             <div class="flex">
               <div class="half">
                 <ul>
                   <li class="fragment">Data:</li>
                   <ul>
-                    <li class="fragment">Geographic geometry.</li>
+                    <li class="fragment">Geographic geometry</li>
                   </ul>
                   <li class="fragment">Scalar spatial field:</li>
                   <ul>
-                    <li class="fragment">1 quant attribute per grid cell.</li>
+                    <li class="fragment">One quantitative attribute per grid cell</li>
                   </ul>
                   <li class="fragment">Derived data:</li>
                   <ul>
-                    <li class="fragment">Isoline geometry.</li>
+                    <li class="fragment">Isoline geometry</li>
                     <ul>
-                      <li class="fragment">Isocontours computed for specific levels of scalar values.</li>
+                      <li class="fragment">Isocontours computed for specific levels of scalar values</li>
                     </ul>
                   </ul>
                 </ul>
@@ -558,20 +574,20 @@
             </div>
           </section>
           <section>
-            <h2>Idiom: cartogram</h2>
+            <h2>Idiom: Cartogram</h2>
             <div class="flex">
               <div class="half">
                 <ul>
                   <li class="fragment">Data:</li>
                   <ul>
-                    <li class="fragment">Geographic geometry.</li>
-                    <li class="fragment">Continuous value at each geometry.</li>
+                    <li class="fragment">Geographic geometry</li>
+                    <li class="fragment">Continuous value at each geometry</li>
                   </ul>
                   <li class="fragment">Derived data:</li>
                   <ul>
-                    <li class="fragment">New geographic geometry: many algorithm choices.</li>
+                    <li class="fragment">New geographic geometry: many algorithm choices</li>
                   </ul>
-                  <li class="fragment">Then encoded as choropleth.</li>
+                  <li class="fragment">Then encoded as choropleth</li>
                 </ul>
               </div>
             </div>
@@ -599,116 +615,153 @@
             <h1>Spatial Data</h1>
           </section>
           <section>
-            <h2>Idioms: isosurfaces, direct volume rendering</h2>
+            <h2>Idioms: Isosurfaces, Direct Volume Rendering</h2>
             <div class="flex">
               <ul>
                 <li class="fragment">Data:</li>
                 <ul>
-                  <li class="fragment">Scalar spatial field.</li>
-                  <li class="fragment">1 quant attribute per grid cell.</li>
+                  <li class="fragment">Scalar spatial field</li>
+                  <li class="fragment">One quantitative attribute per grid cell</li>
                 </ul>
                 <li class="fragment">Task:</li>
                 <ul>
-                  <li class="fragment">Shape understanding, spatial relationships.</li>
+                  <li class="fragment">Shape understanding, spatial relationships</li>
                 </ul>
                 <li class="fragment">Isosurface:</li>
                 <ul>
-                  <li class="fragment">Derived data: isocontours computed for specific levels of scalar values.</li>
+                  <li class="fragment">Derived data: isocontours computed for specific levels of scalar values</li>
                 </ul>
                 <li class="fragment">Direct volume rendering:</li>
                 <ul>
-                  <li class="fragment">Transfer function maps scalar values to color, opacity.</li>
+                  <li class="fragment">Transfer function maps scalar values to color, opacity</li>
                   <ul>
-                    <li class="fragment">No derived geometry.</li>
+                    <li class="fragment">No derived geometry</li>
                   </ul>
                 </ul>
               </ul>
             </div>
           </section>
           <section>
-            <h2>Isosurfaces example</h2><img class="demo" data-src="../shared_images/isosurface.png" alt="Isosurfaces">
+            <h2>Isosurfaces Example</h2><img class="demo" data-src="../shared_images/isosurface.png" alt="Isosurfaces">
             <div><a class="tiny" href="https://arxiv.org/pdf/1710.01199.pdf">Two-dimensional dynamics of elasto-inertial turbulence and its role in polymer drag reduction</a></div>
           </section>
           <section>
-            <h2>Vector and tensor fields</h2>
+            <h2>Vector and Tensor Fields</h2>
             <ul>
               <li class="fragment">Data:</li>
               <ul>
-                <li class="fragment">Many attribs per cell.</li>
+                <li class="fragment">Many attribs per cell</li>
               </ul>
               <li class="fragment">Idiom families:</li>
               <ul>
                 <li class="fragment">Flow glyphs:</li>
                 <ul>
-                  <li class="fragment">Purely local.</li>
+                  <li class="fragment">Purely local</li>
                 </ul>
                 <li class="fragment">Geometric flow:</li>
                 <ul>
-                  <li class="fragment">Derived data from tracing particle trajectories.</li>
-                  <li class="fragment">Sparse set of seed points.</li>
+                  <li class="fragment">Derived data from tracing particle trajectories</li>
+                  <li class="fragment">Sparse set of seed points</li>
                 </ul>
                 <li class="fragment">Texture flow:</li>
                 <ul>
-                  <li class="fragment">Derived data, dense seeds.</li>
+                  <li class="fragment">Derived data, dense seeds</li>
                 </ul>
                 <li class="fragment">Feature flow:</li>
                 <ul>
-                  <li class="fragment">Global computation to detect features.</li>
-                  <li class="fragment">Encoded with one of methods above.</li>
+                  <li class="fragment">Global computation to detect features</li>
+                  <li class="fragment">Encoded with one of methods above</li>
                 </ul>
               </ul>
             </ul>
           </section>
           <section>
-            <h2>Vector fields</h2>
+            <h2>Vector Fields</h2>
             <div class="flex">
               <ul>
                 <li class="fragment">Empirical study tasks:</li>
                 <ul>
-                  <li class="fragment">Finding critical points, identifying their types.</li>
-                  <li class="fragment">Identifying what type of critical point is at a specific location.</li>
-                  <li class="fragment">Predicting where a particle starting at a specified point will end up (advection).</li>
+                  <li class="fragment">Finding critical points, identifying their types</li>
+                  <li class="fragment">Identifying what type of critical point is at a specific location</li>
+                  <li class="fragment">Predicting where a particle starting at a specified point will end up (advection)</li>
                 </ul>
               </ul>
             </div>
           </section>
           <section>
-            <h2>Vector field example</h2><img class="demo" data-src="../shared_images/lorenz-vectors.png" alt="Lorenz vectors">
+            <h2>Vector Field Example</h2><img class="demo" data-src="../shared_images/lorenz-vectors.png" alt="Lorenz vectors">
           </section>
           <section>
-            <h2>Name that dynamical system</h2><img class="demo" data-src="../shared_images/lorenz.jpeg" alt="Lorenz">
+            <h2>Name That Dynamical System</h2><img class="demo" data-src="../shared_images/lorenz.jpeg" alt="Lorenz">
           </section>
           <section>
-            <h3>Idiom: similarity-clustered streamlines</h3>
+            <h3>Idiom: Similarity-Clustered Streamlines</h3>
             <ul>
               <li class="fragment">Data:</li>
               <ul>
-                <li class="fragment">3D vector field.</li>
+                <li class="fragment">3D vector field</li>
               </ul>
               <li class="fragment">Derived data (from field):</li>
               <ul>
-                <li class="fragment">Streamlines: trajectory particle will follow.</li>
+                <li class="fragment">Streamlines: trajectory particle will follow</li>
               </ul>
               <li class="fragment">Derived data (per streamline):</li>
               <ul>
-                <li class="fragment">Curvature, torsion, tortuosity.</li>
-                <li class="fragment">Signature: complex weighted combination.</li>
-                <li class="fragment">Compute cluster hierarchy across all signatures.</li>
-                <li class="fragment">Encode: color and opacity by cluster.</li>
+                <li class="fragment">Curvature, torsion, tortuosity</li>
+                <li class="fragment">Signature: complex weighted combination</li>
+                <li class="fragment">Compute cluster hierarchy across all signatures</li>
+                <li class="fragment">Encode: color and opacity by cluster</li>
               </ul>
               <li class="fragment">Task:</li>
               <ul>
-                <li class="fragment">Find features, query shape.</li>
+                <li class="fragment">Find features, query shape</li>
               </ul>
               <li class="fragment">Scalability:</li>
               <ul>
-                <li class="fragment">Millions of samples, hundreds of streamlines.</li>
+                <li class="fragment">Millions of samples, hundreds of streamlines</li>
               </ul>
             </ul>
           </section>
           <section>
             <h2>Streamlines</h2><img class="demo" data-src="../shared_images/wind-map.png" alt="Wind Map">
             <div class="tiny"><a href="http://hint.fm/wind/">Original inspiration</a></div>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h2>Map Libraries</h2>
+            <ul>
+              <li><a target="_blank" href="http://mapbox.com/">Mapbox</a></li>
+              <li><a target="_blank" href="http://leafletjs.com/">Leaflet</a></li>
+              <li><a target="_blank" href="http://datamaps.github.io/">DataMaps</a></li>
+              <li><a target="_blank" href="https://github.com/emeeks/d3-carto-map">d3-carto-map</a></li>
+            </ul>
+          </section>
+          <section>
+            <h3>Mapbox and Tableau</h3><a href="https://www.mapbox.com/tableau/">Maps in Tableau</a>
+          </section>
+          <section>
+            <h2>Mapbox + Tableau examples</h2>
+          </section>
+          <section>
+            <h3 class="demo">Votos Fajardo</h3><a class="tiny" href="https://public.tableau.com/profile/john.alexis.guerra.g.mez#!/vizhome/votosFajardo2/Fajardo">votosFajardo2</a>
+            <div class="blocks">
+              <div class='tableauPlaceholder' id='viz1568758234721' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;NG&#47;NGCWHPJM6&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='path' value='shared&#47;NGCWHPJM6' /> <param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;NG&#47;NGCWHPJM6&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>
+              <script type='text/javascript'>                    var divElement = document.getElementById('viz1568758234721');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height='600px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+              
+              
+            </div>
+          </section>
+          <section>
+            <h3 class="demo">Votos Concejo</h3><a class="tiny" href="https://public.tableau.com/profile/john.alexis.guerra.g.mez#!/vizhome/votosConcejo/Dashboard1">votosConcejo</a>
+            <div class="blocks">
+              <div class='tableauPlaceholder' id='viz1568758685092' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;vo&#47;votosConcejo&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='votosConcejo&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;vo&#47;votosConcejo&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1568758685092');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height='600px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+              
+              
+            </div>
+          </section>
+          <section>
+            <h3 class="demo">Mapbox and D3</h3><a href="https://observablehq.com/@john-guerra/mapbox-d3">https://observablehq.com/@john-guerra/mapbox-d3</a>
           </section>
         </section>
         <section>
@@ -724,50 +777,17 @@
             <iframe class="blocks" width="560" height="315" src="https://www.youtube.com/embed/kIID5FDi2JQ" frameborder="0" allowfullscreen></iframe>
           </section>
           <section>
-            <h2>Map libraries</h2>
-            <ul>
-              <li><a target="_blank" href="http://mapbox.com/">http://mapbox.com/</a></li>
-              <li><a target="_blank" href="http://leafletjs.com/">http://leafletjs.com/</a></li>
-              <li><a target="_blank" href="http://datamaps.github.io/">http://datamaps.github.io/</a></li>
-              <li><a target="_blank" href="https://github.com/emeeks/d3-carto-map">https://github.com/emeeks/d3-carto-map</a></li>
-            </ul>
+            <h3>Mike's Maps Tutorial</h3><a href="https://medium.com/@mbostock/command-line-cartography-part-1-897aa8f8ca2c">Command-Line Cartography, Part 1</a>
           </section>
         </section>
         <section>
           <section>
-            <h3>Mapbox + Tableau</h3><a href="https://www.mapbox.com/tableau/">https://www.mapbox.com/tableau/</a>
-          </section>
-          <section>
-            <h3 class="demo">Votos Fajardo</h3><a class="tiny" href="https://public.tableau.com/profile/john.alexis.guerra.g.mez#!/vizhome/votosFajardo2/Fajardo">https://public.tableau.com/profile/john.alexis.guerra.g.mez#!/vizhome/votosFajardo2/Fajardo</a>
-            <div class="blocks">
-              <div class='tableauPlaceholder' id='viz1568758234721' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;NG&#47;NGCWHPJM6&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='path' value='shared&#47;NGCWHPJM6' /> <param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;NG&#47;NGCWHPJM6&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>
-              <script type='text/javascript'>                    var divElement = document.getElementById('viz1568758234721');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height='600px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
-              
-              
-            </div>
-          </section>
-          <section>
-            <h3 class="demo">Votos Concejo</h3><a class="tiny" href="https://public.tableau.com/profile/john.alexis.guerra.g.mez#!/vizhome/votosConcejo/Dashboard1">https://public.tableau.com/profile/john.alexis.guerra.g.mez#!/vizhome/votosConcejo/Dashboard1</a>
-            <div class="blocks">
-              <div class='tableauPlaceholder' id='viz1568758685092' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;vo&#47;votosConcejo&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='votosConcejo&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;vo&#47;votosConcejo&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1568758685092');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height='600px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
-              
-              
-              
-            </div>
-          </section>
-          <section>
-            <h3 class="demo">Mapbox + D3</h3><a href="https://observablehq.com/@john-guerra/mapbox-d3">https://observablehq.com/@john-guerra/mapbox-d3</a>
-          </section>
-          <section>
-            <h3>Mike's maps tutorial</h3><a href="https://medium.com/@mbostock/command-line-cartography-part-1-897aa8f8ca2c">https://medium.com/@mbostock/command-line-cartography-part-1-897aa8f8ca2c</a>
-          </section>
-          <section>
-            <h3>Vega-lite Maps</h3><a href="https://observablehq.com/@vega/vega-lite-api">https://observablehq.com/@vega/vega-lite-api</a>
+            <h3>Vega-Lite Maps</h3><a href="https://observablehq.com/@vega/vega-lite-api">Vega-Lite API</a>
           </section>
         </section>
         <section id="review">
           <section>
-            <h2>What we learned</h2>
+            <h2>What We Learned</h2>
             <ul class="small"></ul>
           </section>
         </section>
