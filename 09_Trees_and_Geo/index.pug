@@ -39,7 +39,7 @@ html(lang="en")
             span  |  john.guerra[at]gmail.com
             a(href="https://twitter.com/duto_guerra")  |  @duto_guerra
             br
-            
+
             a(href="https://andyreagan.com/", target="_blank") #[strong  Andy Reagan]
             span  |  andy[at]andyreagan.com
             a(href="https://twitter.com/andyreagan")  |  @andyreagan
@@ -56,7 +56,7 @@ html(lang="en")
         //- Outline
         section#outline
           section
-            h2 What we are going to learn
+            h2 What We Are Going to Learn
             ul.small
 
         section
@@ -73,30 +73,30 @@ html(lang="en")
           section
             h2 Tree Definition
             ul.small
-              li Set of nodes and links that express the parent-to-child relationship. Where each node:
+              li Set of nodes and links that express the parent-to-child relationship, where each node:
               ul.small
-                li Is uniquely labeled in the tree.
-                li Contains one or more numeric variables with values over time.
-                li Contains one or more categorical attributes that may have more than one value.
+                li Is uniquely labeled in the tree
+                li Contains one or more numeric variables with values over time
+                li Contains one or more categorical attributes that may have more than one value
 
           section
-            h2 Types of trees
+            h2 Types of Trees
             img.demo(data-src="../shared_images/typesOfTrees.png", alt="Types of Trees")
 
           section
-            h2 How are trees stored
+            h2 How Trees Are Stored
             ul
               li.fragment JSON file
               li.fragment GraphML file
               li.fragment Table
                 ul
-                  li.fragment Multiple attributes define hierarchy (e.g. State, City, Neighborhood)
+                  li.fragment Multiple attributes define hierarchy (e.g., state, city, neighborhood)
                   li.fragment One attribute defines hierarchy with a separator (e.g. California/San Francisco/Presidio)
-                  li.fragment One attribute defines parent id
+                  li.fragment One attribute defines parent ID
 
           section
-            h2 Treemap from table
-            a(href="https://observablehq.com/@john-guerra/treemap-from-table") https://observablehq.com/@john-guerra/treemap-from-table
+            h2 Treemap from Table
+            a(href="https://observablehq.com/@john-guerra/treemap-from-table") Treemap from table
 
 
         section#nodeLinkTrees
@@ -105,50 +105,52 @@ html(lang="en")
 
 
           section
-            h2 Idiom: radial node-link tree
+            h2 Idiom: Radial Node-Link Tree
             .flex
               .half
                 ul.small
                   li.fragment Data:
                   ul
-                    li.fragment tree
-                  li.fragment encoding
+                    li.fragment Tree
+                  li.fragment Encoding:
                   ul
-                    li.fragment link connection marks
-                    li.fragment point node marks
-                    li.fragment radial axis orientation
+                    li.fragment Link connection marks
+                    li.fragment Point node marks
+                    li.fragment Radial axis orientation
                     ul
-                      li.fragment angular proximity: siblings
-                      li.fragment distance from center: depth in tree
+                      li.fragment Angular proximity: siblings
+                      li.fragment Distance from center: depth in tree
                   li.fragment Task:
                   ul
-                    li.fragment understanding topology,  following paths
-                  li.fragment scalability
-                    li.fragment 1K - 10K nodes
+                    li.fragment Understanding topology, following paths
+                  li.fragment Scalability
+                    li.fragment 1,000 to 10,000 nodes
 
           section
             h3.demo Radial Tree
             iframe.blocks(data-src="http://blockbuilder.org/mbostock/4063550")
             div.tiny
-              a(target="_blank" href="http://blockbuilder.org/mbostock/4063550") http://blockbuilder.org/mbostock/4063550
+              a(target="_blank" href="http://blockbuilder.org/mbostock/4063550") Radial Tidy Tree
             div.tiny
               a(target="_blank" href="http://bl.ocks.org/mbostock/") by mbostock
+              // @john-guerra Note: the content extends off the slide and image is not visible
 
           section
             h3.demo Dendogram
             iframe.blocks(data-src="http://blockbuilder.org/mbostock/e9ba78a2c1070980d1b530800ce7fa2b")
             div.tiny
-              a(target="_blank" href="http://blockbuilder.org/mbostock/e9ba78a2c1070980d1b530800ce7fa2b") http://blockbuilder.org/mbostock/e9ba78a2c1070980d1b530800ce7fa2b
+              a(target="_blank" href="http://blockbuilder.org/mbostock/e9ba78a2c1070980d1b530800ce7fa2b") Tidy Tree vs. Dendogram
             div.tiny
               a(target="_blank" href="http://bl.ocks.org/mbostock/") by mbostock
+              // @john-guerra Note: the content extends off the slide and image is not visible
 
 
           section
             h2.demo Cluster Dendograms Radial
             div.left.small
               ul.small
-                li Data: Trees
-                li Tasks: Summarize common connections.
+                li Data: trees
+                li Tasks: summarize common connections
                 li Considerations:
                   ul.small
                     li Harder to read
@@ -162,12 +164,12 @@ html(lang="en")
             h2.demo Phylogenetic Trees
             div.left.small
               ul.small
-                li Data: Tree of Life
-                li Tasks: Summarize common connections. Identify Clusters.
+                li Data: tree of life
+                li Tasks: summarize common connections; identify clusters
                 li Considerations:
                   ul.small
                     li Harder to read
-                    li Also works with other clusters data
+                    li Also works with other clusters' data
             div.right
               a(href="https://observablehq.com/@mbostock/tree-of-life")
                 img(data-src="../shared_images/phylogenetic.svg" alt="Phylogenetic")
@@ -178,25 +180,27 @@ html(lang="en")
             h3.demo Cluster Dendograms Cartesian
             iframe.blocks(data-src="http://blockbuilder.org/mbostock/4063570")
             div.tiny
-              a(target="_blank" href="http://blockbuilder.org/mbostock/4063570") http://blockbuilder.org/mbostock/4063570
+              a(target="_blank" href="http://blockbuilder.org/mbostock/4063570") Cluster Dendrogram
             div.tiny
               a(target="_blank" href="http://bl.ocks.org/mbostock/") by mbostock
+              // @john-guerra Note: the content extends off the slide and image is not visible
 
           section
-            h3.demo Force Directed Tree
+            h3.demo Force-Directed Tree
             iframe.blocks(data-src="http://blockbuilder.org/mbostock/95aa92e2f4e8345aaa55a4a94d41ce37")
             div.tiny
-              a(target="_blank" href="http://blockbuilder.org/mbostock/95aa92e2f4e8345aaa55a4a94d41ce37") http://blockbuilder.org/mbostock/95aa92e2f4e8345aaa55a4a94d41ce37
+              a(target="_blank" href="http://blockbuilder.org/mbostock/95aa92e2f4e8345aaa55a4a94d41ce37") Force-Directed Tree
             div.tiny
               a(target="_blank" href="http://bl.ocks.org/mbostock/") by mbostock
+              // @john-guerra Note: the content extends off the slide and image is not visible
 
 
           section
             h2.demo Collapsible Tree
             div.left.small
               ul.small
-                li Data: Tree/Network
-                li Tasks: Navigate connections. Locate nodes
+                li Data: tree/network
+                li Tasks: navigate connections; locate nodes
                 li Considerations:
                   ul.small
                     li Great for larger datasets
@@ -207,17 +211,17 @@ html(lang="en")
 
 
           section
-            h3.demo SpaceTree
+            h3.demo Spacetree
             iframe.blocks(data-src="https://philogb.github.io/jit/static/v20/Jit/Examples/Spacetree/example1.html")
             div.tiny
-              a(target="_blank" href="https://philogb.github.io/jit/static/v20/Jit/Examples/Spacetree/example1.html") https://philogb.github.io/jit/static/v20/Jit/Examples/Spacetree/example1.html
+              a(target="_blank" href="https://philogb.github.io/jit/static/v20/Jit/Examples/Spacetree/example1.html") Spacetree: Tree Animation
 
           section
-            h3.demo SpaceTree
+            h3.demo Spacetree (cont.)
             span.
               <iframe width="853" height="480" data-src="https://www.youtube.com/embed/F7-vJBsFBWw" frameborder="0" allowful.smalllscreen></iframe>
             div.tiny
-              a(target="_blank" href="http://www.cs.umd.edu/hcil/spacetree/") http://www.cs.umd.edu/hcil/spacetree/
+              a(target="_blank" href="http://www.cs.umd.edu/hcil/spacetree/") SpaceTree: a novel node-link tree browser
 
 
           section
@@ -225,8 +229,7 @@ html(lang="en")
             span.
               <iframe width="853" height="480" data-src="https://www.youtube.com/embed/RTQ0N4QY0yc" frameborder="0" allowful.smalllscreen></iframe>
             div.tiny
-              a(target="_blank" href="http://vis.stanford.edu/papers/doitrees-revisited") http://vis.stanford.edu/papers/doitrees-revisited
-
+              a(target="_blank" href="http://vis.stanford.edu/papers/doitrees-revisited") DOITrees Revisited: Scalable, Space-Constrained Visualization of Hierarchical Data
 
 
         section#treesContainment
@@ -234,44 +237,44 @@ html(lang="en")
             h1 Trees: Containment
 
           section
-            h2 Idiom: treemap
+            h2 Idiom: Treemap
             .flex
               .half
                 ul.small
 
                   li.fragment Data:
                   ul
-                    li.fragment tree
-                    li.fragment 1 quant attrib at leaf nodes
-                  li.fragment encoding
+                    li.fragment Tree
+                    li.fragment One quantitative attribute at leaf nodes
+                  li.fragment Encoding
                   ul
-                    li.fragment area containment marks for hierarchical structure
-                    li.fragment rectilinear orientation
-                    li.fragment area encodes quant attrib
+                    li.fragment Area containment marks for hierarchical structure
+                    li.fragment Rectilinear orientation
+                    li.fragment Area encodes quantitative attribute
                   li.fragment Tasks:
                   ul
-                    li.fragment query attribute at leaf nodes
-                  li.fragment scalability
+                    li.fragment Query attribute at leaf nodes
+                  li.fragment Scalability:
                   ul
-                    li.fragment 1M leaf nodes
+                    li.fragment One million leaf nodes
           section
-            h2 Link marks: Connection and containment
+            h2 Link Marks: Connection and Containment
             .flex
               .half
                 ul.small
-                  li.fragment marks as links (vs. nodes)
+                  li.fragment Marks as links (vs. nodes):
                   ul
-                    li.fragment common case in network drawing
+                    li.fragment Common case in network drawing
                     li.fragment 1D case: connection
                     ul
-                      li.fragment ex: all node-link diagrams
-                      li.fragment emphasizes topology, path tracing
-                      li.fragment networks and trees
+                      li.fragment Example: all node-link diagrams
+                      li.fragment Emphasizes topology, path tracing
+                      li.fragment Networks and trees
                     li.fragment 2D case: containment
                     ul
-                      li.fragment ex: all treemap variants
-                      li.fragment emphasizes attribute values at leaves (size coding)
-                      li.fragment only trees
+                      li.fragment Example: all treemap variants
+                      li.fragment Emphasizes attribute values at leaves (size coding)
+                      li.fragment Only trees
 
           //- Treemaps
           section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/09_networks-star-steno-topo.008.png")
@@ -279,19 +282,20 @@ html(lang="en")
           section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/09_networks-star-steno-topo.009.png")
 
           section
-            h3.demo TreeMap
+            h3.demo Treemap
             iframe.blocks(data-src="http://blockbuilder.org/mbostock/6bbb0a7ff7686b124d80")
             div.tiny
-              a(target="_blank" href="http://blockbuilder.org/mbostock/6bbb0a7ff7686b124d80") http://blockbuilder.org/mbostock/6bbb0a7ff7686b124d80
+              a(target="_blank" href="http://blockbuilder.org/mbostock/6bbb0a7ff7686b124d80") Treemap
             div.tiny
               a(target="_blank" href="http://bl.ocks.org/mbostock/") by mbostock
+              // @john-guerra Note: image not visible and slide content off screen
 
 
           section
-            h3.demo TreeMap with parent labels
+            h3.demo Treemap with Parent Labels
             iframe.blocks(data-src="http://blockbuilder.org/mbostock/911ad09bdead40ec0061")
             div.tiny
-              a(target="_blank" href="http://blockbuilder.org/mbostock/911ad09bdead40ec0061") http://blockbuilder.org/mbostock/911ad09bdead40ec0061
+              a(target="_blank" href="http://blockbuilder.org/mbostock/911ad09bdead40ec0061") Nested Treemap
             div.tiny
               a(target="_blank" href="http://bl.ocks.org/mbostock/") by mbostock
 
@@ -299,17 +303,18 @@ html(lang="en")
           section
             iframe.blocks(data-src="https://finviz.com/map.ashx?t=sec")
             div.tiny
-              a(href="https://finviz.com/map.ashx?t=sec") https://finviz.com/map.ashx?t=sec
+              a(href="https://finviz.com/map.ashx?t=sec") S&P 500 Map
+              // @john-guerra Note: image not displaying
 
           section
             h2.demo Icicle Tree
             div.left.small
               ul.small
-                li Data: Tree
-                li Tasks: Summarize values/hierarchy. Navigate links
+                li Data: tree
+                li Tasks: summarize values/hierarchy; navigate links
                 li Considerations:
                   ul.small
-                    li Uses more space than the treemap
+                    li Us es more space than the treemap
                     li Better for labels
             div.right
               a(href="https://observablehq.com/@d3/zoomable-icicle")
@@ -318,14 +323,15 @@ html(lang="en")
 
 
           section
-            h2.demo Icicle Tree
+            h2.demo Icicle Tree (cont.)
             div.left.small
               ul.small
-                li Data: Tree
-                li Tasks: Summarize values/hierarchy. Navigate links. Compare values in leaves
+                li Data: tree
+                li Tasks: summarize values/hierarchy; navigate links; compare values in leaves
                 li Considerations:
                   ul.small
-                    li Careful.small with small edges
+                    li Careful with small edges
+
             div.right
               a(href="https://observablehq.com/@john-guerra/zoomable-variable-size-icicle")
                 img(data-src="../shared_images/variableSizeIcicle.svg" alt="Variable Size Icicle Tree")
@@ -335,12 +341,12 @@ html(lang="en")
             h2.demo Sunburst Tree
             div.left.small
               ul.small
-                li Data: Tree
-                li Tasks: Summarize values/hierarchy. Navigate links
+                li Data: tree
+                li Tasks: summarize values/hierarchy; navigate links
                 li Considerations:
                   ul.small
                     li Radial values are confusing
-                    li Fancy yet difficul.smallt animation
+                    li Fancy yet difficult animation
             div.right
               a(href="https://observablehq.com/@d3/zoomable-sunburst")
                 img(data-src="../shared_images/sunburst.svg" alt="Sunburst Tree")
@@ -351,7 +357,7 @@ html(lang="en")
             h3.demo Radial Treemap
             iframe.blocks(data-src="http://blockbuilder.org/mbostock/ca5b03a33affa4160321")
             div.tiny
-              a(target="_blank" href="http://blockbuilder.org/mbostock/ca5b03a33affa4160321") http://blockbuilder.org/mbostock/ca5b03a33affa4160321
+              a(target="_blank" href="http://blockbuilder.org/mbostock/ca5b03a33affa4160321") Circle-Packing
             div.tiny
               a(target="_blank" href="http://bl.ocks.org/mbostock/") by mbostock
 
@@ -362,28 +368,29 @@ html(lang="en")
               a(target="_blank" href="http://blockbuilder.org/john-guerra/38b1c32154905828f019f35a026b7526") http://blockbuilder.org/john-guerra/38b1c32154905828f019f35a026b7526
             div.tiny
               a(target="_blank" href="http://bl.ocks.org/john-guerra/") by john-guerra
+              // @john-guerra Note: content extends off slide and image does not display
 
           section
-            h2 Tree drawing idioms comparison
+            h2 Tree Drawing Idioms Comparison
             .flex
               .half
                 ul.small
                   li.fragment Data shown:
                   ul
-                    li.fragment link relationships
-                    li.fragment tree depth
-                    li.fragment sibling order
-                  li.fragment design choices
+                    li.fragment Link relationships
+                    li.fragment Tree depth
+                    li.fragment Sibling order
+                  li.fragment Design choices
                   ul
-                    li.fragment connection vs containment link marks
-                    li.fragment rectilinear vs radial layout
-                    li.fragment spatial position channels
-                  li.fragment considerations
+                    li.fragment Connection vs. containment link marks
+                    li.fragment Rectilinear vs. radial layout
+                    li.fragment Spatial position channels
+                  li.fragment Considerations
                   ul
-                    li.fragment redundant? arbitrary?
-                    li.fragment information density?
+                    li.fragment Redundant? arbitrary?
+                    li.fragment Information density?
                     ul
-                      li.fragment avoid wasting space
+                      li.fragment Avoid wasting space
 
 
         section
@@ -396,7 +403,8 @@ html(lang="en")
             h3.demo TreeVersity
             iframe.blocks(data-src="https://treeversity.cattlab.umd.edu")
             div.tiny
-              a(target="_blank" href="https://treeversity.cattlab.umd.edu") https://treeversity.cattlab.umd.edu
+              a(target="_blank" href="https://treeversity.cattlab.umd.edu") UMD Budget 2010 - 2012
+              // @john-guerra Note: content extends off slide and image does not display
 
         //- section
         //-   section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/09_networks-star-steno-topo.010.png")
@@ -414,31 +422,31 @@ html(lang="en")
             h1 Geo
 
           section
-            h2 Idiom: choropleth map
+            h2 Idiom: Choropleth Map
             .flex
               .half
                 ul
                   li.fragment Use given spatial data:
                   ul
-                    li.fragment When central task is understanding spatial relationships.
+                    li.fragment When central task is understanding spatial relationships
                   li.fragment Data:
                   ul
-                    li.fragment Geographic geometry.
-                    li.fragment Table with 1 quant attribute per region.
+                    li.fragment Geographic geometry
+                    li.fragment Table with one quantitative attribute per region
                   li.fragment Encoding:
                   ul
-                    li.fragment Use given geometry for area mark boundaries.
-                    li.fragment Sequential segmented colormap.
-                    li.fragment Essentially, geographic heat map.
-                    
+                    li.fragment Use given geometry for area mark boundaries
+                    li.fragment Sequential segmented colormap
+                    li.fragment Essentially, geographic heat map
+
           //- Choropleth map block
           section
-            h3.demo Choropleth map
+            h3.demo Choropleth Map
             .flex
               .third
                 ul
-                  li.fragment Familiar.
-                  li.fragment Areas encode...state area.
+                  li.fragment Familiar
+                  li.fragment Areas encode... state area
               .twothirds.
                 <div id="observablehq-6b04a5b2"></div>
                 <script type="module">
@@ -447,9 +455,9 @@ html(lang="en")
                 const inspect = Inspector.into("#observablehq-6b04a5b2");
                 (new Runtime).module(define, name => name === "chart" ? inspect() : undefined);
                 </script>
-                
+
           section
-            h3.demo Bivariate Choropleth map
+            h3.demo Bivariate Choropleth Map
             div.
               <div id="observablehq-745f68a6"></div>
               <script type="module">
@@ -458,16 +466,16 @@ html(lang="en")
               const inspect = Inspector.into("#observablehq-745f68a6");
               (new Runtime).module(define, name => name === "chart" ? inspect() : undefined);
               </script>
-                    
+
 
           section
-            h2 Idiom: dot map
+            h2 Idiom: Dot Map
             .flex
               .third
                 ul
-                  li.fragment Good for population density.
-                  li.fragment Might require opengl.
-                  li.fragment Task summarize.
+                  li.fragment Good for population density
+                  li.fragment Might require opengl
+                  li.fragment Task summarize
               .twothids(width="600px", height="600px").
                 <div id="observablehq-12c2ba3e"></div>
                 <script type="module">
@@ -483,12 +491,12 @@ html(lang="en")
                 </script>
 
           section
-            h2 Idiom: bubble map
+            h2 Idiom: Bubble Map
             .flex
               .third
                 ul
-                  li.fragment Alternative for choropleth.
-                  li.fragment Be careful with occlusion.
+                  li.fragment Alternative for choropleth
+                  li.fragment Be careful with occlusion
               .twothirds.
                 <div id="observablehq-76cbf6dc"></div>
                 <script type="module">
@@ -506,7 +514,7 @@ html(lang="en")
 
           //- US Grid map
           section
-            h3.demo US Grid map
+            h3.demo U.S. Grid Map
             div(width="600px", height="600px").
               <div id="observablehq-f627f1c3"></div>
               <script type="module">
@@ -519,62 +527,62 @@ html(lang="en")
 
 
           section
-            h2 Population maps trickiness
+            h2 Population Maps Trickiness
             .flex
               ul
                 li.fragment Beware!
                 ul
-                  li.fragment Absolute vs relative again.
-                li.fragment Population density vs per capita.
+                  li.fragment Absolute vs. relative again
+                li.fragment Population density vs. per capita
                 ul
-                  li.fragment Investigate with #[a(href="http://public.tableau.com/profile/ben.jones#!/vizhome/PopVsFin/PopVsFin") Ben Jones Tableau Public demo].
-                  li.fragment   Are Maps of Financial Variables just Population Maps?
+                  li.fragment Investigate with #[a(href="http://public.tableau.com/profile/ben.jones#!/vizhome/PopVsFin/PopVsFin") Ben Jones Tableau Public demo]
+                  li.fragment  Are maps of financial variables just population maps?
                   ul
-                    li.fragment Yes, unless you look at per capita (relative) numbers.
+                    li.fragment Yes, unless you look at per capita (relative) numbers
           section
-            h2 Idiom: Bayesian surprise maps
+            h2 Idiom: Bayesian Surprise Maps
             .flex
               .half
                 ul
-                  li.fragment Use models of expectations to highlight surprising values.
-                  li.fragment Confounds (population) and variance (sparsity).
+                  li.fragment Use models of expectations to highlight surprising values
+                  li.fragment Confounds (population) and variance (sparsity)
 
           section
-            h2 Bayesian surprise map
+            h2 Bayesian Surprise Map
             img.demo(data-src="../shared_images/bayesian-surprise.png", alt="Types of Trees")
-            div #[a.tiny(href="https://idl.cs.washington.edu/files/2017-SurpriseMaps-InfoVis.pdf") Surprise! Bayesian Weighting for De-Biasing Thematic Maps]                  
-            
+            div #[a.tiny(href="https://idl.cs.washington.edu/files/2017-SurpriseMaps-InfoVis.pdf") Surprise! Bayesian Weighting for De-Biasing Thematic Maps]
+
           section
-            h2 Idiom: topographic map
+            h2 Idiom: Topographic Map
             .flex
               .half
                 ul
                   li.fragment Data:
                   ul
-                    li.fragment Geographic geometry.
+                    li.fragment Geographic geometry
                   li.fragment Scalar spatial field:
                   ul
-                    li.fragment 1 quant attribute per grid cell.
+                    li.fragment One quantitative attribute per grid cell
                   li.fragment Derived data:
                   ul
-                    li.fragment Isoline geometry.
+                    li.fragment Isoline geometry
                     ul
-                      li.fragment Isocontours computed for specific levels of scalar values.
-                      
+                      li.fragment Isocontours computed for specific levels of scalar values
+
           section
-            h2 Idiom: cartogram
+            h2 Idiom: Cartogram
             .flex
               .half
                 ul
                   li.fragment Data:
                   ul
-                    li.fragment Geographic geometry.
-                    li.fragment Continuous value at each geometry.
+                    li.fragment Geographic geometry
+                    li.fragment Continuous value at each geometry
                   li.fragment Derived data:
                   ul
-                    li.fragment New geographic geometry: many algorithm choices.
-                  li.fragment Then encoded as choropleth.
-                  
+                    li.fragment New geographic geometry: many algorithm choices
+                  li.fragment Then encoded as choropleth
+
           section
             h2 Cartogram 1
             div.
@@ -585,7 +593,7 @@ html(lang="en")
               const inspect = Inspector.into("#observablehq-78f5dd89");
               (new Runtime).module(define, name => name === "chart" ? inspect() : undefined);
               </script>
-            
+
           section
             h2 Cartogram 2
             img.demo(data-src="../shared_images/cartogram-2.png", alt="Cartogram 2")
@@ -596,98 +604,140 @@ html(lang="en")
             h1 Spatial Data
 
           section
-            h2 Idioms: isosurfaces, direct volume rendering
+            h2 Idioms: Isosurfaces, Direct Volume Rendering
             .flex
               ul
                 li.fragment Data:
                 ul
-                  li.fragment Scalar spatial field.
-                  li.fragment 1 quant attribute per grid cell.
+                  li.fragment Scalar spatial field
+                  li.fragment One quantitative attribute per grid cell
                 li.fragment Task:
                 ul
-                  li.fragment Shape understanding, spatial relationships.
+                  li.fragment Shape understanding, spatial relationships
                 li.fragment Isosurface:
                 ul
-                  li.fragment Derived data: isocontours computed for specific levels of scalar values.
+                  li.fragment Derived data: isocontours computed for specific levels of scalar values
                 li.fragment Direct volume rendering:
                 ul
-                  li.fragment Transfer function maps scalar values to color, opacity.
+                  li.fragment Transfer function maps scalar values to color, opacity
                   ul
-                    li.fragment No derived geometry.
-                    
-          section
-            h2 Isosurfaces example
-            img.demo(data-src="../shared_images/isosurface.png", alt="Isosurfaces")
-            div #[a.tiny(href="https://arxiv.org/pdf/1710.01199.pdf") Two-dimensional dynamics of elasto-inertial turbulence and its role in polymer drag reduction]
-                                    
+                    li.fragment No derived geometry
 
           section
-            h2 Vector and tensor fields
+            h2 Isosurfaces Example
+            img.demo(data-src="../shared_images/isosurface.png", alt="Isosurfaces")
+            div #[a.tiny(href="https://arxiv.org/pdf/1710.01199.pdf") Two-dimensional dynamics of elasto-inertial turbulence and its role in polymer drag reduction]
+
+
+          section
+            h2 Vector and Tensor Fields
             ul
               li.fragment Data:
               ul
-                li.fragment Many attribs per cell.
+                li.fragment Many attribs per cell
               li.fragment Idiom families:
               ul
                 li.fragment Flow glyphs:
                 ul
-                  li.fragment Purely local.
+                  li.fragment Purely local
                 li.fragment Geometric flow:
                 ul
-                  li.fragment Derived data from tracing particle trajectories.
-                  li.fragment Sparse set of seed points.
+                  li.fragment Derived data from tracing particle trajectories
+                  li.fragment Sparse set of seed points
                 li.fragment Texture flow:
                 ul
-                  li.fragment Derived data, dense seeds.
+                  li.fragment Derived data, dense seeds
                 li.fragment Feature flow:
                 ul
-                  li.fragment Global computation to detect features.
-                  li.fragment Encoded with one of methods above.
+                  li.fragment Global computation to detect features
+                  li.fragment Encoded with one of methods above
 
           section
-            h2 Vector fields
+            h2 Vector Fields
             .flex
               ul
                 li.fragment Empirical study tasks:
                 ul
-                  li.fragment Finding critical points, identifying their types.
-                  li.fragment Identifying what type of critical point is at a specific location.
-                  li.fragment Predicting where a particle starting at a specified point will end up (advection).
+                  li.fragment Finding critical points, identifying their types
+                  li.fragment Identifying what type of critical point is at a specific location
+                  li.fragment Predicting where a particle starting at a specified point will end up (advection)
 
           section
-            h2 Vector field example
+            h2 Vector Field Example
             img.demo(data-src="../shared_images/lorenz-vectors.png", alt="Lorenz vectors")
 
           section
-            h2 Name that dynamical system
-            img.demo(data-src="../shared_images/lorenz.jpeg", alt="Lorenz")            
-            
+            h2 Name That Dynamical System
+            img.demo(data-src="../shared_images/lorenz.jpeg", alt="Lorenz")
+
           section
-            h3 Idiom: similarity-clustered streamlines
+            h3 Idiom: Similarity-Clustered Streamlines
             ul
               li.fragment Data:
               ul
-                li.fragment 3D vector field.
+                li.fragment 3D vector field
               li.fragment Derived data (from field):
               ul
-                li.fragment Streamlines: trajectory particle will follow.
+                li.fragment Streamlines: trajectory particle will follow
               li.fragment Derived data (per streamline):
               ul
-                li.fragment Curvature, torsion, tortuosity.
-                li.fragment Signature: complex weighted combination.
-                li.fragment Compute cluster hierarchy across all signatures.
-                li.fragment Encode: color and opacity by cluster.
+                li.fragment Curvature, torsion, tortuosity
+                li.fragment Signature: complex weighted combination
+                li.fragment Compute cluster hierarchy across all signatures
+                li.fragment Encode: color and opacity by cluster
               li.fragment Task:
               ul
-                li.fragment Find features, query shape.
+                li.fragment Find features, query shape
               li.fragment Scalability:
               ul
-                li.fragment Millions of samples, hundreds of streamlines.
+                li.fragment Millions of samples, hundreds of streamlines
 
           section
             h2 Streamlines
-            img.demo(data-src="../shared_images/wind-map.png", alt="Wind Map")               
+            img.demo(data-src="../shared_images/wind-map.png", alt="Wind Map")
             div.tiny #[a(href="http://hint.fm/wind/") Original inspiration]
+
+
+        section
+          section
+            h2 Map Libraries
+            ul
+              li
+                a(target="_blank" href="http://mapbox.com/") Mapbox
+              li
+                a(target="_blank" href="http://leafletjs.com/") Leaflet
+              li
+                a(target="_blank" href="http://datamaps.github.io/") DataMaps
+              li
+                a(target="_blank" href="https://github.com/emeeks/d3-carto-map") d3-carto-map
+
+
+          section
+            h3 Mapbox and Tableau
+            a(href="https://www.mapbox.com/tableau/") Maps in Tableau
+
+          section
+            h2 Mapbox + Tableau examples
+
+          section
+            h3.demo Votos Fajardo
+            a.tiny(href="https://public.tableau.com/profile/john.alexis.guerra.g.mez#!/vizhome/votosFajardo2/Fajardo") votosFajardo2
+            div.blocks.
+              <div class='tableauPlaceholder' id='viz1568758234721' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;NG&#47;NGCWHPJM6&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='path' value='shared&#47;NGCWHPJM6' /> <param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;NG&#47;NGCWHPJM6&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>
+              <script type='text/javascript'>                    var divElement = document.getElementById('viz1568758234721');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height='600px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+
+
+          section
+            h3.demo Votos Concejo
+            a.tiny(href="https://public.tableau.com/profile/john.alexis.guerra.g.mez#!/vizhome/votosConcejo/Dashboard1") votosConcejo
+            div.blocks.
+              <div class='tableauPlaceholder' id='viz1568758685092' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;vo&#47;votosConcejo&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='votosConcejo&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;vo&#47;votosConcejo&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1568758685092');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height='600px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+
+
+          section
+            h3.demo Mapbox and D3
+            a(href="https://observablehq.com/@john-guerra/mapbox-d3") https://observablehq.com/@john-guerra/mapbox-d3
+
 
         section
           section
@@ -704,17 +754,20 @@ html(lang="en")
             iframe.blocks(width="560", height="315", src="https://www.youtube.com/embed/kIID5FDi2JQ",frameborder="0" allowfullscreen)
 
 
+
+
           section
-            h2 Map libraries
-            ul
-              li
-                a(target="_blank" href="http://mapbox.com/") http://mapbox.com/
-              li
-                a(target="_blank" href="http://leafletjs.com/") http://leafletjs.com/
-              li
-                a(target="_blank" href="http://datamaps.github.io/") http://datamaps.github.io/
-              li
-                a(target="_blank" href="https://github.com/emeeks/d3-carto-map") https://github.com/emeeks/d3-carto-map
+            h3 Mike's Maps Tutorial
+            a(href="https://medium.com/@mbostock/command-line-cartography-part-1-897aa8f8ca2c") Command-Line Cartography, Part 1
+
+        section
+          section
+            h3 Vega-Lite Maps
+            a(href="https://observablehq.com/@vega/vega-lite-api") Vega-Lite API
+
+
+
+
 
 
 
@@ -733,41 +786,7 @@ html(lang="en")
 
 
 
-        section
 
-          section
-            h3 Mapbox + Tableau
-            a(href="https://www.mapbox.com/tableau/") https://www.mapbox.com/tableau/
-
-
-          section
-            h3.demo Votos Fajardo
-            a.tiny(href="https://public.tableau.com/profile/john.alexis.guerra.g.mez#!/vizhome/votosFajardo2/Fajardo") https://public.tableau.com/profile/john.alexis.guerra.g.mez#!/vizhome/votosFajardo2/Fajardo
-            div.blocks.
-              <div class='tableauPlaceholder' id='viz1568758234721' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;NG&#47;NGCWHPJM6&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='path' value='shared&#47;NGCWHPJM6' /> <param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;NG&#47;NGCWHPJM6&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>
-              <script type='text/javascript'>                    var divElement = document.getElementById('viz1568758234721');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height='600px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
-
-
-          section
-            h3.demo Votos Concejo
-            a.tiny(href="https://public.tableau.com/profile/john.alexis.guerra.g.mez#!/vizhome/votosConcejo/Dashboard1") https://public.tableau.com/profile/john.alexis.guerra.g.mez#!/vizhome/votosConcejo/Dashboard1
-            div.blocks.
-              <div class='tableauPlaceholder' id='viz1568758685092' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;vo&#47;votosConcejo&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='votosConcejo&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;vo&#47;votosConcejo&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1568758685092');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height='600px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
-
-
-
-          section
-            h3.demo Mapbox + D3
-            a(href="https://observablehq.com/@john-guerra/mapbox-d3") https://observablehq.com/@john-guerra/mapbox-d3
-
-
-          section
-            h3 Mike's maps tutorial
-            a(href="https://medium.com/@mbostock/command-line-cartography-part-1-897aa8f8ca2c") https://medium.com/@mbostock/command-line-cartography-part-1-897aa8f8ca2c
-
-          section
-            h3 Vega-lite Maps
-            a(href="https://observablehq.com/@vega/vega-lite-api") https://observablehq.com/@vega/vega-lite-api
 
 
 
@@ -776,7 +795,7 @@ html(lang="en")
 
         section#review
           section
-            h2 What we learned
+            h2 What We Learned
             ul.small
 
 

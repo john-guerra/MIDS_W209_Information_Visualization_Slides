@@ -51,28 +51,28 @@ html(lang="en")
         //- Outline
         section#outline
           section
-            h2 What we are going to learn
+            h2 What We Are Going to Learn
             ul.small.line-compressed(style="margin-top: -2rem")
-              li Arranging Tables
-              li.fragment 0 Keys
+              li Arranging tables
+              li.fragment Zero keys
                 ul.tiny
                   li Scatterplots
-              li.fragment Some Keys
+              li.fragment Some keys
                 ul.tiny
                   li Barcharts
                   li Heatmaps
-              li.fragment Other Axis Orientations
+              li.fragment Other axis orientations
                 ul.tiny
                   li Sploms
-                  li Parallel Coordinates
+                  li Parallel coordinates
                   li Navio
-              li.fragment Radial Representations
+              li.fragment Radial representations
                 ul.tiny
                   li Pie charts
-                  li Radar Plots
+                  li Radar plots
 
           section
-            h1 Recap what/why/how
+            h1 Recap What/Why/How
 
           //- what?
           section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/tamara_course14_session1-15.png")
@@ -90,14 +90,14 @@ html(lang="en")
 
         section#arrangingTables
           section
-            h1 Arranging tables
+            h1 Arranging Tables
 
           section
-            h2 Why Arrange
-            p.fragment Space is the most important channel
+            h2 Why Arrange?
+            p.fragment Space is the most important channel.
 
           section
-            h2 How to arrange?
+            h2 How to arrange
             .flex
               .half
                 ul.small
@@ -106,22 +106,24 @@ html(lang="en")
                     strong.fragment 👉 Express
                   li.fragment Categorical data
                     br
-                    strong.fragment 👉 Separate, Order, Align
+                    strong.fragment 👉 Separate, order, align
               .half
                 figure
                   img.fill(data-src="../shared_images/vad_book_alldiagrams/how_encode_arrange.png", alt="How, encode, Arrange")
 
 
+
           //- section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/08_tables-spatial.003.png")
 
           section.full
-            h2 Arange Tables
+            h2 Arrange Tables
             .flex
               img.fragment(style="flex-basis:45%" src="../shared_images/vad_book_alldiagrams/how_express_separate.png", alt="Express Separate Order and Align")
               img.fragment(style="flex-basis:45%" src="../shared_images/vad_book_alldiagrams/how_axis_orientation.png", alt="Axis Orientation")
               img.fragment(style="margin-top:40px; flex-basis:100%" src="../shared_images/vad_book_alldiagrams/how_keys.png", alt="Keys")
 
           //- section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/08_tables-spatial.004.png")
+          // @john-guerra Note: the above image is cut off on the slide
 
 
           section
@@ -129,10 +131,10 @@ html(lang="en")
             .flex
               .half
                 ul.small
-                  li.fragment independent attribute
-                  li.fragment used as unique index to look up items
-                  li.fragment simple tables: 1 key
-                  li.fragment multidimensional tables: multiple keys
+                  li.fragment Independent attribute
+                  li.fragment Used as unique index to look up items
+                  li.fragment Simple tables: one key
+                  li.fragment Multidimensional tables: multiple keys
               .half
                 img.fragment.vcentered(width="100%" style="margin-top:40px" src="../shared_images/vad_book_alldiagrams/how_keys.png", alt="Keys")
 
@@ -140,19 +142,19 @@ html(lang="en")
             h3 Values
             .flex
               .half
-                img.vcentered(width="200px" src="../shared_images/vad_book_alldiagrams/what_tables.png", alt="What Tables")
+                img.vcentered(style="max-width:300px" src="../shared_images/vad_book_alldiagrams/what_tables.png", alt="What Tables")
               .half
                 ul.small
-                  li.fragment dependent attribute, value of cell
-                  li.fragment classify arrangements by key count
-                  li.fragment 0, 1, 2, many...
+                  li.fragment Dependent attribute, value of cell
+                  li.fragment Classify arrangements by key count
+                  li.fragment Zero, one, two, many...
 
           //- section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/08_tables-spatial.005.png")
           //- Scatterplot
 
         section#0Keys
           section
-            h2 0 Keys
+            h2 Zero Keys
             img.fill(data-src="../shared_images/vad_book_alldiagrams/0_keys.png", alt="0 Keys")
 
 
@@ -162,16 +164,16 @@ html(lang="en")
             .flex
               .half
                 ul.small
-                  li.fragment #[strong express] values
+                  li.fragment #[strong Express] values
                   ul.small
-                    li.fragment quantitative attributes
-                  li.fragment no keys, only values
+                    li.fragment Quantitative attributes
+                  li.fragment No keys, only values
                   ul.small
-                    li.fragment #[strong data]: #[span.fragment 2 quant attribs]
-                    li.fragment #[strong mark]: points
-                    li.fragment #[strong channels]: #[span.fragment horiz + vert position]
-                    li.fragment #[strong tasks]: #[span.fragment identify trends, outliers, distribution, correlation, clusters]
-                    li.fragment #[strong scalability]: #[span.fragment hundreds of items]
+                    li.fragment #[strong Data]: #[span.fragment two quantitative attributes]
+                    li.fragment #[strong Mark]: points
+                    li.fragment #[strong Channels]: #[span.fragment horizontal and vertical position]
+                    li.fragment #[strong Tasks]: #[span.fragment identify trends, outliers, distribution, correlation, clusters]
+                    li.fragment #[strong Scalability]: #[span.fragment hundreds of items]
               .half
                 img(width="250px" src="../shared_images/vad_book_alldiagrams/how_express.png", alt="Express")
 
@@ -201,7 +203,7 @@ html(lang="en")
             a.tiny(target="_blank" href="https://observablehq.com/@john-guerra/scatterplot") https://observablehq.com/@john-guerra/scatterplot
 
           section
-            h2 Scatterplot overplotting
+            h2 Scatterplot Overplotting
             div(class="flex", id="observablehq-f974ea53")
               .half
                 .flex
@@ -233,14 +235,14 @@ html(lang="en")
             img.fill(data-src="../shared_images/vad_book_alldiagrams/some_keys.png", alt="Some Keys")
 
           section.full
-            h3 Some keys: Categorical regions
+            h3 Some Keys: Categorical Regions
             img.noMarginTopBottom(data-src="../shared_images/vad_book_alldiagrams/how_separate_order_align.png", alt="Separate Order and Align")
             ul.noMarginTopBottom.small
-              li.fragment #[strong regions]: contiguous bounded areas distinct from each other
+              li.fragment #[strong Regions]: contiguous bounded areas distinct from each other
               ul.small
-                li.fragment using space to #[strong separate] (proximity)
-                li.fragment following expressiveness principle for categorical attributes
-              li.fragment use ordered attribute to #[strong order] and #[strong align] regions
+                li.fragment Using space to #[strong separate] (proximity)
+                li.fragment Following expressiveness principle for categorical attributes
+              li.fragment Use ordered attribute to #[strong order] and #[strong align] regions
 
             img.noMarginTopBottom.fill.fragment(data-src="../shared_images/vad_book_alldiagrams/how_keys.png", alt="Keys")
 
@@ -254,25 +256,25 @@ html(lang="en")
             .flex
               .half.small
                 ul.small
-                  li.fragment one key, one value
-                  li.fragment #[strong data]:
+                  li.fragment One key, one value
+                  li.fragment #[strong Data]:
                   ul.small
-                    li.fragment 1 categ attrib, 1 quant attrib
-                  li.fragment #[strong mark]: lines
-                  li.fragment #[strong channels:]
+                    li.fragment One categorical attribute, one quantitative attribute
+                  li.fragment #[strong Mark]: lines
+                  li.fragment #[strong Channels:]
                   ul.small
-                    li.fragment length to express quant value
-                    li.fragment spatial regions: one per mark
+                    li.fragment Length to express quantitative value
+                    li.fragment Spatial regions: one per mark
                     ul.small
-                      li.fragment separated horizontally, aligned vertically
-                      li.fragment ordered by quant attrib
-                      li.fragment by label (alphabetical), by length attrib (data-driven)
-                  li.fragment #[strong task]
+                      li.fragment Separated horizontally, aligned vertically
+                      li.fragment Ordered by quantitative attribute
+                      li.fragment By label (alphabetical), by length attribute (data-driven)
+                  li.fragment #[strong Task:]
                   ul.small
-                    li.fragment compare, lookup values
-                  li.fragment #[strong scalability]
+                    li.fragment Compare, lookup values
+                  li.fragment #[strong Scalability]
                   ul.small
-                    li.fragment dozens to hundreds of levels for key attrib
+                    li.fragment Dozens to hundreds of levels for key attribute
               .half
 
                 img.fill(data-src="../shared_images/vad_book_alldiagrams/barchart_example.png", alt="Barchart example")
@@ -283,13 +285,13 @@ html(lang="en")
 
 
           section.full
-            h3 Separate, order and align
+            h3 Separate, Order, and Align
             .flex
               .third
                 ul.small
-                  li.fragment #[strong Separate]: Helps differentiating
-                  li.fragment #[strong Order]: Helps locating/lookup
-                  li.fragment #[strong Align]: Helps comparing
+                  li.fragment #[strong Separate]: helps differentiating
+                  li.fragment #[strong Order]: helps locating/lookup
+                  li.fragment #[strong Align]: helps comparing
               .twothirds.
                 <div id="observablehq-e122dc3a">
                   <div class="observablehq-viewof-options"></div>
@@ -313,24 +315,24 @@ html(lang="en")
 
 
           section.full
-            h3 Idiom: stacked bar chart
+            h3 Idiom: Stacked Bar Chart
             .flex
               .twothirds
                 ul.small
-                  li.fragment 2 keys, one value
-                  li.fragment #[strong data:]
+                  li.fragment Two keys, one value
+                  li.fragment #[strong Data:]
                   ul.small
-                    li.fragment 2 categ. attrib.
-                    li.fragment 1 quant. attrib.
-                  li.fragment #[strong mark:] vertical stack of line marks
-                  li.fragment #[strong glyph:] composite object, internal structure from multiple marks
-                  li.fragment #[strong channels:] length and color hue
+                    li.fragment Two categorical attributes
+                    li.fragment One quantitative attribute
+                  li.fragment #[strong Mark:] vertical stack of line marks
+                  li.fragment #[strong Glyph:] composite object, internal structure from multiple marks
+                  li.fragment #[strong Channels:] length and color hue
                   ul.small
-                    li.fragment spatial regions: one per glyph
-                    li.fragment aligned: full glyph, lowest bar component
-                    li.fragment unaligned: other bar components
-                  li.fragment #[strong task:] part-to-whole relationship
-                  li.fragment #[strong scalability]: few bars, few stacked
+                    li.fragment Spatial regions: one per glyph
+                    li.fragment Aligned: full glyph, lowest bar component
+                    li.fragment Unaligned: other bar components
+                  li.fragment #[strong Task:] part-to-whole relationship
+                  li.fragment #[strong Scalability]: few bars, few stacked
 
               .third
                 figure
@@ -341,7 +343,7 @@ html(lang="en")
               //- TODO highlight region on hover
 
           section
-            h3.demo stacked to grouped
+            h3.demo Stacked to Grouped
             div.blocks#stackedToGroupedDivLayout
             div.blocks#stackedToGroupedDiv
             script(type="module").
@@ -359,10 +361,10 @@ html(lang="en")
             a.tiny(target="_blank" href="https://observablehq.com/@d3/stacked-to-grouped-bars") https://observablehq.com/@d3/stacked-to-grouped-bars
 
           section
-            h2 "Stacked bar charts are the worst".
+            h2 "Stacked Bar Charts Are the Worst."
             p Interesting discussion from
-              a(href="https://eagereyes.org/techniques/stacked-bars-are-the-worst") Robert Kosara's blog
-            p Make sure to read the comments
+              a(href="https://eagereyes.org/techniques/stacked-bars-are-the-worst") Robert Kosara's blog.
+            p Make sure to read the comments.
 
 
           section
@@ -370,23 +372,24 @@ html(lang="en")
             .flex
               .half
                 ul
-                  li.fragment Similar to Stacked barchart
+                  li.fragment Similar to stacked barchart
                   li.fragment Uses bar width
               .half
                 a(href="https://observablehq.com/@karimdouieb/europe-electricity-production") https://observablehq.com/@karimdouieb/europe-electricity-production
                 a(href="https://datavizcatalogue.com/methods/marimekko_chart.html") https://datavizcatalogue.com/methods/marimekko_chart.html
+                // @john-guerra Note: formatting causes slide content to go off-screen
 
 
 
           section
-            h2 Chart axes
+            h2 Chart Axes
             .flex
               .third
                 ul.small
-                  li.fragment labelled axis is critical
-                  li.fragment avoid cropping y-axis
-                  li.fragment include 0 at bottom left
-                  li.fragment or slope misleads
+                  li.fragment Labeled axis is critical
+                  li.fragment Avoid cropping y-axis
+                  li.fragment Include 0 at bottom left
+                  li.fragment Or slope misleads
 
               .twothirds
                 figure
@@ -396,56 +399,56 @@ html(lang="en")
 
         section#2Keys
           section
-            h2 2 Keys
+            h2 Two Keys
             ul.small
 
           section.full
-            h2 Idiom: heatmap
+            h2 Idiom: Heatmap
             .flex
               .twothirds
                 ul.small
-                  li.fragment two keys, one value
+                  li.fragment Two keys, one value
                   ul
-                    li.fragment data
+                    li.fragment Data
                     ul
-                      li.fragment 2 categ attribs (gene, experimental condition)
-                      li.fragment 1 quant attrib (expression levels)
-                    li.fragment marks: area
+                      li.fragment Two categorical attributes (gene, experimental condition)
+                      li.fragment One quantitative attribute (expression levels)
+                    li.fragment Marks: area
                     ul
-                      li.fragment separate and align in 2D matrix
-                      li.fragment indexed by 2 categorical attributes
-                    li.fragment channels
+                      li.fragment Separate and align in 2D matrix
+                      li.fragment Indexed by two categorical attributes
+                    li.fragment Channels
                     ul
-                      li.fragment color by quant attrib
+                      li.fragment Color by quantitative attrib
                       ul
-                        li.fragment (ordered diverging colormap)
-                    li.fragment task find clusters, outliers
-                    li.fragment scalability
+                        li.fragment (Ordered diverging colormap)
+                    li.fragment Task: find clusters, outliers
+                    li.fragment Scalability
                     ul
-                      li.fragment 1M items, 100s of categ levels, ~10 quant attrib levels
+                      li.fragment One million items, hundreds of categorical levels, about ten quantitative attribute levels
               .third
                 figure
                   img.fill(data-src="../shared_images/vad_book_alldiagrams/heatmap.png", alt="Heatmap")
 
 
           section
-            h2 Idiom: cluster heatmap
+            h2 Idiom: Cluster Heatmap
             .flex
               .half
                 ul.small
-                  li.fragment in addition
+                  li.fragment In addition
                   ul
-                    li.fragment derived data
+                    li.fragment Derived data
                     ul
-                      li.fragment 2 cluster hierarchies
-                    li.fragment dendrogram
+                      li.fragment Two cluster hierarchies
+                    li.fragment Dendrogram
                     ul
-                      li.fragment parent-child relationships in tree with connection line marks
-                      li.fragment leaves aligned so interior branch heights easy to compare
-                    li.fragment heatmap
+                      li.fragment Parent-child relationships in tree with connection line marks
+                      li.fragment Leaves aligned so interior branch heights easy to compare
+                    li.fragment Heatmap
                     ul
-                      li.fragment marks (re-)ordered by cluster hierarchy traversal
-                      li.fragment task: assess quality of clusters found by automatic methods
+                      li.fragment Marks (re-)ordered by cluster hierarchy traversal
+                      li.fragment Task: assess quality of clusters found by automatic methods
               .half
                 figure
                   img.fill(data-src="../shared_images/vad_book_alldiagrams/cluster_heatmap.png", alt="Cluster Heatmap")
@@ -463,19 +466,19 @@ html(lang="en")
             img.fill(data-src="../shared_images/vad_book_alldiagrams/how_axis_orientation_only.png", alt="Axis orientation")
 
           section.full
-            h3 Idiom: scatterplot matrix
+            h3 Idiom: Scatterplot Matrix
             .flex
               .half
                 ul.small
-                  li.fragment rectilinear axes, point mark
-                  li.fragment all possible pairs of axes
-                  li.fragment scalability
+                  li.fragment Rectilinear axes, point mark
+                  li.fragment All possible pairs of axes
+                  li.fragment Scalability
                   ul
-                    li.fragment one dozen attribs
-                    li.fragment dozens to hundreds of items
+                    li.fragment One dozen attributes
+                    li.fragment Dozens to hundreds of items
                   li.fragment Task:
                   ul
-                    li.fragment Summarize / Explore
+                    li.fragment Summarize/explore
               .half.
                 <div id="observablehq-0a20feb3"></div>
                 <script type="module">
@@ -487,20 +490,20 @@ html(lang="en")
 
 
           section.full
-            h3 Idiom: parallel coordinates
+            h3 Idiom: Parallel Coordinates
             .flex
               .half
                 ul.small
-                  li.fragment parallel axes, jagged line representing item
-                  li.fragment rectilinear axes, item as point
-                  li.fragment axis ordering is major challenge
-                  li.fragment scalability
+                  li.fragment Parallel axes, jagged line representing item
+                  li.fragment Rectilinear axes, item as point
+                  li.fragment Axis ordering is major challenge
+                  li.fragment Scalability
                   ul
-                    li.fragment dozens of attribs
-                    li.fragment hundreds of items
-                  li.fragment Task
+                    li.fragment Dozens of attributes
+                    li.fragment Hundreds of items
+                  li.fragment Task:
                   ul
-                    li.fragment Summarize / Explore
+                    li.fragment Summarize/explore
               .half.
                 <div id="observablehq-e6eae5aa">
                   <div class="observablehq-viewof-keyz"></div>
@@ -521,42 +524,42 @@ html(lang="en")
             .flex
               .half
                 ul.small
-                  li.fragment scatterplot matrix
+                  li.fragment Scatterplot matrix
                   ul
-                    li.fragment positive correlation
+                    li.fragment Positive correlation
                     ul
-                      li.fragment diagonal low-to-high
+                      li.fragment Diagonal low-to-high
 
-                    li.fragment negative correlation
+                    li.fragment Negative correlation
                     ul
-                      li.fragment diagonal high-to-low
-                    li.fragment uncorrelated: spread out
+                      li.fragment Diagonal high-to-low
+                    li.fragment Uncorrelated: spread out
 
                 ul.small
-                  li.fragment parallel coordinates
+                  li.fragment Parallel coordinates
                   ul
-                    li.fragment positive correlation
+                    li.fragment Positive correlation
                     ul
-                      li.fragment parallel line segments
-                    li.fragment negative correlation
+                      li.fragment Parallel line segments
+                    li.fragment Negative correlation
                     ul
-                      li.fragment all segments cross at halfway point
-                    li.fragment uncorrelated
+                      li.fragment All segments cross at halfway point
+                    li.fragment Uncorrelated
                     ul
-                      li.fragment scattered crossings
+                      li.fragment Scattered crossings
 
 
           section
-            h2 Orientation limitations
+            h2 Orientation Limitations
             .flex
               .half
                 ul.small
-                  li.fragment rectilinear: scalability wrt #axes
+                  li.fragment Rectilinear: scalability with regard to #axes
                   ul
-                    li.fragment 2 axes best
-                    li.fragment 3 problematic
-                    li.fragment 4+ impossible
-                  li.fragment parallel: unfamiliarity, training time
+                    li.fragment Two axes best
+                    li.fragment Three problematic
+                    li.fragment Four or more impossible
+                  li.fragment Parallel: unfamiliarity, training time
               .half
 
           //- Navio
@@ -577,24 +580,24 @@ html(lang="en")
             h1 Radial Orientations
 
           section
-            h3 Idioms: radial bar chart, star plot
+            h3 Idioms: Radial Bar Chart, Star Plot
             .flex
               .half
                 ul.small
-                  li.fragment radial bar chart
+                  li.fragment Radial bar chart
                   ul
-                    li.fragment radial axes meet at central ring, line mark
-                  li.fragment star plot
+                    li.fragment Radial axes, meet at central ring, line mark
+                  li.fragment Star plot
                   ul
-                    li.fragment radial axes, meet at central point, line mark
-                  li.fragment bar chart
+                    li.fragment Radial axes, meet at central point, line mark
+                  li.fragment Bar chart
                   ul
-                    li.fragment rectilinear axes, aligned vertically
+                    li.fragment Rectilinear axes, aligned vertically
                   br
-                  li.fragment accuracy
+                  li.fragment Accuracy
                   ul.small
-                    li.fragment length unaligned with radial
-                    li.fragment less accurate than aligned with rectilinear
+                    li.fragment Length unaligned with radial
+                    li.fragment Less accurate than aligned with rectilinear
               .half
 
 
@@ -603,16 +606,16 @@ html(lang="en")
             .flex
               .half
                 ul
-                  li.fragment task: comparison
-                  li.fragment scalability: Similar to parallel coords.
-                  li.fragment order of attributes matter
+                  li.fragment Task: comparison
+                  li.fragment Scalability: similar to parallel coordinates
+                  li.fragment Order of attributes matter
               .half
 
                 //- TODO make Radar Plot example with fifa
 
 
           section
-            h4 “Radar graphs: Avoid them (99.9% of the time)”
+            h4 “Radar Graphs: Avoid them (99.9% of the time).”
 
             figure
               .r-stack
@@ -627,39 +630,39 @@ html(lang="en")
             h2 Radial Orientation: Radar Plots
 
           section
-            h3 Idioms: pie chart, polar area chart
+            h3 Idioms: Pie Chart, Polar Area Chart
             .flex
               .half
                 ul.tiny
-                  li.fragment pie chart
+                  li.fragment Pie chart:
                   ul
-                    li.fragment area marks with angle channel
-                    li.fragment accuracy: angle/area much less accurate than line length
+                    li.fragment Area marks with angle channel
+                    li.fragment Accuracy: angle/area much less accurate than line length
                   br
-                  li.fragment polar area chart
+                  li.fragment Polar area chart:
                   ul
-                    li.fragment area marks with length channel
-                    li.fragment more direct analog to bar charts
+                    li.fragment Area marks with length channel
+                    li.fragment More direct analog to bar charts
                   br
-                  li.fragment data
+                  li.fragment Data:
                   ul
-                    li.fragment 1 categ key attrib, 1 quant value attrib
-                  li.fragment task
+                    li.fragment One categorical key attribute, 1 quantitative value attribute
+                  li.fragment Task:
                   ul
-                    li.fragment part-to-whole judgements
+                    li.fragment Part-to-whole judgements
               .half
 
 
           section
-            h2 Pie chart perception
+            h2 Pie Chart Perception
             .flex
               .half
                 ul.small
-                  li.fragment some empirical evidence that people respond to arc length
+                  li.fragment Some empirical evidence that people respond to arc length
                   ul
-                    li.fragment not angles
-                    li.fragment maybe also areas?…
-                  li.fragment donut charts no worse than pie charts
+                    li.fragment Not angles
+                    li.fragment Maybe also areas...?
+                  li.fragment Donut charts no worse than pie charts
               .half
                 figure
 
@@ -669,19 +672,19 @@ html(lang="en")
 
 
           section
-            h2 Pie chart perception 2
+            h2 Pie chart Perception (cont.)
             .flex
               .half
                 ul.small
 
-                  li.fragment meta-points
+                  li.fragment Meta-points
                   ul
-                    li.fragment redesign of paper figures in later blog post
+                    li.fragment Redesign of paper figures in later blog post
                     ul
-                      li.fragment violin plots good for analysis but too detailed for presentation
+                      li.fragment Violin plots good for analysis but too detailed for presentation
                     li.fragment Tamara's advice: still dubious for pie/donut charts
                     ul
-                      li.fragment sometimes ok if just 2 attribs
+                      li.fragment Sometimes okay if just two attributes
               .half
                 figure
 
@@ -692,24 +695,24 @@ html(lang="en")
 
 
           section
-            h3 Idioms: normalized stacked bar chart
+            h3 Idioms: Normalized Stacked Bar Chart
             .flex
               .half
                 ul.tiny
-                  li.fragment task
+                  li.fragment Task:
                   ul
-                    li.fragment part-to-whole judgments
+                    li.fragment Part-to-whole judgments
                   br
-                  li.fragment normalized stacked bar chart
+                  li.fragment Normalized stacked bar chart
                   ul
-                    li.fragment stacked bar chart, normalized to full vert height
-                    li.fragment single stacked bar equivalent to full pie
+                    li.fragment Stacked bar chart, normalized to full vertical height
+                    li.fragment Single stacked bar equivalent to full pie
                     ul
-                      li.fragment high information density: requires narrow rectangle
+                      li.fragment High information density: requires narrow rectangle
                   br
-                  li.fragment pie chart
+                  li.fragment Pie chart
                   ul
-                    li.fragment information density: requires large circle
+                    li.fragment Information density: requires large circle
               .half
                 figure
 
@@ -723,12 +726,12 @@ html(lang="en")
 
 
           section
-            h2 Idiom: glyphmaps
+            h2 Idiom: Glyphmaps
             .flex
               .half
                 ul.small
-                  li.fragment rectilinear good for linear vs nonlinear trends
-                  li.fragment radial good for cyclic patterns
+                  li.fragment Rectilinear good for linear vs. nonlinear trends
+                  li.fragment Radial good for cyclic patterns
                 br
                 img.fragment(src="../shared_images/vad_book_alldiagrams/axis_rectilinear_and_radial.png", alt="Axis rectilinear and radial")
               .half
@@ -748,19 +751,19 @@ html(lang="en")
 
 
           section
-            h2 Radial orientation
+            h2 Radial Orientation
             .flex
               .half
                 ul.small
-                  li.fragment perceptual limits
+                  li.fragment Perceptual limits
                   ul
-                    li.fragment polar coordinate asymmetry
+                    li.fragment Polar coordinate asymmetry
                     ul
-                      li.fragment angles lower precision than lengths
-                      li.fragment frequently problematic
-                      li.fragment sometimes can be deliberately exploited!
+                      li.fragment Angles lower precision than lengths
+                      li.fragment Frequently problematic
+                      li.fragment Sometimes can be deliberately exploited!
                       ul
-                        li.fragment for 2 attribs of very unequal importance
+                        li.fragment For two attributes of very unequal importance
 
                 figure
                   img(src="../shared_images/vad_book_alldiagrams/radial_weaknesses.png", alt="Radial Weaknesses")
@@ -770,20 +773,20 @@ html(lang="en")
 
 
           section
-            h2 Idiom: Dense software overviews
+            h2 Idiom: Dense Software Overviews
             .flex
               .half
                 ul.small
-                  li.fragment data: text
+                  li.fragment Data: text
                   ul
-                    li.fragment text + 1 quant attrib per line
-                  li.fragment derived data:
+                    li.fragment Text and one quantitative attribute per line
+                  li.fragment Derived data:
                   ul
-                    li.fragment one pixel high line
-                    li.fragment length according to original
-                  li.fragment color line by attrib
-                  li.fragment scalability
-                  ulli.fragment 10K+ lines
+                    li.fragment One pixel high line
+                    li.fragment Length according to original
+                  li.fragment Color line by attribute
+                  li.fragment Scalability
+                  ulli.fragment Over 10,000 lines
               .half
 
                 figure
@@ -804,12 +807,12 @@ html(lang="en")
 
           //- Stacked barchart block
           section
-            h3.demo Stacked barchart
+            h3.demo Stacked Barchart
             iframe.blocks(data-src="http://blockbuilder.org/mbostock/3886208")
             a.tiny(target="_blank" href="http://blockbuilder.org/mbostock/3886208") http://blockbuilder.org/mbostock/3886208
 
           section
-            h3.demo d3.stack and d3.nest
+            h3.demo d3.Stack and d3.Nest
             div.blocks#d3stackandnest
 
             script(type="module").
@@ -820,7 +823,7 @@ html(lang="en")
             a.tiny(target="_blank" href="https://observablehq.com/@john-guerra/d3-stack-with-d3-nest") https://observablehq.com/@john-guerra/d3-stack-with-d3-nest
 
           section
-            h3.demo d3 stack
+            h3.demo d3 Stack
             a.tiny(href="https://github.com/d3/d3-shape/blob/v1.3.5/README.md#stack") https://github.com/d3/d3-shape/blob/v1.3.5/README.md#stack
             img(style="height:400px", src="../shared_images/vad_book_alldiagrams/d3_stack.png", alt="d3 stack")
 
@@ -878,25 +881,25 @@ html(lang="en")
 
         section#review
           section
-            h2 What we learned
+            h2 What We Learned
             ul.small.line-compressed(style="margin-top: -2rem")
-              li Arranging Tables
-              li.fragment 0 Keys
+              li Arranging tables
+              li.fragment Zero keys
                 ul.tiny
                   li Scatterplots
-              li.fragment Some Keys
+              li.fragment Some keys
                 ul.tiny
                   li Barcharts
                   li Heatmaps
-              li.fragment Other Axis Orientations
+              li.fragment Other axis orientations
                 ul.tiny
                   li Sploms
-                  li Parallel Coordinates
+                  li Parallel coordinates
                   li Navio
-              li.fragment Radial Representations
+              li.fragment Radial representations
                 ul.tiny
                   li Pie charts
-                  li Radar Plots
+                  li Radar plots
 
     script(src="../js/reveal.js")
     script(src="../plugin/zoom/zoom.js")
