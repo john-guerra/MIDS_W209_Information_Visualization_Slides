@@ -67,21 +67,21 @@ html(lang="en")
         //- Outline
         section#outline
           section
-            h2 What we are going to learn
+            h2 What We Are Going to Learn
             ul.small
-              li.fragment Manipulate Views
+              li.fragment Manipulate views
                 ul
-                  li.fragment Change Encodings / Parameters
+                  li.fragment Change encodings/parameters
                   li.fragment Animations
                   li.fragment Interactions
                   li.fragment Navigate
-              li.fragment Case Studies
+              li.fragment Case studies
 
 
 
         section#manipulateViews
           section
-            h1 Manipulate views
+            h1 Manipulate Views
           section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/11_manipulate-genea.003.png")
           section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/11_manipulate-genea.004.png")
 
@@ -92,13 +92,13 @@ html(lang="en")
             h3 How to Handle Complexity
             .flex
               .third
-                div.small(style="text-align:left") 3 Strategies
+                div.small(style="text-align:left") Three strategies
                 ul.tiny
 
                   li.fragment Change view over time
                   li.fragment Facet across multiple views
                   li.fragment Reduce items/attributes within single view
-                div.fragment.small(style="text-align:left") + 1 previous
+                div.fragment.small(style="text-align:left") And one previous
                   ul.tiny
                     li Derive new data to show within view
                       img(data-src="../shared_images/vad_book_alldiagrams/pr10_manipulate-views-derive.png", alt="derive")
@@ -110,7 +110,7 @@ html(lang="en")
             h2 Strategies
 
             ul(style="font-size:100%")
-              li Change view over time #[strong.fragment 👈 most obvious one: Interaction]
+              li Change view over time #[strong.fragment 👈 most obvious one: interaction]
               li Facet
               li Reduce
               li Derive
@@ -156,7 +156,7 @@ html(lang="en")
 
         section#changeEncoding
           section
-            h1 Change Encoding / Parameters
+            h1 Change Encoding/Parameters
           //- section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/11_manipulate-genea.015.png")
           section
             h3 Change Encoding
@@ -171,7 +171,7 @@ html(lang="en")
             a.bottom.reference(href="http://tableausoftware.com") Made using Tableau
 
           section
-            h3 Change Encoding: Vega Lite
+            h3 Change Encoding: Vega-Lite
 
             img(data-src="../shared_images/vega-lite_demo.gif", alt="Vega Lite Change Encoding")
             div.small.fragment Not so easy in D3 🤷🏼‍♂️
@@ -182,21 +182,21 @@ html(lang="en")
             .flex
               .half
                 ul
-                  li.fragment widgets and controls
+                  li.fragment Widgets and controls:
                     ul
-                      li sliders, buttons, radio buttons,  checkboxes,  dropdowns/comboboxes
-                  li.fragment pros
+                      li Sliders, buttons, radio buttons, checkboxes, dropdowns/comboboxes
+                  li.fragment Pros:
                     ul
-                      li clear affordances, self-documenting (with labels)
-                  li.fragment cons
+                      li Clear affordances, self-documenting (with labels)
+                  li.fragment Cons:
                     ul
-                      li uses screen space
-                  li.fragment design choices
+                      li Uses screen space
+                  li.fragment Design choices:
                     ul
-                      li separated vs interleaved
+                      li Separated vs. interleaved
                         ul
-                          li controls & canvas
-                div.reference slide inspired by: Alexander Lex, Utah
+                          li Controls and canvas
+                div.reference Slide inspired by: Alexander Lex, Utah
               .half
                 figure
                   img(src="../shared_images/vad_book_alldiagrams/grow_of_a_nation.png", alt="Growth of a Nation")
@@ -216,9 +216,9 @@ html(lang="en")
               li.fragment Change encoding of day-of-week using menu
 
           section
-            h3 Word shift graph changes
+            h3 Word Shift Graph Changes
             ul
-              li.fragment Change time parameter with menu + date picker
+              li.fragment Change time parameter with menu and  date picker
               li.fragment Change language parameter with translation toggle
               li.fragment Change position encoding with bar selector
 
@@ -271,7 +271,7 @@ html(lang="en")
 
 
           section
-            h3.demo LineUP
+            h3.demo LineUp
             //- iframe.blocks(data-src="http://vcg.seas.harvard.edu/files/pfister/files/2013_infovis_lineup.mp4")
             //- Video without autoplay
             span.
@@ -282,7 +282,7 @@ html(lang="en")
 
 
           section.full
-            h3 "LineUP" D3
+            h3 "LineUP" d 3
             div(style="font-size:12pt;").
               <div id="observablehq-30df3492">
                 <div class="observablehq-viewof-coeficients"></div>
@@ -329,7 +329,7 @@ html(lang="en")
 
 
           section.full
-            h2 D3 show reel
+            h2 D3 Show Reel
             div#d3ShowReel.
               <div id="observablehq-15c27bb5"></div>
               <script type="module">
@@ -344,7 +344,7 @@ html(lang="en")
             a(href="https://bost.ocks.org/mike/miserables/") https://bost.ocks.org/mike/miserables/
 
           section
-            h3 Animating the show reel: Flubber
+            h3 Animating the Show Reel: Flubber
             img(data-src="../shared_images/flubber.gif", alt="Flubber")
 
 
@@ -352,14 +352,14 @@ html(lang="en")
             h2 Collapsible Tree
             .flex
               .half
-                div Tree drilldown / rollup
+                div Tree drilldown/rollup
 
           section
-            h2 Zoomable bar chart
+            h2 Zoomable Bar Chart
             .flex
               .half
                 ul
-                  li.fragment Tree drilldown / rollup
+                  li.fragment Tree drilldown/rollup
                   li.fragment Value comparison
 
           section
@@ -367,7 +367,7 @@ html(lang="en")
             .flex
               .half
                 ul
-                  li.fragment Tree drilldown / rollup
+                  li.fragment Tree drilldown/rollup
                   li.fragment Value comparison
 
         section#interactions
@@ -388,35 +388,35 @@ html(lang="en")
                      li.fragment Interaction modalities
                       ul
                         li.fragment Click/tap (heavyweight) vs. hover (lightweight but not available on most touchscreens)
-                        li.fragment Multiple click types (shift-click, option-click, …)
-                        li.fragment Proximity beyond click/hover (touching vs nearby vs distant)
+                        li.fragment Multiple click types (shift-click, option-click, etc.)
+                        li.fragment Proximity beyond click/hover (touching vs. nearby vs. distant)
                      li.fragment Application semantics
-                        li.fragment Adding to selection set vs replacing selection
+                        li.fragment Adding to selection set vs. replacing selection
                         li.fragment Can selection be null?
                         ul
-                          li.fragment ex: toggle so nothing selected if click on background
-                        li.fragment Primary vs secondary (ex: source/target nodes in network)
-                        li.fragment Group membership (add/delete items, name group, …)
+                          li.fragment Example: toggle so nothing selected if click on background
+                        li.fragment Primary vs. secondary (example: source/target nodes in network)
+                        li.fragment Group membership (add/delete items, name group, etc.)
               .third
                 img(data-src="../shared_images/vad_book_alldiagrams/pr10_manipulate-views-select.png", alt="Select a single plot point")
 
           section
-            h2 Types of selection
+            h2 Types of Selection
             .flex
               .half
                 ul
-                  li.fragment Interval
+                  li.fragment Interval:
                     ul
                       li.fragment Brush 1D
                       li.fragment Brush 2D
-                  li.fragment Individual
+                  li.fragment Individual:
                     ul
                       li.fragment Closest item (hover)
                       li.fragment Click to select
-                  li.fragment Multi
+                  li.fragment Multi:
                     ul
-                      li.fragment Shift click
-                      li.fragment By similarity (e.g. connection, same State)
+                      li.fragment Shift-click
+                      li.fragment By similarity (e.g., connection, same state)
 
           section
             h2 Voronoi Maps
@@ -434,24 +434,24 @@ html(lang="en")
 
           section
             h2 Selection with brush
-            a(href="https://observablehq.com/@john-guerra/scatterplot-brush") https://observablehq.com/@john-guerra/scatterplot-brush
+            a(href="https://observablehq.com/@john-guerra/scatterplot-brush") Scatterplot + Brush
 
           section
             h2 Highlight
             .flex
               .half
                 ul.tiny
-                  li.fragment highlight: change visual encoding for selection targets
+                  li.fragment Highlight: change visual encoding for selection targets
                     ul
-                      li.fragment visual feedback closely tied to but separable from selection (interaction)
-                  li.fragment design choices: typical visual channels
+                      li.fragment Visual feedback closely tied to but separable from selection (interaction)
+                  li.fragment Design choices: typical visual channels
                     ul
-                      li.fragment change item color
+                      li.fragment Change item color
                         ul
-                          li.fragment but hides existing color coding
-                      li.fragment add outline mark
-                      li.fragment change size (ex: increase outline mark linewidth)
-                      li.fragment change shape (ex: from solid to dashed line for link mark)
+                          li.fragment But hides existing color coding
+                      li.fragment Add outline mark
+                      li.fragment Change size (example: increase outline mark linewidth)
+                      li.fragment Change shape (example: from solid to dashed line for link mark)
                   li.fragment unusual channels: motion
                     ul
                       li.fragment motion: usually avoid for single view
