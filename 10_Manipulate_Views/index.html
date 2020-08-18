@@ -1,102 +1,903 @@
-<!DOCTYPE html><html lang="en"><head><title>Week 10 Manipulate Views. MIDS W209 Information Visualization Slides</title><meta charset="utf-8"><meta name="author" content="John Alexis Guerra Gómez"><meta name="description" content="Week 10 Manipulate Views. MIDS W209 Information Visualization Slides"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fjalla+One|Raleway|PT+Sans+Narrow"><link rel="stylesheet" href="https://use.typekit.net/yjc0afr.css"><link rel="stylesheet" href="../plugin/highlight/monokai.css" id="highlight-theme"><link href="../css/reveal.css" rel="stylesheet"><link href="../css/theme/white.css" rel="stylesheet" id="theme"><link href="../css/style.css" rel="stylesheet"><style>#d3ShowReel svg {
-  font-family: "Helvetica Neue", Helvetica;
-  font-size: 12pt;
-}
-
-#d3ShowReel .line {
-  fill: none;
-  stroke: #000;
-  stroke-width: 2px;
-}
-</style></head><body><div class="reveal"><div class="slides"><section><h1 class="title">Manipulate Views<br><small>MIDS W209: Information Visualization</small></h1><div class="r-stretch"></div><div class="tiny"><a href="https://johnguerra.co/" target="_blank"><strong> John Alexis Guerra Gómez</strong></a><span> |  john.guerra[at]gmail.com</span><a href="https://twitter.com/duto_guerra"> |  @duto_guerra</a><br><a href="https://andyreagan.com/" target="_blank"><strong> Andy Reagan</strong></a><span> |  andy[at]andyreagan.com |</span><a href="https://twitter.com/andyreagan">@andyreagan</a><br><a href="https://johnguerra.co/lectures/MIDS_W209_Information_Visualization/10_Manipulate_Views/" target="_blank">https://johnguerra.co/lectures/MIDS_W209_Information_Visualization/10_Manipulate_Views/</a></div><div class="logo"><a href="https://datascience.berkeley.edu/"><img class="logo" data-src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo"></a></div><div class="tiny">Partially based on<a href="https://www.cs.ubc.ca/~tmm/talks.html#minicourse14"> slides from Tamara Munzner</a></div></section><section id="outline"><section><h2>What we are going to learn</h2><ul class="small"><li class="fragment">Manipulate Views<ul><li class="fragment">Change Encodings / Parameters</li><li class="fragment">Animations</li><li class="fragment">Interactions</li><li class="fragment">Navigate</li></ul></li><li class="fragment">Case Studies</li></ul></section></section><section id="manipulateViews"><section><h1>Manipulate views</h1></section><section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/11_manipulate-genea.003.png"></section><section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/11_manipulate-genea.004.png"></section><section><h3>How to Handle Complexity</h3><div class="flex"><div class="third"><div class="small" style="text-align:left">3 Strategies</div><ul class="tiny"><li class="fragment">Change view over time</li><li class="fragment">Facet across multiple views</li><li class="fragment">Reduce items/attributes within single view</li></ul><div class="fragment small" style="text-align:left">+ 1 previous<ul class="tiny"><li>Derive new data to show within view<img data-src="../shared_images/vad_book_alldiagrams/pr10_manipulate-views-derive.png" alt="derive"></li></ul></div></div><div class="twothirds"><img data-src="../shared_images/vad_book_alldiagrams/10_manipulate-views-3-strategies.png" alt="manipulate: change, select, navigate; facet: juxtapose, parition, superimpose; reduce: filter, aggregate, embed"></div></div></section><section><h2>Strategies</h2><ul style="font-size:100%"><li>Change view over time <strong class="fragment">👈 most obvious one: Interaction</strong></li><li>Facet</li><li>Reduce</li><li>Derive</li></ul></section><section><h2>Manipulate</h2><div class="flex"><div class="third"><img class="fragment" data-src="../shared_images/vad_book_alldiagrams/pr10_manipulate-views-change.png" alt="change over time; select"></div><div class="third"><img class="fragment" data-src="../shared_images/vad_book_alldiagrams/pr10_manipulate-views-navigate.png" alt="Navigate: item reduction: zoom; pan/translate; constrained"></div><div class="third"><img class="fragment" data-src="../shared_images/vad_book_alldiagrams/pr10_manipulate-views-attribute-reduction.png" alt="attribute reduction: slice; cut; project"></div></div></section><section><h2>Change Over Time</h2><ul><li class="fragment">Change any of the other choices<ul><li class="fragment">Encoding itself</li><li class="fragment">Parameters</li><li class="fragment">Arrange: rearrange reorder</li><li class="fragment">Aggregation level, what is filtered...</li><br><li class="fragment">Interaction entails change</li></ul></li></ul></section></section><section id="changeEncoding"><section><h1>Change Encoding / Parameters</h1></section><section><h3>Change Encoding</h3><div class="flex"><div class="half"><img class="fragment" data-src="../shared_images/vad_book_alldiagrams/pr10_manipulate-views-reencode-tableau-1.png" alt="screenshot of re-encoding from from Tableau"><img class="fragment" data-src="../shared_images/vad_book_alldiagrams/pr10_manipulate-views-reencode-tableau-2.png" alt="screenshot of re-encoding from from Tableau"></div><div class="half"><img class="fragment" data-src="../shared_images/vad_book_alldiagrams/pr10_manipulate-views-reencode-tableau-3.png" alt="screenshot of re-encoding from from Tableau"><img class="fragment" data-src="../shared_images/vad_book_alldiagrams/pr10_manipulate-views-reencode-tableau-4.png" alt="screenshot of re-encoding from from Tableau"></div></div><a class="bottom reference" href="http://tableausoftware.com">Made using Tableau</a></section><section><h3>Change Encoding: Vega Lite</h3><img data-src="../shared_images/vega-lite_demo.gif" alt="Vega Lite Change Encoding"><div class="small fragment">Not so easy in D3 🤷🏼‍♂️</div></section><section><h2>Change Parameters</h2><div class="flex"><div class="half"><ul><li class="fragment">widgets and controls<ul><li>sliders, buttons, radio buttons,  checkboxes,  dropdowns/comboboxes</li></ul></li><li class="fragment">pros<ul><li>clear affordances, self-documenting (with labels)</li></ul></li><li class="fragment">cons<ul><li>uses screen space</li></ul></li><li class="fragment">design choices<ul><li>separated vs interleaved<ul><li>controls & canvas</li></ul></li></ul></li></ul><div class="reference">slide inspired by: Alexander Lex, Utah</div></div><div class="half"><figure><img src="../shared_images/vad_book_alldiagrams/grow_of_a_nation.png" alt="Growth of a Nation"><figcaption class="reference"><a href="http://laurenwood.github.io/">[Growth of a Nation](http://laurenwood.github.io/)</a></figcaption></figure></div></div></section></section><section><section><h1>Case Study: Changing Encoding and Parameters</h1><h3>Hedonometer.org</h3></section><section><h3>Line Chart Changes</h3><ul><li class="fragment">Change time parameter using brush</li><li class="fragment">Change time parameter using menu</li><li class="fragment">Change encoding of day-of-week using menu</li></ul></section><section><h3>Word shift graph changes</h3><ul><li class="fragment">Change time parameter with menu + date picker</li><li class="fragment">Change language parameter with translation toggle</li><li class="fragment">Change position encoding with bar selector</li></ul></section><section><h3>Demo</h3></section><section data-background-iframe="http://hedonometer.org/timeseries/en_all/?from=2015-07-16&amp;to=2017-01-12&amp;date=2016-11-09"></section></section><section id="animations"><section><h1>Animations</h1></section><section><h2>Reorder: DataStripes</h2><ul><li class="fragment">What: table with many attributes</li><li class="fragment">How: data-driven reordering by selecting column</li><li class="fragment">Why: find correlations between attributes</li></ul><figure><img data-src="../shared_images/vad_book_alldiagrams/pr10_manipulate-views-reorder.png" alt="multiple depictions of how complex data can be ordered, by color, date, and other dimensions"><figcaption class="reference"><a href="http://carlmanaster.github.io/datastripes/">http://carlmanaster.github.io/datastripes/</a></figcaption></figure></section><section><h2>Re-Align: LineUp</h2><div class="flex"><div class="half"><ul><li class="fragment">Stacked bars</li><ul><li class="fragment">Easy to compare</li><ul><li class="fragment">First segment</li><li class="fragment">Total bar</li></ul></ul><li class="fragment">Align to different segment<li class="fragment">Supports flexible comparison</li></li></ul></div><div class="half"><figure><img data-src="../shared_images/vad_book_alldiagrams/pr10_manipulate-views-change-alignment-1.png" alt="Content aligned along the left margin"><img data-src="../shared_images/vad_book_alldiagrams/pr10_manipulate-views-change-alignment-2.png" alt="Content aligned along the center margin"><figcaption class="reference">[LineUp: Visual Analysis of Multi-Attribute Rankings.Gratzl, Lex, Gehlenborg, Pfister, and Streit. IEEE Trans. Visualization and Computer Graphics (Proc. InfoVis 2013) 19:12 (2013), 2277–2286.]</figcaption></figure></div></div></section><section><h3 class="demo">LineUP</h3><span><video width="100%" height="100%" controls>
-    <source data-src="http://vcg.seas.harvard.edu/files/pfister/files/2013_infovis_lineup.mp4" type="video/mp4">
-</video></span><a class="tiny" target="_blank" href="http://vcg.seas.harvard.edu/files/pfister/files/2013_infovis_lineup.mp4">http://vcg.seas.harvard.edu/files/pfister/files/2013_infovis_lineup.mp4</a></section><section class="full"><h3>"LineUP" D3</h3><div style="font-size:12pt;"><div id="observablehq-30df3492">
-  <div class="observablehq-viewof-coeficients"></div>
-  <div style="overflow: scroll;" class="observablehq-chart"></div>
-  <div style="overflow: hidden;"><a style="display: block; float:right;" href="https://observablehq.com/@john-guerra/lineup"><object type="image/svg+xml" style="pointer-events: none;" width=180 height=22 data="https://static.observableusercontent.com/files/c3fab254a006f1a3a1f9f63aba8ab1460db4752529036b9962950bde0ec195bab823daa6b278b1c3401e545b3bd640ddfdcad805cf9859af218cb2b9fed4ddf0"></object></a></div>
-</div>
-<script type="module">
-  import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
-  import define from "https://api.observablehq.com/@john-guerra/lineup.js?v=3";
-  (new Runtime).module(define, name => {
-    if (name === "viewof coeficients") return Inspector.into("#observablehq-30df3492 .observablehq-viewof-coeficients")();
-    if (name === "chart") return Inspector.into("#observablehq-30df3492 .observablehq-chart")();
-  });
-</script>
-</div><a class="reference" href="https://observablehq.com/@john-guerra/lineup">https://observablehq.com/@john-guerra/lineup</a></section><section><h3>Idiom: Animated Transitions</h3><div class="flex"><div class="half"><ul class="noMarginTopBottom"><li class="fragment">Smooth interpolation from one state to another</li><ul><li class="fragment">Alternative to jump cuts, supports item tracking</li><ul><li class="fragment">Best case for animation</li></ul><li class="fragment">Staging to reduce cognitive load</li></ul><li class="fragment">Example: animated transitions in statistical data graphics</li></ul></div><div class="half"><figurenoMarginTopBottom><img data-src="../shared_images/vad_book_alldiagrams/pr10_manipulate-views-animated-transitions.png" alt="animated transition"><a class="reference" href="https://vimeo.com/19278444">vimeo.com/19278444</a><figcaption class="referece"><a href="vis.stanford.edu/papers/animated-transitions">[Animated Transitions in Statistical Data Graphics. Heer and Robertson. IEEE TVCG (Proc InfoVis 2007) 13(6):1240-1247, 2007]</a></figcaption></figurenoMarginTopBottom></div></div></section><section class="full"><h2>D3 show reel</h2><div id="d3ShowReel"><div id="observablehq-15c27bb5"></div>
-<script type="module">
-import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
-import define from "https://api.observablehq.com/d/90fc58032421b463.js?v=3";
-const inspect = Inspector.into("#observablehq-15c27bb5");
-(new Runtime).module(define, name => name === "chart" ? inspect() : undefined);
-</script>
-</div></section><section><iframe class="blocks" data-src="https://bost.ocks.org/mike/miserables/"></iframe><a href="https://bost.ocks.org/mike/miserables/">https://bost.ocks.org/mike/miserables/</a></section><section><h3>Animating the show reel: Flubber</h3><img data-src="../shared_images/flubber.gif" alt="Flubber"></section><section><h2>Collapsible Tree</h2><div class="flex"><div class="half"><div>Tree drilldown / rollup</div></div></div></section><section><h2>Zoomable bar chart</h2><div class="flex"><div class="half"><ul><li class="fragment">Tree drilldown / rollup</li><li class="fragment">Value comparison</li></ul></div></div></section><section><h2>Zoomable Icicle</h2><div class="flex"><div class="half"><ul><li class="fragment">Tree drilldown / rollup</li><li class="fragment">Value comparison</li></ul></div></div></section></section><section id="interactions"><section><h1>Interactions</h1></section><section><h2>Selection</h2><div class="flex"><div class="twothirds"><ul><li class="fragment">Selection: basic operation for most interaction</li><li class="fragment">Design choices</li><ul><li class="fragment">How many selection types?</li><ul><li class="fragment">Interaction modalities<ul><li class="fragment">Click/tap (heavyweight) vs. hover (lightweight but not available on most touchscreens)</li><li class="fragment">Multiple click types (shift-click, option-click, …)</li><li class="fragment">Proximity beyond click/hover (touching vs nearby vs distant)</li></ul></li><li class="fragment">Application semantics<li class="fragment">Adding to selection set vs replacing selection</li><li class="fragment">Can selection be null?</li><ul><li class="fragment">ex: toggle so nothing selected if click on background</li></ul><li class="fragment">Primary vs secondary (ex: source/target nodes in network)</li><li class="fragment">Group membership (add/delete items, name group, …)</li></li></ul></ul></ul></div><div class="third"><img data-src="../shared_images/vad_book_alldiagrams/pr10_manipulate-views-select.png" alt="Select a single plot point"></div></div></section><section><h2>Types of selection</h2><div class="flex"><div class="half"><ul><li class="fragment">Interval<ul><li class="fragment">Brush 1D</li><li class="fragment">Brush 2D</li></ul></li><li class="fragment">Individual<ul><li class="fragment">Closest item (hover)</li><li class="fragment">Click to select</li></ul></li><li class="fragment">Multi<ul><li class="fragment">Shift click</li><li class="fragment">By similarity (e.g. connection, same State)</li></ul></li></ul></div></div></section><section><h2>Voronoi Maps</h2><div class="flex"><div class="half"><ul><li class="fragment">Tesselate the canvas</li><li class="fragment">Quickly find the closest point</li></ul></div></div></section><section><iframe class="blocks" data-src="https://blockbuilder.org/mbostock/7608400"></iframe><a class="tiny" href="https://blockbuilder.org/mbostock/7608400">https://blockbuilder.org/mbostock/7608400</a></section><section><h2>Selection with brush</h2><a href="https://observablehq.com/@john-guerra/scatterplot-brush">https://observablehq.com/@john-guerra/scatterplot-brush</a></section><section><h2>Highlight</h2><div class="flex"><div class="half"><ul class="tiny"><li class="fragment">highlight: change visual encoding for selection targets<ul><li class="fragment">visual feedback closely tied to but separable from selection (interaction)</li></ul></li><li class="fragment">design choices: typical visual channels<ul><li class="fragment">change item color<ul><li class="fragment">but hides existing color coding</li></ul></li><li class="fragment">add outline mark</li><li class="fragment">change size (ex: increase outline mark linewidth)</li><li class="fragment">change shape (ex: from solid to dashed line for link mark)</li></ul></li><li class="fragment">unusual channels: motion<ul><li class="fragment">motion: usually avoid for single view<ul><li class="fragment">with multiple views, could justify to draw attention to other views</li></ul></li></ul></li></ul></div></div></section><section><h2>Interaction technology</h2><div class="flex"><div class="half"><ul><li class="fragment">what do you design for?<ul><li class="fragment">mouse & keyboard on desktop?<ul><li class="fragment">large screens, hover, multiple clicks</li></ul></li><li class="fragment">touch interaction on mobile?<ul><li class="fragment">small screens, no hover, just tap</li></ul></li><br><li class="fragment">gestures from video / sensors?<ul><li class="fragment">ergonomic reality vs movie bombast</li></ul></li><br><li class="fragment">eye tracking?</li></ul></li></ul><div class="reference">slide inspired by: Alexander Lex, Utah</div></div></div></section><section><h2>Tooltips</h2><div class="flex"><div class="half"><ul><li class="fragment">popup information for selection<ul><li class="fragment">hover or click</li><li class="fragment">can provide useful additional detail on demand</li><li class="fragment">beware: does not support overview!<ul><li class="fragment">always consider if there’s a way to visually encode directly to provide overview</li><li class="fragment">“If you make a rollover or tooltip, assume nobody will see it. If it's important, make it explicit. “<ul><li class="fragment">Gregor Aisch, NYTimes</li></ul></li></ul></li></ul></li></ul></div></div></section><section><h2>Responsiveness is required</h2><ul class="noMarginTopBottom line-compressed"><li class="fragment">visual feedback: three rough categories<ul><li class="fragment">0.1 seconds: perceptual processing<ul><li class="fragment">subsecond response for mouseover highlighting - ballistic motion</li></ul></li><li class="fragment">1 second: immediate response<ul><li class="fragment">fast response after mouseclick, button press - Fitts’ Law limits on motor control</li></ul></li><li class="fragment">10 seconds: brief tasks<ul><li class="fragment">bounded response after dialog box - mental model of heavyweight operation (file load)</li></ul></li></ul></li><li class="fragment">scalability considerations<ul class="tiny"><li class="fragment">highlight selection without complete redraw of view (graphics frontbuffer)</li><li class="fragment">show hourglass for multi-second operations (check for cancel/undo)</li><li class="fragment">show progress bar for long operations (process in background thread)</li><li class="fragment">rendering speed when item count is large (guaranteed frame rate)</li></ul></li></ul></section></section><section id="navigate"><section><h1>Navigate</h1></section><section class="full"><img class="fill" src="../shared_images/vad_book_alldiagrams/how_navigate.png" alt="How Navigate"></section><section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/11_manipulate-genea.020.png"></section><section><h3>Navigate: Changing viewpoint/visibility</h3><div class="flex"><div class="half"><ul class="normal"><li class="fragment">Change viewpoint<ul><li class="fragment">Changes which items are visible within view</li></ul></li><li class="fragment">Camera metaphor<ul><li class="fragment">Pan/translate/scroll</li><li class="fragment">Rotate</li><li class="fragment">Zoom</li></ul></li></ul></div><div class="half"><img data-src="../shared_images/vad_book_alldiagrams/how_navigate_zoom_pan_constrained.png" alt="Change viewpoint"></div></div></section><section><h3>Pan / Translate / Scroll</h3><div class="flex"><div class="half"><ul class="normal"><li class="fragment">Move up/down</li><li class="fragment">Move sideways</li><li class="fragment">Go to location</li></ul></div><div class="half"><img data-src="../shared_images/vad_book_alldiagrams/pr10_manipulate-views-navigate-reduction.png" alt="Item reduction"></div></div></section><section class="full"><h2>Idiom: Scrollytelling</h2><div class="flex"><div class="twothirds"><ul class="small"><li class="fragment">how: navigate page by scrolling (panning down)</li><li class="fragment">pros:<ul><li class="fragment">People don't click, but they scroll</li><li class="fragment">Bottom up approach</li><li class="fragment">Good for mobile</li></ul></li><li class="fragment">cons:<ul class="tiny"><li class="fragment">full-screen mode may lack affordances</li><li class="fragment">scrolljacking, no direct access</li><li class="fragment">unexpected behaviour</li><li class="fragment">continuous control for discrete steps</li></ul></li><li class="fragment small"><a href="https://eagereyes.org/blog/2016/the-scrollytelling-scourge">Eagereyes take on scrollyteling</a></li><li class="fragment small"><a href="https://bost.ocks.org/mike/scroll/">MBostock's guidelines for scrollyteling</a></li></ul><div class="reference">slide inspired by: Alexander Lex, Utah</div></div><div class="third"><figure><video style="max-width:250px" data-src="../shared_images/segundaVueltaStory.mp4" alt="Colombian Election results storytelling video" autoplay="true" loop="true"></video><figcaption class="reference"><a href="https://johnguerra.co/viz/resultadosSegundaVuelta2018/">Colombian Election results</a></figcaption></figure></div></div></section><section><h3>Zoom</h3><div class="flex"><div class="twothirds"><ul><li class="fragment">enlarge/shrink world == move camera closer/further</li><li class="fragment"><strong>geometric zoom</strong>: standard, like moving physical object</li><li class="fragment"><strong>semantic zoom</strong>: keep objects same size, but change the scale / viewport</li></ul></div><div class="third"><img data-src="../shared_images/vad_book_alldiagrams/navigate_zoom.png" alt="Item reduction"></div></div></section><section><h2>Idiom: Semantic Zooming</h2><div class="flex"><div class="third"><ul class="tiny"><li class="fragment">Semantic zoom</li><ul><li class="fragment">Alternative to geometric zoom</li><li class="fragment">Resolution-aware layout adapts to available space</li><li class="fragment">Goal: legible at multiple scales</li><li class="fragment">Dramatic or subtle effects</li></ul><li class="fragment">Visual encoding change<li class="fragment">Colored box</li><li class="fragment">Sparkline</li><li class="fragment">Simple line chart</li><li class="fragment">Full chart: axes and tickmarks</li></li></ul></div><div class="twothirds"><figure><img data-src="../shared_images/vad_book_alldiagrams/pr10_manipulate-views-semantic-zooming.png" alt="Semantic zooming"><figcaption class="reference">[LiveRAC - Interactive Visual Exploration of System Management Time-Series Data. McLachlan, Munzner, Koutsofios, and North. Proc. ACM Conf. Human Factors in Computing Systems (CHI), pp. 1483–1492, 2008.]</figcaption></figure></div></div></section><section><h3 class="demo">LiveRAC</h3><span class="blocks"><iframe width="853" height="480" data-src="https://www.youtube.com/embed/ld0c3H0VSkw" frameborder="0" allowfullscreen></iframe></span></section><section><h3 class="demo">Geometric Zoom</h3><div><div id="observablehq-3f273885"></div>
-<script type="module">
-import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
-import define from "https://api.observablehq.com/@john-guerra/svg-geometric-zoom.js?v=3";
-const inspect = Inspector.into("#observablehq-3f273885");
-(new Runtime).module(define, name => name === "chart" ? inspect() : undefined);
-</script></div><a class="reference" href="https://observablehq.com/@john-guerra/svg-geometric-zoom">https://observablehq.com/@john-guerra/svg-geometric-zoom</a></section><section><h3 class="demo">Semantic Zoom</h3><div><div id="observablehq-57b18532"></div>
-<script type="module">
-import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
-import define from "https://api.observablehq.com/@john-guerra/svg-semantic-zoom.js?v=3";
-const inspect = Inspector.into("#observablehq-57b18532");
-(new Runtime).module(define, name => name === "chart" ? inspect() : undefined);
-</script></div><a class="reference" href="https://observablehq.com/@john-guerra/svg-semantic-zoom">https://observablehq.com/@john-guerra/svg-semantic-zoom</a></section><section class="fill"><h2 class="demo">Rotate</h2><div><div id="observablehq-02609b50"></div>
-<script type="module">
-import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
-import define from "https://api.observablehq.com/@d3/world-tour.js?v=3";
-const inspect = Inspector.into("#observablehq-02609b50");
-(new Runtime).module(define, name => name === "canvas" ? inspect() : undefined);
-</script>
-</div></section><section class="fill"><h2 class="demo">Zoom to constrained</h2><div><div id="observablehq-90f0961c"></div>
-<script type="module">
-import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
-import define from "https://api.observablehq.com/d/09dda39910e94703.js?v=3";
-const inspect = Inspector.into("#observablehq-90f0961c");
-(new Runtime).module(define, name => name === "chart" ? inspect() : undefined);
-</script>
-</div></section><section class="fill"><h3 class="demo">Transition + Animated navigation</h3><div><div id="observablehq-de04b13f"></div>
-<script type="module">
-import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
-import define from "https://api.observablehq.com/@john-guerra/zoomable-variable-size-icicle.js?v=3";
-const inspect = Inspector.into("#observablehq-de04b13f");
-(new Runtime).module(define, name => name === "chart" ? inspect() : undefined);
-</script>
-</div></section><section class="fill"><h3 class="demo">Barchart race</h3><div><style>
-text {
-  font-size: 14pt;
-}
-</style>
-<div id="observablehq-9a6c6af1">
-  <div class="observablehq-viewof-replay"></div>
-  <div class="observablehq-chart"></div>
-  <div style="overflow: hidden;"><a style="display: block; float:right;" href="https://observablehq.com/@d3/bar-chart-race"><object type="image/svg+xml" style="pointer-events: none;" width=180 height=22 data="https://static.observableusercontent.com/files/c3fab254a006f1a3a1f9f63aba8ab1460db4752529036b9962950bde0ec195bab823daa6b278b1c3401e545b3bd640ddfdcad805cf9859af218cb2b9fed4ddf0"></object></a></div>
-</div>
-<script type="module">
-  import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
-  import define from "https://api.observablehq.com/@d3/bar-chart-race.js?v=3";
-  (new Runtime).module(define, name => {
-    if (name === "viewof replay") return Inspector.into("#observablehq-9a6c6af1 .observablehq-viewof-replay")();
-    if (name === "chart") return Inspector.into("#observablehq-9a6c6af1 .observablehq-chart")();
-  });
-</script>
-</div></section><section><h2>Interaction benefits</h2><ul><li class="fragment">interaction pros<ul><li class="fragment">major advantage of computer-based vs paper-based visualization</li><li class="fragment">flexible, powerful, intuitive<ul><li class="fragment">exploratory data analysis: change as you go during analysis process</li><li class="fragment">fluid task switching: different visual encodings support different tasks</li></ul></li><li class="fragment">animated transitions provide excellent support<ul><li class="fragment">empirical evidence that animated transitions help people stay oriented</li></ul></li></ul></li></ul></section><section><h2>Interaction limitations</h2><ul><li class="fragment">interaction has a time cost<ul><li class="fragment">sometimes minor, sometimes significant</li><li class="fragment">degenerates to human-powered search in worst case</li></ul></li><li class="fragment">remembering previous state imposes cognitive load<ul><li class="fragment">rule of thumb: eyes over memory<ul><li class="fragment">hard to compare visible item to memory of what you saw</li><li class="fragment">ex: maintaining context/orientation when navigating</li><li class="fragment">ex: tracking complex changes during animation</li></ul></li></ul></li><li class="fragment">controls may take screen real estate<ul><li class="fragment">or invisible functionality may be difficult to discover (lack of affordances)</li></ul></li><li class="fragment">users may not interact as planned by designer<ul><li class="fragment">NYTimes logs show ~90% don’t interact beyond scrollytelling - Aisch, 2016</li></ul></li></ul></section></section><section id="manipulateViewCaseStudies"><section><h2>Manipulate View Case Studies</h2></section><section class="full"><h2 class="demo">Colombian Elections</h2><figure><video style="max-width:300px" data-src="../shared_images/segundaVueltaStory.mp4" alt="Colombian Election results storytelling video" autoplay="true" loop="true"></video><figcaption class="reference"><a href="https://johnguerra.co/viz/resultadosSegundaVuelta2018/">https://johnguerra.co/viz/resultadosSegundaVuelta2018/</a></figcaption></figure></section><section class="full"><h2 class="demo">Twitter Influentials</h2><figure><video style="max-width:300px" data-src="../shared_images/segundaVueltaStory.mp4" alt="Colombian Election results storytelling video" autoplay="true" loop="true"></video><figcaption class="reference"><a href="https://johnguerra.co/viz/resultadosSegundaVuelta2018/">https://johnguerra.co/viz/resultadosSegundaVuelta2018/</a></figcaption></figure></section></section><section id="animationsDemo"><section><h2>Animations on the web</h2></section></section><section id="review"><section><h2>What we learned</h2><ul class="small"><li class="fragment">Manipulate Views<ul><li class="fragment">Change Encodings / Parameters</li><li class="fragment">Animations</li><li class="fragment">Interactions</li><li class="fragment">Navigate</li></ul></li><li class="fragment">Case Studies</li></ul></section></section></div></div><script src="../js/reveal.js"></script><script src="../plugin/zoom/zoom.js"></script><script src="../plugin/notes/notes.js"></script><script src="../plugin/search/search.js"></script><script src="../plugin/markdown/markdown.js"></script><script src="../plugin/highlight/highlight.js"></script><script src="https://cdn.jsdelivr.net/npm/vega@5.13.0"></script><script src="https://cdn.jsdelivr.net/npm/vega-lite@4.13.1"></script><script src="https://cdn.jsdelivr.net/npm/vega-lite-api@0.11.0"></script><script src="https://cdn.jsdelivr.net/npm/vega-tooltip@0.23.2"></script><script>Reveal.initialize({
-  controls: true,
-  progress: true,
-  history: true,
-  center: true,
-  hash: true,
-  //- transition: "convex",
-
-  //- width: "100%",
-  //- height: "720px",
-
-  plugins: [ RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight ]
-});</script><script>(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.data-src=g;m.parentNode.insertBefore(a,m)
-})(window,document,"script","https://www.google-analytics.com/analytics.js","ga");
-
-ga("create", "UA-72531610-1", "auto");
-ga("send", "pageview");</script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Week 10 Manipulate Views. MIDS W209 Information Visualization Slides</title>
+    <meta charset="utf-8">
+    <meta name="author" content="John Alexis Guerra Gómez">
+    <meta name="description" content="Week 10 Manipulate Views. MIDS W209 Information Visualization Slides">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fjalla+One|Raleway|PT+Sans+Narrow">
+    <link rel="stylesheet" href="https://use.typekit.net/yjc0afr.css">
+    <link rel="stylesheet" href="../plugin/highlight/monokai.css" id="highlight-theme">
+    <link href="../css/reveal.css" rel="stylesheet">
+    <link href="../css/theme/white.css" rel="stylesheet" id="theme">
+    <link href="../css/style.css" rel="stylesheet">
+    <style>
+      #d3ShowReel svg {
+        font-family: "Helvetica Neue", Helvetica;
+        font-size: 12pt;
+      }
+      
+      #d3ShowReel .line {
+        fill: none;
+        stroke: #000;
+        stroke-width: 2px;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h1 class="title">Manipulate Views<br><small>MIDS W209: Information Visualization</small></h1>
+          <div class="r-stretch"></div>
+          <div class="tiny"><a href="https://johnguerra.co/" target="_blank"><strong> John Alexis Guerra Gómez</strong></a><span> |  john.guerra[at]gmail.com</span><a href="https://twitter.com/duto_guerra"> |  @duto_guerra</a><br><a href="https://andyreagan.com/" target="_blank"><strong> Andy Reagan</strong></a><span> |  andy[at]andyreagan.com |</span><a href="https://twitter.com/andyreagan">@andyreagan</a><br><a href="https://johnguerra.co/lectures/MIDS_W209_Information_Visualization/10_Manipulate_Views/" target="_blank">https://johnguerra.co/lectures/MIDS_W209_Information_Visualization/10_Manipulate_Views/</a></div>
+          <div class="logo"><a href="https://datascience.berkeley.edu/"><img class="logo" data-src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo"></a></div>
+          <div class="tiny">Partially based on<a href="https://www.cs.ubc.ca/~tmm/talks.html#minicourse14"> slides from Tamara Munzner</a></div>
+        </section>
+        <section id="outline">
+          <section>
+            <h2>What we are going to learn</h2>
+            <ul class="small">
+              <li class="fragment">Manipulate Views
+                <ul>
+                  <li class="fragment">Change Encodings / Parameters</li>
+                  <li class="fragment">Animations</li>
+                  <li class="fragment">Interactions</li>
+                  <li class="fragment">Navigate</li>
+                </ul>
+              </li>
+              <li class="fragment">Case Studies</li>
+            </ul>
+          </section>
+          <section>
+            <div><img src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo"></div>
+          </section>
+        </section>
+        <section id="manipulateViews">
+          <section>
+            <h1>Manipulate views</h1>
+          </section>
+          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/11_manipulate-genea.003.png"></section>
+          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/11_manipulate-genea.004.png"></section>
+          <section>
+            <h3>How to Handle Complexity</h3>
+            <div class="flex">
+              <div class="third">
+                <div class="small" style="text-align:left">3 Strategies</div>
+                <ul class="tiny">
+                  <li class="fragment">Change view over time</li>
+                  <li class="fragment">Facet across multiple views</li>
+                  <li class="fragment">Reduce items/attributes within single view</li>
+                </ul>
+                <div class="fragment small" style="text-align:left">+ 1 previous
+                  <ul class="tiny">
+                    <li>Derive new data to show within view<img data-src="../shared_images/vad_book_alldiagrams/pr10_manipulate-views-derive.png" alt="derive"></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="twothirds"><img data-src="../shared_images/vad_book_alldiagrams/10_manipulate-views-3-strategies.png" alt="manipulate: change, select, navigate; facet: juxtapose, parition, superimpose; reduce: filter, aggregate, embed"></div>
+            </div>
+          </section>
+          <section>
+            <h2>Strategies</h2>
+            <ul style="font-size:100%">
+              <li>Change view over time <strong class="fragment">👈 most obvious one: Interaction</strong></li>
+              <li>Facet</li>
+              <li>Reduce</li>
+              <li>Derive</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Manipulate</h2>
+            <div class="flex">
+              <div class="third"><img class="fragment" data-src="../shared_images/vad_book_alldiagrams/pr10_manipulate-views-change.png" alt="change over time; select"></div>
+              <div class="third"><img class="fragment" data-src="../shared_images/vad_book_alldiagrams/pr10_manipulate-views-navigate.png" alt="Navigate: item reduction: zoom; pan/translate; constrained"></div>
+              <div class="third"><img class="fragment" data-src="../shared_images/vad_book_alldiagrams/pr10_manipulate-views-attribute-reduction.png" alt="attribute reduction: slice; cut; project"></div>
+            </div>
+          </section>
+          <section>
+            <h2>Change Over Time</h2>
+            <ul>
+              <li class="fragment">Change any of the other choices
+                <ul>
+                  <li class="fragment">Encoding itself</li>
+                  <li class="fragment">Parameters</li>
+                  <li class="fragment">Arrange: rearrange reorder</li>
+                  <li class="fragment">Aggregation level, what is filtered...</li><br>
+                  <li class="fragment">Interaction entails change</li>
+                </ul>
+              </li>
+            </ul>
+          </section>
+          <section>
+            <div><img src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo"></div>
+          </section>
+        </section>
+        <section id="changeEncoding">
+          <section>
+            <h1>Change Encoding / Parameters</h1>
+          </section>
+          <section>
+            <h3>Change Encoding</h3>
+            <div class="flex">
+              <div class="half"><img class="fragment" data-src="../shared_images/vad_book_alldiagrams/pr10_manipulate-views-reencode-tableau-1.png" alt="screenshot of re-encoding from from Tableau"><img class="fragment" data-src="../shared_images/vad_book_alldiagrams/pr10_manipulate-views-reencode-tableau-2.png" alt="screenshot of re-encoding from from Tableau"></div>
+              <div class="half"><img class="fragment" data-src="../shared_images/vad_book_alldiagrams/pr10_manipulate-views-reencode-tableau-3.png" alt="screenshot of re-encoding from from Tableau"><img class="fragment" data-src="../shared_images/vad_book_alldiagrams/pr10_manipulate-views-reencode-tableau-4.png" alt="screenshot of re-encoding from from Tableau"></div>
+            </div><a class="bottom reference" href="http://tableausoftware.com">Made using Tableau</a>
+          </section>
+          <section>
+            <h3>Change Encoding: Vega Lite</h3><img data-src="../shared_images/vega-lite_demo.gif" alt="Vega Lite Change Encoding">
+            <div class="small fragment">Not so easy in D3 🤷🏼‍♂️</div>
+          </section>
+          <section>
+            <h2>Change Parameters</h2>
+            <div class="flex">
+              <div class="half">
+                <ul>
+                  <li class="fragment">widgets and controls
+                    <ul>
+                      <li>sliders, buttons, radio buttons,  checkboxes,  dropdowns/comboboxes</li>
+                    </ul>
+                  </li>
+                  <li class="fragment">pros
+                    <ul>
+                      <li>clear affordances, self-documenting (with labels)</li>
+                    </ul>
+                  </li>
+                  <li class="fragment">cons
+                    <ul>
+                      <li>uses screen space</li>
+                    </ul>
+                  </li>
+                  <li class="fragment">design choices
+                    <ul>
+                      <li>separated vs interleaved
+                        <ul>
+                          <li>controls & canvas</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+                <div class="reference">slide inspired by: Alexander Lex, Utah</div>
+              </div>
+              <div class="half">
+                <figure><img src="../shared_images/vad_book_alldiagrams/grow_of_a_nation.png" alt="Growth of a Nation">
+                  <figcaption class="reference"><a href="http://laurenwood.github.io/">[Growth of a Nation](http://laurenwood.github.io/)</a></figcaption>
+                </figure>
+              </div>
+            </div>
+          </section>
+          <section>
+            <div><img src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo"></div>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h1>Case Study: Changing Encoding and Parameters</h1>
+            <h3>Hedonometer.org</h3>
+          </section>
+          <section>
+            <h3>Line Chart Changes</h3>
+            <ul>
+              <li class="fragment">Change time parameter using brush</li>
+              <li class="fragment">Change time parameter using menu</li>
+              <li class="fragment">Change encoding of day-of-week using menu</li>
+            </ul>
+          </section>
+          <section>
+            <h3>Word shift graph changes</h3>
+            <ul>
+              <li class="fragment">Change time parameter with menu + date picker</li>
+              <li class="fragment">Change language parameter with translation toggle</li>
+              <li class="fragment">Change position encoding with bar selector</li>
+            </ul>
+          </section>
+          <section>
+            <h3>Demo</h3>
+          </section>
+          <section data-background-iframe="http://hedonometer.org/timeseries/en_all/?from=2015-07-16&amp;to=2017-01-12&amp;date=2016-11-09"></section>
+          <section>
+            <div><img src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo"></div>
+          </section>
+        </section>
+        <section id="animations">
+          <section>
+            <h1>Animations</h1>
+          </section>
+          <section>
+            <h2>Reorder: DataStripes</h2>
+            <ul>
+              <li class="fragment">What: table with many attributes</li>
+              <li class="fragment">How: data-driven reordering by selecting column</li>
+              <li class="fragment">Why: find correlations between attributes</li>
+            </ul>
+            <figure><img data-src="../shared_images/vad_book_alldiagrams/pr10_manipulate-views-reorder.png" alt="multiple depictions of how complex data can be ordered, by color, date, and other dimensions">
+              <figcaption class="reference"><a href="http://carlmanaster.github.io/datastripes/">http://carlmanaster.github.io/datastripes/</a></figcaption>
+            </figure>
+          </section>
+          <section>
+            <h2>Re-Align: LineUp</h2>
+            <div class="flex">
+              <div class="half">
+                <ul>
+                  <li class="fragment">Stacked bars</li>
+                  <ul>
+                    <li class="fragment">Easy to compare</li>
+                    <ul>
+                      <li class="fragment">First segment</li>
+                      <li class="fragment">Total bar</li>
+                    </ul>
+                  </ul>
+                  <li class="fragment">Align to different segment
+                    <li class="fragment">Supports flexible comparison</li>
+                  </li>
+                </ul>
+              </div>
+              <div class="half">
+                <figure><img data-src="../shared_images/vad_book_alldiagrams/pr10_manipulate-views-change-alignment-1.png" alt="Content aligned along the left margin"><img data-src="../shared_images/vad_book_alldiagrams/pr10_manipulate-views-change-alignment-2.png" alt="Content aligned along the center margin">
+                  <figcaption class="reference">[LineUp: Visual Analysis of Multi-Attribute Rankings.Gratzl, Lex, Gehlenborg, Pfister, and Streit. IEEE Trans. Visualization and Computer Graphics (Proc. InfoVis 2013) 19:12 (2013), 2277–2286.]</figcaption>
+                </figure>
+              </div>
+            </div>
+          </section>
+          <section>
+            <h3 class="demo">LineUP</h3><span>
+              <video width="100%" height="100%" controls>
+                  <source data-src="http://vcg.seas.harvard.edu/files/pfister/files/2013_infovis_lineup.mp4" type="video/mp4">
+              </video></span><a class="tiny" target="_blank" href="http://vcg.seas.harvard.edu/files/pfister/files/2013_infovis_lineup.mp4">http://vcg.seas.harvard.edu/files/pfister/files/2013_infovis_lineup.mp4</a>
+          </section>
+          <section class="full">
+            <h3>"LineUP" D3</h3>
+            <div style="font-size:12pt;">
+              <div id="observablehq-30df3492">
+                <div class="observablehq-viewof-coeficients"></div>
+                <div style="overflow: scroll;" class="observablehq-chart"></div>
+                <div style="overflow: hidden;"><a style="display: block; float:right;" href="https://observablehq.com/@john-guerra/lineup"><object type="image/svg+xml" style="pointer-events: none;" width=180 height=22 data="https://static.observableusercontent.com/files/c3fab254a006f1a3a1f9f63aba8ab1460db4752529036b9962950bde0ec195bab823daa6b278b1c3401e545b3bd640ddfdcad805cf9859af218cb2b9fed4ddf0"></object></a></div>
+              </div>
+              <script type="module">
+                import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+                import define from "https://api.observablehq.com/@john-guerra/lineup.js?v=3";
+                (new Runtime).module(define, name => {
+                  if (name === "viewof coeficients") return Inspector.into("#observablehq-30df3492 .observablehq-viewof-coeficients")();
+                  if (name === "chart") return Inspector.into("#observablehq-30df3492 .observablehq-chart")();
+                });
+              </script>
+              
+            </div><a class="reference" href="https://observablehq.com/@john-guerra/lineup">https://observablehq.com/@john-guerra/lineup</a>
+          </section>
+          <section>
+            <h3>Idiom: Animated Transitions</h3>
+            <div class="flex">
+              <div class="half">
+                <ul class="noMarginTopBottom">
+                  <li class="fragment">Smooth interpolation from one state to another</li>
+                  <ul>
+                    <li class="fragment">Alternative to jump cuts, supports item tracking</li>
+                    <ul>
+                      <li class="fragment">Best case for animation</li>
+                    </ul>
+                    <li class="fragment">Staging to reduce cognitive load</li>
+                  </ul>
+                  <li class="fragment">Example: animated transitions in statistical data graphics</li>
+                </ul>
+              </div>
+              <div class="half">
+                <figurenoMarginTopBottom><img data-src="../shared_images/vad_book_alldiagrams/pr10_manipulate-views-animated-transitions.png" alt="animated transition"><a class="reference" href="https://vimeo.com/19278444">vimeo.com/19278444</a>
+                  <figcaption class="referece"><a href="vis.stanford.edu/papers/animated-transitions">[Animated Transitions in Statistical Data Graphics. Heer and Robertson. IEEE TVCG (Proc InfoVis 2007) 13(6):1240-1247, 2007]</a></figcaption>
+                </figurenoMarginTopBottom>
+              </div>
+            </div>
+          </section>
+          <section class="full">
+            <h2>D3 show reel</h2>
+            <div id="d3ShowReel">
+              <div id="observablehq-15c27bb5"></div>
+              <script type="module">
+              import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+              import define from "https://api.observablehq.com/d/90fc58032421b463.js?v=3";
+              const inspect = Inspector.into("#observablehq-15c27bb5");
+              (new Runtime).module(define, name => name === "chart" ? inspect() : undefined);
+              </script>
+              
+            </div>
+          </section>
+          <section>
+            <iframe class="blocks" data-src="https://bost.ocks.org/mike/miserables/"></iframe><a href="https://bost.ocks.org/mike/miserables/">https://bost.ocks.org/mike/miserables/</a>
+          </section>
+          <section>
+            <h3>Animating the show reel: Flubber</h3><img data-src="../shared_images/flubber.gif" alt="Flubber">
+          </section>
+          <section>
+            <h2>Collapsible Tree</h2>
+            <div class="flex">
+              <div class="half">
+                <div>Tree drilldown / rollup</div>
+              </div>
+            </div>
+          </section>
+          <section>
+            <h2>Zoomable bar chart</h2>
+            <div class="flex">
+              <div class="half">
+                <ul>
+                  <li class="fragment">Tree drilldown / rollup</li>
+                  <li class="fragment">Value comparison</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+          <section>
+            <h2>Zoomable Icicle</h2>
+            <div class="flex">
+              <div class="half">
+                <ul>
+                  <li class="fragment">Tree drilldown / rollup</li>
+                  <li class="fragment">Value comparison</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+          <section>
+            <div><img src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo"></div>
+          </section>
+        </section>
+        <section id="interactions">
+          <section>
+            <h1>Interactions</h1>
+          </section>
+          <section>
+            <h2>Selection</h2>
+            <div class="flex">
+              <div class="twothirds">
+                <ul>
+                  <li class="fragment">Selection: basic operation for most interaction</li>
+                  <li class="fragment">Design choices</li>
+                  <ul>
+                    <li class="fragment">How many selection types?</li>
+                    <ul>
+                      <li class="fragment">Interaction modalities
+                        <ul>
+                          <li class="fragment">Click/tap (heavyweight) vs. hover (lightweight but not available on most touchscreens)</li>
+                          <li class="fragment">Multiple click types (shift-click, option-click, …)</li>
+                          <li class="fragment">Proximity beyond click/hover (touching vs nearby vs distant)</li>
+                        </ul>
+                      </li>
+                      <li class="fragment">Application semantics
+                        <li class="fragment">Adding to selection set vs replacing selection</li>
+                        <li class="fragment">Can selection be null?</li>
+                        <ul>
+                          <li class="fragment">ex: toggle so nothing selected if click on background</li>
+                        </ul>
+                        <li class="fragment">Primary vs secondary (ex: source/target nodes in network)</li>
+                        <li class="fragment">Group membership (add/delete items, name group, …)</li>
+                      </li>
+                    </ul>
+                  </ul>
+                </ul>
+              </div>
+              <div class="third"><img data-src="../shared_images/vad_book_alldiagrams/pr10_manipulate-views-select.png" alt="Select a single plot point"></div>
+            </div>
+          </section>
+          <section>
+            <h2>Types of selection</h2>
+            <div class="flex">
+              <div class="half">
+                <ul>
+                  <li class="fragment">Interval
+                    <ul>
+                      <li class="fragment">Brush 1D</li>
+                      <li class="fragment">Brush 2D</li>
+                    </ul>
+                  </li>
+                  <li class="fragment">Individual
+                    <ul>
+                      <li class="fragment">Closest item (hover)</li>
+                      <li class="fragment">Click to select</li>
+                    </ul>
+                  </li>
+                  <li class="fragment">Multi
+                    <ul>
+                      <li class="fragment">Shift click</li>
+                      <li class="fragment">By similarity (e.g. connection, same State)</li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
+          <section>
+            <h2>Voronoi Maps</h2>
+            <div class="flex">
+              <div class="half">
+                <ul>
+                  <li class="fragment">Tesselate the canvas</li>
+                  <li class="fragment">Quickly find the closest point</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+          <section>
+            <iframe class="blocks" data-src="https://blockbuilder.org/mbostock/7608400"></iframe><a class="tiny" href="https://blockbuilder.org/mbostock/7608400">https://blockbuilder.org/mbostock/7608400</a>
+          </section>
+          <section>
+            <h2>Selection with brush</h2><a href="https://observablehq.com/@john-guerra/scatterplot-brush">https://observablehq.com/@john-guerra/scatterplot-brush</a>
+          </section>
+          <section>
+            <h2>Highlight</h2>
+            <div class="flex">
+              <div class="half">
+                <ul class="tiny">
+                  <li class="fragment">highlight: change visual encoding for selection targets
+                    <ul>
+                      <li class="fragment">visual feedback closely tied to but separable from selection (interaction)</li>
+                    </ul>
+                  </li>
+                  <li class="fragment">design choices: typical visual channels
+                    <ul>
+                      <li class="fragment">change item color
+                        <ul>
+                          <li class="fragment">but hides existing color coding</li>
+                        </ul>
+                      </li>
+                      <li class="fragment">add outline mark</li>
+                      <li class="fragment">change size (ex: increase outline mark linewidth)</li>
+                      <li class="fragment">change shape (ex: from solid to dashed line for link mark)</li>
+                    </ul>
+                  </li>
+                  <li class="fragment">unusual channels: motion
+                    <ul>
+                      <li class="fragment">motion: usually avoid for single view
+                        <ul>
+                          <li class="fragment">with multiple views, could justify to draw attention to other views</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
+          <section>
+            <h2>Interaction technology</h2>
+            <div class="flex">
+              <div class="half">
+                <ul>
+                  <li class="fragment">what do you design for?
+                    <ul>
+                      <li class="fragment">mouse & keyboard on desktop?
+                        <ul>
+                          <li class="fragment">large screens, hover, multiple clicks</li>
+                        </ul>
+                      </li>
+                      <li class="fragment">touch interaction on mobile?
+                        <ul>
+                          <li class="fragment">small screens, no hover, just tap</li>
+                        </ul>
+                      </li><br>
+                      <li class="fragment">gestures from video / sensors?
+                        <ul>
+                          <li class="fragment">ergonomic reality vs movie bombast</li>
+                        </ul>
+                      </li><br>
+                      <li class="fragment">eye tracking?</li>
+                    </ul>
+                  </li>
+                </ul>
+                <div class="reference">slide inspired by: Alexander Lex, Utah</div>
+              </div>
+            </div>
+          </section>
+          <section>
+            <h2>Tooltips</h2>
+            <div class="flex">
+              <div class="half">
+                <ul>
+                  <li class="fragment">popup information for selection
+                    <ul>
+                      <li class="fragment">hover or click</li>
+                      <li class="fragment">can provide useful additional detail on demand</li>
+                      <li class="fragment">beware: does not support overview!
+                        <ul>
+                          <li class="fragment">always consider if there’s a way to visually encode directly to provide overview</li>
+                          <li class="fragment">“If you make a rollover or tooltip, assume nobody will see it. If it's important, make it explicit. “
+                            <ul>
+                              <li class="fragment">Gregor Aisch, NYTimes</li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
+          <section>
+            <h2>Responsiveness is required</h2>
+            <ul class="noMarginTopBottom line-compressed">
+              <li class="fragment">visual feedback: three rough categories
+                <ul>
+                  <li class="fragment">0.1 seconds: perceptual processing
+                    <ul>
+                      <li class="fragment">subsecond response for mouseover highlighting - ballistic motion</li>
+                    </ul>
+                  </li>
+                  <li class="fragment">1 second: immediate response
+                    <ul>
+                      <li class="fragment">fast response after mouseclick, button press - Fitts’ Law limits on motor control</li>
+                    </ul>
+                  </li>
+                  <li class="fragment">10 seconds: brief tasks
+                    <ul>
+                      <li class="fragment">bounded response after dialog box - mental model of heavyweight operation (file load)</li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li class="fragment">scalability considerations
+                <ul class="tiny">
+                  <li class="fragment">highlight selection without complete redraw of view (graphics frontbuffer)</li>
+                  <li class="fragment">show hourglass for multi-second operations (check for cancel/undo)</li>
+                  <li class="fragment">show progress bar for long operations (process in background thread)</li>
+                  <li class="fragment">rendering speed when item count is large (guaranteed frame rate)</li>
+                </ul>
+              </li>
+            </ul>
+          </section>
+          <section>
+            <div><img src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo"></div>
+          </section>
+        </section>
+        <section id="navigate">
+          <section>
+            <h1>Navigate</h1>
+          </section>
+          <section class="full"><img class="fill" src="../shared_images/vad_book_alldiagrams/how_navigate.png" alt="How Navigate"></section>
+          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/11_manipulate-genea.020.png"></section>
+          <section>
+            <h3>Navigate: Changing viewpoint/visibility</h3>
+            <div class="flex">
+              <div class="half">
+                <ul class="normal">
+                  <li class="fragment">Change viewpoint
+                    <ul>
+                      <li class="fragment">Changes which items are visible within view</li>
+                    </ul>
+                  </li>
+                  <li class="fragment">Camera metaphor
+                    <ul>
+                      <li class="fragment">Pan/translate/scroll</li>
+                      <li class="fragment">Rotate</li>
+                      <li class="fragment">Zoom</li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              <div class="half"><img data-src="../shared_images/vad_book_alldiagrams/how_navigate_zoom_pan_constrained.png" alt="Change viewpoint"></div>
+            </div>
+          </section>
+          <section>
+            <h3>Pan / Translate / Scroll</h3>
+            <div class="flex">
+              <div class="half">
+                <ul class="normal">
+                  <li class="fragment">Move up/down</li>
+                  <li class="fragment">Move sideways</li>
+                  <li class="fragment">Go to location</li>
+                </ul>
+              </div>
+              <div class="half"><img data-src="../shared_images/vad_book_alldiagrams/pr10_manipulate-views-navigate-reduction.png" alt="Item reduction"></div>
+            </div>
+          </section>
+          <section class="full">
+            <h2>Idiom: Scrollytelling</h2>
+            <div class="flex">
+              <div class="twothirds">
+                <ul class="small">
+                  <li class="fragment">how: navigate page by scrolling (panning down)</li>
+                  <li class="fragment">pros:
+                    <ul>
+                      <li class="fragment">People don't click, but they scroll</li>
+                      <li class="fragment">Bottom up approach</li>
+                      <li class="fragment">Good for mobile</li>
+                    </ul>
+                  </li>
+                  <li class="fragment">cons:
+                    <ul class="tiny">
+                      <li class="fragment">full-screen mode may lack affordances</li>
+                      <li class="fragment">scrolljacking, no direct access</li>
+                      <li class="fragment">unexpected behaviour</li>
+                      <li class="fragment">continuous control for discrete steps</li>
+                    </ul>
+                  </li>
+                  <li class="fragment small"><a href="https://eagereyes.org/blog/2016/the-scrollytelling-scourge">Eagereyes take on scrollyteling</a></li>
+                  <li class="fragment small"><a href="https://bost.ocks.org/mike/scroll/">MBostock's guidelines for scrollyteling</a></li>
+                </ul>
+                <div class="reference">slide inspired by: Alexander Lex, Utah</div>
+              </div>
+              <div class="third">
+                <figure>
+                  <video style="max-width:250px" data-src="../shared_images/segundaVueltaStory.mp4" alt="Colombian Election results storytelling video" autoplay="true" loop="true"></video>
+                  <figcaption class="reference"><a href="https://johnguerra.co/viz/resultadosSegundaVuelta2018/">Colombian Election results</a></figcaption>
+                </figure>
+              </div>
+            </div>
+          </section>
+          <section>
+            <h3>Zoom</h3>
+            <div class="flex">
+              <div class="twothirds">
+                <ul>
+                  <li class="fragment">enlarge/shrink world == move camera closer/further</li>
+                  <li class="fragment"><strong>geometric zoom</strong>: standard, like moving physical object</li>
+                  <li class="fragment"><strong>semantic zoom</strong>: keep objects same size, but change the scale / viewport</li>
+                </ul>
+              </div>
+              <div class="third"><img data-src="../shared_images/vad_book_alldiagrams/navigate_zoom.png" alt="Item reduction"></div>
+            </div>
+          </section>
+          <section>
+            <h2>Idiom: Semantic Zooming</h2>
+            <div class="flex">
+              <div class="third">
+                <ul class="tiny">
+                  <li class="fragment">Semantic zoom</li>
+                  <ul>
+                    <li class="fragment">Alternative to geometric zoom</li>
+                    <li class="fragment">Resolution-aware layout adapts to available space</li>
+                    <li class="fragment">Goal: legible at multiple scales</li>
+                    <li class="fragment">Dramatic or subtle effects</li>
+                  </ul>
+                  <li class="fragment">Visual encoding change
+                    <li class="fragment">Colored box</li>
+                    <li class="fragment">Sparkline</li>
+                    <li class="fragment">Simple line chart</li>
+                    <li class="fragment">Full chart: axes and tickmarks</li>
+                  </li>
+                </ul>
+              </div>
+              <div class="twothirds">
+                <figure><img data-src="../shared_images/vad_book_alldiagrams/pr10_manipulate-views-semantic-zooming.png" alt="Semantic zooming">
+                  <figcaption class="reference">[LiveRAC - Interactive Visual Exploration of System Management Time-Series Data. McLachlan, Munzner, Koutsofios, and North. Proc. ACM Conf. Human Factors in Computing Systems (CHI), pp. 1483–1492, 2008.]</figcaption>
+                </figure>
+              </div>
+            </div>
+          </section>
+          <section>
+            <h3 class="demo">LiveRAC</h3><span class="blocks"><iframe width="853" height="480" data-src="https://www.youtube.com/embed/ld0c3H0VSkw" frameborder="0" allowfullscreen></iframe></span>
+          </section>
+          <section>
+            <h3 class="demo">Geometric Zoom</h3>
+            <div>
+              <div id="observablehq-3f273885"></div>
+              <script type="module">
+              import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+              import define from "https://api.observablehq.com/@john-guerra/svg-geometric-zoom.js?v=3";
+              const inspect = Inspector.into("#observablehq-3f273885");
+              (new Runtime).module(define, name => name === "chart" ? inspect() : undefined);
+              </script>
+            </div><a class="reference" href="https://observablehq.com/@john-guerra/svg-geometric-zoom">https://observablehq.com/@john-guerra/svg-geometric-zoom</a>
+          </section>
+          <section>
+            <h3 class="demo">Semantic Zoom</h3>
+            <div>
+              <div id="observablehq-57b18532"></div>
+              <script type="module">
+              import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+              import define from "https://api.observablehq.com/@john-guerra/svg-semantic-zoom.js?v=3";
+              const inspect = Inspector.into("#observablehq-57b18532");
+              (new Runtime).module(define, name => name === "chart" ? inspect() : undefined);
+              </script>
+            </div><a class="reference" href="https://observablehq.com/@john-guerra/svg-semantic-zoom">https://observablehq.com/@john-guerra/svg-semantic-zoom</a>
+          </section>
+          <section class="fill">
+            <h2 class="demo">Rotate</h2>
+            <div>
+              <div id="observablehq-02609b50"></div>
+              <script type="module">
+              import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+              import define from "https://api.observablehq.com/@d3/world-tour.js?v=3";
+              const inspect = Inspector.into("#observablehq-02609b50");
+              (new Runtime).module(define, name => name === "canvas" ? inspect() : undefined);
+              </script>
+              
+            </div>
+          </section>
+          <section class="fill">
+            <h2 class="demo">Zoom to constrained</h2>
+            <div>
+              <div id="observablehq-90f0961c"></div>
+              <script type="module">
+              import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+              import define from "https://api.observablehq.com/d/09dda39910e94703.js?v=3";
+              const inspect = Inspector.into("#observablehq-90f0961c");
+              (new Runtime).module(define, name => name === "chart" ? inspect() : undefined);
+              </script>
+              
+            </div>
+          </section>
+          <section class="fill">
+            <h3 class="demo">Transition + Animated navigation</h3>
+            <div>
+              <div id="observablehq-de04b13f"></div>
+              <script type="module">
+              import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+              import define from "https://api.observablehq.com/@john-guerra/zoomable-variable-size-icicle.js?v=3";
+              const inspect = Inspector.into("#observablehq-de04b13f");
+              (new Runtime).module(define, name => name === "chart" ? inspect() : undefined);
+              </script>
+              
+            </div>
+          </section>
+          <section class="fill">
+            <h3 class="demo">Barchart race</h3>
+            <div>
+              <style>
+              text {
+                font-size: 14pt;
+              }
+              </style>
+              <div id="observablehq-9a6c6af1">
+                <div class="observablehq-viewof-replay"></div>
+                <div class="observablehq-chart"></div>
+                <div style="overflow: hidden;"><a style="display: block; float:right;" href="https://observablehq.com/@d3/bar-chart-race"><object type="image/svg+xml" style="pointer-events: none;" width=180 height=22 data="https://static.observableusercontent.com/files/c3fab254a006f1a3a1f9f63aba8ab1460db4752529036b9962950bde0ec195bab823daa6b278b1c3401e545b3bd640ddfdcad805cf9859af218cb2b9fed4ddf0"></object></a></div>
+              </div>
+              <script type="module">
+                import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+                import define from "https://api.observablehq.com/@d3/bar-chart-race.js?v=3";
+                (new Runtime).module(define, name => {
+                  if (name === "viewof replay") return Inspector.into("#observablehq-9a6c6af1 .observablehq-viewof-replay")();
+                  if (name === "chart") return Inspector.into("#observablehq-9a6c6af1 .observablehq-chart")();
+                });
+              </script>
+              
+            </div>
+          </section>
+          <section>
+            <h2>Interaction benefits</h2>
+            <ul>
+              <li class="fragment">interaction pros
+                <ul>
+                  <li class="fragment">major advantage of computer-based vs paper-based visualization</li>
+                  <li class="fragment">flexible, powerful, intuitive
+                    <ul>
+                      <li class="fragment">exploratory data analysis: change as you go during analysis process</li>
+                      <li class="fragment">fluid task switching: different visual encodings support different tasks</li>
+                    </ul>
+                  </li>
+                  <li class="fragment">animated transitions provide excellent support
+                    <ul>
+                      <li class="fragment">empirical evidence that animated transitions help people stay oriented</li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </section>
+          <section>
+            <h2>Interaction limitations</h2>
+            <ul>
+              <li class="fragment">interaction has a time cost
+                <ul>
+                  <li class="fragment">sometimes minor, sometimes significant</li>
+                  <li class="fragment">degenerates to human-powered search in worst case</li>
+                </ul>
+              </li>
+              <li class="fragment">remembering previous state imposes cognitive load
+                <ul>
+                  <li class="fragment">rule of thumb: eyes over memory
+                    <ul>
+                      <li class="fragment">hard to compare visible item to memory of what you saw</li>
+                      <li class="fragment">ex: maintaining context/orientation when navigating</li>
+                      <li class="fragment">ex: tracking complex changes during animation</li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li class="fragment">controls may take screen real estate
+                <ul>
+                  <li class="fragment">or invisible functionality may be difficult to discover (lack of affordances)</li>
+                </ul>
+              </li>
+              <li class="fragment">users may not interact as planned by designer
+                <ul>
+                  <li class="fragment">NYTimes logs show ~90% don’t interact beyond scrollytelling - Aisch, 2016</li>
+                </ul>
+              </li>
+            </ul>
+          </section>
+          <section>
+            <div><img src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo"></div>
+          </section>
+        </section>
+        <section id="manipulateViewCaseStudies">
+          <section>
+            <h2>Manipulate View Case Studies</h2>
+          </section>
+          <section class="full">
+            <h2 class="demo">Colombian Elections</h2>
+            <figure>
+              <video style="max-width:300px" data-src="../shared_images/segundaVueltaStory.mp4" alt="Colombian Election results storytelling video" autoplay="true" loop="true"></video>
+              <figcaption class="reference"><a href="https://johnguerra.co/viz/resultadosSegundaVuelta2018/">https://johnguerra.co/viz/resultadosSegundaVuelta2018/</a></figcaption>
+            </figure>
+          </section>
+          <section class="full">
+            <h2 class="demo">Twitter Influentials</h2>
+            <figure>
+              <video style="max-width:300px" data-src="../shared_images/segundaVueltaStory.mp4" alt="Colombian Election results storytelling video" autoplay="true" loop="true"></video>
+              <figcaption class="reference"><a href="https://johnguerra.co/viz/resultadosSegundaVuelta2018/">https://johnguerra.co/viz/resultadosSegundaVuelta2018/</a></figcaption>
+            </figure>
+          </section>
+          <section>
+            <div><img src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo"></div>
+          </section>
+        </section>
+        <section id="animationsDemo">
+          <section>
+            <h2>Animations on the web</h2>
+          </section>
+          <section>
+            <div><img src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo"></div>
+          </section>
+        </section>
+        <section id="review">
+          <section>
+            <h2>What we learned</h2>
+            <ul class="small">
+              <li class="fragment">Manipulate Views
+                <ul>
+                  <li class="fragment">Change Encodings / Parameters</li>
+                  <li class="fragment">Animations</li>
+                  <li class="fragment">Interactions</li>
+                  <li class="fragment">Navigate</li>
+                </ul>
+              </li>
+              <li class="fragment">Case Studies</li>
+            </ul>
+          </section>
+          <section>
+            <div><img src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo"></div>
+          </section>
+        </section>
+      </div>
+    </div>
+    <script src="../js/reveal.js"></script>
+    <script src="../plugin/zoom/zoom.js"></script>
+    <script src="../plugin/notes/notes.js"></script>
+    <script src="../plugin/search/search.js"></script>
+    <script src="../plugin/markdown/markdown.js"></script>
+    <script src="../plugin/highlight/highlight.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.13.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.13.1"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite-api@0.11.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-tooltip@0.23.2"></script>
+    <script>
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        hash: true,
+        //- transition: "convex",
+      
+        //- width: "100%",
+        //- height: "720px",
+      
+        plugins: [ RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight ]
+      });
+    </script>
+    <script>
+      (function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.data-src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,"script","https://www.google-analytics.com/analytics.js","ga");
+      
+      ga("create", "UA-72531610-1", "auto");
+      ga("send", "pageview");
+    </script>
+  </body>
+</html>
