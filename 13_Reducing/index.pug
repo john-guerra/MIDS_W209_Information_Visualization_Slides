@@ -4,7 +4,7 @@ html(lang="en")
     title Week 13 Reducing Attributes and Rows. MIDS W209 Information Visualization Slides
     meta(charset="utf-8")
     meta(name="author", content="John Alexis Guerra Gómez")
-    meta(name="description", content="Week 6 Reducing attributes and rows. MIDS W209 Information Visualization Slides")
+    meta(name="description", content="Week 13 Reducing Attributes and Rows.  MIDS W209 Information Visualization Slides")
 
     meta(name="apple-mobile-web-app-capable" content="yes")
     meta(name="apple-mobile-web-app-status-bar-style" content="black-translucent")
@@ -72,7 +72,7 @@ html(lang="en")
             .flex
               .half
                 ul
-                  li.fragment Reduce / Increase: inverses
+                  li.fragment Reduce/increase: inverses
                   li.fragment Filter
                     ul.small
                       li.fragment Pro: straightforward and intuitive
@@ -119,7 +119,7 @@ html(lang="en")
                 ul.small
                   li.fragment Augmented widgets show information scent
                     ul.small
-                      li.fragment Cues to show whether value in drilling down further vs looking elsewhere
+                      li.fragment Cues to show whether value in drilling down further vs. looking elsewhere
                   li.fragment Concise use of space: histogram on slider
                 br
                 figure
@@ -135,7 +135,7 @@ html(lang="en")
 
 
           section.demo
-            h3.demo Scented widgets paper
+            h3.demo Scented Widgets Paper
             figure
               figcaption.reference.tiny(target="_blank" href="http://vis.berkeley.edu/papers/scented_widgets/") http://vis.berkeley.edu/papers/scented_widgets/
               iframe.blocks(data-src="http://vis.berkeley.edu/papers/scented_widgets/")
@@ -171,7 +171,7 @@ html(lang="en")
             h2 Dimensionality Reduction
 
           section
-            h2 Aggregation: Hierarchichal cluster explorer
+            h2 Aggregation: Hierarchichal Cluster Explorer
 
 
         section#itemAggregation
@@ -207,7 +207,7 @@ html(lang="en")
                   li.fragment Data: table
                   li.fragment Derived data
                   ul.small
-                    li.fragment 5 quant attribs
+                    li.fragment Five quantitative attributes
                     ul.small
                       li.fragment Median: central line
                       li.fragment Lower and upper quartile: boxes
@@ -226,32 +226,32 @@ html(lang="en")
             a.tiny(target="_blank" href="http://bl.ocks.org/mbostock/") by mbostock
 
           section
-            h3.demo Violin plot
+            h3.demo Violin Plot
             iframe.blocks(data-src="http://blockbuilder.org/asielen/92929960988a8935d907e39e60ea8417")
             a.tiny(target="_blank" href="http://blockbuilder.org/asielen/92929960988a8935d907e39e60ea8417") http://blockbuilder.org/asielen/92929960988a8935d907e39e60ea8417
             a.tiny(target="_blank" href="http://bl.ocks.org/asielen/") by asielen
 
 
           section
-            h2 Idiom: 2D density plots
+            h2 Idiom: 2D Density Plots
             .flex
               .half
                 ul.small
-                  li.fragment Scatter-plot meet heat-map
+                  li.fragment Scatterplot meets heatmap
                   ul
-                    li.fragment derived data
+                    li.fragment Derived data:
                     ul
-                      li.fragment Teselate space info areas
+                      li.fragment Tesselate space info areas
                       li.fragment Count number of elements falling on that area
 
-                    li.fragment #[strong Mark]: Dots (boxes)
+                    li.fragment #[strong Mark]: dots (boxes)
                     li.fragment #[strong Channels]:
                     ul
-                      li.fragment Position: Location of areas
-                      li.fragment Color (brightness): Number of elements
+                      li.fragment Position: location of areas
+                      li.fragment Color (brightness): number of elements
                     ul
-                      li.fragment marks (re-)ordered by cluster hierarchy traversal
-                    li.fragment #[strong Tasks]: Summarize distribution.
+                      li.fragment Marks (re-)ordered by cluster hierarchy traversal
+                    li.fragment #[strong Tasks]: summarize distribution
                     li.fragment #[strong Scalability:]
                     ul
                       li.fragment Millions of rows (might require preprocessing)
@@ -313,7 +313,7 @@ html(lang="en")
             h1 Spatial Aggregation
 
           section
-            h2 Geo level
+            h2 Geo L evel
             ul
               li.fragment Country
               li.fragment State
@@ -325,9 +325,9 @@ html(lang="en")
             h2 Aggregation Problems
             ul
               li.fragment MAUP: Modifiable Areal Unit Problem
-              li.fragment gerrymandering (manipulating voting district boundaries) is only one example!
-              li.fragment zone effects
-              li.fragment scale effects
+              li.fragment Gerrymandering (manipulating voting district boundaries) is only one example!
+              li.fragment Zone effects
+              li.fragment Scale effects
 
           //- TODO Add examples
 
@@ -335,7 +335,7 @@ html(lang="en")
           section
             h2 Overlapping
             ul
-              li Zip Codes
+              li ZIP codes
               li Disputed borders
 
           section
@@ -344,12 +344,12 @@ html(lang="en")
             ul
               li Aggregate by commonalities
                 ul
-                  li.fragment e.g. Agricultural vs Industrial Regions
-                  li.fragment e.g. Historically right vs left wing
+                  li.fragment e.g. Agricultural vs. industrial regions
+                  li.fragment e.g. Historically right- vs. left-wing
               li Aggregate by the data attributes
 
           section
-            h2 Geo patterns vs political patterns
+            h2 Geo patterns vs. political patterns
 
             ul
               li Risaralda example
@@ -360,18 +360,18 @@ html(lang="en")
             h1 Time Aggregation
 
           section
-            h2 Date Part vs Truncate
+            h2 Date Part vs. Truncate
 
             ul
-              li.fragment Date Part: extract a part of the date
-              li.fragment Date Truncate: cut the date at a certain level
+              li.fragment Date part: extract a part of the date
+              li.fragment Date truncate: cut the date at a certain level
 
           section
             h2 Date Truncate
 
             ul
-              li Different levels can hide seasonality
-              li Sometimes too much detail is unnecessary
+              li Different levels can hide seasonality.
+              li Sometimes, too much detail is unnecessary.
 
           section
             h2 Date Part
@@ -382,7 +382,7 @@ html(lang="en")
                   li Weekends
                   li Night time
                   li Holidays
-                  li Summer vs Winter
+                  li Summer vs. winter
 
           section
             h2 Calendar Views
@@ -426,10 +426,10 @@ html(lang="en")
               li.fragment Attribute reduction: reduce set with filtering
                 ul
                   li.fragment Includes orthographic projection
-              li.fragment Dimensionality reduction: create smaller set of new dims/attribs
+              li.fragment Dimensionality reduction (DR): create smaller set of new dimensionss/attributes
                 ul
                   li.fragment Typically implies dimensional aggregation, not just filtering
-                  li.fragment Vocab: projection/mapping
+                  li.fragment Vocabulary: projection/mapping
 
           //- section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/14_reduce-glimmer.014.png")
           section
@@ -441,8 +441,8 @@ html(lang="en")
               li.fragment No single correct answer; many metrics proposed
                 ul
                   li.fragment Cumulative variance that is not accounted for
-                  li.fragment Strain: Match variations in distance (vs. actual distance values)
-                  li.fragment Stress: Difference between interpoint distances in high and low dims
+                  li.fragment Strain: match variations in distance (vs. actual distance values)
+                  li.fragment Stress: difference between interpoint distances in high and low dimensionss
 
 
             img(style="width:400px", data-src="../shared_images/vad_book_alldiagrams/pr13_estimate-true-dimensionality.png", alt="Stresss Function")
@@ -453,10 +453,10 @@ html(lang="en")
           section
             h3 Estimating True Dimensionality
             ul.small
-              li.fragment Scree plots as simply way: error against # attribs
+              li.fragment Scree plots as simple way: error against number of attributes
                 ul.small
-                  li.fragment Original dataset: 294 dims
-                  li.fragment Estimate: Almost all variance preserved with less than 20 dims
+                  li.fragment Original dataset: 294 dimensions
+                  li.fragment Estimate: Almost all variance preserved with less than 20 dimensions
             figure
               img(style="width:400px", data-src="../shared_images/vad_book_alldiagrams/spree_plots.png", alt="Spree Plots")
               figcaption.reference [Fig 2. DimStiller: Workflows for dimensional analysis and reduction. Ingram et al. Proc. VAST 2010, p 3-10]
@@ -473,11 +473,11 @@ html(lang="en")
                       li.fragment Avoid curse of dimensionality
                   li.fragment Data analysis
                     ul
-                      li.fragment If look at the output: visual data analysis
+                      li.fragment If looking at the output: visual data analysis
               li.fragment Abstract tasks when visualizing DR data
                 ul
                   li.fragment Dimension-oriented tasks
-                  li.fragment Naming synthesized dims, mapping synthesized dims to original dims
+                  li.fragment Naming synthesized dimensions, mapping synthesized dimensions to original dimensions
                 li.fragment Cluster-oriented tasks
                   ul
                     li.fragment Verifying clusters, naming clusters, matching clusters and classes
@@ -490,10 +490,10 @@ html(lang="en")
             ul.small
               li.fragment Principal components analysis (PCA)
               ul.small
-                li.fragment Finding axes: first with most variance, second with next most, …
+                li.fragment Finding axes: first with most variance, second with next most, etc.
                 li.fragment Describe location of each point as linear combination of weights for each axis
                 ul.small
-                  li.fragment Mapping synthesized dims to original dims
+                  li.fragment Mapping synthesized dimensions to original dimensions
             figure
               img(style="width:300px", data-src="../shared_images/vad_book_alldiagrams/pr13_reduce-dimensionality-scatterplot.png", alt="Linear Dimensionality Reduction")
               figcaption.reference
@@ -504,17 +504,17 @@ html(lang="en")
             h4 Nonlinear Dimensionality Reduction
             ul.tiny
               li.fragment Pro: can handle curved rather than linear structure
-              li.fragment Cons: lose all ties to original dims/attribs
+              li.fragment Con: lose all ties to original dimensions/attributes
                 ul.small
                   li.fragment New dimensions often cannot be easily related to originals
                     ul.small
                       li.fragment Mapping synthesized dims to original dims task is difficult
               li.fragment Many techniques proposed
-                li.fragment Many literatures: visualization, machine learning, optimization, psychology, ...
-                li.fragment Techniques: t-SNE, MDS (multidimensional scaling), charting, isomap, LLE,…
+                li.fragment Many literatures: visualization, machine learning, optimization, psychology, etc.
+                li.fragment Techniques: t-SNE, MDS (multidimensional scaling), charting, isomap, LLE, etc.
                   li.fragment t-SNE: excellent for clusters
                     ul.small
-                      li.fragment But some trickiness remains: http://distill.pub/2016/misread-tsne/
+                      li.fragment But some trickiness remains: a(href="http://distill.pub/2016/misread-tsne/") [How to Use t-SNE Effectively]
                   li.fragment MDS: confusingly, entire family of techniques, both linear and nonlinear
                     ul
                       li.fragment Minimize stress or strain metrics
@@ -529,7 +529,7 @@ html(lang="en")
           section
             h3.demo Interactive T-SNE
             div Project by Fabián Peña
-            a.tiny(href="https://fabiancpl.github.io/MLExplore.js/") https://fabiancpl.github.io/MLExplore.js/
+            a.tiny(href="https://fabiancpl.github.io/MLExplore.js/") MLExplore.js: Exploring High-Dimensional Data by Interacting and Interpreting t-SNE and K-Means
 
 
 
@@ -591,7 +591,7 @@ html(lang="en")
               .half
                 img(data-src="../shared_images/vad_book_alldiagrams/pr13_embed-fisheye2.png", alt="")
           section
-            h3.demo Fish eye
+            h3.demo Fisheye
             iframe.blocks(data-src="https://bost.ocks.org/mike/fisheye/")
             a.tiny(target="_blank" href="https://bost.ocks.org/mike/fisheye/") https://bost.ocks.org/mike/fisheye/
             a.tiny(target="_blank" href="http://bl.ocks.org/mbostock/") by mbostock
@@ -633,7 +633,7 @@ html(lang="en")
                         ul
                           li.fragment Network/tree topology comparisons unaffected: connection, containment
                     li.fragment Effects of distortion unclear if original structure unfamiliar
-                    li.fragment Object constancy/tracking maybe impaired
+                    li.fragment Object constancy/tracking may be impaired
 
                 a.reference(href="https://www.youtube.com/watch?v=hm2oFBqVM9o") [https://www.youtube.com/watch?v=hm2oFBqVM9o]
               div.half
@@ -646,51 +646,51 @@ html(lang="en")
             h3 Exploratory Data Analysis (EDA)
 
           section(data-background-size="contain" data-background="../shared_images/haystack.png")
-            h3 What's in the data?
+            h3 What's in the Data?
 
           section
             h3 Tukey
             p(style="text-align: left;" class="small") #[span.fragment #[strong Exposure], the effective laying open of the data to display the unanticipated, is to us a major portion of data analysis.] #[span.fragment Formal statistics has given almost no guidance to exposure;] #[span.fragment indeed, it is not clear how the #[strong informality] and #[strong flexibility] appropriate to the #[strong exploratory character of exposure] can be fitted into any of the structures of formal statistics so far proposed.]
-            p(style="text-align: left;" class="small") #[span.fragment Nothing - not the careful logic of mathematics, not statistical models and theories, not the awesome arithmetic power of modern computers - nothing can substitute here for the #[strong flexibility of the informed human mind].] #[span.fragment Accordingly, both approaches and techniques need to be structured so as to #[strong facilitate human involvement and intervention].]
+            p(style="text-align: left;" class="small") #[span.fragment Nothing—not the careful logic of mathematics, not statistical models and theories, not the awesome arithmetic power of modern computers—nothing can substitute here for the #[strong flexibility of the informed human mind].] #[span.fragment Accordingly, both approaches and techniques need to be structured so as to #[strong facilitate human involvement and intervention].]
 
           section
-            h3 Summary statistics
+            h3 Summary Statistics
             ul
-              li Useful to look at clean data, that you understand & trust.
-              li Can be misleading.
+              li Useful to look at clean data that you understand and trust
+              li Can be misleading
               li Remember the datasaurus!
 
 
           section
-            h3 Data munging
+            h3 Data Munging
             img(data-src="../shared_images/data_munging.png")
 
           section
             h3 60%
 
           section
-            h3 Data munging
+            h3 Data Munging
             img(data-src="../shared_images/data_file_messy.png")
 
           section
-            h3 Data munging
+            h3 Data Munging (cont.)
             img(data-src="../shared_images/data_file_clean.png")
 
           section
-            h3 Data quality hurdles
+            h3 Data Quality Hurdles
             ul
-              li Missing Data.
-              li Erroneous Values.
-              li Type Conversion.
-              li Entity Resolution.
-              li Data Integration.
+              li Missing data
+              li Erroneous values
+              li Type conversion
+              li Entity resolution
+              li Data integration
 
           section
-            h3 More bad data
+            h3 More Bad Data
             img(data-src="../shared_images/data_file_worse.png")
 
           section
-            h3 Data filtering
+            h3 Data Filtering
             div.flex
               div.third
                 span 5.77967973162 3.26834145824 0.06418251738 4.38979192127 4.68302244707 4.82366715649 4.68587041117 0.04360063509 5.90498807235 4.3618070355 0.0017977901 4.9891841837 4.56259294774 5.44050157565 5.19592386044 15.6959515181 3.22732340991 5.57228018649 3.7148892443 5.00286245308 4.68302244707 4.82366715649 4.68587041117 0.04360063509 5.90498807235 4.68302244707
@@ -701,62 +701,62 @@ html(lang="en")
             img(data-src="../shared_images/fish_weights.png")
 
           section
-            h4 The first sign that a visualization is good is that it shows you a problem in your data.
+            h4 The First Sign That a Visualization Is Good Is That It Shows You a Problem in Your Data
             p Wattenberg
 
           section
             h3 Data Tranformations and Iteration
 
           section
-            h3 Looks like this:
+            h3 Looks Like This
             img(data-src="../shared_images/pandas-screen.png")
 
           section
-            h3 Think of it as a data cube:
+            h3 Think of It as a Data Cube
             img(data-src="../shared_images/data-cube.png")
 
           section
-            h3 Common transformations
+            h3 Common Transformations
             ul
-              li Normalize.
-              li Log.
-              li Power.
-              li Binning.
-              li Grouping.
+              li Normalize
+              li Log
+              li Power
+              li Binning
+              li Grouping
 
           section
             h3 Histograms, histograms, histograms
-            p.fragment An cornerstone in the EDA toolbox!
-            p.fragment “Above all else show the data” -Tufte
+            p.fragment A cornerstone in the EDA toolbox!
+            p.fragment “Above all else show the data.” - Tufte
 
           section
             h3 Correlation
             img(data-src="../shared_images/gapminder.png")
 
           section
-            h3 Hypothesis generation
+            h3 Hypothesis Generation
             img(data-src="../shared_images/splom.png")
 
           section
             h3 Mantras
             ul
-              li.fragment Be skeptical: what assumptions have been made?
-              li.fragment Explore iteratively: start simple, keep asking questions.
-              li.fragment Avoid fixation: use a variety of graphics to inspect more angles.
+              li.fragment Be skeptical: What assumptions have been made?
+              li.fragment Explore iteratively: Start simple, keep asking questions.
+              li.fragment Avoid fixation: Use a variety of graphics to inspect more angles.
 
           section
             h3 Paradoxes
             img(data-src="../shared_images/simpsons_paradox.png")
 
           section
-            h3 Which one has the real data?
+            h3 Which One Has the Real Data?
             p
               img(data-src="../shared_images/wickham.png")
             p
               a(href="http://jonathanstray.com/papers/wickham.pdf") Graphical Inference for Infovis
 
           section
-            h3 Iteration demo
+            h3 Iteration Demo
             img(data-src="../shared_images/hedo01.png")
 
           section
@@ -791,7 +791,7 @@ html(lang="en")
 
         section#review
           section
-            h2 What we learned
+            h2 What We Learned
             ul.small
 
         //- section#extraTreeJuxtaposer
