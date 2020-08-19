@@ -452,70 +452,70 @@ html(lang="en")
                       li.fragment Add outline mark
                       li.fragment Change size (example: increase outline mark linewidth)
                       li.fragment Change shape (example: from solid to dashed line for link mark)
-                  li.fragment unusual channels: motion
+                  li.fragment Unusual channels: motion
                     ul
-                      li.fragment motion: usually avoid for single view
+                      li.fragment Motion: usually avoid for single view
                         ul
-                          li.fragment with multiple views, could justify to draw attention to other views
+                          li.fragment With multiple views, could justify to draw attention to other views
 
           section
-            h2 Interaction technology
+            h2 Interaction Technology
             .flex
               .half
                 ul
-                  li.fragment what do you design for?
+                  li.fragment What do you design for?
                     ul
-                      li.fragment mouse & keyboard on desktop?
+                      li.fragment Mouse and keyboard on desktop?
                         ul
-                          li.fragment large screens, hover, multiple clicks
-                      li.fragment touch interaction on mobile?
+                          li.fragment Large screens, hover, multiple clicks
+                      li.fragment Touch interaction on mobile?
                         ul
-                          li.fragment small screens, no hover, just tap
+                          li.fragment Small screens, no hover, just tap
                       br
-                      li.fragment gestures from video / sensors?
+                      li.fragment Gestures from video/sensors?
                         ul
-                          li.fragment ergonomic reality vs movie bombast
+                          li.fragment Ergonomic reality vs. movie bombast
                       br
-                      li.fragment eye tracking?
-                div.reference slide inspired by: Alexander Lex, Utah
+                      li.fragment Eye tracking?
+                div.reference Slide inspired by: Alexander Lex, Utah
 
           section
             h2 Tooltips
             .flex
               .half
                 ul
-                  li.fragment popup information for selection
+                  li.fragment Popup information for selection
                     ul
-                      li.fragment hover or click
-                      li.fragment can provide useful additional detail on demand
-                      li.fragment beware: does not support overview!
+                      li.fragment Hover or click
+                      li.fragment Can provide useful additional detail on demand
+                      li.fragment Beware: does not support overview!
                         ul
-                          li.fragment always consider if there’s a way to visually encode directly to provide overview
-                          li.fragment “If you make a rollover or tooltip, assume nobody will see it. If it's important, make it explicit. “
+                          li.fragment Always consider if there’s a way to visually encode directly to provide overview.
+                          li.fragment "If you make a rollover or tooltip, assume nobody will see it. If it's important, make it explicit."
                             ul
                               li.fragment Gregor Aisch, NYTimes
 
           section
-            h2 Responsiveness is required
+            h2 Responsiveness is R equired
 
             ul.noMarginTopBottom.line-compressed
-              li.fragment visual feedback: three rough categories
+              li.fragment Visual feedback: three rough categories
                 ul
                   li.fragment 0.1 seconds: perceptual processing
                     ul
-                      li.fragment subsecond response for mouseover highlighting - ballistic motion
+                      li.fragment Subsecond response for mouseover highlighting: ballistic motion
                   li.fragment 1 second: immediate response
                     ul
-                      li.fragment fast response after mouseclick, button press - Fitts’ Law limits on motor control
+                      li.fragment Fast response after mouseclick, button press: Fitts’ Law limits on motor control
                   li.fragment 10 seconds: brief tasks
                     ul
-                      li.fragment bounded response after dialog box - mental model of heavyweight operation (file load)
-              li.fragment scalability considerations
+                      li.fragment Bounded response after dialog box: mental model of heavyweight operation (file load)
+              li.fragment Scalability considerations
                 ul.tiny
-                  li.fragment highlight selection without complete redraw of view (graphics frontbuffer)
-                  li.fragment show hourglass for multi-second operations (check for cancel/undo)
-                  li.fragment show progress bar for long operations (process in background thread)
-                  li.fragment rendering speed when item count is large (guaranteed frame rate)
+                  li.fragment Highlight selection without complete redraw of view (graphics frontbuffer)
+                  li.fragment Show hourglass for multi-second operations (check for cancel/undo)
+                  li.fragment Show progress bar for long operations (process in background thread)
+                  li.fragment Rendering speed when item count is large (guaranteed frame rate)
 
         section#navigate
           section
@@ -528,7 +528,7 @@ html(lang="en")
           section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/11_manipulate-genea.020.png")
           //- LiveRac
           section
-            h3 Navigate: Changing viewpoint/visibility
+            h3 Navigate: Changing Viewpoint/Visibility
             .flex
               .half
                 ul.normal
@@ -544,7 +544,7 @@ html(lang="en")
                 img(data-src="../shared_images/vad_book_alldiagrams/how_navigate_zoom_pan_constrained.png", alt="Change viewpoint")
 
           section
-            h3 Pan / Translate / Scroll
+            h3 Pan/Translate/Scroll
             .flex
               .half
                 ul.normal
@@ -559,29 +559,29 @@ html(lang="en")
             .flex
               .twothirds
                 ul.small
-                  li.fragment how: navigate page by scrolling (panning down)
-                  li.fragment pros:
+                  li.fragment How: navigate page by scrolling (panning down)
+                  li.fragment Pros:
                     ul
                       li.fragment People don't click, but they scroll
-                      li.fragment Bottom up approach
+                      li.fragment Bottom-up approach
                       li.fragment Good for mobile
-                  li.fragment cons:
+                  li.fragment Cons:
                     ul.tiny
-                      li.fragment full-screen mode may lack affordances
-                      li.fragment scrolljacking, no direct access
-                      li.fragment unexpected behaviour
-                      li.fragment continuous control for discrete steps
+                      li.fragment Full-screen mode may lack affordances
+                      li.fragment Scrolljacking, no direct access
+                      li.fragment Unexpected behaviour
+                      li.fragment Continuous control for discrete steps
 
                   li.fragment.small
-                    a(href="https://eagereyes.org/blog/2016/the-scrollytelling-scourge") Eagereyes take on scrollyteling
+                    a(href="https://eagereyes.org/blog/2016/the-scrollytelling-scourge") Eagereyes take on scrollytelling
                   li.fragment.small
-                    a(href="https://bost.ocks.org/mike/scroll/") MBostock's guidelines for scrollyteling
-                div.reference slide inspired by: Alexander Lex, Utah
+                    a(href="https://bost.ocks.org/mike/scroll/") MBostock's guidelines for scrollytelling
+                div.reference Slide inspired by: Alexander Lex, Utah
               .third
                 figure
                   video(style="max-width:250px", data-src="../shared_images/segundaVueltaStory.mp4" alt="Colombian Election results storytelling video" autoplay="true" loop="true")
                   figcaption.reference
-                    a(href="https://johnguerra.co/viz/resultadosSegundaVuelta2018/") Colombian Election results
+                    a(href="https://johnguerra.co/viz/resultadosSegundaVuelta2018/") Colombian election results
 
 
           section
@@ -589,9 +589,9 @@ html(lang="en")
             .flex
               .twothirds
                 ul
-                  li.fragment enlarge/shrink world == move camera closer/further
-                  li.fragment #[strong geometric zoom]: standard, like moving physical object
-                  li.fragment #[strong semantic zoom]: keep objects same size, but change the scale / viewport
+                  li.fragment Enlarge/shrink world: move camera closer/further
+                  li.fragment #[strong Geometric zoom]: standard, like moving physical object
+                  li.fragment #[strong Semantic zoom]: keep objects same size, but change the scale/viewport
 
               .third
                 img(data-src="../shared_images/vad_book_alldiagrams/navigate_zoom.png", alt="Item reduction")
@@ -602,7 +602,7 @@ html(lang="en")
             .flex
               .third
                 ul.tiny
-                  li.fragment Semantic zoom
+                  li.fragment Semantic Zoom
                   ul
                     li.fragment Alternative to geometric zoom
                     li.fragment Resolution-aware layout adapts to available space
@@ -664,7 +664,7 @@ html(lang="en")
               </script>
 
           section.fill
-            h2.demo Zoom to constrained
+            h2.demo Zoom to Constrained
 
             div.
               <div id="observablehq-90f0961c"></div>
@@ -676,7 +676,7 @@ html(lang="en")
               </script>
 
           section.fill
-            h3.demo Transition + Animated navigation
+            h3.demo Transition and Animated Navigation
             div.
               <div id="observablehq-de04b13f"></div>
               <script type="module">
@@ -687,7 +687,7 @@ html(lang="en")
               </script>
 
           section.fill
-            h3.demo Barchart race
+            h3.demo Barchart Race
             div.
               <style>
               text {
@@ -709,39 +709,39 @@ html(lang="en")
               </script>
 
           section
-            h2 Interaction benefits
+            h2 Interaction Benefits
             ul
-              li.fragment interaction pros
+              li.fragment Interaction Pros
                 ul
-                  li.fragment major advantage of computer-based vs paper-based visualization
-                  li.fragment flexible, powerful, intuitive
+                  li.fragment Major advantage of computer-based vs. paper-based visualization
+                  li.fragment Flexible, powerful, intuitive
                     ul
-                      li.fragment exploratory data analysis: change as you go during analysis process
-                      li.fragment fluid task switching: different visual encodings support different tasks
-                  li.fragment animated transitions provide excellent support
+                      li.fragment Exploratory data analysis: change as you go during analysis process
+                      li.fragment Fluid task switching: different visual encodings support different tasks
+                  li.fragment Animated transitions provide excellent support
                     ul
-                      li.fragment empirical evidence that animated transitions help people stay oriented
+                      li.fragment Empirical evidence that animated transitions help people stay oriented
 
           section
-            h2 Interaction limitations
+            h2 Interaction Limitations
             ul
-              li.fragment interaction has a time cost
+              li.fragment Interaction has a time cost.
                 ul
-                  li.fragment sometimes minor, sometimes significant
-                  li.fragment degenerates to human-powered search in worst case
-              li.fragment remembering previous state imposes cognitive load
+                  li.fragment Sometimes minor, sometimes significant
+                  li.fragment Degenerates to human-powered search in worst case
+              li.fragment Remembering previous state imposes cognitive load
                 ul
-                  li.fragment rule of thumb: eyes over memory
+                  li.fragment Rule of thumb: eyes over memory.
                     ul
-                      li.fragment hard to compare visible item to memory of what you saw
-                      li.fragment ex: maintaining context/orientation when navigating
-                      li.fragment ex: tracking complex changes during animation
-              li.fragment controls may take screen real estate
+                      li.fragment Hard to compare visible item to memory of what you saw
+                      li.fragment Example: maintaining context/orientation when navigating
+                      li.fragment Example: tracking complex changes during animation
+              li.fragment Controls may take screen real estate.
                 ul
-                  li.fragment or invisible functionality may be difficult to discover (lack of affordances)
-              li.fragment users may not interact as planned by designer
+                  li.fragment Or invisible functionality may be difficult to discover (lack of affordances)
+              li.fragment Users may not interact as planned by designer.
                 ul
-                  li.fragment NYTimes logs show ~90% don’t interact beyond scrollytelling - Aisch, 2016
+                  li.fragment NYTimes logs show about 90% don’t interact beyond scrollytelling - Aisch, 2016
 
 
         section#manipulateViewCaseStudies
@@ -765,22 +765,22 @@ html(lang="en")
 
         section#animationsDemo
           section
-            h2 Animations on the web
+            h2 Animations on the Web
 
 
         section#review
           section
-            h2 What we learned
+            h2 What We Learned
             ul.small
-              li.fragment Manipulate Views
+              li.fragment Manipulate views
                 ul
-                  li.fragment Change Encodings / Parameters
+                  li.fragment Change encodings/parameters
                   li.fragment Animations
                   li.fragment Interactions
                   li.fragment Navigate
-              li.fragment Case Studies
+              li.fragment Case studies
 
-    script(src="../js/reveal.js")
+    scrip t(src="../js/reveal.js")
     script(src="../plugin/zoom/zoom.js")
     script(src="../plugin/notes/notes.js")
     script(src="../plugin/search/search.js")
