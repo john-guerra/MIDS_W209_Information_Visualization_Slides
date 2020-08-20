@@ -54,16 +54,16 @@ html(lang="en")
         //- Outline
         section#outline
           section.full
-            h2 Arrange networks and trees
+            h2 Arrange Networks and Trees
 
             img(style="max-height: 400px" data-src="../shared_images/vad_book_alldiagrams/how_networks_and_trees.png", alt="How Networks and Trees")
 
           section
-            h2 What we are going to learn
+            h2 What We Are Going to Learn
             ul.small.small
-              li.fragment How to recognize, create, and store networks.
-              li.fragment Algorithms to visualize network data.
-              li.fragment How to use color.
+              li.fragment How to recognize, create, and store networks
+              li.fragment Algorithms to visualize network data
+              li.fragment How to use color 
 
           section
             div
@@ -73,53 +73,53 @@ html(lang="en")
             h1 Networks: Basics
 
           section(style="text-align: left")
-            h3 Define networks
+            h3 Define Networks
             div
               p Networks are defined by two things: nodes and links.
               br
-              p <strong>Nodes</strong> = A collection of entities which have properties that are somehow related to each other.
+              p <strong>Nodes</strong>: a collection of entities which have properties that are somehow related to each other
               ul.small.small
-                li e.g., people, forks in rivers, proteins, webpages, organisms, etc.
-              p <strong>Edges</strong> = Connections between nodes.
+                li E.g., people, forks in rivers, proteins, web pages, organisms, etc.
+              p <strong>Edges</strong>: connections between nodes
               ul.small.small
-                li Links may be directed or undirected.
-                li Links may be binary or weighted.
+                li Links may be directed or undirected
+                li Links may be binary or weighted
 
           section
-            h2 Just some examples
+            h2 Just Some Examples
             ul
-              li Tournaments.
-              li Organization charts.
-              li Genealogy.
-              li Diagramming (e.g., Visio).
-              li Biological interactions (genes, proteins) .
-              li Computer networks.
-              li Social networks.
-              li Simulation and modeling.
-              li Integrated circuit design .
-              li River systems.
-              li #[a(href="http://www.uvm.edu/pdodds/teaching/courses/coconuts/slides/complex-networks/") Many, many more (and some history)].
+              li Tournaments
+              li Organization charts
+              li Genealogy
+              li Diagramming (e.g., Visio)
+              li Biological interactions (genes, proteins)
+              li Computer networks
+              li Social networks
+              li Simulation and modeling
+              li Integrated circuit design
+              li River systems
+              li #[a(href="http://www.uvm.edu/pdodds/teaching/courses/coconuts/slides/complex-networks/") Many, many more (and some history)]
 
 
           section
-            h3 How to store network data
+            h3 How to Store Network Data
             ul.small.small
-              li.fragment Node and link files.
-              li.fragment Adjacency matrix.
-              li.fragment Nested: XML/JSON.
-              li.fragment Flat.
-              li.fragment #[a(target="_blank" href="https://networkx.github.io/documentation/stable/reference/readwrite/index.html") Many others: list of formats from NetworkX].
+              li.fragment Node and link files
+              li.fragment Adjacency matrix
+              li.fragment Nested: XML/JSON
+              li.fragment Flat
+              li.fragment #[a(target="_blank" href="https://networkx.github.io/documentation/stable/reference/readwrite/index.html") Many others: list of formats from NetworkX]
 
           section
-            h3 Node and link files
+            h3 Node and Link Files
             img(style="" data-src="../shared_images/networks/edgelist.png", alt="Edge List")
 
           section
-            h3 Node and link files
+            h3 Node and Link Files (cont.)
             img(style="" data-src="../shared_images/networks/adjacencylist.png", alt="Adjacency List")
 
           section
-            h3 Adjacency matrix
+            h3 Adjacency Matrix
             div.scrollable-slide
               img(style="width: auto; max-height: 1000px;" data-src="../shared_images/networks/adjacencymatrix.png", alt="Adjacency Matrix")
 
@@ -129,21 +129,21 @@ html(lang="en")
               img(style="width: auto; max-height: 1000px;" data-src="../shared_images/networks/graphml.png", alt="GraphML")
 
           section
-            h3 How to create network data
+            h3 How to Create Network Data
             ul
-              li.fragment Group-by common attribute.
+              li.fragment Group by common attribute.
               li.fragment Identify nodes, extract links.
 
           section(style="text-align: left")
-            h3 From flat data
-            p Say we have tabular data for Les Miserables with columns for "scene", "character", and "line". We want to examine the network of which characters co-occur in scenes. Take all unique characters are nodes, and link between all characters in a scene together.
+            h3 From Flat Data
+            p Say we have tabular data for Les Miserables with columns for "scene", "character", and "line". We want to examine the network of which characters co-occur in scenes. Take all unique characters are nodes and link between all characters in a scene together.
             ul
               li JS: #[code d3.nest().key(function(d) { return d.scene; })].
               li Python: #[code pd.groupby('scene')].
 
           section
-            h3 Identify nodes, extract links.
-            p Social network data extract.
+            h3 Identify Nodes, Extract Links
+            p Social network data extract
             ul
               li Loop through all of the messages.
               li Add to a list of all users.
@@ -155,60 +155,61 @@ html(lang="en")
               img(src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo")
         section#forceSimulations
           section
-            h1 Networks: force simulations
+            h1 Networks: Force Simulations
 
           section.full
-            h3 Idiom: force-directed placement
+            h3 Idiom: Force-Directed Placement
             .flex
               .twothirds
                 ul
-                  li.fragment visual encoding
+                  li.fragment Visual encoding:
                     ul
-                      li link connection marks, node point marks
-                  li.fragment considerations
+                      li Link connection marks, node point marks
+                  li.fragment Considerations:
                     ul
-                      li.fragment spatial position: no meaning directly encoded
+                      li.fragment Spatial position: no meaning directly encoded
                         ul
-                          li left free to minimize crossings
-                      li.fragment proximity semantics?
+                          li Left free to minimize crossings
+                      li.fragment Proximity semantics?
                         ul
-                          li sometimes meaningful
-                          li sometimes arbitrary, artifact of layout algorithm
-                          li.fragment tension with length
+                          li Sometimes meaningful
+                          li Sometimes arbitrary, artifact of layout algorithm
+                          li.fragment Tension with length
                             ul
-                              li.fragment long edges more visually salient than short
-                  li.fragment tasks
+                              li.fragment Long edges more visually salient than short
+                  li.fragment Tasks:
                     ul
-                      li.fragment explore topology; locate paths, clusters
-                  li.fragment scalability
+                      li.fragment Explore topology; locate paths, clusters
+                  li.fragment Scalability:
                     ul
-                      li.fragment node/edge density E < 4N
+                      li.fragment Node/edge density E < 4N
 
 
           section.full
-            h3 Idiom: sfdp (multi-level force-directed placement)
+            h3 Idiom: SFDP (Multi-Level Force-Directed Placement)
             .flex
               .twothirds
                 ul.small
-                  li.fragment data
+                  li.fragment Data:
                   ul
-                    li.fragment original: network
-                    li.fragment derived: cluster hierarchy atop it
-                  li.fragment considerations
+                    li.fragment Original: network
+                    li.fragment Derived: cluster hierarchy atop it
+                  li.fragment Considerations:
                   ul
-                    li.fragment better algorithm for same encoding technique
+                    li.fragment Better algorithm for same encoding technique
                     ul
-                      li.fragment same: fundamental use of space
-                      li.fragment hierarchy used for algorithm speed/quality but not shown explicitly
+                      li.fragment Same: fundamental use of space
+                      li.fragment Hierarchy used for algorithm speed/quality but not shown explicitly
                     ul
-                      li.fragment (more on algorithm vs encoding in afternoon)
-                  li.fragment scalability
-                    li.fragment nodes, edges: 1K-10K
-                    li.fragment hairball problem eventually hits
+                      li.fragment (More on algorithm vs. encoding in afternoon)
+                      // Note @john-guerra: consider removing "afternoon" here
+                  li.fragment Scalability:
+                    li.fragment Nodes, edges: 1,000-10,000
+                    li.fragment Hairball problem eventually hits
 
 
           section
-            h3.demo Force Directed Layout
+            h3.demo Force-Directed Layout
             iframe.blocks(data-src="http://blockbuilder.org/mbostock/4062045")
             div.tiny
               a(target="_blank" href="http://blockbuilder.org/mbostock/4062045") http://blockbuilder.org/mbostock/4062045
@@ -217,10 +218,10 @@ html(lang="en")
 
 
           section
-            h2 Use the force!
+            h2 Use the Force!
 
           section
-            h3.demo Beeswarm plot
+            h3.demo Beeswarm Plot
             iframe.blocks(data-src="http://blockbuilder.org/mbostock/6526445e2b44303eebf21da3b6627320")
             div.tiny
               a(target="_blank" href="http://blockbuilder.org/mbostock/6526445e2b44303eebf21da3b6627320") http://blockbuilder.org/mbostock/6526445e2b44303eebf21da3b6627320
@@ -248,30 +249,30 @@ html(lang="en")
               img(src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo")
         section#adjacencyIdiom
           section
-            h2 Idiom: adjacency matrix view
+            h2 Idiom: Adjacency Matrix View
             .flex
               .twothirds
                 ul.small
 
-                  li.fragment data: network
+                  li.fragment Data: network
                   ul
-                    li.fragment transform into same data/encoding as heatmap
-                  li.fragment derived data: table from network
+                    li.fragment Transform into same data/encoding as heatmap
+                  li.fragment Derived data: table from network
                   ul
-                    li.fragment 1 quant attrib
+                    li.fragment One quantitative attribute
                     ul
-                      li.fragment weighted edge between nodes
-                    li.fragment 2 categ attribs: node list x 2
-                  li.fragment visual encoding
+                      li.fragment Weighted edge between nodes
+                    li.fragment Two categorical attributes: node list x 2
+                  li.fragment Visual encoding:
                   ul
-                    li.fragment cell shows presence/absence of edge
-                  li.fragment tasks:
+                    li.fragment Cell shows presence/absence of edge
+                  li.fragment Tasks:
                     ul
                       li.fragment Identify clusters (topology)
-                      li.fragment Summarize Topology/Distribution
-                  li.fragment scalability
+                      li.fragment Summarize topology/distribution
+                  li.fragment Scalability:
                   ul
-                    li.fragment 1K nodes, 1M edges
+                    li.fragment 1,000 nodes, one million edges
 
           section
             h3.demo Adjacency Matrix
@@ -280,25 +281,25 @@ html(lang="en")
               a(target="_blank" href="https://bost.ocks.org/mike/miserables/") https://bost.ocks.org/mike/miserables/
 
           section
-            h2 Connection vs. adjacency comparison
+            h2 Connection vs. Adjacency Comparison
             .flex
               .twothirds
                 ul.small
 
-                  li.fragment adjacency matrix strengths
+                  li.fragment Adjacency matrix strengths:
                   ul
-                    li.fragment predictability, scalability, supports reordering
-                    li.fragment some topology tasks trainable
-                  li.fragment node-link diagram strengths
+                    li.fragment Predictability, scalability, supports reordering
+                    li.fragment Some topology tasks trainable
+                  li.fragment Node-link diagram strengths:
                   ul
-                    li.fragment topology understanding, path tracing
-                    li.fragment intuitive, no training needed
-                  li.fragment empirical study
+                    li.fragment Topology understanding, path tracing
+                    li.fragment Intuitive, no training needed
+                  li.fragment Empirical study:
                   ul
-                    li.fragment node-link best for small networks
-                    li.fragment matrix best for large networks
+                    li.fragment Node-link best for small networks
+                    li.fragment Matrix best for large networks...
                     ul
-                      li.fragment if tasks don’t involve topological structure!
+                      li.fragment ...if tasks don’t involve topological structure!
 
           section
             div
@@ -311,9 +312,9 @@ html(lang="en")
             h2.demo Chord Diagram
             div.left.small
               ul.small
-                li Data: Networks (small # of nodes)
-                li Tasks: Summarize connections. Identify highest degree
-                li Considerations: Usually good for origin -> destination
+                li Data: networks (small number of nodes)
+                li Tasks: summarize connections; identify highest degree
+                li Considerations: usually good for origin to destination
             div.right
               img.fill(data-src="../shared_images/chord.svg" alt="Chord Diagram")
               div.tiny
@@ -324,8 +325,8 @@ html(lang="en")
             h2.demo Edge Bundling
             div.left.small
               ul.small
-                li Data: Networks
-                li Tasks: Summarize common connections.
+                li Data: networks
+                li Tasks: summarize common connections
                 li Considerations:
                   ul.small
                     li Reduces cluttering
@@ -340,11 +341,11 @@ html(lang="en")
             h2.demo Arc Diagram
             div.left.small
               ul.small
-                li Data: Networks (few nodes)
-                li Tasks: Summarize common connections.
+                li Data: networks (few nodes)
+                li Tasks: summarize common connections.
                 li Considerations:
                   ul.small
-                    li Nodes order matter
+                    li Nodes' order matters.
                     li Better with highly clustered data
             div.right
               img.fill(data-src="../shared_images/arcDiagram.svg" alt="Arc Diagram")
@@ -352,7 +353,7 @@ html(lang="en")
                 a(href="https://observablehq.com/@d3/arc-diagram") https://observablehq.com/@d3/arc-diagram
 
           section
-            h2.demo Arc Diagram
+            h2.demo Arc Diagram (cont.)
             iframe.blocks(data-src="https://blockbuilder.org/rpgove/53bb49d6ed762139f33bdaea1f3a9e1c")
             div.tiny
               a(target="_blank" href="https://blockbuilder.org/rpgove/53bb49d6ed762139f33bdaea1f3a9e1c") https://blockbuilder.org/rpgove/53bb49d6ed762139f33bdaea1f3a9e1c
@@ -362,7 +363,7 @@ html(lang="en")
           section
             h2.demo Hive Plots
             div.tiny
-              a(target="_blank" href="https://bost.ocks.org/mike/hive/") https://bost.ocks.org/mike/hive/
+              a(target="_blank" href="https://bost.ocks.org/mike/hive/") Hive Plots
 
           section(data-background-size="contain" data-background-iframe="https://bost.ocks.org/mike/hive/")
 
@@ -370,8 +371,8 @@ html(lang="en")
             h2.demo Semantic Substrates
             div.left.small
               ul.small
-                li Data: Networks with many edges
-                li Task: Summarize distribution of non network attribs
+                li Data: networks with many edges
+                li Task: summarize distribution of non network attribs
                 li Considerations:
                   ul.small
                     li Easier to understand
@@ -396,9 +397,10 @@ html(lang="en")
               .half
                 ul
                   li.fragment Good for depicting flow
-                  li.fragment Not that well known
+                  li.fragment Not that well-known
               .half
-                a(href="https://observablehq.com/@d3/sankey-diagram") https://observablehq.com/@d3/sankey-diagram
+                a(href="https://observablehq.com/@d3/sankey-diagram") Sankey Diagram
+                
 
           section
             h2 Idiom: Parallel Sets
@@ -434,12 +436,12 @@ html(lang="en")
 
 
           section
-            h3 Simple stuff
+            h3 Simple Stuff
             div.left
               ul
-                li # nodes, # edges.
-                li Connected components: count of separate groups of nodes.
-                li Graph density: percent of possible links that are present.
+                li Number of nodes, number of edges
+                li Connected components: count of separate groups of nodes
+                li Graph density: percent of possible links that are present
             div.right
               figure
                 img.fill(data-src="../shared_images/networks/1.png")
@@ -448,9 +450,9 @@ html(lang="en")
             h3 Degree Distribution
             div.left
               ul
-                li E.g., run “Average Degree” tab in Gephi.
-                li For pure random networks: $P_k = e ^ { \langle k \rangle } \frac{ \langle k \rangle ^k}{k!}$.
-                li For preferential attachment: $P_k ~\sim~ k ^ {-\gamma}$.
+                li E.g., run “Average Degree” tab in Gephi
+                li For pure random networks: $P_k = e ^ { \langle k \rangle } \frac{ \langle k \rangle ^k}{k!}$
+                li For preferential attachment: $P_k ~\sim~ k ^ {-\gamma}$
             div.right
               figure
                 img.fill(data-src="../shared_images/networks/3.png")
@@ -460,10 +462,10 @@ html(lang="en")
             h3 Path Length
             div.left
               ul
-                li E.g., run “Avg. Path Length” in Gephi.
-                li The path length between nodes i and j defined as $d_{ij}$.
-                li Average path length $\langle d_{ij} \rangle$.
-                li Network diameter $d_\max = \max _{i,j} d_{ij}$.
+                li E.g., run “Average Path Length” in Gephi
+                li The path length between nodes i and j defined as $d_{ij}$
+                li Average path length $\langle d_{ij} \rangle$
+                li Network diameter $d_\max = \max _{i,j} d_{ij}$
             div.right
               figure
                 img.fill(data-src="../shared_images/networks/2.png")
@@ -472,26 +474,26 @@ html(lang="en")
             h3 Centrality
             div.left
               ul
-                li Betweenness centrality: number of shortest paths across node.
-                li Degree centrality (node degree), also edge centrality (not in Gephi, use networkX).
-                li Eigenvector centrality $Ax = \lambda x$.
-                li Closeness $d_{cl} = \left [  \sum _{ij}  d_{ij} ^ {-1} / n \choose 2 \right ] ^ {-1}$.
+                li Betweenness centrality: number of shortest paths across node
+                li Degree centrality (node degree), also edge centrality (not in Gephi, use NetworkX)
+                li Eigenvector centrality $Ax = \lambda x$
+                li Closeness $d_{cl} = \left [  \sum _{ij}  d_{ij} ^ {-1} / n \choose 2 \right ] ^ {-1}$
             div.right
               figure
                 img.fill(data-src="../shared_images/networks/4.png")
 
           section
-            h3 More centrality
+            h3 More Centrality
             div
               ul
-                li PageRank, like eigenvector centrality, can be written as an eigenvalue problem: $$PR(p_i) = \frac{1-d}{N} + \sum _{p_j} \frac{PR(p_j)}{L(p_j)}.$$
+                li PageRank, like eigenvector centrality, can be written as an eigenvalue problem: $$PR(p_i) = \frac{1-d}{N} + \sum _{p_j} \frac{PR(p_j)}{L(p_j)}$$
 
           section
             h3 Clustering
             div.left
               ul
-                li Watts and Strogatz measure: $$ C_1 = \left \langle \frac{\sum_{j_1,j_2\in N} a_{j_1j_2}}{k_i(k_i-1)/2} \right \rangle .$$
-                li Newman (and Gephi): $$ C_2  = \frac{3 \times \textrm{triangles}}{\textrm{triples}} .$$
+                li Watts and Strogatz measure: $$ C_1 = \left \langle \frac{\sum_{j_1,j_2\in N} a_{j_1j_2}}{k_i(k_i-1)/2} \right \rangle $$
+                li Newman (and Gephi): $$ C_2  = \frac{3 \times \textrm{triangles}}{\textrm{triples}} $$
             div.right
               figure
                 img.fill(data-src="../shared_images/networks/5.png")
@@ -509,42 +511,42 @@ html(lang="en")
             h1 Tools
 
           section
-            h3 Tools that contain layout algorithms
+            h3 Tools That Contain Layout Algorithms
             ul.small
               li
-                a(href="https://github.com/d3/d3-force") d3.
+                a(href="https://github.com/d3/d3-force") d3
               li
-                a(href="https://networkx.github.io/") networkX.
+                a(href="https://networkx.github.io/") NetworkX
               li
-                a(href="https://www.smrfoundation.org/nodexl/") NodeXL.
+                a(href="https://www.smrfoundation.org/nodexl/") NodeXL
               li
                 a(href="https://gephi.org/") Gephi.
               li
-                a(href="https://github.com/hackl/tikz-network") LaTeX (TikZ).
+                a(href="https://github.com/hackl/tikz-network") LaTeX (TikZ)
               li
-                a(href="https://graphviz.org/") Graphviz (dot).
+                a(href="https://graphviz.org/") Graphviz (dot)
 
           section
-            h3 Combining layouts and visualization
-            p Many possibilities: connect any tools that can compute layouts to any other visualation tool. A few useful examples:
+            h3 Combining Layouts and Visualization
+            p Many possibilities: Connect any tools that can compute layouts to any other visualation tool. A few useful examples:
             ul.small
-              li d3 + vega-lite (we've seen many d3!).
-              li networkX + matplotlib (built-in).
+              li d3 + Vega-Lite (we've seen many d3!)
+              li NetworkX + Matplotlib (built-in)
 
           section
-            h3 NetworkX
+            h3 NetworkX, Part I
             div.scrollable-slide
               img(style="width: auto; max-height: 1000px;" data-src="../shared_images/networks/networkx1.png", alt="NetworkX Force")
             div.tiny
               a(target="_blank" href="https://github.com/andyreagan/MIDS_W209_Data_Visualization_Slides/blob/master/13/Exercises/Network-data.ipynb") notebook
 
           section
-            h3 NetworkX
+            h3 NetworkX, Part II
             div.scrollable-slide
               img(style="width: auto; max-height: 1000px;" data-src="../shared_images/networks/networkx2.png", alt="NetworkX Circle")
 
           section
-            h3 NetworkX
+            h3 NetworkX, Part III
             li NetworkX has #[a(href="http://networkx.github.io/documentation/latest/gallery.html") a nice online gallery] of other, fancier drawings.
 
           section
@@ -555,7 +557,7 @@ html(lang="en")
             h1 Color
 
           section
-            h3 Encode > Map > Color
+            h3 Encode, Map, Color
             img(style="max-height: 400px" data-src="../shared_images/vad_book_alldiagrams/10_01_encode_map.png", alt="Encode Map Color")
 
           section
@@ -567,54 +569,54 @@ html(lang="en")
             img(style="max-height: 400px" data-src="../shared_images/vad_book_alldiagrams/color/1.png")
 
           section
-            h3 Decomposing color
+            h3 Decomposing Color
             div.left(style="width:65%;")
               ul.small
-                li first rule: do not talk about color!
+                li First rule: do not talk about color!
                 ul.small
-                  li color is confusing if treated as monolithic
-                li decompose into three channels
+                  li Color is confusing if treated as monolithic
+                li Decompose into three channels
                 ul.small
-                  li ordered can show magnitude
+                  li Ordered can show magnitude
                   ul.small
-                    li luminance: how bright
-                    li saturation: how colorful
-                  li categorical can show identity
+                    li Luminance: how bright
+                    li Saturation: how colorful
+                  li Categorical can show identity
                   ul.small
-                    li hue: what color
-                li channels have different properties
+                    li Hue: what color
+                li Channels have different properties
                 ul.small
-                  li what they convey directly to perceptual system
-                  li how much they can convey: how many discriminable bins can we use?
+                  li What they convey directly to perceptual system
+                  li How much they can convey: how many discriminable bins can we use?
             div.right(style="width:30%;")
               img(style="max-height: 400px" data-src="../shared_images/vad_book_alldiagrams/color/2.png")
 
           section
-            h3 Spectral sensitivity
+            h3 Spectral Sensitivity
             img(style="max-height: 400px" data-src="../shared_images/vad_book_alldiagrams/color/3.png")
 
           section
             h3 Luminance
             div.left
               ul.small
-                li need luminance for edge detection
+                li Need luminance for edge detection
                 ul.small
-                  li fine-grained detail only visible through luminance contrast
-                  li legible text requires luminance contrast!
-                li intrinsic perceptual ordering
+                  li Fine-grained detail only visible through luminance contrast
+                  li Legible text requires luminance contrast!
+                li Intrinsic perceptual ordering
             div.right
               img(style="max-height: 400px" data-src="../shared_images/vad_book_alldiagrams/color/4.png")
 
           section
-            h3 Color spaces
+            h3 Color Spaces
             img(style="max-height: 400px" data-src="../shared_images/vad_book_alldiagrams/color/6.png")
 
           section
-            h3 Designing for color deficiency: Check with simulator
+            h3 Designing for Color Deficiency: Check with Simulator
             img(style="max-height: 400px" data-src="../shared_images/vad_book_alldiagrams/color/7.png")
 
           section
-            h3 Designing for color deficiency: Avoid encoding by hue alone
+            h3 Designing for Color Deficiency: Avoid Encoding by Hue Alone
             div.left
               ul
                 li Redundantly encode.
@@ -625,37 +627,37 @@ html(lang="en")
               img(style="max-height: 400px" data-src="../shared_images/vad_book_alldiagrams/color/8.png")
 
           section
-            h3 Color deficiency: Reduces color to 2 dimensions
+            h3 Color Deficiency: Reduces Color to Two Dimensions
             img(style="max-height: 400px" data-src="../shared_images/vad_book_alldiagrams/color/9.png")
 
           section
-            h3 Designing for color deficiency: Blue-Orange is safe
+            h3 Designing for Color Deficiency: Blue-Orange is Safe
             img(style="max-height: 400px" data-src="../shared_images/vad_book_alldiagrams/color/10.png")
 
           section
-            h3 Bezold Effect: Outlines matter
+            h3 Bezold Effect: Outlines Matter
             img(style="max-height: 400px" data-src="../shared_images/vad_book_alldiagrams/color/11.png")
 
           section
-            h3 Relative judgements: Color & illumination
+            h3 Relative Judgments: Color and Illumination
             img(style="max-height: 400px" data-src="../shared_images/vad_book_alldiagrams/color/12.png")
 
           section
-            h3 Relative judgements: Color & illumination
+            h3 Relative Judgments: Color and Illumination (cont.)
             img(style="max-height: 400px" data-src="../shared_images/vad_book_alldiagrams/color/13.png")
 
           section
-            h3 Categorical color: limited number of discriminable bins
+            h3 Categorical Color: Limited Number of Discriminable Bins
             div.left
               ul
-                li Human perception built on relative comparisons.
+                li Human perception built on relative comparisons
                   ul
-                    li Great if color is contiguous.
-                    li Suprisingly bad for absolute comparisons.
-                li Noncontiguous small regions of color.
+                    li Great if color is contiguous
+                    li Suprisingly bad for absolute comparisons
+                li Noncontiguous small regions of color
                   ul
-                    li Fewer bins than you want.
-                    li Rule of thumn: 6-12 bins, including background and highlights.
+                    li Fewer bins than you want
+                    li Rule of thumb: 6-12 bins, including background and highlights
             div.right
               img(style="max-height: 400px" data-src="../shared_images/vad_book_alldiagrams/color/14.png")
 
@@ -663,12 +665,12 @@ html(lang="en")
             h3 Glyphs
             div.left
               ul
-                li Glyphs: composite objects.
+                li Glyphs: composite objects
                   ul
-                    li Internal structure with multiple marks.
-                li Alternative to color encoding.
+                    li Internal structure with multiple marks
+                li Alternative to color encoding
                   ul
-                    li Or coding with any single channel.
+                    li Or coding with any single channel
             div.right
               img(style="max-height: 400px" data-src="../shared_images/vad_book_alldiagrams/color/15.png")
 
@@ -681,30 +683,30 @@ html(lang="en")
               img(src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo")
         section#orderedColor
           section
-            h2 Ordered color
+            h2 Ordered Color
 
           section
-            h3 Ordered color: Rainbow is poor default
+            h3 Ordered Color: Rainbow is Poor Default
             div.left
               ul
                 li Problems:
                   ul
-                    li Perceptually unordered.
-                    li Perceptually nonlinear.
+                    li Perceptually unordered
+                    li Perceptually nonlinear
                 li Benefits:
                   ul
-                    li Fine-grained structure visible and nameable.
+                    li Fine-grained structure visible and nameable
                 li Alternative:
                   ul
-                    li Large-scale structure: fewer hues.
-                    li Fine structure: multiple hues with monotonically increasing luminance [vs viridis R/python].
+                    li Large-scale structure: fewer hues
+                    li Fine structure: multiple hues with monotonically increasing luminance (vs. Viridis R/Python)
             div.right
               img(style="max-height: 400px" data-src="../shared_images/vad_book_alldiagrams/color/18.png")
 
 
           section
             h3 Viridis
-            p Colorful, perceptually uniform, colorblind-safe, monotonically increasing luminance.
+            p Colorful, perceptually uniform, colorblind-safe, monotonically-increasing luminance
             img(style="max-height: 400px" data-src="../shared_images/vad_book_alldiagrams/color/19.png")
 
           section
@@ -719,7 +721,7 @@ html(lang="en")
               img(src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo")
         section#mapOther
           section
-            h1 Map other channels
+            h1 Map Other Channels
 
           section
             div.scrollable-slide
@@ -734,11 +736,11 @@ html(lang="en")
               img(src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo")
         section#review
           section
-            h2 What we learned
+            h2 What We Learned
             ul.small.small
-              li.fragment How to recognize, create, and store networks.
-              li.fragment Algorithms to visualize network data.
-              li.fragment How to use color.
+              li.fragment How to recognize, create, and store networks
+              li.fragment Algorithms to visualize network data
+              li.fragment How to use color
           section
             div
               img(src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo")
