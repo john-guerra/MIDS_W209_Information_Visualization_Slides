@@ -4,7 +4,7 @@ html(lang="en")
     title Week 11 Faceting. MIDS W209 Information Visualization Slides
     meta(charset="utf-8")
     meta(name="author", content="John Alexis Guerra Gómez")
-    meta(name="description", content="Week 6 Faceting. MIDS W209 Information Visualization Slides")
+    meta(name="description", content="Week 11 Faceting. MIDS W209 Information Visualization Slides")
 
     meta(name="apple-mobile-web-app-capable" content="yes")
     meta(name="apple-mobile-web-app-status-bar-style" content="black-translucent")
@@ -56,18 +56,18 @@ html(lang="en")
         //- Outline
         section#outline
           section
-            h2 What we are going to learn
+            h2 What We Are Going to L earn
             ul.small
               li.fragment Faceting
                 ul
                   li.fragment Juxtapose
                   li.fragment Partition
                   li.fragment Superimpose
-              li.fragment Shared Data
-              li.fragment Shared Encoding
-              li.fragment Shared Navigation
-              li.fragment Dashboarding in a Box
-              li.fragment Architecture for Visualization
+              li.fragment Shared data
+              li.fragment Shared encoding
+              li.fragment Shared navigation
+              li.fragment Dashboarding in a box
+              li.fragment Architecture for visualization
 
           section
             div
@@ -103,23 +103,23 @@ html(lang="en")
           section
             h2 Juxtapose
             ul
-              li.fragment Design Choices
+              li.fragment Design choices
                 ul
                   li.fragment View count
                     ul
-                      li few vs many
-                  li.fragment view visibility
-                  li.fragment view arrangment
+                      li Few vs. many
+                  li.fragment View visibility
+                  li.fragment View arrangment
                     ul
-                      li.fragment User managed vs system aligned
+                      li.fragment User-managed vs. system-aligned
 
 
               li.fragment Why juxtapose views?
                 ul
-                  li.fragment Benefits: eyes vs memory
+                  li.fragment Benefits: eyes vs. memory
                     ul
-                      li.fragment Lower cognitive load to move eyes between 2 views than remembering previous state with single changing view
-                  li.fragment Costs: display area, 2 views side by side each have only half the area of one view
+                      li.fragment Lower cognitive load to move eyes between two views than remembering previous state with single changing view
+                  li.fragment Costs: display area, two views side-by-side each have only half the area of one view
 
 
           section
@@ -131,7 +131,7 @@ html(lang="en")
 
 
           section
-            h3 Idiom: Overivew-detail Views
+            h3 Idiom: Overivew-Detail Views
             .flex
               .half
                 div.small.left-align System: Google Maps
@@ -141,11 +141,11 @@ html(lang="en")
                   li.fragment Navigation: shared
                     ul
                       li.fragment Bi-directional linking
-                  li.fragment Differences
+                  li.fragment Differences:
                     ul
                       li.fragment Viewpoint
                       li.fragment (Size)
-                  li.fragment Special case:  bird's-eye map
+                  li.fragment Special case: bird's-eye map
               .half
                 figure
                   img(data-src="../shared_images/vad_book_alldiagrams/pr11_facet-google-map.png", alt="Overview map from Google maps")
@@ -156,7 +156,7 @@ html(lang="en")
             h2 Idiom: Small Multiples
             .flex
               .third
-                div.left-align System: Cerebral
+                div.left-align System: cerebral
                 ul
                   li.fragment Encoding: same
                   li.fragment Data: none shared
@@ -169,8 +169,8 @@ html(lang="en")
                   img(data-src="../shared_images/vad_book_alldiagrams/pr11_facet-small-multiples.png", alt="Small multiples")
                   figcaption.reference [Cerebral: Visualizing Multiple Experimental Conditions on a Graph with Biological Context. Barsky, Munzner, Gardy, and Kincaid. IEEE Trans. Visualization and Computer Graphics (Proc. InfoVis 2008) 14:6 (2008), 1253–1260.]
           section
-            h3.demo Focus / Context
-            p.small Same encoding / Subset of data / Linked Navigation
+            h3.demo Focus/Context
+            p.small Same encoding/subset of data/linked navigation
             div.
               <div id="observablehq-7c887b88">
                 <div class="observablehq-chart"></div>
@@ -189,8 +189,8 @@ html(lang="en")
               </script>
 
           section
-            h3.demo Small Multiples (cubism)
-            p.small Same encoding / Different data / Linked Navigation
+            h3.demo Small Multiples (Cubism)
+            p.small Same encoding/different data/linked navigation
             iframe.blocks(data-src="http://square.github.io/cubism/demo/")
             a.tiny(target="_blank" href="http://square.github.io/cubism/demo/") http://square.github.io/cubism/demo/
 
@@ -221,7 +221,7 @@ html(lang="en")
               .half
                 figure
                   img(data-src="../shared_images/vad_book_alldiagrams/pr11_facet-linked-highlighting.png", alt="Visual Exploration of Large Structured Datasets")
-                  figcaption.reference figcaption.reference [Visual Exploration of Large Structured Datasets. Wills. Proc. New Techniques and Trends in Statistics (NTTS), pp. 237–246. IOS Press, 1995.]
+                  figcaption.reference [Visual Exploration of Large Structured Datasets. Wills. Proc. New Techniques and Trends in Statistics (NTTS), pp. 237–246. IOS Press, 1995.]
 
 
           section
@@ -230,8 +230,8 @@ html(lang="en")
             a.tiny(target="_blank" href="https://crossfilter.github.io/crossfilter/") https://crossfilter.github.io/crossfilter/
 
           section.full
-            h3.demo Multiform Overview / Details
-            p.small Tweetometro: Different encoding / Subset of data / Linked Navigation
+            h3.demo Multiform Overview/Details
+            p.small Tweetometro: Different encoding/subset of data/linked navigation
             figure
               figcaption.reference(target="_blank" href="http://old.tweetometro.co/") http://old.tweetometro.co/
               video(data-src="../shared_images/tweetometro.mp4", autoplay="true", loop="true", showcontrols ="false")
@@ -240,7 +240,7 @@ html(lang="en")
 
           section
             h3.demo Multiform Overview (Treeversity)
-            p.small Different encoding / All data / Linked Navigation
+            p.small Different encoding/all data/linked navigation
             iframe.blocks(data-src="https://treeversity.cattlab.umd.edu/")
             a.tiny(target="_blank" href="https://treeversity.cattlab.umd.edu/") https://treeversity.cattlab.umd.edu/
 
@@ -254,7 +254,7 @@ html(lang="en")
                   li.fragment Investigate power of multiple views
                   ul
                     li.fragment Pushing limits on view count, interaction complexity
-                    li.fragment How many is ok?
+                    li.fragment How many is okay?
                     ul
                       li.fragment Open research question
                     li.fragment Reorderable lists
@@ -337,7 +337,7 @@ html(lang="en")
 
           //- section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/12_facet-biomech.014.png")
           section
-            h3 Partitioning: Recursive Subdivision
+            h3 Partitioning: Recursive Subdivision, Part I
             .flex
               .third.small
                 div.left-align System: HIVE
@@ -363,7 +363,7 @@ html(lang="en")
 
 
           section
-            h3 Partitioning: Recursive Subdivision
+            h3 Partitioning: Recursive Subdivision, Part II
             .flex
               .third.small
                 div.left-align System: HIVE
@@ -385,7 +385,7 @@ html(lang="en")
                   figcaption.reference [Configuring Hierarchical Layouts to Address Research Questions. Slingsby, Dykes, and Wood.  IEEE Transactions on Visualization and Computer Graphics (Proc. InfoVis 2009) 15:6 (2009), 977–984.]
 
           section
-            h3 Partitioning: Recursive Subdivision
+            h3 Partitioning: Recursive Subdivision, Part III
             .flex
               .third.small
 
@@ -402,7 +402,7 @@ html(lang="en")
 
 
           section
-            h3 Partitioning: Recursive Subdivision
+            h3 Partitioning: Recursive Subdivision, Part IV
             .flex
               .third.small
 
@@ -434,7 +434,7 @@ html(lang="en")
                 ul.tiny
                   li.fragment Layer: set of objects spread out over region
                   ul
-                    li.fragment Each set is visually distinguishable group
+                    li.fragment Each set is a visually distinguishable group
                     li.fragment Extent: whole view
                   li.fragment Design choices
                     li.fragment How many layers, how to distinguish?
@@ -475,11 +475,11 @@ html(lang="en")
                   ul
                     li.fragment Up to a few dozen
                     li.fragment But not hundreds
-                  li.fragment Superimpose vs juxtapose: empirical study
+                  li.fragment Superimpose vs. juxtapose: empirical study
                     li.fragment Superimposed for local, multiple for global
                     li.fragment Tasks
                     ul
-                      li.fragment Local: maximum, global: slope, discrimination
+                      li.fragment Local: maximum,  global: slope, discrimination
                     li.fragment Same screen space for all multiples vs single superimposed
                 img.fragment(data-src="../shared_images/vad_book_alldiagrams/pr11_facet-superimpose-limits.png", alt="Graphical perception of multiple time series")
               .third
@@ -488,8 +488,8 @@ html(lang="en")
           section.full
             h3.demo Dynamic Visual Layering
             ul.tiny
-              li.fragment Interactive based on selection.
-              li.fragment One-hop neighbour highlighting demos: click vs hover (lightweight).
+              li.fragment Interactive based on selection
+              li.fragment One-hop neighbour highlighting demos: click vs. hover (lightweight)
             .flex
               .half
                 figure
@@ -505,8 +505,8 @@ html(lang="en")
 
 
           section
-            h2 Dynamic layering
-            a(href="https://johnguerra.co/viz/influentials/story/?hashtag=ieeevis2019") https://johnguerra.co/viz/influentials/story/?hashtag=ieeevis2019
+            h2 Dynamic Layering
+            a(href="https://johnguerra.co/viz/influentials/story/?hashtag=ieeevis2019") Twitter influencers for #ieeevis2019
 
 
           section
@@ -514,19 +514,19 @@ html(lang="en")
               img(src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo")
         section#dashboarding
           section
-            h2 Dashboarding in a box
+            h2 Dashboarding in a Box
 
           section
-            h3 Tools of the trade
+            h3 Tools of the Trade
             ul
-              li.fragment Python Dash (from Plotly folks).
-              li.fragment R Shiny.
-              li.fragment Metabase?.
-              li.fragment Flask + Altair.
-              li.fragment Flask + D3.
+              li.fragment Python Dash (from Plotly folks)
+              li.fragment R Shiny
+              li.fragment Metabase?
+              li.fragment Flask + Altair
+              li.fragment Flask + d3
 
           section
-            h3 Taking apart Dash
+            h3 Taking Apart Dash
             pre(class="python" style="font-size: 18px;")
               code.
                 import dash
@@ -557,19 +557,20 @@ html(lang="en")
               <!-- a(href="https://dash.plotly.com/layout") https://dash.plotly.com/layout -->
 
           section
-            h3 Taking apart Dash
-            img(data-src="../shared_images/dash-screenshot.png")
+            h3 Taking Apart Dash (cont.)
+            img(data-src="../shared_images/dash-screenshot.png")            
+            
+          section
+            h3 Under the Hood: Tt's Flask
+            img(data-src="../shared_images/dash-flask.png")                        
+            
+          section
+            h3 Follow a Request
+            img(data-src="../shared_images/dash-request.png")                        
+            
 
           section
-            h3 Under the hood: it's Flask
-            img(data-src="../shared_images/dash-flask.png")
-
-          section
-            h3 Follow a request
-            img(data-src="../shared_images/dash-request.png")
-
-          section
-            h3 The code we used:
+            h3 The Code We Used
             pre(class="python" style="font-size: 18px;")
               code.
                 import dash
@@ -599,7 +600,7 @@ html(lang="en")
                     app.run_server(debug=True)
 
           section
-            h3 So we'll render a template like this:
+            h3 So We'll Render a Template Like This
             pre(class="html" style="font-size: 18px;")
               code
                 | html
@@ -621,44 +622,44 @@ html(lang="en")
               img(src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo")
         section#architecture
           section
-            h2 Architecture for visualization
+            h2 Architecture for Visualization
 
           section
-            h3 Concepts we know and love
+            h3 Concepts We Know and Love
             ul
-              li.fragment Front end.
-              li.fragment Back end.
+              li.fragment Frontend
+              li.fragment Backend
               li.fragment What's missing here?
               ul
-                li.fragment Processing engine.
-                li.fragment CDNs.
-                li.fragment Static storage.
-
+                li.fragment Processing engine
+                li.fragment CDNs
+                li.fragment Static storage
+                
           section
-            h3 Building blocks on the web
+            h3 Building Blocks on the Web
             ul
-              li.fragment Front end client:
+              li.fragment Frontend client:
                 ul
-                  li.fragment JavaScript libraries, run in real time.
-                  li.fragment Access everything through browser-implemented APIs.
+                  li.fragment JavaScript libraries, run in real time
+                  li.fragment Access everything through browser-implemented APIs
               li.fragment Server:
                 ul
-                  li.fragment Database.
-                  li.fragment Files (database is a layer over files).
-                  li.fragment Web app (running Python/R/Node/etc.).
+                  li.fragment Database
+                  li.fragment Files (database is a layer over files)
+                  li.fragment Web app (running Python/R/Node/etc.)
                   li.fragment Other pieces of a web stack: Apache/Nginx/Gunicorn/UWSGI/etc.
-                  li.fragment Non-web facing processing automation / schedulers (Airflow/Jenkins/cron).
-
+                  li.fragment Non-web-facing processing automation/schedulers (Airflow/Jenkins/cron)
+                  
           section
-            h3 Example: visualization system relying on Twitter data
+            h3 Example: Visualization System Relying on Twitter Data
             img(data-src="../shared_images/Twitter-Service-Architecture-Diagram.png")
 
           section
-            h3 MassMutual's client marketing system
+            h3 MassMutual's Client Marketing System
             img(data-src="../shared_images/Marketing-Logical-Arch---Page-1.png")
 
           section
-            h3 MassMutual's advisor-facing mobile app
+            h3 MassMutual's Advisor-Facing Mobile App
             img(data-src="../shared_images/AdvisorMobile-High-Level-0.png")
 
           section
@@ -689,18 +690,19 @@ html(lang="en")
               img(src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo")
         section#review
           section
-            h2 What we learned
+            h2 What we Learned
             ul.small
               li.fragment Faceting
                 ul
                   li.fragment Juxtapose
                   li.fragment Partition
                   li.fragment Superimpose
-              li.fragment Shared Data
-              li.fragment Shared Encoding
-              li.fragment Shared Navigation
-              li.fragment Dashboarding in a Box
-              li.fragment Architecture for Visualization
+              li.fragment Shared data
+              li.fragment Shared encoding
+              li.fragment Shared navigation
+              li.fragment Dashboarding in a box
+              li.fragment Architecture for visualization
+              
           section
             div
               img(src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo")
