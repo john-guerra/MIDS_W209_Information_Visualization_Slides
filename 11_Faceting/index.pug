@@ -69,6 +69,9 @@ html(lang="en")
               li.fragment Dashboarding in a box
               li.fragment Architecture for visualization
 
+          section
+            div
+              img(src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo")
         section#intro
           section
             h2 Facet Across Multiple Views
@@ -77,6 +80,9 @@ html(lang="en")
             h2 Facet
             img(data-src="../shared_images/vad_book_alldiagrams/pr11_facet-01.png", alt="Juxtapose, Partition, Superimpose")
 
+          section
+            div
+              img(src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo")
         section#juxtapose
           section
             h1 Juxtapose
@@ -116,6 +122,9 @@ html(lang="en")
                   li.fragment Costs: display area, two views side-by-side each have only half the area of one view
 
 
+          section
+            div
+              img(src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo")
         section#shareEncoding
           section
             h1 Share Encoding
@@ -186,6 +195,9 @@ html(lang="en")
             a.tiny(target="_blank" href="http://square.github.io/cubism/demo/") http://square.github.io/cubism/demo/
 
 
+          section
+            div
+              img(src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo")
         section#shareData
           section
             h1 Share Data
@@ -259,6 +271,9 @@ html(lang="en")
 
 
 
+          section
+            div
+              img(src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo")
         section#shareNavigation
           section
             h1 Share Navigation
@@ -266,6 +281,9 @@ html(lang="en")
           section(data-background-iframe="https://johnguerra.co/viz/resultadosSegundaVuelta2018/index_old.html")
 
 
+          section
+            div
+              img(src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo")
         section#partition
           section
             h1 Partition
@@ -401,6 +419,9 @@ html(lang="en")
                   figcaption.reference figcaption.reference [Configuring Hierarchical Layouts to Address Research Questions. Slingsby, Dykes, and Wood.  IEEE Transactions on Visualization and Computer Graphics (Proc. InfoVis 2009) 15:6 (2009), 977–984.]
 
 
+          section
+            div
+              img(src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo")
         section#superImpose
           section
             h1 Superimpose
@@ -488,6 +509,9 @@ html(lang="en")
             a(href="https://johnguerra.co/viz/influentials/story/?hashtag=ieeevis2019") Twitter influencers for #ieeevis2019
 
 
+          section
+            div
+              img(src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo")
         section#dashboarding
           section
             h2 Dashboarding in a Box
@@ -510,24 +534,24 @@ html(lang="en")
                 import dash_html_components as html
                 import plotly.express as px
                 import pandas as pd
-    
+
                 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
-    
+
                 app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
-    
+
                 df = pd.read_csv('https://gist.githubusercontent.com/.../gdp-life-exp-2007.csv')
-    
+
                 fig = px.scatter(df, x="gdp per capita", y="life expectancy",
                                  size="population", color="continent", hover_name="country",
                                  log_x=True, size_max=60)
-    
+
                 app.layout = html.Div([
                     dcc.Graph(
                         id='life-exp-vs-gdp',
                         figure=fig
                     )
                 ])
-    
+
                 if __name__ == '__main__':
                     app.run_server(debug=True)
               <!-- a(href="https://dash.plotly.com/layout") https://dash.plotly.com/layout -->
@@ -544,6 +568,7 @@ html(lang="en")
             h3 Follow a Request
             img(data-src="../shared_images/dash-request.png")                        
             
+
           section
             h3 The Code We Used
             pre(class="python" style="font-size: 18px;")
@@ -553,27 +578,27 @@ html(lang="en")
                 import dash_html_components as html
                 import plotly.express as px
                 import pandas as pd
-    
+
                 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
-    
+
                 app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
-    
+
                 df = pd.read_csv('https://gist.githubusercontent.com/.../gdp-life-exp-2007.csv')
-    
+
                 fig = px.scatter(df, x="gdp per capita", y="life expectancy",
                                  size="population", color="continent", hover_name="country",
                                  log_x=True, size_max=60)
-    
+
                 app.layout = html.Div([
                     dcc.Graph(
                         id='life-exp-vs-gdp',
                         figure=fig
                     )
                 ])
-    
+
                 if __name__ == '__main__':
-                    app.run_server(debug=True)            
-                  
+                    app.run_server(debug=True)
+
           section
             h3 So We'll Render a Template Like This
             pre(class="html" style="font-size: 18px;")
@@ -588,10 +613,13 @@ html(lang="en")
                 | body
                 |   {{ for div in app.layout }}
                 |   {{ div.render_elements() }}
-                |   {{ endfor }}             
+                |   {{ endfor }}
                 | /body
                 | /html
 
+          section
+            div
+              img(src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo")
         section#architecture
           section
             h2 Architecture for Visualization
@@ -625,19 +653,22 @@ html(lang="en")
           section
             h3 Example: Visualization System Relying on Twitter Data
             img(data-src="../shared_images/Twitter-Service-Architecture-Diagram.png")
-            
+
           section
             h3 MassMutual's Client Marketing System
             img(data-src="../shared_images/Marketing-Logical-Arch---Page-1.png")
-            
+
           section
             h3 MassMutual's Advisor-Facing Mobile App
             img(data-src="../shared_images/AdvisorMobile-High-Level-0.png")
-            
+
           section
             h3 MassMutual's Prediction API
-            img(data-src="../shared_images/Prediction-API-v2-Architecture-2019-05-07.png")            
+            img(data-src="../shared_images/Prediction-API-v2-Architecture-2019-05-07.png")
 
+          section
+            div
+              img(src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo")
         section#visualizationMantra
           section
             h2 Applying the #[br] Visualization Mantra
@@ -645,12 +676,18 @@ html(lang="en")
           section
             h2 TreeVersity
 
+          section
+            div
+              img(src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo")
         section#visualizationMantra
           section
             h1 How to Scroll
 
 
 
+          section
+            div
+              img(src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo")
         section#review
           section
             h2 What we Learned
@@ -665,6 +702,10 @@ html(lang="en")
               li.fragment Shared navigation
               li.fragment Dashboarding in a box
               li.fragment Architecture for visualization
+              
+          section
+            div
+              img(src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo")
 
     script(src="../js/reveal.js")
     script(src="../plugin/zoom/zoom.js")

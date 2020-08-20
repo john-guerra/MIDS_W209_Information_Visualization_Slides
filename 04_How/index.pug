@@ -66,6 +66,7 @@ html(lang="en")
           section
             div
               img(data-src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo")
+
         section#marksAndChannels
 
           section
@@ -337,7 +338,27 @@ html(lang="en")
               .half
                 img(data-src="../shared_images/vad_book_alldiagrams/containment_connection.png", alt="Containment and Connection")
 
-          //- TODO containment example
+          section#containtmentExample
+            h3 Containment
+            div.demo.
+              <div id="observablehq-8cbba9f1"></div>
+              <script type="module">
+              import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+              import define from "https://api.observablehq.com/@d3/cascaded-treemap.js?v=3";
+              const inspect = Inspector.into("#observablehq-8cbba9f1");
+              (new Runtime).module(define, name => name === "chart" ? inspect() : undefined);
+              </script>
+
+          section#connectionExample
+            h3 Similarity
+            div.demo.
+              <div id="observablehq-3e4c3095"></div>
+              <script type="module">
+              import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+              import define from "https://api.observablehq.com/@d3/radial-tidy-tree.js?v=3";
+              const inspect = Inspector.into("#observablehq-3e4c3095");
+              (new Runtime).module(define, name => name === "chart" ? inspect() : undefined);
+              </script>
 
           section
             h2 Grouping (cont.)
@@ -349,7 +370,31 @@ html(lang="en")
               .half
                 img(data-src="../shared_images/vad_book_alldiagrams/identity_channels.png", alt="Identity Channels")
 
-          //- TODO Add examples for proximity and similarity
+          section.full
+            h3.demo Proximity and Similarity
+            div.demo.
+              <div id="observablehq-e40d3d35">
+                <div style="display:flex">
+                  <div style="flex:1" class="observablehq-viewof-useGroupInABox"></div>
+                  <div style="flex:1" class="observablehq-viewof-template"></div>
+                  <div style="flex:1" class="observablehq-viewof-drawTemplate"></div>
+                </div>
+                <div class="observablehq-viewof-chart"></div>
+
+                <div class="observablehq-simulation" style="display:none"></div>
+                <div style="overflow: hidden;"><a style="display: block; float:right;" href="https://observablehq.com/@john-guerra/force-in-a-box"><object type="image/svg+xml" style="pointer-events: none;" width=180 height=22 data="https://static.observableusercontent.com/files/c3fab254a006f1a3a1f9f63aba8ab1460db4752529036b9962950bde0ec195bab823daa6b278b1c3401e545b3bd640ddfdcad805cf9859af218cb2b9fed4ddf0"></object></a></div>
+              </div>
+              <script type="module">
+                import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+                import define from "https://api.observablehq.com/@john-guerra/force-in-a-box.js?v=3";
+                (new Runtime).module(define, name => {
+                  if (name === "viewof useGroupInABox") return Inspector.into("#observablehq-e40d3d35 .observablehq-viewof-useGroupInABox")();
+                  if (name === "viewof template") return Inspector.into("#observablehq-e40d3d35 .observablehq-viewof-template")();
+                  if (name === "viewof drawTemplate") return Inspector.into("#observablehq-e40d3d35 .observablehq-viewof-drawTemplate")();
+                  if (name === "chart") return Inspector.into("#observablehq-e40d3d35 .observablehq-viewof-chart")();
+                  if (name === "simulation") return ;
+                });
+              </script>
 
           section
             h2 Relative vs. Absolute Judgments

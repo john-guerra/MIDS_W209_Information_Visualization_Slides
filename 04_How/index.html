@@ -78,7 +78,7 @@
             <h3>What Marks and Channels? Part I</h3><img class="demo" data-src="../shared_images/visualEncoding1.png">
           </section>
           <section data-transition="fade">
-            <h3>What marks and channels? Part I</h3><img class="demo" data-src="../shared_images/visualEncoding1_answer.png">
+            <h3>What Marks and Channels? Part I</h3><img class="demo" data-src="../shared_images/visualEncoding1_answer.png">
           </section>
           <section>
             <h3>What Marks and Channels? Part II</h3><img class="demo" data-src="../shared_images/visualEncoding2.png">
@@ -87,7 +87,7 @@
             <h3>What Marks and Channels? Part II</h3><img class="demo" data-src="../shared_images/visualEncoding2_answer.png">
           </section>
           <section>
-            <h3>What Marks and Channels? Part II</h3><img class="demo" data-src="../shared_images/visualEncoding3.png">
+            <h3>What Marks and Channels? Part III</h3><img class="demo" data-src="../shared_images/visualEncoding3.png">
           </section>
           <section data-transition="fade">
             <h3>What Marks and Channels? Part III</h3><img class="demo" data-src="../shared_images/visualEncoding3_answer.png">
@@ -141,7 +141,7 @@
                 <ul>
                   <li>One-dimensional</li>
                   <li>Convey position and length</li>
-                  <li>Can be only <strong>width-</strong>coded</li>
+                  <li>Can only be <strong>width-</strong>coded</li>
                 </ul>
               </div>
             </div>
@@ -229,7 +229,7 @@
           <section>
             <h3>Discriminability</h3>
             <div class="flex">
-              <div class="half">How many steps are usable?<br><span class="fragment">line width: Not many 🤷🏼‍♂️</span>
+              <div class="half">How many steps are usable?<br><span class="fragment">Line width: Not many 🤷🏼‍♂️</span>
                 <!-- @john-guerra "line width" shows up as text in the HTML output-->
               </div>
               <div class="half">
@@ -247,7 +247,7 @@
             <div class="flex">
               <div class="small quarter" style="margin-left:-100px">
                 <ul>
-                  <li>Find the odd ones</li>
+                  <li>Find the odd ones.</li>
                   <li>Which ones pop up?</li>
                 </ul>
                 <div id="saliencyN"></div>
@@ -293,16 +293,70 @@
               <div class="half"><img data-src="../shared_images/vad_book_alldiagrams/containment_connection.png" alt="Containment and Connection"></div>
             </div>
           </section>
+          <section id="containtmentExample">
+            <h3>Containment</h3>
+            <div class="demo">
+              <div id="observablehq-8cbba9f1"></div>
+              <script type="module">
+              import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+              import define from "https://api.observablehq.com/@d3/cascaded-treemap.js?v=3";
+              const inspect = Inspector.into("#observablehq-8cbba9f1");
+              (new Runtime).module(define, name => name === "chart" ? inspect() : undefined);
+              </script>
+              
+            </div>
+          </section>
+          <section id="connectionExample">
+            <h3>Similarity</h3>
+            <div class="demo">
+              <div id="observablehq-3e4c3095"></div>
+              <script type="module">
+              import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+              import define from "https://api.observablehq.com/@d3/radial-tidy-tree.js?v=3";
+              const inspect = Inspector.into("#observablehq-3e4c3095");
+              (new Runtime).module(define, name => name === "chart" ? inspect() : undefined);
+              </script>
+              
+            </div>
+          </section>
           <section>
             <h2>Grouping (cont.)</h2>
             <div class="flex">
               <div class="half">
                 <ul>
-                  <li class="fragment">Proximity: <span class="fragment">👉 use spatial separation</span></li>
-                  <li class="fragment">Similarity: <span class="fragment">👉 use categorical channels</span></li>
+                  <li class="fragment">Proximity <span class="fragment">👉 use spatial separation</span></li>
+                  <li class="fragment">Similarity <span class="fragment">👉 use categorical channels</span></li>
                 </ul>
               </div>
               <div class="half"><img data-src="../shared_images/vad_book_alldiagrams/identity_channels.png" alt="Identity Channels"></div>
+            </div>
+          </section>
+          <section class="full">
+            <h3 class="demo">Proximity and Similarity</h3>
+            <div class="demo">
+              <div id="observablehq-e40d3d35">
+                <div style="display:flex">
+                  <div style="flex:1" class="observablehq-viewof-useGroupInABox"></div>
+                  <div style="flex:1" class="observablehq-viewof-template"></div>
+                  <div style="flex:1" class="observablehq-viewof-drawTemplate"></div>
+                </div>
+                <div class="observablehq-viewof-chart"></div>
+              
+                <div class="observablehq-simulation" style="display:none"></div>
+                <div style="overflow: hidden;"><a style="display: block; float:right;" href="https://observablehq.com/@john-guerra/force-in-a-box"><object type="image/svg+xml" style="pointer-events: none;" width=180 height=22 data="https://static.observableusercontent.com/files/c3fab254a006f1a3a1f9f63aba8ab1460db4752529036b9962950bde0ec195bab823daa6b278b1c3401e545b3bd640ddfdcad805cf9859af218cb2b9fed4ddf0"></object></a></div>
+              </div>
+              <script type="module">
+                import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+                import define from "https://api.observablehq.com/@john-guerra/force-in-a-box.js?v=3";
+                (new Runtime).module(define, name => {
+                  if (name === "viewof useGroupInABox") return Inspector.into("#observablehq-e40d3d35 .observablehq-viewof-useGroupInABox")();
+                  if (name === "viewof template") return Inspector.into("#observablehq-e40d3d35 .observablehq-viewof-template")();
+                  if (name === "viewof drawTemplate") return Inspector.into("#observablehq-e40d3d35 .observablehq-viewof-drawTemplate")();
+                  if (name === "chart") return Inspector.into("#observablehq-e40d3d35 .observablehq-viewof-chart")();
+                  if (name === "simulation") return ;
+                });
+              </script>
+              
             </div>
           </section>
           <section>
