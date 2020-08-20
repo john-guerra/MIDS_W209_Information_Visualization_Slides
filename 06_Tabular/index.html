@@ -92,7 +92,7 @@
           </section>
           <section class="full">
             <h2>Arrange Tables</h2>
-            <div class="flex"><img class="fragment" style="flex-basis:45%" src="../shared_images/vad_book_alldiagrams/how_express_separate.png" alt="Express Separate Order and Align"><img class="fragment" style="flex-basis:45%" src="../shared_images/vad_book_alldiagrams/how_axis_orientation.png" alt="Axis Orientation"><img class="fragment" style="margin-top:40px; flex-basis:100%" src="../shared_images/vad_book_alldiagrams/how_keys.png" alt="Keys"></div>
+            <div class="flex"><img class="fragment" style="width:45%" src="../shared_images/vad_book_alldiagrams/how_express_separate.png" alt="Express Separate Order and Align"><img class="fragment" style="width:45%" src="../shared_images/vad_book_alldiagrams/how_axis_orientation.png" alt="Axis Orientation"><img class="fragment" style="margin-top:30px; width:100%" src="../shared_images/vad_book_alldiagrams/how_keys.png" alt="Keys"></div>
           </section>
           <!-- @john-guerra Note: the above image is cut off on the slide-->
           <section>
@@ -102,8 +102,8 @@
                 <ul class="small">
                   <li class="fragment">Independent attribute</li>
                   <li class="fragment">Used as unique index to look up items</li>
-                  <li class="fragment">Simple tables: one key</li>
-                  <li class="fragment">Multidimensional tables: multiple keys</li>
+                  <li class="fragment">Simple tables: <strong>one key</strong></li>
+                  <li class="fragment">Multidimensional tables: <strong>multiple keys</strong></li>
                 </ul>
               </div>
               <div class="half"><img class="fragment vcentered" width="100%" style="margin-top:40px" src="../shared_images/vad_book_alldiagrams/how_keys.png" alt="Keys"></div>
@@ -155,20 +155,6 @@
                 </figure>
               </div>
             </div>
-          </section>
-          <section class="full">
-            <h3 class="demo">Idiom: Scatterplot</h3>
-            <div class="blocks" id="scatterplotDiv"></div>
-            <script type="module">
-              import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
-              import notebook from "https://api.observablehq.com/@john-guerra/scatterplot.js?v=3";
-              new Runtime().module(notebook, name => {
-                if (name === "chart") {
-                  return new Inspector(document.querySelector("#scatterplotDiv"));
-                }
-              });
-              
-            </script><a class="tiny" target="_blank" href="https://observablehq.com/@john-guerra/scatterplot">https://observablehq.com/@john-guerra/scatterplot</a>
           </section>
           <section>
             <h2>Scatterplot Overplotting</h2>
@@ -315,6 +301,24 @@
             </div>
           </section>
           <section>
+            <h3>Grouped Bar Chart</h3>
+            <div>
+              <div id="observablehq-6309ff14">
+                <div class="observablehq-chart"></div>
+                <div style="overflow: hidden;"><a style="display: block; float:right;" href="https://observablehq.com/d/ba03f7bcf4681e15"><object type="image/svg+xml" style="pointer-events: none;" width=180 height=22 data="https://static.observableusercontent.com/files/c3fab254a006f1a3a1f9f63aba8ab1460db4752529036b9962950bde0ec195bab823daa6b278b1c3401e545b3bd640ddfdcad805cf9859af218cb2b9fed4ddf0"></object></a></div>
+              </div>
+              <script type="module">
+                import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+                import define from "https://api.observablehq.com/d/ba03f7bcf4681e15.js?v=3";
+                (new Runtime).module(define, name => {
+                  if (name === "chart") return Inspector.into("#observablehq-6309ff14 .observablehq-chart")();
+                });
+              </script>
+              
+              
+            </div>
+          </section>
+          <section>
             <h3 class="demo">Stacked to Grouped</h3>
             <div class="blocks" id="stackedToGroupedDivLayout"></div>
             <div class="blocks" id="stackedToGroupedDiv"></div>
@@ -328,28 +332,57 @@
                 if (name === "viewof layout") {
                   return new Inspector(document.querySelector("#stackedToGroupedDivLayout"));
                 }
+                if (name === "update") {
+                  return true;
+                }
               
               });
             </script><a class="tiny" target="_blank" href="https://observablehq.com/@d3/stacked-to-grouped-bars">https://observablehq.com/@d3/stacked-to-grouped-bars</a>
           </section>
-          <section>
-            <h2>"Stacked Bar Charts Are the Worst."</h2>
-            <p>Interesting discussion from<a href="https://eagereyes.org/techniques/stacked-bars-are-the-worst">Robert Kosara's blog.</a></p>
-            <p>Make sure to read the comments.</p>
+          <section class="full">
+            <h3 class="demo">Idiom: Dot Plot</h3>
+            <div>
+              <div id="observablehq-2fd2c4f4">
+                <div class="observablehq-viewof-primary"></div>
+                <div class="observablehq-chart"></div>
+                <div style="display:none" class="observablehq-update"></div>
+                <div style="overflow: hidden;"><a style="display: block; float:right;" href="https://observablehq.com/d/2dfb7c36a1da900f"><object type="image/svg+xml" style="pointer-events: none;" width=180 height=22 data="https://static.observableusercontent.com/files/c3fab254a006f1a3a1f9f63aba8ab1460db4752529036b9962950bde0ec195bab823daa6b278b1c3401e545b3bd640ddfdcad805cf9859af218cb2b9fed4ddf0"></object></a></div>
+              </div>
+              <script type="module">
+                import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+                import define from "https://api.observablehq.com/d/2dfb7c36a1da900f.js?v=3";
+                (new Runtime).module(define, name => {
+                  if (name === "viewof primary") return Inspector.into("#observablehq-2fd2c4f4 .observablehq-viewof-primary")();
+                  if (name === "chart") return Inspector.into("#observablehq-2fd2c4f4 .observablehq-chart")();
+                  if (name === "update") return Inspector.into("#observablehq-2fd2c4f4 .observablehq-update")();
+                });
+              </script>
+              
+            </div>
           </section>
           <section>
+            <h2>"Stacked Bar Charts Are the Worst."</h2>
+            <p>Interesting discussion from<a href="https://eagereyes.org/techniques/stacked-bars-are-the-worst"> Robert Kosara's blog.</a></p>
+            <p>Make sure to read the comments.</p>
+          </section>
+          <section class="full">
             <h2>Idiom: Marimekko Chart</h2>
-            <div class="flex">
-              <div class="half">
-                <ul>
-                  <li class="fragment">Similar to stacked barchart</li>
-                  <li class="fragment">Uses bar width</li>
-                </ul>
+            <figure>
+              <div style="max-width:800px">
+                <div id="observablehq-e25321be">
+                  <div class="observablehq-chart"></div>
+                  <div style="overflow: hidden;"><a style="display: block; float:right;" href="https://observablehq.com/d/61b24cb7f82428df"><object type="image/svg+xml" style="pointer-events: none;" width=180 height=22 data="https://static.observableusercontent.com/files/c3fab254a006f1a3a1f9f63aba8ab1460db4752529036b9962950bde0ec195bab823daa6b278b1c3401e545b3bd640ddfdcad805cf9859af218cb2b9fed4ddf0"></object></a></div>
+                </div>
+                <script type="module">
+                  import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+                  import define from "https://api.observablehq.com/d/61b24cb7f82428df.js?v=3";
+                  (new Runtime).module(define, name => {
+                    if (name === "chart") return Inspector.into("#observablehq-e25321be .observablehq-chart")();
+                  });
+                </script>
               </div>
-              <div class="half"><a href="https://observablehq.com/@karimdouieb/europe-electricity-production">https://observablehq.com/@karimdouieb/europe-electricity-production</a><a href="https://datavizcatalogue.com/methods/marimekko_chart.html">https://datavizcatalogue.com/methods/marimekko_chart.html</a>
-                <!-- @john-guerra Note: formatting causes slide content to go off-screen-->
-              </div>
-            </div>
+              <figcaption class="reference"><a href="https://observablehq.com/@karimdouieb/europe-electricity-production">https://observablehq.com/@karimdouieb/europe-electricity-production</a><br><br><a href="https://datavizcatalogue.com/methods/marimekko_chart.html">https://datavizcatalogue.com/methods/marimekko_chart.html</a></figcaption>
+            </figure>
           </section>
           <section>
             <h2>Chart Axes</h2>
@@ -416,7 +449,7 @@
             </div>
           </section>
           <section>
-            <h2>Idiom: Cluster Heatmap</h2>
+            <h3 class="demo">Idiom: Cluster Heatmap</h3>
             <div class="flex">
               <div class="half">
                 <ul class="small">
@@ -440,7 +473,7 @@
                 </ul>
               </div>
               <div class="half">
-                <figure><img class="fill" data-src="../shared_images/vad_book_alldiagrams/cluster_heatmap.png" alt="Cluster Heatmap"></figure>
+                <figure><img class="fill" style="max-width:400px" data-src="../shared_images/vad_book_alldiagrams/cluster_heatmap.png" alt="Cluster Heatmap"></figure>
                 <figure><img class="fill" data-src="../shared_images/vad_book_alldiagrams/two_keys.png" alt="Two Keys"></figure>
               </div>
             </div>
@@ -557,6 +590,14 @@
                   </ul>
                 </ul>
               </div>
+              <div class="half">
+                <figure><img src="../shared_images/correlation.png" alt="Correlation">
+                  <figcaption class="reference">
+                    <div>[Hyperdimensional Data Analysis Using Parallel Coordinates. Wegman. Journ. American Statistical Association 85:411 (1990), 664–675.]</div>
+                    <div>[A layered grammar of graphics. Wickham. Journ. Computational and Graphical Statistics 19:1 (2010), 3–28.]</div>
+                  </figcaption>
+                </figure>
+              </div>
             </div>
           </section>
           <section>
@@ -616,7 +657,9 @@
                   </ul>
                 </ul>
               </div>
-              <div class="half"></div>
+              <div class="half">
+                <figure><img style="max-width:200px" src="../shared_images/radar_star.png" alt=""></figure>
+              </div>
             </div>
           </section>
           <section>
@@ -629,7 +672,11 @@
                   <li class="fragment">Order of attributes matter</li>
                 </ul>
               </div>
-              <div class="half"></div>
+              <div class="half">
+                <figure><img style="max-width:600px" src="../shared_images/radar.png" alt="">
+                  <figcaption class="reference">[Slide courtesy of Ben Jones]</figcaption>
+                </figure>
+              </div>
             </div>
           </section>
           <section>
@@ -640,9 +687,6 @@
                 <div>[Slide courtesy of Ben Jones]</div>
               </figcaption>
             </figure>
-          </section>
-          <section>
-            <h2>Radial Orientation: Radar Plots</h2>
           </section>
           <section>
             <h3>Idioms: Pie Chart, Polar Area Chart</h3>
@@ -669,7 +713,11 @@
                   </ul>
                 </ul>
               </div>
-              <div class="half"></div>
+              <div class="half">
+                <figure><img style="max-width:200px" src="../shared_images/pie_polar.png" alt="Pie Polar">
+                  <figcaption class="reference">[A layered grammar of graphics. Wickham. Journ. Computational and Graphical Statistics 19:1 (2010), 3–28.]</figcaption>
+                </figure>
+              </div>
             </div>
           </section>
           <section>
@@ -825,6 +873,20 @@
         <section id="tablesD3">
           <section>
             <h1>Tables with D3</h1>
+          </section>
+          <section class="full">
+            <h3 class="demo">Idiom: Scatterplot</h3>
+            <div class="blocks" id="scatterplotDiv"></div>
+            <script type="module">
+              import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+              import notebook from "https://api.observablehq.com/@john-guerra/scatterplot.js?v=3";
+              new Runtime().module(notebook, name => {
+                if (name === "chart") {
+                  return new Inspector(document.querySelector("#scatterplotDiv"));
+                }
+              });
+              
+            </script><a class="tiny" target="_blank" href="https://observablehq.com/@john-guerra/scatterplot">https://observablehq.com/@john-guerra/scatterplot</a>
           </section>
           <section>
             <h3 class="demo">Barchart</h3>
