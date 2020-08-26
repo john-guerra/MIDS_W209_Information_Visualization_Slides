@@ -1,0 +1,211 @@
+doctype html
+html(lang="en")
+  head
+    title Week 9 Trees and Geo. MIDS W209 Information Visualization Slides
+    meta(charset="utf-8")
+    meta(name="author", content="John Alexis Guerra Gómez")
+    meta(name="description", content="Week 9 Trees and Geo. MIDS W209 Information Visualization Slides")
+
+    meta(name="apple-mobile-web-app-capable" content="yes")
+    meta(name="apple-mobile-web-app-status-bar-style" content="black-translucent")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+
+    link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Fjalla+One|Raleway|PT+Sans+Narrow")
+
+    //- Adobe fonts
+    link(rel="stylesheet" href="https://use.typekit.net/yjc0afr.css")
+
+    //- <!-- Theme used for syntax highlighting of code -->
+    link(rel="stylesheet" href="../plugin/highlight/monokai.css" id="highlight-theme")
+
+
+    link(href="../css/reveal.css", rel="stylesheet")
+    link(href="../css/theme/white.css", rel="stylesheet", id="theme")
+    link(href="../css/style.css", rel="stylesheet")
+
+
+  body
+    .reveal
+      .slides
+        section
+          h1.title Trees and Geo
+            br
+            small MIDS W209: Information Visualization
+
+          div.r-stretch
+
+          div.tiny
+            a(href="https://johnguerra.co/", target="_blank") #[strong  John Alexis Guerra Gómez]
+            span  |  john.guerra[at]gmail.com
+            a(href="https://twitter.com/duto_guerra")  |  @duto_guerra
+            br
+
+            a(href="https://andyreagan.com/", target="_blank") #[strong  Andy Reagan]
+            span  |  andy[at]andyreagan.com
+            a(href="https://twitter.com/andyreagan")  |  @andyreagan
+            br
+
+            a(href="https://johnguerra.co/lectures/MIDS_W209_Information_Visualization/09_Trees_and_Geo/", target="_blank") https://johnguerra.co/lectures/MIDS_W209_Information_Visualization/09_Trees_and_Geo/
+
+          div.logo
+            a(href="https://datascience.berkeley.edu/")
+              img.logo(src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo")
+          div.tiny Partially based on
+            a(href="https://www.cs.ubc.ca/~tmm/talks.html#minicourse14")  slides from Tamara Munzner
+
+        //- Outline
+        section#outline
+          section
+            h2 What We Are Going to Learn
+            ul.small
+
+          section
+            div
+              img(src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo")
+
+        section
+          section
+            h1 Spatial Data
+
+          section
+            h2 Idioms: Isosurfaces, Direct Volume Rendering
+            .flex
+              ul
+                li.fragment Data:
+                ul
+                  li.fragment Scalar spatial field
+                  li.fragment One quantitative attribute per grid cell
+                li.fragment Task:
+                ul
+                  li.fragment Shape understanding, spatial relationships
+                li.fragment Isosurface:
+                ul
+                  li.fragment Derived data: isocontours computed for specific levels of scalar values
+                li.fragment Direct volume rendering:
+                ul
+                  li.fragment Transfer function maps scalar values to color, opacity
+                  ul
+                    li.fragment No derived geometry
+
+          section
+            h2 Isosurfaces Example
+            img.demo(data-src="../shared_images/isosurface.png", alt="Isosurfaces")
+            div #[a.tiny(href="https://arxiv.org/pdf/1710.01199.pdf") Two-dimensional dynamics of elasto-inertial turbulence and its role in polymer drag reduction]
+
+
+          section
+            h2 Vector and Tensor Fields
+            ul
+              li.fragment Data:
+              ul
+                li.fragment Many attributes per cell
+              li.fragment Idiom families:
+              ul
+                li.fragment Flow glyphs:
+                ul
+                  li.fragment Purely local
+                li.fragment Geometric flow:
+                ul
+                  li.fragment Derived data from tracing particle trajectories
+                  li.fragment Sparse set of seed points
+                li.fragment Texture flow:
+                ul
+                  li.fragment Derived data, dense seeds
+                li.fragment Feature flow:
+                ul
+                  li.fragment Global computation to detect features
+                  li.fragment Encoded with one of methods above
+
+          section
+            h2 Vector Fields
+            .flex
+              ul
+                li.fragment Empirical study tasks:
+                ul
+                  li.fragment Finding critical points, identifying their types
+                  li.fragment Identifying what type of critical point is at a specific location
+                  li.fragment Predicting where a particle starting at a specified point will end up (advection)
+
+          section
+            h2 Vector Field Example
+            img.demo(data-src="../shared_images/lorenz-vectors.png", alt="Lorenz vectors")
+
+          section
+            h2 Name That Dynamical System
+            img.demo(data-src="../shared_images/lorenz.jpeg", alt="Lorenz")
+
+          section
+            h3 Idiom: Similarity-Clustered Streamlines
+            ul
+              li.fragment Data:
+              ul
+                li.fragment 3D vector field
+              li.fragment Derived data (from field):
+              ul
+                li.fragment Streamlines: trajectory particle will follow
+              li.fragment Derived data (per streamline):
+              ul
+                li.fragment Curvature, torsion, tortuosity
+                li.fragment Signature: complex weighted combination
+                li.fragment Compute cluster hierarchy across all signatures
+                li.fragment Encode: color and opacity by cluster
+              li.fragment Task:
+              ul
+                li.fragment Find features, query shape
+              li.fragment Scalability:
+              ul
+                li.fragment Millions of samples, hundreds of streamlines
+
+          section
+            h2 Streamlines
+            img.demo(data-src="../shared_images/wind-map.png", alt="Wind Map")
+            div.tiny #[a(href="http://hint.fm/wind/") Original inspiration]
+
+
+          section
+            div
+              img(src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo")
+
+        section#review
+          section
+            h2 What We Learned
+            ul.small
+
+
+    script(src="../js/reveal.js")
+    script(src="../plugin/zoom/zoom.js")
+    script(src="../plugin/notes/notes.js")
+    script(src="../plugin/search/search.js")
+    script(src="../plugin/markdown/markdown.js")
+    script(src="../plugin/highlight/highlight.js")
+
+    script(src="https://cdn.jsdelivr.net/npm/vega@5.13.0")
+    script(src="https://cdn.jsdelivr.net/npm/vega-lite@4.13.1")
+    script(src="https://cdn.jsdelivr.net/npm/vega-lite-api@0.11.0")
+    script(src="https://cdn.jsdelivr.net/npm/vega-tooltip@0.23.2")
+
+
+
+    script.
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        hash: true,
+        //- transition: "convex",
+
+        //- width: "100%",
+        //- height: "720px",
+
+        plugins: [ RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight ]
+      });
+    script.
+      (function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,"script","https://www.google-analytics.com/analytics.js","ga");
+
+      ga("create", "UA-72531610-1", "auto");
+      ga("send", "pageview");
+
