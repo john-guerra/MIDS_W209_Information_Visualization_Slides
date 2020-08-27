@@ -63,7 +63,7 @@ html(lang="en")
             ul.small.small
               li.fragment How to recognize, create, and store networks
               li.fragment Algorithms to visualize network data
-              li.fragment How to use color 
+              li.fragment How to use color
 
           section
             div
@@ -160,89 +160,144 @@ html(lang="en")
           section.full
             h3 Idiom: Force-Directed Placement
             .flex
-              .twothirds
-                ul
-                  li.fragment Visual encoding:
+              .third
+                ul.tiny
+                  li.fragment #[strong Visual encoding:]
                     ul
                       li Link connection marks, node point marks
-                  li.fragment Considerations:
+                  li.fragment #[strong Tasks:]
                     ul
-                      li.fragment Spatial position: no meaning directly encoded
-                        ul
-                          li Left free to minimize crossings
-                      li.fragment Proximity semantics?
-                        ul
-                          li Sometimes meaningful
-                          li Sometimes arbitrary, artifact of layout algorithm
-                          li.fragment Tension with length
-                            ul
-                              li.fragment Long edges more visually salient than short
-                  li.fragment Tasks:
+                      li Explore topology; locate paths, clusters
+                  li.fragment #[strong Scalability:]
                     ul
-                      li.fragment Explore topology; locate paths, clusters
-                  li.fragment Scalability:
+                      li Node/edge density E < 4N
+                  li.fragment #[strong Considerations:]
                     ul
-                      li.fragment Node/edge density E < 4N
+                      li Spatial position no meaning directly encoded
+                      li Proximity semantics?
 
+              .twothirds
+                div.
+                  <div id="observablehq-6b30ef20" >
+                    <div class="observablehq-chart" style="width:200%; margin-left:-50%" ></div>
+                    <div style="overflow: hidden;" ><a style="display: block; float:right;" href="https://observablehq.com/@d3/disjoint-force-directed-graph"><object type="image/svg+xml" style="pointer-events: none;" width=180 height=22 data="https://static.observableusercontent.com/files/c3fab254a006f1a3a1f9f63aba8ab1460db4752529036b9962950bde0ec195bab823daa6b278b1c3401e545b3bd640ddfdcad805cf9859af218cb2b9fed4ddf0"></object></a></div>
+                  </div>
+                  <script type="module">
+                    import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+                    import define from "https://api.observablehq.com/@d3/disjoint-force-directed-graph.js?v=3";
+                    (new Runtime).module(define, name => {
+                      if (name === "chart") return Inspector.into("#observablehq-6b30ef20 .observablehq-chart")();
+                    });
+                  </script>
 
           section.full
-            h3 Idiom: SFDP (Multi-Level Force-Directed Placement)
-            .flex
-              .twothirds
-                ul.small
-                  li.fragment Data:
-                  ul
-                    li.fragment Original: network
-                    li.fragment Derived: cluster hierarchy atop it
-                  li.fragment Considerations:
-                  ul
-                    li.fragment Better algorithm for same encoding technique
-                    ul
-                      li.fragment Same: fundamental use of space
-                      li.fragment Hierarchy used for algorithm speed/quality but not shown explicitly
-                    ul
-                      li.fragment (More on algorithm vs. encoding in afternoon)
-                      // Note @john-guerra: consider removing "afternoon" here
-                  li.fragment Scalability:
-                    li.fragment Nodes, edges: 1,000-10,000
-                    li.fragment Hairball problem eventually hits
+            h3 Force simulation explained
+            .demo.
+              <div id="observablehq-03e24038">
+                <div class="observablehq-viewof-forces"></div>
+                <div class="observablehq-viewof-r"></div>
+                <div class="observablehq-viewof-dataset"></div>
+                <div class="observablehq-chart"></div>
+                <div style="overflow: hidden;"><a style="display: block; float:right;" href="https://observablehq.com/@john-guerra/choose-your-forces"><object type="image/svg+xml" style="pointer-events: none;" width=180 height=22 data="https://static.observableusercontent.com/files/c3fab254a006f1a3a1f9f63aba8ab1460db4752529036b9962950bde0ec195bab823daa6b278b1c3401e545b3bd640ddfdcad805cf9859af218cb2b9fed4ddf0"></object></a></div>
+              </div>
+              <script type="module">
+                import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+                import define from "https://api.observablehq.com/@john-guerra/choose-your-forces.js?v=3";
+                (new Runtime).module(define, name => {
+                  if (name === "viewof forces") return Inspector.into("#observablehq-03e24038 .observablehq-viewof-forces")();
+                  if (name === "viewof r") return Inspector.into("#observablehq-03e24038 .observablehq-viewof-r")();
+                  if (name === "viewof dataset") return Inspector.into("#observablehq-03e24038 .observablehq-viewof-dataset")();
+                  if (name === "chart") return Inspector.into("#observablehq-03e24038 .observablehq-chart")();
+                });
+              </script>
 
+          section.full
+            h3.demo Force in a Box
+            .demo.
+              <div id="observablehq-ca11e9c8">
+                <div style="display:flex">
+                  <div class="observablehq-viewof-useGroupInABox"></div>
+                  <div class="observablehq-viewof-template"></div>
+                  <div class="observablehq-viewof-drawTemplate"></div>
+                </div>
+                <div class="observablehq-chart"></div>
+                <div style="display:flex">
+                  <div class="observablehq-viewof-forceInABoxStrength"></div>
+                  <div class="observablehq-viewof-linkStrengthIntraCluster"></div>
+                  <div class="observablehq-viewof-linkStrengthInterCluster"></div>
+                  <div class="observablehq-viewof-forceNodeSize"></div>
+                  <div class="observablehq-viewof-forceCharge"></div>
+                  <div class="observablehq-viewof-forceLinkDistance"></div>
+                  <div class="observablehq-viewof-forceLinkStrength"></div>
+                </div>
+                <div style="overflow: hidden;"><a style="display: block; float:right;" href="https://observablehq.com/@john-guerra/force-in-a-box"><object type="image/svg+xml" style="pointer-events: none;" width=180 height=22 data="https://static.observableusercontent.com/files/c3fab254a006f1a3a1f9f63aba8ab1460db4752529036b9962950bde0ec195bab823daa6b278b1c3401e545b3bd640ddfdcad805cf9859af218cb2b9fed4ddf0"></object></a></div>
+              </div>
+              <script type="module">
+                import {Runtime, Inspector, Library} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+                import define from "https://api.observablehq.com/@john-guerra/force-in-a-box.js?v=3";
+                const runtime = new Runtime(Object.assign(new Library, {width: document.querySelector(".observablehq-chart").clientWidth-200}))
+                runtime.module(define, name => {
+                  if (name === "viewof useGroupInABox") return Inspector.into("#observablehq-ca11e9c8 .observablehq-viewof-useGroupInABox")();
+                  if (name === "viewof template") return Inspector.into("#observablehq-ca11e9c8 .observablehq-viewof-template")();
+                  if (name === "viewof drawTemplate") return Inspector.into("#observablehq-ca11e9c8 .observablehq-viewof-drawTemplate")();
+                  if (name === "chart") return Inspector.into("#observablehq-ca11e9c8 .observablehq-chart")();
+                  if (name === "viewof forceInABoxStrength") return Inspector.into("#observablehq-ca11e9c8 .observablehq-viewof-forceInABoxStrength")();
+                  if (name === "viewof linkStrengthIntraCluster") return Inspector.into("#observablehq-ca11e9c8 .observablehq-viewof-linkStrengthIntraCluster")();
+                  if (name === "viewof linkStrengthInterCluster") return Inspector.into("#observablehq-ca11e9c8 .observablehq-viewof-linkStrengthInterCluster")();
+                  if (name === "viewof forceNodeSize") return Inspector.into("#observablehq-ca11e9c8 .observablehq-viewof-forceNodeSize")();
+                  if (name === "viewof forceCharge") return Inspector.into("#observablehq-ca11e9c8 .observablehq-viewof-forceCharge")();
+                  if (name === "viewof forceLinkDistance") return Inspector.into("#observablehq-ca11e9c8 .observablehq-viewof-forceLinkDistance")();
+                  if (name === "viewof forceLinkStrength") return Inspector.into("#observablehq-ca11e9c8 .observablehq-viewof-forceLinkStrength")();
+                });
+              </script>
 
-          section
-            h3.demo Force-Directed Layout
-            iframe.blocks(data-src="http://blockbuilder.org/mbostock/4062045")
-            div.tiny
-              a(target="_blank" href="http://blockbuilder.org/mbostock/4062045") http://blockbuilder.org/mbostock/4062045
-            div.tiny
-              a(target="_blank" href="http://bl.ocks.org/mbostock/") by mbostock
 
 
           section
             h2 Use the Force!
 
-          section
+          section.full
             h3.demo Beeswarm Plot
-            iframe.blocks(data-src="http://blockbuilder.org/mbostock/6526445e2b44303eebf21da3b6627320")
-            div.tiny
-              a(target="_blank" href="http://blockbuilder.org/mbostock/6526445e2b44303eebf21da3b6627320") http://blockbuilder.org/mbostock/6526445e2b44303eebf21da3b6627320
-            div.tiny
-              a(target="_blank" href="http://bl.ocks.org/mbostock/") by mbostock
+            .demo.
+              <div id="observablehq-836fbe16">
+                <div class="observablehq-chart"></div>
+                <div style="overflow: hidden;"><a style="display: block; float:right;" href="https://observablehq.com/@d3/beeswarm"><object type="image/svg+xml" style="pointer-events: none;" width=180 height=22 data="https://static.observableusercontent.com/files/c3fab254a006f1a3a1f9f63aba8ab1460db4752529036b9962950bde0ec195bab823daa6b278b1c3401e545b3bd640ddfdcad805cf9859af218cb2b9fed4ddf0"></object></a></div>
+              </div>
+              <script type="module">
+                import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+                import define from "https://api.observablehq.com/@d3/beeswarm.js?v=3";
+                (new Runtime).module(define, name => {
+                  if (name === "chart") return Inspector.into("#observablehq-836fbe16 .observablehq-chart")();
+                });
+              </script>
 
-          section
+          section.full
             h3.demo Collision Detection
-            iframe.blocks(data-src="http://blockbuilder.org/mbostock/31ce330646fa8bcb7289ff3b97aab3f5")
-            div.tiny
-              a(target="_blank" href="http://blockbuilder.org/mbostock/31ce330646fa8bcb7289ff3b97aab3f5") http://blockbuilder.org/mbostock/31ce330646fa8bcb7289ff3b97aab3f5
-            div.tiny
-              a(target="_blank" href="http://bl.ocks.org/mbostock/") by mbostock
+            .demo.
+
+              <div id="observablehq-cbc82575">
+                <div class="observablehq-viewof-restart"></div>
+                <div class="observablehq-chart"></div>
+                <div style="overflow: hidden;"><a style="display: block; float:right;" href="https://observablehq.com/@john-guerra/collision-detection"><object type="image/svg+xml" style="pointer-events: none;" width=180 height=22 data="https://static.observableusercontent.com/files/c3fab254a006f1a3a1f9f63aba8ab1460db4752529036b9962950bde0ec195bab823daa6b278b1c3401e545b3bd640ddfdcad805cf9859af218cb2b9fed4ddf0"></object></a></div>
+              </div>
+              <script type="module">
+                import {Runtime, Inspector, Library} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+                import define from "https://api.observablehq.com/@john-guerra/collision-detection.js?v=3";
+                const runtime = new Runtime(Object.assign(new Library, {width: 500}))
+                runtime.module(define, name => {
+                  if (name === "viewof restart") return Inspector.into("#observablehq-cbc82575 .observablehq-viewof-restart")();
+                  if (name === "chart") return Inspector.into("#observablehq-cbc82575 .observablehq-chart")();
+                });
+              </script>
+
 
           section
-            h3.demo Force in a Box
-            iframe.blocks(data-src="http://blockbuilder.org/john-guerra/14c943d8f198d9f3fef2")
-            div.tiny
-              a(target="_blank" href="http://blockbuilder.org/john-guerra/14c943d8f198d9f3fef2") http://blockbuilder.org/john-guerra/14c943d8f198d9f3fef2
-            div.tiny
-              a(target="_blank" href="http://bl.ocks.org/john-guerra/") by john-guerra
+            h2 D3 Force in the wild
+            figure
+              img(src="../shared_images/us_federal_budget.png", alt="Four ways to slice Obama's 2013 Budget Proposal nytimes")
+              figcaption.reference
+                a(href="https://archive.nytimes.com/www.nytimes.com/interactive/2012/02/13/us/politics/2013-budget-proposal-graphic.html") Four Ways to Slice Obama’s 2013 Budget Proposal
+
 
           section
             div
@@ -251,55 +306,69 @@ html(lang="en")
           section
             h2 Idiom: Adjacency Matrix View
             .flex
-              .twothirds
-                ul.small
+              .half
+                ul.tiny
 
-                  li.fragment Data: network
+                  li.fragment #[strong Data:] network
                   ul
-                    li.fragment Transform into same data/encoding as heatmap
-                  li.fragment Derived data: table from network
+                    li Transform into same data/encoding as heatmap
+                  li.fragment #[strong Derived data:] table from network
                   ul
-                    li.fragment One quantitative attribute
+                    li One quantitative attribute
                     ul
-                      li.fragment Weighted edge between nodes
-                    li.fragment Two categorical attributes: node list x 2
-                  li.fragment Visual encoding:
+                      li Weighted edge between nodes
+                    li Two categorical attributes: node list x 2
+                  li.fragment #[strong Visual encoding:]
                   ul
-                    li.fragment Cell shows presence/absence of edge
-                  li.fragment Tasks:
+                    li Cell shows presence/absence of edge
+                  li.fragment #[strong Tasks:]
                     ul
-                      li.fragment Identify clusters (topology)
-                      li.fragment Summarize topology/distribution
-                  li.fragment Scalability:
+                      li Identify clusters (topology)
+                      li Summarize topology/distribution
+                  li.fragment #[strong Scalability:]
                   ul
-                    li.fragment 1,000 nodes, one million edges
+                    li 1,000 nodes, one million edges
 
+              .half
+                figure
+                  img(src="../shared_images/adjacency_matrix_explained.png", alt="Adjacency Matrix")
+                  figcaption.reference [NodeTrix: a Hybrid Visualization of Social Networks. Henry, Fekete, and McGuffin. IEEE TVCG (Proc. InfoVis) 13(6):1302-1309, 2007.]
+                figure
+                  img(src="../shared_images/adjacency_matrix_explained2.png", alt="Adjacency Matrix")
+                  figcaption.reference [Points of view: Networks. Gehlenborg and Wong. Nature Methods 9:115.]
+
+
+          section(data-background-iframe="https://bost.ocks.org/mike/miserables/")
+            //- iframe.demo(data-src="https://bost.ocks.org/mike/miserables/")
           section
-            h3.demo Adjacency Matrix
-            iframe.blocks(data-src="https://bost.ocks.org/mike/miserables/")
             div.tiny
               a(target="_blank" href="https://bost.ocks.org/mike/miserables/") https://bost.ocks.org/mike/miserables/
 
           section
-            h2 Connection vs. Adjacency Comparison
+            h3 Connection vs. Adjacency Comparison
             .flex
-              .twothirds
-                ul.small
-
-                  li.fragment Adjacency matrix strengths:
-                  ul
-                    li.fragment Predictability, scalability, supports reordering
-                    li.fragment Some topology tasks trainable
-                  li.fragment Node-link diagram strengths:
-                  ul
-                    li.fragment Topology understanding, path tracing
-                    li.fragment Intuitive, no training needed
-                  li.fragment Empirical study:
-                  ul
-                    li.fragment Node-link best for small networks
-                    li.fragment Matrix best for large networks...
+              .half
+                ul.tiny
+                  li.fragment #[strong Adjacency matrix strengths:]
                     ul
-                      li.fragment ...if tasks don’t involve topological structure!
+                      li Predictability, scalability, supports reordering
+                      li Some topology tasks trainable
+                  li.fragment #[strong Node-link diagram strengths:]
+                    ul
+                      li Topology understanding, path tracing
+                      li Intuitive, no training needed
+                  li.fragment #[strong Empirical study:]
+                    ul
+                      li.fragment Node-link best for small networks
+                      li.fragment Matrix best for large networks...
+                        ul
+                          li ...if tasks don’t involve topological structure!
+
+              .half
+                figure
+                  img(src="../shared_images/connection_vs_cliques.png", alt ="connection vs cliques")
+                  figcaption.reference
+                    a(href="http://www.michaelmcguffin.com/courses/vis/patternsInAdjacencyMatrix.png") http://www.michaelmcguffin.com/courses/vis/patternsInAdjacencyMatrix.png
 
           section
             div
@@ -352,13 +421,13 @@ html(lang="en")
               div.tiny
                 a(href="https://observablehq.com/@d3/arc-diagram") https://observablehq.com/@d3/arc-diagram
 
-          section
-            h2.demo Arc Diagram (cont.)
-            iframe.blocks(data-src="https://blockbuilder.org/rpgove/53bb49d6ed762139f33bdaea1f3a9e1c")
-            div.tiny
-              a(target="_blank" href="https://blockbuilder.org/rpgove/53bb49d6ed762139f33bdaea1f3a9e1c") https://blockbuilder.org/rpgove/53bb49d6ed762139f33bdaea1f3a9e1c
-            div.tiny
-              a(target="_blank" href="http://bl.ocks.org/rpgove/") by Robert Gove
+          //- section
+          //-   h2.demo Arc Diagram (cont.)
+          //-   iframe.blocks(data-src="https://blockbuilder.org/rpgove/53bb49d6ed762139f33bdaea1f3a9e1c")
+          //-   div.tiny
+          //-     a(target="_blank" href="https://blockbuilder.org/rpgove/53bb49d6ed762139f33bdaea1f3a9e1c") https://blockbuilder.org/rpgove/53bb49d6ed762139f33bdaea1f3a9e1c
+          //-   div.tiny
+          //-     a(target="_blank" href="http://bl.ocks.org/rpgove/") by Robert Gove
 
           section
             h2.demo Hive Plots
@@ -399,33 +468,42 @@ html(lang="en")
                   li.fragment Good for depicting flow
                   li.fragment Not that well-known
               .half
-                a(href="https://observablehq.com/@d3/sankey-diagram") Sankey Diagram
-                
-
-          section
-            h2 Idiom: Parallel Sets
-
-            .flex
-              .half
-                ul
-                  li.fragment Good for depicting flow
-                  li.fragment Not that well known
-              .half
-                div.
-                  <div id="observablehq-c6a5e063">
-                    <div class="observablehq-viewof-tension"></div>
+                .div.
+                  <div id="observablehq-2999d4d9">
+                    <div class="observablehq-viewof-edgeColor"></div>
+                    <div class="observablehq-viewof-align"></div>
                     <div class="observablehq-chart"></div>
-                    <div style="overflow: hidden;"><a style="display: block; float:right;" href="https://observablehq.com/@john-guerra/parallel-sets"><object type="image/svg+xml" style="pointer-events: none;" width=180 height=22 data="https://static.observableusercontent.com/files/c3fab254a006f1a3a1f9f63aba8ab1460db4752529036b9962950bde0ec195bab823daa6b278b1c3401e545b3bd640ddfdcad805cf9859af218cb2b9fed4ddf0"></object></a></div>
+                    <div style="overflow: hidden;"><a style="display: block; float:right;" href="https://observablehq.com/@d3/sankey-diagram"><object type="image/svg+xml" style="pointer-events: none;" width=180 height=22 data="https://static.observableusercontent.com/files/c3fab254a006f1a3a1f9f63aba8ab1460db4752529036b9962950bde0ec195bab823daa6b278b1c3401e545b3bd640ddfdcad805cf9859af218cb2b9fed4ddf0"></object></a></div>
                   </div>
                   <script type="module">
                     import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
-                    import define from "https://api.observablehq.com/@john-guerra/parallel-sets.js?v=3";
+                    import define from "https://api.observablehq.com/@d3/sankey-diagram.js?v=3";
                     (new Runtime).module(define, name => {
-                      if (name === "viewof tension") return Inspector.into("#observablehq-c6a5e063 .observablehq-viewof-tension")();
-                      if (name === "chart") return Inspector.into("#observablehq-c6a5e063 .observablehq-chart")();
+                      if (name === "viewof edgeColor") return Inspector.into("#observablehq-2999d4d9 .observablehq-viewof-edgeColor")();
+                      if (name === "viewof align") return Inspector.into("#observablehq-2999d4d9 .observablehq-viewof-align")();
+                      if (name === "chart") return Inspector.into("#observablehq-2999d4d9 .observablehq-chart")();
                     });
                   </script>
-                a(href="https://observablehq.com/@john-guerra/parallel-sets") https://observablehq.com/@john-guerra/parallel-sets
+
+
+          section.full
+            h3.demo Idiom: Parallel Sets
+            .demo.
+              <div id="observablehq-c6a5e063">
+                <div class="observablehq-viewof-tension"></div>
+                <div class="observablehq-chart"></div>
+                <div style="overflow: hidden;"><a style="display: block; float:right;" href="https://observablehq.com/@john-guerra/parallel-sets"><object type="image/svg+xml" style="pointer-events: none;" width=180 height=22 data="https://static.observableusercontent.com/files/c3fab254a006f1a3a1f9f63aba8ab1460db4752529036b9962950bde0ec195bab823daa6b278b1c3401e545b3bd640ddfdcad805cf9859af218cb2b9fed4ddf0"></object></a></div>
+              </div>
+              <script type="module">
+                import {Runtime, Inspector, Library} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+                import define from "https://api.observablehq.com/@john-guerra/parallel-sets.js?v=3";
+                const runtime = new Runtime(Object.assign(new Library, {width: document.querySelector("#observablehq-c6a5e063 .observablehq-chart").clientWidth*.5}))
+                runtime.module(define, name => {
+                  if (name === "viewof tension") return Inspector.into("#observablehq-c6a5e063 .observablehq-viewof-tension")();
+                  if (name === "chart") return Inspector.into("#observablehq-c6a5e063 .observablehq-chart")();
+                });
+              </script>
+            a.reference(href="https://observablehq.com/@john-guerra/parallel-sets") https://observablehq.com/@john-guerra/parallel-sets
 
           section
             div
