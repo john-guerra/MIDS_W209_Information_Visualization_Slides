@@ -1,0 +1,30 @@
+01_Introduction/%.html: 01_Introduction/%.pug
+	pug $^
+02_What/%.html: 02_What/%.pug
+	pug $^
+03_Why/%.html: 03_Why/%.pug
+	pug $^
+04_How/%.html: 04_How/%.pug
+	pug $^
+05_Rules_of_thumb/%.html: 05_Rules_of_thumb/%.pug
+	pug $^
+06_Tabular/%.html: 06_Tabular/%.pug
+	pug $^
+07_Time/%.html: 07_Time/%.pug
+	pug $^
+08_Networks_and_Color/%.html: 08_Networks_and_Color/%.pug
+	pug $^
+09_Trees_and_Geo/%.html: 09_Trees_and_Geo/%.pug
+	pug $^
+10_Manipulate_Views/%.html: 10_Manipulate_Views/%.pug
+	pug $^
+11_Faceting/%.html: 11_Faceting/%.pug
+	pug $^
+12_Evaluation/%.html: 12_Evaluation/%.pug
+	pug $^
+13_Reducing/%.html: 13_Reducing/%.pug
+	pug $^
+14_Advanced/%.html: 14_Advanced/%.pug
+	pug $^
+
+all: 01_Introduction/index.html 02_What/index.html 03_Why/index.html 04_How/index.html 05_Rules_of_thumb/index.html 06_Tabular/index.html 07_Time/index.html 08_Networks_and_Color/index.html 09_Trees_and_Geo/index.html 10_Manipulate_Views/index.html 11_Faceting/index.html 12_Evaluation/index.html 13_Reducing/index.html 14_Advanced/index.html 01_Introduction/01-01-altair-intro.html 02_What/02-01-pandas.html 02_What/02-03-flask-demo.html 09_Trees_and_Geo/spatial_data.html
