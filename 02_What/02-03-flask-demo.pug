@@ -1,0 +1,143 @@
+html(lang="en")
+  head
+    title Week 2: Introduction to Flask. MIDS W209 Information Visualization Slides
+    meta(charset="utf-8")
+    meta(name="author", content="Andy Reagan")
+    meta(name="description", content="Week 1: Introduction to Altair. MIDS W209 Information Visualization Slides. ")
+
+    meta(name="apple-mobile-web-app-capable" content="yes")
+    meta(name="apple-mobile-web-app-status-bar-style" content="black-translucent")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+
+    link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Fjalla+One|Raleway|PT+Sans+Narrow")
+
+    //- Adobe fonts
+    link(rel="stylesheet" href="https://use.typekit.net/yjc0afr.css")
+
+    //- <!-- Theme used for syntax highlighting of code -->
+    link(rel="stylesheet" href="../plugin/highlight/monokai.css" id="highlight-theme")
+
+
+    link(href="../css/reveal.css", rel="stylesheet")
+    link(href="../css/theme/white.css", rel="stylesheet", id="theme")
+    link(href="../css/style.css", rel="stylesheet")
+
+
+  body
+
+
+    .reveal
+      .slides
+        section
+          h1.title Introduction to Flask
+            br
+            small MIDS W209: Information Visualization
+          div.r-stretch
+
+          div.tiny
+            a(href="https://andyreagan.com/", target="_blank") #[strong  Andy Reagan]
+            span  |  andy[at]andyreagan.com
+            a(href="https://twitter.com/andyreagan")  |  @andyreagan
+            br
+
+            a(href="https://john-guerra.github.io/MIDS_W209_Information_Visualization_Slides/02_Introduction/flask.html", target="_blank") https://john-guerra.github.io/MIDS_W209_Information_Visualization_Slides/02_Introduction/flask.html
+
+          div.logo
+            a(href="https://datascience.berkeley.edu/")
+              img.logo(src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo")
+
+        section#idea
+          section
+            img(src="https://flask.palletsprojects.com/en/1.1.x/_images/flask-logo.png")
+
+          section
+            h2 Microframework
+            ul
+              li.fragment Provide a very simple glue layer to the best that Python has to offer.
+              li.fragment Micro with Dependencies.
+              li.fragment One Template Engine.
+              li.fragment Werkzeugo-based WSGI and Automatic Routing Systemat.
+              li.fragment Thread Locals.
+              li.fragment Flask will never have a database layer.
+              li.fragment It will not have a form library or anything else in that direction.
+
+          section
+            h2 Explicit Application Object
+            pre(class="python" style="font-size: 18px;")
+              code.
+                from flask import Flask
+                app = Flask(__name__)
+  
+                @app.route('/')
+                def index():
+                    return 'Hello World!'   
+          section
+            h2 Instead of implicit
+            pre(class="python" style="font-size: 18px;")
+              code.
+                from hypothetical_flask import route
+  
+                @route('/')
+                def index():
+                    return 'hello world!'
+          section
+            h2 Explicit/implicit                    
+            ul
+              li Implicit application objects require that there may only be one instance at the time (application factories).
+              li Flexible package name and modularization.
+              li Explicit is better than implicit.
+
+        section#note
+          section
+            h2 Develop for the Web with Caution
+            ul
+              li.fragment Always keep security in mind when building web applications.
+              li.fragment There are #[a(href="https://www.reddit.com/r/cybersecurity/comments/iu17uu/cybersec_cheat_sheets_in_all_flavors_huge_list/") many ways] the security of a web application can be compromised.
+              
+        section#note
+          section
+            h2 Getting started
+            p.fragment Tutorial is #[a(href="https://flask.palletsprojects.com/en/1.1.x/quickstart/#a-minimal-application") here].
+            pre(class="python fragment" style="font-size: 18px;")
+              code.
+                from flask import Flask
+                app = Flask(__name__)
+  
+                @app.route('/')
+                def index():
+                    return 'Hello World!'
+            pre(class="shell fragment" style="font-size: 18px;")
+              code.
+                FLASK_ENV=development FLASK_APP=hello.py flask run
+
+    script(src="../js/reveal.js")
+    script(src="../plugin/zoom/zoom.js")
+    script(src="../plugin/notes/notes.js")
+    script(src="../plugin/search/search.js")
+    script(src="../plugin/markdown/markdown.js")
+    script(src="../plugin/highlight/highlight.js")
+
+
+    script.
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        hash: true,
+        //- transition: "convex",
+
+        //- width: "90%",
+        //- height: "100%",
+
+        plugins: [ RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight ]
+      });
+    script.
+      (function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,"script","https://www.google-analytics.com/analytics.js","ga");
+
+      ga("create", "UA-72531610-1", "auto");
+      ga("send", "pageview");
+

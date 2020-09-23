@@ -1,0 +1,71 @@
+<html lang="en"><head><title>Week 2: Introduction to Pandas. MIDS W209 Information Visualization Slides</title><meta charset="utf-8"/><meta name="author" content="Andy Reagan"/><meta name="description" content="Week 1: Introduction to Altair. MIDS W209 Information Visualization Slides. "/><meta name="apple-mobile-web-app-capable" content="yes"/><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fjalla+One|Raleway|PT+Sans+Narrow"/><link rel="stylesheet" href="https://use.typekit.net/yjc0afr.css"/><link rel="stylesheet" href="../plugin/highlight/monokai.css" id="highlight-theme"/><link href="../css/reveal.css" rel="stylesheet"/><link href="../css/theme/white.css" rel="stylesheet" id="theme"/><link href="../css/style.css" rel="stylesheet"/></head><body><div class="reveal"><div class="slides"><section><h1 class="title">Introduction to Pandas<br/><small>MIDS W209: Information Visualization</small></h1><div class="r-stretch"></div><div class="tiny"><a href="https://andyreagan.com/" target="_blank"><strong> Andy Reagan</strong></a><span> |  andy[at]andyreagan.com</span><a href="https://twitter.com/andyreagan"> |  @andyreagan</a><br/><a href="https://john-guerra.github.io/MIDS_W209_Information_Visualization_Slides/02_Introduction/flask.html" target="_blank">https://john-guerra.github.io/MIDS_W209_Information_Visualization_Slides/02_Introduction/flask.html</a></div><div class="logo"><a href="https://datascience.berkeley.edu/"><img class="logo" src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo"/></a></div></section><section id="10min"><section><h2>10 minutes to</h2><img src="https://pandas.pydata.org/docs/_static/pandas.svg"/></section><section><ul><li class="fragment"></li></ul></section></section><section id="datastructures"><section><h2>Intro to Data Structures with</h2><img src="https://pandas.pydata.org/docs/_static/pandas.svg"/></section><section><ul><li class="fragment"></li></ul></section></section><section id="reshapepivot"><section><h2>Reshaping and pivot tables with</h2><a href="https://pandas.pydata.org/docs/user_guide/reshaping.html#reshaping-and-pivot-tables"><img src="https://pandas.pydata.org/docs/_static/pandas.svg"/></a></section><section><h2>Verbs</h2><ul><li class="fragment">Pivot</li><li class="fragment">Stack and unstack</li><li class="fragment">Melt</li><li class="fragment">Groupby</li><li class="fragment">Pivot table</li><li class="fragment">Crosstab</li><li class="fragment">Dummies</li><li class="fragment">Factorize</li><li class="fragment">Explode</li></ul></section><section><img src="https://pandas.pydata.org/docs/_images/reshaping_pivot.png"/></section><section><img src="https://pandas.pydata.org/docs/_images/reshaping_stack.png"/></section><section><img src="https://pandas.pydata.org/docs/_images/reshaping_unstack.png"/></section><section><img src="https://pandas.pydata.org/docs/_images/reshaping_unstack_1.png"/></section><section><img src="https://pandas.pydata.org/docs/_images/reshaping_unstack_0.png"/></section><section><img src="https://pandas.pydata.org/docs/_images/reshaping_melt.png"/></section><section><h2>Groupby</h2><pre class="python" style="font-size: 18px;"><code>In [54]: df
+Out[54]:
+exp                  A         B                   A
+animal             cat       dog       cat       dog
+first second
+bar   one     0.895717  0.805244 -1.206412  2.565646
+      two     1.431256  1.340309 -1.170299 -0.226169
+baz   one     0.410835  0.813850  0.132003 -0.827317
+      two    -0.076467 -1.187678  1.130127 -1.436737
+foo   one    -1.413681  1.607920  1.024180  0.569605
+      two     0.875906 -2.211372  0.974466 -2.006747
+qux   one    -0.410001 -0.078638  0.545952 -1.219217
+      two    -1.226825  0.769804 -1.281247 -0.727707</code></pre></section><section><h2>Groupby</h2><pre class="python" style="font-size: 18px;"><code>In [55]: df.stack().mean(1).unstack()
+Out[55]:
+animal             cat       dog
+first second
+bar   one    -0.155347  1.685445
+      two     0.130479  0.557070
+baz   one     0.271419 -0.006733
+      two     0.526830 -1.312207
+foo   one    -0.194750  1.088763
+      two     0.925186 -2.109060
+qux   one     0.067976 -0.648927
+      two    -1.254036  0.021048
+
+# same result, another way
+In [56]: df.groupby(level=1, axis=1).mean()
+Out[56]:
+animal             cat       dog
+first second
+bar   one    -0.155347  1.685445
+      two     0.130479  0.557070
+baz   one     0.271419 -0.006733
+      two     0.526830 -1.312207
+foo   one    -0.194750  1.088763
+      two     0.925186 -2.109060
+qux   one     0.067976 -0.648927
+      two    -1.254036  0.021048
+</code></pre></section><section><h2>Groupby</h2><pre class="python" style="font-size: 18px;"><code>In [57]: df.stack().groupby(level=1).mean()
+Out[57]:
+exp            A         B
+second
+one     0.071448  0.455513
+two    -0.424186 -0.204486
+In [58]: df.mean().unstack(0)
+Out[58]:
+exp            A         B
+animal
+cat     0.060843  0.018596
+dog    -0.413580  0.232430
+</code></pre></section><section><h2>Pivot table</h2><p class="fragment">Same as pivot, but aggregate on numerics.</p></section><section><h2>Crosstab</h2><p class="fragment">Conveinence to compute a crosstab.</p><p class="fragment">Same as pivot table, but count.</p><p class="fragment">By default crosstab computes a frequency table of the factors unless an array of values and an aggregation function are passed. Basically:</p><pre class="python fragment" style="font-size: 18px;"><code>pd.crosstab(df['Col X'], df['Col Y'])
+pd.pivot_table(df, index=['Col X'], columns=['Col Y'], aggfunc=len, fill_value=0)
+</code></pre></section><section><h2>Dummies/factorize/explore.</h2><p>Three more functions to help:<ul><li class="fragment">Dummies expands an ordinal/nominal a row to column with 0/1 indicator</li><li class="fragment">Factorize operates on an array: can replaces a column with the unique level.</li><li class="fragment"><code>.explode()</code> takes list values and expands the column.</li></ul></p></section><section><div><img src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo"/></div></section></section></div></div><script src="../js/reveal.js"></script><script src="../plugin/zoom/zoom.js"></script><script src="../plugin/notes/notes.js"></script><script src="../plugin/search/search.js"></script><script src="../plugin/markdown/markdown.js"></script><script src="../plugin/highlight/highlight.js"></script><script>Reveal.initialize({
+  controls: true,
+  progress: true,
+  history: true,
+  center: true,
+  hash: true,
+  //- transition: "convex",
+
+  //- width: "90%",
+  //- height: "100%",
+
+  plugins: [ RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight ]
+});</script><script>(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,"script","https://www.google-analytics.com/analytics.js","ga");
+
+ga("create", "UA-72531610-1", "auto");
+ga("send", "pageview");</script></body></html>

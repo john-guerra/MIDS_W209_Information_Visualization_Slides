@@ -1,0 +1,34 @@
+<html lang="en"><head><title>Week 2: Introduction to Flask. MIDS W209 Information Visualization Slides</title><meta charset="utf-8"/><meta name="author" content="Andy Reagan"/><meta name="description" content="Week 1: Introduction to Altair. MIDS W209 Information Visualization Slides. "/><meta name="apple-mobile-web-app-capable" content="yes"/><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fjalla+One|Raleway|PT+Sans+Narrow"/><link rel="stylesheet" href="https://use.typekit.net/yjc0afr.css"/><link rel="stylesheet" href="../plugin/highlight/monokai.css" id="highlight-theme"/><link href="../css/reveal.css" rel="stylesheet"/><link href="../css/theme/white.css" rel="stylesheet" id="theme"/><link href="../css/style.css" rel="stylesheet"/></head><body><div class="reveal"><div class="slides"><section><h1 class="title">Introduction to Flask<br/><small>MIDS W209: Information Visualization</small></h1><div class="r-stretch"></div><div class="tiny"><a href="https://andyreagan.com/" target="_blank"><strong> Andy Reagan</strong></a><span> |  andy[at]andyreagan.com</span><a href="https://twitter.com/andyreagan"> |  @andyreagan</a><br/><a href="https://john-guerra.github.io/MIDS_W209_Information_Visualization_Slides/02_Introduction/flask.html" target="_blank">https://john-guerra.github.io/MIDS_W209_Information_Visualization_Slides/02_Introduction/flask.html</a></div><div class="logo"><a href="https://datascience.berkeley.edu/"><img class="logo" src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo"/></a></div></section><section id="idea"><section><img src="https://flask.palletsprojects.com/en/1.1.x/_images/flask-logo.png"/></section><section><h2>Microframework</h2><ul><li class="fragment">Provide a very simple glue layer to the best that Python has to offer.</li><li class="fragment">Micro with Dependencies.</li><li class="fragment">One Template Engine.</li><li class="fragment">Werkzeugo-based WSGI and Automatic Routing Systemat.</li><li class="fragment">Thread Locals.</li><li class="fragment">Flask will never have a database layer.</li><li class="fragment">It will not have a form library or anything else in that direction.</li></ul></section><section><h2>Explicit Application Object</h2><pre class="python" style="font-size: 18px;"><code>from flask import Flask
+app = Flask(__name__)
+
+@app.route('/')
+def index():
+    return 'Hello World!'   </code></pre></section><section><h2>Instead of implicit</h2><pre class="python" style="font-size: 18px;"><code>from hypothetical_flask import route
+
+@route('/')
+def index():
+    return 'hello world!'</code></pre></section><section><h2>Explicit/implicit                    </h2><ul><li>Implicit application objects require that there may only be one instance at the time (application factories).</li><li>Flexible package name and modularization.</li><li>Explicit is better than implicit.</li></ul></section></section><section id="note"><section><h2>Develop for the Web with Caution</h2><ul><li class="fragment">Always keep security in mind when building web applications.</li><li class="fragment">There are <a href="https://www.reddit.com/r/cybersecurity/comments/iu17uu/cybersec_cheat_sheets_in_all_flavors_huge_list/">many ways</a> the security of a web application can be compromised.</li></ul></section></section><section id="note"><section><h2>Getting started</h2><p class="fragment">Tutorial is <a href="https://flask.palletsprojects.com/en/1.1.x/quickstart/#a-minimal-application">here</a>.</p><pre class="python fragment" style="font-size: 18px;"><code>from flask import Flask
+app = Flask(__name__)
+
+@app.route('/')
+def index():
+    return 'Hello World!'</code></pre><pre class="shell fragment" style="font-size: 18px;"><code>FLASK_ENV=development FLASK_APP=hello.py flask run
+</code></pre></section></section></div></div><script src="../js/reveal.js"></script><script src="../plugin/zoom/zoom.js"></script><script src="../plugin/notes/notes.js"></script><script src="../plugin/search/search.js"></script><script src="../plugin/markdown/markdown.js"></script><script src="../plugin/highlight/highlight.js"></script><script>Reveal.initialize({
+  controls: true,
+  progress: true,
+  history: true,
+  center: true,
+  hash: true,
+  //- transition: "convex",
+
+  //- width: "90%",
+  //- height: "100%",
+
+  plugins: [ RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight ]
+});</script><script>(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,"script","https://www.google-analytics.com/analytics.js","ga");
+
+ga("create", "UA-72531610-1", "auto");
+ga("send", "pageview");</script></body></html>
