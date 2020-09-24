@@ -71,6 +71,14 @@ Use the following for width-->
 
 ### Software Demos
 
+Networks with `vega-lite`:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/sZ3dwB-weg8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+Color with `vega-lite`:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/hnt6DhZYCUE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## Week 09: Trees_and_Geo
 
 ### Slides
@@ -78,6 +86,14 @@ Use the following for width-->
 <a href="09_Trees_and_Geo/index.html"><img src="screenshots/09_Trees_and_Geo_index.png" width="200px"></a>
 
 ### Software Demos
+
+Trees with `vega-lite`:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/xswb_WjYFj0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+Geo with `vega-lite`:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/wx5SZG-aPDI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Week 10: Manipulate_Views
 
@@ -87,6 +103,11 @@ Use the following for width-->
 
 ### Software Demos
 
+Animations with `vega-lite`:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/hfE_iuzDYwY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
 ## Week 11: Faceting
 
 ### Slides
@@ -94,6 +115,10 @@ Use the following for width-->
 <a href="11_Faceting/index.html"><img src="screenshots/11_Faceting_index.png" width="200px"></a>
 
 ### Software Demos
+
+Faceting with `vega-lite`:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Bo9BV9BsPwU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Week 12: Evaluation
 
