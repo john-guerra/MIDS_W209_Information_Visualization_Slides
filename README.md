@@ -6,11 +6,15 @@ Slides for the W209 Information Visualization course of the Masters in Data Scie
 
 <!-- [![slides](screenshots/01_Introduction_index.png)](01_Introduction/index.html)
 Use the following for width-->
-Slides: <a href="01_Introduction/index.html"><img src="screenshots/01_Introduction_index.png" width="200px"></a>
+Slides:
+
+<a href="01_Introduction/index.html"><img src="screenshots/01_Introduction_index.png" width="200px"></a>
 
 ## Week 02: What
 
-Slides: <a href="02_What/index.html"><img src="screenshots/02_What_index.png" width="200px"></a>
+Slides:
+
+<a href="02_What/index.html"><img src="screenshots/02_What_index.png" width="200px"></a>
 
 ## Week 03: Why
 
