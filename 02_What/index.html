@@ -1,18 +1,109 @@
-<!DOCTYPE html><html lang="en"><head><title>Week 2 What, abstracting the data. MIDS W209 Information Visualization Slides</title><meta charset="utf-8"><meta name="author" content="John Alexis Guerra Gómez"><meta name="description" content="Week 2 What, abstracting the data. MIDS W209 Information Visualization Slides"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fjalla+One|Raleway|PT+Sans+Narrow"><link rel="stylesheet" href="https://use.typekit.net/yjc0afr.css"><link rel="stylesheet" href="../plugin/highlight/monokai.css" id="highlight-theme"><link href="../css/reveal.css" rel="stylesheet"><link href="../css/theme/white.css" rel="stylesheet" id="theme"><link href="../css/style.css" rel="stylesheet"></head><body><div class="reveal"><div class="slides"><section><h1 class="title">What: abstracting the data<br><small>MIDS W209: Information Visualization</small></h1><div class="r-stretch"></div><div class="tiny"><a href="https://johnguerra.co/" target="_blank"><strong> John Alexis Guerra Gómez</strong></a><span> |  john.guerra[at]gmail.com</span><a href="https://twitter.com/duto_guerra"> |  @duto_guerra</a><br><a href="https://andyreagan.com/" target="_blank"><strong> Andy Reagan</strong></a><span> |  andy[at]andyreagan.com</span><a href="https://twitter.com/andyreagan"> |  @andyreagan</a><br><a href="https://johnguerra.co/lectures/MIDS_W209_Information_Visualization/02_What/" target="_blank">https://johnguerra.co/lectures/MIDS_W209_Information_Visualization/02_What/</a></div><div class="logo"><a href="https://datascience.berkeley.edu/"><img class="logo" src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo"></a></div><div class="tiny">Partially based on<a href="https://www.cs.ubc.ca/~tmm/talks.html#minicourse14"> slides from Tamara Munzner</a></div></section><section id="outline"><section class="full"><h2>What we are going to learn</h2><ul class="small"><li class="fragment">Abstracting the data</li><li class="fragment">Types of datasets</li><li class="fragment">Types of attributes</li><li class="fragment">Sequential, diverging, cyclical</li><li class="fragment">Data aggregation (temporal and geo)</li><li class="fragment">Deriving new data</li></ul></section><section><div><img src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo"></div></section></section><section id="abstractingData"><section><h1>Abstracting the data</h1></section><section data-background-size="contain" data-background="../shared_images/what_sheet.png" alt="What: data abstraction summary sheet" id="what"></section><section><h2>Why abstract the data?</h2><ul><li>Different attribute types 👉 different representations</li><li class="fragment">Different dataset types 👉 different idioms available</li></ul></section><section><h2>What do you need to abstract?</h2><div class="flex"><div class="half"><span><svg width="100%" height="100%" viewBox="0 0 2146 1498" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-
-    <!-- Generator: Sketch 62 (91390) - https://sketch.com -->
-    <title>What_highlighted</title>
-    <desc>Created with Sketch.</desc>
-    <image href="../shared_images/what_sheet.png" width="100%" height="100%"/>
-    <g class="What_highlighted" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-
-        <path d="M622,644 L1663,644 L1663,1204 L1106.86647,1204 L1106.86647,1481 L619.745819,1481 L622,644 Z" class="fragment" stroke="#F5A623" stroke-width="10" stroke-dasharray="8,10" data-fragment-index="1"></path>
-        <path d="M1682,137 L2086,137 L2086,644 L1682,644 L1682,137 Z" class="fragment" stroke="#F5A623" stroke-width="10" stroke-dasharray="8,10" data-fragment-index="2"></path>
-        <path d="M1682,662 L2086,662 L2086,1169 L1682,1169 L1682,662 Z" class="fragment" stroke="#F5A623" stroke-width="10" stroke-dasharray="8,10" data-fragment-index="3"></path>
-        <path d="M1197,1233 L1957,1233 L1957,1481 L1197,1481 L1197,1233 Z" class="fragment" stroke="#F5A623" stroke-width="10" stroke-dasharray="8,10" data-fragment-index="4"></path>
-    </g>
-</svg>
-</span></div><div class="half"><ul class="tiny"><li class="fragment" data-fragment-index="1"><strong>Dataset type</strong>: (e.g., table, network, temporal ...)</li><li class="fragment" data-fragment-index="2"><strong>Attribute types</strong>: (e.g. categorical, ordinal, quantitative)</li><li class="fragment" data-fragment-index="3"><strong>Ordering direction</strong>: (e.g. sequential, diverging, cyclical)</li><li class="fragment" data-fragment-index="4"><strong>Data availability</strong>: (e.g. dynamic, static)</li></ul></div></div></section><section><div><img src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo"></div></section></section><section id="datasets"><section><h1>Types of Datasets</h1></section><section><img src="../shared_images/vad_book_alldiagrams/dataset_types.png" alt="Dataset Types: tables, network/trees fields geometry"><div><strong class="fragment">+ Temporal!</strong></div></section><section><h2>Tables</h2><div class="flex small"><div class="half"><ul><li>The vast majority of datasets</li><li class="fragment">Attributes (columns) + items (rows)</li><li class="fragment">Other dataset types are usually stored as a combination of tables</li></ul></div><div class="half tiny vcentered"><span class="tiny"><table>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Week 2 What, abstracting the data. MIDS W209 Information Visualization Slides</title>
+    <meta charset="utf-8">
+    <meta name="author" content="John Alexis Guerra Gómez">
+    <meta name="description" content="Week 2 What, abstracting the data. MIDS W209 Information Visualization Slides">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fjalla+One|Raleway|PT+Sans+Narrow">
+    <link rel="stylesheet" href="https://use.typekit.net/yjc0afr.css">
+    <link rel="stylesheet" href="../plugin/highlight/monokai.css" id="highlight-theme">
+    <link href="../css/reveal.css" rel="stylesheet">
+    <link href="../css/theme/white.css" rel="stylesheet" id="theme">
+    <link href="../css/style.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h1 class="title">What: abstracting the data<br><small>MIDS W209: Information Visualization</small></h1>
+          <div class="r-stretch"></div>
+          <div class="tiny"><a href="https://johnguerra.co/" target="_blank"><strong> John Alexis Guerra Gómez</strong></a><span> |  john.guerra[at]gmail.com</span><a href="https://twitter.com/duto_guerra"> |  @duto_guerra</a><br><a href="https://andyreagan.com/" target="_blank"><strong> Andy Reagan</strong></a><span> |  andy[at]andyreagan.com</span><a href="https://twitter.com/andyreagan"> |  @andyreagan</a><br><a href="https://johnguerra.co/lectures/MIDS_W209_Information_Visualization/02_What/" target="_blank">https://johnguerra.co/lectures/MIDS_W209_Information_Visualization/02_What/</a></div>
+          <div class="logo"><a href="https://datascience.berkeley.edu/"><img class="logo" src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo"></a></div>
+          <div class="tiny">Partially based on<a href="https://www.cs.ubc.ca/~tmm/talks.html#minicourse14"> slides from Tamara Munzner</a></div>
+        </section>
+        <section id="outline">
+          <section class="full">
+            <h2>What we are going to learn</h2>
+            <ul class="small">
+              <li class="fragment">Abstracting the data</li>
+              <li class="fragment">Types of datasets</li>
+              <li class="fragment">Types of attributes</li>
+              <li class="fragment">Sequential, diverging, cyclical</li>
+              <li class="fragment">Data aggregation (temporal and geo)</li>
+              <li class="fragment">Deriving new data</li>
+            </ul>
+          </section>
+          <section>
+            <div><img src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo"></div>
+          </section>
+        </section>
+        <section id="abstractingData">
+          <section>
+            <h1>Abstracting the data</h1>
+          </section>
+          <section data-background-size="contain" data-background="../shared_images/what_sheet.png" alt="What: data abstraction summary sheet" id="what"></section>
+          <section>
+            <h2>Why abstract the data?</h2>
+            <ul>
+              <li>Different attribute types 👉 different representations</li>
+              <li class="fragment">Different dataset types 👉 different idioms available</li>
+            </ul>
+          </section>
+          <section>
+            <h2>What do you need to abstract?</h2>
+            <div class="flex">
+              <div class="half"><span>
+                  <svg width="100%" height="100%" viewBox="0 0 2146 1498" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  
+                      <!-- Generator: Sketch 62 (91390) - https://sketch.com -->
+                      <title>What_highlighted</title>
+                      <desc>Created with Sketch.</desc>
+                      <image href="../shared_images/what_sheet.png" width="100%" height="100%"/>
+                      <g class="What_highlighted" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                  
+                          <path d="M622,644 L1663,644 L1663,1204 L1106.86647,1204 L1106.86647,1481 L619.745819,1481 L622,644 Z" class="fragment" stroke="#F5A623" stroke-width="10" stroke-dasharray="8,10" data-fragment-index="1"></path>
+                          <path d="M1682,137 L2086,137 L2086,644 L1682,644 L1682,137 Z" class="fragment" stroke="#F5A623" stroke-width="10" stroke-dasharray="8,10" data-fragment-index="2"></path>
+                          <path d="M1682,662 L2086,662 L2086,1169 L1682,1169 L1682,662 Z" class="fragment" stroke="#F5A623" stroke-width="10" stroke-dasharray="8,10" data-fragment-index="3"></path>
+                          <path d="M1197,1233 L1957,1233 L1957,1481 L1197,1481 L1197,1233 Z" class="fragment" stroke="#F5A623" stroke-width="10" stroke-dasharray="8,10" data-fragment-index="4"></path>
+                      </g>
+                  </svg>
+                  </span></div>
+              <div class="half">
+                <ul class="tiny">
+                  <li class="fragment" data-fragment-index="1"><strong>Dataset type</strong>: (e.g., table, network, temporal ...)</li>
+                  <li class="fragment" data-fragment-index="2"><strong>Attribute types</strong>: (e.g. categorical, ordinal, quantitative)</li>
+                  <li class="fragment" data-fragment-index="3"><strong>Ordering direction</strong>: (e.g. sequential, diverging, cyclical)</li>
+                  <li class="fragment" data-fragment-index="4"><strong>Data availability</strong>: (e.g. dynamic, static)</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+          <section>
+            <div><img src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo"></div>
+          </section>
+        </section>
+        <section id="datasets">
+          <section>
+            <h1>Types of Datasets</h1>
+          </section>
+          <section><img src="../shared_images/vad_book_alldiagrams/dataset_types.png" alt="Dataset Types: tables, network/trees fields geometry">
+            <div><strong class="fragment">+ Temporal!</strong></div>
+          </section>
+          <section>
+            <h2>Tables</h2>
+            <div class="flex small">
+              <div class="half">
+                <ul>
+                  <li>The vast majority of datasets</li>
+                  <li class="fragment">Attributes (columns) + items (rows)</li>
+                  <li class="fragment">Other dataset types are usually stored as a combination of tables</li>
+                </ul>
+              </div>
+              <div class="half tiny vcentered"><span class="tiny"><table>
 <thead>
 <tr>
 <th>price</th>
@@ -134,7 +225,17 @@
 <td>167780692</td>
 </tr>
 </tbody>
-</table></span><div class="reference"><a href="https://www.kaggle.com/doaaalsenani/usa-cers-dataset">Sample data from Kaggle's US Cars dataset</a></div></div></div></section><section class="full"><h2>File formats</h2><div class="flex tiny"><div class="half tiny"><h3>Comma Separated File (CSV)</h3><pre class="small"><code>﻿price,brand,model,title_status,mileage,color,lot
+</table></span>
+                <div class="reference"><a href="https://www.kaggle.com/doaaalsenani/usa-cers-dataset">Sample data from Kaggle's US Cars dataset</a></div>
+              </div>
+            </div>
+          </section>
+          <section class="full">
+            <h2>File formats</h2>
+            <div class="flex tiny">
+              <div class="half tiny">
+                <h3>Comma Separated File (CSV)</h3>
+                <pre class="small"><code>﻿price,brand,model,title_status,mileage,color,lot
 21500,ford,f-150,clean vehicle,76876,gray,167783132
 7500,nissan,door,clean vehicle,58126,black,167598085
 10700,chevrolet,trax,clean vehicle,44280,red,167792666
@@ -146,7 +247,11 @@
 1150,ford,door,salvage insurance,123349,red,167652717
 26100,ford,f-150,clean vehicle,32149,white,167741409
 14000,ford,fusion,clean vehicle,50513,white,167749355
-22500,ford,door,clean vehicle,43646,black,167780692</code></pre></div><div class="half tiny"><h3>JSON</h3><pre class="small"><code>[
+22500,ford,door,clean vehicle,43646,black,167780692</code></pre>
+              </div>
+              <div class="half tiny">
+                <h3>JSON</h3>
+                <pre class="small"><code>[
   {
     "price": 21500,
     "brand": "ford",
@@ -256,8 +361,315 @@
     "lot": 167780692
   }
 ]
-</code></pre></div></div></section><section><h2>Temporal</h2><ul><li>Tabular + time-related attribute</li><li class="fragment">Aggregations</li><li class="fragment">Cyclical</li><li class="fragment">Events or intervals</li><li class="fragment">Seasonality patterns</li></ul></section><section><h2>Networks</h2><ul><li>Nodes + links</li><li class="fragment">Attributes on both</li><li class="fragment">Network idioms</li><li class="fragment">Network analytics</li></ul></section><section><h2>How are networks stored?</h2><ul><li>Two files</li><li class="fragment">JSON file</li><li class="fragment">Adjacency matrix</li><li class="fragment">Generated from any data</li></ul></section><section><h2>Trees</h2><ul><li>Hierarchical data</li><li class="fragment">A subset of networks</li><li class="fragment">Deserves its own class!</li><li class="fragment">Tree idioms</li><li class="fragment"><a href="https://observablehq.com/@john-guerra/treemap-from-table?collection=@john-guerra/d3-tutorials">Can be created out of tables</a></li></ul></section><section><h2>How are trees stored?</h2><ul><li>Table with path attribute</li><li class="fragment">JSON file</li><li class="fragment">Generated from any data</li></ul></section><section><h2>Geometry</h2><ul><li>Location data (usually latitutde/longitude)</li><li class="fragment">2D or 3D</li><li class="fragment">Inherent shape</li><li class="fragment">Points, routes, shapes</li></ul></section><section><h2>Fields</h2><ul><li>Continuous</li><li class="fragment">Sampled</li><li class="fragment">Example: brain scan</li></ul></section><section><h2>Data availability</h2><ul><li>Static 👉 data don't change</li><li class="fragment">Dynamic 👉 data are constantly updating (e.g., stock prices)</li><li class="fragment">For dynamic data, you will need a data endpoint</li></ul></section><section><div><img src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo"></div></section></section><section id="datasetStorage"><section><h1>Dataset Storage</h1></section><section><h3>Compute vs Store</h3><ul><li>Always a balancing act.</li><li>Front end computation is faster than you may expect, while load times are user-dependent.</li></ul></section><section><h3>API basics</h3><ul><li>API's are just HTTP/HTTPS endpoints like any other web page.</li><li>Response headers can indicate expected file type returned.</li><li>Demo: hit <a href="http://hedonometer.org/api/v1/happiness/?format=json&amp;title=en_all&amp;date__gt=2020-05-01&amp;limit=10">hedonometer.org/api/v1/happiness/?format=json&title=en_all&date__gt=2020-05-01&limit=10</a></li></ul></section><section><h3>Connecting to a database</h3><ul><li>D3 needs an API (Flask or likewise).</li><li>Python/R: many options (sqlalchemy, native clients, etc).</li><li>Tableau built-in: live vs extract.</li></ul></section><section><h3>Case studies for complex data processing</h3><ul><li>MapD.</li><li>Hedonometer.</li><li>imMens.</li><li>Crossfilter.</li></ul></section><section><h3>MapD (now Omni-Sci)</h3><ul><li>Original <a href="http://go.mapd.com/resources_whitepaper_mapd_lp.html">white paper</a>.</li><ul><li>Computation done server side on custom hardware: GPU memory.</li><li>Interacts with front end via API.</li><li>Fast on a scale that's unimaginable in the front-end alone.</li></ul></ul><img src="../shared_images/mapd.png" alt="MapD"></section><section><h3>Hedonometer</h3><ul><li>Based on 10% decahose feed of all Tweets, ~250-500GB uncompressed per day.</li><ul><li>Processing of Tweets to word count dictionaries done in parallel on 200+ node cluster.</li><li>Jobs in 15 minute increments, run hourly.</li><li>Webserver consumes these dictionaries, sums daily (Jenkins).</li><li>Time series data is precomputed, fixed-length word count vectors precomputed for each day.</li></ul></ul></section><section><h3>Hedonometer</h3><img src="../shared_images/hedonometer-webserver.png" alt="MapD"></section><section><h3>imMens</h3><ul><li>Based on binned aggregation.</li><li>Precomputes multivariate data projections and store these as data tiles.</li><li>Front-end dynamically loads appropriate data tiles and uses WebGL for data processing and rendering.</li></ul><div><iframe src="https://player.vimeo.com/video/68736161" width="640" height="400" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-<p><a href="https://vimeo.com/68736161">imMens: Real-time Visual Querying of Big Data</a> from <a href="https://vimeo.com/stanfordvis">Stanford Visualization Group</a> on <a href="https://vimeo.com">Vimeo</a>.</p>              </div><div class="reference"><a href="http://vis.stanford.edu/projects/immens/">imMens by Stanford</a></div></section><section><h3>Tiled backend</h3><img src="../shared_images/tiled.png" alt="Tiled"></section><section><h3>Crossfilter</h3><ul><li>Purely front-end.</li><li>Hashed lookup optimized for filter operations in-memory.</li><li>Scales to 100's of thousands of records.</li></ul><div class="reference"><a href="https://crossfilter.github.io/crossfilter/">Crossfilter Demo             </a></div></section><section><h3>Summary: questions to ask</h3><ul><li>Where is the data?</li><li>What format is it in?</li><li>How big is the data?</li><li>How complex or computationally intensive is the processing needed?</li><li>Never forget ethics: was it collected with consent for this use?</li></ul></section></section><section id="attributes"><section><h1>Types of Attributes</h1></section><section><img src="../shared_images/vad_book_alldiagrams/data_attribute_types.png" alt="Data attribute types: categorical, ordinal and quantitative"></section><section><h2>Categorical</h2><ul><li>No order</li><li class="fragment">E.g., names, countries, types</li><li class="fragment">Must be represented with visual channels that don't convey order</li></ul></section><section><h2>Ordinal</h2><ul><li>Has implicit order</li><li class="fragment">But, you can't do arithmetic</li><li class="fragment">Can even be numerical</li><li class="fragment">E.g., t-shirt sizes, school years, rankings</li></ul></section><section><h2>Quantitative</h2><ul><li>Also ordered</li><li class="fragment">You can perform arithmetic</li><li class="fragment">Can be divergent or sequential</li><li class="fragment">E.g., age, temperature, earnings</li></ul></section><section><div><img src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo"></div></section></section><section id="quantitative"><section><h1>Ordering direction</h1></section><section><img src="../shared_images/vad_book_alldiagrams/data_ordering_types.png" alt="Data ordering types: sequential, diverging and Cyclical"></section><section><h2>Sequential</h2><ul><li>The is a full range with a clear minimum</li><li class="fragment">You can perform arithmetic</li><li class="fragment">E.g., age, goals ⚽️, price 💰</li></ul></section><section><h2>Divergent</h2><ul><li>There is a middle point</li><li class="fragment">And two opposite directions</li><li class="fragment">Sometimes the middle point is not zero</li><li class="fragment">E.g., temperature, earnings, political affiliation index</li></ul></section><section><h2>Cyclical</h2><ul><li>There is a cycle in the data</li><li class="fragment">No starting point (?)</li><li class="fragment">Can be represented with cyclical channels</li><li class="fragment">E.g., Days of the week, hours in the day</li></ul></section><section><div><img src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo"></div></section></section><section id="dataAggregation"><section><h1>Data Aggregation</h1></section><section><h2>Aggregating Spatial data</h2><div class="small">E.g., count votes by:</div><ul class="tiny"><li>County</li><li class="fragment">City</li><li class="fragment">State</li><li class="fragment">Country</li><li class="fragment">Zipcode? <span>Can span multiple counties 🤷</span></li><li class="fragment">Custom areas</li></ul></section><section><h2>Aggregating Temporal data</h2><div>By truncating the date</div><ul><li>2020 June 27 5:25PM</li><li class="fragment">2020 June 27 5:00PM</li><li class="fragment">2020 June 27</li><li class="fragment">2020 June</li><li class="fragment">2020 Q1</li><li class="fragment">2020</li></ul><div class="fragment">Take a look at the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date">date object</a></div></section><section><h2>Aggregating Temporal data</h2><div>By extracting parts of the date</div><ul><li>2020 June 27 5:25PM</li><li class="fragment">Week 26 of the year</li><li class="fragment">5:00 - 6:00 PM</li><li class="fragment">Saturday</li><li class="fragment">June</li></ul></section><section><div><img src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo"></div></section></section><section id="practice"><section><h1>Practice</h1></section></section><section id="introToJS"><section><h2>Introduction to JS</h2></section></section><section id="JSONvsCSV"><section><h2>JSON vs. CSV</h2></section><div class="flex tiny"><div class="half tiny"><h3>Comma Separated File (CSV)</h3><pre class="small"><code>﻿price,brand,model,title_status,mileage,color,lot
+</code></pre>
+              </div>
+            </div>
+          </section>
+          <section>
+            <h2>Temporal</h2>
+            <ul>
+              <li>Tabular + time-related attribute</li>
+              <li class="fragment">Aggregations</li>
+              <li class="fragment">Cyclical</li>
+              <li class="fragment">Events or intervals</li>
+              <li class="fragment">Seasonality patterns</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Networks</h2>
+            <ul>
+              <li>Nodes + links</li>
+              <li class="fragment">Attributes on both</li>
+              <li class="fragment">Network idioms</li>
+              <li class="fragment">Network analytics</li>
+            </ul>
+          </section>
+          <section>
+            <h2>How are networks stored?</h2>
+            <ul>
+              <li>Two files</li>
+              <li class="fragment">JSON file</li>
+              <li class="fragment">Adjacency matrix</li>
+              <li class="fragment">Generated from any data</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Trees</h2>
+            <ul>
+              <li>Hierarchical data</li>
+              <li class="fragment">A subset of networks</li>
+              <li class="fragment">Deserves its own class!</li>
+              <li class="fragment">Tree idioms</li>
+              <li class="fragment"><a href="https://observablehq.com/@john-guerra/treemap-from-table?collection=@john-guerra/d3-tutorials">Can be created out of tables</a></li>
+            </ul>
+          </section>
+          <section>
+            <h2>How are trees stored?</h2>
+            <ul>
+              <li>Table with path attribute</li>
+              <li class="fragment">JSON file</li>
+              <li class="fragment">Generated from any data</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Geometry</h2>
+            <ul>
+              <li>Location data (usually latitutde/longitude)</li>
+              <li class="fragment">2D or 3D</li>
+              <li class="fragment">Inherent shape</li>
+              <li class="fragment">Points, routes, shapes</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Fields</h2>
+            <ul>
+              <li>Continuous</li>
+              <li class="fragment">Sampled</li>
+              <li class="fragment">Example: brain scan</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Data availability</h2>
+            <ul>
+              <li>Static 👉 data don't change</li>
+              <li class="fragment">Dynamic 👉 data are constantly updating (e.g., stock prices)</li>
+              <li class="fragment">For dynamic data, you will need a data endpoint</li>
+            </ul>
+          </section>
+          <section>
+            <div><img src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo"></div>
+          </section>
+        </section>
+        <section id="datasetStorage">
+          <section>
+            <h1>Dataset Storage</h1>
+          </section>
+          <section>
+            <h3>Compute vs Store</h3>
+            <ul>
+              <li>Always a balancing act.</li>
+              <li>Front end computation is faster than you may expect, while load times are user-dependent.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>API basics</h3>
+            <ul>
+              <li>API's are just HTTP/HTTPS endpoints like any other web page.</li>
+              <li>Response headers can indicate expected file type returned.</li>
+              <li>Demo: hit <a href="http://hedonometer.org/api/v1/happiness/?format=json&amp;title=en_all&amp;date__gt=2020-05-01&amp;limit=10">hedonometer.org/api/v1/happiness/?format=json&title=en_all&date__gt=2020-05-01&limit=10</a></li>
+            </ul>
+          </section>
+          <section>
+            <h3>Connecting to a database</h3>
+            <ul>
+              <li>D3 needs an API (Flask or likewise).</li>
+              <li>Python/R: many options (sqlalchemy, native clients, etc).</li>
+              <li>Tableau built-in: live vs extract.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>Case studies for complex data processing</h3>
+            <ul>
+              <li>MapD.</li>
+              <li>Hedonometer.</li>
+              <li>imMens.</li>
+              <li>Crossfilter.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>MapD (now Omni-Sci)</h3>
+            <ul>
+              <li>Original <a href="http://go.mapd.com/resources_whitepaper_mapd_lp.html">white paper</a>.</li>
+              <ul>
+                <li>Computation done server side on custom hardware: GPU memory.</li>
+                <li>Interacts with front end via API.</li>
+                <li>Fast on a scale that's unimaginable in the front-end alone.</li>
+              </ul>
+            </ul><img src="../shared_images/mapd.png" alt="MapD">
+          </section>
+          <section>
+            <h3>Hedonometer</h3>
+            <ul>
+              <li>Based on 10% decahose feed of all Tweets, ~250-500GB uncompressed per day.</li>
+              <ul>
+                <li>Processing of Tweets to word count dictionaries done in parallel on 200+ node cluster.</li>
+                <li>Jobs in 15 minute increments, run hourly.</li>
+                <li>Webserver consumes these dictionaries, sums daily (Jenkins).</li>
+                <li>Time series data is precomputed, fixed-length word count vectors precomputed for each day.</li>
+              </ul>
+            </ul>
+          </section>
+          <section>
+            <h3>Hedonometer</h3><img src="../shared_images/hedonometer-webserver.png" alt="MapD">
+          </section>
+          <section>
+            <h3>imMens</h3>
+            <ul>
+              <li>Based on binned aggregation.</li>
+              <li>Precomputes multivariate data projections and store these as data tiles.</li>
+              <li>Front-end dynamically loads appropriate data tiles and uses WebGL for data processing and rendering.</li>
+            </ul>
+            <div>
+              <iframe src="https://player.vimeo.com/video/68736161" width="640" height="400" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+              <p><a href="https://vimeo.com/68736161">imMens: Real-time Visual Querying of Big Data</a> from <a href="https://vimeo.com/stanfordvis">Stanford Visualization Group</a> on <a href="https://vimeo.com">Vimeo</a>.</p>              
+            </div>
+            <div class="reference"><a href="http://vis.stanford.edu/projects/immens/">imMens by Stanford</a></div>
+          </section>
+          <section>
+            <h3>Tiled backend</h3><img src="../shared_images/tiled.png" alt="Tiled">
+          </section>
+          <section>
+            <h3>Crossfilter</h3>
+            <ul>
+              <li>Purely front-end.</li>
+              <li>Hashed lookup optimized for filter operations in-memory.</li>
+              <li>Scales to 100's of thousands of records.</li>
+            </ul>
+            <div class="reference"><a href="https://crossfilter.github.io/crossfilter/">Crossfilter Demo             </a></div>
+          </section>
+          <section>
+            <h3>Summary: questions to ask</h3>
+            <ul>
+              <li>Where is the data?</li>
+              <li>What format is it in?</li>
+              <li>How big is the data?</li>
+              <li>How complex or computationally intensive is the processing needed?</li>
+              <li>Never forget ethics: was it collected with consent for this use?</li>
+            </ul>
+          </section>
+        </section>
+        <section id="attributes">
+          <section>
+            <h1>Types of Attributes</h1>
+          </section>
+          <section><img src="../shared_images/vad_book_alldiagrams/data_attribute_types.png" alt="Data attribute types: categorical, ordinal and quantitative"></section>
+          <section>
+            <h2>Categorical</h2>
+            <ul>
+              <li>No order</li>
+              <li class="fragment">E.g., names, countries, types</li>
+              <li class="fragment">Must be represented with visual channels that don't convey order</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Ordinal</h2>
+            <ul>
+              <li>Has implicit order</li>
+              <li class="fragment">But, you can't do arithmetic</li>
+              <li class="fragment">Can even be numerical</li>
+              <li class="fragment">E.g., t-shirt sizes, school years, rankings</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Quantitative</h2>
+            <ul>
+              <li>Also ordered</li>
+              <li class="fragment">You can perform arithmetic</li>
+              <li class="fragment">Can be divergent or sequential</li>
+              <li class="fragment">E.g., age, temperature, earnings</li>
+            </ul>
+          </section>
+          <section>
+            <div><img src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo"></div>
+          </section>
+        </section>
+        <section id="quantitative">
+          <section>
+            <h1>Ordering direction</h1>
+          </section>
+          <section><img src="../shared_images/vad_book_alldiagrams/data_ordering_types.png" alt="Data ordering types: sequential, diverging and Cyclical"></section>
+          <section>
+            <h2>Sequential</h2>
+            <ul>
+              <li>The is a full range with a clear minimum</li>
+              <li class="fragment">You can perform arithmetic</li>
+              <li class="fragment">E.g., age, goals ⚽️, price 💰</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Divergent</h2>
+            <ul>
+              <li>There is a middle point</li>
+              <li class="fragment">And two opposite directions</li>
+              <li class="fragment">Sometimes the middle point is not zero</li>
+              <li class="fragment">E.g., temperature, earnings, political affiliation index</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Cyclical</h2>
+            <ul>
+              <li>There is a cycle in the data</li>
+              <li class="fragment">No starting point (?)</li>
+              <li class="fragment">Can be represented with cyclical channels</li>
+              <li class="fragment">E.g., Days of the week, hours in the day</li>
+            </ul>
+          </section>
+          <section>
+            <div><img src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo"></div>
+          </section>
+        </section>
+        <section id="dataAggregation">
+          <section>
+            <h1>Data Aggregation</h1>
+          </section>
+          <section>
+            <h2>Aggregating Spatial data</h2>
+            <div class="small">E.g., count votes by:</div>
+            <ul class="tiny">
+              <li>County</li>
+              <li class="fragment">City</li>
+              <li class="fragment">State</li>
+              <li class="fragment">Country</li>
+              <li class="fragment">Zipcode? <span>Can span multiple counties 🤷</span></li>
+              <li class="fragment">Custom areas</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Aggregating Temporal data</h2>
+            <div>By truncating the date</div>
+            <ul>
+              <li>2020 June 27 5:25PM</li>
+              <li class="fragment">2020 June 27 5:00PM</li>
+              <li class="fragment">2020 June 27</li>
+              <li class="fragment">2020 June</li>
+              <li class="fragment">2020 Q1</li>
+              <li class="fragment">2020</li>
+            </ul>
+            <div class="fragment">Take a look at the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date">date object</a></div>
+          </section>
+          <section>
+            <h2>Aggregating Temporal data</h2>
+            <div>By extracting parts of the date</div>
+            <ul>
+              <li>2020 June 27 5:25PM</li>
+              <li class="fragment">Week 26 of the year</li>
+              <li class="fragment">5:00 - 6:00 PM</li>
+              <li class="fragment">Saturday</li>
+              <li class="fragment">June</li>
+            </ul>
+          </section>
+          <section>
+            <div><img src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo"></div>
+          </section>
+        </section>
+        <section id="practice">
+          <section>
+            <h1>Practice</h1>
+          </section>
+        </section>
+        <section id="introToJS">
+          <section>
+            <h2>Introduction to JS</h2>
+          </section>
+        </section>
+        <section id="JSONvsCSV">
+          <section>
+            <h2>JSON vs. CSV</h2>
+          </section>
+          <div class="flex tiny">
+            <div class="half tiny">
+              <h3>Comma Separated File (CSV)</h3>
+              <pre class="small"><code>﻿price,brand,model,title_status,mileage,color,lot
 21500,ford,f-150,clean vehicle,76876,gray,167783132
 7500,nissan,door,clean vehicle,58126,black,167598085
 10700,chevrolet,trax,clean vehicle,44280,red,167792666
@@ -269,7 +681,11 @@
 1150,ford,door,salvage insurance,123349,red,167652717
 26100,ford,f-150,clean vehicle,32149,white,167741409
 14000,ford,fusion,clean vehicle,50513,white,167749355
-22500,ford,door,clean vehicle,43646,black,167780692</code></pre></div><div class="half tiny"><h3>JSON</h3><pre class="small"><code>[
+22500,ford,door,clean vehicle,43646,black,167780692</code></pre>
+            </div>
+            <div class="half tiny">
+              <h3>JSON</h3>
+              <pre class="small"><code>[
   {
     "price": 21500,
     "brand": "ford",
@@ -379,22 +795,85 @@
     "lot": 167780692
   }
 ]
-</code></pre></div><a href="http://learnjsdata.com/read_data.html">http://learnjsdata.com/read_data.html</a></div></section><section id="ArrayFunctions"><section><h2>Array functions (map, filter, sort)</h2><a href="http://learnjsdata.com/group_data.html">http://learnjsdata.com/group_data.html</a></section></section><section id="nestingJS"><section><h2>Nesting, Folding, Pivoting, etc. in JS</h2><a href="http://learnjsdata.com/group_data.html">http://learnjsdata.com/group_data.html</a></section></section><section id="nestingPython"><section><h2>Nesting, Folding, Pivoting, etc. in Python</h2></section></section><section id="nestingTableau"><section><h2>Nesting, Folding, Pivoting, etc. in Tableau?</h2></section></section><section id="flask"><section><h2>Serving data from the back-end (Introduction to Flask)</h2></section></section><section id="review"><section><h1>What we learned</h1></section><section data-background-size="contain" data-background="../shared_images/what_sheet.png" id="what"></section><section><h2>What we learned</h2><ul><li>Abstracting the data</li><li class="fragment">Types of datasets</li><li class="fragment">Types of attributes</li><li class="fragment">Sequential, diverging, cyclical</li><li class="fragment">Data aggregation (temporal and geo)</li></ul></section><section><div><img src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo"></div></section></section></div></div><script src="../js/reveal.js"></script><script src="../plugin/zoom/zoom.js"></script><script src="../plugin/notes/notes.js"></script><script src="../plugin/search/search.js"></script><script src="../plugin/markdown/markdown.js"></script><script src="../plugin/highlight/highlight.js"></script><script>Reveal.initialize({
-  controls: true,
-  progress: true,
-  history: true,
-  center: true,
-  hash: true,
-  //- transition: "convex",
-
-  //- width: "90%",
-  //- height: "100%",
-
-  plugins: [ RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight ]
-});</script><script>(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,"script","https://www.google-analytics.com/analytics.js","ga");
-
-ga("create", "UA-72531610-1", "auto");
-ga("send", "pageview");</script></body></html>
+</code></pre>
+            </div><a href="http://learnjsdata.com/read_data.html">http://learnjsdata.com/read_data.html</a>
+          </div>
+        </section>
+        <section id="ArrayFunctions">
+          <section>
+            <h2>Array functions (map, filter, sort)</h2><a href="http://learnjsdata.com/group_data.html">http://learnjsdata.com/group_data.html</a>
+          </section>
+        </section>
+        <section id="nestingJS">
+          <section>
+            <h2>Nesting, Folding, Pivoting, etc. in JS</h2><a href="http://learnjsdata.com/group_data.html">http://learnjsdata.com/group_data.html</a>
+          </section>
+        </section>
+        <section id="nestingPython">
+          <section>
+            <h2>Nesting, Folding, Pivoting, etc. in Python</h2>
+          </section>
+        </section>
+        <section id="nestingTableau">
+          <section>
+            <h2>Nesting, Folding, Pivoting, etc. in Tableau?</h2>
+          </section>
+        </section>
+        <section id="flask">
+          <section>
+            <h2>Serving data from the back-end (Introduction to Flask)</h2>
+          </section>
+        </section>
+        <section id="review">
+          <section>
+            <h1>What we learned</h1>
+          </section>
+          <section data-background-size="contain" data-background="../shared_images/what_sheet.png" id="what"></section>
+          <section>
+            <h2>What we learned</h2>
+            <ul>
+              <li>Abstracting the data</li>
+              <li class="fragment">Types of datasets</li>
+              <li class="fragment">Types of attributes</li>
+              <li class="fragment">Sequential, diverging, cyclical</li>
+              <li class="fragment">Data aggregation (temporal and geo)</li>
+            </ul>
+          </section>
+          <section>
+            <div><img src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo"></div>
+          </section>
+        </section>
+      </div>
+    </div>
+    <script src="../js/reveal.js"></script>
+    <script src="../plugin/zoom/zoom.js"></script>
+    <script src="../plugin/notes/notes.js"></script>
+    <script src="../plugin/search/search.js"></script>
+    <script src="../plugin/markdown/markdown.js"></script>
+    <script src="../plugin/highlight/highlight.js"></script>
+    <script>
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        hash: true,
+        //- transition: "convex",
+      
+        //- width: "90%",
+        //- height: "100%",
+      
+        plugins: [ RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight ]
+      });
+    </script>
+    <script>
+      (function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,"script","https://www.google-analytics.com/analytics.js","ga");
+      
+      ga("create", "UA-72531610-1", "auto");
+      ga("send", "pageview");
+    </script>
+  </body>
+</html>
