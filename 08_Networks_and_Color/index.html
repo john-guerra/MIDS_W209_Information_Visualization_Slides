@@ -225,7 +225,7 @@
               <script type="module">
                 import {Runtime, Inspector, Library} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
                 import define from "https://api.observablehq.com/@john-guerra/force-in-a-box.js?v=3";
-                const runtime = new Runtime(Object.assign(new Library, {width: document.querySelector(".observablehq-chart").clientWidth-200}))
+                const runtime = new Runtime(Object.assign(new Library, {width: document.querySelector("#observablehq-ca11e9c8 .observablehq-chart").clientWidth-200}))
                 runtime.module(define, name => {
                   if (name === "viewof useGroupInABox") return Inspector.into("#observablehq-ca11e9c8 .observablehq-viewof-useGroupInABox")();
                   if (name === "viewof template") return Inspector.into("#observablehq-ca11e9c8 .observablehq-viewof-template")();
@@ -298,36 +298,44 @@
         </section>
         <section id="adjacencyIdiom">
           <section>
+            <h1>Matrix Representations</h1>
+          </section>
+          <section>
             <h2>Idiom: Adjacency Matrix View</h2>
             <div class="flex">
               <div class="half">
                 <ul class="tiny">
-                  <li class="fragment"><strong>Data:</strong> network</li>
-                  <ul>
-                    <li>Transform into same data/encoding as heatmap</li>
-                  </ul>
-                  <li class="fragment"><strong>Derived data:</strong> table from network</li>
-                  <ul>
-                    <li>One quantitative attribute</li>
+                  <li class="fragment"><strong>Data:</strong> network
                     <ul>
-                      <li>Weighted edge between nodes</li>
+                      <li>Transform into same data/encoding as heatmap</li>
                     </ul>
-                    <li>Two categorical attributes: node list x 2</li>
-                  </ul>
-                  <li class="fragment"><strong>Visual encoding:</strong></li>
-                  <ul>
-                    <li>Cell shows presence/absence of edge</li>
-                  </ul>
+                  </li>
+                  <li class="fragment"><strong>Derived data:</strong> table from network
+                    <ul>
+                      <li>One quantitative attribute
+                        <ul>
+                          <li>Weighted edge between nodes</li>
+                        </ul>
+                      </li>
+                      <li>Two categorical attributes: node list x 2</li>
+                    </ul>
+                  </li>
+                  <li class="fragment"><strong>Visual encoding:</strong>
+                    <ul>
+                      <li>Cell shows presence/absence of edge</li>
+                    </ul>
+                  </li>
                   <li class="fragment"><strong>Tasks:</strong>
                     <ul>
                       <li>Identify clusters (topology)</li>
                       <li>Summarize topology/distribution</li>
                     </ul>
                   </li>
-                  <li class="fragment"><strong>Scalability:</strong></li>
-                  <ul>
-                    <li>1,000 nodes, one million edges</li>
-                  </ul>
+                  <li class="fragment"><strong>Scalability:</strong>
+                    <ul>
+                      <li>1,000 nodes, one million edges</li>
+                    </ul>
+                  </li>
                 </ul>
               </div>
               <div class="half">
@@ -509,7 +517,7 @@
               <script type="module">
                 import {Runtime, Inspector, Library} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
                 import define from "https://api.observablehq.com/@john-guerra/parallel-sets.js?v=3";
-                const runtime = new Runtime(Object.assign(new Library, {width: document.querySelector("#observablehq-c6a5e063 .observablehq-chart").clientWidth*.5}))
+                const runtime = new Runtime(Object.assign(new Library, {width: 700}))
                 runtime.module(define, name => {
                   if (name === "viewof tension") return Inspector.into("#observablehq-c6a5e063 .observablehq-viewof-tension")();
                   if (name === "chart") return Inspector.into("#observablehq-c6a5e063 .observablehq-chart")();

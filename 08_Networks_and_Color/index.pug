@@ -235,7 +235,7 @@ html(lang="en")
               <script type="module">
                 import {Runtime, Inspector, Library} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
                 import define from "https://api.observablehq.com/@john-guerra/force-in-a-box.js?v=3";
-                const runtime = new Runtime(Object.assign(new Library, {width: document.querySelector(".observablehq-chart").clientWidth-200}))
+                const runtime = new Runtime(Object.assign(new Library, {width: document.querySelector("#observablehq-ca11e9c8 .observablehq-chart").clientWidth-200}))
                 runtime.module(define, name => {
                   if (name === "viewof useGroupInABox") return Inspector.into("#observablehq-ca11e9c8 .observablehq-viewof-useGroupInABox")();
                   if (name === "viewof template") return Inspector.into("#observablehq-ca11e9c8 .observablehq-viewof-template")();
@@ -302,7 +302,12 @@ html(lang="en")
           section
             div
               img(src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo")
+
+
         section#adjacencyIdiom
+          section
+            h1 Matrix Representations
+
           section
             h2 Idiom: Adjacency Matrix View
             .flex
@@ -310,24 +315,24 @@ html(lang="en")
                 ul.tiny
 
                   li.fragment #[strong Data:] network
-                  ul
-                    li Transform into same data/encoding as heatmap
-                  li.fragment #[strong Derived data:] table from network
-                  ul
-                    li One quantitative attribute
                     ul
-                      li Weighted edge between nodes
-                    li Two categorical attributes: node list x 2
+                      li Transform into same data/encoding as heatmap
+                  li.fragment #[strong Derived data:] table from network
+                    ul
+                      li One quantitative attribute
+                        ul
+                          li Weighted edge between nodes
+                      li Two categorical attributes: node list x 2
                   li.fragment #[strong Visual encoding:]
-                  ul
-                    li Cell shows presence/absence of edge
+                    ul
+                      li Cell shows presence/absence of edge
                   li.fragment #[strong Tasks:]
                     ul
                       li Identify clusters (topology)
                       li Summarize topology/distribution
                   li.fragment #[strong Scalability:]
-                  ul
-                    li 1,000 nodes, one million edges
+                    ul
+                      li 1,000 nodes, one million edges
 
               .half
                 figure
@@ -497,7 +502,7 @@ html(lang="en")
               <script type="module">
                 import {Runtime, Inspector, Library} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
                 import define from "https://api.observablehq.com/@john-guerra/parallel-sets.js?v=3";
-                const runtime = new Runtime(Object.assign(new Library, {width: document.querySelector("#observablehq-c6a5e063 .observablehq-chart").clientWidth*.5}))
+                const runtime = new Runtime(Object.assign(new Library, {width: 700}))
                 runtime.module(define, name => {
                   if (name === "viewof tension") return Inspector.into("#observablehq-c6a5e063 .observablehq-viewof-tension")();
                   if (name === "chart") return Inspector.into("#observablehq-c6a5e063 .observablehq-chart")();

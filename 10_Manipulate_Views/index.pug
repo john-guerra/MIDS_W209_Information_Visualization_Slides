@@ -80,7 +80,7 @@ html(lang="en")
 
           section
             div
-              img(src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo")
+              img(data-src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo")
 
         section#manipulateViews
           section
@@ -159,13 +159,13 @@ html(lang="en")
 
           section
             div
-              img(src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo")
+              img(data-src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo")
         section#changeEncoding
           section
             h1 Change Encoding/Parameters
           //- section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/11_manipulate-genea.015.png")
-          section
-            h3 Change Encoding
+          section.full
+            h3.demo Change Encoding
             .flex
               .half
                 img.fragment(data-src="../shared_images/vad_book_alldiagrams/pr10_manipulate-views-reencode-tableau-1.png", alt="screenshot of re-encoding from from Tableau")
@@ -205,13 +205,13 @@ html(lang="en")
                 div.reference Slide inspired by: Alexander Lex, Utah
               .half
                 figure
-                  img(src="../shared_images/vad_book_alldiagrams/grow_of_a_nation.png", alt="Growth of a Nation")
+                  img(data-src="../shared_images/vad_book_alldiagrams/grow_of_a_nation.png", alt="Growth of a Nation")
                   figcaption.reference
                     a(href="http://laurenwood.github.io/") [Growth of a Nation](http://laurenwood.github.io/)
 
           section
             div
-              img(src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo")
+              img(data-src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo")
         section
           section
             h1 Case Study: Changing Encoding and Parameters
@@ -238,7 +238,7 @@ html(lang="en")
 
           section
             div
-              img(src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo")
+              img(data-src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo")
         section#animations
           section
             h1 Animations
@@ -351,8 +351,9 @@ html(lang="en")
               (new Runtime).module(define, name => name === "chart" ? inspect() : undefined);
               </script>
 
+          section(data-background-iframe="https://bost.ocks.org/mike/miserables/")
+            //- iframe.blocks(data-src="https://bost.ocks.org/mike/miserables/")
           section
-            iframe.blocks(data-src="https://bost.ocks.org/mike/miserables/")
             a(href="https://bost.ocks.org/mike/miserables/") https://bost.ocks.org/mike/miserables/
 
           section
@@ -366,6 +367,22 @@ html(lang="en")
               .half
                 div Tree drilldown/rollup
 
+              .half
+                div.
+                  <div id="observablehq-9bbd237e">
+                    <div class="observablehq-chart"></div>
+                    <div style="overflow: hidden;"><a style="display: block; float:right;" href="https://observablehq.com/@d3/collapsible-tree"><object type="image/svg+xml" style="pointer-events: none;" width=180 height=22 data="https://static.observableusercontent.com/files/c3fab254a006f1a3a1f9f63aba8ab1460db4752529036b9962950bde0ec195bab823daa6b278b1c3401e545b3bd640ddfdcad805cf9859af218cb2b9fed4ddf0"></object></a></div>
+                  </div>
+                  <script type="module">
+                    import {Runtime, Inspector, Library} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+                    import define from "https://api.observablehq.com/@d3/collapsible-tree.js?v=3";
+                    const runtime = new Runtime(Object.assign(new Library, {width: document.querySelector("#observablehq-9bbd237e .observablehq-chart").clientWidth}))
+
+                    runtime.module(define, name => {
+                      if (name === "chart") return Inspector.into("#observablehq-9bbd237e .observablehq-chart")();
+                    });
+                  </script>
+
           section
             h2 Zoomable Bar Chart
             .flex
@@ -374,6 +391,22 @@ html(lang="en")
                   li.fragment Tree drilldown/rollup
                   li.fragment Value comparison
 
+              .half
+                div(style="overflow-y: scroll; height:600px").
+                  <div id="observablehq-7e7602c1">
+                    <div class="observablehq-chart"></div>
+                    <div style="overflow: hidden;"><a style="display: block; float:right;" href="https://observablehq.com/@john-guerra/hierarchical-bar-chart/2"><object type="image/svg+xml" style="pointer-events: none;" width=180 height=22 data="https://static.observableusercontent.com/files/c3fab254a006f1a3a1f9f63aba8ab1460db4752529036b9962950bde0ec195bab823daa6b278b1c3401e545b3bd640ddfdcad805cf9859af218cb2b9fed4ddf0"></object></a></div>
+                  </div>
+                  <script type="module">
+                    import {Runtime, Inspector, Library} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+                    import define from "https://api.observablehq.com/@john-guerra/hierarchical-bar-chart/2.js?v=3";
+                    const runtime = new Runtime(Object.assign(new Library, {width: document.querySelector("#observablehq-7e7602c1 .observablehq-chart").clientWidth}))
+
+                    runtime.module(define, name => {
+                      if (name === "chart") return Inspector.into("#observablehq-7e7602c1 .observablehq-chart")();
+                    });
+                  </script>
+
           section
             h2 Zoomable Icicle
             .flex
@@ -381,10 +414,23 @@ html(lang="en")
                 ul
                   li.fragment Tree drilldown/rollup
                   li.fragment Value comparison
+              .half
+                div(style="overflow-y: scroll").
+                  <div id="observablehq-caea2849">
+                    <div class="observablehq-chart"></div>
+                    <div style="overflow: hidden;"><a style="display: block; float:right;" href="https://observablehq.com/@john-guerra/zoomable-variable-size-icicle"><object type="image/svg+xml" style="pointer-events: none;" width=180 height=22 data="https://static.observableusercontent.com/files/c3fab254a006f1a3a1f9f63aba8ab1460db4752529036b9962950bde0ec195bab823daa6b278b1c3401e545b3bd640ddfdcad805cf9859af218cb2b9fed4ddf0"></object></a></div>
+                  </div>
+                  <script type="module">
+                    import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+                    import define from "https://api.observablehq.com/@john-guerra/zoomable-variable-size-icicle.js?v=3";
+                    (new Runtime).module(define, name => {
+                      if (name === "chart") return Inspector.into("#observablehq-caea2849 .observablehq-chart")();
+                    });
+                  </script>
 
           section
             div
-              img(src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo")
+              img(data-src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo")
         section#interactions
           section
             h1 Interactions
@@ -433,23 +479,51 @@ html(lang="en")
                       li.fragment Shift-click
                       li.fragment By similarity (e.g., connection, same state)
 
-          section
-            h2 Voronoi Maps
+
+          section.full
+            div.
+              <div id="observablehq-59cd5f47">
+                <div class="observablehq-chart"></div>
+                <div style="overflow: hidden;"><a style="display: block; float:right;" href="https://observablehq.com/@john-guerra/vega-lite-selection-methods"><object type="image/svg+xml" style="pointer-events: none;" width=180 height=22 data="https://static.observableusercontent.com/files/c3fab254a006f1a3a1f9f63aba8ab1460db4752529036b9962950bde0ec195bab823daa6b278b1c3401e545b3bd640ddfdcad805cf9859af218cb2b9fed4ddf0"></object></a></div>
+              </div>
+              <script type="module">
+                import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+                import define from "https://api.observablehq.com/@john-guerra/vega-lite-selection-methods.js?v=3";
+                (new Runtime).module(define, name => {
+                  if (name === "chart") return Inspector.into("#observablehq-59cd5f47 .observablehq-chart")();
+                });
+              </script>
+
+          section.full
+            h2.demo Voronoi Maps
             .flex
-              .half
+              .third
                 ul
                   li.fragment Tesselate the canvas
                   li.fragment Quickly find the closest point
 
+              .twothirds
+                .div.demo.
+                  <div id="observablehq-326d5514">
+                    <div class="observablehq-viewof-maxAirports"></div>
+                    <div class="observablehq-chart" style="max-height:500px; overflow-y:scroll"></div>
+                    <div class="observablehq-style"></div>
+                    <div style="overflow: hidden;"><a style="display: block; float:right;" href="https://observablehq.com/@john-guerra/voronoi-arc-map"><object type="image/svg+xml" style="pointer-events: none;" width=180 height=22 data="https://static.observableusercontent.com/files/c3fab254a006f1a3a1f9f63aba8ab1460db4752529036b9962950bde0ec195bab823daa6b278b1c3401e545b3bd640ddfdcad805cf9859af218cb2b9fed4ddf0"></object></a></div>
+                  </div>
+                  <script type="module">
+                    import {Runtime, Inspector, Library} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+                    import define from "https://api.observablehq.com/@john-guerra/voronoi-arc-map.js?v=3";
+                    const runtime = new Runtime(Object.assign(new Library, {width: 600}))
 
-          section
-            //- h2 Selection in D3
-            iframe.blocks(data-src="https://blockbuilder.org/mbostock/7608400")
-            a.tiny(href="https://blockbuilder.org/mbostock/7608400") https://blockbuilder.org/mbostock/7608400
 
-          section
-            h2 Selection with brush
-            a(href="https://observablehq.com/@john-guerra/scatterplot-brush") Scatterplot + Brush
+                    runtime.module(define, name => {
+                      if (name === "viewof maxAirports") return Inspector.into("#observablehq-326d5514 .observablehq-viewof-maxAirports")();
+                      if (name === "chart") return Inspector.into("#observablehq-326d5514 .observablehq-chart")();
+                      if (name === "style") return Inspector.into("#observablehq-326d5514 .observablehq-style")();
+                    });
+                  </script>
+
+
 
           section
             h2 Highlight
@@ -458,20 +532,26 @@ html(lang="en")
                 ul.tiny
                   li.fragment Highlight: change visual encoding for selection targets
                     ul
-                      li.fragment Visual feedback closely tied to but separable from selection (interaction)
+                      li Visual feedback closely tied to but separable from selection (interaction)
                   li.fragment Design choices: typical visual channels
                     ul
                       li.fragment Change item color
                         ul
-                          li.fragment But hides existing color coding
+                          li But hides existing color coding
                       li.fragment Add outline mark
                       li.fragment Change size (example: increase outline mark linewidth)
                       li.fragment Change shape (example: from solid to dashed line for link mark)
                   li.fragment Unusual channels: motion
                     ul
-                      li.fragment Motion: usually avoid for single view
+                      li Motion: usually avoid for single view
                         ul
-                          li.fragment With multiple views, could justify to draw attention to other views
+                          li With multiple views, could justify to draw attention to other views
+              .half
+                figure
+                  video(style="max-width:250px", data-src="../shared_images/segundaVueltaStory.mp4" alt="Colombian Election results storytelling video" autoplay="true" loop="true")
+                  figcaption.reference
+                    a(href="https://johnguerra.co/viz/resultadosSegundaVuelta2018/") Colombian election results
+
 
           section
             h2 Interaction Technology
@@ -493,7 +573,17 @@ html(lang="en")
                       br
                       li.fragment Eye tracking?
                 div.reference Slide inspired by: Alexander Lex, Utah
-
+              .half
+                figure
+                  img(style="width:250px", src="../shared_images/interaction_technology1.png", "Mobile Interactions")
+                  figcaption.reference
+                    div Data visualization and the news - Gregor Aisch (37 min)
+                    a(href="https://vimeo.com/182590214") https://vimeo.com/182590214
+                figure
+                  img(style="width:250px", src="../shared_images/interaction_technology2.png", "Tom Cruise")
+                  figcaption.reference
+                    div I Hate Tom Cruise - Alex Kauffmann (5 min)
+                    a(href="https://www.youtube.com/watch?v=QXLfT9sFcbc") https://www.youtube.com/watch?v=QXLfT9sFcbc
           section
             h2 Tooltips
             .flex
@@ -510,8 +600,11 @@ html(lang="en")
                             ul
                               li.fragment Gregor Aisch, NYTimes
 
+          section(data-background-iframe="https://johnguerra.co/viz/USElections2016/")
+
+
           section
-            h2 Responsiveness is R equired
+            h2 Responsiveness is Required
 
             ul.noMarginTopBottom.line-compressed
               li.fragment Visual feedback: three rough categories
@@ -534,17 +627,17 @@ html(lang="en")
 
           section
             div
-              img(src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo")
+              img(data-src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo")
         section#navigate
           section
             h1 Navigate
 
           section.full
-            img.fill(src="../shared_images/vad_book_alldiagrams/how_navigate.png", alt="How Navigate")
+            img.fill(data-src="../shared_images/vad_book_alldiagrams/how_navigate.png", alt="How Navigate")
 
 
-          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/11_manipulate-genea.020.png")
-          //- LiveRac
+          //- section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/11_manipulate-genea.020.png")
+
           section
             h3 Navigate: Changing Viewpoint/Visibility
             .flex
@@ -672,13 +765,17 @@ html(lang="en")
 
           section.fill
             h2.demo Rotate
-            div.
+            div.demo.
               <div id="observablehq-02609b50"></div>
               <script type="module">
-              import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+              import {Runtime, Inspector, Library} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
               import define from "https://api.observablehq.com/@d3/world-tour.js?v=3";
               const inspect = Inspector.into("#observablehq-02609b50");
-              (new Runtime).module(define, name => name === "canvas" ? inspect() : undefined);
+
+
+              const runtime = new Runtime(Object.assign(new Library, {width: 500}))
+
+              runtime.module(define, name => name === "canvas" ? inspect() : undefined);
               </script>
 
           section.fill
@@ -764,7 +861,7 @@ html(lang="en")
 
           section
             div
-              img(src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo")
+              img(data-src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo")
         section#manipulateViewCaseStudies
           section
             h2 Manipulate View Case Studies
@@ -779,14 +876,14 @@ html(lang="en")
           section.full
             h2.demo Twitter Influentials
             figure
-              video(style="max-width:300px", data-src="../shared_images/segundaVueltaStory.mp4" alt="Colombian Election results storytelling video" autoplay="true" loop="true")
+              img(style="max-width:500px", data-src="../shared_images/semanticSubstrates.gif" alt="Twitter Influentials" autoplay="true" loop="true")
               figcaption.reference
-                a(href="https://johnguerra.co/viz/resultadosSegundaVuelta2018/") https://johnguerra.co/viz/resultadosSegundaVuelta2018/
+                a(href="https://johnguerra.co/viz/influentials/story/?hashtag=ieeevis2019") https://johnguerra.co/viz/influentials/story/?hashtag=ieeevis2019
 
 
           section
             div
-              img(src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo")
+              img(data-src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo")
         section#animationsDemo
           section
             h2 Animations on the Web
@@ -794,7 +891,7 @@ html(lang="en")
 
           section
             div
-              img(src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo")
+              img(data-src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo")
         section#review
           section
             h2 What We Learned
@@ -808,19 +905,14 @@ html(lang="en")
                   li.fragment Case Studies
           section
             div
-              img(src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo")
+              img(data-src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo")
 
-    scrip t(src="../js/reveal.js")
+    script(src="../js/reveal.js")
     script(src="../plugin/zoom/zoom.js")
     script(src="../plugin/notes/notes.js")
     script(src="../plugin/search/search.js")
     script(src="../plugin/markdown/markdown.js")
     script(src="../plugin/highlight/highlight.js")
-
-    script(src="https://cdn.jsdelivr.net/npm/vega@5.13.0")
-    script(src="https://cdn.jsdelivr.net/npm/vega-lite@4.13.1")
-    script(src="https://cdn.jsdelivr.net/npm/vega-lite-api@0.11.0")
-    script(src="https://cdn.jsdelivr.net/npm/vega-tooltip@0.23.2")
 
 
 

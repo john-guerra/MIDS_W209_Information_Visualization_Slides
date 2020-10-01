@@ -4,7 +4,7 @@
     <title>Week 11 Faceting. MIDS W209 Information Visualization Slides</title>
     <meta charset="utf-8">
     <meta name="author" content="John Alexis Guerra Gómez">
-    <meta name="description" content="Week 6 Faceting. MIDS W209 Information Visualization Slides">
+    <meta name="description" content="Week 11 Faceting. MIDS W209 Information Visualization Slides">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,7 +27,7 @@
         </section>
         <section id="outline">
           <section>
-            <h2>What we are going to learn</h2>
+            <h2>What We Are Going to L earn</h2>
             <ul class="small">
               <li class="fragment">Faceting
                 <ul>
@@ -36,11 +36,11 @@
                   <li class="fragment">Superimpose</li>
                 </ul>
               </li>
-              <li class="fragment">Shared Data</li>
-              <li class="fragment">Shared Encoding</li>
-              <li class="fragment">Shared Navigation</li>
-              <li class="fragment">Dashboarding in a Box</li>
-              <li class="fragment">Architecture for Visualization</li>
+              <li class="fragment">Shared data</li>
+              <li class="fragment">Shared encoding</li>
+              <li class="fragment">Shared navigation</li>
+              <li class="fragment">Dashboarding in a box</li>
+              <li class="fragment">Architecture for visualization</li>
             </ul>
           </section>
           <section>
@@ -51,9 +51,8 @@
           <section>
             <h2>Facet Across Multiple Views</h2>
           </section>
-          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/12_facet-biomech.003.png"></section>
           <section>
-            <h2>Facet</h2><img data-src="../shared_images/vad_book_alldiagrams/pr11_facet-01.png" alt="Juxtapose, Partition, Superimpose">
+            <h2>Facet</h2><img style="width:250px" data-src="../shared_images/vad_book_alldiagrams/pr11_facet-01.png" alt="Juxtapose, Partition, Superimpose">
           </section>
           <section>
             <div><img src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo"></div>
@@ -72,29 +71,29 @@
           <section>
             <h2>Juxtapose</h2>
             <ul>
-              <li class="fragment">Design Choices
+              <li class="fragment">Design choices
                 <ul>
                   <li class="fragment">View count
                     <ul>
-                      <li>few vs many</li>
+                      <li>Few vs. many</li>
                     </ul>
                   </li>
-                  <li class="fragment">view visibility</li>
-                  <li class="fragment">view arrangment
+                  <li class="fragment">View visibility</li>
+                  <li class="fragment">View arrangment
                     <ul>
-                      <li class="fragment">User managed vs system aligned</li>
+                      <li class="fragment">User-managed vs. system-aligned</li>
                     </ul>
                   </li>
                 </ul>
               </li>
               <li class="fragment">Why juxtapose views?
                 <ul>
-                  <li class="fragment">Benefits: eyes vs memory
+                  <li class="fragment">Benefits: eyes vs. memory
                     <ul>
-                      <li class="fragment">Lower cognitive load to move eyes between 2 views than remembering previous state with single changing view</li>
+                      <li class="fragment">Lower cognitive load to move eyes between two views than remembering previous state with single changing view</li>
                     </ul>
                   </li>
-                  <li class="fragment">Costs: display area, 2 views side by side each have only half the area of one view</li>
+                  <li class="fragment">Costs: display area, two views side-by-side each have only half the area of one view</li>
                 </ul>
               </li>
             </ul>
@@ -108,7 +107,7 @@
             <h1>Share Encoding</h1>
           </section>
           <section>
-            <h3>Idiom: Overivew-detail Views</h3>
+            <h3>Idiom: Overivew-Detail Views</h3>
             <div class="flex">
               <div class="half">
                 <div class="small left-align">System: Google Maps</div>
@@ -120,13 +119,13 @@
                       <li class="fragment">Bi-directional linking</li>
                     </ul>
                   </li>
-                  <li class="fragment">Differences
+                  <li class="fragment">Differences:
                     <ul>
                       <li class="fragment">Viewpoint</li>
                       <li class="fragment">(Size)</li>
                     </ul>
                   </li>
-                  <li class="fragment">Special case:  bird's-eye map</li>
+                  <li class="fragment">Special case: bird's-eye map</li>
                 </ul>
               </div>
               <div class="half">
@@ -140,7 +139,7 @@
             <h2>Idiom: Small Multiples</h2>
             <div class="flex">
               <div class="third">
-                <div class="left-align">System: Cerebral</div>
+                <div class="left-align">System: cerebral</div>
                 <ul>
                   <li class="fragment">Encoding: same</li>
                   <li class="fragment">Data: none shared</li>
@@ -159,8 +158,8 @@
             </div>
           </section>
           <section>
-            <h3 class="demo">Focus / Context</h3>
-            <p class="small">Same encoding / Subset of data / Linked Navigation</p>
+            <h3 class="demo">Focus/Context</h3>
+            <p class="small">Same encoding/subset of data/linked navigation</p>
             <div>
               <div id="observablehq-7c887b88">
                 <div class="observablehq-chart"></div>
@@ -181,8 +180,8 @@
             </div>
           </section>
           <section>
-            <h3 class="demo">Small Multiples (cubism)</h3>
-            <p class="small">Same encoding / Different data / Linked Navigation</p>
+            <h3 class="demo">Small Multiples (Cubism)</h3>
+            <p class="small">Same encoding/different data/linked navigation</p>
             <iframe class="blocks" data-src="http://square.github.io/cubism/demo/"></iframe><a class="tiny" target="_blank" href="http://square.github.io/cubism/demo/">http://square.github.io/cubism/demo/</a>
           </section>
           <section>
@@ -193,7 +192,6 @@
           <section>
             <h1>Share Data</h1>
           </section>
-          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/12_facet-biomech.005.png"></section>
           <section>
             <h2>Idiom: Linked Highlighting</h2>
             <div class="flex">
@@ -213,7 +211,7 @@
               </div>
               <div class="half">
                 <figure><img data-src="../shared_images/vad_book_alldiagrams/pr11_facet-linked-highlighting.png" alt="Visual Exploration of Large Structured Datasets">
-                  <figcaption class="reference">figcaption.reference [Visual Exploration of Large Structured Datasets. Wills. Proc. New Techniques and Trends in Statistics (NTTS), pp. 237–246. IOS Press, 1995.]</figcaption>
+                  <figcaption class="reference">[Visual Exploration of Large Structured Datasets. Wills. Proc. New Techniques and Trends in Statistics (NTTS), pp. 237–246. IOS Press, 1995.]</figcaption>
                 </figure>
               </div>
             </div>
@@ -223,17 +221,20 @@
             <iframe class="blocks" data-src="https://crossfilter.github.io/crossfilter/"></iframe><a class="tiny" target="_blank" href="https://crossfilter.github.io/crossfilter/">https://crossfilter.github.io/crossfilter/</a>
           </section>
           <section class="full">
-            <h3 class="demo">Multiform Overview / Details</h3>
-            <p class="small">Tweetometro: Different encoding / Subset of data / Linked Navigation</p>
+            <h3 class="demo">Multiform Overview/Details</h3>
+            <p class="small">Tweetometro: Different encoding/subset of data/linked navigation</p>
             <figure>
-              <figcaption class="reference" target="_blank" href="http://old.tweetometro.co/">http://old.tweetometro.co/</figcaption>
+              <figcaption class="reference"><a target="_blank" href="http://old.tweetometro.co/">http://old.tweetometro.co/</a></figcaption>
               <video data-src="../shared_images/tweetometro.mp4" autoplay="true" loop="true" showcontrols="false"></video>
             </figure>
           </section>
           <section>
             <h3 class="demo">Multiform Overview (Treeversity)</h3>
-            <p class="small">Different encoding / All data / Linked Navigation</p>
-            <iframe class="blocks" data-src="https://treeversity.cattlab.umd.edu/"></iframe><a class="tiny" target="_blank" href="https://treeversity.cattlab.umd.edu/">https://treeversity.cattlab.umd.edu/</a>
+            <p class="small">Different encoding/all data/linked navigation</p>
+            <figure>
+              <video src="../shared_images/TreeVersity_Navigation.mp4" autoplay loop controls></video>
+              <figcaption class="reference"><a target="_blank" href="https://treeversity.cattlab.umd.edu">https://treeversity.cattlab.umd.edu</a></figcaption>
+            </figure>
           </section>
           <section>
             <h2>System: Improvise</h2>
@@ -243,7 +244,7 @@
                   <li class="fragment">Investigate power of multiple views</li>
                   <ul>
                     <li class="fragment">Pushing limits on view count, interaction complexity</li>
-                    <li class="fragment">How many is ok?</li>
+                    <li class="fragment">How many is okay?</li>
                     <ul>
                       <li class="fragment">Open research question</li>
                     </ul>
@@ -343,7 +344,7 @@
             </div>
           </section>
           <section>
-            <h3>Partitioning: Recursive Subdivision</h3>
+            <h3>Partitioning: Recursive Subdivision, Part I</h3>
             <div class="flex">
               <div class="third small">
                 <div class="left-align">System: HIVE</div><br>
@@ -373,7 +374,7 @@
             </div>
           </section>
           <section>
-            <h3>Partitioning: Recursive Subdivision</h3>
+            <h3>Partitioning: Recursive Subdivision, Part II</h3>
             <div class="flex">
               <div class="third small">
                 <div class="left-align">System: HIVE</div><br>
@@ -403,7 +404,7 @@
             </div>
           </section>
           <section>
-            <h3>Partitioning: Recursive Subdivision</h3>
+            <h3>Partitioning: Recursive Subdivision, Part III</h3>
             <div class="flex">
               <div class="third small">
                 <div class="left-align">System: HIVE</div><br>
@@ -422,7 +423,7 @@
             </div>
           </section>
           <section>
-            <h3>Partitioning: Recursive Subdivision</h3>
+            <h3>Partitioning: Recursive Subdivision, Part IV</h3>
             <div class="flex">
               <div class="third small">
                 <div class="left-align">System: HIVE</div><br>
@@ -456,7 +457,7 @@
                 <ul class="tiny">
                   <li class="fragment">Layer: set of objects spread out over region</li>
                   <ul>
-                    <li class="fragment">Each set is visually distinguishable group</li>
+                    <li class="fragment">Each set is a visually distinguishable group</li>
                     <li class="fragment">Extent: whole view</li>
                   </ul>
                   <li class="fragment">Design choices
@@ -506,11 +507,11 @@
                     <li class="fragment">Up to a few dozen</li>
                     <li class="fragment">But not hundreds</li>
                   </ul>
-                  <li class="fragment">Superimpose vs juxtapose: empirical study
+                  <li class="fragment">Superimpose vs. juxtapose: empirical study
                     <li class="fragment">Superimposed for local, multiple for global</li>
                     <li class="fragment">Tasks</li>
                     <ul>
-                      <li class="fragment">Local: maximum, global: slope, discrimination</li>
+                      <li class="fragment">Local: maximum,  global: slope, discrimination</li>
                     </ul>
                     <li class="fragment">Same screen space for all multiples vs single superimposed</li>
                   </li>
@@ -522,24 +523,24 @@
           <section class="full">
             <h3 class="demo">Dynamic Visual Layering</h3>
             <ul class="tiny">
-              <li class="fragment">Interactive based on selection.</li>
-              <li class="fragment">One-hop neighbour highlighting demos: click vs hover (lightweight).</li>
+              <li class="fragment">Interactive based on selection</li>
+              <li class="fragment">One-hop neighbour highlighting demos: click vs. hover (lightweight)</li>
             </ul>
             <div class="flex">
               <div class="half">
                 <figure><img data-src="../shared_images/vad_book_alldiagrams/pr11_facet-dynamic-visual-layering1.png" alt="dynamic visual layering">
-                  <figcaption class="reference"><a href="mariandoerk.de/edgemaps/demo/">http://mariandoerk.de/edgemaps/demo/</a></figcaption>
+                  <figcaption class="reference"><a href="http://mariandoerk.de/edgemaps/demo/">http://mariandoerk.de/edgemaps/demo/</a></figcaption>
                 </figure>
               </div>
               <div class="half">
                 <figure><img data-src="../shared_images/vad_book_alldiagrams/pr11_facet-dynamic-visual-layering2.png" alt="dynami visual layering">
-                  <figcaption class="reference"><a href="mbostock.github.io/d3/talk/20111116/airports.html">http://mbostock.github.io/d3/talk/20111116/airports.html</a></figcaption>
+                  <figcaption class="reference"><a href="http://mbostock.github.io/d3/talk/20111116/airports.html">http://mbostock.github.io/d3/talk/20111116/airports.html</a></figcaption>
                 </figure>
               </div>
             </div>
           </section>
           <section>
-            <h2>Dynamic layering</h2><a href="https://johnguerra.co/viz/influentials/story/?hashtag=ieeevis2019">https://johnguerra.co/viz/influentials/story/?hashtag=ieeevis2019</a>
+            <h2>Dynamic Layering</h2><a href="https://johnguerra.co/viz/influentials/story/?hashtag=ieeevis2019">Twitter influencers for #ieeevis2019</a>
           </section>
           <section>
             <div><img src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo"></div>
@@ -547,20 +548,20 @@
         </section>
         <section id="dashboarding">
           <section>
-            <h2>Dashboarding in a box</h2>
+            <h2>Dashboarding in a Box</h2>
           </section>
           <section>
-            <h3>Tools of the trade</h3>
+            <h3>Tools of the Trade</h3>
             <ul>
-              <li class="fragment">Python Dash (from Plotly folks).</li>
-              <li class="fragment">R Shiny.</li>
-              <li class="fragment">Metabase?.</li>
-              <li class="fragment">Flask + Altair.</li>
-              <li class="fragment">Flask + D3.</li>
+              <li class="fragment">Python Dash (from Plotly folks)</li>
+              <li class="fragment">R Shiny</li>
+              <li class="fragment">Metabase?</li>
+              <li class="fragment">Flask + Altair</li>
+              <li class="fragment">Flask + d3</li>
             </ul>
           </section>
           <section>
-            <h3>Taking apart Dash</h3>
+            <h3>Taking Apart Dash</h3>
             <pre class="python" style="font-size: 18px;"><code>import dash
 import dash_core_components as dcc
 import dash_html_components as html
@@ -588,16 +589,16 @@ if __name__ == '__main__':
     app.run_server(debug=True)</code><!-- a(href="https://dash.plotly.com/layout") https://dash.plotly.com/layout --></pre>
           </section>
           <section>
-            <h3>Taking apart Dash</h3><img data-src="../shared_images/dash-screenshot.png">
+            <h3>Taking Apart Dash (cont.)</h3><img data-src="../shared_images/dash-screenshot.png">
           </section>
           <section>
-            <h3>Under the hood: it's Flask</h3><img data-src="../shared_images/dash-flask.png">
+            <h3>Under the Hood: Tt's Flask</h3><img data-src="../shared_images/dash-flask.png">
           </section>
           <section>
-            <h3>Follow a request</h3><img data-src="../shared_images/dash-request.png">
+            <h3>Follow a Request</h3><img data-src="../shared_images/dash-request.png">
           </section>
           <section>
-            <h3>The code we used:</h3>
+            <h3>The Code We Used</h3>
             <pre class="python" style="font-size: 18px;"><code>import dash
 import dash_core_components as dcc
 import dash_html_components as html
@@ -626,7 +627,7 @@ if __name__ == '__main__':
 </code></pre>
           </section>
           <section>
-            <h3>So we'll render a template like this:</h3>
+            <h3>So We'll Render a Template Like This</h3>
             <pre class="html" style="font-size: 18px;"><code>html
 head
   {{ for headers in app.headers }}
@@ -647,49 +648,49 @@ body
         </section>
         <section id="architecture">
           <section>
-            <h2>Architecture for visualization</h2>
+            <h2>Architecture for Visualization</h2>
           </section>
           <section>
-            <h3>Concepts we know and love</h3>
+            <h3>Concepts We Know and Love</h3>
             <ul>
-              <li class="fragment">Front end.</li>
-              <li class="fragment">Back end.</li>
+              <li class="fragment">Frontend</li>
+              <li class="fragment">Backend</li>
               <li class="fragment">What's missing here?</li>
               <ul>
-                <li class="fragment">Processing engine.</li>
-                <li class="fragment">CDNs.</li>
-                <li class="fragment">Static storage.</li>
+                <li class="fragment">Processing engine</li>
+                <li class="fragment">CDNs</li>
+                <li class="fragment">Static storage</li>
               </ul>
             </ul>
           </section>
           <section>
-            <h3>Building blocks on the web</h3>
+            <h3>Building Blocks on the Web</h3>
             <ul>
-              <li class="fragment">Front end client:
+              <li class="fragment">Frontend client:
                 <ul>
-                  <li class="fragment">JavaScript libraries, run in real time.</li>
-                  <li class="fragment">Access everything through browser-implemented APIs.</li>
+                  <li class="fragment">JavaScript libraries, run in real time</li>
+                  <li class="fragment">Access everything through browser-implemented APIs</li>
                 </ul>
               </li>
               <li class="fragment">Server:
                 <ul>
-                  <li class="fragment">Database.</li>
-                  <li class="fragment">Files (database is a layer over files).</li>
-                  <li class="fragment">Web app (running Python/R/Node/etc.).</li>
+                  <li class="fragment">Database</li>
+                  <li class="fragment">Files (database is a layer over files)</li>
+                  <li class="fragment">Web app (running Python/R/Node/etc.)</li>
                   <li class="fragment">Other pieces of a web stack: Apache/Nginx/Gunicorn/UWSGI/etc.</li>
-                  <li class="fragment">Non-web facing processing automation / schedulers (Airflow/Jenkins/cron).</li>
+                  <li class="fragment">Non-web-facing processing automation/schedulers (Airflow/Jenkins/cron)</li>
                 </ul>
               </li>
             </ul>
           </section>
           <section>
-            <h3>Example: visualization system relying on Twitter data</h3><img data-src="../shared_images/Twitter-Service-Architecture-Diagram.png">
+            <h3>Example: Visualization System Relying on Twitter Data</h3><img data-src="../shared_images/Twitter-Service-Architecture-Diagram.png">
           </section>
           <section>
-            <h3>MassMutual's client marketing system</h3><img data-src="../shared_images/Marketing-Logical-Arch---Page-1.png">
+            <h3>MassMutual's Client Marketing System</h3><img data-src="../shared_images/Marketing-Logical-Arch---Page-1.png">
           </section>
           <section>
-            <h3>MassMutual's advisor-facing mobile app</h3><img data-src="../shared_images/AdvisorMobile-High-Level-0.png">
+            <h3>MassMutual's Advisor-Facing Mobile App</h3><img data-src="../shared_images/AdvisorMobile-High-Level-0.png">
           </section>
           <section>
             <h3>MassMutual's Prediction API</h3><img data-src="../shared_images/Prediction-API-v2-Architecture-2019-05-07.png">
@@ -702,8 +703,35 @@ body
           <section>
             <h2>Applying the <br> Visualization Mantra</h2>
           </section>
+          <section data-background-size="contain" data-background="../shared_images/timeSearcher.gif"></section>
+          <section>
+            <h2>Similian</h2><a target="_blank" href="http://www.cs.umd.edu/hcil/similan">
+              <figure><img class="demo" data-src="http://www.cs.umd.edu/hcil/similan/img/simi20091011/overview.png">
+                <figcaption class="reference"><a target="_blank" href="http://www.cs.umd.edu/hcil/similan">Similan: Finding Similar Records from Temporal Categorical Data</a></figcaption>
+              </figure></a>
+          </section>
+          <section data-background-iframe="http://www.cs.umd.edu/hcil/similan/video/demo/index.html"></section>
+          <section>
+            <h2>LifeFlow</h2><a target="_blank" href="http://www.cs.umd.edu/hcil/lifeflow/">
+              <figure><img class="demo" data-src="http://www.cs.umd.edu/hcil/lifeflow/img/LifeFlow3.png"></figure>
+              <figcaption class="reference"><a target="_blank" href="http://www.cs.umd.edu/hcil/lifeflow/">LifeFlow: Understanding Millions of Event Sequences in a Million Pixels</a></figcaption></a>
+          </section>
+          <section>
+            <h2 class="demo">LifeFlow How-To</h2><span>
+              <iframe width="853" height="480" data-src="https://www.youtube.com/embed/QxceG6_RM8w" frameborder="0" allowfullscreen></iframe>
+              </span>
+          </section>
+          <section>
+            <h2 class="demo">LifeFlow Demo</h2><span>
+              <iframe width="853" height="480" data-src="https://www.youtube.com/embed/nXrmJS6Vk9A" frameborder="0" allowfullscreen></iframe>
+              </span>
+          </section>
           <section>
             <h2>TreeVersity</h2>
+            <figure>
+              <video src="../shared_images/TreeVersity_Navigation.mp4" autoplay loop controls></video>
+              <figcaption class="reference"><a target="_blank" href="https://treeversity.cattlab.umd.edu">https://treeversity.cattlab.umd.edu</a></figcaption>
+            </figure>
           </section>
           <section>
             <div><img src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo"></div>
@@ -719,7 +747,7 @@ body
         </section>
         <section id="review">
           <section>
-            <h2>What we learned</h2>
+            <h2>What we Learned</h2>
             <ul class="small">
               <li class="fragment">Faceting
                 <ul>
@@ -728,11 +756,11 @@ body
                   <li class="fragment">Superimpose</li>
                 </ul>
               </li>
-              <li class="fragment">Shared Data</li>
-              <li class="fragment">Shared Encoding</li>
-              <li class="fragment">Shared Navigation</li>
-              <li class="fragment">Dashboarding in a Box</li>
-              <li class="fragment">Architecture for Visualization</li>
+              <li class="fragment">Shared data</li>
+              <li class="fragment">Shared encoding</li>
+              <li class="fragment">Shared navigation</li>
+              <li class="fragment">Dashboarding in a box</li>
+              <li class="fragment">Architecture for visualization</li>
             </ul>
           </section>
           <section>

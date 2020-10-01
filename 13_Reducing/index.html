@@ -1,47 +1,986 @@
-<!DOCTYPE html><html lang="en"><head><title>Week 13 Reducing Attributes and Rows. MIDS W209 Information Visualization Slides</title><meta charset="utf-8"><meta name="author" content="John Alexis Guerra Gómez"><meta name="description" content="Week 6 Reducing attributes and rows. MIDS W209 Information Visualization Slides"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fjalla+One|Raleway|PT+Sans+Narrow"><link rel="stylesheet" href="https://use.typekit.net/yjc0afr.css"><link rel="stylesheet" href="../plugin/highlight/monokai.css" id="highlight-theme"><link href="../css/reveal.css" rel="stylesheet"><link href="../css/theme/white.css" rel="stylesheet" id="theme"><link href="../css/style.css" rel="stylesheet"></head><body><div class="reveal"><div class="slides"><section><h1 class="title">Reducing Attributes and Rows<br><small>MIDS W209: Information Visualization</small></h1><div class="r-stretch"></div><div class="tiny"><a href="https://johnguerra.co/" target="_blank"><strong> John Alexis Guerra Gómez</strong></a><span> |  john.guerra[at]gmail.com</span><a href="https://twitter.com/duto_guerra"> |  @duto_guerra</a><br><a href="https://andyreagan.com/" target="_blank"><strong> Andy Reagan</strong></a><span> |  andy[at]andyreagan.com |</span><a href="https://twitter.com/andyreagan">@andyreagan</a><br><a href="https://johnguerra.co/lectures/MIDS_W209_Information_Visualization/06_Tabular/" target="_blank">https://johnguerra.co/lectures/MIDS_W209_Information_Visualization/06_Tabular/</a></div><div class="logo"><a href="https://datascience.berkeley.edu/"><img class="logo" data-src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo"></a></div><div class="tiny">Partially based on<a href="https://www.cs.ubc.ca/~tmm/talks.html#minicourse14"> slides from Tamara Munzner</a></div></section><section id="outline"><section><h2>What We Are Going to Learn</h2><ul class="small"></ul></section></section><section id="reduceItemsAndAttributes"><section><h1>Reduce Items and Attributes</h1></section><section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/14_reduce-glimmer.003.png"></section><section class="full"><h3 class="demo">Reduce Items and Attributes</h3><div class="flex"><div class="half"><ul><li class="fragment">Reduce / Increase: inverses</li><li class="fragment">Filter<ul class="small"><li class="fragment">Pro: straightforward and intuitive<ul class="small"><li class="fragment">To understand and compute</li></ul></li><li class="fragment">Con: out of sight, out of mind</li></ul></li><li class="fragment">Aggregation<ul><li class="fragment">Pro: inform about whole set</li><li class="fragment">Con: difficult to avoid losing signal</li></ul></li><li class="fragment">Not mutually exclusive<ul><li class="fragment">Combine filter, aggregate</li><li class="fragment">Combine reduce, change, facet</li></ul></li></ul></div><div class="half"><img data-src="../shared_images/vad_book_alldiagrams/pr13_reduce-items-attributes.png" alt="Filter by items and by attributes; aggregate by items and by attributes; reduce filter and aggregate"></div></div></section></section><section id="itemFiltering"><section><h1>Item Filtering</h1></section><section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/14_reduce-glimmer.005.png"></section><SECTION><h2>Crossfiltering</h2><ul><li class="fragment">Item filtering</li><li class="fragment">Coordinated views/controls combined</li><li class="fragment">All scented histogram bisliders update when any ranges change</li></ul></SECTION><section><h2>Faceted Search</h2></section><section class="full"><h3 class="demo">Idiom: Scented Widgets</h3><div class="flex"><div class="twothirds"><ul class="small"><li class="fragment">Augmented widgets show information scent<ul class="small"><li class="fragment">Cues to show whether value in drilling down further vs looking elsewhere</li></ul></li><li class="fragment">Concise use of space: histogram on slider</li></ul><br><figure><img style="width:450px" data-src="../shared_images/vad_book_alldiagrams/pr13_reduce-scented-widgets1.png" alt="Scented Widgets full application"><figcaption class="reference"><a href="www.win.tue.nl/~selzen/paper/InfoVis2014.pdf">[Multivariate Network Exploration and Presentation: From Detail to Overview via Selections and Aggregations.  van den Elzen, van Wijk, IEEE TVCG 20(12): 2014 (Proc. InfoVis 2014).]</a></figcaption></figure></div><div class="third"><figure><img data-src="../shared_images/vad_book_alldiagrams/pr13_reduce-scented-widgets2.png" alt="Scented Widgets example"><img data-src="../shared_images/vad_book_alldiagrams/pr13_reduce-scented-widgets3.png" alt="Scented Widgets filters' panel"><figcaption class="reference"><a>[Scented Widgets: Improving Navigation Cues with Embedded Visualizations. Willett, Heer, and Agrawala. IEEE TVCG (Proc. InfoVis 2007) 13:6 (2007), 1129–1136.]</a></figcaption></figure></div></div></section><section class="demo"><h3 class="demo">Scented widgets paper</h3><figure><figcaption class="reference tiny" target="_blank" href="http://vis.berkeley.edu/papers/scented_widgets/">http://vis.berkeley.edu/papers/scented_widgets/</figcaption><iframe class="blocks" data-src="http://vis.berkeley.edu/papers/scented_widgets/"></iframe></figure></section><section class="demo"><h2>Navio</h2><figure><img data-src="../shared_images/navio_thumb_v4.gif" alt="Navio Demo"><figcaption class="reference"><a target="_blank" href="https://navio.dev">https://navio.dev</a></figcaption></figure></section></section><section id="attributeFiltering"><section><h1>Attribute Filtering</h1></section><section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/14_reduce-glimmer.007.png"></section><section><h2>DOSFA Paper</h2><a class="small" target="_blank" href="http://www.cs.ubc.ca/~tmm/courses/cpsc533c-04-spr/readings/dimorder.pdf">http://www.cs.ubc.ca/~tmm/courses/cpsc533c-04-spr/readings/dimorder.pdf</a></section><section><h2>Navio Load Notebook</h2></section><section><h2>UMAP Playground</h2></section><section><h2>Dimensionality Reduction</h2></section><section><h2>Aggregation: Hierarchichal cluster explorer</h2></section></section><section id="itemAggregation"><section><h1>Item Aggregation</h1></section><section><h2>Idiom: Histogram</h2><div class="flex"><div class="half"><ul class="small"><li class="fragment">Static item aggregation</li><li class="fragment">Task: find distribution</li><li class="fragment">Data: table</li><li class="fragment">Derived data</li><ul class="small"><li class="fragment">New table: keys are bins, values are counts</li></ul><li class="fragment">Bin size crucial<li class="fragment">Pattern can change dramatically depending on discretization</li><li class="fragment">Opportunity for interaction: control bin size on the fly</li></li></ul></div><div class="half"><img data-src="../shared_images/vad_book_alldiagrams/pr13_reduce-histogram.png" alt="Histogram"></div></div></section><section><h2>Idiom: Boxplot</h2><div class="flex"><div class="half"><ul class="small"><li class="fragment">Static item aggregation</li><li class="fragment">Task: find distribution</li><li class="fragment">Data: table</li><li class="fragment">Derived data</li><ul class="small"><li class="fragment">5 quant attribs</li><ul class="small"><li class="fragment">Median: central line</li><li class="fragment">Lower and upper quartile: boxes</li><li class="fragment">Lower upper fences: whiskers</li><ul class="small"><li class="fragment">Values beyond which items are outliers</li></ul></ul><li class="fragment">Outliers beyond fence cutoffs explicitly shown</li></ul></ul></div><div class="half"><figure><img data-src="../shared_images/vad_book_alldiagrams/pr13_reduce-boxplot.png" alt="Boxplot"><figcaption class="reference">[40 years of boxplots. Wickham and Stryjewski. 2012. had.co.nz]</figcaption></figure></div></div></section><section><h3 class="demo">Box Plot</h3><iframe class="blocks" data-src="http://blockbuilder.org/mbostock/4061502"></iframe><a class="tiny" target="_blank" href="http://blockbuilder.org/mbostock/4061502">http://blockbuilder.org/mbostock/4061502</a><a class="tiny" target="_blank" href="http://bl.ocks.org/mbostock/">by mbostock</a></section><section><h3 class="demo">Violin plot</h3><iframe class="blocks" data-src="http://blockbuilder.org/asielen/92929960988a8935d907e39e60ea8417"></iframe><a class="tiny" target="_blank" href="http://blockbuilder.org/asielen/92929960988a8935d907e39e60ea8417">http://blockbuilder.org/asielen/92929960988a8935d907e39e60ea8417</a><a class="tiny" target="_blank" href="http://bl.ocks.org/asielen/">by asielen</a></section><section><h2>Idiom: 2D density plots</h2><div class="flex"><div class="half"><ul class="small"><li class="fragment">Scatter-plot meet heat-map</li><ul><li class="fragment">derived data</li><ul><li class="fragment">Teselate space info areas</li><li class="fragment">Count number of elements falling on that area</li></ul><li class="fragment"><strong>Mark</strong>: Dots (boxes)</li><li class="fragment"><strong>Channels</strong>:</li><ul><li class="fragment">Position: Location of areas</li><li class="fragment">Color (brightness): Number of elements</li></ul><ul><li class="fragment">marks (re-)ordered by cluster hierarchy traversal</li></ul><li class="fragment"><strong>Tasks</strong>: Summarize distribution.</li><li class="fragment"><strong>Scalability:</strong></li><ul><li class="fragment">Millions of rows (might require preprocessing)</li></ul></ul></ul></div><div class="half"><div id="observablehq-d74d4a6f">
-  <div class="r-stack">
-    <div class="fragment observablehq-moviesScatterplot"></div>
-    <div class="fragment observablehq-moviesDensityCircles"></div>
-    <div class="fragment observablehq-moviesDensityBoxes"></div>
-  </div>
-  <div style="overflow: hidden;"><a style="display: block; float:right;" href="https://observablehq.com/@john-guerra/data-transformation@307"><object type="image/svg+xml" style="pointer-events: none;" width=180 height=22 data="https://static.observableusercontent.com/files/c3fab254a006f1a3a1f9f63aba8ab1460db4752529036b9962950bde0ec195bab823daa6b278b1c3401e545b3bd640ddfdcad805cf9859af218cb2b9fed4ddf0"></object></a></div>
-</div>
-<script type="module">
-  import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
-  import define from "https://api.observablehq.com/@john-guerra/data-transformation@307.js?v=3";
-  (new Runtime).module(define, name => {
-    if (name === "moviesScatterplot") return Inspector.into("#observablehq-d74d4a6f .observablehq-moviesScatterplot")();
-    if (name === "moviesDensityCircles") return Inspector.into("#observablehq-d74d4a6f .observablehq-moviesDensityCircles")();
-    if (name === "moviesDensityBoxes") return Inspector.into("#observablehq-d74d4a6f .observablehq-moviesDensityBoxes")();
-  });
-</script>
-</div></div></section><section class="full"><h2>Interactive Density Plot</h2><div><div id="observablehq-8ab2bcad">
-  <div class="observablehq-chart"></div>
-  <div style="overflow: hidden;"><a style="display: block; float:right;" href="https://observablehq.com/@john-guerra/density-plot"><object type="image/svg+xml" style="pointer-events: none;" width=180 height=22 data="https://static.observableusercontent.com/files/c3fab254a006f1a3a1f9f63aba8ab1460db4752529036b9962950bde0ec195bab823daa6b278b1c3401e545b3bd640ddfdcad805cf9859af218cb2b9fed4ddf0"></object></a></div>
-</div>
-<script type="module">
-  import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
-  import define from "https://api.observablehq.com/@john-guerra/density-plot.js?v=3";
-  (new Runtime).module(define, name => {
-    if (name === "chart") return Inspector.into("#observablehq-8ab2bcad .observablehq-chart")();
-  });
-</script>
-</div></section><section class="full"><h4 class="demo">Idiom: Hierarchical Parallel Coordinates</h4><ul class="small"><li class="fragment">Dynamic item aggregation</li><li class="fragment">Derived data: hierarchical clustering</li><li class="fragment">Encoding:</li><ul class="small"><li class="fragment">Cluster band with variable transparency, line at mean, width by min/max values</li><li class="fragment">Color by proximity in hierarchy</li></ul></ul><figure><img data-src="../shared_images/vad_book_alldiagrams/pr13_reduce-hierarchical-clustering.png" alt=""><figcaption class="reference">[Hierarchical Parallel Coordinates for Exploration of Large Datasets. Fua, Ward, and Rundensteiner. Proc. IEEE Visualization Conference (Vis ’99), pp. 43– 50, 1999.]</figcaption></figure></section></section><section id="spatialAggregation"><section><h1>Spatial Aggregation</h1></section><section><h2>Geo level</h2><ul><li class="fragment">Country</li><li class="fragment">State</li><li class="fragment">City</li><li class="fragment">Neighborhood</li></ul></section><section><h2>Aggregation Problems</h2><ul><li class="fragment">MAUP: Modifiable Areal Unit Problem</li><li class="fragment">gerrymandering (manipulating voting district boundaries) is only one example!</li><li class="fragment">zone effects</li><li class="fragment">scale effects</li></ul></section><section><h2>Overlapping</h2><ul><li>Zip Codes</li><li>Disputed borders</li></ul></section><section><h2>Regions</h2><ul><li>Aggregate by commonalities<ul><li class="fragment">e.g. Agricultural vs Industrial Regions</li><li class="fragment">e.g. Historically right vs left wing</li></ul></li><li>Aggregate by the data attributes</li></ul></section><section><h2>Geo patterns vs political patterns</h2><ul><li>Risaralda example</li></ul></section></section><section id="spatialAggregation"><section><h1>Time Aggregation</h1></section><section><h2>Date Part vs Truncate</h2><ul><li class="fragment">Date Part: extract a part of the date</li><li class="fragment">Date Truncate: cut the date at a certain level</li></ul></section><section><h2>Date Truncate</h2><ul><li>Different levels can hide seasonality</li><li>Sometimes too much detail is unnecessary</li></ul></section><section><h2>Date Part</h2><ul><li>Useful for highlighting human patterns<ul><li>Weekends</li><li>Night time</li><li>Holidays</li><li>Summer vs Winter</li></ul></li></ul></section><section><h2>Calendar Views</h2></section></section><section id="dimensionalityReduction"><section><h1>Dimensionality Reduction</h1></section><section class="full"><h3 class="demo">Dimensionality Reduction</h3><ul class="small"><li class="fragment">Attribute aggregation</li><ul class="small"><li class="fragment">Derive low-dimensional target space from high-dimensional measured space</li><ul class="small"><li class="fragment">Capture most of variance with minimal error</li></ul><li class="fragment">Use when you can’t directly measure what you care about<li class="fragment">True dimensionality of dataset conjectured to be smaller than dimensionality of measurements</li><li class="fragment">Latent factors, hidden variables</li></li></ul></ul><img data-src="../shared_images/vad_book_alldiagrams/pr13_reduce-dimensionality.png" alt="Taking tumor measurement data in 9D measured space and running dimensionality reduction derives that data in a 2D target space where it is easier to see groupings of benign and malignant tumors"></section><section class="full"><h4>Dimensionality Reduction for Documents</h4><img class="fill" data-src="../shared_images/vad_book_alldiagrams/pr13_reduce-dimensionality-for-documents.png" alt=""></section><section><h4>Dimensionality vs. Attribute Reduction</h4><ul class="normal small"><li class="fragment">Vocab use in field not consistent<ul class="small"><li class="fragment">Dimension/attribute</li></ul></li><li class="fragment">Attribute reduction: reduce set with filtering<ul><li class="fragment">Includes orthographic projection</li></ul></li><li class="fragment">Dimensionality reduction: create smaller set of new dims/attribs<ul><li class="fragment">Typically implies dimensional aggregation, not just filtering</li><li class="fragment">Vocab: projection/mapping</li></ul></li></ul></section><section><h3>Estimating True Dimensionality</h3><ul class="tiny"><li class="fragment">How do you know when you would benefit from DR?<ul class="small"><li class="fragment">Consider error for low-dim projection vs. high-dim projection</li></ul></li><li class="fragment">No single correct answer; many metrics proposed<ul><li class="fragment">Cumulative variance that is not accounted for</li><li class="fragment">Strain: Match variations in distance (vs. actual distance values)</li><li class="fragment">Stress: Difference between interpoint distances in high and low dims</li></ul></li></ul><img style="width:400px" data-src="../shared_images/vad_book_alldiagrams/pr13_estimate-true-dimensionality.png" alt="Stresss Function"></section><section><h3>Estimating True Dimensionality</h3><ul class="small"><li class="fragment">Scree plots as simply way: error against # attribs<ul class="small"><li class="fragment">Original dataset: 294 dims</li><li class="fragment">Estimate: Almost all variance preserved with less than 20 dims</li></ul></li></ul><figure><img style="width:400px" data-src="../shared_images/vad_book_alldiagrams/spree_plots.png" alt="Spree Plots"><figcaption class="reference">[Fig 2. DimStiller: Workflows for dimensional analysis and reduction. Ingram et al. Proc. VAST 2010, p 3-10]</figcaption></figure></section><section><h3>Dimensionality Reduction and Visualization</h3><ul class="small"><li class="fragment">Why do people do DR?<ul class="small"><li class="fragment">Improve performance of downstream algorithm<ul class="small"><li class="fragment">Avoid curse of dimensionality</li></ul></li><li class="fragment">Data analysis<ul><li class="fragment">If look at the output: visual data analysis</li></ul></li></ul></li><li class="fragment">Abstract tasks when visualizing DR data<ul><li class="fragment">Dimension-oriented tasks</li><li class="fragment">Naming synthesized dims, mapping synthesized dims to original dims</li></ul><li class="fragment">Cluster-oriented tasks<ul><li class="fragment">Verifying clusters, naming clusters, matching clusters and classes</li></ul></li></li></ul><div class="reference">[Visualizing Dimensionally-Reduced Data: Interviews with Analysts and a Characterization of Task Sequences. Brehmer, Sedlmair, Ingram, and Munzner. Proc. BELIV 2014.]</div></section><section class="full"><h3 class="demo">Linear Dimensionality Reduction</h3><ul class="small"><li class="fragment">Principal components analysis (PCA)</li><ul class="small"><li class="fragment">Finding axes: first with most variance, second with next most, …</li><li class="fragment">Describe location of each point as linear combination of weights for each axis</li><ul class="small"><li class="fragment">Mapping synthesized dims to original dims</li></ul></ul></ul><figure><img style="width:300px" data-src="../shared_images/vad_book_alldiagrams/pr13_reduce-dimensionality-scatterplot.png" alt="Linear Dimensionality Reduction"><figcaption class="reference"><a href="https://en.wikipedia.org/wiki/File:GaussianScatterPCA.png">[http://en.wikipedia.org/wiki/File:GaussianScatterPCA.png]</a></figcaption></figure></section><section><h4>Nonlinear Dimensionality Reduction</h4><ul class="tiny"><li class="fragment">Pro: can handle curved rather than linear structure</li><li class="fragment">Cons: lose all ties to original dims/attribs<ul class="small"><li class="fragment">New dimensions often cannot be easily related to originals<ul class="small"><li class="fragment">Mapping synthesized dims to original dims task is difficult</li></ul></li></ul></li><li class="fragment">Many techniques proposed<li class="fragment">Many literatures: visualization, machine learning, optimization, psychology, ...</li><li class="fragment">Techniques: t-SNE, MDS (multidimensional scaling), charting, isomap, LLE,…<li class="fragment">t-SNE: excellent for clusters<ul class="small"><li class="fragment">But some trickiness remains: http://distill.pub/2016/misread-tsne/</li></ul></li><li class="fragment">MDS: confusingly, entire family of techniques, both linear and nonlinear<ul><li class="fragment">Minimize stress or strain metrics</li><li class="fragment">Early formulations equivalent to PCA</li></ul></li></li></li></ul></section><section><h3 class="demo">t-SNE Explorations</h3><iframe class="blocks" data-src="http://distill.pub/2016/misread-tsne/"></iframe><a class="tiny" target="_blank" href="http://distill.pub/2016/misread-tsne/">http://distill.pub/2016/misread-tsne/</a></section><section><h3 class="demo">Interactive T-SNE</h3><div>Project by Fabián Peña</div><a class="tiny" href="https://fabiancpl.github.io/MLExplore.js/">https://fabiancpl.github.io/MLExplore.js/</a></section></section><section id="focusContext"><section><h1>Embed, Focus+Context</h1></section><section><h2>Embed: Focus+Context</h2><div class="flex"><div class="twothirds"><ul class="small"><li class="fragment">Combine information within single view</li><li class="fragment">Elide<ul class="small"><li class="fragment">Selectively filter and aggregate</li></ul></li><li class="fragment">Superimpose layer<ul><li class="fragment">Local lens</li></ul></li><li class="fragment">Distortion design choices<ul><li class="fragment">Region shape: radial, rectilinear, complex</li><li class="fragment">How many regions: one, many</li><li class="fragment">Region extent: local, global</li><li class="fragment">Interaction metaphor</li></ul></li></ul></div><div class="third"><figure><img data-src="../shared_images/vad_book_alldiagrams/pr13_embed-focus-context.png" alt="elide data, superimpose data, distort geometry"></figure></div></div></section><section class="full"><h3>Idiom: DOITrees Revisited</h3><ul><li class="fragment">Elide</li><ul class="small"><li class="fragment">Some items dynamically filtered out</li><li class="fragment">Some items dynamically aggregated together</li><li class="fragment">Some items shown in detail</li></ul></ul><figure class="noMarginTopBottom"><img data-src="../shared_images/vad_book_alldiagrams/pr13_embed-doitrees.png" alt=""><figcaption class="reference">[DOITrees Revisited: Scalable, Space-Constrained Visualization of Hierarchical Data. Heer and Card. Proc. Advanced Visual Interfaces (AVI), pp. 421–424, 2004.]</figcaption></figure></section><section><h2>Idiom: Fisheye Lens</h2><div class="flex"><div class="half"><ul class="small"><li class="fragment">Distort geometry<ul class="small"><li class="fragment">Shape: radial</li><li class="fragment">Focus: single extent</li><li class="fragment">Extent: local</li><li class="fragment">Metaphor: draggable lens</li></ul></li></ul><img data-src="../shared_images/vad_book_alldiagrams/pr13_embed-fisheye1.png" alt=""></div><div class="half"><img data-src="../shared_images/vad_book_alldiagrams/pr13_embed-fisheye2.png" alt=""></div></div></section><section><h3 class="demo">Fish eye</h3><iframe class="blocks" data-src="https://bost.ocks.org/mike/fisheye/"></iframe><a class="tiny" target="_blank" href="https://bost.ocks.org/mike/fisheye/">https://bost.ocks.org/mike/fisheye/</a><a class="tiny" target="_blank" href="http://bl.ocks.org/mbostock/">by mbostock</a></section><section class="full"><h3 class="demo">Idiom: Stretch and Squish Navigation</h3><div class="flex"><div class="half"><div class="small left-align">System: TreeJuxtaposer</div><ul class="tiny" style="margin-top:20px"><li class="fragment">Distort geometry<ul><li class="fragment">Shape: rectilinear</li><li class="fragment">Foci: multiple</li><li class="fragment">Impact: global</li><li class="fragment">Metaphor: stretch and squish, borders fixed</li></ul></li></ul><figure><img style="width:300px" data-src="../shared_images/vad_book_alldiagrams/pr13_embed-stretch-and-squish1.png" alt=""><figcaption class="reference"><a href="https://youtu.be/GdaPj8a9QEo">[https://youtu.be/GdaPj8a9QEo]</a></figcaption></figure></div><div class="half"><figure><img data-src="../shared_images/vad_book_alldiagrams/pr13_embed-stretch-and-squish2.png" alt=""><figcaption class="reference">[TreeJuxtaposer: Scalable Tree Comparison Using Focus+Context With Guaranteed Visibility. Munzner, Guimbretiere, Tasiran, Zhang, and Zhou. ACM Transactions on Graphics (Proc. SIGGRAPH) 22:3 (2003), 453– 462.]</figcaption></figure></div></div></section><section><h2>Distortion Costs and Benefits</h2><div class="flex"><div class="half"><ul class="tiny"><li class="fragment">Benefits<ul><li class="fragment">Combine focus and context information in single view</li></ul></li><li class="fragment">Costs<ul><li class="fragment">Length comparisons impaired<ul><li class="fragment">Network/tree topology comparisons unaffected: connection, containment</li></ul></li></ul><li class="fragment">Effects of distortion unclear if original structure unfamiliar</li><li class="fragment">Object constancy/tracking maybe impaired</li></li></ul><a class="reference" href="https://www.youtube.com/watch?v=hm2oFBqVM9o">[https://www.youtube.com/watch?v=hm2oFBqVM9o]</a></div><div class="half"><figure><img data-src="../shared_images/vad_book_alldiagrams/pr13_embed-distortion.png" alt=""><figcaption class="reference tiny">[Living Flows: Enhanced Exploration of Edge-Bundled Graphs Based on GPU-Intensive Edge Rendering. Lambert, Auber, and Melançon. Proc. Intl. Conf. Information Visualisation (IV), pp. 523–530, 2010.]</figcaption></figure></div></div></section></section><section><section><h3>Exploratory Data Analysis (EDA)</h3></section><section data-background-size="contain" data-background="../shared_images/haystack.png"><h3>What's in the data?</h3></section><section><h3>Tukey</h3><p class="small" style="text-align: left;"><span class="fragment"><strong>Exposure</strong>, the effective laying open of the data to display the unanticipated, is to us a major portion of data analysis.</span> <span class="fragment">Formal statistics has given almost no guidance to exposure;</span> <span class="fragment">indeed, it is not clear how the <strong>informality</strong> and <strong>flexibility</strong> appropriate to the <strong>exploratory character of exposure</strong> can be fitted into any of the structures of formal statistics so far proposed.</span></p><p class="small" style="text-align: left;"><span class="fragment">Nothing - not the careful logic of mathematics, not statistical models and theories, not the awesome arithmetic power of modern computers - nothing can substitute here for the <strong>flexibility of the informed human mind</strong>.</span> <span class="fragment">Accordingly, both approaches and techniques need to be structured so as to <strong>facilitate human involvement and intervention</strong>.</span></p></section><section><h3>Summary statistics</h3><ul><li>Useful to look at clean data, that you understand & trust.</li><li>Can be misleading.</li><li>Remember the datasaurus!</li></ul></section><section><h3>Data munging</h3><img data-src="../shared_images/data_munging.png"></section><section><h3>60%</h3></section><section><h3>Data munging</h3><img data-src="../shared_images/data_file_messy.png"></section><section><h3>Data munging</h3><img data-src="../shared_images/data_file_clean.png"></section><section><h3>Data quality hurdles</h3><ul><li>Missing Data.</li><li>Erroneous Values.</li><li>Type Conversion.</li><li>Entity Resolution.</li><li>Data Integration.</li></ul></section><section><h3>More bad data</h3><img data-src="../shared_images/data_file_worse.png"></section><section><h3>Data filtering</h3><div class="flex"><div class="third"><span>5.77967973162 3.26834145824 0.06418251738 4.38979192127 4.68302244707 4.82366715649 4.68587041117 0.04360063509 5.90498807235 4.3618070355 0.0017977901 4.9891841837 4.56259294774 5.44050157565 5.19592386044 15.6959515181 3.22732340991 5.57228018649 3.7148892443 5.00286245308 4.68302244707 4.82366715649 4.68587041117 0.04360063509 5.90498807235 4.68302244707</span></div><div class="twothirds"><img data-src="../shared_images/ship.png"></div></div></section><section><img data-src="../shared_images/fish_weights.png"></section><section><h4>The first sign that a visualization is good is that it shows you a problem in your data.</h4><p>Wattenberg</p></section><section><h3>Data Tranformations and Iteration</h3></section><section><h3>Looks like this:</h3><img data-src="../shared_images/pandas-screen.png"></section><section><h3>Think of it as a data cube:</h3><img data-src="../shared_images/data-cube.png"></section><section><h3>Common transformations</h3><ul><li>Normalize.</li><li>Log.</li><li>Power.</li><li>Binning.</li><li>Grouping.</li></ul></section><section><h3>Histograms, histograms, histograms</h3><p class="fragment">An cornerstone in the EDA toolbox!</p><p class="fragment">“Above all else show the data” -Tufte</p></section><section><h3>Correlation</h3><img data-src="../shared_images/gapminder.png"></section><section><h3>Hypothesis generation</h3><img data-src="../shared_images/splom.png"></section><section><h3>Mantras</h3><ul><li class="fragment">Be skeptical: what assumptions have been made?</li><li class="fragment">Explore iteratively: start simple, keep asking questions.</li><li class="fragment">Avoid fixation: use a variety of graphics to inspect more angles.</li></ul></section><section><h3>Paradoxes</h3><img data-src="../shared_images/simpsons_paradox.png"></section><section><h3>Which one has the real data?</h3><p><img data-src="../shared_images/wickham.png"></p><p><a href="http://jonathanstray.com/papers/wickham.pdf">Graphical Inference for Infovis</a></p></section><section><h3>Iteration demo</h3><img data-src="../shared_images/hedo01.png"></section><section><img data-src="../shared_images/hedo02.png"></section><section><img data-src="../shared_images/hedo03.png"></section><section><h3>Check on NaNs</h3><img data-src="../shared_images/hedo04.png"></section><section><h3>Polyhanna?</h3><img data-src="../shared_images/hedo05.png"></section><section><img data-src="../shared_images/hedo06.png"></section><section><img data-src="../shared_images/hedo07.png"></section><section><img data-src="../shared_images/hedo08.png"></section><section><img data-src="../shared_images/hedo09.png"></section><section><img data-src="../shared_images/hedo08.png" height="300px"><img data-src="../shared_images/hedo09.png" height="300px"></section></section><section id="review"><section><h2>What we learned</h2><ul class="small"></ul></section></section></div></div><script src="../js/reveal.js"></script><script src="../plugin/zoom/zoom.js"></script><script src="../plugin/notes/notes.js"></script><script src="../plugin/search/search.js"></script><script src="../plugin/markdown/markdown.js"></script><script src="../plugin/highlight/highlight.js"></script><script src="https://cdn.jsdelivr.net/npm/vega@5.13.0"></script><script src="https://cdn.jsdelivr.net/npm/vega-lite@4.13.1"></script><script src="https://cdn.jsdelivr.net/npm/vega-lite-api@0.11.0"></script><script src="https://cdn.jsdelivr.net/npm/vega-tooltip@0.23.2"></script><script>Reveal.initialize({
-  controls: true,
-  progress: true,
-  history: true,
-  center: true,
-  hash: true,
-  //- transition: "convex",
-
-  //- width: "100%",
-  //- height: "720px",
-
-  plugins: [ RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight ]
-});</script><script>(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.data-src=g;m.parentNode.insertBefore(a,m)
-})(window,document,"script","https://www.google-analytics.com/analytics.js","ga");
-
-ga("create", "UA-72531610-1", "auto");
-ga("send", "pageview");</script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Week 13 Reducing Attributes and Rows. MIDS W209 Information Visualization Slides</title>
+    <meta charset="utf-8">
+    <meta name="author" content="John Alexis Guerra Gómez">
+    <meta name="description" content="Week 13 Reducing Attributes and Rows.  MIDS W209 Information Visualization Slides">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fjalla+One|Raleway|PT+Sans+Narrow">
+    <link rel="stylesheet" href="https://use.typekit.net/yjc0afr.css">
+    <link rel="stylesheet" href="../plugin/highlight/monokai.css" id="highlight-theme">
+    <link href="../css/reveal.css" rel="stylesheet">
+    <link href="../css/theme/white.css" rel="stylesheet" id="theme">
+    <link href="../css/style.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h1 class="title">Reducing Attributes and Rows<br><small>MIDS W209: Information Visualization</small></h1>
+          <div class="r-stretch"></div>
+          <div class="tiny"><a href="https://johnguerra.co/" target="_blank"><strong> John Alexis Guerra Gómez</strong></a><span> |  john.guerra[at]gmail.com</span><a href="https://twitter.com/duto_guerra"> |  @duto_guerra</a><br><a href="https://andyreagan.com/" target="_blank"><strong> Andy Reagan</strong></a><span> |  andy[at]andyreagan.com |</span><a href="https://twitter.com/andyreagan">@andyreagan</a><br><a href="https://johnguerra.co/lectures/MIDS_W209_Information_Visualization/06_Tabular/" target="_blank">https://johnguerra.co/lectures/MIDS_W209_Information_Visualization/06_Tabular/</a></div>
+          <div class="logo"><a href="https://datascience.berkeley.edu/"><img class="logo" data-src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo"></a></div>
+          <div class="tiny">Partially based on<a href="https://www.cs.ubc.ca/~tmm/talks.html#minicourse14"> slides from Tamara Munzner</a></div>
+        </section>
+        <section id="outline">
+          <section>
+            <h2>What We Are Going to Learn</h2>
+            <ul class="small">
+              <li class="fragment">Reduce
+                <ul>
+                  <li class="fragment">Items</li>
+                  <li class="fragment">Attributes</li>
+                </ul>
+              </li>
+              <li class="fragment">Aggregation
+                <ul>
+                  <li class="fragment">Item</li>
+                  <li class="fragment">Spatial</li>
+                  <li class="fragment">Time</li>
+                </ul>
+              </li>
+              <li class="fragment">Dimensionality Reduction</li>
+              <li class="fragment">Embed, Focus and Context</li>
+              <li class="fragment">Exploratory Data Analysis</li>
+            </ul>
+          </section>
+          <section>
+            <div><img src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo"></div>
+          </section>
+        </section>
+        <section id="reduceItemsAndAttributes">
+          <section>
+            <h1>Reduce Items and Attributes</h1>
+          </section>
+          <section class="full">
+            <h3 class="demo">Reduce Items and Attributes</h3>
+            <div class="flex">
+              <div class="half">
+                <ul>
+                  <li class="fragment">Reduce/increase: inverses</li>
+                  <li class="fragment">Filter
+                    <ul class="small">
+                      <li class="fragment">Pro: straightforward and intuitive
+                        <ul class="small">
+                          <li class="fragment">To understand and compute</li>
+                        </ul>
+                      </li>
+                      <li class="fragment">Con: out of sight, out of mind</li>
+                    </ul>
+                  </li>
+                  <li class="fragment">Aggregation
+                    <ul>
+                      <li class="fragment">Pro: inform about whole set</li>
+                      <li class="fragment">Con: difficult to avoid losing signal</li>
+                    </ul>
+                  </li>
+                  <li class="fragment">Not mutually exclusive
+                    <ul>
+                      <li class="fragment">Combine filter, aggregate</li>
+                      <li class="fragment">Combine reduce, change, facet</li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              <div class="half"><img data-src="../shared_images/vad_book_alldiagrams/pr13_reduce-items-attributes.png" alt="Filter by items and by attributes; aggregate by items and by attributes; reduce filter and aggregate"></div>
+            </div>
+          </section>
+          <section>
+            <div><img src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo"></div>
+          </section>
+        </section>
+        <section id="itemFiltering">
+          <section>
+            <h1>Item Filtering</h1>
+          </section>
+          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/14_reduce-glimmer.005.png"></section>
+          <SECTION>
+            <h2>Crossfiltering</h2>
+            <ul>
+              <li class="fragment">Item filtering</li>
+              <li class="fragment">Coordinated views/controls combined</li>
+              <li class="fragment">All scented histogram bisliders update when any ranges change</li>
+            </ul>
+          </SECTION>
+          <section>
+            <h2>Faceted Search</h2>
+          </section>
+          <section class="full">
+            <h3 class="demo">Idiom: Scented Widgets</h3>
+            <div class="flex">
+              <div class="twothirds">
+                <ul class="small">
+                  <li class="fragment">Augmented widgets show information scent
+                    <ul class="small">
+                      <li class="fragment">Cues to show whether value in drilling down further vs. looking elsewhere</li>
+                    </ul>
+                  </li>
+                  <li class="fragment">Concise use of space: histogram on slider</li>
+                </ul><br>
+                <figure><img style="width:450px" data-src="../shared_images/vad_book_alldiagrams/pr13_reduce-scented-widgets1.png" alt="Scented Widgets full application">
+                  <figcaption class="reference"><a href="www.win.tue.nl/~selzen/paper/InfoVis2014.pdf">[Multivariate Network Exploration and Presentation: From Detail to Overview via Selections and Aggregations.  van den Elzen, van Wijk, IEEE TVCG 20(12): 2014 (Proc. InfoVis 2014).]</a></figcaption>
+                </figure>
+              </div>
+              <div class="third">
+                <figure><img data-src="../shared_images/vad_book_alldiagrams/pr13_reduce-scented-widgets2.png" alt="Scented Widgets example"><img data-src="../shared_images/vad_book_alldiagrams/pr13_reduce-scented-widgets3.png" alt="Scented Widgets filters' panel">
+                  <figcaption class="reference"><a>[Scented Widgets: Improving Navigation Cues with Embedded Visualizations. Willett, Heer, and Agrawala. IEEE TVCG (Proc. InfoVis 2007) 13:6 (2007), 1129–1136.]</a></figcaption>
+                </figure>
+              </div>
+            </div>
+          </section>
+          <section class="demo">
+            <h3 class="demo">Scented Widgets Paper</h3>
+            <figure>
+              <figcaption class="reference tiny" target="_blank" href="http://vis.berkeley.edu/papers/scented_widgets/">http://vis.berkeley.edu/papers/scented_widgets/</figcaption>
+              <iframe class="blocks" data-src="http://vis.berkeley.edu/papers/scented_widgets/"></iframe>
+            </figure>
+          </section>
+          <section class="demo">
+            <h2>Navio</h2>
+            <figure><img data-src="../shared_images/navio_thumb_v4.gif" alt="Navio Demo">
+              <figcaption class="reference"><a target="_blank" href="https://navio.dev">https://navio.dev</a></figcaption>
+            </figure>
+          </section>
+          <section>
+            <div><img src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo"></div>
+          </section>
+        </section>
+        <section id="attributeFiltering">
+          <section>
+            <h1>Attribute Filtering</h1>
+          </section>
+          <section data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/14_reduce-glimmer.007.png"></section>
+          <section>
+            <h2>DOSFA Paper</h2><a class="small" target="_blank" href="http://www.cs.ubc.ca/~tmm/courses/cpsc533c-04-spr/readings/dimorder.pdf">http://www.cs.ubc.ca/~tmm/courses/cpsc533c-04-spr/readings/dimorder.pdf</a>
+          </section>
+          <section>
+            <h2>Navio Load Notebook</h2>
+          </section>
+          <section>
+            <h2>UMAP Playground</h2>
+          </section>
+          <section>
+            <h2>Dimensionality Reduction</h2>
+          </section>
+          <section>
+            <h2>Aggregation: Hierarchichal Cluster Explorer</h2>
+          </section>
+          <section>
+            <div><img src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo"></div>
+          </section>
+        </section>
+        <section id="itemAggregation">
+          <section>
+            <h1>Item Aggregation</h1>
+          </section>
+          <section>
+            <h2>Idiom: Histogram</h2>
+            <div class="flex">
+              <div class="half">
+                <ul class="small">
+                  <li class="fragment">Static item aggregation</li>
+                  <li class="fragment">Task: find distribution</li>
+                  <li class="fragment">Data: table</li>
+                  <li class="fragment">Derived data</li>
+                  <ul class="small">
+                    <li class="fragment">New table: keys are bins, values are counts</li>
+                  </ul>
+                  <li class="fragment">Bin size crucial
+                    <li class="fragment">Pattern can change dramatically depending on discretization</li>
+                    <li class="fragment">Opportunity for interaction: control bin size on the fly</li>
+                  </li>
+                </ul>
+              </div>
+              <div class="half"><img data-src="../shared_images/vad_book_alldiagrams/pr13_reduce-histogram.png" alt="Histogram"></div>
+            </div>
+          </section>
+          <section>
+            <h2>Idiom: Boxplot</h2>
+            <div class="flex">
+              <div class="half">
+                <ul class="small">
+                  <li class="fragment">Static item aggregation</li>
+                  <li class="fragment">Task: find distribution</li>
+                  <li class="fragment">Data: table</li>
+                  <li class="fragment">Derived data</li>
+                  <ul class="small">
+                    <li class="fragment">Five quantitative attributes</li>
+                    <ul class="small">
+                      <li class="fragment">Median: central line</li>
+                      <li class="fragment">Lower and upper quartile: boxes</li>
+                      <li class="fragment">Lower upper fences: whiskers</li>
+                      <ul class="small">
+                        <li class="fragment">Values beyond which items are outliers</li>
+                      </ul>
+                    </ul>
+                    <li class="fragment">Outliers beyond fence cutoffs explicitly shown</li>
+                  </ul>
+                </ul>
+              </div>
+              <div class="half">
+                <figure><img data-src="../shared_images/vad_book_alldiagrams/pr13_reduce-boxplot.png" alt="Boxplot">
+                  <figcaption class="reference">[40 years of boxplots. Wickham and Stryjewski. 2012. had.co.nz]</figcaption>
+                </figure>
+              </div>
+            </div>
+          </section>
+          <section>
+            <h3 class="demo">Box Plot</h3>
+            <iframe class="blocks" data-src="http://blockbuilder.org/mbostock/4061502"></iframe><a class="tiny" target="_blank" href="http://blockbuilder.org/mbostock/4061502">http://blockbuilder.org/mbostock/4061502</a><a class="tiny" target="_blank" href="http://bl.ocks.org/mbostock/">by mbostock</a>
+          </section>
+          <section>
+            <h3 class="demo">Violin Plot</h3>
+            <iframe class="blocks" data-src="http://blockbuilder.org/asielen/92929960988a8935d907e39e60ea8417"></iframe><a class="tiny" target="_blank" href="http://blockbuilder.org/asielen/92929960988a8935d907e39e60ea8417">http://blockbuilder.org/asielen/92929960988a8935d907e39e60ea8417</a><a class="tiny" target="_blank" href="http://bl.ocks.org/asielen/">by asielen</a>
+          </section>
+          <section>
+            <h2>Idiom: 2D Density Plots</h2>
+            <div class="flex">
+              <div class="half">
+                <ul class="small">
+                  <li class="fragment">Scatterplot meets heatmap</li>
+                  <ul>
+                    <li class="fragment">Derived data:</li>
+                    <ul>
+                      <li class="fragment">Tesselate space info areas</li>
+                      <li class="fragment">Count number of elements falling on that area</li>
+                    </ul>
+                    <li class="fragment"><strong>Mark</strong>: dots (boxes)</li>
+                    <li class="fragment"><strong>Channels</strong>:</li>
+                    <ul>
+                      <li class="fragment">Position: location of areas</li>
+                      <li class="fragment">Color (brightness): number of elements</li>
+                    </ul>
+                    <ul>
+                      <li class="fragment">Marks (re-)ordered by cluster hierarchy traversal</li>
+                    </ul>
+                    <li class="fragment"><strong>Tasks</strong>: summarize distribution</li>
+                    <li class="fragment"><strong>Scalability:</strong></li>
+                    <ul>
+                      <li class="fragment">Millions of rows (might require preprocessing)</li>
+                    </ul>
+                  </ul>
+                </ul>
+              </div>
+              <div class="half">
+                <div id="observablehq-d74d4a6f">
+                  <div class="r-stack">
+                    <div class="fragment observablehq-moviesScatterplot"></div>
+                    <div class="fragment observablehq-moviesDensityCircles"></div>
+                    <div class="fragment observablehq-moviesDensityBoxes"></div>
+                  </div>
+                  <div style="overflow: hidden;"><a style="display: block; float:right;" href="https://observablehq.com/@john-guerra/data-transformation@307"><object type="image/svg+xml" style="pointer-events: none;" width=180 height=22 data="https://static.observableusercontent.com/files/c3fab254a006f1a3a1f9f63aba8ab1460db4752529036b9962950bde0ec195bab823daa6b278b1c3401e545b3bd640ddfdcad805cf9859af218cb2b9fed4ddf0"></object></a></div>
+                </div>
+                <script type="module">
+                  import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+                  import define from "https://api.observablehq.com/@john-guerra/data-transformation@307.js?v=3";
+                  (new Runtime).module(define, name => {
+                    if (name === "moviesScatterplot") return Inspector.into("#observablehq-d74d4a6f .observablehq-moviesScatterplot")();
+                    if (name === "moviesDensityCircles") return Inspector.into("#observablehq-d74d4a6f .observablehq-moviesDensityCircles")();
+                    if (name === "moviesDensityBoxes") return Inspector.into("#observablehq-d74d4a6f .observablehq-moviesDensityBoxes")();
+                  });
+                </script>
+                
+              </div>
+            </div>
+          </section>
+          <section class="full">
+            <h2>Interactive Density Plot</h2>
+            <div>
+              <div id="observablehq-8ab2bcad">
+                <div class="observablehq-chart"></div>
+                <div style="overflow: hidden;"><a style="display: block; float:right;" href="https://observablehq.com/@john-guerra/density-plot"><object type="image/svg+xml" style="pointer-events: none;" width=180 height=22 data="https://static.observableusercontent.com/files/c3fab254a006f1a3a1f9f63aba8ab1460db4752529036b9962950bde0ec195bab823daa6b278b1c3401e545b3bd640ddfdcad805cf9859af218cb2b9fed4ddf0"></object></a></div>
+              </div>
+              <script type="module">
+                import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+                import define from "https://api.observablehq.com/@john-guerra/density-plot.js?v=3";
+                (new Runtime).module(define, name => {
+                  if (name === "chart") return Inspector.into("#observablehq-8ab2bcad .observablehq-chart")();
+                });
+              </script>
+              
+            </div>
+          </section>
+          <section class="full">
+            <h4 class="demo">Idiom: Hierarchical Parallel Coordinates</h4>
+            <ul class="small">
+              <li class="fragment">Dynamic item aggregation</li>
+              <li class="fragment">Derived data: hierarchical clustering</li>
+              <li class="fragment">Encoding:</li>
+              <ul class="small">
+                <li class="fragment">Cluster band with variable transparency, line at mean, width by min/max values</li>
+                <li class="fragment">Color by proximity in hierarchy</li>
+              </ul>
+            </ul>
+            <figure><img data-src="../shared_images/vad_book_alldiagrams/pr13_reduce-hierarchical-clustering.png" alt="">
+              <figcaption class="reference">[Hierarchical Parallel Coordinates for Exploration of Large Datasets. Fua, Ward, and Rundensteiner. Proc. IEEE Visualization Conference (Vis ’99), pp. 43– 50, 1999.]</figcaption>
+            </figure>
+          </section>
+          <section>
+            <div><img src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo"></div>
+          </section>
+        </section>
+        <section id="spatialAggregation">
+          <section>
+            <h1>Spatial Aggregation</h1>
+          </section>
+          <section>
+            <h2>Geo Level</h2>
+            <ul>
+              <li class="fragment">Country</li>
+              <li class="fragment">State</li>
+              <li class="fragment">City</li>
+              <li class="fragment">Neighborhood</li>
+            </ul>
+          </section>
+          <section>
+            <div class="div demo">
+              <div id="observablehq-0e6de583">
+                <div class="observablehq-viewof-maxDigit"></div>
+                <div class="observablehq-chart"></div>
+                <div style="overflow: hidden;"><a style="display: block; float:right;" href="https://observablehq.com/@john-guerra/spatial-data-aggregation"><object type="image/svg+xml" style="pointer-events: none;" width=180 height=22 data="https://static.observableusercontent.com/files/c3fab254a006f1a3a1f9f63aba8ab1460db4752529036b9962950bde0ec195bab823daa6b278b1c3401e545b3bd640ddfdcad805cf9859af218cb2b9fed4ddf0"></object></a></div>
+              </div>
+              <script type="module">
+                import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+                import define from "https://api.observablehq.com/@john-guerra/spatial-data-aggregation.js?v=3";
+                (new Runtime).module(define, name => {
+                  if (name === "viewof maxDigit") return Inspector.into("#observablehq-0e6de583 .observablehq-viewof-maxDigit")();
+                  if (name === "chart") return Inspector.into("#observablehq-0e6de583 .observablehq-chart")();
+                });
+              </script>
+              
+              
+            </div>
+          </section>
+          <section>
+            <h2>Aggregation Problems</h2>
+            <ul>
+              <li class="fragment">MAUP: Modifiable Areal Unit Problem</li>
+              <li class="fragment">Gerrymandering (manipulating voting district boundaries) is only one example!</li>
+              <li class="fragment">Zone effects</li>
+              <li class="fragment">Scale effects</li>
+            </ul>
+            <figure><img src="../shared_images/gerrymandering.png" alt="Gerrymandering">
+              <figcaption class="reference"><a href="http://www.e-education.psu/edu/geog486/l4_p7.html">[http://www.e-education.psu/edu/geog486/l4_p7.html, Fig 4.cg.6]</a></figcaption>
+            </figure>
+          </section>
+          <section>
+            <h2>Overlapping</h2>
+            <ul>
+              <li>ZIP codes</li>
+              <li>Disputed borders</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Regions</h2>
+            <ul>
+              <li>Aggregate by commonalities
+                <ul>
+                  <li class="fragment">e.g. Agricultural vs. industrial regions</li>
+                  <li class="fragment">e.g. Historically right- vs. left-wing</li>
+                </ul>
+              </li>
+              <li>Aggregate by the data attributes</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Geo patterns vs. political patterns</h2>
+            <ul>
+              <li>Risaralda example</li>
+            </ul>
+          </section>
+          <section>
+            <div><img src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo"></div>
+          </section>
+        </section>
+        <section id="spatialAggregation">
+          <section>
+            <h1>Time Aggregation</h1>
+          </section>
+          <section>
+            <h2>Date Part vs. Truncate</h2>
+            <ul>
+              <li class="fragment">Date part: extract a part of the date</li>
+              <li class="fragment">Date truncate: cut the date at a certain level</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Date Truncate</h2>
+            <ul>
+              <li>Different levels can hide seasonality.</li>
+              <li>Sometimes, too much detail is unnecessary.</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Truncate dates</h2>
+            <div class="demo">
+              <div id="observablehq-46499eaa">
+                <div class="observablehq-dateTruncateHeader"></div>
+                <div class="observablehq-dateTruncateChart"></div>
+                <div style="overflow: hidden;"><a style="display: block; float:right;" href="https://observablehq.com/@berkeleyvis/time-aggregation"><object type="image/svg+xml" style="pointer-events: none;" width=180 height=22 data="https://static.observableusercontent.com/files/c3fab254a006f1a3a1f9f63aba8ab1460db4752529036b9962950bde0ec195bab823daa6b278b1c3401e545b3bd640ddfdcad805cf9859af218cb2b9fed4ddf0"></object></a></div>
+              </div>
+              <script type="module">
+                import {Runtime, Inspector, Library} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+                import define from "https://api.observablehq.com/@berkeleyvis/time-aggregation.js?v=3";
+              
+                const runtime = new Runtime(Object.assign(new Library, {width: 900}))
+              
+                runtime.module(define, name => {
+                  if (name === "dateTruncateHeader") return Inspector.into("#observablehq-46499eaa .observablehq-dateTruncateHeader")();
+                  if (name === "dateTruncateChart") return Inspector.into("#observablehq-46499eaa .observablehq-dateTruncateChart")();
+                });
+              </script>
+              
+            </div>
+          </section>
+          <section>
+            <h2>Date Part</h2>
+            <ul>
+              <li>Useful for highlighting human patterns
+                <ul>
+                  <li>Weekends</li>
+                  <li>Night time</li>
+                  <li>Holidays</li>
+                  <li>Summer vs. winter</li>
+                </ul>
+              </li>
+            </ul>
+          </section>
+          <section>
+            <h2>Aggregate by date parts</h2>
+            <div class="demo">
+              <div id="observablehq-d717c549">
+                <div class="observablehq-datePartHeader"></div>
+                <div class="observablehq-timePartChart"></div>
+              </div>
+              <script type="module">
+                import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+                import define from "https://api.observablehq.com/@berkeleyvis/time-aggregation.js?v=3";
+                (new Runtime).module(define, name => {
+                  if (name === "datePartHeader") return Inspector.into("#observablehq-d717c549 .observablehq-datePartHeader")();
+                  if (name === "timePartChart") return Inspector.into("#observablehq-d717c549 .observablehq-timePartChart")();
+                });
+              </script>
+              
+            </div>
+          </section>
+          <section>
+            <h2>Window Average/Median</h2>
+            <figure class="demo"><img style="width:1000px" src="../shared_images/covidMovingAverage.png" alt="Covid Moving Average by state">
+              <figcaption><a href="https://www.nytimes.com/interactive/2020/07/09/us/coronavirus-cases-reopening-trends.html">NY Times How Coronavirus Cases Have Risen Since States Reopened July 9th 2020</a></figcaption>
+            </figure>
+          </section>
+          <section>
+            <div class="demo">
+              <div id="observablehq-089d1463">
+                <div class="observablehq-header"></div>
+                <div class="observablehq-chart"></div>
+                <div class="observablehq-footer"></div>
+                <div style="overflow: hidden;"><a style="display: block; float:right;" href="https://observablehq.com/@john-guerra/evolucion-coronavirus-en-colombia"><object type="image/svg+xml" style="pointer-events: none;" width=180 height=22 data="https://static.observableusercontent.com/files/c3fab254a006f1a3a1f9f63aba8ab1460db4752529036b9962950bde0ec195bab823daa6b278b1c3401e545b3bd640ddfdcad805cf9859af218cb2b9fed4ddf0"></object></a></div>
+              </div>
+              <script type="module">
+                import {Runtime, Inspector, Library} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+                import define from "https://api.observablehq.com/@john-guerra/evolucion-coronavirus-en-colombia.js?v=3";
+              
+                const runtime = new Runtime(Object.assign(new Library, {width: 900}))
+                runtime.module(define, name => {
+                  if (name === "header") return Inspector.into("#observablehq-089d1463 .observablehq-header")();
+                  if (name === "chart") return Inspector.into("#observablehq-089d1463 .observablehq-chart")();
+                  if (name === "footer") return Inspector.into("#observablehq-089d1463 .observablehq-footer")();
+                });
+              </script>
+              
+              
+              
+              
+            </div>
+          </section>
+          <section>
+            <div><img src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo"></div>
+          </section>
+        </section>
+        <section id="dimensionalityReduction">
+          <section>
+            <h1>Dimensionality Reduction</h1>
+          </section>
+          <section class="full">
+            <h3 class="demo">Dimensionality Reduction</h3>
+            <ul class="small">
+              <li class="fragment">Attribute aggregation</li>
+              <ul class="small">
+                <li class="fragment">Derive low-dimensional target space from high-dimensional measured space</li>
+                <ul class="small">
+                  <li class="fragment">Capture most of variance with minimal error</li>
+                </ul>
+                <li class="fragment">Use when you can’t directly measure what you care about
+                  <li class="fragment">True dimensionality of dataset conjectured to be smaller than dimensionality of measurements</li>
+                  <li class="fragment">Latent factors, hidden variables</li>
+                </li>
+              </ul>
+            </ul><img data-src="../shared_images/vad_book_alldiagrams/pr13_reduce-dimensionality.png" alt="Taking tumor measurement data in 9D measured space and running dimensionality reduction derives that data in a 2D target space where it is easier to see groupings of benign and malignant tumors">
+          </section>
+          <section class="full">
+            <h4>Dimensionality Reduction for Documents</h4><img class="fill" data-src="../shared_images/vad_book_alldiagrams/pr13_reduce-dimensionality-for-documents.png" alt="">
+          </section>
+          <section>
+            <h4>Dimensionality vs. Attribute Reduction</h4>
+            <ul class="normal small">
+              <li class="fragment">Vocab use in field not consistent
+                <ul class="small">
+                  <li class="fragment">Dimension/attribute</li>
+                </ul>
+              </li>
+              <li class="fragment">Attribute reduction: reduce set with filtering
+                <ul>
+                  <li class="fragment">Includes orthographic projection</li>
+                </ul>
+              </li>
+              <li class="fragment">Dimensionality reduction (DR): create smaller set of new dimensionss/attributes
+                <ul>
+                  <li class="fragment">Typically implies dimensional aggregation, not just filtering</li>
+                  <li class="fragment">Vocabulary: projection/mapping</li>
+                </ul>
+              </li>
+            </ul>
+          </section>
+          <section>
+            <h3>Estimating True Dimensionality</h3>
+            <ul class="tiny">
+              <li class="fragment">How do you know when you would benefit from DR?
+                <ul class="small">
+                  <li class="fragment">Consider error for low-dim projection vs. high-dim projection</li>
+                </ul>
+              </li>
+              <li class="fragment">No single correct answer; many metrics proposed
+                <ul>
+                  <li class="fragment">Cumulative variance that is not accounted for</li>
+                  <li class="fragment">Strain: match variations in distance (vs. actual distance values)</li>
+                  <li class="fragment">Stress: difference between interpoint distances in high and low dimensionss</li>
+                </ul>
+              </li>
+            </ul><img style="width:400px" data-src="../shared_images/vad_book_alldiagrams/pr13_estimate-true-dimensionality.png" alt="Stresss Function">
+          </section>
+          <section>
+            <h3>Estimating True Dimensionality</h3>
+            <ul class="small">
+              <li class="fragment">Scree plots as simple way: error against number of attributes
+                <ul class="small">
+                  <li class="fragment">Original dataset: 294 dimensions</li>
+                  <li class="fragment">Estimate: Almost all variance preserved with less than 20 dimensions</li>
+                </ul>
+              </li>
+            </ul>
+            <figure><img style="width:400px" data-src="../shared_images/vad_book_alldiagrams/spree_plots.png" alt="Spree Plots">
+              <figcaption class="reference">[Fig 2. DimStiller: Workflows for dimensional analysis and reduction. Ingram et al. Proc. VAST 2010, p 3-10]</figcaption>
+            </figure>
+          </section>
+          <section>
+            <h3>Dimensionality Reduction and Visualization</h3>
+            <ul class="small">
+              <li class="fragment">Why do people do DR?
+                <ul class="small">
+                  <li class="fragment">Improve performance of downstream algorithm
+                    <ul class="small">
+                      <li class="fragment">Avoid curse of dimensionality</li>
+                    </ul>
+                  </li>
+                  <li class="fragment">Data analysis
+                    <ul>
+                      <li class="fragment">If looking at the output: visual data analysis</li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li class="fragment">Abstract tasks when visualizing DR data
+                <ul>
+                  <li class="fragment">Dimension-oriented tasks</li>
+                  <li class="fragment">Naming synthesized dimensions, mapping synthesized dimensions to original dimensions</li>
+                </ul>
+                <li class="fragment">Cluster-oriented tasks
+                  <ul>
+                    <li class="fragment">Verifying clusters, naming clusters, matching clusters and classes</li>
+                  </ul>
+                </li>
+              </li>
+            </ul>
+            <div class="reference">[Visualizing Dimensionally-Reduced Data: Interviews with Analysts and a Characterization of Task Sequences. Brehmer, Sedlmair, Ingram, and Munzner. Proc. BELIV 2014.]</div>
+          </section>
+          <section class="full">
+            <h3 class="demo">Linear Dimensionality Reduction</h3>
+            <ul class="small">
+              <li class="fragment">Principal components analysis (PCA)</li>
+              <ul class="small">
+                <li class="fragment">Finding axes: first with most variance, second with next most, etc.</li>
+                <li class="fragment">Describe location of each point as linear combination of weights for each axis</li>
+                <ul class="small">
+                  <li class="fragment">Mapping synthesized dimensions to original dimensions</li>
+                </ul>
+              </ul>
+            </ul>
+            <figure><img style="width:300px" data-src="../shared_images/vad_book_alldiagrams/pr13_reduce-dimensionality-scatterplot.png" alt="Linear Dimensionality Reduction">
+              <figcaption class="reference"><a href="https://en.wikipedia.org/wiki/File:GaussianScatterPCA.png">[http://en.wikipedia.org/wiki/File:GaussianScatterPCA.png]</a></figcaption>
+            </figure>
+          </section>
+          <section>
+            <h4>Nonlinear Dimensionality Reduction</h4>
+            <ul class="tiny">
+              <li class="fragment">Pro: can handle curved rather than linear structure</li>
+              <li class="fragment">Con: lose all ties to original dimensions/attributes
+                <ul class="small">
+                  <li class="fragment">New dimensions often cannot be easily related to originals
+                    <ul class="small">
+                      <li class="fragment">Mapping synthesized dims to original dims task is difficult</li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li class="fragment">Many techniques proposed
+                <li class="fragment">Many literatures: visualization, machine learning, optimization, psychology, etc.</li>
+                <li class="fragment">Techniques: t-SNE, MDS (multidimensional scaling), charting, isomap, LLE, etc.
+                  <li class="fragment">t-SNE: excellent for clusters
+                    <ul class="small">
+                      <li class="fragment">But some trickiness remains: a(href="http://distill.pub/2016/misread-tsne/") [How to Use t-SNE Effectively]</li>
+                    </ul>
+                  </li>
+                  <li class="fragment">MDS: confusingly, entire family of techniques, both linear and nonlinear
+                    <ul>
+                      <li class="fragment">Minimize stress or strain metrics</li>
+                      <li class="fragment">Early formulations equivalent to PCA</li>
+                    </ul>
+                  </li>
+                </li>
+              </li>
+            </ul>
+          </section>
+          <section>
+            <h3 class="demo">t-SNE Explorations</h3>
+            <iframe class="blocks" data-src="http://distill.pub/2016/misread-tsne/"></iframe><a class="tiny" target="_blank" href="http://distill.pub/2016/misread-tsne/">http://distill.pub/2016/misread-tsne/</a>
+          </section>
+          <section>
+            <h3 class="demo">Interactive T-SNE</h3>
+            <div>Project by Fabián Peña</div><a class="tiny" href="https://fabiancpl.github.io/MLExplore.js/">MLExplore.js: Exploring High-Dimensional Data by Interacting and Interpreting t-SNE and K-Means</a>
+          </section>
+          <section>
+            <div><img src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo"></div>
+          </section>
+        </section>
+        <section id="focusContext">
+          <section>
+            <h1>Embed, Focus+Context</h1>
+          </section>
+          <section>
+            <h2>Embed: Focus+Context</h2>
+            <div class="flex">
+              <div class="twothirds">
+                <ul class="small">
+                  <li class="fragment">Combine information within single view</li>
+                  <li class="fragment">Elide
+                    <ul class="small">
+                      <li class="fragment">Selectively filter and aggregate</li>
+                    </ul>
+                  </li>
+                  <li class="fragment">Superimpose layer
+                    <ul>
+                      <li class="fragment">Local lens</li>
+                    </ul>
+                  </li>
+                  <li class="fragment">Distortion design choices
+                    <ul>
+                      <li class="fragment">Region shape: radial, rectilinear, complex</li>
+                      <li class="fragment">How many regions: one, many</li>
+                      <li class="fragment">Region extent: local, global</li>
+                      <li class="fragment">Interaction metaphor</li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              <div class="third">
+                <figure><img data-src="../shared_images/vad_book_alldiagrams/pr13_embed-focus-context.png" alt="elide data, superimpose data, distort geometry"></figure>
+              </div>
+            </div>
+          </section>
+          <section class="full">
+            <h3>Idiom: DOITrees Revisited</h3>
+            <ul>
+              <li class="fragment">Elide</li>
+              <ul class="small">
+                <li class="fragment">Some items dynamically filtered out</li>
+                <li class="fragment">Some items dynamically aggregated together</li>
+                <li class="fragment">Some items shown in detail</li>
+              </ul>
+            </ul>
+            <figure class="noMarginTopBottom"><img data-src="../shared_images/vad_book_alldiagrams/pr13_embed-doitrees.png" alt="">
+              <figcaption class="reference">[DOITrees Revisited: Scalable, Space-Constrained Visualization of Hierarchical Data. Heer and Card. Proc. Advanced Visual Interfaces (AVI), pp. 421–424, 2004.]</figcaption>
+            </figure>
+          </section>
+          <section>
+            <h2>Idiom: Fisheye Lens</h2>
+            <div class="flex">
+              <div class="half">
+                <ul class="small">
+                  <li class="fragment">Distort geometry
+                    <ul class="small">
+                      <li class="fragment">Shape: radial</li>
+                      <li class="fragment">Focus: single extent</li>
+                      <li class="fragment">Extent: local</li>
+                      <li class="fragment">Metaphor: draggable lens</li>
+                    </ul>
+                  </li>
+                </ul><img data-src="../shared_images/vad_book_alldiagrams/pr13_embed-fisheye1.png" alt="">
+              </div>
+              <div class="half"><img data-src="../shared_images/vad_book_alldiagrams/pr13_embed-fisheye2.png" alt=""></div>
+            </div>
+          </section>
+          <section>
+            <h3 class="demo">Fisheye</h3>
+            <iframe class="blocks" data-src="https://bost.ocks.org/mike/fisheye/"></iframe><a class="tiny" target="_blank" href="https://bost.ocks.org/mike/fisheye/">https://bost.ocks.org/mike/fisheye/</a><a class="tiny" target="_blank" href="http://bl.ocks.org/mbostock/">by mbostock</a>
+          </section>
+          <section class="full">
+            <h3 class="demo">Idiom: Stretch and Squish Navigation</h3>
+            <div class="flex">
+              <div class="half">
+                <div class="small left-align">System: TreeJuxtaposer</div>
+                <ul class="tiny" style="margin-top:20px">
+                  <li class="fragment">Distort geometry
+                    <ul>
+                      <li class="fragment">Shape: rectilinear</li>
+                      <li class="fragment">Foci: multiple</li>
+                      <li class="fragment">Impact: global</li>
+                      <li class="fragment">Metaphor: stretch and squish, borders fixed</li>
+                    </ul>
+                  </li>
+                </ul>
+                <figure><img style="width:300px" data-src="../shared_images/vad_book_alldiagrams/pr13_embed-stretch-and-squish1.png" alt="">
+                  <figcaption class="reference"><a href="https://youtu.be/GdaPj8a9QEo">[https://youtu.be/GdaPj8a9QEo]</a></figcaption>
+                </figure>
+              </div>
+              <div class="half">
+                <figure><img data-src="../shared_images/vad_book_alldiagrams/pr13_embed-stretch-and-squish2.png" alt="">
+                  <figcaption class="reference">[TreeJuxtaposer: Scalable Tree Comparison Using Focus+Context With Guaranteed Visibility. Munzner, Guimbretiere, Tasiran, Zhang, and Zhou. ACM Transactions on Graphics (Proc. SIGGRAPH) 22:3 (2003), 453– 462.]</figcaption>
+                </figure>
+              </div>
+            </div>
+          </section>
+          <section>
+            <h2>Distortion Costs and Benefits</h2>
+            <div class="flex">
+              <div class="half">
+                <ul class="tiny">
+                  <li class="fragment">Benefits
+                    <ul>
+                      <li class="fragment">Combine focus and context information in single view</li>
+                    </ul>
+                  </li>
+                  <li class="fragment">Costs
+                    <ul>
+                      <li class="fragment">Length comparisons impaired
+                        <ul>
+                          <li class="fragment">Network/tree topology comparisons unaffected: connection, containment</li>
+                        </ul>
+                      </li>
+                    </ul>
+                    <li class="fragment">Effects of distortion unclear if original structure unfamiliar</li>
+                    <li class="fragment">Object constancy/tracking may be impaired</li>
+                  </li>
+                </ul><a class="reference" href="https://www.youtube.com/watch?v=hm2oFBqVM9o">[https://www.youtube.com/watch?v=hm2oFBqVM9o]</a>
+              </div>
+              <div class="half">
+                <figure><img data-src="../shared_images/vad_book_alldiagrams/pr13_embed-distortion.png" alt="">
+                  <figcaption class="reference tiny">[Living Flows: Enhanced Exploration of Edge-Bundled Graphs Based on GPU-Intensive Edge Rendering. Lambert, Auber, and Melançon. Proc. Intl. Conf. Information Visualisation (IV), pp. 523–530, 2010.]</figcaption>
+                </figure>
+              </div>
+            </div>
+          </section>
+          <section>
+            <div><img src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo"></div>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h3>Exploratory Data Analysis (EDA)</h3>
+          </section>
+          <section data-background-size="contain" data-background="../shared_images/haystack.png">
+            <h3>What's in the Data?</h3>
+          </section>
+          <section>
+            <h3>Tukey</h3>
+            <p class="small" style="text-align: left;"><span class="fragment"><strong>Exposure</strong>, the effective laying open of the data to display the unanticipated, is to us a major portion of data analysis.</span> <span class="fragment">Formal statistics has given almost no guidance to exposure;</span> <span class="fragment">indeed, it is not clear how the <strong>informality</strong> and <strong>flexibility</strong> appropriate to the <strong>exploratory character of exposure</strong> can be fitted into any of the structures of formal statistics so far proposed.</span></p>
+            <p class="small" style="text-align: left;"><span class="fragment">Nothing—not the careful logic of mathematics, not statistical models and theories, not the awesome arithmetic power of modern computers—nothing can substitute here for the <strong>flexibility of the informed human mind</strong>.</span> <span class="fragment">Accordingly, both approaches and techniques need to be structured so as to <strong>facilitate human involvement and intervention</strong>.</span></p>
+          </section>
+          <section>
+            <h3>Summary Statistics</h3>
+            <ul>
+              <li>Useful to look at clean data that you understand and trust</li>
+              <li>Can be misleading</li>
+              <li>Remember the datasaurus!</li>
+            </ul>
+          </section>
+          <section>
+            <h3>Data Munging</h3><img data-src="../shared_images/data_munging.png">
+          </section>
+          <section>
+            <h3>60%</h3>
+          </section>
+          <section>
+            <h3>Data Munging</h3><img data-src="../shared_images/data_file_messy.png">
+          </section>
+          <section>
+            <h3>Data Munging (cont.)</h3><img data-src="../shared_images/data_file_clean.png">
+          </section>
+          <section>
+            <h3>Data Quality Hurdles</h3>
+            <ul>
+              <li>Missing data</li>
+              <li>Erroneous values</li>
+              <li>Type conversion</li>
+              <li>Entity resolution</li>
+              <li>Data integration</li>
+            </ul>
+          </section>
+          <section>
+            <h3>More Bad Data</h3><img data-src="../shared_images/data_file_worse.png">
+          </section>
+          <section>
+            <h3>Data Filtering</h3>
+            <div class="flex">
+              <div class="third"><span>5.77967973162 3.26834145824 0.06418251738 4.38979192127 4.68302244707 4.82366715649 4.68587041117 0.04360063509 5.90498807235 4.3618070355 0.0017977901 4.9891841837 4.56259294774 5.44050157565 5.19592386044 15.6959515181 3.22732340991 5.57228018649 3.7148892443 5.00286245308 4.68302244707 4.82366715649 4.68587041117 0.04360063509 5.90498807235 4.68302244707</span></div>
+              <div class="twothirds"><img data-src="../shared_images/ship.png"></div>
+            </div>
+          </section>
+          <section><img data-src="../shared_images/fish_weights.png"></section>
+          <section>
+            <h4>The First Sign That a Visualization Is Good Is That It Shows You a Problem in Your Data</h4>
+            <p>Wattenberg</p>
+          </section>
+          <section>
+            <h3>Data Tranformations and Iteration</h3>
+          </section>
+          <section>
+            <h3>Looks Like This</h3><img data-src="../shared_images/pandas-screen.png">
+          </section>
+          <section>
+            <h3>Think of It as a Data Cube</h3><img data-src="../shared_images/data-cube.png">
+          </section>
+          <section>
+            <h3>Common Transformations</h3>
+            <ul>
+              <li>Normalize</li>
+              <li>Log</li>
+              <li>Power</li>
+              <li>Binning</li>
+              <li>Grouping</li>
+            </ul>
+          </section>
+          <section>
+            <h3>Histograms, histograms, histograms</h3>
+            <p class="fragment">A cornerstone in the EDA toolbox!</p>
+            <p class="fragment">“Above all else show the data.” - Tufte</p>
+          </section>
+          <section>
+            <h3>Correlation</h3><img data-src="../shared_images/gapminder.png">
+          </section>
+          <section>
+            <h3>Hypothesis Generation</h3><img data-src="../shared_images/splom.png">
+          </section>
+          <section>
+            <h3>Mantras</h3>
+            <ul>
+              <li class="fragment">Be skeptical: What assumptions have been made?</li>
+              <li class="fragment">Explore iteratively: Start simple, keep asking questions.</li>
+              <li class="fragment">Avoid fixation: Use a variety of graphics to inspect more angles.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>Paradoxes</h3><img data-src="../shared_images/simpsons_paradox.png">
+          </section>
+          <section>
+            <h3>Which One Has the Real Data?</h3>
+            <p><img data-src="../shared_images/wickham.png"></p>
+            <p><a href="http://jonathanstray.com/papers/wickham.pdf">Graphical Inference for Infovis</a></p>
+          </section>
+          <section>
+            <h3>Iteration Demo</h3><img data-src="../shared_images/hedo01.png">
+          </section>
+          <section><img data-src="../shared_images/hedo02.png"></section>
+          <section><img data-src="../shared_images/hedo03.png"></section>
+          <section>
+            <h3>Check on NaNs</h3><img data-src="../shared_images/hedo04.png">
+          </section>
+          <section>
+            <h3>Polyhanna?</h3><img data-src="../shared_images/hedo05.png">
+          </section>
+          <section><img data-src="../shared_images/hedo06.png"></section>
+          <section><img data-src="../shared_images/hedo07.png"></section>
+          <section><img data-src="../shared_images/hedo08.png"></section>
+          <section><img data-src="../shared_images/hedo09.png"></section>
+          <section><img data-src="../shared_images/hedo08.png" height="300px"><img data-src="../shared_images/hedo09.png" height="300px"></section>
+          <section>
+            <div><img src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo"></div>
+          </section>
+        </section>
+        <section id="review">
+          <section>
+            <h2>What We Learned</h2>
+            <ul class="small">
+              <li class="fragment">Reduce
+                <ul>
+                  <li class="fragment">Items</li>
+                  <li class="fragment">Attributes</li>
+                </ul>
+              </li>
+              <li class="fragment">Aggregation
+                <ul>
+                  <li class="fragment">Item</li>
+                  <li class="fragment">Spatial</li>
+                  <li class="fragment">Time</li>
+                </ul>
+              </li>
+              <li class="fragment">Dimensionality Reduction</li>
+              <li class="fragment">Embed, Focus and Context</li>
+              <li class="fragment">Exploratory Data Analysis</li>
+            </ul>
+          </section>
+          <section>
+            <div><img src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo"></div>
+          </section>
+        </section>
+      </div>
+    </div>
+    <script src="../js/reveal.js"></script>
+    <script src="../plugin/zoom/zoom.js"></script>
+    <script src="../plugin/notes/notes.js"></script>
+    <script src="../plugin/search/search.js"></script>
+    <script src="../plugin/markdown/markdown.js"></script>
+    <script src="../plugin/highlight/highlight.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.13.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.13.1"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite-api@0.11.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-tooltip@0.23.2"></script>
+    <script>
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        hash: true,
+        //- transition: "convex",
+      
+        //- width: "100%",
+        //- height: "720px",
+      
+        plugins: [ RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight ]
+      });
+    </script>
+    <script>
+      (function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.data-src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,"script","https://www.google-analytics.com/analytics.js","ga");
+      
+      ga("create", "UA-72531610-1", "auto");
+      ga("send", "pageview");
+    </script>
+  </body>
+</html>
