@@ -13,9 +13,7 @@ Use the following for width-->
 
 ### Software Demos
 
-[![jJD7qP_oCSs](https://img.youtube.com/vi/jJD7qP_oCSs/0.jpg)](https://www.youtube.com/watch?v=jJD7qP_oCSs)
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/jJD7qP_oCSs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Week 02: What
 
@@ -67,7 +65,10 @@ Use the following for width-->
 
 Time with `d3` [scratchbook](https://observablehq.com/d/f7cc07f685a60ba9?collection=@berkeleyvis/scratchbooks) and video:
 
+[![0KmFkexJGIo](https://img.youtube.com/vi/0KmFkexJGIo/0.jpg)](https://www.youtube.com/watch?v=0KmFkexJGIo)
+
 <iframe width="560" height="315" src="https://www.youtube.com/embed/0KmFkexJGIo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 
 Time with `vega-lite` [scratchbook](https://observablehq.com/d/25c168f39acb668b?collection=@berkeleyvis/scratchbooks) and video:
 
