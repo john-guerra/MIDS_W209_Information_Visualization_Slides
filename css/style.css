@@ -115,7 +115,10 @@ ul
 .reveal div.demo {
   height: 650px;
   overflow-y: scroll;
+<<<<<<< HEAD
+=======
   width: 500px;
+>>>>>>> 7f77ffd132167a28919714893a040b8e83f3eb65
   margin: auto;
   font-size: 14pt;
 }

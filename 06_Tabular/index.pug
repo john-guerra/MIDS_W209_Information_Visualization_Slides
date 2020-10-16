@@ -121,9 +121,9 @@ html(lang="en")
           section.full
             h2 Arrange Tables
             .flex
-              img.fragment(style="flex-basis:45%" src="../shared_images/vad_book_alldiagrams/how_express_separate.png", alt="Express Separate Order and Align")
-              img.fragment(style="flex-basis:45%" src="../shared_images/vad_book_alldiagrams/how_axis_orientation.png", alt="Axis Orientation")
-              img.fragment(style="margin-top:40px; flex-basis:100%" src="../shared_images/vad_book_alldiagrams/how_keys.png", alt="Keys")
+              img.fragment(style="width:45%" src="../shared_images/vad_book_alldiagrams/how_express_separate.png", alt="Express Separate Order and Align")
+              img.fragment(style="width:45%" src="../shared_images/vad_book_alldiagrams/how_axis_orientation.png", alt="Axis Orientation")
+              img.fragment(style="margin-top:30px; width:100%" src="../shared_images/vad_book_alldiagrams/how_keys.png", alt="Keys")
 
           //- section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/08_tables-spatial.004.png")
           // @john-guerra Note: the above image is cut off on the slide
@@ -136,8 +136,8 @@ html(lang="en")
                 ul.small
                   li.fragment Independent attribute
                   li.fragment Used as unique index to look up items
-                  li.fragment Simple tables: one key
-                  li.fragment Multidimensional tables: multiple keys
+                  li.fragment Simple tables: #[strong one key]
+                  li.fragment Multidimensional tables: #[strong multiple keys]
               .half
                 img.fragment.vcentered(width="100%" style="margin-top:40px" src="../shared_images/vad_book_alldiagrams/how_keys.png", alt="Keys")
 
@@ -192,21 +192,7 @@ html(lang="en")
           //- section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/08_tables-spatial.006.png")
 
 
-          //- Scatterplot block
-          section.full
-            h3.demo Idiom: Scatterplot
-            div.blocks#scatterplotDiv
-            script(type="module").
-              import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
-              import notebook from "https://api.observablehq.com/@john-guerra/scatterplot.js?v=3";
-              new Runtime().module(notebook, name => {
-                if (name === "chart") {
-                  return new Inspector(document.querySelector("#scatterplotDiv"));
-                }
-              });
 
-            //- iframe.blocks(data-src="http://blockbuilder.org/mbostock/3887118")
-            a.tiny(target="_blank" href="https://observablehq.com/@john-guerra/scatterplot") https://observablehq.com/@john-guerra/scatterplot
 
           section
             h2 Scatterplot Overplotting
@@ -351,8 +337,26 @@ html(lang="en")
 
               //- TODO highlight region on hover
 
+
+          section
+            h3 Grouped Bar Chart
+            div.
+              <div id="observablehq-6309ff14">
+                <div class="observablehq-chart"></div>
+                <div style="overflow: hidden;"><a style="display: block; float:right;" href="https://observablehq.com/d/ba03f7bcf4681e15"><object type="image/svg+xml" style="pointer-events: none;" width=180 height=22 data="https://static.observableusercontent.com/files/c3fab254a006f1a3a1f9f63aba8ab1460db4752529036b9962950bde0ec195bab823daa6b278b1c3401e545b3bd640ddfdcad805cf9859af218cb2b9fed4ddf0"></object></a></div>
+              </div>
+              <script type="module">
+                import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+                import define from "https://api.observablehq.com/d/ba03f7bcf4681e15.js?v=3";
+                (new Runtime).module(define, name => {
+                  if (name === "chart") return Inspector.into("#observablehq-6309ff14 .observablehq-chart")();
+                });
+              </script>
+
+
           section
             h3.demo Stacked to Grouped
+
             div.blocks#stackedToGroupedDivLayout
             div.blocks#stackedToGroupedDiv
             script(type="module").
@@ -365,29 +369,59 @@ html(lang="en")
                 if (name === "viewof layout") {
                   return new Inspector(document.querySelector("#stackedToGroupedDivLayout"));
                 }
+                if (name === "update") {
+                  return true;
+                }
 
               });
             a.tiny(target="_blank" href="https://observablehq.com/@d3/stacked-to-grouped-bars") https://observablehq.com/@d3/stacked-to-grouped-bars
 
+          section.full
+            h3.demo Idiom: Dot Plot
+            div.
+              <div id="observablehq-2fd2c4f4">
+                <div class="observablehq-viewof-primary"></div>
+                <div class="observablehq-chart"></div>
+                <div style="display:none" class="observablehq-update"></div>
+                <div style="overflow: hidden;"><a style="display: block; float:right;" href="https://observablehq.com/d/2dfb7c36a1da900f"><object type="image/svg+xml" style="pointer-events: none;" width=180 height=22 data="https://static.observableusercontent.com/files/c3fab254a006f1a3a1f9f63aba8ab1460db4752529036b9962950bde0ec195bab823daa6b278b1c3401e545b3bd640ddfdcad805cf9859af218cb2b9fed4ddf0"></object></a></div>
+              </div>
+              <script type="module">
+                import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+                import define from "https://api.observablehq.com/d/2dfb7c36a1da900f.js?v=3";
+                (new Runtime).module(define, name => {
+                  if (name === "viewof primary") return Inspector.into("#observablehq-2fd2c4f4 .observablehq-viewof-primary")();
+                  if (name === "chart") return Inspector.into("#observablehq-2fd2c4f4 .observablehq-chart")();
+                  if (name === "update") return Inspector.into("#observablehq-2fd2c4f4 .observablehq-update")();
+                });
+              </script>
+
           section
             h2 "Stacked Bar Charts Are the Worst."
             p Interesting discussion from
-              a(href="https://eagereyes.org/techniques/stacked-bars-are-the-worst") Robert Kosara's blog.
+              a(href="https://eagereyes.org/techniques/stacked-bars-are-the-worst")  Robert Kosara's blog.
             p Make sure to read the comments.
 
 
-          section
+          section.full
             h2 Idiom: Marimekko Chart
-            .flex
-              .half
-                ul
-                  li.fragment Similar to stacked barchart
-                  li.fragment Uses bar width
-              .half
+            figure
+              div(style="max-width:800px").
+                <div id="observablehq-e25321be">
+                  <div class="observablehq-chart"></div>
+                  <div style="overflow: hidden;"><a style="display: block; float:right;" href="https://observablehq.com/d/61b24cb7f82428df"><object type="image/svg+xml" style="pointer-events: none;" width=180 height=22 data="https://static.observableusercontent.com/files/c3fab254a006f1a3a1f9f63aba8ab1460db4752529036b9962950bde0ec195bab823daa6b278b1c3401e545b3bd640ddfdcad805cf9859af218cb2b9fed4ddf0"></object></a></div>
+                </div>
+                <script type="module">
+                  import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+                  import define from "https://api.observablehq.com/d/61b24cb7f82428df.js?v=3";
+                  (new Runtime).module(define, name => {
+                    if (name === "chart") return Inspector.into("#observablehq-e25321be .observablehq-chart")();
+                  });
+                </script>
+              figcaption.reference
                 a(href="https://observablehq.com/@karimdouieb/europe-electricity-production") https://observablehq.com/@karimdouieb/europe-electricity-production
+                br
+                br
                 a(href="https://datavizcatalogue.com/methods/marimekko_chart.html") https://datavizcatalogue.com/methods/marimekko_chart.html
-                // @john-guerra Note: formatting causes slide content to go off-screen
-
 
 
           section
@@ -444,7 +478,7 @@ html(lang="en")
 
 
           section
-            h2 Idiom: Cluster Heatmap
+            h3.demo Idiom: Cluster Heatmap
             .flex
               .half
                 ul.small
@@ -463,7 +497,7 @@ html(lang="en")
                       li.fragment Task: assess quality of clusters found by automatic methods
               .half
                 figure
-                  img.fill(data-src="../shared_images/vad_book_alldiagrams/cluster_heatmap.png", alt="Cluster Heatmap")
+                  img.fill(style="max-width:400px", data-src="../shared_images/vad_book_alldiagrams/cluster_heatmap.png", alt="Cluster Heatmap")
                 figure
                   img.fill(data-src="../shared_images/vad_book_alldiagrams/two_keys.png", alt="Two Keys")
 
@@ -563,6 +597,14 @@ html(lang="en")
                     ul
                       li.fragment Scattered crossings
 
+              .half
+                figure
+                  img(src="../shared_images/correlation.png", alt="Correlation")
+                  figcaption.reference
+                    div [Hyperdimensional Data Analysis Using Parallel Coordinates. Wegman. Journ. American Statistical Association 85:411 (1990), 664–675.]
+                    div [A layered grammar of graphics. Wickham. Journ. Computational and Graphical Statistics 19:1 (2010), 3–28.]
+
+
 
           section
             h2 Orientation Limitations
@@ -618,6 +660,8 @@ html(lang="en")
                     li.fragment Less accurate than aligned with rectilinear
               .half
 
+                figure
+                  img(style="max-width:200px", src="../shared_images/radar_star.png", alt="")
 
           section
             h2 Idiom: Radar Plots
@@ -628,8 +672,9 @@ html(lang="en")
                   li.fragment Scalability: similar to parallel coordinates
                   li.fragment Order of attributes matter
               .half
-
-                //- TODO make Radar Plot example with fifa
+                figure
+                  img(style="max-width:600px",src="../shared_images/radar.png", alt="")
+                  figcaption.reference [Slide courtesy of Ben Jones]
 
 
           section
@@ -643,9 +688,6 @@ html(lang="en")
                 a(href="http://www.thefunctionalart.com/2012/11/radar-graphs-avoid-them-999-of-time.html") http://www.thefunctionalart.com/2012/11/radar-graphs-avoid-them-999-of-time.html
                 div [Slide courtesy of Ben Jones]
 
-
-          section
-            h2 Radial Orientation: Radar Plots
 
           section
             h3 Idioms: Pie Chart, Polar Area Chart
@@ -669,6 +711,10 @@ html(lang="en")
                   ul
                     li.fragment Part-to-whole judgements
               .half
+
+                figure
+                  img(style="max-width:200px", src="../shared_images/pie_polar.png", alt="Pie Polar")
+                  figcaption.reference [A layered grammar of graphics. Wickham. Journ. Computational and Graphical Statistics 19:1 (2010), 3–28.]
 
 
           section
@@ -817,7 +863,21 @@ html(lang="en")
         section#tablesD3
           section
             h1 Tables with D3
+          //- Scatterplot block
+          section.full
+            h3.demo Idiom: Scatterplot
+            div.blocks#scatterplotDiv
+            script(type="module").
+              import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+              import notebook from "https://api.observablehq.com/@john-guerra/scatterplot.js?v=3";
+              new Runtime().module(notebook, name => {
+                if (name === "chart") {
+                  return new Inspector(document.querySelector("#scatterplotDiv"));
+                }
+              });
 
+            //- iframe.blocks(data-src="http://blockbuilder.org/mbostock/3887118")
+            a.tiny(target="_blank" href="https://observablehq.com/@john-guerra/scatterplot") https://observablehq.com/@john-guerra/scatterplot
 
           //- Barchart block
           section

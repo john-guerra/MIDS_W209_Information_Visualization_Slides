@@ -58,6 +58,18 @@ html(lang="en")
           section
             h2 What We Are Going to Learn
             ul.small
+              li.fragment Reduce
+                ul
+                  li.fragment Items
+                  li.fragment Attributes
+              li.fragment Aggregation
+                ul
+                  li.fragment Item
+                  li.fragment Spatial
+                  li.fragment Time
+              li.fragment Dimensionality Reduction
+              li.fragment Embed, Focus and Context
+              li.fragment Exploratory Data Analysis
 
           section
             div
@@ -65,7 +77,7 @@ html(lang="en")
         section#reduceItemsAndAttributes
           section
             h1 Reduce Items and Attributes
-          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/14_reduce-glimmer.003.png")
+          //- section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/14_reduce-glimmer.003.png")
           //- section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/14_reduce-glimmer.004.png")
 
 
@@ -328,12 +340,28 @@ html(lang="en")
             h1 Spatial Aggregation
 
           section
-            h2 Geo L evel
+            h2 Geo Level
             ul
               li.fragment Country
               li.fragment State
               li.fragment City
               li.fragment Neighborhood
+
+          section
+            .div.demo.
+              <div id="observablehq-0e6de583">
+                <div class="observablehq-viewof-maxDigit"></div>
+                <div class="observablehq-chart"></div>
+                <div style="overflow: hidden;"><a style="display: block; float:right;" href="https://observablehq.com/@john-guerra/spatial-data-aggregation"><object type="image/svg+xml" style="pointer-events: none;" width=180 height=22 data="https://static.observableusercontent.com/files/c3fab254a006f1a3a1f9f63aba8ab1460db4752529036b9962950bde0ec195bab823daa6b278b1c3401e545b3bd640ddfdcad805cf9859af218cb2b9fed4ddf0"></object></a></div>
+              </div>
+              <script type="module">
+                import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+                import define from "https://api.observablehq.com/@john-guerra/spatial-data-aggregation.js?v=3";
+                (new Runtime).module(define, name => {
+                  if (name === "viewof maxDigit") return Inspector.into("#observablehq-0e6de583 .observablehq-viewof-maxDigit")();
+                  if (name === "chart") return Inspector.into("#observablehq-0e6de583 .observablehq-chart")();
+                });
+              </script>
 
 
           section
@@ -343,8 +371,11 @@ html(lang="en")
               li.fragment Gerrymandering (manipulating voting district boundaries) is only one example!
               li.fragment Zone effects
               li.fragment Scale effects
+            figure
+              img(src="../shared_images/gerrymandering.png", alt="Gerrymandering")
+              figcaption.reference
+                a(href="http://www.e-education.psu/edu/geog486/l4_p7.html") [http://www.e-education.psu/edu/geog486/l4_p7.html, Fig 4.cg.6]
 
-          //- TODO Add examples
 
 
           section
@@ -365,7 +396,6 @@ html(lang="en")
 
           section
             h2 Geo patterns vs. political patterns
-
             ul
               li Risaralda example
 
@@ -392,6 +422,27 @@ html(lang="en")
               li Sometimes, too much detail is unnecessary.
 
           section
+
+            h2 Truncate dates
+            div.demo.
+              <div id="observablehq-46499eaa">
+                <div class="observablehq-dateTruncateHeader"></div>
+                <div class="observablehq-dateTruncateChart"></div>
+                <div style="overflow: hidden;"><a style="display: block; float:right;" href="https://observablehq.com/@berkeleyvis/time-aggregation"><object type="image/svg+xml" style="pointer-events: none;" width=180 height=22 data="https://static.observableusercontent.com/files/c3fab254a006f1a3a1f9f63aba8ab1460db4752529036b9962950bde0ec195bab823daa6b278b1c3401e545b3bd640ddfdcad805cf9859af218cb2b9fed4ddf0"></object></a></div>
+              </div>
+              <script type="module">
+                import {Runtime, Inspector, Library} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+                import define from "https://api.observablehq.com/@berkeleyvis/time-aggregation.js?v=3";
+
+                const runtime = new Runtime(Object.assign(new Library, {width: 900}))
+
+                runtime.module(define, name => {
+                  if (name === "dateTruncateHeader") return Inspector.into("#observablehq-46499eaa .observablehq-dateTruncateHeader")();
+                  if (name === "dateTruncateChart") return Inspector.into("#observablehq-46499eaa .observablehq-dateTruncateChart")();
+                });
+              </script>
+
+          section
             h2 Date Part
 
             ul
@@ -402,8 +453,53 @@ html(lang="en")
                   li Holidays
                   li Summer vs. winter
 
+
+
           section
-            h2 Calendar Views
+            h2 Aggregate by date parts
+            div.demo.
+              <div id="observablehq-d717c549">
+                <div class="observablehq-datePartHeader"></div>
+                <div class="observablehq-timePartChart"></div>
+              </div>
+              <script type="module">
+                import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+                import define from "https://api.observablehq.com/@berkeleyvis/time-aggregation.js?v=3";
+                (new Runtime).module(define, name => {
+                  if (name === "datePartHeader") return Inspector.into("#observablehq-d717c549 .observablehq-datePartHeader")();
+                  if (name === "timePartChart") return Inspector.into("#observablehq-d717c549 .observablehq-timePartChart")();
+                });
+              </script>
+
+          section
+            h2 Window Average/Median
+
+
+            figure.demo
+              img(style="width:1000px", src="../shared_images/covidMovingAverage.png", alt="Covid Moving Average by state")
+              figcaption
+                a(href="https://www.nytimes.com/interactive/2020/07/09/us/coronavirus-cases-reopening-trends.html") NY Times How Coronavirus Cases Have Risen Since States Reopened July 9th 2020
+
+          section
+            div.demo.
+              <div id="observablehq-089d1463">
+                <div class="observablehq-header"></div>
+                <div class="observablehq-chart"></div>
+                <div class="observablehq-footer"></div>
+                <div style="overflow: hidden;"><a style="display: block; float:right;" href="https://observablehq.com/@john-guerra/evolucion-coronavirus-en-colombia"><object type="image/svg+xml" style="pointer-events: none;" width=180 height=22 data="https://static.observableusercontent.com/files/c3fab254a006f1a3a1f9f63aba8ab1460db4752529036b9962950bde0ec195bab823daa6b278b1c3401e545b3bd640ddfdcad805cf9859af218cb2b9fed4ddf0"></object></a></div>
+              </div>
+              <script type="module">
+                import {Runtime, Inspector, Library} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+                import define from "https://api.observablehq.com/@john-guerra/evolucion-coronavirus-en-colombia.js?v=3";
+
+                const runtime = new Runtime(Object.assign(new Library, {width: 900}))
+                runtime.module(define, name => {
+                  if (name === "header") return Inspector.into("#observablehq-089d1463 .observablehq-header")();
+                  if (name === "chart") return Inspector.into("#observablehq-089d1463 .observablehq-chart")();
+                  if (name === "footer") return Inspector.into("#observablehq-089d1463 .observablehq-footer")();
+                });
+              </script>
+
 
 
 
@@ -823,6 +919,18 @@ html(lang="en")
           section
             h2 What We Learned
             ul.small
+              li.fragment Reduce
+                ul
+                  li.fragment Items
+                  li.fragment Attributes
+              li.fragment Aggregation
+                ul
+                  li.fragment Item
+                  li.fragment Spatial
+                  li.fragment Time
+              li.fragment Dimensionality Reduction
+              li.fragment Embed, Focus and Context
+              li.fragment Exploratory Data Analysis
           section
             div
               img(src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo")

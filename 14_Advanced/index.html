@@ -1,19 +1,389 @@
-<!DOCTYPE html><html lang="en"><head><title>Week 14 Advanced Visualization Concepts. MIDS W209 Information Visualization Slides</title><meta charset="utf-8"><meta name="author" content="John Alexis Guerra Gómez"><meta name="description" content="Week 14 Advanced Visualization Concepts. MIDS W209 Information Visualization Slides"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fjalla+One|Raleway|PT+Sans+Narrow"><link rel="stylesheet" href="https://use.typekit.net/yjc0afr.css"><link rel="stylesheet" href="../plugin/highlight/monokai.css" id="highlight-theme"><link href="../css/reveal.css" rel="stylesheet"><link href="../css/theme/white.css" rel="stylesheet" id="theme"><link href="../css/style.css" rel="stylesheet"></head><body><div class="reveal"><div class="slides"><section><h1 class="title">Advanced visualization concepts<br><small>MIDS W209: Information Visualization</small></h1><div class="r-stretch"></div><div class="tiny"><a href="https://johnguerra.co/" target="_blank"><strong> John Alexis Guerra Gómez</strong></a><span> |  john.guerra[at]gmail.com</span><a href="https://twitter.com/duto_guerra"> |  @duto_guerra</a><br><a href="https://andyreagan.com/" target="_blank"><strong> Andy Reagan</strong></a><span> |  andy[at]andyreagan.com |</span><a href="https://twitter.com/andyreagan">@andyreagan</a><br><a href="https://johnguerra.co/lectures/MIDS_W209_Information_Visualization/14_Advanced/" target="_blank">https://johnguerra.co/lectures/MIDS_W209_Information_Visualization/14_Advanced/</a></div><div class="logo"><a href="https://datascience.berkeley.edu/"><img class="logo" src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo"></a></div><div class="tiny">Partially based on<a href="https://www.cs.ubc.ca/~tmm/talks.html#minicourse14"> slides from Tamara Munzner</a></div></section><section id="outline"><section><h2>What We Are Going to Learn</h2><ul class="small"><li>Clustering</li><li>Regression</li><li>Classification</li><li>Dimensionality reduction</li><li>Recommendation systems</li></ul></section><section><div><img src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo"></div></section></section><section><section><h2>Clustering</h2><a href="http://scikit-learn.org/stable/modules/clustering.html#clustering"><img src="http://scikit-learn.org/stable/_images/sphx_glr_plot_cluster_comparison_0011.png"><p class="tiny">http://scikit-learn.org/stable/modules/clustering.html#clustering</p></a></section><section><h2>When to Use It</h2><ul><li class="fragment">When you want to find <strong>similar</strong> items</li><li class="fragment">Depends on your distance metric</li><li class="fragment">When you have too many items and you want to <strong>aggregate</strong></li></ul></section><section><h2>Examples</h2><ul><li class="fragment">Customer segmentation</li><li class="fragment">Grouping experiment outcomes</li></ul></section><section><div><img src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo"></div></section></section><section><section><h2 class="demo">Regression</h2><a target="_blank" href="http://scikit-learn.org/stable/modules/linear_model.html#passive-aggressive-algorithms"><img class="blocks" src="http://scikit-learn.org/stable/_images/sphx_glr_plot_ols_0011.png"><p class="tiny">http://scikit-learn.org/stable/modules/linear_model.html#passive-aggressive-algorithms</p></a></section><section><h2>When to Use It</h2><ul><li class="fragment">Present (identify/compare) tendency</li><li class="fragment">Predict values</li></ul></section><section><h3 class="demo">Linear Regression</h3><iframe class="blocks" src="http://blockbuilder.org/tmcw/3931800"></iframe><a class="tiny" target="_blank" href="http://blockbuilder.org/tmcw/3931800">http://blockbuilder.org/tmcw/3931800</a><a class="tiny" target="_blank" href="http://bl.ocks.org/tmcw/">by tmcw</a></section><section><h2>Examples</h2><ul><li class="fragment">Stock prices</li><li class="fragment">Drug response</li></ul></section><section><div><img src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo"></div></section></section><section><section><h2 class="demo">Classification</h2><img src="images/sphx_glr_plot_classifier_comparison_001.png" alt="Classification algorithms"><a class="tiny" href="https://scikit-learn.org/stable/modules/ensemble.html#random-forests">https://scikit-learn.org/stable/modules/ensemble.html#random-forests</a></section><section><h2>When to Use It</h2><ul><li class="fragment">Present (identify/compare) tendency</li><li class="fragment">Present (identify/compare) groups</li><li class="fragment">Aggregate</li><li class="fragment">Predict values</li></ul></section><section><h2>Examples</h2><ul><li class="fragment">Photo categorization</li><li class="fragment">Sentiment analysis</li><li class="fragment">Spam filtering</li></ul></section><section><div><img src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo"></div></section></section><section><section><h2 class="demo">Dimensionality Reduction</h2><img src="http://scikit-learn.org/stable/_images/sphx_glr_plot_kernel_pca_0011.png"></section><section><h2>When to Use It</h2><ul><li class="fragment">Attribute filtering</li><li class="fragment">Categorize documents (topic modeling)</li></ul></section><section><div><img src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo"></div></section></section><section><section><h2>Recommendation Systems</h2></section><section><h2>When to Use It?</h2><ul><li class="fragment">Large catalog with user preference history</li><li class="fragment">If you like "A" and "B", maybe you will like "C"</li></ul></section><section><h2>Types</h2><ul><li class="fragment">Collaborative filtering</li><li class="fragment">Content- based systems</li><li class="fragment">Hybrids</li></ul></section><section><h2>Examples</h2><ul><li class="fragment">Amazon</li><li class="fragment">Facebook</li><li class="fragment">Google</li><li class="fragment">Yahoo</li><li class="fragment">Netflix Prize</li></ul></section><section><div><img src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo"></div></section></section><section><section><h2>How to Use the Algorithms</h2><ul><li class="fragment"><a href="https://www.r-project.org/">R</a></li><li class="fragment"><a href="http://scikit-learn.org/">scikit-learn</a></li><li class="fragment"><a href="https://www.tensorflow.org/">Tensorflow (Google)</a></li><li class="fragment"><a href="http://caffe.berkeleyvision.org/">Caffe</a></li><li class="fragment"><a href="https://aws.amazon.com/machine-learning/">Amazon ML</a></li><li class="fragment"><a href="https://spark.apache.org/docs/1.1.0/mllib-guide.html">Spark MLlib</a></li><li class="fragment"><a href="https://turi.com/">Graphlab</a></li></ul></section><section><div><img src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo"></div></section></section><section id="visML"><section><h2>Vis for ML</h2></section><section><h3>Tools</h3><ul><li class="fragment">LIME</li><li class="fragment">Shapely values</li><li class="fragment">...</li></ul></section><section><div><img src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo"></div></section></section><section id="BITools"><section><h2>BI Tools</h2></section><section><h3>Tools</h3><div class="flex"><div class="half"><ul><li class="fragment">Tableau</li><li class="fragment">PowerBI</li><li class="fragment">Microstrategy</li><li class="fragment">Looker</li></ul></div><div class="half"><img data-src="../shared_images/gartner_quadrant.png"></div></div></section><section><div><img src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo"></div></section></section><section id="interviewAlex"><section><h2>interview Alex Baldenko (MM)</h2><p>Alex Baldenko has worked as a lead data scientist, led teams of data scientists, and now leads the data analytics team inside of MassMutual's data science group. They use reliable BI tools to build enterprise-grade analytical systems.</p></section><section><div><img src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo"></div></section></section><section id="cloud"><section><h2>Cloud Deployment</h2></section><section><h3>Where</h3><ul><li class="fragment">AWS</li><li class="fragment">GCP</li><li class="fragment">Azure</li><li class="fragment">Linode</li><li class="fragment">Heroku</li><li class="fragment">...</li></ul></section><section> <h3>Tools/Technologies</h3><p>Paradigm: <strong>Infrascructure as code</strong>.</p><ul><li class="fragment">Ansible</li><li class="fragment">Chef</li><li class="fragment">Puppet</li><li class="fragment">Terraform</li><li class="fragment">Cloudformation</li><li class="fragment">Kubernetes</li><li class="fragment">Docker</li><li class="fragment">Vagrant</li><li class="fragment">...</li></ul><p class="fragment">Ah!</p></section><section><h3>What/Why/How</h3><p>A lot of focus on what and how... but why?</p></section><section><div><img src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo"></div></section></section><section><section><h1>Other tools to check</h1></section><section><h2>Trifacta</h2></section><section><h2>Flourish</h2></section><section><h2>Data Wrapper</h2></section><section><div><img src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo"></div></section></section><section id="review"><section><h2>What We Learned</h2><ul class="small"></ul></section></section></div></div><script src="../js/reveal.js"></script><script src="../plugin/zoom/zoom.js"></script><script src="../plugin/notes/notes.js"></script><script src="../plugin/search/search.js"></script><script src="../plugin/markdown/markdown.js"></script><script src="../plugin/highlight/highlight.js"></script><script src="https://cdn.jsdelivr.net/npm/vega@5.13.0"></script><script src="https://cdn.jsdelivr.net/npm/vega-lite@4.13.1"></script><script src="https://cdn.jsdelivr.net/npm/vega-lite-api@0.11.0"></script><script src="https://cdn.jsdelivr.net/npm/vega-tooltip@0.23.2"></script><script>Reveal.initialize({
-  controls: true,
-  progress: true,
-  history: true,
-  center: true,
-  hash: true,
-  //- transition: "convex",
-
-  //- width: "100%",
-  //- height: "720px",
-
-  plugins: [ RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight ]
-});</script><script>(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,"script","https://www.google-analytics.com/analytics.js","ga");
-
-ga("create", "UA-72531610-1", "auto");
-ga("send", "pageview");</script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Week 14 Advanced Visualization Concepts. MIDS W209 Information Visualization Slides</title>
+    <meta charset="utf-8">
+    <meta name="author" content="John Alexis Guerra Gómez">
+    <meta name="description" content="Week 14 Advanced Visualization Concepts. MIDS W209 Information Visualization Slides">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fjalla+One|Raleway|PT+Sans+Narrow">
+    <link rel="stylesheet" href="https://use.typekit.net/yjc0afr.css">
+    <link rel="stylesheet" href="../plugin/highlight/monokai.css" id="highlight-theme">
+    <link href="../css/reveal.css" rel="stylesheet">
+    <link href="../css/theme/white.css" rel="stylesheet" id="theme">
+    <link href="../css/style.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h1 class="title" style="font-size:2em">Advanced visualization concepts<br><small>MIDS W209: Information Visualization</small></h1>
+          <div class="r-stretch"></div>
+          <div class="tiny"><a href="https://johnguerra.co/" target="_blank"><strong> John Alexis Guerra Gómez</strong></a><span> |  john.guerra[at]gmail.com</span><a href="https://twitter.com/duto_guerra"> |  @duto_guerra</a><br><a href="https://andyreagan.com/" target="_blank"><strong> Andy Reagan</strong></a><span> |  andy[at]andyreagan.com |</span><a href="https://twitter.com/andyreagan">@andyreagan</a><br><a href="https://johnguerra.co/lectures/MIDS_W209_Information_Visualization/14_Advanced/" target="_blank">https://johnguerra.co/lectures/MIDS_W209_Information_Visualization/14_Advanced/</a></div>
+          <div class="logo"><a href="https://datascience.berkeley.edu/"><img class="logo" src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo"></a></div>
+          <div class="tiny">Partially based on<a href="https://www.cs.ubc.ca/~tmm/talks.html#minicourse14"> slides from Tamara Munzner</a></div>
+        </section>
+        <section id="outline">
+          <section>
+            <h2>What We Are Going to Learn</h2>
+            <ul class="small">
+              <li class="fragment">Traditional Analytics methods
+                <ul>
+                  <li class="fragment">Clustering</li>
+                  <li class="fragment">Regression</li>
+                  <li class="fragment">Classification</li>
+                  <li class="fragment">Dimensionality reduction</li>
+                  <li class="fragment">Recommendation systems</li>
+                </ul>
+              </li>
+              <li class="fragment">Visualization + ML</li>
+              <li class="fragment">Business Intelligence Tools</li>
+              <li class="fragment">Deploying your visualizations</li>
+            </ul>
+          </section>
+          <section>
+            <div><img src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo"></div>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h2>Clustering</h2><a href="http://scikit-learn.org/stable/modules/clustering.html#clustering"><img src="http://scikit-learn.org/stable/_images/sphx_glr_plot_cluster_comparison_0011.png">
+              <p class="tiny">http://scikit-learn.org/stable/modules/clustering.html#clustering</p></a>
+          </section>
+          <section>
+            <h2>When to Use It</h2>
+            <ul>
+              <li class="fragment">When you want to find <strong>similar</strong> items</li>
+              <li class="fragment">Depends on your distance metric</li>
+              <li class="fragment">When you have too many items and you want to <strong>aggregate</strong></li>
+            </ul>
+          </section>
+          <section>
+            <h2>Examples</h2>
+            <ul>
+              <li class="fragment">Customer segmentation</li>
+              <li class="fragment">Grouping experiment outcomes</li>
+            </ul>
+          </section>
+          <section>
+            <div><img src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo"></div>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h2 class="demo">Regression</h2><a target="_blank" href="http://scikit-learn.org/stable/modules/linear_model.html#passive-aggressive-algorithms"><img class="blocks" src="http://scikit-learn.org/stable/_images/sphx_glr_plot_ols_0011.png">
+              <p class="tiny">http://scikit-learn.org/stable/modules/linear_model.html#passive-aggressive-algorithms</p></a>
+          </section>
+          <section>
+            <h2>When to Use It</h2>
+            <ul>
+              <li class="fragment">Present (identify/compare) tendency</li>
+              <li class="fragment">Predict values</li>
+            </ul>
+          </section>
+          <section>
+            <h3 class="demo">Regression</h3>
+            <iframe class="blocks" src="http://blockbuilder.org/tmcw/3931800"></iframe><a class="tiny" target="_blank" href="http://blockbuilder.org/tmcw/3931800">http://blockbuilder.org/tmcw/3931800</a><a class="tiny" target="_blank" href="http://bl.ocks.org/tmcw/">by tmcw</a>
+          </section>
+          <section>
+            <h2>Examples</h2>
+            <ul>
+              <li class="fragment">Stock prices</li>
+              <li class="fragment">Drug response</li>
+            </ul>
+          </section>
+          <section id="InsightCars">
+            <h2>What car to buy?</h2>
+            <p>User: person buying a car</p>
+            <p>Task: What's the best car to buy?</p>
+            <p>Data: all cars on sale</p>
+          </section>
+          <section>
+            <h2>Normal procedure</h2>
+            <p>Ask friends and family</p>
+          </section>
+          <section id="Renault4" data-background="../shared_images/renault4.jpg"></section>
+          <section id="Renault4Pimped" data-background="../shared_images/renault4_pimped.jpg"></section>
+          <section id="Renault4Crashed" data-background="../shared_images/renault4_crashed.jpg"></section>
+          <section>
+            <h2>Problem</h2>
+            <p>That's inferring statistics from a sample n = 1</p>
+          </section>
+          <section>
+            <h2>Better approach</h2>
+            <p>Data-based decisions</p>
+          </section>
+          <section><img src="../shared_images/tucarro.png"><a href="https://tucarro.com">https://tucarro.com</a></section>
+          <section data-background-iframe="https://johnguerra.co/viz/carrosUsados/todosPuntos.html"></section>
+          <section data-background-iframe="https://johnguerra.co/viz/carrosUsados/depreciacionMarcas.html"></section>
+          <section data-background-iframe="https://johnguerra.co/viz/carrosUsados/depreciacionesCarros.html"></section>
+          <section>
+            <h2>Jeep Willys</h2>
+            <div class="flex">
+              <ul class="half small">
+                <li>Colombia bought many Jeeps after the war</li>
+                <li>They are the a sort of mountain taxi</li>
+                <li>There is a trend to pimp them up</li>
+              </ul>
+              <div class="half"><img src="../shared_images/Willys_small.jpg" alt="Colombian Jeep Willys. Foto by John Alexis Guerra Gómez"></div>
+            </div>
+          </section>
+          <section>
+            <div><img src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo"></div>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h2 class="demo">Classification</h2>
+            <figure><img src="../shared_images/sphx_glr_plot_classifier_comparison_001.png" alt="Classification algorithms">
+              <figcaption class="reference"><a href="https://scikit-learn.org/stable/modules/ensemble.html#random-forests">https://scikit-learn.org/stable/modules/ensemble.html#random-forests</a></figcaption>
+            </figure>
+          </section>
+          <section>
+            <h2>When to Use It</h2>
+            <ul>
+              <li class="fragment">Present (identify/compare) tendency</li>
+              <li class="fragment">Present (identify/compare) groups</li>
+              <li class="fragment">Aggregate</li>
+              <li class="fragment">Predict values</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Examples</h2>
+            <ul>
+              <li class="fragment">Photo categorization</li>
+              <li class="fragment">Sentiment analysis</li>
+              <li class="fragment">Spam filtering</li>
+            </ul>
+          </section>
+          <section>
+            <div><img src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo"></div>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h2 class="demo">Dimensionality Reduction</h2><img src="http://scikit-learn.org/stable/_images/sphx_glr_plot_kernel_pca_0011.png">
+          </section>
+          <section>
+            <h2>When to Use It</h2>
+            <ul>
+              <li class="fragment">Attribute filtering</li>
+              <li class="fragment">Categorize documents (topic modeling)</li>
+            </ul>
+          </section>
+          <section>
+            <div><img src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo"></div>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h2>Recommendation Systems</h2>
+          </section>
+          <section>
+            <h2>When to Use It?</h2>
+            <ul>
+              <li class="fragment">Large catalog with user preference history</li>
+              <li class="fragment">If you like "A" and "B", maybe you will like "C"</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Types</h2>
+            <ul>
+              <li class="fragment">Collaborative filtering</li>
+              <li class="fragment">Content- based systems</li>
+              <li class="fragment">Hybrids</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Examples</h2>
+            <ul>
+              <li class="fragment">Amazon</li>
+              <li class="fragment">Facebook</li>
+              <li class="fragment">Google</li>
+              <li class="fragment">Yahoo</li>
+              <li class="fragment">Netflix Prize</li>
+            </ul>
+          </section>
+          <section>
+            <div><img src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo"></div>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h2>How to Use the Algorithms</h2>
+            <ul>
+              <li class="fragment"><a href="https://www.r-project.org/">R</a></li>
+              <li class="fragment"><a href="http://scikit-learn.org/">scikit-learn</a></li>
+              <li class="fragment"><a href="https://www.tensorflow.org/">Tensorflow (Google)</a></li>
+              <li class="fragment"><a href="http://caffe.berkeleyvision.org/">Caffe</a></li>
+              <li class="fragment"><a href="https://aws.amazon.com/machine-learning/">Amazon ML</a></li>
+              <li class="fragment"><a href="https://spark.apache.org/docs/1.1.0/mllib-guide.html">Spark MLlib</a></li>
+              <li class="fragment"><a href="https://turi.com/">Graphlab</a></li>
+            </ul>
+          </section>
+          <section>
+            <div><img src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo"></div>
+          </section>
+        </section>
+        <section id="visML">
+          <section>
+            <h2>Vis for ML</h2>
+          </section>
+          <section>
+            <h3>Tools</h3>
+            <ul>
+              <li class="fragment">LIME</li>
+              <li class="fragment">Shapely values</li>
+              <li class="fragment">...</li>
+            </ul>
+          </section>
+          <section>
+            <div><img src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo"></div>
+          </section>
+        </section>
+        <section id="BITools">
+          <section>
+            <h2>BI Tools</h2>
+          </section>
+          <section>
+            <h3>Tools</h3>
+            <div class="flex">
+              <div class="half">
+                <ul>
+                  <li class="fragment">Tableau</li>
+                  <li class="fragment">PowerBI</li>
+                  <li class="fragment">Microstrategy</li>
+                  <li class="fragment">Looker</li>
+                </ul>
+              </div>
+              <div class="half"><img data-src="../shared_images/gartner_quadrant.png"></div>
+            </div>
+          </section>
+          <section>
+            <div><img src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo"></div>
+          </section>
+        </section>
+        <section id="interviewAlex">
+          <section>
+            <h2>interview Alex Baldenko (MM)</h2>
+            <p>Alex Baldenko has worked as a lead data scientist, led teams of data scientists, and now leads the data analytics team inside of MassMutual's data science group. They use reliable BI tools to build enterprise-grade analytical systems.</p>
+          </section>
+          <section>
+            <div><img src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo"></div>
+          </section>
+        </section>
+        <section id="cloud">
+          <section>
+            <h2>Cloud Deployment</h2>
+          </section>
+          <section>
+            <h3>Where</h3>
+            <ul>
+              <li class="fragment">AWS</li>
+              <li class="fragment">GCP</li>
+              <li class="fragment">Azure</li>
+              <li class="fragment">Linode</li>
+              <li class="fragment">Heroku</li>
+              <li class="fragment">...</li>
+            </ul>
+          </section>
+          <section>
+            <h3>Tools/Technologies</h3>
+            <p>Paradigm: <strong>Infrascructure as code</strong>.</p>
+            <ul>
+              <li class="fragment">Ansible</li>
+              <li class="fragment">Chef</li>
+              <li class="fragment">Puppet</li>
+              <li class="fragment">Terraform</li>
+              <li class="fragment">Cloudformation</li>
+              <li class="fragment">Kubernetes</li>
+              <li class="fragment">Docker</li>
+              <li class="fragment">Vagrant</li>
+              <li class="fragment">...</li>
+            </ul>
+            <p class="fragment">Ah!</p>
+          </section>
+          <section>
+            <h3>What/Why/How</h3>
+            <p>A lot of focus on what and how... but why?</p>
+          </section>
+          <section>
+            <div><img src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo"></div>
+          </section>
+        </section>
+        <section id="otherTools">
+          <section>
+            <h1>Other tools to check</h1>
+          </section>
+          <section>
+            <h2>Trifacta</h2>
+          </section>
+          <section>
+            <h2>Flourish</h2>
+          </section>
+          <section>
+            <h2>Data Wrapper</h2>
+          </section>
+          <section>
+            <div><img src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo"></div>
+          </section>
+        </section>
+        <section id="review">
+          <section>
+            <h2>What We Learned</h2>
+            <ul class="small">
+              <li class="fragment">Traditional Analytics methods
+                <ul>
+                  <li class="fragment">Clustering</li>
+                  <li class="fragment">Regression</li>
+                  <li class="fragment">Classification</li>
+                  <li class="fragment">Dimensionality reduction</li>
+                  <li class="fragment">Recommendation systems</li>
+                </ul>
+              </li>
+              <li class="fragment">Visualization + ML</li>
+              <li class="fragment">Business Intelligence Tools</li>
+              <li class="fragment">Deploying your visualizations</li>
+            </ul>
+          </section>
+        </section>
+      </div>
+    </div>
+    <script src="../js/reveal.js"></script>
+    <script src="../plugin/zoom/zoom.js"></script>
+    <script src="../plugin/notes/notes.js"></script>
+    <script src="../plugin/search/search.js"></script>
+    <script src="../plugin/markdown/markdown.js"></script>
+    <script src="../plugin/highlight/highlight.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.13.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.13.1"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite-api@0.11.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-tooltip@0.23.2"></script>
+    <script>
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        hash: true,
+        //- transition: "convex",
+      
+        //- width: "100%",
+        //- height: "720px",
+      
+        plugins: [ RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight ]
+      });
+    </script>
+    <script>
+      (function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,"script","https://www.google-analytics.com/analytics.js","ga");
+      
+      ga("create", "UA-72531610-1", "auto");
+      ga("send", "pageview");
+    </script>
+  </body>
+</html>

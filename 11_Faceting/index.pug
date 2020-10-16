@@ -75,10 +75,10 @@ html(lang="en")
         section#intro
           section
             h2 Facet Across Multiple Views
-          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/12_facet-biomech.003.png")
+          //- section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/12_facet-biomech.003.png")
           section
             h2 Facet
-            img(data-src="../shared_images/vad_book_alldiagrams/pr11_facet-01.png", alt="Juxtapose, Partition, Superimpose")
+            img(style="width:250px", data-src="../shared_images/vad_book_alldiagrams/pr11_facet-01.png", alt="Juxtapose, Partition, Superimpose")
 
           section
             div
@@ -204,7 +204,7 @@ html(lang="en")
 
 
           //- Linked Views
-          section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/12_facet-biomech.005.png")
+          //- section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/12_facet-biomech.005.png")
           section
             h2 Idiom: Linked Highlighting
             .flex
@@ -233,7 +233,8 @@ html(lang="en")
             h3.demo Multiform Overview/Details
             p.small Tweetometro: Different encoding/subset of data/linked navigation
             figure
-              figcaption.reference(target="_blank" href="http://old.tweetometro.co/") http://old.tweetometro.co/
+              figcaption.reference
+                a(target="_blank" href="http://old.tweetometro.co/") http://old.tweetometro.co/
               video(data-src="../shared_images/tweetometro.mp4", autoplay="true", loop="true", showcontrols ="false")
               //- iframe.blocks(data-src="http://old.tweetometro.co/")
 
@@ -241,8 +242,10 @@ html(lang="en")
           section
             h3.demo Multiform Overview (Treeversity)
             p.small Different encoding/all data/linked navigation
-            iframe.blocks(data-src="https://treeversity.cattlab.umd.edu/")
-            a.tiny(target="_blank" href="https://treeversity.cattlab.umd.edu/") https://treeversity.cattlab.umd.edu/
+            figure
+              video(src="../shared_images/TreeVersity_Navigation.mp4" autoplay loop controls)
+              figcaption.reference
+                a(target="_blank" href="https://treeversity.cattlab.umd.edu") https://treeversity.cattlab.umd.edu
 
 
 
@@ -495,12 +498,12 @@ html(lang="en")
                 figure
                   img(data-src="../shared_images/vad_book_alldiagrams/pr11_facet-dynamic-visual-layering1.png", alt="dynamic visual layering")
                   figcaption.reference
-                    a(href="mariandoerk.de/edgemaps/demo/") http://mariandoerk.de/edgemaps/demo/
+                    a(href="http://mariandoerk.de/edgemaps/demo/") http://mariandoerk.de/edgemaps/demo/
               .half
                 figure
                   img(data-src="../shared_images/vad_book_alldiagrams/pr11_facet-dynamic-visual-layering2.png", alt="dynami visual layering")
                   figcaption.reference
-                    a(href="mbostock.github.io/d3/talk/20111116/airports.html") http://mbostock.github.io/d3/talk/20111116/airports.html
+                    a(href="http://mbostock.github.io/d3/talk/20111116/airports.html") http://mbostock.github.io/d3/talk/20111116/airports.html
 
 
 
@@ -558,16 +561,16 @@ html(lang="en")
 
           section
             h3 Taking Apart Dash (cont.)
-            img(data-src="../shared_images/dash-screenshot.png")            
-            
+            img(data-src="../shared_images/dash-screenshot.png")
+
           section
             h3 Under the Hood: Tt's Flask
-            img(data-src="../shared_images/dash-flask.png")                        
-            
+            img(data-src="../shared_images/dash-flask.png")
+
           section
             h3 Follow a Request
-            img(data-src="../shared_images/dash-request.png")                        
-            
+            img(data-src="../shared_images/dash-request.png")
+
 
           section
             h3 The Code We Used
@@ -634,7 +637,7 @@ html(lang="en")
                 li.fragment Processing engine
                 li.fragment CDNs
                 li.fragment Static storage
-                
+
           section
             h3 Building Blocks on the Web
             ul
@@ -649,7 +652,7 @@ html(lang="en")
                   li.fragment Web app (running Python/R/Node/etc.)
                   li.fragment Other pieces of a web stack: Apache/Nginx/Gunicorn/UWSGI/etc.
                   li.fragment Non-web-facing processing automation/schedulers (Airflow/Jenkins/cron)
-                  
+
           section
             h3 Example: Visualization System Relying on Twitter Data
             img(data-src="../shared_images/Twitter-Service-Architecture-Diagram.png")
@@ -673,8 +676,49 @@ html(lang="en")
           section
             h2 Applying the #[br] Visualization Mantra
 
+          section(data-background-size="contain", data-background="../shared_images/timeSearcher.gif")
+
+          section
+            h2 Similian
+            a(target="_blank" href="http://www.cs.umd.edu/hcil/similan")
+              figure
+                img.demo(data-src="http://www.cs.umd.edu/hcil/similan/img/simi20091011/overview.png")
+                figcaption.reference
+                  a(target="_blank" href="http://www.cs.umd.edu/hcil/similan") Similan: Finding Similar Records from Temporal Categorical Data
+
+          section(data-background-iframe="http://www.cs.umd.edu/hcil/similan/video/demo/index.html")
+          //- section
+          //-   h2.demo Similian Demo
+          //-   iframe.blocks(data-src="http://www.cs.umd.edu/hcil/similan/video/demo/index.html")
+          //-   a.reference(target="_blank" href="http://www.cs.umd.edu/hcil/similan/video/demo/index.html") Similian video link
+          //-   // @john-guerra Note: this content extends off the slide and image does not display
+
+          section
+            h2 LifeFlow
+
+            a(target="_blank" href="http://www.cs.umd.edu/hcil/lifeflow/")
+              figure
+                img.demo(data-src="http://www.cs.umd.edu/hcil/lifeflow/img/LifeFlow3.png")
+              figcaption.reference
+                a(target="_blank" href="http://www.cs.umd.edu/hcil/lifeflow/") LifeFlow: Understanding Millions of Event Sequences in a Million Pixels
+
+          section
+            h2.demo LifeFlow How-To
+            span.
+              <iframe width="853" height="480" data-src="https://www.youtube.com/embed/QxceG6_RM8w" frameborder="0" allowfullscreen></iframe>
+
+          section
+            h2.demo LifeFlow Demo
+            span.
+              <iframe width="853" height="480" data-src="https://www.youtube.com/embed/nXrmJS6Vk9A" frameborder="0" allowfullscreen></iframe>
+
           section
             h2 TreeVersity
+            figure
+              video(src="../shared_images/TreeVersity_Navigation.mp4" autoplay loop controls)
+              figcaption.reference
+                a(target="_blank" href="https://treeversity.cattlab.umd.edu") https://treeversity.cattlab.umd.edu
+
 
           section
             div
@@ -702,7 +746,7 @@ html(lang="en")
               li.fragment Shared navigation
               li.fragment Dashboarding in a box
               li.fragment Architecture for visualization
-              
+
           section
             div
               img(src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo")

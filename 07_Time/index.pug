@@ -28,7 +28,7 @@ html(lang="en")
     .reveal
       .slides
         section
-          h1.title Visualizing Temporal Data
+          h1.title Visualizing #[br] Temporal Data
             br
             small MIDS W209: Information Visualization
 
@@ -93,7 +93,7 @@ html(lang="en")
 
           //- section#lineChart
           //-   h2.demo Idiom: Line chart
-          //-   div.left.small
+          //-   div.half.small
           //-     ul
           //-       li.fragment Data: Table, many timelines
           //-       li.fragment Tasks: Compare trends and similarities (with many), locate outliers
@@ -101,7 +101,7 @@ html(lang="en")
           //-       li.fragment Considerations:
           //-         ul
           //-           li Time usually goes from left to right
-          //-   div.right
+          //-   div.half
           //-     img(data-src="../shared_images/vad_book_alldiagrams/linechart.png" alt="Line chart")
 
           section#lineChart
@@ -110,17 +110,17 @@ html(lang="en")
               .twothirds
                 ul.tiny
                   li.fragment One key, one value
-                  li.fragment Data: two quantitative attributes
+                  li.fragment #[strong Data:] two quantitative attributes
 
-                  li.fragment Mark: points and line connection marks between them
-                  li.fragment Channels:
+                  li.fragment #[strong Mark:] points and line connection marks between them
+                  li.fragment #[strong Channels:]
                     ul.small
                       li Aligned lengths to express quant value
                       li Separated and ordered by key attribute into horizontal regions
-                  li.fragment Task: find trend
+                  li.fragment #[strong Task:] find trend
                     ul.small
                       li.fragment Connection marks emphasize ordering of items along key axis by explicitly showing relationship between one item and the next
-                  li.fragment Scalability: hundreds of key levels, hundreds of value levels
+                  li.fragment #[strong Scalability:] hundreds of key levels, hundreds of value levels
               .third
                 img.fill.vcentered( data-src="../shared_images/vad_book_alldiagrams/linechart_example.png", alt="Linechart example")
 
@@ -147,6 +147,24 @@ html(lang="en")
                   img.fill(data-src="../shared_images/vad_book_alldiagrams/barchart_vs_linechart.png", alt="Barchart vs Linechart")
                   figcaption.reference after [Bars and Lines: A Study of Graphic Communication. Zacks and Tversky. Memory and Cognition 27:6 (1999), 1073–1079.]
 
+          section.full
+            h3 Line Chart Aspect Ratio
+            .flex
+              .third
+                ul.tiny
+                  li.fragment 1: banking to 45 (1980s)
+                    ul
+                      li.fragment Cleveland perceptual argument: most accurate angle judgement at 45
+
+                  li.fragment 2: multi-scale banking to 45 (2006)
+
+                  li.fragment 3: arc length-based aspect ratio (2011)
+              .twothirds
+                figure
+                  img.fill(data-src="../shared_images/aspect_ratio1.png", alt="Dual Axis")
+                  figcaption.reference
+                    a(href="https://github.com/jennybc/r-graph-catalog/tree/master/figures/fig07-02_annual-report-aspect-ratio-2") https://github.com/jennybc/r-graph-catalog/tree/master/figures/fig07-02_annual-report-aspect-ratio-2
+
 
 
           section
@@ -162,65 +180,78 @@ html(lang="en")
                   img.fill(data-src="../shared_images/vad_book_alldiagrams/dual_axis.png", alt="Dual Axis")
                   figcaption.reference Ben Jones @DataRemixed
 
-          section.full
-            h3 Line Chart Aspect Ratio, Part I
-            .flex
-              .half
-                ul.tiny
-                  li.fragment 1: banking to 45 (1980s)
-                    ul
-                      li.fragment Cleveland perceptual argument: most accurate angle judgement at 45
-              .half
+
+
+          //- section.full
+          //-   h3 Line Chart Aspect Ratio, Part II
+          //-   .flex
+          //-     .half
+          //-       ul.tiny
+          //-         li.fragment 2: multi-scale banking to 45 (2006)
+          //-           ul
+          //-             li.fragment Frequency domain analysis to find ratios
+          //-             li.fragment FFT the data, convolve with Gaussian to smooth
+          //-             li.fragment Find interesting spikes/ranges in power spectrum
+          //-             li.fragment Cull nearby regions if similar, ensure overview
+          //-             li.fragment Create trend curves (red) for each aspect ratio
+          //-     .half
+          //-       figure
+          //-         img.fill(style="max-width:400px", data-src="../shared_images/aspect_ratio2.png", alt="Dual Axis")
+          //-         figcaption.reference
+
+
+          //- section.full
+          //-   h3 Line Chart Aspect Ratio, Part III
+          //-   .flex
+          //-     .half
+          //-       ul.tiny
+          //-         li.fragment 3: arc length-based aspect ratio (2011)
+          //-           ul
+          //-             li.fragment Minimize the arc length of curve while keeping the area of the plot constant
+          //-             li.fragment Parametrization and scale invariant
+          //-             li.fragment Symmetry preserving
+          //-             li.fragment Robust and fast to compute
+          //-             br
+          //-             li.fragment Meta-points from this progression
+          //-             li.fragment Young field; prescriptive advice changes rapidly
+          //-             li.fragment Reasonable defaults required deep dive into perception meets math
+          //-     .half
+          //-       figure
+          //-         img.fill(data-src="../shared_images/aspect_ratio3.png", alt="Dual Axis")
+          //-         figcaption.reference
 
           section.full
-            h3 Line Chart Aspect Ratio, Part II
-            .flex
-              .half
-                ul.tiny
-                  li.fragment 2: multi-scale banking to 45 (2006)
-                    ul
-                      li.fragment Frequency domain analysis to find ratios
-                      li.fragment FFT the data, convolve with Gaussian to smooth
-                      li.fragment Find interesting spikes/ranges in power spectrum
-                      li.fragment Cull nearby regions if similar, ensure overview
-                      li.fragment Create trend curves (red) for each aspect ratio
-              .half
-
-
-          section.full
-            h3 Line Chart Aspect Ratio, Part III
-            .flex
-              .half
-                ul.tiny
-                  li.fragment 3: arc length-based aspect ratio (2011)
-                    ul
-                      li.fragment Minimize the arc length of curve while keeping the area of the plot constant
-                      li.fragment Parametrization and scale invariant
-                      li.fragment Symmetry preserving
-                      li.fragment Robust and fast to compute
-                      br
-                      li.fragment Meta-points from this progression
-                      li.fragment Young field; prescriptive advice changes rapidly
-                      li.fragment Reasonable defaults required deep dive into perception meets math
-              .half
-
-          section
             h2 Idiom: Indexed Line Charts
             .flex
-              .half
-                ul.small
-                  li.fragment Data: two quantitative attributes
+              .third
+                ul.tiny
+                  li.fragment #[strong Data:] two quantitative attributes
                     ul
-                      li.fragment One key and one value
-                  li.fragment Derived data: new quantitative value attribute
+                      li One key and one value
+                  li.fragment #[strong Derived data:] new quantitative value attribute
                     ul
                       li Index
                       li Plot instead of original value
-                  li.fragment Task: show change over time
+                  li.fragment #[strong Task:] show change over time
                     ul
-                      li Principle: normalized, not absolute
+                      li #[strong Principle:] normalized, not absolute
                   li.fragment Scalability same as standard line chart
-              .half
+              .twothirds
+                .demo.vcentered(style="height:auto").
+                  <div id="observablehq-c6d2aae7">
+                    <div class="observablehq-chart"></div>
+                    <div style="overflow: hidden;"><a style="display: block; float:right;" href="https://observablehq.com/@john-guerra/vega-lite-interactive-index-chart"><object type="image/svg+xml" style="pointer-events: none;" width=180 height=22 data="https://static.observableusercontent.com/files/c3fab254a006f1a3a1f9f63aba8ab1460db4752529036b9962950bde0ec195bab823daa6b278b1c3401e545b3bd640ddfdcad805cf9859af218cb2b9fed4ddf0"></object></a></div>
+                  </div>
+                  <script type="module">
+                    import {Runtime, Inspector, Library} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+                    import define from "https://api.observablehq.com/@john-guerra/vega-lite-interactive-index-chart.js?v=3";
+                    const runtime = new Runtime(Object.assign(new Library, {width: 500}));
+                    runtime.module(define, name => {
+                      if (name === "chart") return Inspector.into("#observablehq-c6d2aae7 .observablehq-chart")();
+                    });
+
+                  </script>
+
 
           section
             div
@@ -238,18 +269,18 @@ html(lang="en")
                     ul.small
                       li Emphasizing horizontal continuity
                       li Vs. vertical items
-                  li.fragment Data
+                  li.fragment #[strong Data:]
                     ul
                       li One categorical key attribute (artist)
                       li One ordered key attribute (time)
                       li One quantitative value attribute (counts)
                       li Derived data
-                  li.fragment Mark: layers (areas)
+                  li.fragment #[strong Mark:] layers (areas)
                     ul
                       li Height encodes counts
 
                   li.fragment One quantitative attribute (layer ordering)
-                  li.fragment Scalability:
+                  li.fragment #[strong Scalability:]
                     ul
                       li Hundreds of time keys
                       li Dozens to hundreds of artist keys
@@ -272,13 +303,18 @@ html(lang="en")
           section
             h2 Stacked Area Charts
             .flex
-              .half
+              .third
                 ul
                   li.fragment Similar to streamgraphs
                   li.fragment Task: identify trends in total
                   li.fragment More accurate
                   li.fragment Less fancy (enjoy)
                   li.fragment Choose first category wisely
+              .twothirds
+                figure
+                  img(src="../shared_images/stacked_area_chart.png", alt="Stacked Area Chart")
+                  a.reference(href="https://observablehq.com/@d3/stacked-area-chart") https://observablehq.com/@d3/stacked-area-chart
+
 
 
           section
@@ -291,16 +327,17 @@ html(lang="en")
 
           section#gantt
             h2.demo Gantt Charts
-            div.left
-              ul.tiny
-                li.fragment Data: two time attributes (start end)
-                li.fragment Tasks: summarize duration (features), compare events, identify intersections/dependencies
-                li.fragment Visual representation: line, express for time, separate/order/aligned for tasks, color hues
-            div.right
-              figure
-                img.fill(data-src="../shared_images/vad_book_alldiagrams/gantChart.png", alt="Gant Chart")
-                figcaption.reference
-                  a.tiny(href="https://observablehq.com/@john-guerra/mids-assignments-timeline") https://observablehq.com/@john-guerra/mids-assignments-timeline
+            .flex
+              div.third
+                ul.tiny
+                  li.fragment #[strong Data:] two time attributes (start end)
+                  li.fragment #[strong Tasks:] summarize duration (features), compare events, identify intersections/dependencies
+                  li.fragment #[strong Visual representation:] line, express for time, separate/order/aligned for tasks, color hues
+              div.twothirds
+                figure
+                  img(data-src="../shared_images/vad_book_alldiagrams/gantChart.png", alt="Gant Chart")
+                  figcaption.reference
+                    a.tiny(href="https://observablehq.com/@john-guerra/mids-assignments-timeline") https://observablehq.com/@john-guerra/mids-assignments-timeline
 
 
           section
@@ -309,40 +346,56 @@ html(lang="en")
               .half
                 ul.tiny
                   li.fragment Two values
-                  li.fragment Data:
+                  li.fragment #[strong Data]:
                     ul
                       li.fragment Two quantitative value attributes
                       li.fragment (One derived attribute: change magnitude)
-                  li.fragment Mark: point and line
+                  li.fragment #[strong Mark]: point and line
                     ul
                       li.fragment Line connecting mark between points
-                  li.fragment Channels:
+                  li.fragment #[strong Channels]:
                     ul
                       li.fragment Two vertical points: express attribute value
                       li.fragment (Line width/size, color)
-                  li.fragment Task: emphasize changes in rank/value
-                  li.fragment Scalability hundreds of value levels
+                  li.fragment #[strong Task]: emphasize changes in rank/value
+                  li.fragment #[strong Scalability]: hundreds of value levels
               .half
+                figure
+                  img(src="../shared_images/slopeChart.png", alt="Slope chart")
+                  figcaption.reference
+                    a(href="https://observablehq.com/@joakimdalen/sleep") https://observablehq.com/@joakimdalen/sleep
+
+          section(data-background-iframe="https://johnguerra.co/viz/eliminatoriaMundial/")
 
           section#calendarView
             h2.demo Idiom: Calendar View
-            div.left.small
+            div.half.small
               ul
-                li.fragment Data: table (years), one timeline
-                li.fragment Tasks: compare trends (by days of the week, month, year), locate outliers
-                li.fragment Visual representation: shape, vertical/horizontal position, color hue
-                li.fragment Considerations: natural view for humans, focus on common time aggregations
-            div.right
+                li.fragment #[strong Data]: table (years), one timeline
+                li.fragment #[strong Tasks]: compare trends (by days of the week, month, year), locate outliers
+                li.fragment #[strong Visual representation]: shape, vertical/horizontal position, color hue
+                li.fragment #[strong Considerations]: natural view for humans, focus on common time aggregations
+            div.half
               img(data-src="../shared_images/vad_book_alldiagrams/calendar_view.png" alt="Calendar view")
 
 
           section
             h2 Breaking Conventions
-            ul.small
-              li.fragment Presentation vs. exploration
-              li.fragment Engaging/evocative
-              li.fragment Inverted y-axis
-              li.fragment Blood drips down on Poe
+            .flex
+              .third
+                ul.small
+                  li.fragment Presentation vs. exploration
+                  li.fragment Engaging/evocative
+                  li.fragment Inverted y-axis
+                  li.fragment Blood drips down on Poe
+
+                div.reference [Slide inspired by Ben Jones]
+              .twothirds
+                figure
+                  img(src="../shared_images/edgarAlanPoe.png", alt="Edgar Allan Poe")
+                  figcaption.reference
+                    a(href="https://public.tableau.com/profile/ben.jones#!/vizhome/EdgarAllanPoeViz/EdgarAllanPoeViz") https://public.tableau.com/profile/ben.jones#!/vizhome/EdgarAllanPoeViz/EdgarAllanPoeViz
+
 
           section
             div
@@ -353,34 +406,58 @@ html(lang="en")
 
           section#radialTimeline
             h2.demo Idiom: Radial Timelines
-            div.left.small
-              ul
-                li.fragment Data: table (years), one timeline
-                li.fragment Tasks: compare trends (by days of the week, month, year), locate outliers
-                li.fragment Visual representation: line, radial position, color hue (rainbow :( )
-                li.fragment Considerations: appeals to cyclic nature of time
-            div.right
-              a(target="_blank" href="http://www.climate-lab-book.ac.uk/spirals/")
-                img(data-src="../shared_images/vad_book_alldiagrams/spiral_may2016.gif" alt="radial_heatmapl")
-              a.tiny(target="_blank" href="http://www.climate-lab-book.ac.uk/spirals/")  http://www.climate-lab-book.ac.uk/spirals/
+            .flex
+              div.half
+                ul
+                  li.fragment #[strong Data:] table (years), one timeline
+                  li.fragment #[strong Tasks:] compare trends (by days of the week, month, year), locate outliers
+                  li.fragment #[strong Visual representation:] line, radial position, color hue (rainbow :( )
+                  li.fragment #[strong Considerations:] appeals to cyclic nature of time
+              div.half
+
+                a(target="_blank" href="http://www.climate-lab-book.ac.uk/spirals/")
+                  figure
+                    img(data-src="../shared_images/vad_book_alldiagrams/spiral_may2016.gif" alt="radial_heatmapl")
+                  figcaption.reference
+                    a(target="_blank" href="http://www.climate-lab-book.ac.uk/spirals/")  http://www.climate-lab-book.ac.uk/spirals/
+
 
           section
-            h2 D3 Radial
+            h2.demo Idiom: Radial Barchart
+            div.demo.
+              <div id="observablehq-b6dcf60d">
+                <div class="observablehq-chart"></div>
+                <div style="overflow: hidden;"><a style="display: block; float:right;" href="https://observablehq.com/@d3/radial-stacked-bar-chart-ii"><object type="image/svg+xml" style="pointer-events: none;" width=180 height=22 data="https://static.observableusercontent.com/files/c3fab254a006f1a3a1f9f63aba8ab1460db4752529036b9962950bde0ec195bab823daa6b278b1c3401e545b3bd640ddfdcad805cf9859af218cb2b9fed4ddf0"></object></a></div>
+              </div>
+              <script type="module">
+                import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+                import define from "https://api.observablehq.com/@d3/radial-stacked-bar-chart-ii.js?v=3";
+                (new Runtime).module(define, name => {
+                  if (name === "chart") return Inspector.into("#observablehq-b6dcf60d .observablehq-chart")();
+                });
+              </script>
 
-            ul
-              li
-                a(href="https://observablehq.com/@d3/radial-stacked-bar-chart-ii") Radial Stacked Bar Chart II
-              li
-                a(href="https://observablehq.com/@vasturiano/spiral-axis" target="_blank") Spiral Axis
+
+          //- section
+          //-   h2.demo Idiom: Spiral Axis
+
+          //- section
+          //-   h2 D3 Radial
+
+          //-   ul
+          //-     li
+          //-       a(href="https://observablehq.com/@d3/radial-stacked-bar-chart-ii") Radial Stacked Bar Chart II
+          //-     li
+          //-       a(href="https://observablehq.com/@vasturiano/spiral-axis" target="_blank") Spiral Axis
 
           //- section
           //-   h3.demo Circos.js
           //-   a.tiny(target="_blank" href="http://nicgirault.github.io/circosJS/demo/") http://nicgirault.github.io/circosJS/demo/
           //-   iframe.blocks(data-src="http://nicgirault.github.io/circosJS/demo/")
 
-          section
-            h2 Nightingale Chart
-            div "Diagram of the causes of mortality in the army in the East" (1858)
+          //- section
+          //-   h2 Nightingale Chart
+          //-   div "Diagram of the causes of mortality in the army in the East" (1858)
 
 
 
@@ -394,37 +471,63 @@ html(lang="en")
 
           section#horizonCharts
             h2.demo Idiom: Horizon Charts
-            div.left.small
+            .flex
+              div.half.small
 
-              ul
-                li.fragment Data: table, many timelines
-                li.fragment Tasks: compare trends and similarities (with many), locate outliers
-                li.fragment Visual representation: line, vertical position, color luminosity (quant divergent)
-                li.fragment Considerations: uses much less space
-            div.right
-              img(data-src="../shared_images/vad_book_alldiagrams/horizon.png" alt="Horizon charts")
-
-          section
-            h3.demo Horizon Charts
-            iframe.blocks(data-src="http://blockbuilder.org/john-guerra/7770baa3383ab777f8ac211deeb66fbc")
-            a.tiny(target="_blank" href="http://blockbuilder.org/john-guerra/7770baa3383ab777f8ac211deeb66fbc") http://blockbuilder.org/john-guerra/7770baa3383ab777f8ac211deeb66fbc
-            a.tiny(target="_blank" href="http://bl.ocks.org/mbostock/") by mbostock
-            // @john-guerra Note: this content extends off the slide and image does not display
+                ul
+                  li.fragment #[strong Data:] table, many timelines
+                  li.fragment #[strong Tasks:] compare trends and similarities (with many), locate outliers
+                  li.fragment #[strong Visual representation:] line, vertical position, color luminosity (quant divergent)
+                  li.fragment #[strong Considerations:] uses much less space
+              div.half
+                img(data-src="../shared_images/vad_book_alldiagrams/horizon.png" alt="Horizon charts")
 
           section
-            h2.demo Cubism
-            a(target="_blank" href="http://square.github.io/cubism/") Cubism.js
-            iframe.blocks(data-src="http://square.github.io/cubism/")
-            // @john-guerra Note: image does not display
+            div.demo(style="width:100%").
+              <div id="observablehq-6cd97a13">
+                <div class="observablehq-viewof-scheme"></div>
+                <div class="observablehq-viewof-overlap"></div>
+                <div class="observablehq-chart"></div>
+                <div style="overflow: hidden;"><a style="display: block; float:right;" href="https://observablehq.com/@d3/horizon-chart"><object type="image/svg+xml" style="pointer-events: none;" width=180 height=22 data="https://static.observableusercontent.com/files/c3fab254a006f1a3a1f9f63aba8ab1460db4752529036b9962950bde0ec195bab823daa6b278b1c3401e545b3bd640ddfdcad805cf9859af218cb2b9fed4ddf0"></object></a></div>
+              </div>
+              <script type="module">
+                import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+                import define from "https://api.observablehq.com/@d3/horizon-chart.js?v=3";
+                (new Runtime).module(define, name => {
+                  if (name === "viewof scheme") return Inspector.into("#observablehq-6cd97a13 .observablehq-viewof-scheme")();
+                  if (name === "viewof overlap") return Inspector.into("#observablehq-6cd97a13 .observablehq-viewof-overlap")();
+                  if (name === "chart") return Inspector.into("#observablehq-6cd97a13 .observablehq-chart")();
+                });
+              </script>
+
+
+          //- section.full
+          //-   h2.demo Cubism
+          //-   a.reference(target="_blank" href="http://square.github.io/cubism/") Cubism.js
+          //-   iframe.blocks(data-src="http://square.github.io/cubism/")
 
           section#joyPlot
             h3.demo Joyplots
-            iframe.blocks(data-src="https://blockbuilder.org/john-guerra/2bb5a08bd6f17a5cb4efd6ad6d98973c")
-            a.tiny(target="_blank" href="https://blockbuilder.org/john-guerra/2bb5a08bd6f17a5cb4efd6ad6d98973c") Joy Plot Temperatures
+            div.demo(style="width:100%").
+              <div id="observablehq-887cc127">
+                <div class="observablehq-chart"></div>
+                <div style="overflow: hidden;"><a style="display: block; float:right;" href="https://observablehq.com/@d3/ridgeline-plot"><object type="image/svg+xml" style="pointer-events: none;" width=180 height=22 data="https://static.observableusercontent.com/files/c3fab254a006f1a3a1f9f63aba8ab1460db4752529036b9962950bde0ec195bab823daa6b278b1c3401e545b3bd640ddfdcad805cf9859af218cb2b9fed4ddf0"></object></a></div>
+              </div>
+              <script type="module">
+                import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+                import define from "https://api.observablehq.com/@d3/ridgeline-plot.js?v=3";
+                (new Runtime).module(define, name => {
+                  if (name === "chart") return Inspector.into("#observablehq-887cc127 .observablehq-chart")();
+                });
+              </script>
 
-          section
-            h3.demo Joyplot Vega-Lite
-            a.tiny(href="https://observablehq.com/@vega/psr-b1919-21-with-vega-lite") PSR B1919+21 with Vega-Lite
+
+          //-   iframe.blocks(data-src="https://blockbuilder.org/john-guerra/2bb5a08bd6f17a5cb4efd6ad6d98973c")
+          //-   a.tiny(target="_blank" href="https://blockbuilder.org/john-guerra/2bb5a08bd6f17a5cb4efd6ad6d98973c") Joy Plot Temperatures
+
+          //- section
+          //-   h3.demo Joyplot Vega-Lite
+          //-   a.tiny(href="https://observablehq.com/@vega/psr-b1919-21-with-vega-lite") PSR B1919+21 with Vega-Lite
 
           section
             h2 Idiom: Connected Scatterplots
@@ -474,6 +577,13 @@ html(lang="en")
           //-     li.fragment dozens of key levels
           //-     li.fragment hundreds of value levels
 
+          section
+            h2.demo Timelines Revisited
+            figure
+              img(src="../shared_images/timelinesRevisited.png", alt="Timlines Revisited")
+              figcaption.reference
+                a(href="https://timelinesrevisited.github.io/") Timelines Revisited: A Design Space and Considerations for Expressive Storytelling" By Matthew Brehmer, Bongshin Lee, Benjamin Bach, Nathalie Henry Riche, and Tamara Munzner
+
 
 
           section
@@ -491,9 +601,11 @@ html(lang="en")
 
           section
             h2 Time Searcher
-            span.
+            div.
               <iframe width="853" height="480" data-src="https://www.youtube.com/embed/VWx1TMcrb74" frameborder="0" allowfullscreen></iframe>
-            a.small(href="http://www.cs.umd.edu/hcil/timesearcher/") Visual Exploration of Time-Series Data
+            a.reference(href="http://www.cs.umd.edu/hcil/timesearcher/") Visual Exploration of Time-Series Data
+
+          section(data-background-size="contain", data-background="../shared_images/timeSearcher.gif")
 
 
           section(data-markdown)
@@ -514,48 +626,61 @@ html(lang="en")
               <!-- .element: class="small" -->
 
 
-          section
-            h2 Lifelines
-            span.
-              <iframe width="853" height="480" data-src="https://www.youtube.com/embed/aeRklur2Zc4?start=54" frameborder="0" allowfullscreen></iframe>
-            a.small(target="_blank" href="http://www.cs.umd.edu/hcil/lifelines/") LifeLines for Visualizing Patient Records
 
 
           section
-            h2.demo Lifelines (cont.)
-            a.small(target="_blank" href="http://www.cs.umd.edu/hcil/lifelines/")
+            h2.demo Lifelines
+            figure
               img.demo(data-src="http://www.cs.umd.edu/hcil/lifelines/screenjan98.jpg")
-            a.small(target="_blank" href="http://www.cs.umd.edu/hcil/lifelines/") LifeLines for Visualizing Patient Records
+              figcaption.reference
+                a(target="_blank" href="http://www.cs.umd.edu/hcil/lifelines/") LifeLines for Visualizing Patient Records
+
+          section
+            h2 Lifelines (cont.)
+            div.
+              <iframe width="853" height="480" data-src="https://www.youtube.com/embed/aeRklur2Zc4?start=54" frameborder="0" allowfullscreen></iframe>
+            a.reference(target="_blank" href="http://www.cs.umd.edu/hcil/lifelines/") LifeLines for Visualizing Patient Records
+
 
           section
             h2.demo Lifelines 2
             a(target="_blank" href="http://www.cs.umd.edu/hcil/lifelines2/")
-              img.demo(data-src="http://www.cs.umd.edu/hcil/lifelines2/images/title.png")
-            a.small(target="_blank" href="http://www.cs.umd.edu/hcil/lifelines2/") Lifelines2: Discovering Temporal Categorical Patterns Across Multiple Records
+              figure
+                img.demo(data-src="http://www.cs.umd.edu/hcil/lifelines2/images/title.png")
+              figcaption.reference
+                a(target="_blank" href="http://www.cs.umd.edu/hcil/lifelines2/") Lifelines2: Discovering Temporal Categorical Patterns Across Multiple Records
 
-          section
-            h2.demo Lifelines 2 Demo
-            iframe.blocks(data-src="http://www.cs.umd.edu/hcil/lifelines2/videos/Lifelines2-(Contrast-Creatinine)-11-10-08_flash/full(1024x768)/index.htm")
-            a.tiny(target="_blank" href="http://www.cs.umd.edu/hcil/lifelines2/videos/Lifelines2-(Contrast-Creatinine)-11-10-08_flash/full(1024x768)/index.htm") Lifelines 2 video link
-            // @john-guerra Note: this content extends off the slide and image does not display
+          //- section
+          //-   h2.demo Lifelines 2 Demo
+          //-   iframe.blocks(data-src="http://www.cs.umd.edu/hcil/lifelines2/videos/Lifelines2-(Contrast-Creatinine)-11-10-08_flash/full(1024x768)/index.htm")
+          //-   a.reference(target="_blank" href="http://www.cs.umd.edu/hcil/lifelines2/videos/Lifelines2-(Contrast-Creatinine)-11-10-08_flash/full(1024x768)/index.htm") Lifelines 2 video link
+          //-   // @john-guerra Note: this content extends off the slide and image does not display
+
+          section(data-background-iframe="http://www.cs.umd.edu/hcil/lifelines2/videos/Lifelines2-(Contrast-Creatinine)-11-10-08_flash/full(1024x768)/index.htm")
 
           section
             h2 Similian
             a(target="_blank" href="http://www.cs.umd.edu/hcil/similan")
-              img.demo(data-src="http://www.cs.umd.edu/hcil/similan/img/simi20091011/overview.png")
-            a.tiny(target="_blank" href="http://www.cs.umd.edu/hcil/similan") Similan: Finding Similar Records from Temporal Categorical Data
+              figure
+                img.demo(data-src="http://www.cs.umd.edu/hcil/similan/img/simi20091011/overview.png")
+                figcaption.reference
+                  a(target="_blank" href="http://www.cs.umd.edu/hcil/similan") Similan: Finding Similar Records from Temporal Categorical Data
 
-          section
-            h2.demo Similian Demo
-            iframe.blocks(data-src="http://www.cs.umd.edu/hcil/similan/video/demo/index.html")
-            a.tiny(target="_blank" href="http://www.cs.umd.edu/hcil/similan/video/demo/index.html") Similian video link
-            // @john-guerra Note: this content extends off the slide and image does not display
+          section(data-background-iframe="http://www.cs.umd.edu/hcil/similan/video/demo/index.html")
+          //- section
+          //-   h2.demo Similian Demo
+          //-   iframe.blocks(data-src="http://www.cs.umd.edu/hcil/similan/video/demo/index.html")
+          //-   a.reference(target="_blank" href="http://www.cs.umd.edu/hcil/similan/video/demo/index.html") Similian video link
+          //-   // @john-guerra Note: this content extends off the slide and image does not display
 
           section
             h2 LifeFlow
+
             a(target="_blank" href="http://www.cs.umd.edu/hcil/lifeflow/")
-              img.demo(data-src="http://www.cs.umd.edu/hcil/lifeflow/img/LifeFlow3.png")
-            a.tiny(target="_blank" href="http://www.cs.umd.edu/hcil/lifeflow/") LifeFlow: Understanding Millions of Event Sequences in a Million Pixels
+              figure
+                img.demo(data-src="http://www.cs.umd.edu/hcil/lifeflow/img/LifeFlow3.png")
+              figcaption.reference
+                a(target="_blank" href="http://www.cs.umd.edu/hcil/lifeflow/") LifeFlow: Understanding Millions of Event Sequences in a Million Pixels
 
           section
             h2.demo LifeFlow How-To
@@ -569,9 +694,12 @@ html(lang="en")
 
           section
             h2 EventFlow
+
             a(target="_blank" href="http://hcil.umd.edu/eventflow/")
-              img.demo(data-src="http://www.cs.umd.edu/hcil/eventflow/img/EventFlow.png")
-            a.tiny(target="_blank" href="http://hcil.umd.edu/eventflow/") EventFlow: Visual Analysis of Temporal Event Sequences and Advanced Strategies for Healthcare Discovery
+              figure
+                img.demo(data-src="http://www.cs.umd.edu/hcil/eventflow/img/EventFlow.png")
+              figcaption.reference
+                a(target="_blank" href="http://hcil.umd.edu/eventflow/") EventFlow: Visual Analysis of Temporal Event Sequences and Advanced Strategies for Healthcare Discovery
 
           section
             h2.demo EventFlow Demo
@@ -579,10 +707,11 @@ html(lang="en")
             span.
               <iframe width="853" height="480" data-src="https://www.youtube.com/embed/FHgcJDnW8q8" frameborder="0" allowfullscreen></iframe>
 
-
           section
             div
               img(src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo")
+
+
         section#commonTricks
           section
             h2 Common Derives/Tricks for Temporal Data
@@ -595,10 +724,46 @@ html(lang="en")
             h2 Add/Remove Granularity
 
           section
-            h2 Extract Dateparts
+            h2 Truncate dates
+            div.demo.
+              <div id="observablehq-46499eaa">
+                <div class="observablehq-dateTruncateHeader"></div>
+                <div class="observablehq-dateTruncateChart"></div>
+                <div style="overflow: hidden;"><a style="display: block; float:right;" href="https://observablehq.com/@berkeleyvis/time-aggregation"><object type="image/svg+xml" style="pointer-events: none;" width=180 height=22 data="https://static.observableusercontent.com/files/c3fab254a006f1a3a1f9f63aba8ab1460db4752529036b9962950bde0ec195bab823daa6b278b1c3401e545b3bd640ddfdcad805cf9859af218cb2b9fed4ddf0"></object></a></div>
+              </div>
+              <script type="module">
+                import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+                import define from "https://api.observablehq.com/@berkeleyvis/time-aggregation.js?v=3";
+                (new Runtime).module(define, name => {
+                  if (name === "dateTruncateHeader") return Inspector.into("#observablehq-46499eaa .observablehq-dateTruncateHeader")();
+                  if (name === "dateTruncateChart") return Inspector.into("#observablehq-46499eaa .observablehq-dateTruncateChart")();
+                });
+              </script>
+
+          section
+            h2 Aggregate by date parts
+            div.demo.
+              <div id="observablehq-d717c549">
+                <div class="observablehq-datePartHeader"></div>
+                <div class="observablehq-timePartChart"></div>
+              </div>
+              <script type="module">
+                import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+                import define from "https://api.observablehq.com/@berkeleyvis/time-aggregation.js?v=3";
+                (new Runtime).module(define, name => {
+                  if (name === "datePartHeader") return Inspector.into("#observablehq-d717c549 .observablehq-datePartHeader")();
+                  if (name === "timePartChart") return Inspector.into("#observablehq-d717c549 .observablehq-timePartChart")();
+                });
+              </script>
 
           section
             h2 Window Average/Median
+
+
+            figure.demo
+              img(style="width:1000px", src="../shared_images/covidMovingAverage.png", alt="Covid Moving Average by state")
+              figcaption
+                a(href="https://www.nytimes.com/interactive/2020/07/09/us/coronavirus-cases-reopening-trends.html") NY Times How Coronavirus Cases Have Risen Since States Reopened July 9th 2020
 
 
           section
@@ -630,7 +795,6 @@ html(lang="en")
             iframe.blocks(data-src="http://blockbuilder.org/mbostock/4060954")
             a.tiny(target="_blank" href="http://blockbuilder.org/mbostock/4060954") Streamgraph
             // @john-guerra Note: content extends off-screen and image is not visible
-
 
           section(data-background-size="contain" data-background="../shared_images/vad_book_alldiagrams/08_tables-spatial.011.png")
           //- Linechart block

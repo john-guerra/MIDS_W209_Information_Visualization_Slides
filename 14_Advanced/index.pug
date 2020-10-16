@@ -28,7 +28,7 @@ html(lang="en")
     .reveal
       .slides
         section
-          h1.title Advanced visualization concepts
+          h1.title(style="font-size:2em") Advanced visualization concepts
             br
             small MIDS W209: Information Visualization
 
@@ -58,14 +58,19 @@ html(lang="en")
           section
             h2 What We Are Going to Learn
             ul.small
-              li Clustering
-              li Regression
-              li Classification
-              li Dimensionality reduction
-              li Recommendation systems
+              li.fragment Traditional Analytics methods
+                ul
+                  li.fragment Clustering
+                  li.fragment Regression
+                  li.fragment Classification
+                  li.fragment Dimensionality reduction
+                  li.fragment Recommendation systems
+
+              li.fragment Visualization + ML
+              li.fragment Business Intelligence Tools
+              li.fragment Deploying your visualizations
 
 
-          //- convert -density 150 -depth 8 -quality 85 ~/Dropbox/documentos/2016/andes/visual_analytics/lectures_tamara/05_rules-artery.pdf ./05_rules-artery.png
 
 
           section
@@ -116,7 +121,7 @@ html(lang="en")
 
 
           section
-            h3.demo Linear Regression
+            h3.demo Regression
             iframe.blocks(src="http://blockbuilder.org/tmcw/3931800")
             a.tiny(target="_blank" href="http://blockbuilder.org/tmcw/3931800") http://blockbuilder.org/tmcw/3931800
             a.tiny(target="_blank" href="http://bl.ocks.org/tmcw/") by tmcw
@@ -128,15 +133,70 @@ html(lang="en")
               li.fragment Drug response
 
 
+          section#InsightCars
+            h2 What car to buy?
+            p User: person buying a car
+            p Task: What's the best car to buy?
+            p Data: all cars on sale
+
+          section
+            h2 Normal procedure
+            p Ask friends and family
+
+          section#Renault4(data-background="../shared_images/renault4.jpg")
+            //- span.
+              <a data-flickr-embed="true"  href="https://www.flickr.com/photos/synx508/8083533370/in/photolist-djjdR1-afaxQE-88rrWV-85GG7C-dhdprm-cB1GP1-6T5Y57-bwHLJo-kCowWc-q7ohL2-pZdWRQ-aqbuDd-CwU436-8Eruxo-nzoa7c-BzobPh-ptWmt6-BYoC9H-81RCdE-dPuGGx-q4JtAk-7XXciZ-r1UjFV-iKrUr5-iEmCiG-pcraD8-fNGpSf-fNGpFd-cN7xp-7SC3f9-D3mfHj-dhdpZ8-nzh5GD-85GGwL-5wBWcW-7tCm5D-8RDcp9-7kBmch-afaxQJ-8RA446-9z4AuX-6B9YeE-9ZVygr-7SC3f5-e3sALe-6B5Zon-apFGuQ-a6gMVY-5wVRyj-7pJkMr" title="Renault 4"><img src="https://c3.staticflickr.com/9/8055/8083533370_a0597b2b89_b.jpg" width="1024" height="683" alt="Renault 4"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+
+          section#Renault4Pimped(data-background="../shared_images/renault4_pimped.jpg")
+            //- span.
+              <a data-flickr-embed="true"  href="https://www.flickr.com/photos/zenzak35/14225528098/" title="Renault 4 JP4"><img src="https://c3.staticflickr.com/4/3909/14225528098_f77d8393ac_b.jpg" width="1024" height="576" alt="Renault 4 JP4"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+
+
+          section#Renault4Crashed(data-background="../shared_images/renault4_crashed.jpg")
+            //- span.
+              <a data-flickr-embed="true"  href="https://www.flickr.com/photos/95012335@N02/16327150369/in/photolist-qSLUYz-p8zsEJ-fHL1jE-4grA8b-8YBfrt-8mRG7n-49vZ6h-dXiuZG-kseXjY-CpB1rB-kCp4NF-75n5c9-8PiBKZ-5999UC-C5Lz5Y-eBWbNx-eBEvp-fBpDP7-nF4xTQ-8spzYg-a7ovQd-4r1u5g-aPE45k-7R62M3-dZQnYp-djjdR1-afaxQE-88rrWV-85GG7C-dhdprm-cB1GP1-6T5Y57-bwHLJo-kCowWc-q7ohL2-pZdWRQ-aqbuDd-CwU436-8Eruxo-nzoa7c-BzobPh-ptWmt6-BYoC9H-81RCdE-dPuGGx-q4JtAk-7XXciZ-r1UjFV-iKrUr5-iEmCiG" title="Teilgefalteter Renault 4 am Strassenrand"><img src="https://c2.staticflickr.com/8/7437/16327150369_c5a839efab_b.jpg" width="1024" height="681" alt="Teilgefalteter Renault 4 am Strassenrand"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+
+          section
+            h2 Problem
+            p That's inferring statistics from a sample n = 1
+
+          section
+            h2 Better approach
+            p Data-based decisions
+
+          section
+            img(src="../shared_images/tucarro.png")
+            a(href="https://tucarro.com") https://tucarro.com
+
+
+          section(data-background-iframe="https://johnguerra.co/viz/carrosUsados/todosPuntos.html")
+          section(data-background-iframe="https://johnguerra.co/viz/carrosUsados/depreciacionMarcas.html")
+          section(data-background-iframe="https://johnguerra.co/viz/carrosUsados/depreciacionesCarros.html")
+
+
+          section
+            h2 Jeep Willys
+            div.flex
+              ul.half.small
+                li Colombia bought many Jeeps after the war
+                li They are the a sort of mountain taxi
+                li There is a trend to pimp them up
+
+              div.half
+                img(src="../shared_images/Willys_small.jpg" alt="Colombian Jeep Willys. Foto by John Alexis Guerra Gómez")
+
+
           section
             div
               img(src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo")
         section
           section
             h2.demo Classification
-            img(src="images/sphx_glr_plot_classifier_comparison_001.png" alt="Classification algorithms")
+            figure
+              img(src="../shared_images/sphx_glr_plot_classifier_comparison_001.png" alt="Classification algorithms")
 
-            a.tiny(href="https://scikit-learn.org/stable/modules/ensemble.html#random-forests") https://scikit-learn.org/stable/modules/ensemble.html#random-forests
+              figcaption.reference
+                  a(href="https://scikit-learn.org/stable/modules/ensemble.html#random-forests") https://scikit-learn.org/stable/modules/ensemble.html#random-forests
 
           section
             h2 When to Use It
@@ -282,8 +342,8 @@ html(lang="en")
               li.fragment Heroku
               li.fragment ...
 
-          
-          section 
+
+          section
             h3 Tools/Technologies
 
             p Paradigm: #[strong Infrascructure as code].
@@ -307,7 +367,7 @@ html(lang="en")
           section
             div
               img(src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo")
-        section
+        section#otherTools
           section
             h1 Other tools to check
 
@@ -319,13 +379,27 @@ html(lang="en")
 
           section
             h2 Data Wrapper
+
           section
             div
               img(src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo")
+
+
         section#review
           section
             h2 What We Learned
             ul.small
+              li.fragment Traditional Analytics methods
+                ul
+                  li.fragment Clustering
+                  li.fragment Regression
+                  li.fragment Classification
+                  li.fragment Dimensionality reduction
+                  li.fragment Recommendation systems
+
+              li.fragment Visualization + ML
+              li.fragment Business Intelligence Tools
+              li.fragment Deploying your visualizations
 
 
     script(src="../js/reveal.js")

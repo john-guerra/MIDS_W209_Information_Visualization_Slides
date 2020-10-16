@@ -49,7 +49,7 @@ html(lang="en")
 
           div.logo
             a(href="https://datascience.berkeley.edu/")
-              img.logo(src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo")
+              img.logo(data-src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo")
           div.tiny Partially based on
             a(href="https://www.cs.ubc.ca/~tmm/talks.html#minicourse14")  slides from Tamara Munzner
 
@@ -58,75 +58,127 @@ html(lang="en")
           section
             h2 What We Are Going to Learn
             ul.small
+              li.fragment Human Computer Interaction
+              li.fragment Techniques for evaluation
+                ul
+                  li.fragment Controlled experiments
+                  li.fragment Interviews
+                  li.fragment Surveys
+                  li.fragment Case studies
+              li.fragment Usability studies
+                ul
+                  li.fragment Running the usability study
+                  li.fragment Choosing tasks
+                  li.fragment Prioritization
+                  li.fragment Likert scales
+
+
 
           section
             div
-              img(src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo")
+              img(data-src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo")
         section
           section
             h2 Evaluation
             ul
-              li Controlled experiments
-              li Natural settings
-              li Any setting not involving users
+              li.fragment Controlled experiments
+              li.fragment Natural settings
+              li.fragment Any setting not involving users (expert reviews)
 
           section
             h2 Expert Reviews
             ul
-              li Design experts
-              li Visualization experts
-              li Usability experts
-              li Domain experts
+              li.fragment Design experts
+              li.fragment Visualization experts
+              li.fragment Usability experts
+              li.fragment Domain experts
 
           section
             h2 Types of Expert Reviews
             ul.small
-              li Heuristic evaluation (golden rules)
-              li Guidelines review
-              li Consistency inspection
-              li Cognitive walkthrough
-              li Metaphors of human thinking
-              li Formal usability inspection (courtroom style)
-              li Accesibility inspection
+              li.fragment Heuristic evaluation (golden rules)
+              li.fragment Guidelines review
+              li.fragment Consistency inspection
+              li.fragment Cognitive walkthrough
+              li.fragment Metaphors of human thinking
+              li.fragment Formal usability inspection (courtroom style)
+              li.fragment Accesibility inspection
 
           section
             h2 Eight Golden Rules of Design
             ul.small
-              li Strive for consistency
-              li Cater for universal usability
-              li Offer informative feedback
-              li Design dialogs to yield closure
-              li Prevent errors
-              li Permit easy reversal of actions
-              li Support internal locus of control
-              li Reduce short-term memory load
+              li.fragment Strive for consistency
+              li.fragment Cater for universal usability
+              li.fragment Offer informative feedback
+              li.fragment Design dialogs to yield closure
+              li.fragment Prevent errors
+              li.fragment Permit easy reversal of actions
+              li.fragment Support internal locus of control
+              li.fragment Reduce short-term memory load
 
           section
             div
-              img(src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo")
+              img(data-src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo")
         section
           section
             h2 Controlled Experiments
             ul
-              li Experiments in the lab
-              li Controlled confounding variables
-              li Measure one or more quantitative variables
-              li
+              li.fragment Experiments in the lab
+              li.fragment Controlled confounding variables
+              li.fragment Measure one or more quantitative variables
                 ul
-                  li Usability testing
-                  li Living labs
+                  li.fragment Usability testing
+                  li.fragment Living labs
           section
             h3 What to Measure?
             ul
-              li Time to learn
-              li Speed of performance
-              li Rate of errors
-              li Retention over time
-              li Subject satisfaction
+              li.fragment Time to learn
+              li.fragment Speed of performance
+              li.fragment Rate of errors
+              li.fragment Retention over time
+              li.fragment Subject satisfaction
+
+          section
+            h2 Variables
+            ul
+              li.fragment Independent variables (causes)
+              li.fragment Dependent variables (effect)
+              li.fragment Extraneous variables (that can affect the experiment)
+
+          section
+            h2 Controlled Experiment example
+
+
+          section.full
+            h3.demo Tasks and conditions
+            figure
+              img(style="width:800px", data-src="../shared_images/controlled_experiment_example.png", "Controlled experiment example")
+              figcaption.reference Kim, Y. and Heer, J. (2018), Assessing Effects of Task and Data Distribution on the Effectiveness of Visual Encodings. Computer Graphics Forum, 37: 157-167. doi:10.1111/cgf.13409
+
+          section.full
+            h3.demo Controlling extraneous variables
+
+            figure
+              img(style="height:500px;width:auto;", data-src="../shared_images/controlled_experiment_example2.png", "Controlled experiment example")
+              figcaption.reference Kim, Y. and Heer, J. (2018), Assessing Effects of Task and Data Distribution on the Effectiveness of Visual Encodings. Computer Graphics Forum, 37: 157-167. doi:10.1111/cgf.13409
+
+          section.full
+            h3.demo Tasks
+
+            figure
+              img(style="height:500px;width:auto;", data-src="../shared_images/controlled_experiment_example3.png", "Controlled experiment example")
+              figcaption.reference Kim, Y. and Heer, J. (2018), Assessing Effects of Task and Data Distribution on the Effectiveness of Visual Encodings. Computer Graphics Forum, 37: 157-167. doi:10.1111/cgf.13409
+
+          section.full
+            h3.demo Results
+
+            figure
+              img(style="height:500px;width:auto;", data-src="../shared_images/controlled_experiment_example4.png", "Controlled experiment example")
+              figcaption.reference Kim, Y. and Heer, J. (2018), Assessing Effects of Task and Data Distribution on the Effectiveness of Visual Encodings. Computer Graphics Forum, 37: 157-167. doi:10.1111/cgf.13409
 
           section
             div
-              img(src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo")
+              img(data-src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo")
         section
           section
             h1 Usability Testing
@@ -134,7 +186,7 @@ html(lang="en")
           section
             h2.demo Usability Testing
             span.
-              <a data-flickr-embed="true"  href="https://www.flickr.com/photos/yandle/3231980616/in/photolist-5VAKeJ-e6vGNu-5VAMNf-5VAJkd-5VASE7-8uu5ej-3j3Cw-7WKyy5-7WKqhG-7WGg1p-bWf1T-cN17Zf-mLmuep-5iDL3Q-7WGaTx-bWf6R-pTf438-7WKzxd-7WGgwR-5VACYA-5VAHzY-5VwiYB-5VAGNL-5VADX3-5VwrGk-7yX8Zc-2vyF2V-7yX96K-dGkneA-7z2MTA-jrkhAN-fQ1cWh-69mwdv-dSJH5t-5iKD8N-2b6Jr-7WGk2x-7WGbSp-5VAQ8f-7WGb6a-7WKXYh-5iFg8H-7WGeMg-7WKssG-7WKtKd-bWffr-7WKt9m-7WKrxA-8ZAttz-7WKzLN" title="Brighton Uni Usability Lab"><img src="https://c1.staticflickr.com/4/3094/3231980616_5ccd164737_b.jpg" width="1024" height="685" alt="Brighton Uni Usability Lab"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+              <a data-flickr-embed="true"  href="https://www.flickr.com/photos/yandle/3231980616/in/photolist-5VAKeJ-e6vGNu-5VAMNf-5VAJkd-5VASE7-8uu5ej-3j3Cw-7WKyy5-7WKqhG-7WGg1p-bWf1T-cN17Zf-mLmuep-5iDL3Q-7WGaTx-bWf6R-pTf438-7WKzxd-7WGgwR-5VACYA-5VAHzY-5VwiYB-5VAGNL-5VADX3-5VwrGk-7yX8Zc-2vyF2V-7yX96K-dGkneA-7z2MTA-jrkhAN-fQ1cWh-69mwdv-dSJH5t-5iKD8N-2b6Jr-7WGk2x-7WGbSp-5VAQ8f-7WGb6a-7WKXYh-5iFg8H-7WGeMg-7WKssG-7WKtKd-bWffr-7WKt9m-7WKrxA-8ZAttz-7WKzLN" title="Brighton Uni Usability Lab"><img data-src="https://c1.staticflickr.com/4/3094/3231980616_5ccd164737_b.jpg" width="1024" height="685" alt="Brighton Uni Usability Lab"></a><script async data-src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
 
           section
             h3 Natural Settings Involving Users
@@ -162,7 +214,7 @@ html(lang="en")
 
           section
             div
-              img(src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo")
+              img(data-src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo")
         section
           section
             h1 Likert Scales
@@ -186,24 +238,40 @@ html(lang="en")
 
           section
             h3.demo Likert Scales d3
-            iframe.blocks(src="https://blockbuilder.org/john-guerra/57d31bae7685139cecd731bba9f48090")
+            .demo.
+              <div id="observablehq-4a66ebdc">
+                <div class="observablehq-chart"></div>
+                <div style="overflow: hidden;"><a style="display: block; float:right;" href="https://observablehq.com/@john-guerra/d3-likert-scale"><object type="image/svg+xml" style="pointer-events: none;" width=180 height=22 data="https://static.observableusercontent.com/files/c3fab254a006f1a3a1f9f63aba8ab1460db4752529036b9962950bde0ec195bab823daa6b278b1c3401e545b3bd640ddfdcad805cf9859af218cb2b9fed4ddf0"></object></a></div>
+              </div>
+              <script type="module">
+                import {Runtime, Inspector, Library} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+                import define from "https://api.observablehq.com/@john-guerra/d3-likert-scale.js?v=3";
+
+                const runtime = new Runtime(Object.assign(new Library, {width: document.querySelector("#observablehq-4a66ebdc .observablehq-chart").clientWidth-200}))
+
+                runtime.module(define, name => {
+                  if (name === "chart") return Inspector.into("#observablehq-4a66ebdc .observablehq-chart")();
+                });
+              </script>
+
+            iframe.blocks(data-src="https://blockbuilder.org/john-guerra/57d31bae7685139cecd731bba9f48090")
             a.tiny(target="_blank" href="https://blockbuilder.org/john-guerra/57d31bae7685139cecd731bba9f48090") https://blockbuilder.org/john-guerra/57d31bae7685139cecd731bba9f48090
 
 
           section
             h3.demo Likert Scales Vega-Lite
-            iframe.blocks(src="https://vega.github.io/vega-lite/examples/layer_likert.html")
+            iframe.blocks(data-src="https://vega.github.io/vega-lite/examples/layer_likert.html")
             a.tiny(target="_blank" href="https://vega.github.io/vega-lite/examples/layer_likert.html") https://vega.github.io/vega-lite/examples/layer_likert.html
 
           section
             h3.demo Likert Scales Vega-L ite (cont.)
-            iframe.blocks(src="https://vega.github.io/vega-lite/examples/concat_layer_voyager_result.html")
+            iframe.blocks(data-src="https://vega.github.io/vega-lite/examples/concat_layer_voyager_result.html")
             a.tiny(target="_blank" href="https://vega.github.io/vega-lite/examples/concat_layer_voyager_result.html") https://vega.github.io/vega-lite/examples/concat_layer_voyager_result.html
 
 
           section
             div
-              img(src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo")
+              img(data-src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo")
         section
           section
             h1 Other Methods
@@ -261,7 +329,7 @@ html(lang="en")
 
           section
             div
-              img(src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo")
+              img(data-src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo")
         section
           section
             h2 Running a Usability Study
@@ -319,7 +387,7 @@ html(lang="en")
 
           section
             h3 How Many People Do You Need?
-            img(data-src="../shared_images/usability-size.png")
+            img(data-data-src="../shared_images/usability-size.png")
 
           section
             h3 "Lab" Doesn’t Need to Mean a Formal Lab
@@ -338,8 +406,8 @@ html(lang="en")
               li Mouse tracking/navigation tracking
           section
             div
-              img(src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo")
-              
+              img(data-src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo")
+
         section
           section
             h2 Prioritization
@@ -356,7 +424,7 @@ html(lang="en")
                   li Survey responses
                   li ...Then what?
               div.right
-                img(data-src="../shared_images/user-study-result.png")
+                img(data-data-src="../shared_images/user-study-result.png")
                 div.tiny #[a(href="") Table source: Stasko, J., Catrambone, R., Guzdial, M., & McDonald, K. (2000). An evaluation of space-filling information visualizations for depicting hierarchical structures.]
             aside(class="notes").
               How is the task completion recorded, does the analyst note it themsleves, do they write something down.
@@ -396,14 +464,14 @@ html(lang="en")
 
           section
             div
-              img(src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo")
+              img(data-src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo")
         section
           section
             h2 Usability Study Demo
 
           section
             div
-              img(src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo")
+              img(data-src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo")
         section
           section
             h2 Interview Michael Bessey
@@ -411,7 +479,7 @@ html(lang="en")
 
           section
             div
-              img(src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo")
+              img(data-src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo")
         section
           section
             h2 Interview Fereshteh Amini
@@ -420,25 +488,39 @@ html(lang="en")
 
         //- // Design principles
         section
-          h2 References
-          ul
-            li
-              a(href="http://cs.umd.edu/hcil/DTUI6/") Shneiderman, B. and Plaisant, C., 1987. Designing the user interface: Strategies for effective human-computer interaction
-            li
-              a(href="http://www.id-book.com/") Rogers, Y., Sharp, H., Preece, J. and Tepper, M., 2007. Interaction design: beyond human-computer interaction.
+          section
+            h2 References
+            ul
+              li
+                a(href="http://cs.umd.edu/hcil/DTUI6/") Shneiderman, B. and Plaisant, C., 1987. Designing the user interface: Strategies for effective human-computer interaction
+              li
+                a(href="http://www.id-book.com/") Rogers, Y., Sharp, H., Preece, J. and Tepper, M., 2007. Interaction design: beyond human-computer interaction.
 
-            li
-              a(href="https://www.amazon.com/Doing-Psychology-Experiments-David-Martin/dp/0495115770")  Martin, D.W., 2007. Doing psychology experiments. Cengage Learning.
+              li
+                a(href="https://www.amazon.com/Doing-Psychology-Experiments-David-Martin/dp/0495115770")  Martin, D.W., 2007. Doing psychology experiments. Cengage Learning.
 
           section
             div
-              img(src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo")
+              img(data-src="../shared_images/UC_Berkeley_wordmark_cal_gold.png" alt="University Of California at Berkeley logo")
 
 
         section#review
           section
             h2 What We Learned
             ul.small
+              li.fragment Human Computer Interaction
+              li.fragment Techniques for evaluation
+                ul
+                  li.fragment Controlled experiments
+                  li.fragment Interviews
+                  li.fragment Surveys
+                  li.fragment Case studies
+              li.fragment Usability studies
+                ul
+                  li.fragment Running the usability study
+                  li.fragment Choosing tasks
+                  li.fragment Prioritization
+                  li.fragment Likert scales
 
 
     script(src="../js/reveal.js")
@@ -448,10 +530,6 @@ html(lang="en")
     script(src="../plugin/markdown/markdown.js")
     script(src="../plugin/highlight/highlight.js")
 
-    script(src="https://cdn.jsdelivr.net/npm/vega@5.13.0")
-    script(src="https://cdn.jsdelivr.net/npm/vega-lite@4.13.1")
-    script(src="https://cdn.jsdelivr.net/npm/vega-lite-api@0.11.0")
-    script(src="https://cdn.jsdelivr.net/npm/vega-tooltip@0.23.2")
 
 
 
@@ -472,7 +550,7 @@ html(lang="en")
     script.
       (function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      m=s.getElementsByTagName(o)[0];a.async=1;a.data-src=g;m.parentNode.insertBefore(a,m)
       })(window,document,"script","https://www.google-analytics.com/analytics.js","ga");
 
       ga("create", "UA-72531610-1", "auto");
