@@ -67,18 +67,15 @@ Time with `d3` [scratchbook](https://observablehq.com/d/f7cc07f685a60ba9?collect
 
 [![0KmFkexJGIo](https://img.youtube.com/vi/0KmFkexJGIo/0.jpg)](https://www.youtube.com/watch?v=0KmFkexJGIo)
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/0KmFkexJGIo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-
 Time with `vega-lite` [scratchbook](https://observablehq.com/d/25c168f39acb668b?collection=@berkeleyvis/scratchbooks) and video:
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/epsBLcPaSNk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[![epsBLcPaSNk](https://img.youtube.com/vi/epsBLcPaSNk/0.jpg)](https://www.youtube.com/watch?v=epsBLcPaSNk)
 
 Time with `altair` [scratchbook]() and video:
 
 Time with `tableau`:
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/94Q0nbUQsVU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[![94Q0nbUQsVU](https://img.youtube.com/vi/94Q0nbUQsVU/0.jpg)](https://www.youtube.com/watch?v=94Q0nbUQsVU)
 
 ## Week 08: Networks_and_Color
 
@@ -90,31 +87,31 @@ Time with `tableau`:
 
 Networks with `d3` [scratchbook]() and video:
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/YoHVbUk4wgc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[![YoHVbUk4wgc](https://img.youtube.com/vi/YoHVbUk4wgc/0.jpg)](https://www.youtube.com/watch?v=YoHVbUk4wgc)
 
 Networks with `vega-lite` [scratchbook](https://observablehq.com/d/3cdbca683751979f?collection=@berkeleyvis/scratchbooks) and video:
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/sZ3dwB-weg8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[![sZ3dwB-weg8](https://img.youtube.com/vi/sZ3dwB-weg8/0.jpg)](https://www.youtube.com/watch?v=sZ3dwB-weg8)
 
 Networks with `altair` [scratchbook]() and video:
 
 Networks with `tableau`:
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/XXPwM8adHS8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[![XXPwM8adHS8](https://img.youtube.com/vi/XXPwM8adHS8/0.jpg)](https://www.youtube.com/watch?v=XXPwM8adHS8)
 
 Color with `d3` [scratchbook]() and video:
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/EFIdb64nKeQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[![EFIdb64nKeQ](https://img.youtube.com/vi/EFIdb64nKeQ/0.jpg)](https://www.youtube.com/watch?v=EFIdb64nKeQ)
 
 Color with `vega-lite`:
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/hnt6DhZYCUE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[![hnt6DhZYCUE](https://img.youtube.com/vi/hnt6DhZYCUE/0.jpg)](https://www.youtube.com/watch?v=hnt6DhZYCUE)
 
 Color with `altair` [scratchbook]() and video:
 
 Color with `tableau`:
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/LenAuXemwx0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[![LenAuXemwx0](https://img.youtube.com/vi/LenAuXemwx0/0.jpg)](https://www.youtube.com/watch?v=LenAuXemwx0)
 
 ## Week 09: Trees_and_Geo
 
@@ -126,31 +123,31 @@ Color with `tableau`:
 
 Trees with `d3` [scratchbook](https://observablehq.com/@berkeleyvis/d3-tree-visualizations?collection=@berkeleyvis/scratchbooks) and video:
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/-Cf6AGs02x4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[![-Cf6AGs02x4](https://img.youtube.com/vi/-Cf6AGs02x4/0.jpg)](https://www.youtube.com/watch?v=-Cf6AGs02x4)
 
 Trees with `vega-lite` [scratchbook](https://observablehq.com/d/a10de7fe1938aad6?collection=@berkeleyvis/scratchbooks) and video:
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/xswb_WjYFj0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[![xswb_WjYFj0](https://img.youtube.com/vi/xswb_WjYFj0/0.jpg)](https://www.youtube.com/watch?v=xswb_WjYFj0)
 
 Trees with `altair` [scratchbook]() and video:
 
 Trees with `tableau`:
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/XBblGbjXQmg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[![XBblGbjXQmg](https://img.youtube.com/vi/XBblGbjXQmg/0.jpg)](https://www.youtube.com/watch?v=XBblGbjXQmg)
 
 Geo with `d3` [scratchbook]() and video:
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/opbjh4DX5so" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[![opbjh4DX5so](https://img.youtube.com/vi/opbjh4DX5so/0.jpg)](https://www.youtube.com/watch?v=opbjh4DX5so)
 
 Geo with `vega-lite` [scratchbook](https://observablehq.com/d/25c168f39acb668b?collection=@berkeleyvis/scratchbooks) and video:
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/wx5SZG-aPDI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[![wx5SZG-aPDI](https://img.youtube.com/vi/wx5SZG-aPDI/0.jpg)](https://www.youtube.com/watch?v=wx5SZG-aPDI)
 
 Geo with `altair` [scratchbook]() and video:
 
 Geo with `tableau` and `mapbox`:
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/GY1eJy5QT1w" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[![GY1eJy5QT1w](https://img.youtube.com/vi/GY1eJy5QT1w/0.jpg)](https://www.youtube.com/watch?v=GY1eJy5QT1w)
 
 ## Week 10: Manipulate_Views
 
@@ -162,8 +159,7 @@ Geo with `tableau` and `mapbox`:
 
 Animations with `vega-lite`:
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/hfE_iuzDYwY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
+[![hfE_iuzDYwY](https://img.youtube.com/vi/hfE_iuzDYwY/0.jpg)](https://www.youtube.com/watch?v=hfE_iuzDYwY)
 
 ## Week 11: Faceting
 
@@ -175,17 +171,17 @@ Animations with `vega-lite`:
 
 Faceting with `d3`:
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/fClfsNt_9ww" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[![fClfsNt_9ww](https://img.youtube.com/vi/fClfsNt_9ww/0.jpg)](https://www.youtube.com/watch?v=fClfsNt_9ww)
 
 Faceting with `vega-lite`:
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Bo9BV9BsPwU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[![Bo9BV9BsPwU](https://img.youtube.com/vi/Bo9BV9BsPwU/0.jpg)](https://www.youtube.com/watch?v=Bo9BV9BsPwU)
 
 Faceting with `altair`:
 
 Faceting with `tableau`:
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/hr25pbwqy0c" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[![hr25pbwqy0c](https://img.youtube.com/vi/hr25pbwqy0c/0.jpg)](https://www.youtube.com/watch?v=hr25pbwqy0c)
 
 ## Week 12: Evaluation
 
