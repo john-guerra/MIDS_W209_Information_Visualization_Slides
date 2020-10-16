@@ -13,6 +13,8 @@ Use the following for width-->
 
 ### Software Demos
 
+[![jJD7qP_oCSs](https://img.youtube.com/vi/jJD7qP_oCSs/0.jpg)](https://www.youtube.com/watch?v=jJD7qP_oCSs)
+
 <iframe width="560" height="315" src="https://www.youtube.com/embed/jJD7qP_oCSs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Week 02: What
