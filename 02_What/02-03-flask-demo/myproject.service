@@ -1,0 +1,13 @@
+[Unit]
+Description=uWSGI instance to serve app
+After=network.target
+
+[Service]
+User=ubuntu
+Group=www-data
+WorkingDirectory=/home/ubuntu/app
+Environment="PATH=/home/ubuntu/app/myprojectenv/bin"
+ExecStart=/home/ubuntu/app/myprojectenv/bin/uwsgi --ini uwsgi.ini
+
+[Install]
+WantedBy=multi-user.target

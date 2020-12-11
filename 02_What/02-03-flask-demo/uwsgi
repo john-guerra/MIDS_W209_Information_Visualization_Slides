@@ -1,0 +1,18 @@
+server {
+    # Define the server name, IP address, and/or port of the server
+    listen 80;
+    server_name demo.aws.andyreagan.com;
+
+    # Configure NGINX to deliver static content from the specified folder
+    location /static {
+        alias /home/ubuntu/app/static;
+    }
+
+    # Define the specified charset to the “Content-Type” response header field
+    charset utf-8;
+
+    location / {
+        include uwsgi_params;
+        uwsgi_pass unix:/home/ubuntu/app/myproject.sock;
+    }
+}

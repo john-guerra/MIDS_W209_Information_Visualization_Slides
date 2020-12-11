@@ -1,0 +1,8 @@
+vpc_id               = "vpc-xxxxx"
+aws_instance_type    = "t2.micro"
+aws_instance_ami     = "ami-0885b1f6bd170450c"
+n_ec2_instances      = "1"
+stack_id             = "demo"
+env                  = "dev"
+route53_primary_zone = "aws.andyreagan.com"
+keypair              = "demo-keypair"

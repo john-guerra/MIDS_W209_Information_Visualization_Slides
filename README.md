@@ -161,6 +161,10 @@ Animations with `vega-lite`:
 
 [![hfE_iuzDYwY](https://img.youtube.com/vi/hfE_iuzDYwY/0.jpg)](https://www.youtube.com/watch?v=hfE_iuzDYwY)
 
+Animations with `Tableau`, based on [this recreation of Gapminder](https://public.tableau.com/profile/aakankshapatiljadhav#!/vizhome/HansRoslingGapminderRecreated/RecreatingGapminder):
+
+
+
 ## Week 11: Faceting
 
 ### Slides
@@ -206,3 +210,15 @@ Faceting with `tableau`:
 <a href="14_Advanced/index.html"><img src="screenshots/14_Advanced_index.png" width="200px"></a>
 
 ### Software Demos
+
+Vis for ML:
+https://en.wikipedia.org/wiki/Q%E2%80%93Q_plot
+https://towardsdatascience.com/understanding-auc-roc-curve-68b2303cc9c5
+https://www.listendata.com/2014/08/excel-template-gain-and-lift-charts.html
+https://scikit-learn.org/stable/auto_examples/ensemble/plot_forest_importances.html
+https://playground.tensorflow.org/
+https://distill.pub/2019/activation-atlas/
+https://distill.pub/2017/feature-visualization/
+https://github.com/marcotcr/lime
+https://christophm.github.io/interpretable-ml-book/shapley.html
+https://arxiv.org/pdf/2008.02250.pdf
