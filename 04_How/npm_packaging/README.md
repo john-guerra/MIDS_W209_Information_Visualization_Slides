@@ -1,0 +1,17 @@
+
+- Stackoverflow [Relation between CommonJS, AMD and RequireJS?](https://stackoverflow.com/questions/16521471/relation-between-commonjs-amd-and-requirejs) question by @gremo, May 13, 2013, top answer by @jakee, May 13, 2013
+- Requirejs [Why AMD](https://requirejs.org/docs/whyamd.html), also see [Why web modules](https://requirejs.org/docs/why.html) by [many contributors](https://github.com/requirejs/requirejs/blob/master/docs/why.html), content updated October, 2011.
+- [Browserify and the Universal Module Definition: How I Learned to Stop Worrying and Love the Browserify](https://dontkry.com/posts/code/browserify-and-the-universal-module-definition.html) by Kyle Robinson Young, June 13th 2013
+- [What is AMD, CommonJS, and UMD?](https://www.davidbcalhoun.com/2014/what-is-amd-commonjs-and-umd/) by David Calhoun, April 30, 2014
+- [Creating a D3 NPM package](https://geoexamples.com/other/2015/12/22/npm_packages.html) by Roger Veciana, Dec 22, 2015
+- [UMD Spec](https://github.com/umdjs/umd) by many contributors, updated Oct 13, 2017
+- MDN web docs on [JavaScript modules: A background on modules](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules)
+- [Webpack vs Rollup vs Parcel vs Browserify — Bundle size, build time, ease of use comparison](https://medium.com/swlh/webpack-vs-rollup-vs-parcel-vs-browserify-bundle-size-build-time-ease-of-use-comparison-d80699822c37) by Hong Yong on May 12, 2020
+- [rollupjs documentation](https://www.rollupjs.org/guide/en/#overview)
+- [d3-require](https://github.com/d3/d3-require)
+- [d3-scale-chromatic](https://github.com/d3/d3-scale-chromatic/blob/master/package.json)
+- Node.js docs on [Creating Node.js modules](https://docs.npmjs.com/creating-node-js-modules)
+- My npm-example:
+    - v1.0, a most basic library on NPM following their demo: [github](https://github.com/andyreagan/npm-example/tree/1.0.0) / [observable](https://observablehq.com/@andyreagan/js-library-npm-example-demo)
+    - v1.1, extended to use es6 exports and rollup to distribute the package: [github](https://github.com/andyreagan/npm-example/tree/1.1.0) / [observable](https://observablehq.com/@andyreagan/js-library-npm-example-demo-using-es6-export-and-rollup)
+    - v1.2, also add a dependency on `d3`: [github](https://github.com/andyreagan/npm-example/tree/1.2.0) / [observable](https://observablehq.com/@andyreagan/js-library-npm-example-demo-using-es6-export-and-rollup-with)
