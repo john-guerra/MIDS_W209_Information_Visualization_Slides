@@ -14,6 +14,18 @@ Use the following for width-->
 ### Software Demos
 
 
+### Videos:
+
+Unit Number | Element Name  | Presenter | Youtube Link
+--- | --- | --- | ---
+1 | Web Development for VIsualization | John  | https://youtu.be/7oezUB2y-Zw
+1 | Introduction to Observable  | John  | https://youtu.be/mxEEktWyl5o
+1 | Introduction to D3  | John  | https://youtu.be/p7rrmA23Ml4
+1 | Introduction to Vega-Lite | John  | https://youtu.be/oISFtSZlQEo
+1 | Introduction to Python and Altair | Andy  | 
+1 | Introduction to Tableau | John  | 
+
+
 
 ## Week 02: What
 
