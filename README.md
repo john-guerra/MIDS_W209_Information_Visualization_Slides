@@ -1,6 +1,13 @@
 # MIDS_W209_Information_Visualization_Slides
 
-Slides for the W209 Information Visualization course of the Masters in Data Science at UC Berkeley.
+Slides for the W209 Information Visualization course of the Masters in Data Science at UC Berkeley. Designed by John Alexis Guerra Gomez and Andy Reagan.
+
+Apart from the slides included in this code, you can also find below links to the videos and Observable notebooks used for each module
+
+## Video Playlists
+
+- [All videos covering D3, Vega-Lite JS API and Tableau by John](https://youtube.com/playlist?list=PLmRfPZr9-VoGodduNBkPKoNNXeOBMmQGz)
+- [Only the Vega-Lite JS API by John](https://youtube.com/playlist?list=PLmRfPZr9-VoGM0UN_J6Reum95NHyMmnZw)
 
 ## Week 01: Introduction
 
