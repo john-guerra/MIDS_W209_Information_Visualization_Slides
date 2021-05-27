@@ -1,6 +1,6 @@
 # MIDS_W209_Information_Visualization_Slides
 
-Slides for the W209 Information Visualization course of the Masters in Data Science at UC Berkeley. Designed by John Alexis Guerra Gomez and Andy Reagan.
+Slides for the W209 Information Visualization course of the Masters in Data Science at UC Berkeley. Designed by [John Alexis Guerra Gomez](https://johnguerra.co) and [Andy Reagan](https://www.ischool.berkeley.edu/people/andy-reagan).
 
 Apart from the slides included in this code, you can also find below links to the videos and Observable notebooks used for each module
 
