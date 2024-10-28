@@ -22,6 +22,6 @@
   },
   "homepage": "https://github.com/john-guerra/MIDS_W209_Information_Visualization_Slides#readme",
   "dependencies": {
-    "pug": "^3.0.1"
+    "pug": "^3.0.3"
   }
 }
